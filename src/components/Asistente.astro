@@ -616,7 +616,6 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 		barra.parentElement!.style.setProperty('--p', `${Math.round(hechas * 100)}%`);
 		barra.style.setProperty('--p', `${Math.round(hechas * 100)}%`);
 		barra.parentElement!.setAttribute('aria-valuenow', String(Math.round(hechas * 100)));
-		atras.hidden = historial.length === 0;
 		const paso = pasos.find((el) => el.dataset.paso === p)!;
 		marcar(paso);
 		paso.querySelector<HTMLElement>('h2')?.focus({ preventScroll: true });
@@ -640,9 +639,12 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 		mostrar(ORDEN[i]);
 	}
 
+	// En la primera pregunta, «Atrás» cierra las preguntas y vuelve a donde estaba
 	atras.addEventListener('click', () => {
 		const p = historial.pop();
-		if (p) mostrar(p);
+		if (p) return mostrar(p);
+		raiz.hidden = true;
+		document.dispatchEvent(new CustomEvent('cerrar-asistente'));
 	});
 
 	function terminar() {

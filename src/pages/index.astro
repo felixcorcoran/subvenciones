@@ -34,8 +34,10 @@ const description =
 						Ver mis ayudas
 						<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 6h9M7 2.5 10.5 6 7 9.5"></path></svg>
 					</button>
-					<button type="button" id="anterior" class="enlace" hidden></button>
-					<button type="button" id="todas" class="enlace">o mira todas las abiertas</button>
+					<div class="otras">
+						<button type="button" id="anterior" class="enlace" hidden></button>
+						<button type="button" id="todas" class="enlace">Mira todas las ayudas abiertas</button>
+					</div>
 				</div>
 			</section>
 
@@ -260,7 +262,7 @@ const description =
 			const previo = leerGuardado();
 			if (previo?.provincia) {
 				anterior.hidden = false;
-				anterior.textContent = `o usa tus respuestas de antes (${respuestas(previo).slice(0, 2).join(', ')})`;
+				anterior.textContent = `Usa tus respuestas de antes · ${respuestas(previo).slice(0, 2).join(' · ')}`;
 			}
 
 			const abrir = (detalle: object = {}) => {
@@ -270,6 +272,16 @@ const description =
 				asistente.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			};
 			document.querySelector('#empezar')!.addEventListener('click', () => abrir());
+			// «Atrás» desde la primera pregunta: a los resultados si los había, si no a la portada
+			document.addEventListener('cerrar-asistente', () => {
+				if (ultima.perfil || !document.querySelector<HTMLElement>('#tu-negocio')!.hidden) {
+					resultado.hidden = false;
+					resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					return;
+				}
+				document.querySelector('.intro')!.classList.remove('empezada');
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
 			document.querySelector('#cambiar')!.addEventListener('click', () => abrir({ perfil: leerGuardado() ?? {} }));
 
 			async function verAyudas(perfil: Perfil) {
@@ -743,7 +755,7 @@ const description =
 	}
 
 	.nota {
-		max-width: 46rem;
+		max-width: 62rem;
 		margin-top: clamp(3rem, 8vw, 5rem);
 		padding-top: 2rem;
 		border-top: 1px solid var(--rule);
@@ -778,8 +790,22 @@ const description =
 		margin-inline: auto;
 	}
 
+	/* El botón, solo y centrado; debajo, las otras dos opciones */
 	.empezar {
+		flex-direction: column;
 		justify-content: center;
+		gap: 1.25rem;
+	}
+
+	.otras {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.otras .enlace {
+		text-align: center;
 	}
 
 	.nota {
