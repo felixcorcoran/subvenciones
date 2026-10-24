@@ -360,12 +360,23 @@ const description =
 </Base>
 
 <style>
+	/* main ocupa el alto que deja el pie; mientras solo está la portada, queda
+	   centrada en ese hueco (los márgenes automáticos reparten el espacio por
+	   igual arriba y abajo). Con preguntas o resultados, todo fluye normal. */
 	main {
 		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
 		width: var(--frame);
 		margin-inline: auto;
-		padding: calc(var(--nav-top) + var(--nav-height) + clamp(2.5rem, 7vw, 5rem)) 0 clamp(3rem, 8vw, 6rem);
+		/* Arriba, el mismo margen que el pie tiene encima de la firma: así el
+		   hueco libre queda igual a los dos lados de la portada */
+		padding: calc(var(--nav-top) + var(--nav-height) + clamp(0.75rem, 4svh, 3rem)) 0 0;
 		flex: 1;
+	}
+
+	.intro:not(.empezada):has(~ .resultado[hidden]) {
+		margin-block: auto;
 	}
 
 	.intro {
