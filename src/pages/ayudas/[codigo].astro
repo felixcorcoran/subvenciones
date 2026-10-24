@@ -1,0 +1,327 @@
+---
+/**
+ * La ficha de cada convocatoria: lo que la IA ha sacado de sus bases, en
+ * claro, con los enlaces oficiales. Una página por ayuda para que se pueda
+ * encontrar en los buscadores y compartir.
+ */
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import datos from '../../../datos/convocatorias.json';
+import type { Convocatoria, Datos } from '../../lib/tipos';
+import { cierre, fechaLarga, municipioDe } from '../../lib/encaje';
+import { seccionDe } from '../../lib/sectores';
+import { nombreZona } from '../../lib/zonas';
+
+export const getStaticPaths = (() =>
+	(datos as Datos).convocatorias.map((c) => ({ params: { codigo: c.codigo }, props: { c } }))) satisfies GetStaticPaths;
+
+const c = Astro.props.c as Convocatoria;
+const ia = c.ia;
+const fin = cierre(c);
+const municipio = municipioDe(c);
+const organo = [c.organo.nivel3, municipio ?? c.organo.nivel2].filter((v, i, a) => v && a.indexOf(v) === i).join(' · ');
+const zonas = c.regiones.filter((r) => r.codigo.startsWith('ES')).map((r) => (r.codigo === 'ES' ? 'Toda España' : nombreZona(r.codigo, r.nombre)));
+const secciones = [...new Set(c.sectores.map((s) => seccionDe(s.codigo)).filter((s): s is string => Boolean(s)))];
+const sectores = secciones.length === 0 || secciones.length >= 8 ? 'Cualquier sector' : c.sectores.map((s) => s.nombre).join(', ');
+const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+// En la cabecera, una cifra corta; el importe explicado va en su apartado
+const importe = ia?.importeMaximo ? `Hasta ${euros(ia.importeMaximo)}` : c.presupuesto ? `Presupuesto total: ${euros(c.presupuesto)}` : null;
+const plazo = fin ? `Hasta el ${fechaLarga(fin)}` : (ia?.plazo ?? c.textoFin ?? null);
+
+const titulo = ia?.resumen ?? c.titulo;
+const title = `${titulo.length > 70 ? `${titulo.slice(0, 67).trimEnd()}…` : titulo} · Radar de subvenciones`;
+const description = [ia?.paraQuien, plazo, importe].filter(Boolean).join(' · ').slice(0, 300) || c.titulo;
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'MonetaryGrant',
+	name: c.titulo,
+	description: ia?.resumen ?? c.titulo,
+	url: c.enlace,
+	funder: { '@type': 'GovernmentOrganization', name: c.organo.nivel3 || c.organo.nivel2 },
+	...(ia?.importeMaximo ? { amount: { '@type': 'MonetaryAmount', currency: 'EUR', maxValue: ia.importeMaximo } } : {}),
+};
+---
+
+<Base title={title} description={description} jsonLd={jsonLd}>
+	<main>
+		<a class="volver" href="/">
+			<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 6h-9M5 2.5 1.5 6 5 9.5"></path></svg>
+			Todas las ayudas
+		</a>
+
+		<article>
+			<p class="eyebrow">{organo}</p>
+			<h1>{titulo}</h1>
+
+			<ul class="datos">
+				{plazo && <li class={fin ? 'fecha' : ''}>{plazo}</li>}
+				{importe && <li>{importe}</li>}
+				{zonas.length > 0 && <li>{zonas.join(', ')}</li>}
+			</ul>
+
+			<div class="acciones">
+				{
+					fin && (
+						<a class="boton" href={`/ayudas/${c.codigo}.ics`} download={`plazo-${c.codigo}.ics`}>
+							Añadir el plazo al calendario
+						</a>
+					)
+				}
+				<a class="boton boton--claro" href="/?empezar">¿Puede pedirla tu negocio?</a>
+			</div>
+
+			{
+				ia ? (
+					<>
+						<section>
+							<h2>Para quién</h2>
+							<p>{ia.paraQuien}</p>
+						</section>
+						{ia.requisitos.length > 0 && (
+							<section>
+								<h2>Requisitos</h2>
+								<ul>
+									{ia.requisitos.map((r) => (
+										<li>{r}</li>
+									))}
+								</ul>
+							</section>
+						)}
+						{ia.gastos.length > 0 && (
+							<section>
+								<h2>En qué se puede gastar</h2>
+								<ul>
+									{ia.gastos.map((g) => (
+										<li>{g}</li>
+									))}
+								</ul>
+							</section>
+						)}
+						<section>
+							<h2>Importe</h2>
+							<p>{ia.importe}</p>
+						</section>
+						<section>
+							<h2>Plazo</h2>
+							<p>{ia.plazo}</p>
+						</section>
+						{ia.dudas && (
+							<section>
+								<h2>Lo que no queda claro</h2>
+								<p>{ia.dudas}</p>
+							</section>
+						)}
+					</>
+				) : (
+					<section>
+						<p>Aún no hemos leído sus bases. Mira los requisitos en la convocatoria oficial.</p>
+					</section>
+				)
+			}
+
+			<section>
+				<h2>Datos de la convocatoria</h2>
+				<dl>
+					<dt>Título oficial</dt>
+					<dd>{c.titulo}</dd>
+					<dt>Convoca</dt>
+					<dd>{[c.organo.nivel3, c.organo.nivel2].filter(Boolean).join(' — ')}</dd>
+					<dt>Sector</dt>
+					<dd>{sectores}</dd>
+					{c.finalidad && <dt>Finalidad</dt>}
+					{c.finalidad && <dd>{c.finalidad}</dd>}
+					<dt>Código BDNS</dt>
+					<dd>{c.codigo} · registrada el {fechaLarga(c.publicada)}</dd>
+				</dl>
+				<p class="enlaces">
+					<a href={c.enlace} target="_blank" rel="noopener">Convocatoria oficial (BDNS) ↗</a>
+					{c.bases && <a href={c.bases} target="_blank" rel="noopener">Bases ↗</a>}
+					{c.sede && <a href={c.sede} target="_blank" rel="noopener">Dónde se solicita ↗</a>}
+				</p>
+			</section>
+
+			<p class="nota">
+				Resumen hecho con IA a partir de las bases de la convocatoria. Es una orientación: antes de pedirla, lee la convocatoria oficial, que es
+				la que vale.
+			</p>
+		</article>
+	</main>
+</Base>
+
+<style>
+	main {
+		box-sizing: border-box;
+		width: var(--frame);
+		margin-inline: auto;
+		padding: calc(var(--nav-top) + var(--nav-height) + clamp(2rem, 6vw, 4rem)) 0 clamp(3rem, 8vw, 6rem);
+		flex: 1;
+	}
+
+	article {
+		max-width: 46rem;
+	}
+
+	.volver {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		text-decoration: none;
+	}
+
+	.volver:hover {
+		color: var(--text);
+	}
+
+	.volver svg {
+		width: 0.75rem;
+		height: 0.75rem;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.4;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	h1 {
+		margin: 0.75rem 0 0;
+		font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+		font-weight: 400;
+		line-height: 1.12;
+		letter-spacing: -0.03em;
+	}
+
+	.datos {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 1.5rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.datos li {
+		padding: 0.35rem 0.85rem;
+		border-radius: 999px;
+		background: rgb(var(--ink) / 0.05);
+		font-size: 0.875rem;
+	}
+
+	.datos li.fecha {
+		background: var(--accent-soft);
+	}
+
+	.acciones {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.75rem;
+	}
+
+	.boton {
+		display: inline-flex;
+		align-items: center;
+		height: 3rem;
+		padding: 0 1.4rem;
+		border-radius: 999px;
+		background: var(--text);
+		color: var(--bg);
+		font-size: 0.9375rem;
+		font-weight: 500;
+		text-decoration: none;
+		transition: transform 0.2s var(--ease-out);
+	}
+
+	.boton:hover {
+		transform: translateY(-1px);
+	}
+
+	.boton--claro {
+		background: none;
+		color: var(--text);
+		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.25);
+	}
+
+	section {
+		margin-top: clamp(1.75rem, 4vw, 2.5rem);
+	}
+
+	h2 {
+		margin: 0 0 0.5rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--text-muted);
+	}
+
+	section p,
+	section li,
+	dd {
+		font-size: 1rem;
+		line-height: 1.65;
+	}
+
+	section p {
+		margin: 0;
+	}
+
+	section ul {
+		margin: 0;
+		padding-left: 1.25rem;
+	}
+
+	dl {
+		display: grid;
+		grid-template-columns: minmax(7rem, auto) 1fr;
+		gap: 0.5rem 1.5rem;
+		margin: 0;
+	}
+
+	dt {
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	dd {
+		margin: 0;
+	}
+
+	.enlaces {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
+		margin-top: 1.25rem;
+	}
+
+	.enlaces a {
+		color: var(--text);
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.25em;
+		font-size: 0.9375rem;
+	}
+
+	.nota {
+		margin: clamp(2rem, 5vw, 3rem) 0 0;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.875rem;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+	@media (max-width: 40rem) {
+		dl {
+			grid-template-columns: 1fr;
+			gap: 0.125rem;
+		}
+
+		dd {
+			margin-bottom: 0.75rem;
+		}
+	}
+</style>

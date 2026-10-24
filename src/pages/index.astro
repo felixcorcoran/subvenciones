@@ -1,12 +1,8 @@
 ---
-import { Font } from 'astro:assets';
-import Analytics from '@vercel/analytics/astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Base from '../layouts/Base.astro';
 import Asistente from '../components/Asistente.astro';
 import datos from '../../datos/convocatorias.json';
 import type { Datos } from '../lib/tipos';
-import '../styles/global.css';
 
 const { actualizado, convocatorias } = datos as Datos;
 const abiertas = convocatorias.filter((c) => !c.ia || c.ia.categoria === 'ayuda').length;
@@ -20,47 +16,7 @@ const description =
 
 ---
 
-<!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<link rel="canonical" href={Astro.site} />
-		<meta name="theme-color" content="#FAF9F6" data-theme-color />
-		<!-- Claro por defecto, como felixcorcoran.es; oscuro si se pidió al llegar
-		     (?tema=oscuro, se recuerda y se quita de la barra) o se eligió antes -->
-		<script is:inline>
-			try {
-				const url = new URL(location.href);
-				const asked = url.searchParams.get('tema');
-				if (asked === 'oscuro') localStorage.setItem('tema', 'oscuro');
-				if (asked === 'claro') localStorage.removeItem('tema');
-				if (asked) {
-					url.searchParams.delete('tema');
-					history.replaceState(null, '', url.pathname + url.search + url.hash);
-				}
-				if (asked === 'oscuro' || (!asked && localStorage.getItem('tema') === 'oscuro')) {
-					document.documentElement.dataset.theme = 'dark';
-					document.querySelector('[data-theme-color]')?.setAttribute('content', '#131211');
-				}
-			} catch {
-				if (location.search.includes('tema=oscuro')) document.documentElement.dataset.theme = 'dark';
-			}
-		</script>
-		<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:url" content={Astro.site} />
-		<meta property="og:locale" content="es_ES" />
-		<Font cssVariable="--font-sora" preload />
-		<Analytics />
-	</head>
-	<body>
-		<Navbar />
+<Base title={title} description={description}>
 
 		<main>
 			<section class="intro">
@@ -94,6 +50,7 @@ const description =
 						<p class="eyebrow">Tu negocio</p>
 						<ul id="respuestas"></ul>
 						<button type="button" id="cambiar" class="enlace">Cambiar respuestas</button>
+						<button type="button" id="compartir" class="enlace">Copiar el enlace a estos resultados</button>
 					</div>
 					<h2 id="resultado-titulo"></h2>
 					<p id="resumen" class="resumen"></p>
@@ -115,8 +72,6 @@ const description =
 				</p>
 			</aside>
 		</main>
-
-		<Footer />
 
 		<script>
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
@@ -159,14 +114,20 @@ const description =
 				const item = el('li', `ayuda ayuda--${e?.estado ?? 'neutra'}`);
 				const cabeza = el('div', 'ayuda-cabeza');
 				const organo = [c.organo.nivel3, municipioDe(c) ?? c.organo.nivel2].filter((v, i, a) => v && a.indexOf(v) === i).join(' · ');
-				cabeza.append(el('p', 'ayuda-organo', organo), el('h3', '', c.ia?.resumen ?? c.titulo));
+				// El título lleva a la ficha de la convocatoria (/ayudas/<código>)
+				const titulo = el('h3');
+				const ficha = el('a', '', c.ia?.resumen ?? c.titulo);
+				ficha.href = `/ayudas/${c.codigo}`;
+				titulo.append(ficha);
+				cabeza.append(el('p', 'ayuda-organo', organo), titulo);
 				item.append(cabeza);
 
 				const datosClave = el('ul', 'ayuda-datos');
 				const p = plazo(c);
 				const plazoLi = el('li', p.pronto ? 'pronto' : '', p.texto);
 				datosClave.append(plazoLi);
-				if (c.ia?.importe && !/no lo indica/i.test(c.ia.importe)) datosClave.append(el('li', '', c.ia.importe));
+				// Una cifra corta; el importe explicado va en «Requisitos y detalles»
+				if (c.ia?.importeMaximo) datosClave.append(el('li', '', `Hasta ${euros(c.ia.importeMaximo)}`));
 				else if (c.presupuesto) datosClave.append(el('li', '', `Presupuesto total: ${euros(c.presupuesto)}`));
 				item.append(datosClave);
 
@@ -190,6 +151,7 @@ const description =
 						for (const g of c.ia.gastos) ul.append(el('li', '', g));
 						mas.append(el('h4', '', 'En qué se puede gastar'), ul);
 					}
+					if (c.ia.importe) mas.append(el('h4', '', 'Importe'), el('p', '', c.ia.importe));
 					if (c.ia.plazo) mas.append(el('h4', '', 'Plazo'), el('p', '', c.ia.plazo));
 				} else {
 					mas.append(el('p', '', 'Aún no hemos leído sus bases. Mira los requisitos en la convocatoria oficial.'));
@@ -203,6 +165,14 @@ const description =
 					a.rel = 'noopener';
 					enlaces.append(a);
 				};
+				const propio = (href: string, texto: string, descarga?: string) => {
+					const a = el('a', '', texto);
+					a.href = href;
+					if (descarga) a.download = descarga;
+					enlaces.append(a);
+				};
+				propio(`/ayudas/${c.codigo}`, 'Ficha completa');
+				if (cierre(c)) propio(`/ayudas/${c.codigo}.ics`, 'Añadir el plazo al calendario', `plazo-${c.codigo}.ics`);
 				enlace(c.enlace, 'Convocatoria oficial (BDNS)');
 				if (c.bases) enlace(c.bases, 'Bases');
 				if (c.sede) enlace(c.sede, 'Dónde se solicita');
@@ -311,6 +281,8 @@ const description =
 				ultima = { perfil };
 				pintar();
 				resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				// Las respuestas van en la dirección: se puede compartir o volver a ella
+				history.replaceState(null, '', `/?${aParametros(perfil)}`);
 			}
 			document.addEventListener('perfil-listo', (e) => verAyudas((e as CustomEvent<Perfil>).detail));
 			anterior.addEventListener('click', () => {
@@ -328,9 +300,60 @@ const description =
 			});
 
 			verPremios.addEventListener('change', pintar);
+
+			// El perfil en la dirección: ?provincia=ES617&municipio=Marbella&forma=autonomo…
+			function aParametros(p: Perfil): string {
+				const q = new URLSearchParams({ provincia: p.provincia, forma: p.forma, sector: p.sector });
+				if (p.municipio) q.set('municipio', p.municipio);
+				if (p.forma !== 'emprender') {
+					q.set('empleados', String(p.empleados));
+					q.set('antiguedad', p.antiguedad);
+				}
+				return q.toString();
+			}
+			function deParametros(q: URLSearchParams): Perfil | null {
+				const provincia = q.get('provincia') ?? '';
+				const forma = q.get('forma') as Perfil['forma'] | null;
+				if (!provincias.some((x) => x.codigo === provincia) || !forma || !(forma in FORMAS)) return null;
+				const empleados = Number(q.get('empleados') ?? 0);
+				const antiguedad = (q.get('antiguedad') ?? '1a3') as Perfil['antiguedad'];
+				return {
+					provincia,
+					municipio: q.get('municipio') ?? '',
+					forma,
+					empleados: forma === 'emprender' || !(empleados in PLANTILLA) ? 0 : empleados,
+					antiguedad: forma === 'emprender' ? 'nada' : antiguedad in ANTIGUEDAD ? antiguedad : '1a3',
+					sector: (q.get('sector') ?? '').slice(0, 1).toUpperCase(),
+				};
+			}
+
+			const compartir = document.querySelector<HTMLButtonElement>('#compartir')!;
+			compartir.addEventListener('click', async () => {
+				const url = location.href;
+				try {
+					if (navigator.share && matchMedia('(pointer: coarse)').matches) {
+						await navigator.share({ title: 'Ayudas para mi negocio', url });
+						return;
+					}
+					await navigator.clipboard.writeText(url);
+					compartir.textContent = 'Enlace copiado';
+				} catch {
+					compartir.textContent = 'No se ha podido copiar: usa la barra de direcciones';
+				}
+				setTimeout(() => (compartir.textContent = 'Copiar el enlace a estos resultados'), 2500);
+			});
+
+			// Al entrar: con respuestas en la dirección, sus ayudas; con ?empezar
+			// (desde la ficha de una ayuda), las preguntas
+			const entrada = new URLSearchParams(location.search);
+			const desdeEnlace = deParametros(entrada);
+			if (desdeEnlace) verAyudas(desdeEnlace);
+			else if (entrada.has('empezar')) {
+				history.replaceState(null, '', '/');
+				abrir();
+			}
 		</script>
-	</body>
-</html>
+</Base>
 
 <style>
 	main {
@@ -592,6 +615,20 @@ const description =
 		font-weight: 500;
 		line-height: 1.35;
 		letter-spacing: -0.015em;
+	}
+
+	:global(.ayuda h3 a) {
+		color: inherit;
+		text-decoration: none;
+		background-image: linear-gradient(var(--accent), var(--accent));
+		background-size: 0 1px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		transition: background-size 0.35s var(--ease-out);
+	}
+
+	:global(.ayuda h3 a:hover) {
+		background-size: 100% 1px;
 	}
 
 	:global(.ayuda-datos) {

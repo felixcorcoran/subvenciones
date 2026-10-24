@@ -10,6 +10,7 @@
  */
 import type { ConvocatoriaWeb as Convocatoria } from './tipos.ts';
 import { nombreSeccion, seccionDe } from './sectores.ts';
+import { nombreZona } from './zonas.ts';
 
 export type Forma = 'autonomo' | 'sociedad' | 'emprender';
 export type Antiguedad = 'nada' | 'menos1' | '1a3' | 'mas3';
@@ -87,7 +88,7 @@ export function encaje(c: Convocatoria, p: Perfil, hoy = new Date().toISOString(
 	if (zonas.length === 0) revisa('No indica la zona: comprueba en las bases dónde tiene que estar el negocio');
 	else if (zonas.some((r) => p.provincia.startsWith(r.codigo))) {
 		bien(zonas.some((r) => r.codigo === 'ES') ? 'Para toda España' : 'Es para tu zona');
-	} else no(`Solo para negocios de ${zonas.map((r) => r.nombre).join(', ')}`);
+	} else no(`Solo para negocios de ${zonas.map((r) => nombreZona(r.codigo, r.nombre)).join(', ')}`);
 
 	// Municipio
 	const municipio = municipioDe(c);

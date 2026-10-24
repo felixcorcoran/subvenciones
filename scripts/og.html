@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Radar de subvenciones · vista previa</title>
+<!-- Vista previa al compartir (public/og.png): 1200 × 630, con el
+     mismo estilo que la vista previa de felixcorcoran.es (public/og.png). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=block" rel="stylesheet">
+<style>
+	html, body { margin: 0; background: #faf9f6; }
+	.card {
+		position: relative;
+		width: 1200px;
+		height: 630px;
+		overflow: hidden;
+		background: #faf9f6;
+		font-family: 'Sora', sans-serif;
+		color: #171717;
+	}
+	/* El resplandor melocotón de la esquina, como en la de la web */
+	.card::before {
+		content: '';
+		position: absolute;
+		right: -260px;
+		bottom: -320px;
+		width: 760px;
+		height: 640px;
+		border-radius: 50%;
+		background: radial-gradient(closest-side, rgb(255 214 204 / 0.75), rgb(255 214 204 / 0.25) 55%, rgb(255 214 204 / 0));
+	}
+	.logo {
+		position: absolute;
+		left: 80px;
+		top: 74px;
+		font-size: 28px;
+		letter-spacing: -0.025em;
+	}
+	.logo .first { font-weight: 300; color: rgb(23 23 23 / 0.82); }
+	.logo .last { font-weight: 600; }
+	h1 {
+		position: absolute;
+		left: 80px;
+		top: 246px;
+		margin: 0;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 1.12;
+		letter-spacing: -0.035em;
+	}
+	h1 u {
+		text-decoration: underline;
+		text-decoration-color: #f28c7a;
+		text-decoration-thickness: 3px;
+		text-underline-offset: 14px;
+	}
+	.note {
+		position: absolute;
+		left: 80px;
+		top: 528px;
+		margin: 0;
+		font-weight: 300;
+		font-size: 22px;
+		color: #6b6b6b;
+	}
+</style>
+</head>
+<body>
+	<div class="card">
+		<div class="logo"><span class="first">felix</span><span class="last">corcoran</span></div>
+		<h1>¿A qué <u>ayudas</u> puede optar<br>tu negocio?</h1>
+		<p class="note">Radar de subvenciones · subvenciones.felixcorcoran.es</p>
+	</div>
+</body>
+</html>
