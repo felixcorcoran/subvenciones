@@ -1,0 +1,779 @@
+---
+/**
+ * El formulario, pregunta a pregunta: comunidad (con su silueta), provincia o
+ * isla, municipio (con autocompletado), forma de trabajo, plantilla,
+ * antigüedad y sector. Al terminar lanza el evento «perfil-listo» con el
+ * perfil; la página pinta las ayudas.
+ */
+import provincias from '../data/provincias.json';
+import formas from '../data/formas.json';
+import { SECCIONES } from '../lib/sectores';
+
+const siluetas = formas as { comunidades: Record<string, string>; provincias: Record<string, string> };
+
+const comunidades = Object.values(
+	provincias.reduce<Record<string, { codigo: string; nombre: string; provincias: typeof provincias }>>((acc, p) => {
+		(acc[p.codigoComunidad] ??= { codigo: p.codigoComunidad, nombre: p.comunidad, provincias: [] }).provincias.push(p);
+		return acc;
+	}, {}),
+).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+
+const islas = new Set(['ES53', 'ES70']);
+const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
+---
+
+<section id="asistente" class="asistente" hidden aria-live="polite">
+	<div class="cabeza">
+		<button type="button" class="atras" data-atras>
+			<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 6h-9M5 2.5 1.5 6 5 9.5"></path></svg>
+			Atrás
+		</button>
+		<div class="progreso" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+			<span data-barra></span>
+		</div>
+	</div>
+
+	<div class="paso" data-paso="comunidad" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">¿Dónde está tu negocio?</h2>
+		<p class="pista">Elige tu comunidad autónoma.</p>
+		<ul class="rejilla rejilla--formas">
+			{
+				comunidades.map((c, i) => (
+					<li style={`--i: ${i}`}>
+						<button type="button" class="tarjeta tarjeta--forma" data-comunidad={c.codigo}>
+							<svg viewBox="0 0 100 100" aria-hidden="true">
+								<path d={siluetas.comunidades[c.codigo]} pathLength="1" />
+							</svg>
+							<span>{c.nombre}</span>
+						</button>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+
+	<div class="paso" data-paso="provincia" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1" data-titulo-provincia>¿En qué provincia?</h2>
+		<p class="pista" data-pista-provincia></p>
+		{
+			comunidades.map((c) => (
+				<ul class="rejilla rejilla--formas" data-de={c.codigo} data-islas={islas.has(c.codigo) ? '' : undefined} hidden>
+					{c.provincias.map((p, i) => (
+						<li style={`--i: ${i}`}>
+							<button type="button" class="tarjeta tarjeta--forma" data-provincia={p.codigo}>
+								<svg viewBox="0 0 100 100" aria-hidden="true">
+									<path d={siluetas.provincias[p.codigo]} pathLength="1" />
+								</svg>
+								<span>{p.nombre}</span>
+							</button>
+						</li>
+					))}
+				</ul>
+			))
+		}
+	</div>
+
+	<div class="paso" data-paso="municipio" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">¿En qué municipio?</h2>
+		<p class="pista">Muchas ayudas son de un ayuntamiento y solo valen para negocios de allí.</p>
+		<div class="buscador">
+			<label class="sr-only" for="municipio">Municipio</label>
+			<input
+				id="municipio"
+				type="text"
+				autocomplete="off"
+				spellcheck="false"
+				role="combobox"
+				aria-autocomplete="list"
+				aria-expanded="false"
+				aria-controls="municipios"
+				placeholder="Empieza a escribir…"
+			/>
+			<ul id="municipios" class="sugerencias" role="listbox" hidden></ul>
+		</div>
+		<div class="acciones">
+			<button type="button" class="seguir" data-seguir-municipio>Siguiente</button>
+			<button type="button" class="enlace" data-saltar-municipio>Prefiero no decirlo</button>
+		</div>
+	</div>
+
+	<div class="paso" data-paso="forma" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">Tu negocio es…</h2>
+		<ul class="rejilla rejilla--grandes">
+			<li style="--i: 0">
+				<button type="button" class="tarjeta tarjeta--grande" data-forma="autonomo">
+					<span class="titulo">Autónomo o autónoma</span>
+					<span class="sub">Trabajas por tu cuenta</span>
+				</button>
+			</li>
+			<li style="--i: 1">
+				<button type="button" class="tarjeta tarjeta--grande" data-forma="sociedad">
+					<span class="titulo">Una empresa</span>
+					<span class="sub">Una sociedad: SL, SA, cooperativa…</span>
+				</button>
+			</li>
+			<li style="--i: 2">
+				<button type="button" class="tarjeta tarjeta--grande" data-forma="emprender">
+					<span class="titulo">Aún no he empezado</span>
+					<span class="sub">Quieres montar tu negocio</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+
+	<div class="paso" data-paso="empleados" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">¿Cuántas personas trabajan contigo?</h2>
+		<ul class="rejilla rejilla--lista">
+			{
+				[
+					['0', 'Nadie, solo yo'],
+					['1', 'De 1 a 9'],
+					['10', 'De 10 a 49'],
+					['50', 'De 50 a 249'],
+					['250', '250 o más'],
+				].map(([v, t], i) => (
+					<li style={`--i: ${i}`}>
+						<button type="button" class="tarjeta" data-empleados={v}>{t}</button>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+
+	<div class="paso" data-paso="antiguedad" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">¿Cuánto llevas con el negocio?</h2>
+		<ul class="rejilla rejilla--lista">
+			{
+				[
+					['menos1', 'Menos de un año'],
+					['1a3', 'De 1 a 3 años'],
+					['mas3', 'Más de 3 años'],
+				].map(([v, t], i) => (
+					<li style={`--i: ${i}`}>
+						<button type="button" class="tarjeta" data-antiguedad={v}>{t}</button>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+
+	<div class="paso" data-paso="sector" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">¿A qué se dedica?</h2>
+		<ul class="rejilla rejilla--sectores">
+			{
+				sectores.map((s, i) => (
+					<li style={`--i: ${i}`}>
+						<button type="button" class="tarjeta" data-sector={s.letra}>{s.nombre}</button>
+					</li>
+				))
+			}
+			<li style={`--i: ${sectores.length}`}>
+				<button type="button" class="tarjeta tarjeta--suave" data-sector="">No lo sé o es otra cosa</button>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<script type="application/json" id="comunidades" set:html={JSON.stringify(comunidades.map((c) => ({ codigo: c.codigo, nombre: c.nombre, provincias: c.provincias.map((p) => ({ codigo: p.codigo, nombre: p.nombre })) })))} />
+
+<style>
+	.asistente {
+		margin-top: clamp(1.5rem, 4vw, 2.5rem);
+		padding: clamp(1.25rem, 3.5vw, 2.75rem);
+		border-radius: 1.75rem;
+		background: rgb(var(--surface-rgb) / 0.7);
+		border: 1px solid var(--rule);
+		box-shadow: 0 30px 70px -40px rgb(var(--ink) / 0.35);
+		scroll-margin-top: calc(var(--nav-top) + var(--nav-height) + 1rem);
+	}
+
+	.cabeza {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.atras {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.4rem 0;
+		border: 0;
+		background: none;
+		color: var(--text-muted);
+		font: inherit;
+		font-size: 0.875rem;
+		cursor: pointer;
+	}
+
+	.atras:hover {
+		color: var(--text);
+	}
+
+	.atras[hidden] {
+		display: none;
+	}
+
+	.atras svg {
+		width: 0.75rem;
+		height: 0.75rem;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.4;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.progreso {
+		flex: 1;
+		height: 4px;
+		border-radius: 999px;
+		background: rgb(var(--ink) / 0.08);
+		overflow: hidden;
+	}
+
+	.progreso span {
+		display: block;
+		height: 100%;
+		width: var(--p, 0%);
+		border-radius: inherit;
+		background: var(--accent);
+		transition: width 0.6s var(--ease-out);
+	}
+
+	.paso {
+		margin-top: clamp(1.5rem, 4vw, 2.25rem);
+	}
+
+	.contador {
+		margin: 0;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--text-muted);
+	}
+
+	.paso h2 {
+		margin: 0.5rem 0 0;
+		font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+		font-weight: 400;
+		line-height: 1.1;
+		letter-spacing: -0.03em;
+		outline: none;
+	}
+
+	.pista {
+		margin: 0.625rem 0 0;
+		font-size: 0.9375rem;
+		line-height: 1.5;
+		color: var(--text-muted);
+	}
+
+	.rejilla {
+		display: grid;
+		gap: 0.75rem;
+		margin: clamp(1.25rem, 3vw, 2rem) 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.rejilla[hidden] {
+		display: none;
+	}
+
+	.rejilla--formas {
+		grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+	}
+
+	.rejilla--grandes {
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+	}
+
+	.rejilla--lista {
+		grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+	}
+
+	.rejilla--sectores {
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	}
+
+	.tarjeta {
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		min-height: 3.5rem;
+		padding: 0.875rem 1.125rem;
+		border-radius: 1rem;
+		border: 1px solid rgb(var(--ink) / 0.12);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 0.9375rem;
+		line-height: 1.35;
+		text-align: left;
+		cursor: pointer;
+		transition:
+			border-color 0.25s var(--ease-out),
+			background-color 0.25s var(--ease-out),
+			transform 0.25s var(--ease-out),
+			box-shadow 0.25s var(--ease-out);
+	}
+
+	.tarjeta:hover {
+		border-color: rgb(var(--ink) / 0.3);
+		transform: translateY(-2px);
+		box-shadow: 0 12px 24px -16px rgb(var(--ink) / 0.35);
+	}
+
+	.tarjeta[aria-pressed='true'] {
+		border-color: var(--text);
+		box-shadow: inset 0 0 0 1px var(--text);
+	}
+
+	.tarjeta--suave {
+		color: var(--text-muted);
+		border-style: dashed;
+	}
+
+	/* Comunidades y provincias: su silueta, que se dibuja al aparecer y se
+	   rellena de coral al pasar por encima */
+	.tarjeta--forma {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.625rem;
+		padding: 1rem 0.75rem 0.875rem;
+		text-align: center;
+	}
+
+	.tarjeta--forma svg {
+		width: 100%;
+		max-width: 5.5rem;
+		aspect-ratio: 1;
+		overflow: visible;
+	}
+
+	.tarjeta--forma path {
+		fill: rgb(var(--ink) / 0.04);
+		stroke: currentColor;
+		stroke-width: 1.4;
+		stroke-linejoin: round;
+		vector-effect: non-scaling-stroke;
+		transition:
+			fill 0.35s var(--ease-out),
+			stroke 0.35s var(--ease-out);
+	}
+
+	.tarjeta--forma:hover path,
+	.tarjeta--forma[aria-pressed='true'] path {
+		fill: var(--accent-soft);
+		stroke: var(--accent-text);
+	}
+
+	.tarjeta--forma span {
+		font-size: 0.875rem;
+		line-height: 1.25;
+	}
+
+	.tarjeta--grande {
+		display: flex;
+		flex-direction: column;
+		gap: 0.375rem;
+		padding: 1.25rem 1.375rem;
+	}
+
+	.titulo {
+		font-size: 1.0625rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+	}
+
+	.sub {
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	/* Municipio */
+	.buscador {
+		position: relative;
+		max-width: 32rem;
+		margin-top: clamp(1.25rem, 3vw, 2rem);
+	}
+
+	.buscador input {
+		box-sizing: border-box;
+		width: 100%;
+		height: 3.5rem;
+		padding: 0 1.25rem;
+		border-radius: 1rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 1.0625rem;
+	}
+
+	.buscador input:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.sugerencias {
+		position: absolute;
+		z-index: 5;
+		top: calc(100% + 0.375rem);
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding: 0.375rem;
+		list-style: none;
+		border-radius: 1rem;
+		border: 1px solid var(--rule);
+		background: var(--surface);
+		box-shadow: 0 20px 40px -20px rgb(var(--ink) / 0.35);
+	}
+
+	.sugerencias[hidden] {
+		display: none;
+	}
+
+	:global(.sugerencias li) {
+		padding: 0.625rem 0.875rem;
+		border-radius: 0.625rem;
+		font-size: 0.9375rem;
+		cursor: pointer;
+	}
+
+	:global(.sugerencias li[aria-selected='true']),
+	:global(.sugerencias li:hover) {
+		background: rgb(var(--ink) / 0.06);
+	}
+
+	:global(.sugerencias mark) {
+		background: none;
+		color: inherit;
+		font-weight: 600;
+	}
+
+	.acciones {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	.seguir {
+		height: 3.25rem;
+		padding: 0 1.75rem;
+		border: 0;
+		border-radius: 999px;
+		background: var(--text);
+		color: var(--bg);
+		font: inherit;
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	.enlace {
+		padding: 0.5rem 0;
+		border: 0;
+		background: none;
+		color: var(--text-muted);
+		font: inherit;
+		font-size: 0.9375rem;
+		text-decoration: underline;
+		text-decoration-color: rgb(var(--ink) / 0.3);
+		text-underline-offset: 0.3em;
+		cursor: pointer;
+	}
+
+	/* Entradas: la pregunta sube, las opciones llegan escalonadas y las
+	   siluetas se dibujan */
+	@media (prefers-reduced-motion: no-preference) {
+		.paso.entra h2,
+		.paso.entra .contador,
+		.paso.entra .pista {
+			animation: subir 0.6s var(--ease-out) backwards;
+		}
+
+		.paso.entra .rejilla li {
+			animation: subir 0.55s var(--ease-out) backwards;
+			animation-delay: calc(0.08s + var(--i, 0) * 28ms);
+		}
+
+		.paso.entra .tarjeta--forma path {
+			stroke-dasharray: 1;
+			animation: trazar 1.1s var(--ease-out) backwards;
+			animation-delay: calc(0.15s + var(--i, 0) * 28ms);
+		}
+
+		.paso.entra .buscador,
+		.paso.entra .acciones {
+			animation: subir 0.6s var(--ease-out) 0.1s backwards;
+		}
+	}
+
+	@keyframes subir {
+		from {
+			opacity: 0;
+			transform: translateY(14px);
+		}
+	}
+
+	@keyframes trazar {
+		from {
+			stroke-dashoffset: 1;
+			fill: transparent;
+		}
+	}
+
+	@media (max-width: 40rem) {
+		.rejilla--formas {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+</style>
+
+<script>
+	import type { Perfil } from '../lib/encaje';
+
+	interface Comunidad {
+		codigo: string;
+		nombre: string;
+		provincias: { codigo: string; nombre: string }[];
+	}
+
+	const comunidades = JSON.parse(document.querySelector('#comunidades')!.textContent!) as Comunidad[];
+	const raiz = document.querySelector<HTMLElement>('#asistente')!;
+	const pasos = [...raiz.querySelectorAll<HTMLElement>('.paso')];
+	const barra = raiz.querySelector<HTMLElement>('[data-barra]')!;
+	const atras = raiz.querySelector<HTMLButtonElement>('[data-atras]')!;
+
+	type Paso = 'comunidad' | 'provincia' | 'municipio' | 'forma' | 'empleados' | 'antiguedad' | 'sector';
+	const ORDEN: Paso[] = ['comunidad', 'provincia', 'municipio', 'forma', 'empleados', 'antiguedad', 'sector'];
+
+	const r: Partial<Perfil> & { comunidad?: string } = {};
+	let historial: Paso[] = [];
+
+	const comunidadDe = (codigo?: string) => comunidades.find((c) => c.codigo === codigo);
+	const saltar = (p: Paso) =>
+		(p === 'provincia' && (comunidadDe(r.comunidad)?.provincias.length ?? 0) <= 1) ||
+		((p === 'empleados' || p === 'antiguedad') && r.forma === 'emprender');
+	const visibles = () => ORDEN.filter((p) => !saltar(p) && p !== 'provincia');
+
+	function mostrar(p: Paso) {
+		for (const el of pasos) {
+			const activo = el.dataset.paso === p;
+			el.hidden = !activo;
+			el.classList.toggle('entra', activo);
+		}
+		const lista = visibles();
+		const n = lista.indexOf(p === 'provincia' ? 'comunidad' : p) + 1;
+		for (const c of raiz.querySelectorAll<HTMLElement>('[data-contador]')) c.textContent = `Pregunta ${n} de ${lista.length}`;
+		const hechas = ORDEN.indexOf(p) / ORDEN.length;
+		barra.parentElement!.style.setProperty('--p', `${Math.round(hechas * 100)}%`);
+		barra.style.setProperty('--p', `${Math.round(hechas * 100)}%`);
+		barra.parentElement!.setAttribute('aria-valuenow', String(Math.round(hechas * 100)));
+		atras.hidden = historial.length === 0;
+		const paso = pasos.find((el) => el.dataset.paso === p)!;
+		marcar(paso);
+		paso.querySelector<HTMLElement>('h2')?.focus({ preventScroll: true });
+		if (p === 'municipio') prepararMunicipio();
+	}
+
+	// Lo ya elegido sale marcado al volver atrás
+	function marcar(paso: HTMLElement) {
+		for (const b of paso.querySelectorAll<HTMLButtonElement>('button[data-comunidad],button[data-provincia],button[data-forma],button[data-empleados],button[data-antiguedad],button[data-sector]')) {
+			const [clave, valor] = Object.entries(b.dataset)[0];
+			const actual = clave === 'comunidad' ? r.comunidad : clave === 'empleados' ? String(r.empleados ?? '') : (r as Record<string, unknown>)[clave];
+			b.setAttribute('aria-pressed', String(actual !== undefined && String(actual) === valor && (clave !== 'sector' || r.sector !== undefined)));
+		}
+	}
+
+	function siguiente(desde: Paso) {
+		historial.push(desde);
+		let i = ORDEN.indexOf(desde) + 1;
+		while (i < ORDEN.length && saltar(ORDEN[i])) i++;
+		if (i >= ORDEN.length) return terminar();
+		mostrar(ORDEN[i]);
+	}
+
+	atras.addEventListener('click', () => {
+		const p = historial.pop();
+		if (p) mostrar(p);
+	});
+
+	function terminar() {
+		const perfil: Perfil = {
+			provincia: r.provincia!,
+			municipio: r.municipio ?? '',
+			forma: r.forma!,
+			empleados: r.forma === 'emprender' ? 0 : (r.empleados ?? 0),
+			antiguedad: r.forma === 'emprender' ? 'nada' : (r.antiguedad ?? '1a3'),
+			sector: r.sector ?? '',
+		};
+		try {
+			localStorage.setItem('perfil-subvenciones', JSON.stringify({ ...perfil, comunidad: r.comunidad }));
+		} catch {}
+		barra.style.setProperty('--p', '100%');
+		document.dispatchEvent(new CustomEvent('perfil-listo', { detail: perfil }));
+	}
+
+	// Opciones
+	raiz.addEventListener('click', (e) => {
+		const b = (e.target as Element).closest<HTMLButtonElement>('button.tarjeta');
+		if (!b) return;
+		const d = b.dataset;
+		if (d.comunidad !== undefined) {
+			r.comunidad = d.comunidad;
+			const c = comunidadDe(d.comunidad)!;
+			if (c.provincias.length === 1) r.provincia = c.provincias[0].codigo;
+			else prepararProvincias(c);
+			return siguiente('comunidad');
+		}
+		if (d.provincia !== undefined) {
+			r.provincia = d.provincia;
+			return siguiente('provincia');
+		}
+		if (d.forma !== undefined) {
+			r.forma = d.forma as Perfil['forma'];
+			return siguiente('forma');
+		}
+		if (d.empleados !== undefined) {
+			r.empleados = Number(d.empleados);
+			return siguiente('empleados');
+		}
+		if (d.antiguedad !== undefined) {
+			r.antiguedad = d.antiguedad as Perfil['antiguedad'];
+			return siguiente('antiguedad');
+		}
+		if (d.sector !== undefined) {
+			r.sector = d.sector;
+			return siguiente('sector');
+		}
+	});
+
+	function prepararProvincias(c: Comunidad) {
+		let islas = false;
+		for (const ul of raiz.querySelectorAll<HTMLElement>('[data-de]')) {
+			ul.hidden = ul.dataset.de !== c.codigo;
+			if (!ul.hidden) islas = ul.hasAttribute('data-islas');
+		}
+		raiz.querySelector('[data-titulo-provincia]')!.textContent = islas ? '¿En qué isla?' : '¿En qué provincia?';
+		raiz.querySelector('[data-pista-provincia]')!.textContent = c.nombre;
+	}
+
+	// Municipio, con sugerencias de los de la provincia elegida
+	const input = raiz.querySelector<HTMLInputElement>('#municipio')!;
+	const lista = raiz.querySelector<HTMLUListElement>('#municipios')!;
+	let municipios: string[] = [];
+	let cargados = '';
+	let activo = -1;
+	const norm = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
+
+	async function prepararMunicipio() {
+		if (r.municipio !== undefined) input.value = r.municipio;
+		if (cargados !== r.provincia) {
+			cargados = r.provincia!;
+			try {
+				municipios = (await (await fetch(`/municipios/${r.provincia}.json`)).json()) as string[];
+			} catch {
+				municipios = [];
+			}
+		}
+		setTimeout(() => input.focus({ preventScroll: true }), 350);
+	}
+
+	function sugerir() {
+		const q = norm(input.value);
+		lista.replaceChildren();
+		activo = -1;
+		if (!q) return cerrar();
+		const empiezan = municipios.filter((m) => norm(m).startsWith(q));
+		const contienen = municipios.filter((m) => !norm(m).startsWith(q) && norm(m).includes(q));
+		const encontrados = [...empiezan, ...contienen].slice(0, 8);
+		if (!encontrados.length) return cerrar();
+		encontrados.forEach((m, i) => {
+			const li = document.createElement('li');
+			li.id = `municipio-${i}`;
+			li.setAttribute('role', 'option');
+			const k = norm(m).indexOf(q);
+			// La parte escrita, en negrita (los índices coinciden: quitar tildes no cambia la longitud)
+			li.append(m.slice(0, k), Object.assign(document.createElement('mark'), { textContent: m.slice(k, k + q.length) }), m.slice(k + q.length));
+			li.addEventListener('mousedown', (ev) => {
+				ev.preventDefault();
+				elegir(m);
+			});
+			lista.append(li);
+		});
+		lista.hidden = false;
+		input.setAttribute('aria-expanded', 'true');
+	}
+
+	function cerrar() {
+		lista.hidden = true;
+		input.setAttribute('aria-expanded', 'false');
+		input.removeAttribute('aria-activedescendant');
+	}
+
+	function elegir(m: string) {
+		input.value = m;
+		cerrar();
+		r.municipio = m;
+		siguiente('municipio');
+	}
+
+	input.addEventListener('input', sugerir);
+	input.addEventListener('blur', () => setTimeout(cerrar, 100));
+	input.addEventListener('keydown', (e) => {
+		const items = [...lista.querySelectorAll<HTMLLIElement>('li')];
+		if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+			if (!items.length) return;
+			e.preventDefault();
+			activo = (activo + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+			items.forEach((li, i) => li.setAttribute('aria-selected', String(i === activo)));
+			input.setAttribute('aria-activedescendant', items[activo].id);
+		} else if (e.key === 'Enter') {
+			e.preventDefault();
+			if (activo >= 0 && items[activo]) elegir(items[activo].textContent ?? '');
+			else if (items.length === 1) elegir(items[0].textContent ?? '');
+			else seguirMunicipio();
+		} else if (e.key === 'Escape') cerrar();
+	});
+
+	function seguirMunicipio() {
+		const escrito = input.value.trim();
+		const exacto = municipios.find((m) => norm(m) === norm(escrito));
+		r.municipio = exacto ?? escrito;
+		siguiente('municipio');
+	}
+	raiz.querySelector('[data-seguir-municipio]')!.addEventListener('click', seguirMunicipio);
+	raiz.querySelector('[data-saltar-municipio]')!.addEventListener('click', () => {
+		input.value = '';
+		r.municipio = '';
+		siguiente('municipio');
+	});
+
+	// La página abre el asistente desde el principio, o desde una pregunta
+	// concreta para cambiar una respuesta
+	document.addEventListener('empezar-asistente', ((e: CustomEvent<{ desde?: Paso; perfil?: Partial<Perfil> & { comunidad?: string } }>) => {
+		Object.assign(r, e.detail?.perfil ?? {});
+		if (r.comunidad) {
+			const c = comunidadDe(r.comunidad);
+			if (c) prepararProvincias(c);
+		}
+		historial = [];
+		raiz.hidden = false;
+		mostrar(e.detail?.desde ?? 'comunidad');
+	}) as EventListener);
+</script>
