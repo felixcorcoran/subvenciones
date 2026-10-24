@@ -11,11 +11,13 @@ import { site } from '../data/site';
 			<span class="brand-first">felix</span><span class="brand-last">corcoran</span>
 		</p>
 		<div class="fine">
-			<a class="foot-cta" href={site.diagnostico} data-site-link>
-				¿Qué se encuentra un cliente en tu web?
+			<a class="foot-cta" href={site.contact} data-site-link>
+				Solicitar auditoría gratuita
 				<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1.5 6h9M7 2.5 10.5 6 7 9.5"></path></svg>
 			</a>
 			<a class="mail" href={`mailto:${site.email}`}>{site.email}</a>
+			<!-- La otra herramienta gratuita de felixcorcoran.es -->
+			<a class="mail" href={site.diagnostico} data-site-link>Diagnóstico web</a>
 			<span class="legal">
 				<a href={site.legal} data-site-link>Aviso legal</a>
 				<a href={site.privacy} data-site-link>Privacidad</a>
