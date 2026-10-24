@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-10-24T15:25:50.626Z",
+	"actualizado": "2026-10-24T16:15:01.389Z",
 	"convocatorias": [
 		{
 			"codigo": "937680",
@@ -186,7 +186,9 @@
 				"nombre": "Bases I convocatoria Coca de Fira - SEFYCU 8763226.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937644",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "937629",
@@ -226,7 +228,39 @@
 				"nombre": "SEFYCU PROPUESTA DE ACUERDO CONVOCATORIA PROCEDIMIENTO SELECCIÓN ENTIDAD COLABORARODA BONO CONSUMO 2026 - SEFYCU 7329.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937629",
-			"ia": null
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Convocatoria para seleccionar a una entidad colaboradora que se encargará de gestionar, ejecutar y distribuir los fondos de la campaña Bono Consumo Crevillent 2026.",
+				"paraQuien": "Entidades públicas o privadas, como sociedades, asociaciones, fundaciones o cámaras de comercio, que tengan capacidad legal y técnica para gestionar subvenciones.",
+				"importe": "Compensación económica de un máximo de 15.000 € (IVA incluido) para cubrir los costes de gestión de la entidad colaboradora.",
+				"importeMaximo": 15000,
+				"plazo": "7 días hábiles a partir del día siguiente al de la publicación de la convocatoria en el Boletín Oficial de la Provincia de Alicante.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener personalidad jurídica propia y plena capacidad para actuar como entidad colaboradora.",
+					"Estar legalmente constituida e inscrita en el registro que le corresponda.",
+					"No estar incursa en prohibiciones para recibir subvenciones o actuar como entidad colaboradora.",
+					"Estar al corriente en los pagos con Hacienda, la Seguridad Social, SUMA y el Ayuntamiento de Crevillent.",
+					"Disponer de organización, personal y plataforma tecnológica adecuada para la gestión de los bonos.",
+					"Comprometerse a presentar un aval bancario por el importe total de las ayudas a distribuir."
+				],
+				"gastos": [
+					"Adaptación de la plataforma web e informática para la compra, registro y canje de bonos.",
+					"Alquiler de servidores y contratación de pasarela de pago.",
+					"Gastos de personal para dar soporte a comercios y compradores, gestionar incidencias y atender la brecha digital."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "937520",
@@ -266,7 +300,35 @@
 				"nombre": "Extracto de la Convocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937520",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para mantener, modernizar y mejorar las instalaciones y equipos de trabajo en los sectores agrícola, ganadero y pesquero de la isla de La Gomera.",
+				"paraQuien": "Autónomos, empresas, asociaciones agrarias o ganaderas, cofradías de pescadores y comunidades de regantes que trabajen en La Gomera.",
+				"importe": "Presupuesto total inicial de 713.360,06 € (ampliable en 200.000 €). El extracto no especifica el importe máximo por solicitante.",
+				"importeMaximo": null,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Desarrollar la actividad económica en la isla de La Gomera.",
+					"Pertenecer al sector agrícola, ganadero, agroalimentario o pesquero profesional.",
+					"Estar legalmente constituidos en el caso de asociaciones, cofradías y comunidades de agua/regantes."
+				],
+				"gastos": [
+					"Mantenimiento de instalaciones y medios productivos.",
+					"Modernización y mejora de instalaciones y medios productivos."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No se especifica el límite máximo de dinero que puede recibir cada negocio ni el porcentaje financiado de los gastos."
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937467",
@@ -306,7 +368,9 @@
 				"nombre": "Bases Escaparatismo Ambientación Navideña-Castellano-definitivas.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937467",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "937464",
@@ -406,7 +470,33 @@
 				"nombre": "20261022_Publicació_Anunci_ANUNCIO EXTRACTO CONVOCATORIA 2026 BDNS 22102026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937464",
-			"ia": null
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso que premia nuevos proyectos empresariales innovadores que generen empleo y refuercen la economía de la comarca del Pallars Jussà.",
+				"paraQuien": "Personas con nuevos proyectos empresariales innovadores en la comarca del Pallars Jussà.",
+				"importe": "Tres premios de 1.500 €, 1.000 € y 500 € para el primer, segundo y tercer puesto respectivamente.",
+				"importeMaximo": 1500,
+				"plazo": "El plazo de presentación finaliza el 18 de diciembre de 2026.",
+				"plazoFin": "2026-12-18",
+				"requisitos": [
+					"Presentar un proyecto empresarial nuevo e innovador.",
+					"Generar actividad económica y trabajo en la comarca.",
+					"Tener un carácter integrador en lo social.",
+					"Vincularse y reforzar el tejido económico comarcal."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "El extracto no especifica la edad máxima del emprendedor ni los documentos exactos a entregar, remitiendo a las bases reguladoras completas."
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937440",
@@ -446,7 +536,36 @@
 				"nombre": "02 ORDEN CONVOCATORIA ÁRBITROS 2026 v3 (COPIA).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937440",
-			"ia": null
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Compensación económica dirigida a las personas nombradas como árbitros laborales o como presidente de la Comisión Arbitral en la Región de Murcia por el trabajo realizado en elecciones sindicales o resolución de conflictos laborales entre diciembre de 2025 y septiembre de 2026.",
+				"paraQuien": "Árbitros laborales designados legalmente y el Presidente de la Comisión Arbitral del Consejo Autonómico de Relaciones Laborales de la Región de Murcia.",
+				"importe": "Hasta 20.000 € por persona (pagos de 200 € a 625 € por actuación o laudo según el número de trabajadores afectados).",
+				"importeMaximo": 20000,
+				"plazo": "15 días naturales a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Región de Murcia (BORM).",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar nombrado como árbitro laboral o Presidente de la Comisión Arbitral conforme a la normativa aplicable en Murcia.",
+					"Haber realizado las actuaciones arbitrales entre el 1 de diciembre de 2025 y el 30 de septiembre de 2026.",
+					"Estar al día en los pagos con la Hacienda estatal y la Seguridad Social.",
+					"No tener deudas pendientes de pago con la Administración regional de Murcia.",
+					"Estar al corriente en el pago de devoluciones de subvenciones anteriores.",
+					"No estar inhabilitado para recibir ayudas o subvenciones públicas.",
+					"Aceptar el compromiso de cumplir el código de conducta sobre subvenciones de la Región de Murcia."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937413",
@@ -486,7 +605,31 @@
 				"nombre": "DT_RESOL_1500MSR_CUL00041.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937413",
-			"ia": null
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Se aprueban las bases para celebrar el V Concurso de Fotografía del Ayuntamiento de Almensilla con un premio en metálico para la obra ganadora.",
+				"paraQuien": "No consta en la resolución el perfil exacto de las personas o negocios que pueden participar.",
+				"importe": "300 € para la fotografía ganadora.",
+				"importeMaximo": 300,
+				"plazo": "Desde la publicación de las bases en el Boletín Oficial de la Provincia hasta el 2 de noviembre de 2026.",
+				"plazoFin": "2026-11-02",
+				"requisitos": [
+					"Presentar una fotografía al concurso conforme a las bases.",
+					"Las condiciones detalladas de participación no constan en la resolución y deben consultarse en las bases completas."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "El texto es la resolución que aprueba el concurso, por lo que no detalla la temática ni las reglas específicas de participación."
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937353",
@@ -538,7 +681,42 @@
 				"nombre": "10.- Resolución aprobación Convocatoria y Bases subvención ayudas Desarrollo empresaria firmada.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937353",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Ayuntamiento de Andújar para apoyar la implantación de nuevas empresas y el crecimiento de negocios existentes en el municipio mediante la financiación de inversiones.",
+				"paraQuien": "Autónomos y empresas privadas con domicilio social y fiscal en Andújar, con menos de 50 trabajadores y un volumen de negocio inferior a 10 millones de euros.",
+				"importe": "El 50 % de la inversión subvencionable, con un máximo de 4.000 € por empresa y año.",
+				"importeMaximo": 4000,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Jaén.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener el domicilio social y fiscal en el municipio de Andújar.",
+					"Desarrollar las actividades subvencionables en un centro de trabajo de Andújar.",
+					"Estar dado de alta en el IAE en la fecha de solicitud y mantenerlo durante 4 años.",
+					"Tener menos de 50 personas asalariadas y un volumen de negocios inferior a 10 millones de euros.",
+					"Estar al corriente de las obligaciones con Hacienda, Seguridad Social y el Ayuntamiento de Andújar.",
+					"No dedicarse a actividades excluidas como hospedaje, reparación de electrodomésticos, agencias de viajes o discotecas.",
+					"Realizar una inversión subvencionable mínima de 1.500 euros sin IVA.",
+					"Obtener un mínimo de 50 puntos en la valoración del proyecto."
+				],
+				"gastos": [
+					"Diseño de imagen corporativa, creación de página web y redes sociales (no recurrentes)",
+					"Maquinaria, utillaje y bienes de equipamiento nuevos ligados al proyecto",
+					"Mobiliario nuevo",
+					"Equipos informáticos y aplicaciones o programas informáticos"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 49,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Andújar"
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "937289",
@@ -579,7 +757,37 @@
 				"nombre": "CAST_convocatoria_noves_inversions_2027_ver def.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937289",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para proyectos de inversión industrial en Cataluña dirigidas a crear nuevas plantas de producción o mejorar los procesos productivos existentes, siempre que mantengan o creen empleo.",
+				"paraQuien": "Empresas que realicen proyectos de inversión industrial en Cataluña.",
+				"importe": "Hasta el 20 % del presupuesto subvencionable, con un máximo de 500.000 € por empresa.",
+				"importeMaximo": 500000,
+				"plazo": "Desde el primer día hábil posterior a su publicación en el DOGC hasta el 2 de marzo de 2027 a las 14:00 horas.",
+				"plazoFin": "2027-03-02",
+				"requisitos": [
+					"Realizar proyectos de inversión industrial en Cataluña.",
+					"Abrir nuevas plantas o mejorar procesos productivos existentes.",
+					"Mantener o aumentar de forma neta los puestos de trabajo.",
+					"Alcanzar una puntuación mínima de 175 puntos en la evaluación.",
+					"Cumplir los requisitos generales establecidos en las bases reguladoras."
+				],
+				"gastos": [
+					"Inversiones para crear nuevas plantas de producción.",
+					"Inversiones en mejoras o puesta en marcha de nuevos procesos productivos."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "Los requisitos específicos y la lista detallada de gastos subvencionables no figuran en este texto y se remiten a la Orden EMT/42/2024."
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937284",
@@ -619,7 +827,42 @@
 				"nombre": "Deialdia.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937284",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Ayuntamiento de Ordizia para financiar programas curriculares, extraescolares y de conciliación del cuidado compatibles con la actividad laboral, que se alineen con los valores de «Ordizia Herri Hezitzailea» (Ciudad Educadora).",
+				"paraQuien": "Centros escolares que imparten Infantil, Primaria o ESO y asociaciones de padres y madres (AMPA) de Ordizia.",
+				"importe": "Presupuesto total de 130.000 €. El importe máximo por centro escolar se calcula según su número de alumnos matriculados respecto al total del municipio.",
+				"importeMaximo": null,
+				"plazo": "Hasta el 15 de diciembre de 2026 a través del registro electrónico municipal.",
+				"plazoFin": "2026-12-15",
+				"requisitos": [
+					"Ser un centro escolar (Infantil, Primaria o ESO) o asociación de padres y madres de Ordizia.",
+					"Estar al corriente con la Seguridad Social y Hacienda.",
+					"No tener deudas ni sanciones en periodo ejecutivo con el Ayuntamiento de Ordizia.",
+					"No tener prohibiciones legales para recibir subvenciones públicas.",
+					"No haber recibido sanciones firmes por discriminación por razón de sexo ni vulnerar la normativa de igualdad.",
+					"Las asociaciones deben estar inscritas en el Registro de Asociaciones.",
+					"En personas jurídicas, la actividad debe encajar en sus fines o estatutos sociales.",
+					"Presentar la solicitud y memoria explicativa por registro electrónico."
+				],
+				"gastos": [
+					"Programas curriculares o extraescolares alineados con los valores de Ordizia Herri Hezitzailea.",
+					"Programas de conciliación del cuidado compatibles con la jornada laboral.",
+					"Iniciativas de promoción y aprendizaje del euskera.",
+					"Actividades para reducir desigualdades educativas, fomentar la igualdad de oportunidades y prevenir la segregación escolar."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Ordizia"
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "937192",
@@ -667,7 +910,42 @@
 				"nombre": "02. DECRETO_ALCALDIA 2026 - 642.-_Aprobacion_de_convocatoria_y_bases_de_subvenciones_por_insercion_de_euskera_en_rotulacón de comercios.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937192",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas económicas del Ayuntamiento de Ayala para fomentar el uso del euskera en rótulos principales, toldos, vehículos comerciales y placas informativas de negocios locales durante 2026.",
+				"paraQuien": "Autónomos y empresas de comercio, hostelería o servicios con sede y local abierto al público en el municipio de Ayala.",
+				"importe": "Hasta el 70 % de la base imponible del coste si la rotulación está solo en euskera, o el 35 % si combina euskera con otros idiomas. La dotación presupuestaria total es de 3.000 €.",
+				"importeMaximo": null,
+				"plazo": "1 mes a contar desde el día siguiente a la publicación de las bases en el BOTHA.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener un establecimiento o empresa de servicios abierto y ubicado en Ayala.",
+					"Tener el domicilio social o sede fijado en Ayala.",
+					"Estar al corriente de pagos con la Hacienda Foral y la Seguridad Social.",
+					"Realizar la nueva rotulación durante el año 2026 (antes del 31 de diciembre).",
+					"Los textos no deben tener faltas de ortografía (se puede pedir asesoramiento previo al Área de Euskera).",
+					"Si se usan varios idiomas, el euskera debe situarse primero (arriba o a la izquierda) y con tamaño igual o mayor.",
+					"No se subvencionan rótulos que lleven solo el nombre o apellidos; deben incluir la actividad genérica (panadería, restaurante, etc.).",
+					"Cumplir con la normativa vigente en materia de igualdad de mujeres y hombres."
+				],
+				"gastos": [
+					"Rótulo exterior principal e identificativo del negocio.",
+					"Rotulación de toldos con información exclusiva del negocio.",
+					"Rotulación de vehículos industriales o comerciales de la empresa.",
+					"Placas exteriores de información comercial visibles desde la calle."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Ayala"
+				},
+				"dudas": "No se concreta una cuantía máxima en euros por beneficiario, únicamente el presupuesto global de 3.000 €."
+			},
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "937108",
@@ -707,7 +985,33 @@
 				"nombre": "decrayudascultura2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937108",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones del Ayuntamiento de Lasarte-Oria destinadas a apoyar y financiar la realización de actividades culturales dentro del municipio para el año 2026.",
+				"paraQuien": "Personas o entidades que organicen actividades culturales en Lasarte-Oria (el texto no detalla los tipos de solicitantes y remite a las bases reguladoras).",
+				"importe": "Solo se indica un presupuesto global de 10.705,80 € para toda la convocatoria; no se detalla el importe individual.",
+				"importeMaximo": null,
+				"plazo": "30 días a contar desde el día siguiente a su publicación en el Boletín Oficial de Gipuzkoa (BOG).",
+				"plazoFin": null,
+				"requisitos": [
+					"Desarrollar actividades que formen parte del programa cultural de Lasarte-Oria para el año 2026.",
+					"Ajustarse a las bases reguladoras de subvenciones culturales aprobadas en el pleno de marzo de 2018."
+				],
+				"gastos": [
+					"Organización y ejecución de actividades para la programación cultural de 2026."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Lasarte-Oria"
+				},
+				"dudas": "El decreto no especifica los requisitos detallados de los solicitantes, los gastos admisibles ni la cuantía máxima por ayuda, ya que remite a las bases del año 2018."
+			},
+			"iaModelo": "gemini-3.7-flash"
 		},
 		{
 			"codigo": "937103",
@@ -755,7 +1059,36 @@
 				"nombre": "20261020_Otros_BASES BONO CONSUMO 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937103",
-			"ia": null
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Campaña de bonos consumo de Benilloba. No es una ayuda directa para pagar gastos del negocio, sino la adhesión comercial para aceptar los bonos de 70 € de los vecinos, aplicarles el descuento y cobrar ese importe del Ayuntamiento.",
+				"paraQuien": "Micropymes, pequeños empresarios autónomos y profesionales con menos de 10 trabajadores que tengan su local o actividad en Benilloba y estén en los epígrafes del IAE permitidos.",
+				"importe": "Reembolso de 70 € por cada bono canjeado y justificado en compras de clientes. El presupuesto total del programa es de 34.151 €.",
+				"importeMaximo": null,
+				"plazo": "Adhesión de comercios abierta hasta las 12:00 horas del 30 de octubre de 2026. Los bonos se canjean y justifican hasta las 14:00 horas del 9 de diciembre de 2026.",
+				"plazoFin": "2026-10-30",
+				"requisitos": [
+					"Ser micropyme, autónomo o profesional con menos de 10 trabajadores.",
+					"Tener el establecimiento donde se ejerce la actividad en el municipio de Benilloba.",
+					"Estar dado de alta en alguna de las actividades económicas (IAE) admitidas en las bases.",
+					"Estar al corriente de pagos con Hacienda (estatal, autonómica y municipal) y con la Seguridad Social.",
+					"Comprometerse a aplicar el descuento del bono en las compras y justificarlo debidamente."
+				],
+				"gastos": [
+					"Reembolso de los bonos de 70 € descontados a los clientes en ventas o servicios (las bebidas alcohólicas quedan excluidas)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 9,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Benilloba"
+				},
+				"dudas": "No se especifica si existe un tope máximo de bonos que puede canjear y cobrar un mismo establecimiento colaborador."
+			},
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "937102",
@@ -795,7 +1128,43 @@
 				"nombre": "TextoConvocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937102",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de la Junta de Andalucía para que armadores, dueños de buques pesqueros y pescadores a pie inviertan en eficiencia energética a bordo o mejoren la higiene, seguridad y condiciones de trabajo.",
+				"paraQuien": "Autónomos, empresas pesqueras, comunidades de bienes y pescadores a pie que trabajen en Andalucía o tengan buques pesqueros con puerto base en la comunidad autónoma.",
+				"importe": "La intensidad máxima de la ayuda va del 75 % al 100 % de la inversión según el tipo de proyecto y solicitante. El presupuesto total de partida es de 207.643,36 €, ampliable en 2.000.000 € adicionales.",
+				"importeMaximo": null,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el BOJA.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener puerto base del buque en Andalucía o ejercer la pesca a pie en la comunidad.",
+					"Ser titular o armador del buque pesquero o buque auxiliar de almadraba, o ser persona pescadora a pie.",
+					"Si se es armador pero no dueño, contar con un acuerdo previo que autorice a realizar las inversiones.",
+					"Para buques de almadraba, haber tenido actividad en las campañas de los dos años anteriores.",
+					"Para pescadores a pie, acreditar actividad durante los dos años civiles anteriores a la solicitud.",
+					"No aumentar el arqueo bruto ni la capacidad pesquera del buque con las inversiones.",
+					"No haber comenzado las inversiones antes de solicitar la subvención o de levantarse acta previa.",
+					"Tener de alta la cuenta bancaria en el Fichero Central de Acreedores de la Junta de Andalucía."
+				],
+				"gastos": [
+					"Equipos e inversiones a bordo que reduzcan emisiones contaminantes o mejoren la eficiencia energética.",
+					"Sustitución o modernización de motores principales y auxiliares.",
+					"Equipos de protección individual (EPIs) y ropa de trabajo que mejore la seguridad y salud.",
+					"Mecanización de tareas con alto esfuerzo físico e inversiones para reducir ruido a bordo.",
+					"Material médico, botiquines y sistemas de telemedicina a bordo."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La fecha exacta límite para pedir la ayuda depende del día en que se publique el extracto en el BOJA."
+			},
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "937101",
@@ -835,7 +1204,42 @@
 				"nombre": "TextoConvocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937101",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de la Junta de Andalucía cofinanciadas con fondos europeos para buques pesqueros andaluces y pescadores a pie. Financian mejoras de eficiencia energética y mitigación del cambio climático, así como inversiones en equipos para mejorar la salud, higiene y seguridad en el trabajo, siempre que no se incremente el tamaño o capacidad del barco.",
+				"paraQuien": "Personas autónomas, empresas, comunidades de bienes y sociedades civiles que sean propietarias o armadoras de buques pesqueros con puerto base en Andalucía, dueñas de buques auxiliares de almadraba activa, o pescadores a pie.",
+				"importe": "Financia un porcentaje de la inversión subvencionable (con carácter general puede alcanzar hasta el 75 % si es innovadora, y hasta el 100 % en pesca artesanal). El presupuesto total disponible para la convocatoria es de 207.643,36 € (ampliable).",
+				"importeMaximo": null,
+				"plazo": "10 días hábiles a contar a partir del día siguiente al que se publique el extracto de la convocatoria en el Boletín Oficial de la Junta de Andalucía (BOJA).",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener un buque pesquero con puerto base en Andalucía, ser propietario de un buque auxiliar de almadraba o ser pescador a pie.",
+					"Si quien pide la ayuda es la empresa armadora y no la dueña, debe existir un acuerdo previo que autorice las obras en el buque.",
+					"Para buques auxiliares de almadraba, esta debe tener autorización y haber estado en activo en los dos años civiles previos.",
+					"Las inversiones no pueden suponer en ningún caso un aumento del arqueo bruto (capacidad) del buque.",
+					"No haber comenzado las inversiones antes de registrar la solicitud de ayuda.",
+					"Cumplir con los plazos legales de pago a proveedores y estar al corriente de obligaciones tributarias y de Seguridad Social.",
+					"Estar dado de alta en el Fichero Central de Personas Acreedoras de la Junta de Andalucía.",
+					"Presentar la solicitud y la documentación exclusivamente por internet con firma electrónica."
+				],
+				"gastos": [
+					"Inversiones y equipos a bordo para mejorar la eficiencia energética y ahorrar combustible.",
+					"Equipos de protección individual (EPIs), ropa de trabajo y medidas de seguridad laboral.",
+					"Mecanización de tareas a bordo para reducir esfuerzos físicos y medidas para atenuar ruidos.",
+					"Equipamiento médico, botiquines y sistemas de telemedicina a bordo."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La fecha exacta de cierre del plazo depende del día en que se publique el extracto oficial en el BOJA, y la convocatoria no especifica un límite máximo de dinero en euros por beneficiario."
+			},
+			"iaModelo": "gemini-3.7-flash"
 		},
 		{
 			"codigo": "937089",
@@ -951,7 +1355,39 @@
 				"nombre": "BORM TAI LAOS Y CAMBOYA 27-Copia.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937089",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Instituto de Fomento de la Región de Murcia para apoyar la participación de PYMES en la misión comercial presencial a Tailandia, Laos y Camboya que se celebrará en enero de 2027.",
+				"paraQuien": "Pequeñas y medianas empresas (PYMES) de la Región de Murcia de cualquier sector, excepto pesca, acuicultura y producción primaria agrícola.",
+				"importe": "Hasta 7.000 € para dos destinos o 4.000 € para un solo destino (cubre hasta el 75 % de los costes).",
+				"importeMaximo": 7000,
+				"plazo": "Hasta el 18 de noviembre de 2026.",
+				"plazoFin": "2026-11-18",
+				"requisitos": [
+					"Ser una PYME de la Región de Murcia.",
+					"No dedicarse a la pesca, acuicultura o producción agrícola primaria.",
+					"Pagar la cuota de participación previa (2.300 € + IVA para dos destinos o 1.800 € + IVA para un destino).",
+					"Incluir el código CNAE de la actividad en la solicitud.",
+					"Disponer de certificado electrónico para tramitar la solicitud."
+				],
+				"gastos": [
+					"Asistencia técnica y consultoría especializada en el mercado de destino.",
+					"Gastos de viaje en clase turista para una persona.",
+					"Alojamiento en régimen de alojamiento y desayuno para una persona.",
+					"Seguro de viaje y visado para una persona."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La convocatoria limita el número final de participantes a un máximo de 6 empresas."
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937046",
@@ -991,7 +1427,37 @@
 				"nombre": "RESOLUCIÓN de 15 de octubre de 2026, de la Secretaría General de la Consejería de Agricultura, Ganadería y Medio Natural, por la que se aprueba la convocatoria, en régimen de concurrencia competitiva, de subvenciones para el fomento de la cría, selecc.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937046",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para ganaderos de Extremadura que promuevan la cría, selección y doma de caballos de silla a través de su participación en concursos hípicos.",
+				"paraQuien": "Personas físicas o jurídicas titulares de caballos o yeguas de silla criados y mantenidos en Extremadura.",
+				"importe": "5.000 € por cada caballo o yegua beneficiario",
+				"importeMaximo": 5000,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación de la resolución y su extracto en el Diario Oficial de Extremadura (DOE).",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser persona física o jurídica titular de caballos o yeguas de silla.",
+					"Tener identificados todos los animales según la normativa vigente.",
+					"Cumplir las normas de bienestar animal, higiene y medio ambiente.",
+					"Que los animales hayan nacido y permanecido en explotaciones de Extremadura inscritas en BADIGEX desde su nacimiento.",
+					"Mantener la titularidad del animal ininterrumpidamente desde su nacimiento, salvo excepciones justificadas.",
+					"Tener el caballo o yegua entre 4 y 7 años (o entre 5 y 8 años en la línea de Raid).",
+					"Conseguir un mínimo de 2 puntos en los concursos hípicos oficializados entre el 29 de septiembre de 2025 y el 4 de octubre de 2026.",
+					"Estar al corriente de pagos con la Hacienda estatal, autonómica y la Seguridad Social."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "937020",
@@ -1035,7 +1501,36 @@
 				"nombre": "20261021_Otros_Bases_Convocatoria_Bono_Comercio_Penaguila_2026 _.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937020",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Adhesión de comercios, hostelería y servicios de Penàguila a la campaña de bonos consumo 2026. El Ayuntamiento reembolsará a los negocios participantes el valor de los bonos de 70 € que canjeen los vecinos en sus compras.",
+				"paraQuien": "Autónomos, microempresas y pymes de comercio, hostelería y servicios con sede física, domicilio fiscal o venta ambulante en Penàguila.",
+				"importe": "Reembolso del total de bonos de 70 € canjeados en el establecimiento (presupuesto total de la campaña: 18.480 €).",
+				"importeMaximo": null,
+				"plazo": "Para que el negocio se adhiera: del 26 al 30 de octubre de 2026.",
+				"plazoFin": "2026-10-30",
+				"requisitos": [
+					"Tener el domicilio fiscal, local físico o venta no sedentaria en el municipio de Penàguila.",
+					"Ser persona física o jurídica con condición de autónomo, microempresa o pyme.",
+					"Estar al día en las obligaciones con Hacienda, Seguridad Social y el Ayuntamiento de Penàguila.",
+					"No vender productos o servicios excluidos (juego, apuestas, tabaco, alcohol o servicios financieros).",
+					"No estar inhabilitado para recibir subvenciones públicas."
+				],
+				"gastos": [
+					"Compras de bienes y servicios realizadas en el negocio mediante el canje de bonos (excepto bebidas alcohólicas)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Penàguila"
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937019",
@@ -1075,7 +1570,9 @@
 				"nombre": "ORDEN CONVOCATORIA.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937019",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "937018",
@@ -1115,7 +1612,40 @@
 				"nombre": "ORDEN CONVOCATORIA - ASISTENCIA TECNICA.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937018",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Gobierno Vasco para financiar servicios de asistencia técnica y consultoría externa dirigidos a mejorar la gestión, digitalización, sostenibilidad y viabilidad de las empresas de Economía Social.",
+				"paraQuien": "Sociedades Cooperativas, Sociedades Laborales y entidades asociativas de la Economía Social que realicen su actividad principalmente en Euskadi.",
+				"importe": "Entre el 50 % y el 75 % del coste del servicio, con un tope entre 3.000 € y 30.000 € según el tipo de actuación y tamaño de la empresa.",
+				"importeMaximo": 30000,
+				"plazo": "Hasta el 5 de noviembre de 2026.",
+				"plazoFin": "2026-11-05",
+				"requisitos": [
+					"Desarrollar la actividad principal en el País Vasco.",
+					"Ser una Sociedad Cooperativa, Sociedad Laboral o entidad asociativa de Economía Social.",
+					"Estar al corriente de los pagos con la Hacienda vasca y la Seguridad Social.",
+					"Contar con el apoyo de una consultora externa especializada que cumpla los requisitos fijados.",
+					"Tener menos de 100 o menos de 10 empleados, según el tipo de ayuda solicitada.",
+					"Haberse constituido en los últimos 5 años (o 15 años si es un plan para empresas en dificultades), en los casos aplicables.",
+					"No haber recibido ayudas previas para la misma herramienta o instrumento de gestión."
+				],
+				"gastos": [
+					"Gastos de contratación de servicios de consultoría o asesoría externa especializada.",
+					"Servicios especializados de apoyo a la gerencia.",
+					"Estudios económico-financieros y de análisis normativo."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 99,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "937001",
@@ -1183,7 +1713,41 @@
 				"nombre": "20261013_Publicación_Anuncio_Anuncio aprobación bases específicas reguladoras para el otorgamiento de subvenciones para la consolidación y mantenimiento de actividades económicas en la isla de El Hierro 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937001",
-			"ia": null
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda para compensar los gastos de cotización a la Seguridad Social o mutualidad de autónomos y pymes con actividad en la isla de El Hierro durante los meses de septiembre de 2025 a agosto de 2026.",
+				"paraQuien": "Autónomos, pymes, comunidades de bienes y sociedades civiles con centro de trabajo y domicilio fiscal en El Hierro.",
+				"importe": "Hasta el pago equivalente a 12 cuotas de Seguridad Social o mutualidad por negocio. El presupuesto total es de 1.400.000 €.",
+				"importeMaximo": null,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener domicilio social, fiscal y centro de trabajo en la isla de El Hierro.",
+					"Haber iniciado la actividad económica antes del 1 de enero de 2025.",
+					"Estar dado de alta en la Seguridad Social, mutualidad o colegio profesional antes del 1 de enero de 2025.",
+					"Tener menos de 250 trabajadores y volumen de negocio menor a 50 millones de euros.",
+					"Estar al corriente de las obligaciones con Hacienda, la Seguridad Social y el Cabildo.",
+					"Estar inscrito en el registro de terceros del Cabildo Insular de El Hierro.",
+					"No pertenecer a sectores excluidos como hostelería, restaurantes, alojamientos turísticos o sector primario.",
+					"Tener justificadas las subvenciones anteriores otorgadas por el Cabildo de El Hierro."
+				],
+				"gastos": [
+					"Cuotas de cotización a la Seguridad Social de trabajadores autónomos (RETA).",
+					"Cuotas pagadas a la mutualidad profesional o colegio profesional obligatorio.",
+					"Cuotas de la Seguridad Social de un trabajador por cuenta ajena o autónomo colaborador."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 249,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "936951",
@@ -1224,7 +1788,9 @@
 				"nombre": "Anuncio Convocatoria de Subvenciones de apoyo a los viticultores y viticultoras de Güímar 2026 BDNS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936951",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936950",
@@ -1264,7 +1830,9 @@
 				"nombre": "Resol_Convocatoria_subv_reciclatge_textil_es_signed.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936950",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936935",
@@ -1304,7 +1872,9 @@
 				"nombre": "BASES..pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936935",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936894",
@@ -1344,7 +1914,9 @@
 				"nombre": "PROPOSTA_ACORD_CONVOCATORIA_MODERNITZACIÓ_ESTABLIMENTS_COMERCIALS_2026cast.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936894",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936870",
@@ -1384,7 +1956,9 @@
 				"nombre": "CSVKI2CGTH1LA1X0XFIL 14050 ORDEN SUBVENCIONES DAÑOS INCENDIOS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936870",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936865",
@@ -1424,7 +1998,9 @@
 				"nombre": "20261014_Resolución_DECRETO_2026-25082_[Resolución_PR_2026_27875_-_Subvenciones_sujetas_a_la_LGS_en_régimen_de_concurrencia_competitiva__Convocatoria_con_fiscalización_(Fase_A)].pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936865",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936809",
@@ -1468,7 +2044,9 @@
 				"nombre": "DECRETO DE ALCALDÍA CONVOCATORIA AYUDAS FOMENTO AL AUTOEMPLEO PLAN EMPRENDE 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936809",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936763",
@@ -1509,7 +2087,9 @@
 				"nombre": "Convocatòria_translated_spa.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936763",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936729",
@@ -1555,7 +2135,9 @@
 				"nombre": "Acuerdo JGL de convocatòria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936729",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936649",
@@ -1671,7 +2253,9 @@
 				"nombre": "Resol Presi. Conv 2.2026 M06-M07_v2.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936649",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936640",
@@ -1759,7 +2343,9 @@
 				"nombre": "AUTONOMOS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936640",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936534",
@@ -1808,7 +2394,9 @@
 				"nombre": "CONVOCATORIA VISITA A FERIA BIOFACH 2027_131420.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936534",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936514",
@@ -1848,7 +2436,9 @@
 				"nombre": "BASES_REGULADORAS_DE_SUBVENCIONES_AL_SECTOR_APICOLA, 2026 FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936514",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936511",
@@ -1888,7 +2478,9 @@
 				"nombre": "BASES FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936511",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936476",
@@ -1929,7 +2521,9 @@
 				"nombre": "CONVOCATORIA INTERNACIONAL CHIRIMÍAS FINAL (1).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936476",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936469",
@@ -1972,7 +2566,9 @@
 				"nombre": "TextoConvocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936469",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936467",
@@ -2012,7 +2608,9 @@
 				"nombre": "BASES FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936467",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936465",
@@ -2055,7 +2653,9 @@
 				"nombre": "TextoConvocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936465",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936460",
@@ -2097,7 +2697,9 @@
 				"nombre": "Edicto_XII_CONCURSO_DE_FOTOGRAFÍA_?JESÚS_DE_PERCEVAL?_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936460",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936454",
