@@ -2,9 +2,9 @@
 import { site } from '../data/site';
 ---
 
-<!-- La firma de felixcorcoran.es, en espejo: el contenido de la página va
-     pegado a la izquierda, así que la marca y la letra pequeña se pegan a la
-     derecha. -->
+<!-- La firma de felixcorcoran.es: la marca de eje a eje y la letra pequeña.
+     Sin la escena de pantalla entera de la landing: aquí tiene que caber
+     todo en una pantalla al entrar. -->
 <footer class="footer">
 	<div class="inner">
 		<p class="brand" aria-hidden="true">
@@ -44,7 +44,6 @@ import { site } from '../data/site';
 		line-height: 0.8;
 		letter-spacing: -0.045em;
 		white-space: nowrap;
-		text-align: right;
 		user-select: none;
 	}
 
@@ -59,7 +58,6 @@ import { site } from '../data/site';
 
 	.fine {
 		display: flex;
-		flex-direction: row-reverse;
 		flex-wrap: wrap;
 		align-items: baseline;
 		gap: 0.25rem clamp(1.5rem, 3vw, 2.5rem);
@@ -119,7 +117,7 @@ import { site } from '../data/site';
 	.legal {
 		display: flex;
 		gap: 1.25rem;
-		margin-right: auto;
+		margin-left: auto;
 	}
 
 	.legal a {
@@ -143,8 +141,6 @@ import { site } from '../data/site';
 		}
 
 		.fine {
-			justify-content: flex-start;
-			text-align: right;
 			margin-inline: var(--frame-pad);
 			gap: 0 1.25rem;
 		}
@@ -155,20 +151,8 @@ import { site } from '../data/site';
 			padding-block: 0.25rem;
 		}
 
-		/* La flecha sigue a la última palabra aunque el texto parta línea */
-		.foot-cta {
-			display: inline;
-			font-size: 0.9375rem;
-		}
-
-		.foot-cta svg {
-			display: inline;
-			margin-left: 0.35em;
-			vertical-align: -0.05em;
-		}
-
 		.legal {
-			margin-right: 0;
+			margin-left: 0;
 			flex-wrap: wrap;
 			column-gap: 1.25rem;
 		}
