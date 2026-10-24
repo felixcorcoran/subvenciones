@@ -6,8 +6,11 @@ name: Recoger convocatorias
 # suben al repositorio y Vercel reconstruye la web.
 on:
   schedule:
-    # 05:30 UTC = 7:30 en verano y 6:30 en invierno, hora de Madrid
+    # 05:30 UTC = 7:30 en verano y 6:30 en invierno, hora de Madrid. La pasada
+    # de la tarde solo adelanta la lectura de bases pendientes (cada pasada
+    # tiene un tope de tiempo y Gemini, un cupo por modelo)
     - cron: '30 5 * * *'
+    - cron: '30 14 * * *'
   workflow_dispatch:
 
 permissions:
