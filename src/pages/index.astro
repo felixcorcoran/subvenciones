@@ -59,20 +59,12 @@ const description =
 					<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
 				</div>
 				<div id="grupos"></div>
+				<p class="aviso-fuente">
+					Es una orientación: antes de pedir una ayuda, lee su convocatoria oficial, que es la que vale. Datos del
+					<a href="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias" target="_blank" rel="noopener">Sistema Nacional de Publicidad de Subvenciones</a>; resúmenes hechos con IA a partir de las bases.
+				</p>
 			</section>
 
-			<aside class="nota">
-				<h2>Cómo se hace</h2>
-				<p>
-					Los datos salen del <a href="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias">Sistema Nacional de Publicidad de
-					Subvenciones</a> (BDNS), que reúne las convocatorias del Estado, las comunidades y los ayuntamientos. Se quedan las que puede pedir
-					una empresa: no las que van a una entidad concreta. Los resúmenes y requisitos los saca una IA de las bases de cada convocatoria.
-				</p>
-				<p>
-					Es una orientación: cuando un dato no consta, la ayuda sale en «Revisa». Antes de pedirla, lee siempre la convocatoria oficial,
-					que es la que vale.
-				</p>
-			</aside>
 		</main>
 
 		<script>
@@ -754,32 +746,12 @@ const description =
 		font-size: 0.875rem;
 	}
 
-	.nota {
-		max-width: 62rem;
-		margin-top: clamp(3rem, 8vw, 5rem);
-		padding-top: 2rem;
-		border-top: 1px solid var(--rule);
-		font-size: 0.9375rem;
-		line-height: 1.65;
-		color: var(--text-muted);
-	}
 
-	.nota h2 {
-		margin: 0 0 0.5rem;
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--text);
-	}
 
-	.nota a {
-		color: var(--text);
-		text-decoration-color: var(--accent);
-		text-underline-offset: 0.25em;
-	}
 
 
 	/* La portada, centrada: una pregunta y un botón, como la entrada de una
-	   herramienta. Los resultados y «Cómo se hace» siguen a la izquierda,
+	   herramienta. Los resultados siguen a la izquierda,
 	   que se leen mejor */
 	.intro {
 		margin-inline: auto;
@@ -808,7 +780,19 @@ const description =
 		text-align: center;
 	}
 
-	.nota {
-		margin-inline: auto;
+
+	.aviso-fuente {
+		margin: clamp(2rem, 5vw, 3rem) 0 0;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.8125rem;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+	.aviso-fuente a {
+		color: inherit;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
 	}
 </style>
