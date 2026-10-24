@@ -9,6 +9,7 @@
  *   GEMINI_API_KEY  clave de Google AI Studio (proyecto sin facturación)
  *   GEMINI_MODELS   cadena de modelos, separados por comas
  *   MAX_ANALIZAR    cuántas como mucho en cada pasada (por defecto 40)
+ *   MAX_MINUTOS     minutos como mucho (por defecto 35), para que la Action suba lo leído
  */
 import { documento } from './bdns.ts';
 import { GeminiUnavailable, generateJson } from './gemini.ts';
@@ -22,6 +23,8 @@ if (!apiKey) {
 }
 const models = (process.env.GEMINI_MODELS ?? 'gemini-3.8-flash,gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-2.5-flash,gemini-3.5-flash-lite,gemini-2.5-flash-lite').split(',').map((m) => m.trim());
 const max = Number(process.env.MAX_ANALIZAR ?? 40);
+// Tope de tiempo: la Action tiene que llegar a subir lo leído
+const hasta = Date.now() + Number(process.env.MAX_MINUTOS ?? 35) * 60_000;
 const MAX_BYTES = 18 * 1024 * 1024;
 
 const datos = leerDatos();
@@ -93,6 +96,10 @@ const valida = (f: string | null) => (f && /^\d{4}-\d{2}-\d{2}$/.test(f) ? f : n
 
 let leidas = 0;
 for (const c of pendientes) {
+	if (Date.now() > hasta) {
+		console.log('Tiempo agotado: lo pendiente sigue mañana');
+		break;
+	}
 	const doc = c.documento!;
 	try {
 		if (!/\.pdf$/i.test(doc.nombre)) throw new Error(`no es un PDF (${doc.nombre})`);
