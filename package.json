@@ -1,0 +1,29 @@
+{
+  "name": "subvenciones",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro",
+    "catalogos": "node scripts/catalogos.ts",
+    "recoger": "node scripts/recoger.ts",
+    "analizar": "node scripts/analizar.ts"
+  },
+  "dependencies": {
+    "@fontsource/sora": "^5.3.0",
+    "@vercel/analytics": "^2.0.1",
+    "astro": "^7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^24.19.2",
+    "typescript": "^6.0.3"
+  }
+}

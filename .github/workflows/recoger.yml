@@ -1,0 +1,42 @@
+name: Recoger convocatorias
+
+# Cada mañana: las convocatorias nuevas de la BDNS para empresas (toda
+# España), con su ficha; después Gemini lee las bases de las que faltan. Si
+# Gemini no tiene cupo, lo pendiente sigue al día siguiente. Los datos se
+# suben al repositorio y Vercel reconstruye la web.
+on:
+  schedule:
+    # 05:30 UTC = 7:30 en verano y 6:30 en invierno, hora de Madrid
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recoger
+  cancel-in-progress: false
+
+jobs:
+  recoger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run recoger
+      - run: npm run analizar
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Subir los datos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos
+          git diff --cached --quiet || git commit -m "datos: convocatorias del $(date -u +%F)"
+          git push

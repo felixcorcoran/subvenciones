@@ -1,0 +1,834 @@
+---
+import { Font } from 'astro:assets';
+import Analytics from '@vercel/analytics/astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import provincias from '../data/provincias.json';
+import datos from '../../datos/convocatorias.json';
+import { SECCIONES } from '../lib/sectores';
+import type { Datos } from '../lib/tipos';
+import '../styles/global.css';
+
+const { actualizado, convocatorias } = datos as Datos;
+const abiertas = convocatorias.filter((c) => !c.ia || c.ia.categoria === 'ayuda').length;
+const fecha = actualizado
+	? new Date(actualizado).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'Europe/Madrid' })
+	: '';
+
+const title = 'Ayudas para tu negocio · Radar de subvenciones';
+const description =
+	'Cada mañana, las convocatorias de ayudas nuevas de toda España para autónomos y pymes. Dinos cómo es tu negocio y te decimos a cuáles puedes aspirar, y por qué.';
+
+// Provincias agrupadas por comunidad, para el desplegable
+const porComunidad = Object.entries(
+	provincias.reduce<Record<string, typeof provincias>>((acc, p) => ((acc[p.comunidad] ??= []).push(p), acc), {}),
+).sort(([a], [b]) => a.localeCompare(b, 'es'));
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={Astro.site} />
+		<meta name="theme-color" content="#FAF9F6" data-theme-color />
+		<!-- Claro por defecto, como felixcorcoran.es; oscuro si se pidió al llegar
+		     (?tema=oscuro, se recuerda y se quita de la barra) o se eligió antes -->
+		<script is:inline>
+			try {
+				const url = new URL(location.href);
+				const asked = url.searchParams.get('tema');
+				if (asked === 'oscuro') localStorage.setItem('tema', 'oscuro');
+				if (asked === 'claro') localStorage.removeItem('tema');
+				if (asked) {
+					url.searchParams.delete('tema');
+					history.replaceState(null, '', url.pathname + url.search + url.hash);
+				}
+				if (asked === 'oscuro' || (!asked && localStorage.getItem('tema') === 'oscuro')) {
+					document.documentElement.dataset.theme = 'dark';
+					document.querySelector('[data-theme-color]')?.setAttribute('content', '#131211');
+				}
+			} catch {
+				if (location.search.includes('tema=oscuro')) document.documentElement.dataset.theme = 'dark';
+			}
+		</script>
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={Astro.site} />
+		<meta property="og:locale" content="es_ES" />
+		<Font cssVariable="--font-sora" preload />
+		<Analytics />
+	</head>
+	<body>
+		<Navbar />
+
+		<main>
+			<section class="intro">
+				<p class="eyebrow">Radar de subvenciones</p>
+				<h1>¿A qué ayudas puede optar tu negocio?</h1>
+				<p class="lead">
+					Cada mañana se recogen las convocatorias nuevas de toda España para autónomos y empresas, y se leen sus bases. Dinos cómo es tu
+					negocio y te decimos a cuáles puedes aspirar, y por qué.
+				</p>
+				<p class="meta">
+					<strong>{abiertas}</strong> ayudas abiertas{fecha && <> · actualizado el {fecha}</>}
+				</p>
+			</section>
+
+			<form id="perfil" class="perfil" novalidate>
+				<div class="campo">
+					<label for="provincia">¿Dónde está tu negocio?</label>
+					<select id="provincia" name="provincia" required>
+						<option value="">Elige tu provincia</option>
+						{
+							porComunidad.map(([comunidad, lista]) => (
+								<optgroup label={comunidad}>
+									{lista.map((p) => (
+										<option value={p.codigo}>{p.nombre}</option>
+									))}
+								</optgroup>
+							))
+						}
+					</select>
+				</div>
+
+				<div class="campo">
+					<label for="municipio">Municipio <span class="opcional">(opcional)</span></label>
+					<input id="municipio" name="municipio" type="text" autocomplete="address-level2" placeholder="Por ejemplo, Marbella" />
+					<p class="pista">Muchas ayudas son de un ayuntamiento y solo valen para negocios de allí.</p>
+				</div>
+
+				<fieldset class="campo campo--ancho">
+					<legend>Tu negocio es…</legend>
+					<div class="opciones">
+						<label class="opcion"><input type="radio" name="forma" value="autonomo" checked /><span>Autónomo o autónoma</span></label>
+						<label class="opcion"><input type="radio" name="forma" value="sociedad" /><span>Una empresa (sociedad)</span></label>
+						<label class="opcion"><input type="radio" name="forma" value="emprender" /><span>Aún no he empezado</span></label>
+					</div>
+				</fieldset>
+
+				<div class="campo" data-solo-negocio>
+					<label for="empleados">¿Cuántas personas trabajan contigo?</label>
+					<select id="empleados" name="empleados">
+						<option value="0">Nadie, solo yo</option>
+						<option value="1">De 1 a 9</option>
+						<option value="10">De 10 a 49</option>
+						<option value="50">De 50 a 249</option>
+						<option value="250">250 o más</option>
+					</select>
+				</div>
+
+				<div class="campo" data-solo-negocio>
+					<label for="antiguedad">¿Cuánto llevas con el negocio?</label>
+					<select id="antiguedad" name="antiguedad">
+						<option value="menos1">Menos de un año</option>
+						<option value="1a3" selected>De 1 a 3 años</option>
+						<option value="mas3">Más de 3 años</option>
+					</select>
+				</div>
+
+				<div class="campo campo--ancho">
+					<label for="sector">¿A qué se dedica?</label>
+					<select id="sector" name="sector">
+						<option value="">No lo sé o es otra cosa</option>
+						{SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra)).map((s) => <option value={s.letra}>{s.nombre}</option>)}
+					</select>
+				</div>
+
+				<div class="acciones campo--ancho">
+					<button type="submit" id="buscar">Ver mis ayudas</button>
+					<button type="button" id="todas" class="enlace">o mira todas las abiertas</button>
+				</div>
+				<p id="aviso" class="aviso campo--ancho" role="alert"></p>
+			</form>
+
+			<p id="estado" class="estado" role="status" aria-live="polite"></p>
+
+			<section id="resultado" class="resultado" hidden aria-labelledby="resultado-titulo">
+				<div class="resultado-cabeza">
+					<h2 id="resultado-titulo"></h2>
+					<p id="resumen" class="resumen"></p>
+					<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
+				</div>
+				<div id="grupos"></div>
+			</section>
+
+			<aside class="nota">
+				<h2>Cómo se hace</h2>
+				<p>
+					Los datos salen del <a href="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias">Sistema Nacional de Publicidad de
+					Subvenciones</a> (BDNS), que reúne las convocatorias del Estado, las comunidades y los ayuntamientos. Se quedan las que puede pedir
+					una empresa: no las que van a una entidad concreta. Los resúmenes y requisitos los saca una IA de las bases de cada convocatoria.
+				</p>
+				<p>
+					Es una orientación: cuando un dato no consta, la ayuda sale en «Revisa». Antes de pedirla, lee siempre la convocatoria oficial,
+					que es la que vale.
+				</p>
+			</aside>
+		</main>
+
+		<Footer />
+
+		<script>
+			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
+			import type { ConvocatoriaWeb } from '../lib/tipos';
+
+			const form = document.querySelector<HTMLFormElement>('#perfil')!;
+			const aviso = document.querySelector<HTMLParagraphElement>('#aviso')!;
+			const estado = document.querySelector<HTMLParagraphElement>('#estado')!;
+			const resultado = document.querySelector<HTMLElement>('#resultado')!;
+			const grupos = document.querySelector<HTMLDivElement>('#grupos')!;
+			const verPremios = document.querySelector<HTMLInputElement>('#ver-premios')!;
+
+			const el = <K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, text?: string) => {
+				const node = document.createElement(tag);
+				if (className) node.className = className;
+				if (text) node.textContent = text;
+				return node;
+			};
+
+			let cache: ConvocatoriaWeb[] | null = null;
+			async function cargar(): Promise<ConvocatoriaWeb[]> {
+				if (cache) return cache;
+				estado.textContent = 'Cargando las convocatorias…';
+				const res = await fetch('/convocatorias.json');
+				const data = (await res.json()) as { convocatorias: ConvocatoriaWeb[] };
+				estado.textContent = '';
+				return (cache = data.convocatorias);
+			}
+
+			// «Aún no he empezado» oculta plantilla y antigüedad
+			const sincronizar = () => {
+				const emprender = (form.elements.namedItem('forma') as RadioNodeList).value === 'emprender';
+				for (const campo of form.querySelectorAll<HTMLElement>('[data-solo-negocio]')) campo.hidden = emprender;
+			};
+			form.addEventListener('change', sincronizar);
+
+			// El perfil se recuerda en este navegador (solo para no volver a rellenarlo)
+			const CLAVE = 'perfil-subvenciones';
+			try {
+				const guardado = JSON.parse(localStorage.getItem(CLAVE) ?? 'null') as Record<string, string> | null;
+				if (guardado) {
+					for (const [k, v] of Object.entries(guardado)) {
+						const campo = form.elements.namedItem(k);
+						if (campo instanceof RadioNodeList) campo.value = v;
+						else if (campo instanceof HTMLInputElement || campo instanceof HTMLSelectElement) campo.value = v;
+					}
+				}
+			} catch {}
+			sincronizar();
+
+			const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+
+			function plazo(c: ConvocatoriaWeb): { texto: string; pronto: boolean } {
+				const fin = cierre(c);
+				if (fin) {
+					const dias = Math.ceil((Date.parse(fin) - Date.now()) / 86_400_000);
+					return { texto: `Hasta el ${fechaLarga(fin)}`, pronto: dias <= 7 };
+				}
+				return { texto: c.ia?.plazo ?? c.textoFin ?? 'Plazo: mira la convocatoria', pronto: false };
+			}
+
+			function tarjeta(c: ConvocatoriaWeb, e: Encaje | null) {
+				const item = el('li', `ayuda ayuda--${e?.estado ?? 'neutra'}`);
+				const cabeza = el('div', 'ayuda-cabeza');
+				const organo = [c.organo.nivel3, municipioDe(c) ?? c.organo.nivel2].filter((v, i, a) => v && a.indexOf(v) === i).join(' · ');
+				cabeza.append(el('p', 'ayuda-organo', organo), el('h3', '', c.ia?.resumen ?? c.titulo));
+				item.append(cabeza);
+
+				const datosClave = el('ul', 'ayuda-datos');
+				const p = plazo(c);
+				const plazoLi = el('li', p.pronto ? 'pronto' : '', p.texto);
+				datosClave.append(plazoLi);
+				if (c.ia?.importe && !/no lo indica/i.test(c.ia.importe)) datosClave.append(el('li', '', c.ia.importe));
+				else if (c.presupuesto) datosClave.append(el('li', '', `Presupuesto total: ${euros(c.presupuesto)}`));
+				item.append(datosClave);
+
+				if (e) {
+					const motivos = el('ul', 'motivos');
+					for (const m of e.motivos) motivos.append(el('li', `motivo motivo--${m.tipo}`, m.texto));
+					item.append(motivos);
+				}
+
+				const mas = el('details', 'ayuda-mas');
+				mas.append(el('summary', '', 'Requisitos y detalles'));
+				if (c.ia) {
+					mas.append(el('h4', '', 'Para quién'), el('p', '', c.ia.paraQuien));
+					if (c.ia.requisitos.length) {
+						const ul = el('ul');
+						for (const r of c.ia.requisitos) ul.append(el('li', '', r));
+						mas.append(el('h4', '', 'Requisitos'), ul);
+					}
+					if (c.ia.gastos.length) {
+						const ul = el('ul');
+						for (const g of c.ia.gastos) ul.append(el('li', '', g));
+						mas.append(el('h4', '', 'En qué se puede gastar'), ul);
+					}
+					if (c.ia.plazo) mas.append(el('h4', '', 'Plazo'), el('p', '', c.ia.plazo));
+				} else {
+					mas.append(el('p', '', 'Aún no hemos leído sus bases. Mira los requisitos en la convocatoria oficial.'));
+				}
+				mas.append(el('p', 'oficial', `Título oficial: ${c.titulo}`));
+				const enlaces = el('p', 'enlaces');
+				const enlace = (href: string, texto: string) => {
+					const a = el('a', '', `${texto} ↗`);
+					a.href = href;
+					a.target = '_blank';
+					a.rel = 'noopener';
+					enlaces.append(a);
+				};
+				enlace(c.enlace, 'Convocatoria oficial (BDNS)');
+				if (c.bases) enlace(c.bases, 'Bases');
+				if (c.sede) enlace(c.sede, 'Dónde se solicita');
+				mas.append(enlaces);
+				item.append(mas);
+				return item;
+			}
+
+			let ultima: { perfil: Perfil | null } = { perfil: null };
+
+			function pintar() {
+				if (!cache) return;
+				const perfil = ultima.perfil;
+				const visibles = cache.filter((c) => verPremios.checked || !c.ia || c.ia.categoria === 'ayuda');
+				const orden = (a: ConvocatoriaWeb, b: ConvocatoriaWeb) => (cierre(a) ?? '9999').localeCompare(cierre(b) ?? '9999');
+				grupos.replaceChildren();
+
+				if (!perfil) {
+					document.querySelector('#resultado-titulo')!.textContent = 'Todas las ayudas abiertas';
+					document.querySelector('#resumen')!.textContent = `${visibles.length} convocatorias, las que cierran antes primero`;
+					const ol = el('ol', 'lista');
+					for (const c of [...visibles].sort(orden)) ol.append(tarjeta(c, null));
+					grupos.append(ol);
+				} else {
+					const evaluadas = visibles.map((c) => ({ c, e: encaje(c, perfil) })).sort((a, b) => orden(a.c, b.c));
+					const de = (s: Encaje['estado']) => evaluadas.filter((x) => x.e.estado === s);
+					const si = de('si');
+					const revisa = de('revisa');
+					const no = de('no');
+					document.querySelector('#resultado-titulo')!.textContent =
+						si.length + revisa.length ? 'Las ayudas para tu negocio' : 'Ahora mismo no hay ayudas que encajen';
+					document.querySelector('#resumen')!.textContent =
+						`${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan`;
+
+					const grupo = (titulo: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
+						if (!lista.length) return;
+						const ol = el('ol', 'lista');
+						for (const { c, e } of lista) ol.append(tarjeta(c, e));
+						if (plegado) {
+							const d = el('details', `grupo grupo--${clase}`);
+							d.append(el('summary', '', `${titulo} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							grupos.append(d);
+						} else {
+							const s = el('section', `grupo grupo--${clase}`);
+							s.append(el('h3', 'grupo-titulo', `${titulo} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							grupos.append(s);
+						}
+					};
+					grupo('Puedes pedirlas', 'Encajan con lo que nos has dicho. Aun así, lee los requisitos antes de pedirlas.', si, 'si');
+					grupo('Revisa los detalles', 'Podrían encajar, pero falta algún dato o hay que comprobar algo en las bases.', revisa, 'revisa');
+					grupo('No encajan', 'Por qué no, en cada una.', no, 'no', true);
+				}
+				resultado.hidden = false;
+			}
+
+			form.addEventListener('submit', async (event) => {
+				event.preventDefault();
+				const f = new FormData(form);
+				const provincia = String(f.get('provincia') ?? '');
+				if (!provincia) {
+					aviso.textContent = 'Elige la provincia donde está tu negocio.';
+					form.querySelector<HTMLSelectElement>('#provincia')!.focus();
+					return;
+				}
+				aviso.textContent = '';
+				const forma = String(f.get('forma')) as Perfil['forma'];
+				const perfil: Perfil = {
+					provincia,
+					municipio: String(f.get('municipio') ?? ''),
+					forma,
+					empleados: forma === 'emprender' ? 0 : Number(f.get('empleados')),
+					antiguedad: forma === 'emprender' ? 'nada' : (String(f.get('antiguedad')) as Perfil['antiguedad']),
+					sector: String(f.get('sector') ?? ''),
+				};
+				try {
+					localStorage.setItem(CLAVE, JSON.stringify(Object.fromEntries(f.entries())));
+				} catch {}
+				await cargar();
+				ultima = { perfil };
+				pintar();
+				resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+
+			document.querySelector('#todas')!.addEventListener('click', async () => {
+				await cargar();
+				ultima = { perfil: null };
+				pintar();
+				resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+
+			verPremios.addEventListener('change', pintar);
+		</script>
+	</body>
+</html>
+
+<style>
+	main {
+		box-sizing: border-box;
+		width: var(--frame);
+		margin-inline: auto;
+		padding: calc(var(--nav-top) + var(--nav-height) + clamp(2.5rem, 7vw, 5rem)) 0 clamp(3rem, 8vw, 6rem);
+		flex: 1;
+	}
+
+	.intro {
+		max-width: 46rem;
+	}
+
+	h1 {
+		margin: 0.75rem 0 1.25rem;
+		font-size: clamp(2.1rem, 5.4vw, 3.75rem);
+		font-weight: 400;
+		line-height: 1.06;
+		letter-spacing: -0.035em;
+	}
+
+	.lead {
+		margin: 0;
+		max-width: 40rem;
+		font-size: clamp(1rem, 1.6vw, 1.1875rem);
+		font-weight: 300;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+	.meta {
+		margin: 1.5rem 0 0;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.meta strong {
+		font-weight: 600;
+		color: var(--text);
+	}
+
+	/* El formulario */
+	.perfil {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem 2rem;
+		margin-top: clamp(2rem, 5vw, 3.5rem);
+		padding: clamp(1.25rem, 3vw, 2.25rem);
+		border-radius: 1.5rem;
+		background: rgb(var(--surface-rgb) / 0.7);
+		border: 1px solid var(--rule);
+		box-shadow: 0 20px 50px -30px rgb(var(--ink) / 0.25);
+	}
+
+	.campo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		min-width: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	.campo[hidden] {
+		display: none;
+	}
+
+	.campo--ancho {
+		grid-column: 1 / -1;
+	}
+
+	label,
+	legend {
+		padding: 0;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+	}
+
+	.opcional {
+		font-weight: 300;
+		color: var(--text-muted);
+	}
+
+	select,
+	input[type='text'] {
+		box-sizing: border-box;
+		width: 100%;
+		height: 3rem;
+		padding: 0 1rem;
+		border-radius: 0.75rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 0.9375rem;
+	}
+
+	select:focus-visible,
+	input[type='text']:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.pista {
+		margin: 0;
+		font-size: 0.8125rem;
+		line-height: 1.45;
+		color: var(--text-muted);
+	}
+
+	.opciones {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.625rem;
+		margin-top: 0.5rem;
+	}
+
+	.opcion {
+		position: relative;
+		font-weight: 400;
+	}
+
+	.opcion input {
+		position: absolute;
+		opacity: 0;
+		inset: 0;
+		margin: 0;
+		cursor: pointer;
+	}
+
+	.opcion span {
+		display: inline-flex;
+		align-items: center;
+		height: 2.75rem;
+		padding: 0 1.125rem;
+		border-radius: 999px;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		font-size: 0.9375rem;
+		transition:
+			background-color 0.2s var(--ease-out),
+			border-color 0.2s var(--ease-out);
+	}
+
+	.opcion input:checked + span {
+		background: var(--text);
+		border-color: var(--text);
+		color: var(--bg);
+	}
+
+	.opcion input:focus-visible + span {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+
+	.acciones {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem 1.5rem;
+	}
+
+	#buscar {
+		height: 3.25rem;
+		padding: 0 1.75rem;
+		border: 0;
+		border-radius: 999px;
+		background: var(--accent);
+		color: #1b1110;
+		font: inherit;
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: transform 0.2s var(--ease-out);
+	}
+
+	#buscar:hover {
+		transform: translateY(-1px);
+	}
+
+	.enlace {
+		padding: 0.5rem 0;
+		border: 0;
+		background: none;
+		color: var(--text);
+		font: inherit;
+		font-size: 0.9375rem;
+		text-decoration: underline;
+		text-decoration-color: rgb(var(--ink) / 0.3);
+		text-underline-offset: 0.3em;
+		cursor: pointer;
+	}
+
+	.aviso:empty,
+	.estado:empty {
+		display: none;
+	}
+
+	.aviso {
+		margin: 0;
+		color: var(--accent-text);
+		font-size: 0.9375rem;
+	}
+
+	.estado {
+		margin: 2rem 0 0;
+		color: var(--text-muted);
+	}
+
+	/* Resultados */
+	.resultado {
+		margin-top: clamp(2.5rem, 6vw, 4rem);
+		scroll-margin-top: calc(var(--nav-top) + var(--nav-height) + 1.5rem);
+	}
+
+	.resultado-cabeza h2 {
+		margin: 0;
+		font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+		font-weight: 400;
+		letter-spacing: -0.03em;
+	}
+
+	.resumen {
+		margin: 0.5rem 0 0;
+		color: var(--text-muted);
+	}
+
+	.premios {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		font-weight: 400;
+		color: var(--text-muted);
+		cursor: pointer;
+	}
+
+	:global(.grupo) {
+		margin-top: 2.5rem;
+	}
+
+	:global(.grupo-titulo),
+	:global(details.grupo > summary) {
+		margin: 0;
+		font-size: 1.125rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	:global(details.grupo > summary) {
+		cursor: pointer;
+	}
+
+	:global(.grupo-texto) {
+		margin: 0.375rem 0 0;
+		font-size: 0.9375rem;
+		color: var(--text-muted);
+	}
+
+	:global(.lista) {
+		display: grid;
+		gap: 1rem;
+		margin: 1.25rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	:global(.ayuda) {
+		position: relative;
+		padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(1.125rem, 2.5vw, 1.75rem);
+		border-radius: 1.25rem;
+		background: rgb(var(--surface-rgb) / 0.75);
+		border: 1px solid var(--rule);
+	}
+
+	:global(.ayuda::before) {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 1.25rem;
+		bottom: 1.25rem;
+		width: 3px;
+		border-radius: 0 3px 3px 0;
+		background: var(--estado, transparent);
+	}
+
+	:global(.ayuda--si) {
+		--estado: #3f8f5f;
+	}
+	:global(.ayuda--revisa) {
+		--estado: #d49a2a;
+	}
+	:global(.ayuda--no) {
+		--estado: rgb(var(--ink) / 0.25);
+	}
+
+	:global(.ayuda-organo) {
+		margin: 0;
+		font-size: 0.75rem;
+		font-weight: 500;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--text-muted);
+	}
+
+	:global(.ayuda h3) {
+		margin: 0.5rem 0 0;
+		font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+		font-weight: 500;
+		line-height: 1.35;
+		letter-spacing: -0.015em;
+	}
+
+	:global(.ayuda-datos) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0.875rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	:global(.ayuda-datos li) {
+		padding: 0.3rem 0.75rem;
+		border-radius: 999px;
+		background: rgb(var(--ink) / 0.05);
+		font-size: 0.8125rem;
+		line-height: 1.4;
+	}
+
+	:global(.ayuda-datos li.pronto) {
+		background: var(--accent-soft);
+	}
+
+	:global(.motivos) {
+		display: grid;
+		gap: 0.3rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	:global(.motivo) {
+		position: relative;
+		padding-left: 1.5rem;
+		font-size: 0.875rem;
+		line-height: 1.45;
+	}
+
+	:global(.motivo::before) {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1rem;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	:global(.motivo--bien::before) {
+		content: '✓';
+		color: #3f8f5f;
+	}
+	:global(.motivo--revisa::before) {
+		content: '?';
+		color: #b07d16;
+	}
+	:global(.motivo--no::before) {
+		content: '✕';
+		color: var(--accent-text);
+	}
+
+	:global(.ayuda-mas) {
+		margin-top: 1rem;
+		padding-top: 0.875rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+
+	:global(.ayuda-mas summary) {
+		cursor: pointer;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
+
+	:global(.ayuda-mas h4) {
+		margin: 1.125rem 0 0.25rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--text-muted);
+	}
+
+	:global(.ayuda-mas p),
+	:global(.ayuda-mas ul) {
+		margin: 0.25rem 0 0;
+	}
+
+	:global(.ayuda-mas ul) {
+		padding-left: 1.25rem;
+	}
+
+	:global(.ayuda-mas .oficial) {
+		margin-top: 1.125rem;
+		font-size: 0.8125rem;
+		color: var(--text-muted);
+	}
+
+	:global(.enlaces) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.25rem;
+		margin-top: 0.75rem !important;
+	}
+
+	:global(.enlaces a) {
+		color: var(--text);
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.25em;
+		font-size: 0.875rem;
+	}
+
+	.nota {
+		max-width: 46rem;
+		margin-top: clamp(3rem, 8vw, 5rem);
+		padding-top: 2rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.9375rem;
+		line-height: 1.65;
+		color: var(--text-muted);
+	}
+
+	.nota h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--text);
+	}
+
+	.nota a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.25em;
+	}
+
+	@media (max-width: 40rem) {
+		.perfil {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+</style>
