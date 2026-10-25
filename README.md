@@ -1,5 +1,7 @@
 # Radar de subvenciones
 
+[![Pruebas](https://github.com/felixcorcoran/subvenciones/actions/workflows/pruebas.yml/badge.svg)](https://github.com/felixcorcoran/subvenciones/actions/workflows/pruebas.yml)
+
 Cada mañana recoge las convocatorias de ayudas nuevas de toda España para autónomos y empresas, lee sus bases con IA y, con un formulario, te dice a cuáles puede optar tu negocio y por qué.
 
 **En marcha:** [subvenciones.felixcorcoran.es](https://subvenciones.felixcorcoran.es)
@@ -25,7 +27,10 @@ npm install
 npm run recoger              # convocatorias de los últimos 14 días
 GEMINI_API_KEY=… npm run analizar
 npm run dev
+npm test
 ```
+
+Las pruebas (Vitest, en `tests/`) cubren el encaje de cada ayuda con un negocio (zona, municipio, sector, forma jurídica, plazos), la tabla de sectores de la CNAE-2025, los nombres de zonas y el evento de calendario. Se pasan en cada push con GitHub Actions, junto a `astro check` y el build.
 
 La clave de Gemini tiene que ser de un proyecto de Google AI Studio sin facturación, para quedarse en el nivel gratuito.
 
