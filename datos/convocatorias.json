@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-10-25T10:02:39.859Z",
+	"actualizado": "2026-10-25T17:44:51.615Z",
 	"convocatorias": [
 		{
 			"codigo": "937680",
@@ -2093,9 +2093,39 @@
 				"nombre": "PROPOSTA_ACORD_CONVOCATORIA_MODERNITZACIÓ_ESTABLIMENTS_COMERCIALS_2026cast.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936894",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para financiar proyectos o mejoras que modernicen, aumenten la competitividad, el atractivo o la funcionalidad de establecimientos comerciales y de servicios.",
+				"paraQuien": "Autónomos y empresas (personas físicas o jurídicas) que sean titulares de un negocio comercial o de servicios con centro de trabajo en Sant Vicenç de Castellet.",
+				"importe": "El presupuesto total de la convocatoria es de 15.000 € (no se detalla un límite máximo por negocio).",
+				"importeMaximo": null,
+				"plazo": "Hasta el 31 de diciembre de 2026, según consta en la ficha de la BDNS.",
+				"plazoFin": "2026-12-31",
+				"requisitos": [
+					"Tener el centro de trabajo o actividad económica en Sant Vicenç de Castellet.",
+					"Haber iniciado ya la actividad económica.",
+					"Estar de alta en el censo de actividades de la Agencia Tributaria en el momento de la solicitud.",
+					"Disponer de la correspondiente licencia o comunicación previa de actividad y de obras si aplica.",
+					"Estar al corriente de pagos con el Ayuntamiento, la Agencia Tributaria y la Seguridad Social.",
+					"No tener expediente administrativo abierto por infracción de normas o haber cumplido su resolución.",
+					"No incurrir en ninguna de las prohibiciones generales para recibir ayudas públicas."
+				],
+				"gastos": [
+					"Gastos en actuaciones para modernizar, hacer más atractivo, competitivo o funcional el establecimiento, realizadas entre el 1 de enero de 2025 y el 28 de febrero de 2027."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sant Vicenç de Castellet"
+				},
+				"dudas": "El texto del documento menciona fechas de fin de plazo contradictorias (31 de octubre y 8 de noviembre de 2026), mientras que el registro de la BDNS señala el 31 de diciembre de 2026; además, no se especifica la cuantía máxima individual por negocio."
+			},
 			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936870",
@@ -3216,7 +3246,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936465",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -3260,7 +3290,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936460",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -3301,7 +3331,9 @@
 				"nombre": "BASES FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936454",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936449",
@@ -3343,7 +3375,9 @@
 				"nombre": "Decret_aprovació_BASES.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936449",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936422",
@@ -3386,7 +3420,9 @@
 				"nombre": "MULTISERVEIS._Bases_i_convocatòria_(CASTELLANO)_1-10-26.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936422",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936401",
@@ -3426,7 +3462,9 @@
 				"nombre": "ORDEN FINAL - BDNS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936401",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936400",
@@ -3466,7 +3504,9 @@
 				"nombre": "BASES_DE_SUBV._DESTINADAS_A_LA_CONSERVACION__MANTENIMIENTO_Y_EXPANSION_DE_LA_RAZA_AUTOCTONA_SERRANA__FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936400",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936399",
@@ -3506,7 +3546,9 @@
 				"nombre": "CONVOCATORIA Y ANEXOS SUBV. CAMARAS_TAXI 2026_VF-OA.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936399",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936373",
@@ -3546,7 +3588,9 @@
 				"nombre": "Convocatoria+CTC+na+2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936373",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936372",
@@ -3586,7 +3630,9 @@
 				"nombre": "27609_Convocatoria_e_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936372",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936365",
@@ -3626,7 +3672,9 @@
 				"nombre": "Bases subvenciones proyectos y actividades culturales 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936365",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936358",
@@ -3666,7 +3714,9 @@
 				"nombre": "20261020 extracto.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936358",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936344",
@@ -3714,7 +3764,9 @@
 				"nombre": "Orden Premios XIX Edición .pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936344",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936334",
@@ -3754,7 +3806,9 @@
 				"nombre": "RESOLUCIÓN CONVOCATORIA ECA SEPE 2026 (COPIA).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936334",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936330",
@@ -3794,7 +3848,9 @@
 				"nombre": "2 bis CONVOCATÒRIA Ciclomotors versió definitiva-es-ES.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936330",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936310",
@@ -3834,7 +3890,9 @@
 				"nombre": "20261019_Certificado_Certificado decreto_Certificado_decreto_Castellano (1).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936310",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936308",
@@ -3878,7 +3936,9 @@
 				"nombre": "Documento convocatoria (castellano).PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936308",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936295",
@@ -3990,7 +4050,9 @@
 				"nombre": "20260923_CONVOCATORIA EMPRENEDORIA + anexo - castella.docx.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936295",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936281",
@@ -4030,7 +4092,9 @@
 				"nombre": "BASES_SUBVENCIONES_MANTEQUILLA_DE_SORIA__2026_-JGL_76310_273925_9.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936281",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936264",
@@ -4070,7 +4134,9 @@
 				"nombre": "20260803_Uns_altres_Anunci_convocatoria_ajuts_emprenedoria_26_castella.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936264",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936260",
@@ -4110,7 +4176,9 @@
 				"nombre": "BASES_SUBVENCION_MEJORA_GENETICA__2026__firmadas.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936260",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936259",
@@ -4150,7 +4218,9 @@
 				"nombre": "Empresas.cas -2026.docx"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936259",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "no es un PDF (Empresas.cas -2026.docx)"
 		},
 		{
 			"codigo": "936233",
@@ -4194,7 +4264,9 @@
 				"nombre": "20261016_Otros_ANUNCIO  BASES Y CONVOCATORIA CERTAMEN PINTURA XXXV.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936233",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936226",
@@ -4238,7 +4310,9 @@
 				"nombre": "Convocatoria de la subvención (castellano).PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936226",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936188",
@@ -4282,7 +4356,9 @@
 				"nombre": "Orden Desempleados SEPE 2026 + Anexo I firmada Consejera.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936188",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936173",
@@ -4322,7 +4398,9 @@
 				"nombre": "Convocatoria ayudas Eurotaxi.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936173",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936158",
@@ -4363,7 +4441,9 @@
 				"nombre": "Documento convocatoria castellano.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936158",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936136",
@@ -4408,7 +4488,9 @@
 				"nombre": "CONVOCATORIA MCD A COLOMBIA Y REP DOMINICANA 2027_114214.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936136",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936129",
@@ -4520,7 +4602,9 @@
 				"nombre": "01 Convocatoria 2026 fda.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936129",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936108",
@@ -4561,7 +4645,9 @@
 				"nombre": "BASES AYUDAS CONTRATACION Y AUTOEMPLEO.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936108",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936047",
@@ -4609,7 +4695,9 @@
 				"nombre": "6.CONVOCATORIA CONTRATACIONES_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936047",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936044",
@@ -4658,7 +4746,9 @@
 				"nombre": "CONVOCATORIA PRESENTACIÓN DE ALIMENTOS EN GUATEMALA Y PANAMÁ 2027_084114.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936044",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936034",
@@ -4698,7 +4788,9 @@
 				"nombre": "6.CONVOCATORIA comercio -2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936034",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "936021",
@@ -4746,7 +4838,9 @@
 				"nombre": "6 CONVOCATORIA autónomos_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936021",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "935995",
@@ -4850,7 +4944,9 @@
 				"nombre": "Decret_Castellà.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935995",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "935991",
@@ -4890,7 +4986,9 @@
 				"nombre": "20261017_Resolución_Decreto_DECRETO 2026-0757 [05. Decreto aprobación bases ayudas comercio y hostelería 2026].pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935991",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "935985",
@@ -4942,7 +5040,9 @@
 				"nombre": "2026_CONVOCATORIA FOOD INGREDIENTS FRANKFURT 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935985",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "935979",
@@ -4998,7 +5098,9 @@
 				"nombre": "2026_CONVOCATORIA_AFRICA FOOD 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935979",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "935970",
@@ -5038,7 +5140,9 @@
 				"nombre": "20261008_Publicación_Anuncio Aprobación Bases específicas reguladoras de la subvención a la producción de determinadas variedades de uva para la obtención de vino de calidad elaborado en El Hierro en 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935970",
-			"ia": null
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
 			"codigo": "935961",
