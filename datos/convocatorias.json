@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-10-24T16:15:01.389Z",
+	"actualizado": "2026-10-25T10:02:39.859Z",
 	"convocatorias": [
 		{
 			"codigo": "937680",
@@ -186,9 +186,36 @@
 				"nombre": "Bases I convocatoria Coca de Fira - SEFYCU 8763226.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937644",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de cocina centrado en la receta tradicional de la coca de Fira de Ontinyent, con categorías para profesionales de la hostelería y panadería, y para aficionados.",
+				"paraQuien": "Profesionales de la hostelería y panadería de la Comunidad Valenciana, así como personas aficionadas a la cocina.",
+				"importe": "Premios de 800 € y 200 € en categoría profesional; 300 € y 200 € en categoría amateur.",
+				"importeMaximo": 800,
+				"plazo": "Hasta el 2 de noviembre de 2026 para la categoría profesional y hasta el 9 de noviembre de 2026 para la amateur.",
+				"plazoFin": "2026-11-09",
+				"requisitos": [
+					"Ser profesional de la hostelería o panadería en la Comunidad Valenciana (para la modalidad profesional) o aficionado mayor de edad (para la amateur).",
+					"Estar al corriente en los pagos con Hacienda, Seguridad Social y el Ayuntamiento.",
+					"No tener prohibido recibir subvenciones públicas.",
+					"Participar individualmente o en grupos de entre 2 y 4 personas.",
+					"Entrar en las primeras 20 plazas en la categoría profesional o 50 en la amateur.",
+					"Presentar la solicitud junto con la ficha de la receta e ingredientes utilizados."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "El plazo finaliza en días distintos según si te inscribes en la categoría profesional (2 de noviembre) o en la amateur (9 de noviembre)."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937629",
@@ -368,9 +395,35 @@
 				"nombre": "Bases Escaparatismo Ambientación Navideña-Castellano-definitivas.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937467",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña de escaparates para premiar a los comercios y servicios locales de Dénia.",
+				"paraQuien": "Comerciales minoristas o empresas de servicios de Dénia que tengan local en un bajo comercial o puesto en el Mercado Municipal.",
+				"importe": "Premios entre 250 € y 1.500 €. Máximo un premio por negocio.",
+				"importeMaximo": 1500,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Alicante.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener un comercio minorista o de servicios en un bajo comercial de Dénia o en el Mercado Municipal.",
+					"Estar al día en las obligaciones con Hacienda (estatal, autonómica y local) y con la Seguridad Social.",
+					"Tener el escaparate decorado de Navidad del 5 de diciembre de 2026 al 6 de enero de 2027.",
+					"Enviar una foto del escaparate por correo antes del 9 de diciembre de 2026 a las 12:00 para optar al premio del público.",
+					"Presentar la solicitud junto con la documentación bancaria solicitada."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Dénia"
+				},
+				"dudas": "La fecha límite exacta de solicitud depende de cuándo se publique el extracto en el Boletín Oficial de la Provincia."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937464",
@@ -1570,9 +1623,44 @@
 				"nombre": "ORDEN CONVOCATORIA.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937019",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Gobierno Vasco para impulsar el emprendimiento en economía social, apoyar la constitución de nuevas cooperativas y sociedades laborales, y financiar la incorporación de personas socias trabajadoras a estas empresas.",
+				"paraQuien": "Empresas de economía social (cooperativas y sociedades laborales), entidades promotoras de la economía social, consultoras especializadas y personas que se incorporen como socias trabajadoras.",
+				"importe": "Varía según la línea: desde 2.000 € por persona socia incorporada hasta un máximo de 60.000 € por actividad para planes de promoción territorial.",
+				"importeMaximo": 60000,
+				"plazo": "Un mes a partir del día siguiente al de su publicación en el Boletín Oficial del País Vasco (hasta el 5 de noviembre de 2026 según BDNS).",
+				"plazoFin": "2026-11-05",
+				"requisitos": [
+					"Desarrollar la actividad principal o tener el centro de trabajo en la Comunidad Autónoma del País Vasco.",
+					"Estar al corriente de pago en las obligaciones tributarias y de la Seguridad Social.",
+					"No estar inhabilitado ni sancionado legalmente para recibir ayudas o subvenciones públicas.",
+					"No estar sancionada por discriminación por razón de sexo o incumplimiento de normativa de igualdad.",
+					"Para la constitución de empresas, estar inscrita en el registro correspondiente entre el 18 de noviembre de 2025 y la fecha de publicación de la Orden.",
+					"Para la incorporación de socias, haberse incorporado de forma indefinida entre el 18 de noviembre de 2025 y la fecha de publicación de la Orden.",
+					"No ser una empresa en crisis ni tener pendiente una orden de recuperación de ayudas de la Comisión Europea.",
+					"Si la empresa tiene más de 50 trabajadores, contar con plan de igualdad vigente y medidas contra el acoso."
+				],
+				"gastos": [
+					"Aportaciones de capital social para adquirir la condición de persona socia trabajadora.",
+					"Gastos de organización de concursos de ideas para fomentar el emprendimiento en economía social.",
+					"Ejecución de planes de actuación para la promoción territorial de la economía social.",
+					"Acciones de promoción, asesoramiento y seguimiento para la creación de empresas de economía social.",
+					"Estudios de viabilidad económica, financiera o jurídica para empresas en crisis o relevo generacional."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "937018",
@@ -1788,9 +1876,35 @@
 				"nombre": "Anuncio Convocatoria de Subvenciones de apoyo a los viticultores y viticultoras de Güímar 2026 BDNS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936951",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica para apoyar a los productores de uva del municipio de Güímar cuya cosecha se destine a elaborar vinos con Denominación de Origen Valle de Güímar.",
+				"paraQuien": "Personas físicas, empresas, comunidades de bienes y agrupaciones que produzcan uva en Güímar.",
+				"importe": "0,40 euros por kilo de uva destinado a vino con D.O. Valle de Güímar (presupuesto total de 40.000 euros).",
+				"importeMaximo": null,
+				"plazo": "20 días naturales a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Desarrollar actividad vitícola en el municipio de Güímar.",
+					"Estar inscrito como viticultor en el Consejo Regulador de la Denominación de Origen Valle de Güímar.",
+					"Tener derecho de propiedad, arrendamiento u otro uso sobre parcelas vitícolas en Güímar inscritas en la D.O. Valle de Güímar.",
+					"Estar al corriente con la Hacienda, la Seguridad Social y las deudas con el Ayuntamiento de Güímar.",
+					"No estar inhabilitado para recibir subvenciones públicas."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Güímar"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936950",
@@ -1830,9 +1944,47 @@
 				"nombre": "Resol_Convocatoria_subv_reciclatge_textil_es_signed.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936950",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones dirigidas a empresas para desarrollar y probar proyectos piloto y soluciones industriales innovadoras destinadas a reciclar residuos textiles posconsumo y convertirlos en nuevos productos.",
+				"paraQuien": "Empresas catalanas (pequeñas, medianas y grandes) que formen una agrupación de colaboración que cubra la cadena de valor del reciclaje textil.",
+				"importe": "Hasta 1.000.000 € para reciclaje de fibras de algodón (>60%) y hasta 600.000 € para otras fibras (cubre entre el 25 % y el 60 % del gasto según tamaño de empresa y colaboración). Presupuesto total: 3.000.000 €.",
+				"importeMaximo": 1000000,
+				"plazo": "Desde el día siguiente a la publicación de la convocatoria en el DOGC hasta el 16 de diciembre de 2026 a las 14:00 horas.",
+				"plazoFin": "2026-12-16",
+				"requisitos": [
+					"Desarrollar el proceso íntegramente en Cataluña al menos hasta la fase de tejeduría.",
+					"Los residuos textiles deben ser recogidos y transformados en Cataluña.",
+					"Formar una agrupación que cubra toda la cadena de valor mediante un acuerdo de colaboración.",
+					"Procesar un mínimo de 1.000 t de residuo para fibras algodonosas o 100 t para otras fibras (máximo 2.000 t).",
+					"Los proyectos deben tener un nivel de madurez tecnológica TRL entre 5 y 9.",
+					"Aportar documento o acuerdo que garantice la disponibilidad mínima del residuo textil a tratar.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"Reincorporar efectivamente el residuo reciclado en nuevos productos (no se subvenciona la mera reutilización o incineración)."
+				],
+				"gastos": [
+					"Personal dedicado exclusivamente al proyecto (investigadores, técnicos y similar).",
+					"Amortización de maquinaria, instrumental y equipos nuevos o de segunda mano.",
+					"Amortización de edificios e instalaciones y alquiler de espacios o equipos.",
+					"Costes de clasificación de residuos y compra de materiales necesarios para las pruebas.",
+					"Transporte y logística interna entre los socios del proyecto.",
+					"Investigación externa, conocimientos técnicos, patentes y consultoría técnica.",
+					"Analíticas, ensayos, verificación de trazabilidad y certificaciones ambientales.",
+					"Auditoría (máximo 1.000 € por socio) y costes indirectos a tanto alzado de hasta el 5 %."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "Los requisitos legales detallados para ser beneficiario se remiten a las bases reguladoras TER/3448/2026, no incluidas por completo en este texto."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936935",
@@ -1872,9 +2024,36 @@
 				"nombre": "BASES..pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936935",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña para premiar los mejores escaparates y decoraciones en comercios, hostelería y calles de Alcázar de San Juan.",
+				"paraQuien": "Pequeños y medianos comercios, hostelería, personas físicas empadronadas y asociaciones vecinales de Alcázar de San Juan.",
+				"importe": "En comercio y hostelería: 350 € para el primer premio, 250 € para el segundo y 150 € para el tercero. En entorno urbano: lotes de productos valorados en hasta 350 €.",
+				"importeMaximo": 350,
+				"plazo": "Del 2 de noviembre de 2026 al 9 de diciembre de 2026.",
+				"plazoFin": "2026-12-09",
+				"requisitos": [
+					"Estar empadronado en Alcázar de San Juan o tener allí la sede social.",
+					"Dedicarse al pequeño o mediano comercio o a la hostelería (para la categoría comercial).",
+					"No estar ubicado en centros comerciales cerrados.",
+					"Tener lista la decoración desde el 10 de diciembre de 2026 hasta el 6 de enero de 2027.",
+					"Mantener iluminada la decoración durante el horario comercial.",
+					"Colocar en un lugar visible el distintivo del concurso proporcionado por la organización."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Alcázar de San Juan"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936894",
@@ -1915,7 +2094,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936894",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -1956,9 +2135,39 @@
 				"nombre": "CSVKI2CGTH1LA1X0XFIL 14050 ORDEN SUBVENCIONES DAÑOS INCENDIOS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936870",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica directa para compensar el sobrecoste de comprar alimento para el ganado debido a los pastos quemados en los incendios del verano de 2026 en Aragón.",
+				"paraQuien": "Titulares de explotaciones ganaderas de ovino, caprino, bovino o equino en régimen extensivo o semiextensivo con pastos afectados en los municipios indicados en la convocatoria.",
+				"importe": "Se calcula según la superficie de pasto afectada, las cabezas de ganado y el tipo de pasto. Tiene un límite máximo acumulado de 50.000 € por negocio en tres años (régimen de minimis). El fondo total es de 550.000 €.",
+				"importeMaximo": 50000,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación de la orden en el Boletín Oficial de Aragón.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener una explotación de producción o reproducción de ovino, caprino, bovino o equino en régimen extensivo o semiextensivo.",
+					"Estar dado de alta en el Registro General de Explotaciones Ganaderas (REGA) y con autorizaciones antes de publicarse la orden.",
+					"Tener superficies de pastoreo afectadas por los incendios de junio, julio y agosto de 2026 en los municipios del Anexo I.",
+					"Haber declarado las parcelas de pasto afectadas en la solicitud de la PAC 2026.",
+					"No ser una explotación intensiva, ni cebadero, ni de autoconsumo.",
+					"Comprometerse a mantener al menos el 70 % del censo ganadero durante 1 año tras recibir la ayuda.",
+					"Estar al corriente de pagos con Hacienda y con la Seguridad Social."
+				],
+				"gastos": [
+					"Sobrecoste extraordinario por la compra de alimentación para el ganado por la pérdida de pastos."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La lista concreta de municipios afectados y los módulos exactos de cálculo están en los anexos en la sede electrónica."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936865",
@@ -1998,9 +2207,39 @@
 				"nombre": "20261014_Resolución_DECRETO_2026-25082_[Resolución_PR_2026_27875_-_Subvenciones_sujetas_a_la_LGS_en_régimen_de_concurrencia_competitiva__Convocatoria_con_fiscalización_(Fase_A)].pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936865",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Ayuntamiento de Marbella para financiar la compra o adaptación de taxis destinados al transporte de personas con movilidad reducida.",
+				"paraQuien": "Taxistas (personas físicas o jurídicas) titulares de una licencia municipal de taxi activa en Marbella.",
+				"importe": "El reparto del presupuesto total de 56.000 € se realiza mediante un sistema de puntos entre todos los solicitantes admitidos, sin superar el coste total del gasto realizado.",
+				"importeMaximo": null,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Málaga.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener la titularidad de una licencia de taxi en activo en Marbella.",
+					"Haber comprado o adaptado el vehículo entre el 19/12/2022 y la fecha límite de solicitud.",
+					"El vehículo debe cumplir las condiciones técnicas para personas con movilidad reducida.",
+					"Comprometerse a mantener la licencia adaptada durante al menos 4 años.",
+					"Estar al corriente en las obligaciones con Hacienda, Seguridad Social y el Ayuntamiento de Marbella.",
+					"No haber sido sancionado en los últimos 12 meses por infracciones de la ordenanza municipal del taxi."
+				],
+				"gastos": [
+					"Compra de vehículo adaptado para personas con movilidad reducida.",
+					"Adaptación de vehículo existente para personas con movilidad reducida."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Marbella"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936809",
@@ -2044,9 +2283,35 @@
 				"nombre": "DECRETO DE ALCALDÍA CONVOCATORIA AYUDAS FOMENTO AL AUTOEMPLEO PLAN EMPRENDE 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936809",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica del Ayuntamiento para fomentar el autoempleo y apoyar el inicio de nuevos negocios en el municipio.",
+				"paraQuien": "Autónomos personas físicas y administradores de sociedades limitadas empadronados en Villanueva del Trabuco.",
+				"importe": "Presupuesto total disponible de 8.000,00 euros para toda la convocatoria (no indica el importe exacto por persona).",
+				"importeMaximo": null,
+				"plazo": "Del 1 de diciembre de 2025 hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Estar empadronado en Villanueva del Trabuco con al menos un año de antigüedad respecto a la fecha de la convocatoria.",
+					"Si eres administrador de una sociedad limitada, la empresa debe tener su domicilio social en Villanueva del Trabuco.",
+					"Haber estado en desempleo e inscrito como demandante de empleo justo al iniciar la actividad.",
+					"Haberse dado de alta en el IAE y en autónomos (o mutualidad) a partir del 1 de diciembre del año anterior a la convocatoria.",
+					"Acreditar un año continuado de alta desde el inicio de la actividad (mínimo seis meses seguidos para evitar el reintegro total)."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Villanueva del Trabuco"
+				},
+				"dudas": "No se especifica en el decreto la cantidad individual que le corresponde a cada beneficiario."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.7-flash"
 		},
 		{
 			"codigo": "936763",
@@ -2087,9 +2352,37 @@
 				"nombre": "Convocatòria_translated_spa.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936763",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de fotografía para promocionar el patrimonio natural, cultural, gastronómico y humano de las Terres de l'Ebre, con un total de 15 premios distribuidos en 7 categorías.",
+				"paraQuien": "Cualquier persona física aficionada o profesional de la fotografía, sin importar su nacionalidad o residencia. Se excluyen empresas o personas jurídicas.",
+				"importe": "Premios de entre 175 € y 400 € según la categoría. La dotación total del concurso es de 4.175 €.",
+				"importeMaximo": 400,
+				"plazo": "Hasta el 8 de enero de 2027 a las 14:00 horas.",
+				"plazoFin": "2027-01-08",
+				"requisitos": [
+					"Ser persona física (los menores de 16 años participan con representante legal).",
+					"Presentar como máximo cuatro fotografías por participante.",
+					"Las fotos deben ser originales, inéditas y no haber sido premiadas antes.",
+					"No se admiten fotos con firmas, marcas de agua ni bordes.",
+					"No se admiten collages ni imágenes generadas por inteligencia artificial.",
+					"Entregar en formato JPG o JPEG con resolución de 300 ppp.",
+					"Aportar fotocopia del DNI y declaración responsable."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936729",
@@ -2135,9 +2428,38 @@
 				"nombre": "Acuerdo JGL de convocatòria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936729",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda para compensar el gasto de IBI y comunidad de vecinos a quienes alquilen una vivienda a través de la Bolsa de Alquiler Social municipal.",
+				"paraQuien": "Personas físicas o jurídicas que tengan una vivienda en Valls cedida a alquiler social a través de la Oficina Local de Vivienda (excluidos grandes tenedores).",
+				"importe": "Cubre el 100 % de los recibos de IBI y comunidad del año anterior, con un límite de entre el 0,489 % y el 0,978 % del valor catastral de la vivienda.",
+				"importeMaximo": null,
+				"plazo": "20 días hábiles a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Tarragona.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener una vivienda desocupada en el término municipal de Valls.",
+					"Haber firmado con la Oficina Local de Vivienda un convenio por un mínimo de 5 años.",
+					"Tener el contrato de alquiler firmado con la OLH al menos 6 meses antes del fin del plazo de solicitud.",
+					"No ser gran tenedor de viviendas.",
+					"Estar al corriente de las obligaciones con Hacienda, la Seguridad Social y el Ayuntamiento de Valls."
+				],
+				"gastos": [
+					"Recibo del Impuesto sobre Bienes Inmuebles (IBI) del año anterior",
+					"Recibos de la comunidad de propietarios del año anterior"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Valls"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936649",
@@ -2253,9 +2575,33 @@
 				"nombre": "Resol Presi. Conv 2.2026 M06-M07_v2.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936649",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas a tanto alzado para apoyar nuevas iniciativas empresariales (emprendimiento) y el mantenimiento del tejido productivo local en municipios de la comarca Sierra Oeste de Madrid.",
+				"paraQuien": "Personas físicas (autónomos o emprendedores) y personas jurídicas con iniciativas empresariales en los municipios incluidos de la Sierra Oeste de Madrid.",
+				"importe": "25.000 € a tanto alzado por proyecto.",
+				"importeMaximo": 25000,
+				"plazo": "20 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Comunidad de Madrid (BOCM).",
+				"plazoFin": null,
+				"requisitos": [
+					"Desarrollar la iniciativa en alguno de los 22 municipios del ámbito de actuación de la Sierra Oeste de Madrid.",
+					"Cumplir con las condiciones y perfiles fijados en los artículos 3 y 4 de las bases reguladoras.",
+					"Si eres persona jurídica, debes tramitar la solicitud obligatoriamente por la sede electrónica de ADI Sierra Oeste de Madrid."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "Los requisitos específicos y los conceptos subvencionables no se detallan en el texto y remiten a las bases reguladoras aprobadas el 19 de octubre de 2026."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936640",
@@ -2343,9 +2689,40 @@
 				"nombre": "AUTONOMOS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936640",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica a tanto alzado de 2.000 euros para personas desempleadas que se establezcan como trabajadoras autónomas en el municipio de Valdés.",
+				"paraQuien": "Personas desempleadas que inicien una actividad por cuenta propia (individualmente, o a través de sociedades o comunidades de bienes con un límite de dos socios) en el concejo de Valdés.",
+				"importe": "2.000 € fijos por persona trabajadora autónoma (con un límite de 2 socios por entidad o sociedad). Presupuesto total de 15.000 €.",
+				"importeMaximo": 2000,
+				"plazo": "Para altas en 2026 posteriores a la publicación en el BOPA: 15 días hábiles desde el alta en el RETA. Para altas entre el 1 de noviembre de 2025 y la fecha de publicación en el BOPA: 15 días hábiles desde el día siguiente a dicha publicación.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar en situación de desempleo hasta el día anterior al alta en el RETA.",
+					"Haber iniciado la actividad (alta en el RETA) entre el 1 de noviembre de 2025 y el 31 de octubre de 2026.",
+					"Tener el domicilio fiscal y el centro de trabajo o local (si se tiene) en el municipio de Valdés.",
+					"Estar empadronado en el municipio de Valdés al solicitar la ayuda y mantener el empadronamiento durante al menos 3 años.",
+					"Mantener la actividad económica como autónomo de forma ininterrumpida durante al menos 3 años tras el alta.",
+					"No compatibilizar la actividad por cuenta propia con ningún trabajo por cuenta ajena durante esos 3 años.",
+					"No haber trabajado por cuenta propia en la misma actividad (mismo código CNAE a 3 dígitos) durante los 3 años anteriores (salvo altas como autónomo colaborador).",
+					"Estar al corriente de las obligaciones con Hacienda (estatal y autonómica), la Seguridad Social y el Ayuntamiento de Valdés."
+				],
+				"gastos": [
+					"Primeras inversiones y gastos derivados del inicio de la actividad económica."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Valdés"
+				},
+				"dudas": "Las bases reguladoras fijan el plazo en 15 días hábiles, mientras que el extracto de la BDNS lo indica en 15 días naturales tras publicarse en el BOPA."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936534",
@@ -2394,9 +2771,41 @@
 				"nombre": "CONVOCATORIA VISITA A FERIA BIOFACH 2027_131420.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936534",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica del IPEX para cubrir parte de los gastos de viaje y envío de muestras a las empresas de Castilla-La Mancha que asistan o expongan en la feria ecológica Biofach 2027 en Alemania.",
+				"paraQuien": "Autónomos, pymes, cooperativas y empresas del sector de alimentos y bebidas ecológicas que ejerzan su actividad en Castilla-La Mancha.",
+				"importe": "Hasta 1.820 € por negocio (cubre el 65 % de los gastos fijados, con un máximo de 1.300 € para viaje y 520 € para muestras).",
+				"importeMaximo": 1820,
+				"plazo": "Desde el día siguiente a su publicación en el DOCM hasta el 20 de noviembre de 2026.",
+				"plazoFin": "2026-11-20",
+				"requisitos": [
+					"Desarrollar la actividad económica dentro de Castilla-La Mancha.",
+					"Pertenecer al sector de alimentos y bebidas ecológicas.",
+					"Estar al día en las obligaciones tributarias con el Estado, la Región y la Seguridad Social.",
+					"No estar incurso en prohibiciones legales para obtener subvenciones públicas.",
+					"Disponer de un plan de prevención de riesgos laborales si la ley se lo exige.",
+					"No haber recibido otra ayuda de la Junta de Comunidades de Castilla-La Mancha para esta misma acción.",
+					"No ser una empresa en crisis ni tener pendiente la devolución de ayudas ilegales.",
+					"No haber sido sancionado por infracciones graves de prevención de riesgos o discriminación laboral."
+				],
+				"gastos": [
+					"Desplazamiento y alojamiento del representante en el viaje (hasta 2.000 € de gasto de referencia).",
+					"Transporte y envío de muestras de productos (hasta 800 € de gasto de referencia)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936514",
@@ -2436,9 +2845,42 @@
 				"nombre": "BASES_REGULADORAS_DE_SUBVENCIONES_AL_SECTOR_APICOLA, 2026 FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936514",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de la Diputación Provincial de Soria para financiar gastos e inversiones de los apicultores en el desarrollo de su actividad durante 2026.",
+				"paraQuien": "Apicultores (personas físicas o jurídicas) con domicilio fiscal en Soria que tengan explotaciones de 100 o más colmenas en municipios sorianos de menos de 20.000 habitantes.",
+				"importe": "Hasta el 50 % del gasto subvencionable, con un máximo de 2.500 € por beneficiario.",
+				"importeMaximo": 2500,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Soria hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Tener el domicilio fiscal en la provincia de Soria.",
+					"Tener una explotación de 100 o más colmenas en un municipio soriano de menos de 20.000 habitantes.",
+					"Tener la explotación inscrita en el REGA antes de presentar la solicitud.",
+					"Estar dado de alta en el IAE en el Grupo 062 (Apicultura).",
+					"Estar al corriente de obligaciones con Hacienda, Seguridad Social y la Diputación de Soria.",
+					"No estar inhabilitado para recibir subvenciones públicas."
+				],
+				"gastos": [
+					"Material y equipamiento no inventariable (ropa de protección, herramientas, envases, comida para abejas y gastos de envío).",
+					"Compra de colmenas y equipos de envasado de miel.",
+					"Alquiler de pastos vinculados a la explotación.",
+					"Cursos de formación relacionados con la apicultura.",
+					"Servicios veterinarios para la explotación."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936511",
@@ -2478,9 +2920,38 @@
 				"nombre": "BASES FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936511",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de la Diputación de Soria para financiar los gastos de Seguridad Social de los titulares o de un trabajador contratado en farmacias de pueblos de menos de 1.000 habitantes.",
+				"paraQuien": "Autónomos titulares de oficinas de farmacia ubicadas en municipios de menos de 1.000 habitantes de la provincia de Soria.",
+				"importe": "Hasta 1.500 € para farmacias en municipios de menos de 500 habitantes, y hasta 1.000 € en municipios de 500 a 1.000 habitantes.",
+				"importeMaximo": 1500,
+				"plazo": "Un mes a contar desde el día de la publicación del extracto de la convocatoria en el BOP de Soria.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser persona física dada de alta como trabajador autónomo.",
+					"Tener el domicilio fiscal en un municipio de la provincia de Soria al solicitar la ayuda.",
+					"Ser titular de una oficina de farmacia en un municipio de la provincia de Soria de menos de 1.000 habitantes.",
+					"Mantener abierto el establecimiento como mínimo hasta el 31 de octubre de 2026.",
+					"Estar al corriente en el pago de las obligaciones con Hacienda y la Seguridad Social."
+				],
+				"gastos": [
+					"Costes de la Seguridad Social del trabajador autónomo titular de la oficina de farmacia (del 1 de enero al 31 de octubre de 2026).",
+					"Costes de la Seguridad Social de un trabajador contratado por el titular de la farmacia (del 1 de enero al 31 de octubre de 2026)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936476",
@@ -2521,9 +2992,38 @@
 				"nombre": "CONVOCATORIA INTERNACIONAL CHIRIMÍAS FINAL (1).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936476",
-			"ia": null,
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Convocatoria internacional de residencia artística para realizar un proyecto expositivo en la Casa de las Chirimías en Granada durante 2027.",
+				"paraQuien": "Artistas de cualquier edad, nacionalidad, lugar de residencia o disciplina artística.",
+				"importe": "Hasta 2.000 € por persona (hasta 1.500 € para producción y transporte, y 500 € en especie para alojamiento y desayuno).",
+				"importeMaximo": 2000,
+				"plazo": "Del 22 de octubre al 6 de noviembre de 2026, hasta las 19:00 h (hora peninsular).",
+				"plazoFin": "2026-11-06",
+				"requisitos": [
+					"Ser artista de cualquier disciplina, edad, nacionalidad o lugar de residencia.",
+					"Presentar un proyecto artístico pensado específicamente para la Casa de las Chirimías.",
+					"Tener disponibilidad para realizar la residencia de 8 días en Granada y participar en las actividades.",
+					"Estar al día con las obligaciones tributarias y con la Seguridad Social.",
+					"Estar al día en el pago de deudas por reintegro de subvenciones."
+				],
+				"gastos": [
+					"Gastos de producción de la obra",
+					"Gastos de transporte derivados del proyecto"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "936469",
@@ -2566,9 +3066,40 @@
 				"nombre": "TextoConvocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936469",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para financiar la realización de cursos de formación profesional en modalidad de teleformación, dirigidos a personas trabajadoras desempleadas u ocupadas afectadas o en riesgo de padecer silicosis en Andalucía.",
+				"paraQuien": "Entidades de formación privadas, con o sin ánimo de lucro, que tengan una plataforma de teleformación inscrita en el registro correspondiente.",
+				"importe": "Se calcula multiplicando horas formativas por número de alumnos por el módulo económico de la especialidad. Presupuesto total de 700.000 €.",
+				"importeMaximo": null,
+				"plazo": "10 días naturales a contar desde el día siguiente a la publicación del extracto de la convocatoria en el BOJA, hasta las 12:00 horas del último día.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser una entidad de formación privada con o sin ánimo de lucro.",
+					"Contar con una plataforma de aprendizaje debidamente inscrita en el registro correspondiente para la especialidad solicitada.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"No ser deudora con la Junta de Andalucía por cualquier ingreso de derecho público.",
+					"Mantener todos los requisitos durante toda la realización del curso subvencionado."
+				],
+				"gastos": [
+					"Costes directos e indirectos de las actividades formativas.",
+					"Sueldos del personal de apoyo técnico para la dinamización de la teleformación.",
+					"Sueldos de personal especializado para atención a personas con discapacidad o vulnerables.",
+					"Gastos de publicidad, difusión, captación y selección del alumnado."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936467",
@@ -2608,9 +3139,40 @@
 				"nombre": "BASES FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936467",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de la Diputación Provincial de Soria para apoyar la actividad resinera en la provincia durante el año 2026, cubriendo gastos de alquiler de los pinos y aportaciones al Fondo de Mejora.",
+				"paraQuien": "Autónomos personas físicas que desarrollen la actividad de extracción de resina en la provincia de Soria.",
+				"importe": "0,20 € por pino adjudicado, hasta un máximo de 1.500 € por persona.",
+				"importeMaximo": 1500,
+				"plazo": "Un mes contado desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Soria.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser persona física trabajadora autónoma.",
+					"Estar dado de alta en el RETA no más tarde del 1 de abril de 2026.",
+					"Tener la actividad vinculada a los códigos CNAE 0230, 0210 o 0240.",
+					"Desarrollar la actividad resinera en municipios de la provincia de Soria.",
+					"Tener domicilio fiscal en la provincia de Soria del 1 de abril al 30 de noviembre de 2026.",
+					"Estar dado de alta en RETA al menos 210 días entre el 1 de marzo y el 30 de noviembre de 2026.",
+					"Estar al corriente de pagos con la AEAT, la Seguridad Social y la Diputación de Soria."
+				],
+				"gastos": [
+					"Alquiler de los pinos explotados pagado a su propietario",
+					"Aportaciones al Fondo de Mejora"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "936465",
