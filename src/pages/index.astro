@@ -335,7 +335,7 @@ const description =
 			document.addEventListener('cerrar-asistente', () => {
 				if (ultima.perfil || !document.querySelector<HTMLElement>('#tu-negocio')!.hidden) {
 					resultado.hidden = false;
-					resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					window.scrollTo({ top: 0, behavior: 'instant' });
 					return;
 				}
 				document.querySelector('.intro')!.classList.remove('empezada');
@@ -343,18 +343,24 @@ const description =
 			});
 			document.querySelector('#cambiar')!.addEventListener('click', () => abrir({ perfil: leerGuardado() ?? {} }));
 
+			// Los resultados, siempre desde arriba: el título, el negocio y las ayudas.
+			// La dirección no cambia (recargar vuelve a la portada, con «Usa tus
+			// respuestas de antes»); el enlace para compartir lleva las respuestas.
 			async function verAyudas(perfil: Perfil) {
 				asistente.hidden = true;
+				document.querySelector('.intro')!.classList.add('empezada');
 				const tu = document.querySelector<HTMLElement>('#tu-negocio')!;
 				tu.hidden = false;
 				document.querySelector('#respuestas')!.replaceChildren(...respuestas(perfil).map((t) => el('li', '', t)));
 				await cargar();
 				ultima = { perfil };
 				pintar();
-				resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
-				// Las respuestas van en la dirección: se puede compartir o volver a ella
-				history.replaceState(null, '', `/?${aParametros(perfil)}`);
-				document.querySelector<HTMLAnchorElement>('#avisos')!.href = `https://alertas.felixcorcoran.es/?${aParametros(perfil)}`;
+				window.scrollTo({ top: 0, behavior: 'instant' });
+				// Para «Usa tus respuestas de antes» al volver (también si llegó por un enlace)
+				try {
+					const comunidad = provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad;
+					localStorage.setItem(CLAVE, JSON.stringify({ ...perfil, comunidad }));
+				} catch {}
 			}
 			document.addEventListener('perfil-listo', (e) => verAyudas((e as CustomEvent<Perfil>).detail));
 			anterior.addEventListener('click', () => {
@@ -365,10 +371,11 @@ const description =
 			document.querySelector('#todas')!.addEventListener('click', async () => {
 				asistente.hidden = true;
 				document.querySelector<HTMLElement>('#tu-negocio')!.hidden = true;
+				document.querySelector('.intro')!.classList.add('empezada');
 				await cargar();
 				ultima = { perfil: null };
 				pintar();
-				resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				window.scrollTo({ top: 0, behavior: 'instant' });
 			});
 
 			verPremios.addEventListener('change', pintar);
@@ -401,7 +408,7 @@ const description =
 
 			const compartir = document.querySelector<HTMLButtonElement>('#compartir')!;
 			compartir.addEventListener('click', async () => {
-				const url = location.href;
+				const url = ultima.perfil ? `${location.origin}/?${aParametros(ultima.perfil)}` : location.origin;
 				try {
 					if (navigator.share && matchMedia('(pointer: coarse)').matches) {
 						await navigator.share({ title: 'Ayudas para mi negocio', url });
@@ -417,14 +424,20 @@ const description =
 
 			// Al entrar: con respuestas en la dirección, sus ayudas; con ?empezar
 			// (desde la ficha de una ayuda), las preguntas
+			// Al recargar, arriba del todo: no a donde estaba (el contenido ya no es el mismo)
+			history.scrollRestoration = 'manual';
+			window.scrollTo({ top: 0, behavior: 'instant' });
 			const entrada = new URLSearchParams(location.search);
 			const desdeEnlace = deParametros(entrada);
 			// Desde alertas.felixcorcoran.es se llega con #avisos: directo al recuadro
 			const alAviso = location.hash === '#avisos';
-			if (desdeEnlace)
+			if (desdeEnlace) {
+				// Se enseñan sus ayudas y la dirección queda limpia: al recargar, portada
+				history.replaceState(null, '', '/');
 				verAyudas(desdeEnlace).then(() => {
 					if (alAviso) setTimeout(() => avisos.scrollIntoView({ behavior: 'smooth', block: 'center' }), 400);
 				});
+			}
 			else if (entrada.has('empezar')) {
 				history.replaceState(null, '', '/');
 				abrir();
