@@ -53,14 +53,33 @@ const description =
 						<ul id="respuestas"></ul>
 						<button type="button" id="cambiar" class="enlace">Cambiar respuestas</button>
 						<button type="button" id="compartir" class="enlace">Copiar el enlace a estos resultados</button>
-						<!-- Los avisos por email (alertas.felixcorcoran.es) con estas mismas respuestas -->
-						<a id="avisos" class="enlace" href="https://alertas.felixcorcoran.es/" data-site-link>Avísame por email de las nuevas</a>
+						<a href="#avisos" class="enlace">Recibir las nuevas por email</a>
 					</div>
 					<h2 id="resultado-titulo"></h2>
 					<p id="resumen" class="resumen"></p>
 					<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
 				</div>
 				<div id="grupos"></div>
+				<!-- Los avisos por email (alertas.felixcorcoran.es): con las respuestas que ya ha dado, solo falta el email -->
+				<section id="avisos" class="avisos" hidden aria-labelledby="avisos-titulo">
+					<p class="eyebrow">Avisos por email</p>
+					<h3 id="avisos-titulo">¿Te avisamos cuando salgan ayudas nuevas para tu negocio?</h3>
+					<p class="avisos-texto">
+						Cada mañana miramos las convocatorias nuevas y, si alguna encaja con lo que nos has dicho, te llega un correo. Gratis, sin cuenta y con baja en un clic.
+					</p>
+					<form id="avisos-form" novalidate>
+						<div class="avisos-fila">
+							<label class="sr-only" for="avisos-email">Tu email</label>
+							<input id="avisos-email" type="email" autocomplete="email" inputmode="email" placeholder="Tu email" required />
+							<button type="submit" class="boton">Avisarme <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 6h9M7 2.5 10.5 6 7 9.5"></path></svg></button>
+						</div>
+						<label class="avisos-acepto">
+							<input type="checkbox" id="avisos-acepto" />
+							<span>He leído la <a href="https://alertas.felixcorcoran.es/privacidad" target="_blank" rel="noopener" data-site-link>política de privacidad</a>: mi email y estas respuestas solo se usan para enviarme los avisos.</span>
+						</label>
+						<p id="avisos-estado" class="avisos-estado" role="status" aria-live="polite"></p>
+					</form>
+				</section>
 				<p class="aviso-fuente">
 					Es una orientación: antes de pedir una ayuda, lee su convocatoria oficial, que es la que vale. Datos del{' '}
 					<a href="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias" target="_blank" rel="noopener">Sistema Nacional de Publicidad de Subvenciones</a>; resúmenes hechos con IA a partir de las bases.
@@ -77,6 +96,7 @@ const description =
 			const resultado = document.querySelector<HTMLElement>('#resultado')!;
 			const grupos = document.querySelector<HTMLDivElement>('#grupos')!;
 			const verPremios = document.querySelector<HTMLInputElement>('#ver-premios')!;
+			const avisos = document.querySelector<HTMLElement>('#avisos')!;
 
 			const el = <K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, text?: string) => {
 				const node = document.createElement(tag);
@@ -221,8 +241,52 @@ const description =
 					grupo('Revisa los detalles', 'Podrían encajar, pero falta algún dato o hay que comprobar algo en las bases.', revisa, 'revisa');
 					grupo('No encajan', 'Por qué no, en cada una.', no, 'no', true);
 				}
+				// Los avisos, solo con un negocio (no en «todas las ayudas»)
+				avisos.hidden = !perfil;
 				resultado.hidden = false;
 			}
+
+			// Apuntarse a los avisos con las respuestas del asistente: la misma API que
+			// alertas.felixcorcoran.es, que manda el correo para confirmar
+			const ALERTAS = import.meta.env.PUBLIC_ALERTAS_API ?? 'https://alertas.felixcorcoran.es';
+			const avisosForm = document.querySelector<HTMLFormElement>('#avisos-form')!;
+			const avisosEmail = document.querySelector<HTMLInputElement>('#avisos-email')!;
+			const avisosAcepto = document.querySelector<HTMLInputElement>('#avisos-acepto')!;
+			const avisosEstado = document.querySelector<HTMLElement>('#avisos-estado')!;
+			avisosForm.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				const email = avisosEmail.value.trim();
+				const perfil = ultima.perfil;
+				avisosEstado.className = 'avisos-estado avisos-estado--error';
+				if (!perfil) return;
+				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return void (avisosEstado.textContent = 'Escribe un email válido.');
+				if (!avisosAcepto.checked) return void (avisosEstado.textContent = 'Para apuntarte, marca que has leído la política de privacidad.');
+
+				const boton = avisosForm.querySelector<HTMLButtonElement>('button')!;
+				boton.disabled = true;
+				avisosEstado.className = 'avisos-estado';
+				avisosEstado.textContent = 'Enviando…';
+				try {
+					const r = await fetch(`${ALERTAS}/api/suscripciones`, {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({ email, perfil, acepto: true }),
+					});
+					if (r.status === 429) throw new Error('Demasiados intentos seguidos. Prueba de nuevo en unos minutos.');
+					if (r.status === 400) throw new Error('Revisa el email: no parece válido.');
+					if (!r.ok) throw new Error('No hemos podido apuntarte. Inténtalo de nuevo en un momento.');
+					avisosForm.replaceChildren(
+						el('p', 'avisos-ok', `Revisa tu correo: te hemos escrito a ${email}. Pulsa el enlace para confirmar y empezar a recibir los avisos.`),
+						el('p', 'avisos-texto', '¿No llega? Mira en spam o promociones. Sin confirmar no te enviaremos nada.'),
+					);
+				} catch (error) {
+					avisosEstado.className = 'avisos-estado avisos-estado--error';
+					avisosEstado.textContent =
+						error instanceof TypeError ? 'No hemos podido conectar. Inténtalo de nuevo en un momento.' : (error as Error).message;
+				} finally {
+					boton.disabled = false;
+				}
+			});
 
 			// El asistente (Asistente.astro): se abre con «Ver mis ayudas» y avisa al terminar
 			import provincias from '../data/provincias.json';
@@ -546,6 +610,116 @@ const description =
 	.resumen {
 		margin: 0.5rem 0 0;
 		color: var(--text-muted);
+	}
+
+	/* Avisos por email: la misma caja que el asistente */
+	.avisos {
+		margin-top: clamp(2.5rem, 6vw, 3.5rem);
+		padding: clamp(1.25rem, 3.5vw, 2.25rem);
+		border-radius: 1.75rem;
+		background: rgb(var(--surface-rgb) / 0.7);
+		border: 1px solid var(--rule);
+		box-shadow: 0 30px 70px -40px rgb(var(--ink) / 0.35);
+		scroll-margin-top: calc(var(--nav-top) + var(--nav-height) + 1.5rem);
+	}
+
+	.avisos[hidden] {
+		display: none;
+	}
+
+	.avisos h3 {
+		margin: 0.5rem 0 0;
+		font-size: clamp(1.4rem, 3vw, 2rem);
+		font-weight: 400;
+		line-height: 1.15;
+		letter-spacing: -0.03em;
+	}
+
+	.avisos-texto {
+		margin: 0.75rem 0 0;
+		max-width: 38rem;
+		font-weight: 300;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+	#avisos-form {
+		margin-top: 1.5rem;
+	}
+
+	.avisos-fila {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.avisos-fila input {
+		box-sizing: border-box;
+		flex: 1 1 16rem;
+		height: 3.5rem;
+		padding: 0 1.25rem;
+		border-radius: 1rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 1.0625rem;
+	}
+
+	.avisos-fila input:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.avisos-fila .boton:disabled {
+		opacity: 0.6;
+		cursor: progress;
+	}
+
+	.avisos-acepto {
+		display: flex;
+		gap: 0.75rem;
+		align-items: flex-start;
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		font-weight: 300;
+		color: var(--text-muted);
+		cursor: pointer;
+	}
+
+	.avisos-acepto input {
+		flex: none;
+		width: 1.125rem;
+		height: 1.125rem;
+		margin: 0.15rem 0 0;
+		accent-color: var(--accent-text);
+	}
+
+	.avisos-acepto a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.avisos-estado {
+		margin: 0.75rem 0 0;
+		font-size: 0.9375rem;
+		color: var(--text-muted);
+	}
+
+	.avisos-estado:empty {
+		display: none;
+	}
+
+	.avisos-estado--error {
+		color: var(--accent-text);
+		font-weight: 500;
+	}
+
+	:global(.avisos-ok) {
+		margin: 0;
+		font-size: 1.0625rem;
+		line-height: 1.5;
 	}
 
 	.premios {
