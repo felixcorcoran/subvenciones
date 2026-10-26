@@ -305,6 +305,13 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 		grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
 	}
 
+	/* 21 opciones: 7 por fila y 3 filas justas, sin una última fila a medias */
+	@media (min-width: 70rem) {
+		.rejilla--sectores {
+			grid-template-columns: repeat(7, minmax(0, 1fr));
+		}
+	}
+
 	/* El sector son 20 opciones: la caja se ensancha más allá del marco (centrada,
 	   main es una columna flex) para que quepan en menos filas */
 	.asistente:has([data-paso='sector']:not([hidden])) {
@@ -626,6 +633,8 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 		barra.parentElement!.setAttribute('aria-valuenow', String(Math.round(hechas * 100)));
 		const paso = pasos.find((el) => el.dataset.paso === p)!;
 		marcar(paso);
+		// Cada pregunta, desde arriba: si la anterior era larga, no se queda a medias con el pie asomando
+		window.scrollTo({ top: 0, behavior: 'instant' });
 		paso.querySelector<HTMLElement>('h2')?.focus({ preventScroll: true });
 		if (p === 'municipio') prepararMunicipio();
 	}

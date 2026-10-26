@@ -419,7 +419,12 @@ const description =
 			// (desde la ficha de una ayuda), las preguntas
 			const entrada = new URLSearchParams(location.search);
 			const desdeEnlace = deParametros(entrada);
-			if (desdeEnlace) verAyudas(desdeEnlace);
+			// Desde alertas.felixcorcoran.es se llega con #avisos: directo al recuadro
+			const alAviso = location.hash === '#avisos';
+			if (desdeEnlace)
+				verAyudas(desdeEnlace).then(() => {
+					if (alAviso) setTimeout(() => avisos.scrollIntoView({ behavior: 'smooth', block: 'center' }), 400);
+				});
 			else if (entrada.has('empezar')) {
 				history.replaceState(null, '', '/');
 				abrir();
@@ -447,9 +452,11 @@ const description =
 		margin-block: auto;
 	}
 
-	/* Con las preguntas abiertas, la pantalla entera es suya: el pie queda
-	   justo debajo, sin asomar */
-	main:has(> :global(.asistente:not([hidden]))) {
+	/* Las preguntas grandes (comunidad y sector) y los resultados ocupan la
+	   pantalla entera: el pie queda justo debajo, sin asomar. Las preguntas
+	   cortas dejan ver el pie, como la portada */
+	main:has(> :global(.asistente:not([hidden]) :is([data-paso='comunidad'], [data-paso='sector']):not([hidden]))),
+	main:has(> .resultado:not([hidden])) {
 		min-height: 100svh;
 		padding-bottom: clamp(1.5rem, 4svh, 3rem);
 	}
