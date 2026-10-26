@@ -53,6 +53,8 @@ const description =
 						<ul id="respuestas"></ul>
 						<button type="button" id="cambiar" class="enlace">Cambiar respuestas</button>
 						<button type="button" id="compartir" class="enlace">Copiar el enlace a estos resultados</button>
+						<!-- Los avisos por email (alertas.felixcorcoran.es) con estas mismas respuestas -->
+						<a id="avisos" class="enlace" href="https://alertas.felixcorcoran.es/" data-site-link>Avísame por email de las nuevas</a>
 					</div>
 					<h2 id="resultado-titulo"></h2>
 					<p id="resumen" class="resumen"></p>
@@ -287,6 +289,7 @@ const description =
 				resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				// Las respuestas van en la dirección: se puede compartir o volver a ella
 				history.replaceState(null, '', `/?${aParametros(perfil)}`);
+				document.querySelector<HTMLAnchorElement>('#avisos')!.href = `https://alertas.felixcorcoran.es/?${aParametros(perfil)}`;
 			}
 			document.addEventListener('perfil-listo', (e) => verAyudas((e as CustomEvent<Perfil>).detail));
 			anterior.addEventListener('click', () => {
