@@ -302,7 +302,15 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 	}
 
 	.rejilla--sectores {
-		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+	}
+
+	/* El sector son 20 opciones: la caja se ensancha más allá del marco (centrada,
+	   main es una columna flex) para que quepan en menos filas */
+	.asistente:has([data-paso='sector']:not([hidden])) {
+		align-self: center;
+		width: min(100vw - 2 * var(--gutter), 110rem);
+		box-sizing: border-box;
 	}
 
 	.tarjeta {

@@ -327,7 +327,8 @@ const description =
 				resultado.hidden = true;
 				document.querySelector('.intro')!.classList.add('empezada');
 				document.dispatchEvent(new CustomEvent('empezar-asistente', { detail: detalle }));
-				asistente.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				// Arriba del todo: el título y la primera pregunta, sin saltos
+				window.scrollTo({ top: 0, behavior: 'instant' });
 			};
 			document.querySelector('#empezar')!.addEventListener('click', () => abrir());
 			// «Atrás» desde la primera pregunta: a los resultados si los había, si no a la portada
@@ -444,6 +445,13 @@ const description =
 
 	.intro:not(.empezada):has(~ .resultado[hidden]) {
 		margin-block: auto;
+	}
+
+	/* Con las preguntas abiertas, la pantalla entera es suya: el pie queda
+	   justo debajo, sin asomar */
+	main:has(> :global(.asistente:not([hidden]))) {
+		min-height: 100svh;
+		padding-bottom: clamp(1.5rem, 4svh, 3rem);
 	}
 
 	.intro {
