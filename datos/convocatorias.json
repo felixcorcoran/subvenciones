@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-10-25T17:44:51.615Z",
+	"actualizado": "2026-10-26T11:25:31.674Z",
 	"convocatorias": [
 		{
 			"codigo": "937680",
@@ -3245,9 +3245,40 @@
 				"nombre": "TextoConvocatoria.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936465",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para que academias y centros de formación privados impartan cursos en línea (teleformación) a trabajadores desempleados u ocupados afectados o en riesgo de padecer silicosis en Andalucía.",
+				"paraQuien": "Centros y entidades de formación privadas (personas físicas o jurídicas, con o sin ánimo de lucro) con plataforma de teleformación inscrita.",
+				"importe": "Se calcula multiplicando las horas formativas por el número de alumnos (máximo 80 por especialidad) y el módulo económico de la especialidad. Presupuesto total: 700.000 €.",
+				"importeMaximo": null,
+				"plazo": "10 días naturales a contar desde el día siguiente a la publicación del extracto en el BOJA (hasta las 12:00 horas del último día).",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser una entidad de formación privada (persona física o jurídica, con o sin ánimo de lucro).",
+					"Contar con una plataforma de aprendizaje inscrita en el registro oficial para la especialidad solicitada.",
+					"No pertenecer al sector público.",
+					"Estar al corriente en las obligaciones tributarias y con la Seguridad Social.",
+					"No ser deudora de la Junta de Andalucía por cualquier ingreso de derecho público."
+				],
+				"gastos": [
+					"Costes directos e indirectos de la actividad formativa.",
+					"Sueldos del personal de apoyo técnico para la dinamización de la teleformación.",
+					"Sueldos del personal especializado en atención a alumnado con discapacidad o colectivos vulnerables.",
+					"Gastos de publicidad, difusión, captación y selección del alumnado."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936460",
@@ -3289,9 +3320,37 @@
 				"nombre": "Edicto_XII_CONCURSO_DE_FOTOGRAFÍA_?JESÚS_DE_PERCEVAL?_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936460",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de fotografía organizado por el Ayuntamiento de Roquetas de Mar sobre la temática \"La belleza de lo imperfecto\".",
+				"paraQuien": "Personas mayores de 18 años, tanto fotógrafos profesionales como aficionados.",
+				"importe": "1.º premio de 1.000 €, 2.º premio de 600 € y 3.º premio de 300 €.",
+				"importeMaximo": 1000,
+				"plazo": "Del 1 al 15 de noviembre de 2026.",
+				"plazoFin": "2026-11-15",
+				"requisitos": [
+					"Tener 18 años o más.",
+					"Presentar solo una fotografía por autor.",
+					"Entregar la imagen en formato JPG con un mínimo de 3.500 píxeles en su lado más largo.",
+					"La foto no puede haber sido premiada previamente.",
+					"Declarar la autoría de la obra y estar al corriente de pagos de tributos.",
+					"Enviar el trabajo por WeTransfer a concurso.perceval@roquetasdemar.es adjuntando la ficha de inscripción.",
+					"No incluir el nombre del autor en el asunto ni en el cuerpo del correo electrónico."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "Existe discrepancia en el plazo límite: las bases señalan el 15 de noviembre de 2026 y la ficha de la BDNS indica el 30 de noviembre de 2026."
+			},
 			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936454",
@@ -3331,9 +3390,39 @@
 				"nombre": "BASES FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936454",
-			"ia": null,
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Subvenciones dirigidas a ayuntamientos y entidades locales de Soria para cofinanciar la contratación temporal de personas desempleadas en labores de limpieza y preparación de montes resinables.",
+				"paraQuien": "Entidades locales de la provincia de Soria que sean propietarias de montes autorizados para el aprovechamiento resinero en 2026.",
+				"importe": "El 50 % del coste, con un máximo de 2.000 € por contrato (máximo 33,34 € al día). El presupuesto total es de 55.000 €.",
+				"importeMaximo": 2000,
+				"plazo": "Un mes a contar desde el día siguiente al de la publicación del extracto en el Boletín Oficial de la Provincia de Soria.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser una entidad local de la provincia de Soria propietaria de montes autorizados para resinar en 2026.",
+					"Contratar a personas desempleadas e inscritas en el servicio público de empleo.",
+					"El contrato debe ser a jornada completa y tener una duración mínima de 60 días.",
+					"El periodo de trabajo debe estar entre el 15 de noviembre de 2026 y el 1 de marzo de 2027.",
+					"Presentar la solicitud de forma exclusivamente electrónica."
+				],
+				"gastos": [
+					"Costes salariales de la persona contratada.",
+					"Costes de la Seguridad Social a cargo del empleador.",
+					"Indemnización por finalización del contrato laboral."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936449",
@@ -3376,7 +3465,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936449",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -3421,7 +3510,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936422",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -3462,9 +3551,35 @@
 				"nombre": "ORDEN FINAL - BDNS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936401",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica directa para compensar los costes del transporte y la insularidad por cada docena de huevos de gallina producida y comercializada en Canarias durante el año 2026.",
+				"paraQuien": "Productores de huevos de gallina en Canarias, ya sean personas individuales o agrupaciones de productores.",
+				"importe": "0,08 € por docena producida y vendida (con un suplemento del 10 % para jóvenes agricultores que hayan recibido ayudas de primera instalación). Presupuesto total: 320.477 €.",
+				"importeMaximo": null,
+				"plazo": "Del 15 al 31 de enero de 2027 (la acreditación de agricultor activo debe presentarse entre el 1 de enero y el 31 de julio de 2026).",
+				"plazoFin": "2027-01-31",
+				"requisitos": [
+					"Producir y vender huevos de gallina en las Islas Canarias durante el año 2026.",
+					"Ser titular de una explotación avícola de puesta inscrita y al día en el registro de explotaciones (REGAC).",
+					"Cumplir con la condición de agricultor activo en la campaña 2026.",
+					"Cumplir la normativa legal, sanitaria, ambiental y de bienestar animal.",
+					"Cumplir las obligaciones legales de facturación y acreditar documentalmente las ventas en docenas."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936400",
@@ -3504,9 +3619,42 @@
 				"nombre": "BASES_DE_SUBV._DESTINADAS_A_LA_CONSERVACION__MANTENIMIENTO_Y_EXPANSION_DE_LA_RAZA_AUTOCTONA_SERRANA__FIRMADAS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936400",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para mantener y aumentar el número de ejemplares de la raza vacuna autóctona Serrana Negra en explotaciones ganaderas de Soria, así como para diversificar su producción (por ejemplo, cría de bueyes).",
+				"paraQuien": "Titulares de explotaciones de ganado vacuno de carne en la provincia de Soria que tengan o compren ejemplares de raza Serrana Negra inscritos en el Libro Genealógico o certificados por la asociación oficial.",
+				"importe": "Para mantenimiento y compra de animales: entre 100 € y 400 € por cabeza (según edad y sexo), con un máximo de 10.000 € por titular. Para diversificación: hasta el 50 % del gasto justificado, con un máximo de 3.000 €.",
+				"importeMaximo": 10000,
+				"plazo": "Desde el día siguiente a publicarse la convocatoria en el BOP de Soria hasta el 11 de diciembre de 2026.",
+				"plazoFin": "2026-12-11",
+				"requisitos": [
+					"Tener una explotación de vacuno de carne inscrita y situada en la provincia de Soria.",
+					"Contar con animales de raza Serrana Negra inscritos en el Libro Genealógico o adquirirlos para reposición o aumento de censo.",
+					"Para diversificación, disponer de animales con el fenotipo racial avalados por la Asociación de Criadores oficial.",
+					"Tener la explotación calificada sanitariamente como T3 y B4 (libre de tuberculosis y brucelosis).",
+					"Estar al corriente de pagos con Hacienda y con la Seguridad Social.",
+					"Mantener durante al menos 12 meses tras la ayuda el número de animales subvencionados.",
+					"Aplicar el programa oficial de conservación o mejora de la raza de la Consejería de Agricultura.",
+					"No estar incurso en prohibiciones legales para recibir subvenciones públicas."
+				],
+				"gastos": [
+					"Mantenimiento en la explotación de vacas, novillas y toros de la raza.",
+					"Compra de animales de reposición o recría inscritos en el Libro Genealógico.",
+					"Gastos derivados de actividades de diversificación de la producción (como la cría de bueyes)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No se especifica si un mismo beneficiario puede acumular el tope de 10.000 € (capítulos 1 y 2) con el de 3.000 € (capítulo 3), sumando un máximo total de 13.000 €."
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936399",
@@ -3546,9 +3694,41 @@
 				"nombre": "CONVOCATORIA Y ANEXOS SUBV. CAMARAS_TAXI 2026_VF-OA.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936399",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para instalar cámaras de seguridad interiores y sistemas de almacenamiento de imágenes en vehículos autotaxi de Gran Canaria para aumentar la seguridad de taxistas y pasajeros.",
+				"paraQuien": "Cooperativas de taxistas de Gran Canaria que tramiten la solicitud para taxis de hasta 9 plazas propiedad de autónomos titulares de licencia de autotaxi (VT) en la isla.",
+				"importe": "Hasta 450 € por vehículo y licencia. Presupuesto total disponible de 476.000 €.",
+				"importeMaximo": 450,
+				"plazo": "15 días naturales contados a partir del día siguiente a la publicación de la convocatoria en el BOP de Las Palmas.",
+				"plazoFin": "2026-11-07",
+				"requisitos": [
+					"Ser una cooperativa de taxistas legalmente constituida con domicilio social o sede principal en Gran Canaria.",
+					"Pedir la ayuda para vehículos autotaxi de hasta 9 plazas propiedad de personas físicas con licencia VT en Gran Canaria.",
+					"Tener en vigor (o solicitada) la autorización de transporte VT o visado habilitante.",
+					"Estar al corriente de las obligaciones tributarias, Seguridad Social y deudas con el Cabildo de Gran Canaria.",
+					"Presentar la declaración responsable de cumplimiento sobre protección de datos personales.",
+					"No superar el límite legal establecido en la normativa de ayudas de minimis."
+				],
+				"gastos": [
+					"Compra de cámaras de videovigilancia para el interior del vehículo",
+					"Sistemas de almacenamiento de las imágenes",
+					"Gastos de instalación de los equipos",
+					"Gastos de mantenimiento de los sistemas"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936373",
@@ -3588,9 +3768,34 @@
 				"nombre": "Convocatoria+CTC+na+2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936373",
-			"ia": null,
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Convocatoria de 2 becas de formación práctica para realizar proyectos de investigación e innovación en el Centro Tecnológico Nacional de la Conserva.",
+				"paraQuien": "Personas graduadas en Química, Ingeniería Química o Biotecnología.",
+				"importe": "17.170 € brutos al año por beca.",
+				"importeMaximo": 17170,
+				"plazo": "Hasta el 4 de noviembre de 2026 a las 14:00 horas.",
+				"plazoFin": "2026-11-04",
+				"requisitos": [
+					"Tener el título universitario de Graduado en Ciencias (Química, Ingeniería Química o Biotecnología).",
+					"Estar al corriente de las obligaciones tributarias con el Estado y con la Región de Murcia.",
+					"Estar al corriente de las obligaciones con la Seguridad Social.",
+					"No estar inhabilitado para recibir subvenciones públicas."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "936372",
@@ -3630,9 +3835,37 @@
 				"nombre": "27609_Convocatoria_e_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936372",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones del Ayuntamiento de Mataró para financiar la adaptación de vehículos autotaxi para el transporte de personas con movilidad reducida durante el año 2026.",
+				"paraQuien": "Autónomos y empresas que tengan una licencia vigente de autotaxi en Mataró y sean propietarias del vehículo a adaptar.",
+				"importe": "Hasta el 50 % del coste de la adaptación, con un máximo de 10.000 € por persona beneficiaria.",
+				"importeMaximo": 10000,
+				"plazo": "15 días hábiles a partir del día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Barcelona.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener una licencia vigente de autotaxi de Mataró.",
+					"Ser titular y propietario del vehículo que se adapte.",
+					"Estar al corriente de las obligaciones tributarias, de la Seguridad Social y con el Ayuntamiento de Mataró.",
+					"Haber justificado a tiempo cualquier subvención anterior del Ayuntamiento de Mataró.",
+					"No estar incurso en ninguna prohibición legal para recibir subvenciones."
+				],
+				"gastos": [
+					"Gastos de compra o adaptación del vehículo necesarios para transportar personas con movilidad reducida realizados en 2026."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Mataró"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "936365",
@@ -3672,9 +3905,38 @@
 				"nombre": "Bases subvenciones proyectos y actividades culturales 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936365",
-			"ia": null,
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Subvenciones para que asociaciones culturales y deportivas sin ánimo de lucro organicen actividades y proyectos durante el año 2026 en el municipio.",
+				"paraQuien": "Asociaciones culturales y deportivas sin ánimo de lucro inscritas en el registro municipal de Aldeamayor de San Martín.",
+				"importe": "Hasta 1.840,00 € por solicitante (presupuesto total de 25.800,00 €).",
+				"importeMaximo": 1840,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Valladolid.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser entidad legalmente constituida y carecer de ánimo de lucro.",
+					"Estar inscrita en el Registro Municipal de Asociaciones de Aldeamayor de San Martín.",
+					"Estar al corriente de pagos con el Ayuntamiento, la Agencia Tributaria y la Seguridad Social.",
+					"No tener deudas pendientes por reintegro de otras subvenciones municipales.",
+					"No estar incursa en prohibiciones legales para recibir subvenciones.",
+					"Presentar proyectos viables a realizar entre el 1 de enero y el 31 de diciembre de 2026."
+				],
+				"gastos": [
+					"Gastos en consumibles imprescindibles para desarrollar la actividad o proyecto."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Aldeamayor de San Martín"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "936358",
@@ -3714,9 +3976,40 @@
 				"nombre": "20261020 extracto.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936358",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para agricultores destinadas a la modernización, aumento de la productividad y desarrollo de nuevas actividades productivas durante el año 2026.",
+				"paraQuien": "Agricultores propietarios de una nave agrícola cuyo domicilio social y fiscal esté en Villanueva de la Serena y cuya única actividad sea la agraria.",
+				"importe": "Entre 200 € y 500 € por solicitud, según la superficie de la nave agrícola.",
+				"importeMaximo": 500,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia hasta el 10 de noviembre de 2026.",
+				"plazoFin": "2026-11-10",
+				"requisitos": [
+					"Que la única actividad del propietario sea la agraria.",
+					"Tener la explotación registrada y haber presentado la solicitud única.",
+					"Tener en propiedad una nave agrícola dedicada únicamente a la actividad agraria.",
+					"Tener el domicilio social y fiscal en Villanueva de la Serena (quedan excluidas las entidades menores como Entrerríos, Valdivia y Zurbarán).",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y el Ayuntamiento de Villanueva de la Serena.",
+					"No estar incurso en ninguna de las prohibiciones para recibir subvenciones públicas."
+				],
+				"gastos": [
+					"Modernización de la explotación agraria",
+					"Aumento de la productividad",
+					"Desarrollo de nuevas orientaciones productivas durante 2026"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Villanueva de la Serena"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936344",
@@ -3765,7 +4058,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936344",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -3806,9 +4099,40 @@
 				"nombre": "RESOLUCIÓN CONVOCATORIA ECA SEPE 2026 (COPIA).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936334",
-			"ia": null,
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Subvenciones para financiar el programa de integración laboral de personas con discapacidad (subprograma Empleo con Apoyo) en la Región de Murcia durante el año 2026.",
+				"paraQuien": "Entidades sin ánimo de lucro con centro de trabajo y actividad en la Región de Murcia dedicadas a la atención de personas con discapacidad.",
+				"importe": "Presupuesto total de 306.500 €. El límite máximo por entidad es su ayuda del año anterior más un 10 %; si es la primera vez que la piden, el máximo es el 5 % del presupuesto total.",
+				"importeMaximo": null,
+				"plazo": "10 días contados desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Región de Murcia (BORM).",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser entidad sin fines de lucro con centro de trabajo y actividad en la Región de Murcia.",
+					"Tener objeto social enfocado a personas con parálisis cerebral, salud mental, discapacidad intelectual, autismo o discapacidad sensorial.",
+					"Tener convenio de colaboración con el SEF o estar autorizada como agencia de colocación.",
+					"Contar con personal técnico de orientación laboral en el equipo asignado al programa.",
+					"Estar al corriente de las obligaciones tributarias con la AEAT y la Región de Murcia.",
+					"Estar al corriente con la Seguridad Social.",
+					"Asumir el compromiso de cumplir el Código de Conducta en subvenciones de la Región de Murcia."
+				],
+				"gastos": [
+					"Costes directos de sueldos del personal técnico adscrito al programa.",
+					"Otros costes necesarios como personal de apoyo administrativo, desplazamientos, difusión y suministros (calculados como un 25 % adicional fijo sobre los costes directos de personal)."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936330",
@@ -3848,9 +4172,40 @@
 				"nombre": "2 bis CONVOCATÒRIA Ciclomotors versió definitiva-es-ES.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936330",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica del Ayuntamiento de Barcelona por comprar un ciclomotor eléctrico nuevo a cambio de llevar al desguace un ciclomotor de gasolina antiguo.",
+				"paraQuien": "Personas físicas mayores de edad empadronadas en Barcelona y personas jurídicas (empresas o entidades) que tengan su domicilio social en el municipio de Barcelona.",
+				"importe": "Hasta 600 € por ciclomotor (sin superar el 50 % del precio de compra sin IVA). Se puede solicitar la ayuda para varios ciclomotores.",
+				"importeMaximo": null,
+				"plazo": "Desde el 15 de septiembre de 2026 hasta el 30 de septiembre de 2028, con varios periodos parciales de resolución.",
+				"plazoFin": "2028-09-30",
+				"requisitos": [
+					"Tener domicilio social en Barcelona (personas jurídicas) o estar empadronado en la ciudad (personas físicas).",
+					"Comprar un ciclomotor eléctrico nuevo (categoría L1eB, 1 a 4 kW, batería mínima de 1 kWh y autonomía mínima de 45 km) entre el 1 de marzo de 2026 y el 30 de septiembre de 2028.",
+					"Dar de alta el nuevo ciclomotor eléctrico en el impuesto de circulación (IVTM) de Barcelona.",
+					"Desguazar y dar de baja definitiva un ciclomotor de gasolina después del 1 de marzo de 2026.",
+					"El ciclomotor para desguace debe estar a nombre del solicitante, de alta en Tráfico y al día del IVTM en Barcelona.",
+					"Mantener la titularidad y matriculación del nuevo ciclomotor al menos durante 2 años.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y el Ayuntamiento de Barcelona.",
+					"No superar el límite de 300.000 € en ayudas de minimis en los últimos 3 años."
+				],
+				"gastos": [
+					"Compra directa de ciclomotores eléctricos nuevos (quedan excluidos los de segunda mano, el renting y el leasing)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Barcelona"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.8-flash"
 		},
 		{
 			"codigo": "936310",
@@ -3890,9 +4245,38 @@
 				"nombre": "20261019_Certificado_Certificado decreto_Certificado_decreto_Castellano (1).pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936310",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda extraordinaria en especie mediante la entrega gratuita de pienso para apoyos frente a los incendios de 2025 y la sequía a las explotaciones ganaderas de O Bolo.",
+				"paraQuien": "Ganaderos (personas físicas, jurídicas, sociedades civiles o comunidades de bienes) titulares de explotaciones de bovino, ovino o caprino en O Bolo.",
+				"importe": "Entrega de pienso repartido proporcionalmente según el censo de animales. El presupuesto total municipal es de 6.000 €.",
+				"importeMaximo": null,
+				"plazo": "15 días hábiles contados desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Ourense.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser titular de una explotación de bovino, ovino o caprino de alta en registros oficiales.",
+					"Tener la explotación o unidad productiva ubicada en el municipio de O Bolo.",
+					"Dedicarse a la producción primaria de productos agrícolas.",
+					"Tener el censo animal actualizado con fecha de referencia de 1 de agosto de 2026.",
+					"Mantener la actividad ganadera hasta la fecha de entrega del pienso.",
+					"Estar al corriente en las obligaciones con Hacienda, la Seguridad Social y el Ayuntamiento de O Bolo.",
+					"No estar incurso en prohibiciones para recibir subvenciones ni tener deudas por reintegro.",
+					"Cumplir con las condiciones y límites del régimen de minimis agrícola."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "O Bolo"
+				},
+				"dudas": null
+			},
 			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "936308",
@@ -3937,7 +4321,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936308",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
