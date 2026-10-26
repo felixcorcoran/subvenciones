@@ -974,8 +974,21 @@ const description =
 		text-align: center;
 	}
 
-	.intro .lead {
+	/* El texto, más ancho que el título: dos líneas en vez de tres, para que
+	   las preguntas quepan en pantalla */
+	.intro {
+		max-width: 64rem;
+	}
+
+	.intro h1 {
+		max-width: 46rem;
 		margin-inline: auto;
+	}
+
+	.intro .lead {
+		max-width: 62rem;
+		margin-inline: auto;
+		text-wrap: balance;
 	}
 
 	/* El botón, solo y centrado; debajo, las otras dos opciones */
