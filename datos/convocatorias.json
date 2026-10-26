@@ -1,6 +1,970 @@
 {
-	"actualizado": "2026-10-26T11:25:31.674Z",
+	"actualizado": "2026-10-26T20:03:21.518Z",
 	"convocatorias": [
+		{
+			"codigo": "937990",
+			"titulo": "CONVOCATORIA DE SUBVENCIONES PARA EL FOMENTO DEL EMPRENDIMIENTO JUVENIL MEDIANTE LA CREACIÓN DE EMPRESAS EN EL MARCO DE LA ESTRATEGIA DE DESARROLLO TERRITORIAL INTEGRADA DE LA COMARCA DE LA SIERRA DE SEGURA",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE JAÉN",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE JAÉN"
+			},
+			"sede": "https://sede.dipujaen.es/",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 120000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "96",
+					"nombre": "Servicios personales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES616",
+					"nombre": "Jaén"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-31",
+			"textoInicio": "Día siguiente de la publicación del extracto en el BOP",
+			"textoFin": null,
+			"bases": "https://www.dipujaen.es/export/files/transparencia/presupuesto2026/presupuestos2026.html",
+			"documento": {
+				"id": 1544560,
+				"nombre": "RESOLUCION_CONVOCATORIA_DE_SUBVENCIONES_PARA_EL_FOM__DIP_179_RS002CYR.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937990",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para subvencionar inversiones en inmovilizado material para crear y poner en marcha nuevas empresas promovidas por jóvenes en la comarca de la Sierra de Segura.",
+				"paraQuien": "Jóvenes menores de 35 años (autónomos o sociedades) que hayan iniciado su actividad o creado su empresa a partir del 1 de abril de 2026 en la Sierra de Segura.",
+				"importe": "Hasta el 50 % del total del proyecto, con un máximo de 12.000 € por empresa.",
+				"importeMaximo": 12000,
+				"plazo": "Hasta el 31/12/2026 a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia.",
+				"plazoFin": "2026-12-31",
+				"requisitos": [
+					"Tener menos de 35 años a la fecha de presentación de la solicitud.",
+					"Haber dado de alta la actividad en autónomos (o registrado la sociedad) a partir del 1 de abril de 2026 y antes de solicitar la ayuda.",
+					"No haber ejercido una actividad como autónomo en los 3 meses anteriores al alta.",
+					"Estar empadronado en un municipio de la comarca de la Sierra de Segura.",
+					"Tener el domicilio fiscal, social y de la actividad en algún municipio de la comarca de la Sierra de Segura.",
+					"En sociedades, la mayoría del capital o de socios deben ser jóvenes que cumplan los requisitos.",
+					"Estar al corriente en las obligaciones tributarias y con la Seguridad Social."
+				],
+				"gastos": [
+					"Adquisición de inmovilizado material inventariable nuevo e imprescindible para la actividad del negocio."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "937983",
+			"titulo": "Convocatoria para la concesión de ayudas económicas para la campaña «Bono Consumo El Campello 2026»",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CAMPELLO, EL",
+				"nivel3": "AYUNTAMIENTO DE CAMPELLO, EL"
+			},
+			"sede": "www.elcampello.es",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 438251,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-04",
+			"fin": "2026-11-18",
+			"textoInicio": "04 de noviembre de 2026",
+			"textoFin": "18 de noviembre de 2026",
+			"bases": "www.elcampello.es",
+			"documento": {
+				"id": 1544522,
+				"nombre": "CONVOCATORIA DE AYUDAS BONO CONSUMO EL CAMPELLO 2026.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937983",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Campaña de bonos consumo en El Campello para fomentar el comercio local. El Ayuntamiento otorga 100 € en bonos gratuitos a las personas consumidoras empadronadas para gastar en los establecimientos adheridos, los cuales recibirán el pago directo del Ayuntamiento por el importe de los bonos canjeados.",
+				"paraQuien": "Personas mayores de edad empadronadas en El Campello (para recibir los bonos) y comercios o prestadores de servicios del municipio que deseen adherirse a la campaña.",
+				"importe": "100 € fijos por persona beneficiaria. Presupuesto total disponible de 438.251,00 €.",
+				"importeMaximo": 100,
+				"plazo": "Adhesión de establecimientos: del 30 de octubre al 3 de noviembre de 2026. Solicitud de bonos por consumidores: del 4 al 18 de noviembre de 2026.",
+				"plazoFin": "2026-11-18",
+				"requisitos": [
+					"Para consumidores: ser mayor de 18 años a 15 de octubre de 2026.",
+					"Para consumidores: estar empadronado en El Campello a 15 de octubre de 2026.",
+					"Para consumidores: contar con DNI o NIE válido.",
+					"Para negocios: ser establecimiento comercial o prestador de servicios en El Campello con local abierto al público o domicilio fiscal en el municipio.",
+					"Para negocios: no estar excluido por epígrafe de IAE (como estancos, supermercados >400m², combustibles, loterías y apuestas, o máquinas expendedoras)."
+				],
+				"gastos": [
+					"Compras de bienes o servicios en los establecimientos comerciales adheridos a la campaña."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "El Campello"
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "937934",
+			"titulo": "Aprobación bases reguladoras y convocatoria para la concesión de subvenciones a autónomos y pymes para el impulso de la actividad económica en Humilladero",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "HUMILLADERO",
+				"nivel3": "AYUNTAMIENTO DE HUMILLADERO"
+			},
+			"sede": "https://sede.malaga.es/humilladero/tablon-de-anuncios/",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 18000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES617",
+					"nombre": "Málaga"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "AL DIA SIGUIENTE DE SU PUBLICACIÓN EN EL BOP MALAGA",
+			"textoFin": "30 DIAS NATURALES DESDE SU PUBLICACIÓN ENEL BOP MALAGA",
+			"bases": "https://sede.malaga.es/humilladero/tablon-de-anuncios/",
+			"documento": {
+				"id": 1544453,
+				"nombre": "Bases_Reguladoras_Autónomos_y_PYMES_2026.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937934",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones del Ayuntamiento de Humilladero para ayudar a autónomos y pymes del municipio a cubrir sus gastos de funcionamiento y mantenimiento de la actividad económica.",
+				"paraQuien": "Autónomos y pequeñas y medianas empresas (pymes) con domicilio fiscal y actividad en Humilladero.",
+				"importe": "Hasta 800 € por negocio (sujeto a prorrateo si el crédito total de 18.000 € no alcanza para todas las solicitudes).",
+				"importeMaximo": 800,
+				"plazo": "30 días naturales a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Málaga.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener el domicilio fiscal y desarrollar la actividad económica en Humilladero.",
+					"Para personas físicas, estar empadronado y residir en Humilladero con antigüedad anterior al 1 de enero de 2025.",
+					"Estar dado de alta en el IAE y en RETA o mutualidad a la fecha de presentar la solicitud.",
+					"Ser una pequeña o mediana empresa (pyme) en el caso de personas jurídicas.",
+					"Mantener el alta en RETA/mutualidad e IAE de forma ininterrumpida durante el periodo subvencionado.",
+					"Estar al corriente de las obligaciones tributarias con Hacienda, Seguridad Social y el Ayuntamiento de Humilladero.",
+					"No haber sido sancionado en los últimos dos años por infracciones graves en prevención de riesgos laborales o discriminación."
+				],
+				"gastos": [
+					"Alquiler del local comercial o profesional.",
+					"Suministros (electricidad, agua, internet, etc.).",
+					"Material fungible o inventariable necesario para la actividad.",
+					"Servicios profesionales externos (asesoría, gestoría, marketing, etc.).",
+					"Cuotas de autónomo.",
+					"Otros gastos operativos vinculados a la actividad que no sean inversiones en activos fijos."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Humilladero"
+				},
+				"dudas": null
+			},
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "937907",
+			"titulo": "Acuerdo de la Junta de Gobierno Local de fecha 15 de octubre de 2026, por el que se aprueban las Bases y  convocatoria para la realización de campañas de fomento del consumo: Bono-Consumo. Anualidad 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ASPE",
+				"nivel3": "AYUNTAMIENTO DE ASPE"
+			},
+			"sede": "https://aspe.es/sede-electronica/",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 427429,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "55",
+					"nombre": "Servicios de alojamiento"
+				},
+				{
+					"codigo": "56",
+					"nombre": "Servicios de comidas y bebidas"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-10-29",
+			"fin": "2026-11-22",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.dip-alicante.es/bop2/pdftotal/2026/10/20_199/2026_008027.pdf",
+			"documento": {
+				"id": 1544374,
+				"nombre": "EDICTO BASES Y CONVOCATORIA BONOS.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937907",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937889",
+			"titulo": "Convocatoria para el año 2026, de las ayudas de minimis, para compensar determinados daños provocados a la actividad pesquera de arrastre",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ILLES BALEARS",
+				"nivel3": "FONDO DE GARANTÍA AGRARIA Y PESQUERA DE LAS ISLAS BALEARES (FOGAIBA)"
+			},
+			"sede": "http://www.caib.es",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 15000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "03.1",
+					"nombre": "Pesca"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES53",
+					"nombre": "ILLES BALEARS"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": "2027-01-15",
+			"textoInicio": "Desde el día siguiente a la publicación de la Resolución en el BOIB",
+			"textoFin": null,
+			"bases": "http://boib.caib.es//pdf/2005043/mp15.pdf",
+			"documento": {
+				"id": 1544260,
+				"nombre": "AJ_55.26_-_Resol._comp._danys_pesca_arrossegament_v5_ES_OK_imprimible.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937889",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937888",
+			"titulo": "Convocatoria para la concesión de subvenciones para el fomento de la creación de nuevas empresas, año 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SÉNIA, LA",
+				"nivel3": "AYUNTAMIENTO DE LA SÉNIA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 6000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47.1",
+					"nombre": "Comercio al por menor no especializado"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES514",
+					"nombre": "Tarragona"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-10-28",
+			"fin": "2026-11-08",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://lasenia.cat/web/ajuts-a-empreses/",
+			"documento": {
+				"id": 1544429,
+				"nombre": "06. Convocatoria ayudas empresas 2026.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937888",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937839",
+			"titulo": "AYUDAS A PROGRAMAS DE EDUCACIÓN AÑO 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ORDIZIA",
+				"nivel3": "AYUNTAMIENTO DE ORDIZIA"
+			},
+			"sede": "https://uzt.gipuzkoa.eus/PortalV/7.00/Default.aspx?idAyto=76&idioma=eu-ES",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 130000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES212",
+					"nombre": "Gipuzkoa"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": "2026-12-15",
+			"textoInicio": "Desde el día siguiente a la publicación en el Boletin Oficial de Gipuzkoa",
+			"textoFin": null,
+			"bases": "https://www.ordizia.eus/images/dirulaguntzak_emateko_ordenantzak.pdf",
+			"documento": {
+				"id": 1544137,
+				"nombre": "DEIALDIA.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937839",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937824",
+			"titulo": "Convocatoria y concesión premios del IV Concurso de composición de polifonía sacra \"Villa de Leganés\" 2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "LEGANÉS",
+				"nivel3": "AYUNTAMIENTO DE LEGANÉS"
+			},
+			"sede": "sede.leganes.org",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 4000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "90",
+					"nombre": "Actividades de creación artística y artes escénicas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": "2027-01-12",
+			"textoInicio": "Desde el día siguiende de publicación convocatoria en BOCM",
+			"textoFin": null,
+			"bases": "sede.leganes.org",
+			"documento": {
+				"id": 1544125,
+				"nombre": "Resolución Concejales delegados Fiscalizacion .PDF"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937824",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937806",
+			"titulo": "Convocatoria para la concesión de subvenciones para reformas en establecimientos comerciales, de restauración o de oficinas profesionales, año 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SÉNIA, LA",
+				"nivel3": "AYUNTAMIENTO DE LA SÉNIA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 10000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47.1",
+					"nombre": "Comercio al por menor no especializado"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES514",
+					"nombre": "Tarragona"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-10-28",
+			"fin": "2026-11-08",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://lasenia.cat/web/ajuts-a-comercos/",
+			"documento": {
+				"id": 1544399,
+				"nombre": "06. Convocatoria ayudas comercios 2026.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937806",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937804",
+			"titulo": "Convocatòria anticipada de subvencions per a festivals o cicles artístics en municipis rurals- Exercici 2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GIRONA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GIRONA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 200000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "91",
+					"nombre": "Actividades de bibliotecas, archivos, museos y otras actividades culturales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": "2027-01-01",
+			"fin": "2027-12-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "http://www.ddgi.cat/basescast/2026/Bases_Festivals_Municipis_Rurals.pdf",
+			"documento": {
+				"id": 1544060,
+				"nombre": "CAST_convocatòria_festivales_o_cicles_municipis_rurals.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937804",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937803",
+			"titulo": "Convocatòria anticipada de subvencions per activitat i projectes culturals de les oficines joves - Exercici 2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GIRONA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GIRONA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 85000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "91",
+					"nombre": "Actividades de bibliotecas, archivos, museos y otras actividades culturales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": "2027-01-16",
+			"fin": "2027-02-12",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "http://www.ddgi.cat/basescast/2026/Bases_Oficines_Joves.pdf",
+			"documento": {
+				"id": 1544058,
+				"nombre": "CAST_Convocatoria_anticipada_Oficines_Joves_2027.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937803",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937802",
+			"titulo": "Convocatòria anticipada de subvencions per al finançament de fires i salons d`orientació educativa 2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GIRONA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GIRONA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 60000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85",
+					"nombre": "Educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": "2026-11-30",
+			"textoInicio": "Comença l`endemà de la publicació de la convocatòria al BOPG",
+			"textoFin": "Finalitza el 30 de novembre de 2026",
+			"bases": "http://www.ddgi.cat/basescast/2026/Bases_Fires_salons_2026.pdf",
+			"documento": {
+				"id": 1544055,
+				"nombre": "Convocatòria_anticipada_FiS_CAST_2027.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937802",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937796",
+			"titulo": "Orden CTD/5/2026, bases reguladoras y convocatoria de subvenciones, en régimen de concurrencia competitiva, a titulares de salas de exhibición cinematográfica, para favorecer la creación de audiencias en Cantabria",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "CONSEJERÍA DE CULTURA, TURISMO Y DEPORTE"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 164434.52,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "59.1",
+					"nombre": "Actividades cinematográficas, de vídeo y de programas de televisión"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES130",
+					"nombre": "Cantabria"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto en BOC",
+			"textoFin": "10 días hábiles desde la publicación del extracto",
+			"bases": "A rellenar cuando se sepa",
+			"documento": {
+				"id": 1544026,
+				"nombre": "2.BBRR_Y_RESOLUCION CONVOCATORIA F.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937796",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937790",
+			"titulo": "Resolución de Alcaldía nº 386/2026 de fecha 23/10/2026 por la que se convocan las Ayudas para nuevos autónomos, así como la creación de nuevas empresas en el municipio de Barlovento. Anualidad 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "BARLOVENTO",
+				"nivel3": "AYUNTAMIENTO DE BARLOVENTO"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 7000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES707",
+					"nombre": "La Palma"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente a la publicación en el BOP",
+			"textoFin": "DIEZ DÍAS HÁBILES a partir del día siguiente a la publicación en el BOP",
+			"bases": "https://www.bopsantacruzdetenerife.es/bopsc2/index.php",
+			"documento": {
+				"id": 1544016,
+				"nombre": "Resolución Decreto de Alcaldía convocatoria subvenciones para nuevos autónomos así como creación de nuevas empresas.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937790",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937775",
+			"titulo": "Convocatòria anticipada de subvencions als municipis de fins a 500 habitants de la demarcació de Girona per al finançament dels centres escolars municipals, anualitat 2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GIRONA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GIRONA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85",
+					"nombre": "Educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": "2027-02-01",
+			"fin": "2027-02-26",
+			"textoInicio": "El termini de presentació de sol·licituds comença el dia 1 de febrer de 2027.",
+			"textoFin": "El termini de presentació de sol·licituds finalitza el dia 26 de febrer de 2027.",
+			"bases": "http://www.ddgi.cat/basescast/2025/Bases_CEM500_2026.pdf",
+			"documento": {
+				"id": 1543991,
+				"nombre": "Convocatòria_anticipada_CEM_500_hab_CAST_2027.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937775",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937774",
+			"titulo": "Convocatòria anticipada de subvencions per al foment de programes i projectes contra l`abandonament escolar prematur (AEP) 2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GIRONA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GIRONA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85",
+					"nombre": "Educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": "2027-02-01",
+			"fin": "2027-02-26",
+			"textoInicio": "El termini de sol·licitud comença el dia 1 de febrer de 2027",
+			"textoFin": "El termini de sol·licitud finalitza el 26 de febrer de 2027",
+			"bases": "http://www.ddgi.cat/basescast/2026/Bases_AEP_2027.pdf",
+			"documento": {
+				"id": 1543989,
+				"nombre": "Convocatòria_anticipada_AEP_CAST_2027.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937774",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937704",
+			"titulo": "Bases XIII Concurso Escaparatismo Navidades 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TOMELLOSO",
+				"nivel3": "AYUNTAMIENTO DE TOMELLOSO"
+			},
+			"sede": "https://www.tomelloso.es/sede",
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES422",
+					"nombre": "Ciudad Real"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-10-27",
+			"fin": "2026-12-09",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://etablon.dipucr.es:4443/eTablon/tablon.jsf?entidad=037",
+			"documento": {
+				"id": 1543779,
+				"nombre": "AnuncioBasesXIIIConcur_Escaparates.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937704",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
+		{
+			"codigo": "937703",
+			"titulo": "CONVOCATORIA ENTIDADES SIN ANIMO DE LUCRO 2026",
+			"organo": {
+				"nivel1": "ESTADO",
+				"nivel2": "MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL",
+				"nivel3": "DIRECCIÓN PROVINCIAL DEL SEPE DE CEUTA"
+			},
+			"sede": null,
+			"publicada": "2026-10-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1185085.03,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "96",
+					"nombre": "Servicios personales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES63",
+					"nombre": "CIUDAD AUTONOMA DE CEUTA"
+				}
+			],
+			"finalidad": "Servicios Sociales y Promoción Social",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "AL DIA SIGIENTE DE SU PUBLICACIÓN EN EL BOCCE",
+			"textoFin": "10 DÍAZ NATURALES",
+			"bases": "https://www.boe.es/buscar/doc.php?id=BOE-A-2021-15771",
+			"documento": {
+				"id": 1543784,
+				"nombre": "RESOLUCION Y ANEXOS.pdf"
+			},
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937703",
+			"ia": null,
+			"iaIntentos": 1,
+			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+		},
 		{
 			"codigo": "937680",
 			"titulo": "Concurso de Postales de Navidad 2026",
@@ -3465,7 +4429,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936449",
 			"ia": null,
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -3510,7 +4474,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936422",
 			"ia": null,
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4058,7 +5022,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936344",
 			"ia": null,
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4321,7 +5285,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936308",
 			"ia": null,
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4435,7 +5399,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936295",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4477,7 +5441,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936281",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4519,7 +5483,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936264",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4561,7 +5525,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936260",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4603,7 +5567,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936259",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "no es un PDF (Empresas.cas -2026.docx)"
 		},
 		{
@@ -4649,7 +5613,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936233",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4695,7 +5659,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936226",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4741,7 +5705,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936188",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4783,7 +5747,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936173",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4826,7 +5790,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936158",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -4873,8 +5837,8 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936136",
 			"ia": null,
-			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
+			"iaIntentos": 2,
+			"iaError": "BDNS 400 en /convocatorias/documentos?idDocumento=1539427"
 		},
 		{
 			"codigo": "936129",
@@ -4987,7 +5951,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936129",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -5030,7 +5994,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936108",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -5080,7 +6044,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936047",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -5131,7 +6095,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936044",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -5173,7 +6137,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936034",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -5223,7 +6187,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936021",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
@@ -5329,7 +6293,7 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935995",
 			"ia": null,
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem"
 		},
 		{
