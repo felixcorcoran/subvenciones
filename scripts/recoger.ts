@@ -4,14 +4,26 @@
  *
  * Se quedan las que una empresa puede pedir. Se descartan las de concesión
  * directa (van a una entidad concreta: un convenio, una subvención
- * nominativa…) y las que ya han cerrado. También se retiran las que cierran
- * con el tiempo.
+ * nominativa…) y las que ya han cerrado.
  *
- *   DIAS_ATRAS  días hacia atrás en la primera pasada (por defecto 14)
+ * Después se vuelve a pedir la ficha de las guardadas (una vez al día cada
+ * una) para notar cambios de plazo, importe, documentos… Si la ficha no llega
+ * o llega incompleta, la convocatoria se queda como estaba: un fallo de
+ * consulta nunca la cierra ni borra datos.
+ *
+ * Solo se retiran las que han cerrado con una fecha fiable: la de la BDNS o
+ * una de las bases que no la contradiga ni sea dudosa. Las que no tienen
+ * fecha de cierre se quedan en los datos; la web aparta de la lista las que
+ * llevan más de cuatro meses así («por verificar»).
+ *
+ *   DIAS_ATRAS     días hacia atrás en la primera pasada (por defecto 14)
+ *   MAX_COMPROBAR  fichas guardadas que se vuelven a pedir como mucho (por defecto 200)
  */
-import { buscarNuevas, enlaceFicha, ficha, type Ficha } from './bdns.ts';
+import { buscarNuevas, ficha, type Ficha } from './bdns.ts';
 import { guardarDatos, guardarVistas, hoyIso, leerDatos, leerVistas } from './almacen.ts';
-import type { Convocatoria } from '../src/lib/tipos.ts';
+import { aConvocatoria, actualizar, fichaValida } from './fichas.ts';
+import { revisarCierreIa } from './lectura.ts';
+import { estado } from '../src/lib/estado.ts';
 
 const hoy = hoyIso();
 const datos = leerDatos();
@@ -36,51 +48,30 @@ console.log(`${encontradas.length} convocatorias para empresas desde ${desde.toI
 
 const descartar = (codigo: string, motivo: string) => (vistas[codigo] = { motivo, fecha: hoy });
 
-const iso = (s: string | null) => (s && /^\d{4}-\d{2}-\d{2}/.test(s) ? s.slice(0, 10) : null);
-const limpio = (s: string | null) => (s?.trim() ? s.trim() : null);
-
-function aConvocatoria(f: Ficha): Convocatoria {
-	const doc = f.documentos.find((d) => /español|castellano/i.test(d.descripcion)) ?? f.documentos[0] ?? null;
-	return {
-		codigo: f.codigoBDNS,
-		titulo: f.descripcion.trim(),
-		organo: f.organo,
-		sede: limpio(f.sedeElectronica),
-		publicada: f.fechaRecepcion,
-		tipo: limpio(f.tipoConvocatoria),
-		presupuesto: f.presupuestoTotal ?? null,
-		beneficiarios: f.tiposBeneficiarios.map((b) => b.descripcion.trim()),
-		sectores: f.sectores.map((s) => ({ codigo: s.codigo.trim(), nombre: s.descripcion.trim() })),
-		regiones: f.regiones.map((r) => {
-			const [codigo, ...resto] = r.descripcion.split(' - ');
-			return { codigo: codigo.trim(), nombre: resto.join(' - ').trim() };
-		}),
-		finalidad: limpio(f.descripcionFinalidad),
-		inicio: iso(f.fechaInicioSolicitud),
-		fin: iso(f.fechaFinSolicitud),
-		textoInicio: limpio(f.textInicio),
-		textoFin: limpio(f.textFin),
-		bases: limpio(f.urlBasesReguladoras),
-		documento: doc ? { id: doc.id, nombre: doc.nombreFic } : null,
-		enlace: enlaceFicha(f.codigoBDNS),
-		ia: null,
-	};
+/** La ficha, o el motivo por el que no se puede usar */
+async function pedirFicha(codigo: string): Promise<Ficha | string> {
+	try {
+		const f = await ficha(codigo);
+		return fichaValida(f, codigo) ? f : 'ficha incompleta';
+	} catch (err) {
+		return (err as Error).message.slice(0, 200);
+	}
 }
 
 let anadidas = 0;
+let nuevasSinFicha = 0;
 for (const r of nuevas) {
-	let f: Ficha;
-	try {
-		f = await ficha(r.numeroConvocatoria);
-	} catch (err) {
-		console.warn(`  ${r.numeroConvocatoria}: sin ficha (${(err as Error).message}); se reintenta mañana`);
+	const f = await pedirFicha(r.numeroConvocatoria);
+	if (typeof f === 'string') {
+		nuevasSinFicha++;
+		console.warn(`  ${r.numeroConvocatoria}: sin ficha (${f}); se reintenta mañana`);
 		continue;
 	}
 	if (/^concesi[oó]n directa/i.test(f.tipoConvocatoria ?? '')) {
 		descartar(f.codigoBDNS, 'concesión directa');
 		continue;
 	}
-	const c = aConvocatoria(f);
+	const c = aConvocatoria(f, hoy);
 	if (c.fin && c.fin < hoy) {
 		descartar(c.codigo, 'cerrada');
 		continue;
@@ -89,18 +80,58 @@ for (const r of nuevas) {
 	anadidas++;
 }
 
-// Fuera las que ya han cerrado, y las que llevan cuatro meses sin fecha de
-// cierre conocida (casi siempre ya no están abiertas)
-const limite = new Date(Date.now() - 120 * 86_400_000).toISOString().slice(0, 10);
-let retiradas = 0;
-for (const [codigo, c] of guardadas) {
-	const fin = c.ia?.plazoFin ?? c.fin;
-	if ((fin && fin < hoy) || (!fin && c.publicada < limite)) {
-		guardadas.delete(codigo);
-		descartar(codigo, 'cerrada');
-		retiradas++;
+// Volver a pedir la ficha de las guardadas: primero las que hace más que no
+// se comprueban. Las dos pasadas del día no la piden dos veces, y las que
+// están por verificar (sin fecha de cierre y antiguas) solo una vez por semana
+const maxComprobar = Number(process.env.MAX_COMPROBAR ?? 200);
+const haceUnaSemana = new Date(Date.now() - 7 * 86_400_000).toISOString().slice(0, 10);
+const porComprobar = [...guardadas.values()]
+	.filter((c) => c.comprobada !== hoy && (estado(c, hoy) !== 'por_verificar' || !c.comprobada || c.comprobada <= haceUnaSemana))
+	.sort((a, b) => (a.comprobada ?? '').localeCompare(b.comprobada ?? ''))
+	.slice(0, maxComprobar);
+let comprobadas = 0;
+let cambiadas = 0;
+let fallidas = 0;
+for (const c of porComprobar) {
+	const f = await pedirFicha(c.codigo);
+	if (typeof f === 'string') {
+		fallidas++;
+		console.warn(`  ${c.codigo}: no se pudo comprobar (${f}); se queda como estaba`);
+		continue;
+	}
+	const { convocatoria, campos, conservados } = actualizar(c, f, hoy);
+	guardadas.set(c.codigo, convocatoria);
+	comprobadas++;
+	if (campos.length) {
+		cambiadas++;
+		console.log(`  ${c.codigo}: cambió ${campos.join(', ')}${convocatoria.iaRevisar ? ` (la IA la vuelve a leer: ${convocatoria.iaRevisar})` : ''}`);
+	}
+	if (conservados.length) console.log(`  ${c.codigo}: la ficha ya no trae ${conservados.join(', ')}; se conserva lo anterior`);
+}
+console.log(`${comprobadas} fichas comprobadas (${cambiadas} con cambios), ${fallidas} sin poder comprobar`);
+
+// La fecha de cierre que la IA sacó de las bases solo se queda si no
+// contradice a la BDNS y no es dudosa (también con lo leído en días anteriores)
+let descartadas = 0;
+for (const c of guardadas.values()) {
+	if (revisarCierreIa(c)) {
+		descartadas++;
+		console.log(`  ${c.codigo}: fecha de cierre de las bases descartada (${c.cierreDescartado!.motivo})`);
 	}
 }
+
+// Fuera solo las que han cerrado con una fecha fiable. Las que no tienen fecha
+// de cierre se quedan en los datos aunque pasen los meses: la web las aparta
+// de la lista como «por verificar» (src/lib/estado.ts), sin decir que han cerrado
+let cerradas = 0;
+for (const [codigo, c] of guardadas) {
+	if (estado(c, hoy) === 'cerrada') {
+		guardadas.delete(codigo);
+		descartar(codigo, 'cerrada');
+		cerradas++;
+	}
+}
+const porVerificar = [...guardadas.values()].filter((c) => estado(c, hoy) === 'por_verificar').length;
 
 // Las descartadas solo hacen falta mientras puedan volver a salir en la búsqueda
 const corte = new Date(Date.now() - 45 * 86_400_000).toISOString().slice(0, 10);
@@ -108,6 +139,13 @@ for (const [codigo, v] of Object.entries(vistas)) if (v.fecha < corte) delete vi
 
 datos.actualizado = new Date().toISOString();
 datos.convocatorias = [...guardadas.values()];
+// Para la vigilancia (scripts/salud.ts): una pasada que termina sin datos nuevos también es correcta
+datos.salud = {
+	...datos.salud,
+	recogida: { fecha: datos.actualizado, nuevasSinFicha, fichasComprobadas: comprobadas, fichasFallidas: fallidas },
+};
 guardarDatos(datos);
 guardarVistas(vistas);
-console.log(`${anadidas} añadidas, ${retiradas} retiradas; ${datos.convocatorias.length} abiertas en total`);
+console.log(
+	`${anadidas} añadidas, ${cerradas} cerradas retiradas, ${descartadas} fechas de la IA descartadas; ${datos.convocatorias.length} guardadas (${porVerificar} por verificar)`,
+);

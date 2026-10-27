@@ -3,9 +3,16 @@ import Base from '../layouts/Base.astro';
 import Asistente from '../components/Asistente.astro';
 import datos from '../../datos/convocatorias.json';
 import type { Datos } from '../lib/tipos';
+import { estado, type Estado } from '../lib/estado';
 
 const { actualizado, convocatorias } = datos as Datos;
-const abiertas = convocatorias.filter((c) => !c.ia || c.ia.categoria === 'ayuda').length;
+// La web se construye cada día con los datos: la fecha de construcción es «hoy».
+// Solo cuentan las ayudas (no premios ni otras); las sin leer aún, también
+const hoy = new Date().toISOString().slice(0, 10);
+const cuenta = (e: Estado) => convocatorias.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && estado(c, hoy) === e).length;
+const conFecha = cuenta('abierta');
+const proximas = cuenta('proxima');
+const sinFecha = cuenta('sin_fecha');
 const fecha = actualizado
 	? new Date(actualizado).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'Europe/Madrid' })
 	: '';
@@ -27,7 +34,8 @@ const description =
 					negocio y te decimos a cuáles puedes aspirar, y por qué.
 				</p>
 				<p class="meta">
-					<strong>{abiertas}</strong> ayudas abiertas{fecha && <> · actualizado el {fecha}</>}
+					<strong>{conFecha}</strong> ayudas con plazo abierto{proximas > 0 && <> · <strong>{proximas}</strong> abren pronto</>}
+					{sinFecha > 0 && <> · <strong>{sinFecha}</strong> sin fecha de cierre confirmada</>}{fecha && <> · actualizado el {fecha}</>}
 				</p>
 				<div class="empezar">
 					<button type="button" id="empezar" class="boton">
@@ -36,7 +44,7 @@ const description =
 					</button>
 					<div class="otras">
 						<button type="button" id="anterior" class="enlace" hidden></button>
-						<button type="button" id="todas" class="enlace">Mira todas las ayudas abiertas</button>
+						<button type="button" id="todas" class="enlace">Mira todas las ayudas</button>
 					</div>
 				</div>
 			</section>
@@ -90,6 +98,7 @@ const description =
 
 		<script>
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
+			import { enLista, estado as estadoDe, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../lib/estado';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
 
 			const estado = document.querySelector<HTMLParagraphElement>('#estado')!;
@@ -117,13 +126,12 @@ const description =
 
 			const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
 
+			const hoy = () => new Date().toISOString().slice(0, 10);
+
 			function plazo(c: ConvocatoriaWeb): { texto: string; pronto: boolean } {
 				const fin = cierre(c);
-				if (fin) {
-					const dias = Math.ceil((Date.parse(fin) - Date.now()) / 86_400_000);
-					return { texto: `Hasta el ${fechaLarga(fin)}`, pronto: dias <= 7 };
-				}
-				return { texto: c.ia?.plazo ?? c.textoFin ?? 'Plazo: mira la convocatoria', pronto: false };
+				const dias = fin ? Math.ceil((Date.parse(fin) - Date.now()) / 86_400_000) : Infinity;
+				return { texto: textoPlazo(c, hoy()), pronto: dias <= 7 };
 			}
 
 			function tarjeta(c: ConvocatoriaWeb, e: Encaje | null) {
@@ -142,6 +150,10 @@ const description =
 				const p = plazo(c);
 				const plazoLi = el('li', p.pronto ? 'pronto' : '', p.texto);
 				datosClave.append(plazoLi);
+				// Con el plazo dicho con palabras, que quede claro que no hay fecha confirmada
+				if (!cierre(c) && plazoSinFecha(c)) datosClave.append(el('li', 'sin-comprobar', 'Sin fecha de cierre confirmada'));
+				const desde = sinComprobarDesde(c, hoy());
+				if (desde) datosClave.append(el('li', 'sin-comprobar', `Sin comprobar en la BDNS desde el ${fechaLarga(desde)}`));
 				// Una cifra corta; el importe explicado va en «Requisitos y detalles»
 				if (c.ia?.importeMaximo) datosClave.append(el('li', '', `Hasta ${euros(c.ia.importeMaximo)}`));
 				else if (c.presupuesto) datosClave.append(el('li', '', `Presupuesto total: ${euros(c.presupuesto)}`));
@@ -168,7 +180,7 @@ const description =
 						mas.append(el('h4', '', 'En qué se puede gastar'), ul);
 					}
 					if (c.ia.importe) mas.append(el('h4', '', 'Importe'), el('p', '', c.ia.importe));
-					if (c.ia.plazo) mas.append(el('h4', '', 'Plazo'), el('p', '', c.ia.plazo));
+					if (c.ia.plazo && !c.iaRevisar) mas.append(el('h4', '', 'Plazo'), el('p', '', c.ia.plazo));
 				} else {
 					mas.append(el('p', '', 'Aún no hemos leído sus bases. Mira los requisitos en la convocatoria oficial.'));
 				}
@@ -202,12 +214,13 @@ const description =
 			function pintar() {
 				if (!cache) return;
 				const perfil = ultima.perfil;
-				const visibles = cache.filter((c) => verPremios.checked || !c.ia || c.ia.categoria === 'ayuda');
+				// Fuera de la lista: las cerradas desde la última construcción y las «por verificar»
+				const visibles = cache.filter((c) => (verPremios.checked || !c.ia || c.ia.categoria === 'ayuda') && enLista(estadoDe(c, hoy())));
 				const orden = (a: ConvocatoriaWeb, b: ConvocatoriaWeb) => (cierre(a) ?? '9999').localeCompare(cierre(b) ?? '9999');
 				grupos.replaceChildren();
 
 				if (!perfil) {
-					document.querySelector('#resultado-titulo')!.textContent = 'Todas las ayudas abiertas';
+					document.querySelector('#resultado-titulo')!.textContent = 'Todas las ayudas';
 					document.querySelector('#resumen')!.textContent = `${visibles.length} convocatorias, las que cierran antes primero`;
 					const ol = el('ol', 'lista');
 					for (const c of [...visibles].sort(orden)) ol.append(tarjeta(c, null));
@@ -870,6 +883,12 @@ const description =
 
 	:global(.ayuda-datos li.pronto) {
 		background: var(--accent-soft);
+	}
+
+	:global(.ayuda-datos li.sin-comprobar) {
+		background: none;
+		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.18);
+		color: var(--text-muted);
 	}
 
 	:global(.motivos) {

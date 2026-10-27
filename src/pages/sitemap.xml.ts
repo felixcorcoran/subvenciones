@@ -2,13 +2,14 @@
 import type { APIRoute } from 'astro';
 import datos from '../../datos/convocatorias.json';
 import type { Datos } from '../lib/tipos';
+import { estado } from '../lib/estado';
 
 export const GET: APIRoute = ({ site }) => {
 	const { actualizado, convocatorias } = datos as Datos;
 	const dia = (actualizado || new Date().toISOString()).slice(0, 10);
 	const urls = [
 		{ loc: new URL('/', site).href, lastmod: dia },
-		...convocatorias.filter((c) => !c.ia || c.ia.categoria === 'ayuda').map((c) => ({ loc: new URL(`/ayudas/${c.codigo}`, site).href, lastmod: c.publicada })),
+		...convocatorias.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && estado(c, dia) !== 'por_verificar').map((c) => ({ loc: new URL(`/ayudas/${c.codigo}`, site).href, lastmod: c.publicada })),
 	];
 	const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

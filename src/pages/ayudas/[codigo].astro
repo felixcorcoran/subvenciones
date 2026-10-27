@@ -9,6 +9,7 @@ import Base from '../../layouts/Base.astro';
 import datos from '../../../datos/convocatorias.json';
 import type { Convocatoria, Datos } from '../../lib/tipos';
 import { cierre, fechaLarga, municipioDe } from '../../lib/encaje';
+import { estado, nombresCambios, origenCierre, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../../lib/estado';
 import { seccionDe } from '../../lib/sectores';
 import { nombreZona } from '../../lib/zonas';
 
@@ -26,7 +27,18 @@ const sectores = secciones.length === 0 || secciones.length >= 8 ? 'Cualquier se
 const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
 // En la cabecera, una cifra corta; el importe explicado va en su apartado
 const importe = ia?.importeMaximo ? `Hasta ${euros(ia.importeMaximo)}` : c.presupuesto ? `Presupuesto total: ${euros(c.presupuesto)}` : null;
-const plazo = fin ? `Hasta el ${fechaLarga(fin)}` : (ia?.plazo ?? c.textoFin ?? null);
+// La web se construye cada día con los datos: la fecha de construcción es «hoy»
+const hoy = new Date().toISOString().slice(0, 10);
+const plazo = textoPlazo(c, hoy);
+const porVerificar = estado(c, hoy) === 'por_verificar';
+const previoCerrado = estado(c, hoy) === 'plazo_previo_cerrado';
+// Si el cierre sale de las bases, las fechas de la ficha de la BDNS se enseñan aparte, sin decir de qué fase son
+const fechasBdns =
+	origenCierre(c) === 'bases' && (c.inicio || c.fin)
+		? [c.inicio && `desde el ${fechaLarga(c.inicio)}`, c.fin && `hasta el ${fechaLarga(c.fin)}`].filter(Boolean).join(' ')
+		: null;
+const sinComprobar = sinComprobarDesde(c, hoy);
+const ultimoCambio = c.cambios?.at(-1);
 
 const titulo = ia?.resumen ?? c.titulo;
 const title = `${titulo.length > 70 ? `${titulo.slice(0, 67).trimEnd()}…` : titulo} · Radar de subvenciones`;
@@ -55,14 +67,17 @@ const jsonLd = {
 			<h1>{titulo}</h1>
 
 			<ul class="datos">
-				{plazo && <li class={fin ? 'fecha' : ''}>{plazo}</li>}
+				{plazo && <li class={previoCerrado ? 'sin-comprobar' : fin ? 'fecha' : ''}>{plazo}</li>}
+				{!fin && plazoSinFecha(c) && <li class="sin-comprobar">Sin fecha de cierre confirmada</li>}
+				{sinComprobar && <li class="sin-comprobar">Sin comprobar en la BDNS desde el {fechaLarga(sinComprobar)}</li>}
+				{porVerificar && <li class="sin-comprobar">Registrada hace más de cuatro meses y sin fecha de cierre: puede que ya no esté abierta</li>}
 				{importe && <li>{importe}</li>}
 				{zonas.length > 0 && <li>{zonas.join(', ')}</li>}
 			</ul>
 
 			<div class="acciones">
 				{
-					fin && (
+					fin && !previoCerrado && (
 						<a class="boton" href={`/ayudas/${c.codigo}.ics`} download={`plazo-${c.codigo}.ics`}>
 							Añadir el plazo al calendario
 						</a>
@@ -104,7 +119,7 @@ const jsonLd = {
 						</section>
 						<section>
 							<h2>Plazo</h2>
-							<p>{ia.plazo}</p>
+							<p>{c.iaRevisar ? 'El plazo ha cambiado en la convocatoria oficial y estamos volviendo a leer las bases. Mientras, mira la fecha de arriba y la convocatoria oficial.' : ia.plazo}</p>
 						</section>
 						{ia.dudas && (
 							<section>
@@ -133,6 +148,12 @@ const jsonLd = {
 					{c.finalidad && <dd>{c.finalidad}</dd>}
 					<dt>Código BDNS</dt>
 					<dd>{c.codigo} · registrada el {fechaLarga(c.publicada)}</dd>
+					{fechasBdns && <dt>Fechas en la ficha oficial (BDNS)</dt>}
+					{fechasBdns && <dd>{fechasBdns.charAt(0).toUpperCase() + fechasBdns.slice(1)}</dd>}
+					{c.comprobada && <dt>Comprobada en la BDNS</dt>}
+					{c.comprobada && <dd>El {fechaLarga(c.comprobada)}</dd>}
+					{ultimoCambio && <dt>Último cambio en la ficha</dt>}
+					{ultimoCambio && <dd>El {fechaLarga(ultimoCambio.fecha)}: {nombresCambios(ultimoCambio.campos)}</dd>}
 				</dl>
 				<p class="enlaces">
 					<a href={c.enlace} target="_blank" rel="noopener">Convocatoria oficial (BDNS) ↗</a>
@@ -212,6 +233,12 @@ const jsonLd = {
 
 	.datos li.fecha {
 		background: var(--accent-soft);
+	}
+
+	.datos li.sin-comprobar {
+		background: none;
+		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.18);
+		color: var(--text-muted);
 	}
 
 	.acciones {

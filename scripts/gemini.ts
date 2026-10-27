@@ -63,8 +63,8 @@ export async function generateJson<T>(opts: GeminiOptions, system: string, parts
 					}),
 				});
 			} catch (err) {
-				if ((err as Error).name !== 'TimeoutError') throw err;
-				reasons.push(`${model}: sin respuesta`);
+				// Sin respuesta o fallo de red: pasa al siguiente modelo, no es cosa de la convocatoria
+				reasons.push(`${model}: ${(err as Error).name === 'TimeoutError' ? 'sin respuesta' : 'error de red'}`);
 				break;
 			}
 
@@ -84,8 +84,14 @@ export async function generateJson<T>(opts: GeminiOptions, system: string, parts
 				await sleep(30_000); // límite por minuto: esperar y repetir
 				continue;
 			}
-			if (res.status === 503 || res.status === 429) {
+			if (res.status >= 500 || res.status === 429) {
 				reasons.push(`${model}: saturado`);
+				break;
+			}
+			// Modelo retirado o inexistente: es cosa de la cadena, no de la convocatoria
+			if (res.status === 404) {
+				exhausted.add(model);
+				reasons.push(`${model}: no existe`);
 				break;
 			}
 			throw new GeminiError(res.status, body);

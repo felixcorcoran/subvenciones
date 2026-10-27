@@ -8,7 +8,7 @@ import type { ConvocatoriaWeb, Datos } from '../lib/tipos';
 
 export const GET: APIRoute = () => {
 	const { actualizado, convocatorias } = datos as Datos;
-	const web: ConvocatoriaWeb[] = convocatorias.map(({ documento, iaModelo, iaError, iaIntentos, textoInicio, ...c }) => c);
+	const web: ConvocatoriaWeb[] = convocatorias.map(({ documento, docs, iaModelo, iaError, iaIntentos, iaIntentadoEl, textoInicio, cierreDescartado, ...c }) => c);
 	return new Response(JSON.stringify({ actualizado, convocatorias: web }), {
 		headers: { 'content-type': 'application/json; charset=utf-8' },
 	});

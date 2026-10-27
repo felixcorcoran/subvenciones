@@ -11,6 +11,7 @@
 import type { ConvocatoriaWeb as Convocatoria } from './tipos.ts';
 import { nombreSeccion, seccionDe } from './sectores.ts';
 import { nombreZona } from './zonas.ts';
+import { cierre, fechaLarga } from './fechas.ts';
 
 export type Forma = 'autonomo' | 'sociedad' | 'emprender';
 export type Antiguedad = 'nada' | 'menos1' | '1a3' | 'mas3';
@@ -70,8 +71,8 @@ export function municipioDe(c: Convocatoria): string | null {
 	return c.ia?.condiciones.municipio ?? null;
 }
 
-/** Fecha de cierre conocida (AAAA-MM-DD), de la IA o de la propia ficha */
-export const cierre = (c: Convocatoria) => c.ia?.plazoFin ?? c.fin ?? null;
+// Fecha de cierre conocida y fechas en texto: en fechas.ts, sin dependencias
+export { cierre, fechaLarga };
 
 export function encaje(c: Convocatoria, p: Perfil, hoy = new Date().toISOString().slice(0, 10)): Encaje {
 	const motivos: Motivo[] = [];
@@ -168,10 +169,4 @@ export function encaje(c: Convocatoria, p: Perfil, hoy = new Date().toISOString(
 function meses(n: number): string {
 	if (n % 12 === 0) return `${n / 12} ${n === 12 ? 'año' : 'años'}`;
 	return `${n} ${n === 1 ? 'mes' : 'meses'}`;
-}
-
-const MESES_NOMBRE = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-export function fechaLarga(iso: string): string {
-	const [a, m, d] = iso.split('-').map(Number);
-	return `${d} de ${MESES_NOMBRE[m - 1]} de ${a}`;
 }

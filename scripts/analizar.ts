@@ -13,7 +13,8 @@
  */
 import { documento } from './bdns.ts';
 import { GeminiUnavailable, generateJson } from './gemini.ts';
-import { guardarDatos, leerDatos } from './almacen.ts';
+import { guardarDatos, hoyIso, leerDatos } from './almacen.ts';
+import { analisisValido, porLeer, revisarCierreIa } from './lectura.ts';
 import type { Analisis, Convocatoria } from '../src/lib/tipos.ts';
 
 const apiKey = process.env.GEMINI_API_KEY;
@@ -21,14 +22,19 @@ if (!apiKey) {
 	console.log('Sin GEMINI_API_KEY: no se leen bases en esta pasada');
 	process.exit(0);
 }
-const models = (process.env.GEMINI_MODELS ?? 'gemini-3.8-flash,gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-2.5-flash,gemini-3.5-flash-lite,gemini-2.5-flash-lite').split(',').map((m) => m.trim());
+const models = (process.env.GEMINI_MODELS ?? 'gemini-3.8-flash,gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-3.5-flash-lite').split(',').map((m) => m.trim());
 const max = Number(process.env.MAX_ANALIZAR ?? 40);
 // Tope de tiempo: la Action tiene que llegar a subir lo leído
 const hasta = Date.now() + Number(process.env.MAX_MINUTOS ?? 35) * 60_000;
 const MAX_BYTES = 18 * 1024 * 1024;
 
 const datos = leerDatos();
-const pendientes = datos.convocatorias.filter((c) => !c.ia && c.documento && (c.iaIntentos ?? 0) < 3).slice(0, max);
+const hoy = hoyIso();
+const pendientes = datos.convocatorias
+	.filter((c) => porLeer(c, hoy))
+	// Primero las que nunca han fallado
+	.sort((a, b) => (a.iaIntentos ?? 0) - (b.iaIntentos ?? 0))
+	.slice(0, max);
 console.log(`${pendientes.length} convocatorias por leer`);
 
 const SISTEMA = `Lees convocatorias de ayudas públicas españolas y las explicas al dueño de un pequeño negocio o a un autónomo, que no sabe de jerga administrativa.
@@ -95,15 +101,25 @@ function contexto(c: Convocatoria): string {
 const valida = (f: string | null) => (f && /^\d{4}-\d{2}-\d{2}$/.test(f) ? f : null);
 
 let leidas = 0;
+let fallidas = 0;
 for (const c of pendientes) {
 	if (Date.now() > hasta) {
 		console.log('Tiempo agotado: lo pendiente sigue mañana');
 		break;
 	}
 	const doc = c.documento!;
+	let bytes: Buffer | null = null;
+	if (/\.pdf$/i.test(doc.nombre)) {
+		try {
+			bytes = await documento(doc.id);
+		} catch (err) {
+			// La BDNS no ha dado el documento: es un fallo de consulta, no cuenta como intento
+			console.warn(`  ${c.codigo}: sin documento (${(err as Error).message.slice(0, 120)}); se reintenta en la próxima pasada`);
+			continue;
+		}
+	}
 	try {
-		if (!/\.pdf$/i.test(doc.nombre)) throw new Error(`no es un PDF (${doc.nombre})`);
-		const bytes = await documento(doc.id);
+		if (!bytes) throw new Error(`no es un PDF (${doc.nombre})`);
 		if (bytes.length > MAX_BYTES) throw new Error(`documento demasiado grande (${Math.round(bytes.length / 1e6)} MB)`);
 		const { data, model } = await generateJson<Analisis>(
 			{ apiKey, models, minIntervalMs: 6_000 },
@@ -111,10 +127,18 @@ for (const c of pendientes) {
 			[{ inlineData: { mimeType: 'application/pdf', data: bytes.toString('base64') } }, { text: contexto(c) }],
 			ESQUEMA,
 		);
+		// Una respuesta a medias no sustituye a nada: cuenta como intento fallido
+		if (!analisisValido(data)) throw new Error(`respuesta incompleta de ${model}`);
 		data.plazoFin = valida(data.plazoFin);
 		c.ia = data;
 		c.iaModelo = model;
+		// La fecha de cierre leída solo se queda si no contradice a la BDNS y no es dudosa
+		delete c.cierreDescartado;
+		if (revisarCierreIa(c)) console.log(`  ${c.codigo}: fecha de cierre de las bases descartada (${c.cierreDescartado!.motivo})`);
+		delete c.iaRevisar;
 		delete c.iaError;
+		delete c.iaIntentos;
+		delete c.iaIntentadoEl;
 		leidas++;
 		console.log(`  ${c.codigo} leída (${model}): ${data.categoria} · ${data.resumen.slice(0, 80)}`);
 	} catch (err) {
@@ -122,10 +146,25 @@ for (const c of pendientes) {
 			console.log(`Gemini no disponible: ${err.message}. Lo pendiente sigue mañana.`);
 			break;
 		}
+		// Si ya estaba leída (relectura), lo leído antes se queda
 		c.iaIntentos = (c.iaIntentos ?? 0) + 1;
+		c.iaIntentadoEl = hoy;
 		c.iaError = (err as Error).message.slice(0, 300);
+		fallidas++;
 		console.warn(`  ${c.codigo}: ${c.iaError}`);
 	}
 	guardarDatos(datos); // tras cada una: si la pasada se corta, no se pierde lo leído
 }
-console.log(`${leidas} leídas`);
+// Para la vigilancia (scripts/salud.ts): si la IA lleva días sin leer nada con bases pendientes
+datos.salud = {
+	...datos.salud,
+	lectura: {
+		fecha: new Date().toISOString(),
+		pendientes: datos.convocatorias.filter((c) => porLeer(c, hoy)).length,
+		leidas,
+		fallidas,
+		ultimaLectura: leidas > 0 ? hoy : (datos.salud?.lectura?.ultimaLectura ?? null),
+	},
+};
+guardarDatos(datos);
+console.log(`${leidas} leídas, ${fallidas} con error`);

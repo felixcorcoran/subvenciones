@@ -1,0 +1,44 @@
+name: Vigilar la recogida
+
+# Cada día, después de la pasada de la mañana: mira los datos subidos
+# (scripts/salud.ts) y, si la recogida lleva más de 30 horas sin completarse,
+# la BDNS falla mucho o la IA lleva días sin leer, abre un issue. Un solo issue
+# abierto a la vez (se actualiza sin avisar de nuevo) y se cierra solo cuando
+# todo vuelve a estar en orden. GitHub avisa por correo del issue nuevo; no
+# hace falta ningún secreto ni servicio aparte.
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - id: diagnostico
+        run: node scripts/vigilar.ts
+      - name: Abrir, actualizar o cerrar el aviso
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROBLEMAS: ${{ steps.diagnostico.outputs.problemas }}
+        run: |
+          TITULO="Radar: la recogida diaria necesita atención"
+          ABIERTO=$(gh issue list --state open --search "\"$TITULO\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$PROBLEMAS" = "true" ]; then
+            if [ -z "$ABIERTO" ]; then
+              gh issue create --title "$TITULO" --body-file informe.md
+            else
+              gh issue edit "$ABIERTO" --body-file informe.md
+            fi
+          elif [ -n "$ABIERTO" ]; then
+            gh issue close "$ABIERTO" --comment "Todo en orden de nuevo ($(date -u +%F))."
+          fi

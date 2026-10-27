@@ -61,18 +61,54 @@ export interface Convocatoria {
 	textoFin: string | null;
 	bases: string | null;
 	documento: { id: number; nombre: string } | null;
+	/** Ids de todos los documentos de la ficha, para notar cuándo se añade o quita alguno */
+	docs?: number[];
 	enlace: string;
+	/** Último día (AAAA-MM-DD) en que se leyó bien su ficha en la BDNS */
+	comprobada?: string;
+	/** Lo que ha cambiado en la ficha desde que se guardó (los últimos) */
+	cambios?: { fecha: string; campos: string[] }[];
 	ia: Analisis | null;
 	iaModelo?: string;
+	/** La IA tiene que volver a leerla (documento nuevo o plazo cambiado); lo leído antes se mantiene mientras */
+	iaRevisar?: string;
 	/** Si no se pudo leer el documento, por qué (se reintenta otro día) */
 	iaError?: string;
 	iaIntentos?: number;
+	/** Día del último intento fallido de la IA */
+	iaIntentadoEl?: string;
+	/**
+	 * Fecha de cierre que la IA sacó de las bases y no se usa (contradice a la
+	 * BDNS o es dudosa: scripts/lectura.ts). En `ia.plazoFin` solo queda una
+	 * fecha de las bases que se pueda usar.
+	 */
+	cierreDescartado?: { fecha: string; motivo: string };
 }
 
 /** Lo que llega a la página (src/pages/convocatorias.json.ts) */
-export type ConvocatoriaWeb = Omit<Convocatoria, 'documento' | 'iaModelo' | 'iaError' | 'iaIntentos' | 'textoInicio'>;
+export type ConvocatoriaWeb = Omit<Convocatoria, 'documento' | 'docs' | 'iaModelo' | 'iaError' | 'iaIntentos' | 'iaIntentadoEl' | 'textoInicio' | 'cierreDescartado'>;
+
+/** Cómo fue la última pasada de cada parte, para la vigilancia (scripts/salud.ts) */
+export interface Salud {
+	recogida?: {
+		fecha: string;
+		/** Convocatorias nuevas sin ficha (se reintentan) */
+		nuevasSinFicha: number;
+		fichasComprobadas: number;
+		fichasFallidas: number;
+	};
+	lectura?: {
+		fecha: string;
+		pendientes: number;
+		leidas: number;
+		fallidas: number;
+		/** Día de la última lectura correcta */
+		ultimaLectura: string | null;
+	};
+}
 
 export interface Datos {
 	actualizado: string;
 	convocatorias: Convocatoria[];
+	salud?: Salud;
 }
