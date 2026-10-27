@@ -7,7 +7,9 @@ import { appendFileSync, writeFileSync } from 'node:fs';
 import { leerDatos } from './almacen.ts';
 import { diagnostico } from './salud.ts';
 
-const problemas = diagnostico(leerDatos());
+const problemas: { tipo: string; texto: string }[] = diagnostico(leerDatos());
+// Lanzamiento manual con «prueba»: comprueba que la Action puede abrir y cerrar el issue
+if (process.env.PRUEBA === 'true') problemas.push({ tipo: 'prueba', texto: 'Aviso de prueba lanzado a mano; no es un fallo real. Se cierra con el siguiente lanzamiento sin «prueba».' });
 const informe = problemas.length
 	? `La recogida diaria del radar necesita atención:\n\n${problemas.map((p) => `- **${p.tipo}**: ${p.texto}`).join('\n')}\n\nEste aviso se cierra solo cuando la vigilancia vuelva a ver todo en orden.\n`
 	: 'Todo en orden.\n';

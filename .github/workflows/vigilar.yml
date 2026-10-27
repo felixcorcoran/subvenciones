@@ -10,6 +10,11 @@ on:
   schedule:
     - cron: '0 10 * * *'
   workflow_dispatch:
+    inputs:
+      prueba:
+        description: 'Simular un problema para comprobar que el issue se abre (y se cierra al lanzarlo sin esto)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -26,6 +31,8 @@ jobs:
           node-version: 24
       - id: diagnostico
         run: node scripts/vigilar.ts
+        env:
+          PRUEBA: ${{ inputs.prueba }}
       - name: Abrir, actualizar o cerrar el aviso
         env:
           GH_TOKEN: ${{ github.token }}
