@@ -1,6 +1,1102 @@
 {
-	"actualizado": "2026-10-28T11:31:51.646Z",
+	"actualizado": "2026-10-28T19:43:52.721Z",
 	"convocatorias": [
+		{
+			"codigo": "938602",
+			"titulo": "BASES SUBVENCIONES DESTINADAS A LOS PROFESIONALES AUTÓNOMOS DEL SECTOR PRIMARIO",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE EL HIERRO",
+				"nivel3": "CABILDO INSULAR DE HIERRO, EL"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1238933.91,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES703",
+					"nombre": "El Hierro"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "elhierro.es",
+			"documento": {
+				"id": 1546359,
+				"nombre": "20261023_Publicación_Anuncio Aprobación bases subvenciones destinadas a los profesionales autónomos del sector primario.pdf"
+			},
+			"docs": [
+				1546359
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938602",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención del Cabildo de El Hierro para financiar las cuotas de la Seguridad Social de trabajadores autónomos y las cotizaciones de sus empleados en los sectores agrícola, ganadero y pesquero.",
+				"paraQuien": "Autónomos y empresas del sector primario (agrícola, ganadero y pesquero) con residencia habitual y actividad en la isla de El Hierro.",
+				"importe": "Hasta el 100 % de la cuota del autónomo (base mínima) y el 50 % de las cotizaciones de sus empleados. Presupuesto total de 1.238.933,91 €.",
+				"importeMaximo": null,
+				"plazo": "15 días hábiles a partir del día siguiente al de la publicación de las bases en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener residencia habitual y ejercer la actividad en la isla de El Hierro.",
+					"Pertenecer al sector primario (agrícola, ganadero o pesquero).",
+					"Acreditar dedicación exclusiva o mayoritaria al sector primario.",
+					"Estar al corriente con Hacienda y la Seguridad Social.",
+					"Mantener la actividad hasta la fecha de solicitud de la ayuda.",
+					"Colocar un cartel informativo sobre la ayuda en la explotación.",
+					"No ser un centro de buceo ni una asociación sin ánimo de lucro."
+				],
+				"gastos": [
+					"100 % de las cuotas de la Seguridad Social del autónomo (calculada según la base mínima).",
+					"50 % del importe de las cotizaciones a la Seguridad Social de los empleados por cuenta ajena."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La fecha concreta de apertura y cierre del plazo depende de la publicación del anuncio en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938510",
+			"titulo": "AYUDAS A LOS PARTICIPANTES EN LA EXPOSICION DE BELENES 2026/2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TORREJÓN DE ARDOZ",
+				"nivel3": "AYUNTAMIENTO DE TORREJÓN DE ARDOZ"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 3000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "94",
+					"nombre": "Actividades asociativas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": "2026-11-30",
+			"textoInicio": "AL DÍA SIGUIENTE SE SU PUBLICACIÓN EN  EL COCM",
+			"textoFin": null,
+			"bases": "https://www.ayto-torrejon.es/sites/default/files/intranet//MiPaginaDescargas/744_Ordenanzas%20subvenciones.pdf",
+			"documento": {
+				"id": 1546150,
+				"nombre": "6591654-Certificado_JGL_26_10_2026_punto_14_FESTEJOS__SUBVENCIONES_BELENES.pdf"
+			},
+			"docs": [
+				1546150
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938510",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Subvenciones del Ayuntamiento de Torrejón de Ardoz para asociaciones y entidades que participen en la exposición de belenes de la Navidad 2026/2027.",
+				"paraQuien": "Asociaciones y entidades legalmente constituidas en Torrejón de Ardoz.",
+				"importe": "Hasta 200 € por entidad (presupuesto total de 3.000 € repartido a partes iguales entre un máximo de 15 entidades).",
+				"importeMaximo": 200,
+				"plazo": "Desde el día siguiente a su publicación en el BOCM hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Estar legalmente constituida en Torrejón de Ardoz.",
+					"Estar inscrita en el Registro Municipal de Entidades con al menos 1 año de antigüedad.",
+					"Estar dada de alta en la Sede Electrónica Municipal.",
+					"Tener justificada la subvención concedida en el ejercicio anterior o haber reintegrado el importe si no se ejecutó.",
+					"Montar y mantener la exposición del belén en la Casa de la Cultura del 3 de diciembre de 2026 al 5 de enero de 2027."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": 12,
+					"antiguedadMaxMeses": null,
+					"municipio": "Torrejón de Ardoz"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "938458",
+			"titulo": "CAMPAÑA CHEQUES DESCUENTO 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CUNIT",
+				"nivel3": "AYUNTAMIENTO DE CUNIT"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 55000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES514",
+					"nombre": "Tarragona"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-23",
+			"fin": "2026-12-20",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "WWW.CUNIT.CAT",
+			"documento": {
+				"id": 1545900,
+				"nombre": "BASES CHEQUES.pdf"
+			},
+			"docs": [
+				1545900,
+				1545901,
+				1545903,
+				1545904
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938458",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención para comercios y servicios de Cunit mediante el reembolso de los cheques-descuento de 5 euros canjeados por los clientes durante la campaña Comprem a Cunit.",
+				"paraQuien": "Autónomos y empresas con establecimiento abierto al público en Cunit que pertenezcan a los sectores de comercio o servicios autorizados.",
+				"importe": "Presupuesto total de 55.000 €. El negocio cobra las cantidades descontadas a los clientes mediante los cheques.",
+				"importeMaximo": null,
+				"plazo": "Desde el 9 de noviembre de 2026 hasta el 20 de diciembre de 2026.",
+				"plazoFin": "2026-12-20",
+				"requisitos": [
+					"Tener un establecimiento con atención al público ubicado en Cunit.",
+					"Estar de alta en alguno de los epígrafes del IAE permitidos (grupos de alimentación, comercio al detalle o servicios personales).",
+					"Tener un máximo de 5 trabajadores en el negocio.",
+					"Estar al corriente de las obligaciones tributarias con Hacienda, la Seguridad Social y el Ayuntamiento de Cunit."
+				],
+				"gastos": [
+					"Descuentos aplicados en las ventas realizadas con los cheques-descuento de la campaña (excluido el IVA)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 5,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cunit"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938447",
+			"titulo": "Resolución Conselleria de Ed, Cult y Uni se convocan las subvenciones para las entidades locales y entidades privadas sin ánimo de lucro que desarrollan la EPA en la CV para 2026",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "COMUNITAT VALENCIANA",
+				"nivel3": "SECRETARÍA AUTONÓMICA DE EDUCACIÓN"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2700079.46,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85.2",
+					"nombre": "Educación primaria"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES52",
+					"nombre": "COMUNIDAD VALENCIANA"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente al de la publicación de la resolución en el DOGV",
+			"textoFin": "10 días hábiles a contar desde el día siguiente al de la publicación de la resolución en el DOGV",
+			"bases": "https://dogv.gva.es/es/resultat-dogv?signatura=2026/27265",
+			"documento": {
+				"id": 1545863,
+				"nombre": "Resolución de convocatoria FPA 16.10.2026 revisada ID.pdf"
+			},
+			"docs": [
+				1545863,
+				1545864
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938447",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para financiar parcialmente los gastos de personal docente y gastos corrientes de entidades locales y entidades privadas sin ánimo de lucro que desarrollan la educación de personas adultas en la Comunitat Valenciana para el año 2026.",
+				"paraQuien": "Entidades locales y entidades privadas sin ánimo de lucro que desarrollan la educación de personas adultas en la Comunitat Valenciana.",
+				"importe": "El importe global máximo de la convocatoria es de 2.700.079,46 €, repartido según baremos, con un límite máximo por entidad de 67.000 euros.",
+				"importeMaximo": 67000,
+				"plazo": "15 días a contar desde el día siguiente al de la publicación de la resolución en el Diari Oficial de la Generalitat Valenciana.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser entidad local titular de centros docentes de formación de personas adultas autorizados o que aporten personal no docente o recursos económicos a un centro público de la Generalitat.",
+					"Ser entidad privada sin ánimo de lucro vinculada al Centro Específico de Educación a Distancia de la Comunitat Valenciana o titular de centros docentes autorizados.",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y frente a la Seguridad Social.",
+					"No ser deudor por resolución de procedencia de reintegro de subvenciones.",
+					"Estar al corriente en el cumplimiento de la obligación de rendición de cuentas anuales ante la Sindicatura de Comptes (para entidades locales).",
+					"Disponer de los permisos y autorizaciones de los centros docentes exigidos por la normativa aplicable."
+				],
+				"gastos": [
+					"Gastos de personal docente.",
+					"Gastos corrientes necesarios para el sostenimiento de las actividades de educación de personas adultas."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Comunitat Valenciana"
+				},
+				"dudas": "La fecha exacta de publicación en el DOGV no se conoce en el texto, por lo que el día concreto de cierre del plazo no se puede determinar."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938423",
+			"titulo": "CONVOCATORIA SUBVENCIONES DE APOYO AL MANTENIMIENTO DE BARES O CENTROS DE OCIO DE LA PROVINCIA PLAN SORIA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE SORIA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE SORIA"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "93.2",
+					"nombre": "Otras actividades recreativas y de entretenimiento"
+				},
+				{
+					"codigo": "56.1",
+					"nombre": "Restaurantes y puestos de comidas"
+				},
+				{
+					"codigo": "56.3",
+					"nombre": "Servicios de bebidas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES417",
+					"nombre": "Soria"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": "2026-10-31",
+			"fin": "2026-11-30",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "http://www.dipsoria.es/sites/dipsoria/files/public/paginas/archivos/ordenanza_general_reguladora_de_la_concesion_de_subvenciones.pdf",
+			"documento": {
+				"id": 1545812,
+				"nombre": "BASES FIRMADAS.pdf"
+			},
+			"docs": [
+				1545812,
+				1545813,
+				1545814,
+				1545815
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938423",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda para mantener abiertos bares o centros de ocio en pequeños pueblos de Soria cubriendo las cuotas de la Seguridad Social.",
+				"paraQuien": "Autónomos, sociedades y comunidades de bienes que gestionen un bar o centro de ocio en municipios sorianos de hasta 300 habitantes.",
+				"importe": "Hasta el 100 por cien de las cuotas de la Seguridad Social pagadas, con un máximo de 2.500 euros por solicitud.",
+				"importeMaximo": 2500,
+				"plazo": "Un mes desde el día siguiente a la publicación del extracto de la convocatoria en el BOP de Soria.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"El establecimiento debe estar en un municipio, entidad local menor o barrio de la provincia de Soria con una población inferior o igual a 300 habitantes.",
+					"Estar dado de alta en los epígrafes CNAE 5630, 5611, 5612 o 9329.",
+					"Tener domicilio fiscal y social o centro de trabajo en la provincia de Soria excepto la capital.",
+					"Mantener abierto el establecimiento un mínimo de 9 meses, 4 horas al día y 4 días a la semana.",
+					"El horario de apertura debe ser como mínimo de 4 horas al día y 4 días a la semana.",
+					"Estar al corriente de obligaciones tributarias y de Seguridad Social.",
+					"No haber recibido otra subvención de la Junta de Castilla y León para el mantenimiento de centros de ocio y convivencia en 2026 para el mismo municipio."
+				],
+				"gastos": [
+					"Cuotas satisfechas al Régimen Especial de Trabajadores Autónomos del titular.",
+					"Cuota empresarial de Seguridad Social por un trabajador contratado para atender el establecimiento."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Provincia de Soria (municipios de hasta 300 habitantes)"
+				},
+				"dudas": "No queda claro si se admiten negocios creados a lo largo del mismo año 2026 sin un mínimo previo de meses de actividad."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938416",
+			"titulo": "Resolución de Convocatoria de 20 de octubre de 2026 del XXXV Curso de Posgrado del CIS 2026-2027",
+			"organo": {
+				"nivel1": "ESTADO",
+				"nivel2": "MINISTERIO DE LA PRESIDENCIA, JUSTICIA Y RELACIONES CON LAS CORTES",
+				"nivel3": "CENTRO DE INVESTIGACIONES SOCIOLÓGICAS"
+			},
+			"sede": "https://mpr.sede.gob.es/",
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 6820,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES",
+					"nombre": "ESPAÑA"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente al de la publicación del extracto en el BOE",
+			"textoFin": "15 días hábiles tras la publicación del extracto en BOE",
+			"bases": "https://www.boe.es/boe/dias/2020/09/30/pdfs/BOE-A-2020- 11470.pdf URL de las BBRR",
+			"documento": {
+				"id": 1545789,
+				"nombre": "Resolución Convocatoria XXXV Curso POSGRADO 2026-2027 17092026 - firma.pdf.xsig.pdf"
+			},
+			"docs": [
+				1545789,
+				1545790,
+				1545791
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938416",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas de matrícula para el XXXV Curso de Posgrado de Formación de Especialistas en Investigación Social Aplicada y Análisis de Datos del Centro de Investigaciones Sociológicas.",
+				"paraQuien": "Personas físicas admitidas en el curso de posgrado que dispongan de menos recursos.",
+				"importe": "El importe de la mitad de la matrícula, es decir, seiscientos ochenta y dos euros (682,00 euros).",
+				"importeMaximo": 682,
+				"plazo": "Quince días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial del Estado.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener nacionalidad española, ser nacional de algún Estado miembro de la Unión Europea o ser nacional de terceros países con residencia legal en España a fecha de 31 de diciembre de 2025.",
+					"Estar en posesión del título de graduado, licenciado o titulaciones equivalentes del Espacio Europeo de Educación Superior o título homologado antes del fin del plazo de solicitudes.",
+					"Haber sido seleccionado para formar parte del curso de posgrado.",
+					"Estar al corriente en el cumplimiento de obligaciones tributarias y de Seguridad Social.",
+					"No estar incurso en las prohibiciones previstas en el artículo 13 de la Ley 38/2003.",
+					"No contar con otra ayuda o subvención simultánea de similares características.",
+					"No haber recibido una ayuda de la misma modalidad en la convocatoria inmediatamente anterior."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No se indica la fecha exacta de publicación en el BOE, por lo que no se puede determinar el último día exacto del plazo."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938409",
+			"titulo": "Feria Prowein",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 25672.5,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "11",
+					"nombre": "Fabricación de bebidas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-11-25",
+			"textoInicio": "desde el día siguiente de su publicación DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1545793,
+				"nombre": "CONVOCATORIA FERIA PROWEIN 2027_094919.PDF"
+			},
+			"docs": [
+				1545793,
+				1545794
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938409",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para la participación agrupada de bodegas de Castilla-La Mancha en la feria Prowein 2027 en Dusseldorf (Alemania).",
+				"paraQuien": "Empresas del sector vino que desarrollen su actividad económica en Castilla-La Mancha.",
+				"importe": "El 25% del coste máximo subvencionable del alquiler y acondicionamiento del espacio expositivo, con un importe máximo de 1.833,75 euros por negocio. El presupuesto total de la convocatoria es de 25.672,50 euros.",
+				"importeMaximo": 1833.75,
+				"plazo": "Desde el día siguiente a su publicación en el Diario Oficial de Castilla-La Mancha hasta el 25 de noviembre de 2026.",
+				"plazoFin": "2026-11-25",
+				"requisitos": [
+					"Desarrollar la actividad económica en Castilla-La Mancha.",
+					"Estar al corriente de pagos con Hacienda estatal y autonómica, con la Seguridad Social y de obligaciones por reintegro de subvenciones.",
+					"Disponer de un plan de prevención de riesgos laborales si estuviera obligado a ello.",
+					"No tener la consideración de empresa en crisis.",
+					"No haber puesto fin a una actividad idéntica en el Espacio Económico Europeo en los dos años anteriores ni tener planes de hacerlo.",
+					"Estar dado de alta en la plataforma de notificaciones telemáticas de la Junta de Comunidades de Castilla-La Mancha."
+				],
+				"gastos": [
+					"Alquiler y acondicionamiento espacio expositivo"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el DOCM, aunque el plazo de solicitud finaliza el 25 de noviembre de 2026."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938407",
+			"titulo": "BASES CONVOCATORIA DE SUBVENCIONES DESTINADAS A FINANCIAR PROYECTOS DE INVERSION EMPRESARIAL PLAN SORIA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE SORIA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE SORIA"
+			},
+			"sede": "https://portaltramitador.dipsoria.es/web/inicioWebc.do?opcion=noreg",
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 135000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES417",
+					"nombre": "Soria"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-11-30",
+			"textoInicio": "desde el dia siguiente a la publicación del extracto de las bases en el BOP",
+			"textoFin": "un mes a contar desde el dia siguiente a la publicación del extracto de bases en el BOP",
+			"bases": "http://www.dipsoria.es/sites/dipsoria/files/public/paginas/archivos/ordenanza_general_reguladora_de_la_concesion_de_subvenciones.pdf",
+			"documento": {
+				"id": 1545782,
+				"nombre": "BASES FIRMADAS.pdf"
+			},
+			"docs": [
+				1545782,
+				1545783,
+				1545784,
+				1545785,
+				1545786
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938407",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para poner en marcha, mejorar o ampliar pequeños negocios y empresas en la provincia de Soria, excluyendo la capital.",
+				"paraQuien": "Autónomos y pequeñas empresas con centro de trabajo en cualquier localidad de la provincia de Soria, excluida la capital.",
+				"importe": "El 35% de la inversión subvencionable, calculada sobre un máximo de 20.000 euros de inversión (el mínimo debe ser de 4.000 euros).",
+				"importeMaximo": 7000,
+				"plazo": "Un mes a contar desde el día siguiente a la publicación del extracto de las bases en el Boletín Oficial de la Provincia de Soria.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Tener el centro de trabajo en la provincia de Soria, excluida la capital.",
+					"Realizar inversiones entre el 1 de enero de 2026 y el 31 de marzo de 2027.",
+					"El importe total de la inversión no puede ser inferior a 4.000 euros.",
+					"Mantener en funcionamiento la inversión durante cinco años como mínimo desde la puesta en marcha.",
+					"Estar al corriente de obligaciones tributarias, de la Seguridad Social y de la Diputación de Soria."
+				],
+				"gastos": [
+					"Edificación y obra civil",
+					"Adquisición de edificios, naves y otras construcciones",
+					"Bienes de equipo como maquinaria de procesos, elementos de transporte interior y exterior, mobiliario, equipos informáticos",
+					"Bienes de equipo para suministros de agua, gas, electricidad y residuos",
+					"Trabajos de planificación, ingeniería, dirección facultativa y adecuación medioambiental y urbanística",
+					"Licencias software y otras inversiones en activos fijos",
+					"Gastos de constitución"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cualquier municipio de la provincia de Soria excepto la capital"
+				},
+				"dudas": "No queda claro el día exacto de publicación en el BOP de Soria para calcular el inicio exacto del plazo, aunque la BDNS fija el cierre el 30 de noviembre de 2026."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938393",
+			"titulo": "CONVOCATORIA SUBVENCIONES DESTINADAS A APOYAR EL RELEVO GENERACIONAL DE NEGOCIOS DEL MEDIO RURAL PLAN SORIA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE SORIA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE SORIA"
+			},
+			"sede": "https://portaltramitador.dipsoria.es/web/inicioWebc.do?opcion=noreg",
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "77",
+					"nombre": "Actividades de alquiler"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES417",
+					"nombre": "Soria"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": "2026-10-24",
+			"fin": "2026-11-23",
+			"textoInicio": "desde el dia siguiente a la publicación del extracto bases en el BOP",
+			"textoFin": "un mes  a contar desde el dia siguiente a su publicación en el BOP",
+			"bases": "http://www.dipsoria.es/sites/dipsoria/files/public/paginas/archivos/ordenanza_general_reguladora_de_la_concesion_de_subvenciones.pdf",
+			"documento": {
+				"id": 1545742,
+				"nombre": "BASES FIRMADAS.pdf"
+			},
+			"docs": [
+				1545742,
+				1545743,
+				1545744,
+				1545745
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938393",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de la Diputación Provincial de Soria para apoyar la compra o traspaso de pequeños negocios rurales por jubilación o cese de actividad.",
+				"paraQuien": "Personas físicas o jurídicas, incluidas comunidades de bienes y sociedades civiles, que adquieran un negocio en el medio rural.",
+				"importe": "Si la inversión supera los 62.500 euros, la ayuda es de 25.000 euros. Si es inferior, es el 40 % de la inversión. Presupuesto total de la convocatoria de 50.000 euros.",
+				"importeMaximo": 25000,
+				"plazo": "Hasta el 23 de noviembre de 2026",
+				"plazoFin": "2026-11-23",
+				"requisitos": [
+					"Adquirir un negocio ubicado en localidades de la provincia de Soria de menos de 20.000 habitantes.",
+					"El negocio debe estar en funcionamiento o haber cerrado hace menos de un año antes de pedir la ayuda.",
+					"Someterse a un proceso de asesoramiento previo y presentar un estudio de viabilidad sin vinculación familiar con quien lo realiza.",
+					"Mantener el establecimiento abierto al público durante al menos 24 meses.",
+					"Estar al corriente de obligaciones tributarias, de la Seguridad Social y de la Diputación de Soria.",
+					"No haber sido beneficiario de la segunda convocatoria de esta subvención del Plan Soria 2025."
+				],
+				"gastos": [
+					"Coste del traspaso de bienes y derechos afectos al negocio transmitido como maquinaria, mobiliario, instalaciones o utillaje.",
+					"Coste de la transmisión de la sociedad de capital propietaria del negocio.",
+					"Nuevas inversiones en activos fijos necesarios para el funcionamiento."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Soria (excluida la capital y localidades de 20.000 o más habitantes)"
+				},
+				"dudas": "El presupuesto total es de solo 50.000 euros, por lo que si hay muchas solicitudes se repartirá de forma proporcional."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938392",
+			"titulo": "Concesión en pública concurrencia no competitiva, de las ayudas al impulso digital de las empresas de Santa Coloma de Gramenet 2024-2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTA COLOMA DE GRAMENET",
+				"nivel3": "AYUNTAMIENTO DE SANTA COLOMA DE GRAMENET"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "24",
+					"nombre": "Metalurgia"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES511",
+					"nombre": "Barcelona"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": "2026-09-30",
+			"fin": "2026-12-04",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://boe.es/buscar/act.php?id=BOE-A-2003-20977",
+			"documento": {
+				"id": 1545734,
+				"nombre": "3_Extracte_bnds_convo_digitalitzacio_CAST_27072026.pdf"
+			},
+			"docs": [
+				1545734,
+				1545735,
+				1545736,
+				1545737
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938392",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para mejorar la digitalización de pequeñas empresas, microempresas y personas autoempleadas de Santa Coloma de Gramenet.",
+				"paraQuien": "Pequeñas empresas, microempresas y personas autoempleadas con menos de 50 trabajadores.",
+				"importe": "Hasta 2.500 euros por negocio, cubriendo el 50 por ciento de los gastos.",
+				"importeMaximo": 2500,
+				"plazo": "Se puede pedir desde el día siguiente de la publicación en el Boletín Oficial de la Provincia hasta el 4 de diciembre de 2026.",
+				"plazoFin": "2026-12-04",
+				"requisitos": [
+					"Tener menos de 50 personas trabajadoras.",
+					"Tener un mínimo de 6 meses de antigüedad.",
+					"Cumplir los requisitos del punto 5 de las Bases."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 49,
+					"antiguedadMinMeses": 6,
+					"antiguedadMaxMeses": null,
+					"municipio": "Santa Coloma de Gramenet"
+				},
+				"dudas": "No se detallan los gastos concretos permitidos ni el texto completo de los requisitos del punto 5 de las Bases en este extracto."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938385",
+			"titulo": "LÍNEA DE SUBVENCIONES PARA LA CONCESIÓN POR LA DIPUTACIÓN DE SEVILLA DEL PREMIO AL “MEJOR ACEITE DE OLIVA VIRGEN EXTRA DE LA PROVINCIA DE SEVILLA (EDICIÓN XXIX), PREMIO ESPECIAL AL “MEJOR ACEITE DE OLIVA VIRGEN EXTRA DE LAS SIERRAS DE SEVILLA (EDICIÓN XIX",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE SEVILLA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE SEVILLA"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 150000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES618",
+					"nombre": "Sevilla"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Fecha de la publicación en BOP del extracto de la convocatoria por la BDNS",
+			"textoFin": "Diez días hábiles a partir de la publicación en el BOP del extracto de la convocatoria por la BDNS",
+			"bases": "https://bopsevilla.dipusevilla.es/export/sites/bop/.galleries/Documentos-Anuncios-en-PDF/firmado-1793145617329-final-7f9096b1.pdf",
+			"documento": {
+				"id": 1545717,
+				"nombre": "Resol. 7866-2026 aprobación bases.pdf"
+			},
+			"docs": [
+				1545717
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938385",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Premios de la Diputación de Sevilla para los mejores aceites de oliva virgen extra de la provincia, incluyendo categorías general, de las sierras y ecológico.",
+				"paraQuien": "Titulares de almazaras autorizadas con su almazara, bodega y domicilio social en la provincia de Sevilla.",
+				"importe": "50.000,00 € en metálico por cada categoría y una campaña especial de promoción.",
+				"importeMaximo": 50000,
+				"plazo": "Diez días hábiles contados a partir del día siguiente al de la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Sevilla.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener la almazara, bodega y domicilio social en la provincia de Sevilla.",
+					"Presentar aceites de oliva virgen extra a granel de la campaña 2026-2027.",
+					"El lote homogéneo debe ser de un mínimo de 8.000 litros (2.500 litros para el premio ecológico).",
+					"Estar al corriente en el cumplimiento de obligaciones tributarias y con la Seguridad Social.",
+					"No haber sido objeto de resolución firme de retirada de autorización o sanción por la Comunidad Autónoma de Andalucía.",
+					"Para el premio ecológico, contar con certificación de producción ecológica.",
+					"Comprometerse a entregar una cantidad determinada de aceite ganador para acciones promocionales y catas."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sevilla"
+				},
+				"dudas": "La fecha exacta de fin de plazo no se puede calcular porque depende de la publicación en el Boletín Oficial de la Provincia."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938369",
+			"titulo": "\"CONVOCATORIA DE CONCESIÓN DE AYUDA ECONÓMICA AL SECTOR GANADERO DE LOS LLANOS DE ARIDANE PARA FOMENTAR SU MANTENIMIENTO Y CRECIMIENTO (ANUALIDAD 2026)\"",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "LLANOS DE ARIDANE, LOS",
+				"nivel3": "AYUNTAMIENTO DE LLANOS DE ARIDANE, LOS"
+			},
+			"sede": "eadmin.aridane.org",
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 30000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES707",
+					"nombre": "La Palma"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "QUINCE (15) DÍAS HÁBILES a contar desde el día siguiente a la publicación de esta convocatoria en el",
+			"textoFin": "15 días hábiles desde el inicio de solicitud",
+			"bases": "https://www.bopsantacruzdetenerife.es",
+			"documento": {
+				"id": 1545667,
+				"nombre": "CONVOCATORIA GANADEROS.pdf"
+			},
+			"docs": [
+				1545667
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938369",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica para explotaciones ganaderas destinada a proporcionar liquidez para gastos de funcionamiento y mejora de la calidad higiénico-sanitaria y trazabilidad.",
+				"paraQuien": "Titulares de explotaciones ganaderas en Los Llanos de Aridane.",
+				"importe": "El importe total de la convocatoria es de 30.000,00 €. La cantidad por negocio se calcula en función de las Unidades de Ganado Mayor (UGM) que acredite cada solicitante.",
+				"importeMaximo": null,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser titular de una explotación ganadera en el municipio de Los Llanos de Aridane, inscrita y actualizada en el REGAC en el año 2026.",
+					"Estar al corriente de las obligaciones fiscales y con la Seguridad Social.",
+					"Presentar el modelo de solicitud normalizado con la documentación requerida dentro de plazo."
+				],
+				"gastos": [
+					"Gastos diarios de funcionamiento de la actividad ganadera",
+					"Mejora de la calidad higiénico-sanitaria y la trazabilidad de las explotaciones"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Los Llanos de Aridane"
+				},
+				"dudas": "La fecha exacta de fin de plazo no se puede determinar al depender de la publicación en el boletín oficial."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938351",
+			"titulo": "Acuerdo de Junta de Gobierno Local 23-10-2026, por el que se Convocan Ayudas al sector del Taxi del municipio de Alcalá de Henares 2026 (Líneas 1, 2 y 3).",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALCALÁ DE HENARES",
+				"nivel3": "AYUNTAMIENTO DE ALCALÁ DE HENARES"
+			},
+			"sede": null,
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 40000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "52.3",
+					"nombre": "Actividades de intermediación para el transporte"
+				},
+				{
+					"codigo": "49.3",
+					"nombre": "Otro transporte terrestre de pasajeros"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES3",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Subvenciones al transporte",
+			"inicio": "2026-10-29",
+			"fin": "2026-11-12",
+			"textoInicio": "A partir del día siguiente al Registro de la Convocatoria en la BDNS",
+			"textoFin": "Diez días hábiles a partir del día siguiente al registro de la convocatoria en la BDNS",
+			"bases": "www.ayto-alcaladehenares.es",
+			"documento": {
+				"id": 1545635,
+				"nombre": "ACUERDO JGL Y BASES TAXIS 2026.pdf"
+			},
+			"docs": [
+				1545635
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938351",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para el sector del taxi de Alcalá de Henares en 2026 divididas en tres líneas: adaptación de vehículos para personas con movilidad reducida, gastos de mantenimiento de dichos vehículos y gastos en materia de seguridad como videovigilancia o mamparas.",
+				"paraQuien": "Titulares de licencia municipal de taxi expedida por el Ayuntamiento de Alcalá de Henares.",
+				"importe": "Línea 1 hasta 9.000 € por titular. Línea 2 hasta 1.500 € por titular. Línea 3 hasta 350 € por titular.",
+				"importeMaximo": 9000,
+				"plazo": "Diez días hábiles a partir del día siguiente al registro de la convocatoria en la Base de Datos Nacional de Subvenciones.",
+				"plazoFin": "2026-11-12",
+				"requisitos": [
+					"Ser titular de licencia municipal para el ejercicio de taxi expedida por el Ayuntamiento de Alcalá de Henares.",
+					"Estar dado de alta en el Régimen Especial de Trabajadores por Cuenta Propia o Autónomos.",
+					"Estar al corriente en el cumplimiento de obligaciones tributarias con la Hacienda estatal, la Seguridad Social y el Ayuntamiento de Alcalá de Henares.",
+					"Cumplir con los requisitos específicos de cada línea de ayuda."
+				],
+				"gastos": [
+					"Adaptación de un vehículo taxi al transporte de personas con movilidad reducida.",
+					"Gastos por pólizas de seguro obligatorias para el servicio de taxi.",
+					"Gastos generales de mantenimiento y reparación del vehículo como aceite, filtros, correa de distribución, pastillas de freno o neumáticos.",
+					"Compra de combustibles para el servicio de autotaxi.",
+					"Instalación de sistema de videovigilancia en el interior del taxi.",
+					"Instalación de mamparas de seguridad homologadas."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Alcalá de Henares"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
 		{
 			"codigo": "938342",
 			"titulo": "ESA BIC Euskadi",
@@ -151,6 +1247,76 @@
 			},
 			"comprobada": "2026-10-28",
 			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "938313",
+			"titulo": "SUBV. A ENTIDADES DE ASESORAMIENTO REA_SU",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "LA RIOJA",
+				"nivel3": "CONSEJERÍA DE AGRICULTURA, GANADERÍA, MUNDO RURAL Y MEDIO AMBIENTE"
+			},
+			"sede": null,
+			"publicada": "2026-10-27",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 52500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES230",
+					"nombre": "La Rioja"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto de la convocatoria en BOR",
+			"textoFin": "Diez días hábiles a partir del día siguiente a la publicación del extracto de convocatoria",
+			"bases": "https://ias1.larioja.org/boletin/Bor_Boletin_visor_Servlet?referencia=35876820-1-PDF-571176-X",
+			"documento": {
+				"id": 1545349,
+				"nombre": "Resoluci_n_convocatoria_OPAS_Y_EEAA_2026.pdf"
+			},
+			"docs": [
+				1545349
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938313",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para organizaciones profesionales agrarias y entidades de asesoramiento que ayudan en La Rioja con el Registro Autonómico de Explotaciones Agrícolas y la Solicitud Única de la PAC.",
+				"paraQuien": "Organizaciones profesionales agrarias y entidades de asesoramiento agrario en La Rioja.",
+				"importe": "Importe total de 196.000 euros. Por cada gestión se paga según tramos: desde 20 € hasta 75 € por explotación según su complejidad.",
+				"importeMaximo": null,
+				"plazo": "Diez días hábiles contados a partir del día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de La Rioja.",
+				"plazoFin": null,
+				"requisitos": [
+					"Operar en el ámbito de la Comunidad Autónoma de La Rioja.",
+					"Tener representatividad regional o ser una entidad de asesoramiento seleccionada para el periodo PEPAC 2024-2027.",
+					"Haber presentado más de 50 Solicitudes Únicas en la campaña PAC 2026 hasta el 31 de mayo de 2026, o haber actualizado más de 5 explotaciones en el REA.",
+					"Obtener una puntuación mínima de 5 puntos según los criterios de la convocatoria."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "La Rioja"
+				},
+				"dudas": "No se especifica una fecha exacta de fin de plazo porque depende del día en que se publique en el boletín oficial."
+			},
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "938285",
@@ -1527,16 +2693,41 @@
 				"nombre": "DEIALDIA.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937839",
-			"ia": null,
-			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para impulsar programas escolares, extraescolares y de conciliación en Ordizia que sigan los valores de Ordizia Herri Hezitzailea.",
+				"paraQuien": "Centros escolares y asociaciones de padres y madres de Ordizia.",
+				"importe": "El importe total es de 130.000,00 €, y el máximo para cada centro depende del número de alumnos.",
+				"importeMaximo": null,
+				"plazo": "Hasta el 15 de diciembre de 2026.",
+				"plazoFin": "2026-12-15",
+				"requisitos": [
+					"Estar al corriente de pagos con la Seguridad Social y Hacienda.",
+					"No tener deudas o sanciones pendientes con el Ayuntamiento de Ordizia.",
+					"Las asociaciones deben estar inscritas en el Registro de Asociaciones.",
+					"Presentar la solicitud por vía electrónica.",
+					"No estar castigado por romper la igualdad entre hombres y mujeres o por discriminación."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Ordizia"
+				},
+				"dudas": "No se especifica la cantidad exacta de dinero que le tocará a cada centro ni los detalles concretos de los artículos 7 y 15 sobre la valoración."
+			},
 			"docs": [
 				1544137,
 				1544138,
 				1544139,
 				1544155
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "937824",
@@ -1965,9 +3156,47 @@
 				"nombre": "2.BBRR_Y_RESOLUCION CONVOCATORIA F.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937796",
-			"ia": null,
-			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para cines en Cantabria para cubrir gastos corrientes de gestión y funcionamiento durante el año 2026 y fomentar la creación de audiencias.",
+				"paraQuien": "Entidades locales y empresas privadas que sean titulares de salas de exhibición o complejos cinematográficos en Cantabria.",
+				"importe": "Hasta el 80% del presupuesto aprobado, con un máximo de 12.000 € para entidades locales, 20.000 € para cines con hasta dos pantallas, y 25.000 € para cines con tres o más pantallas.",
+				"importeMaximo": 25000,
+				"plazo": "10 días hábiles desde el día siguiente al de la publicación del extracto en el Boletín Oficial de Cantabria.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener residencia legal o establecimiento en España.",
+					"Estar dado de alta en el Impuesto de Actividades Económicas en el epígrafe de proyección audiovisual en sala cinematográfica.",
+					"Estar inscrito en el Registro Administrativo de Empresas Cinematográficas del ICAA.",
+					"Mantener una programación estable y continua durante todo el año 2026.",
+					"Estar al corriente de pagos con la Agencia Tributaria, la Seguridad Social y la administración autonómica."
+				],
+				"gastos": [
+					"Cuotas de alquiler o arrendamiento de la sala o complejo.",
+					"Impuesto sobre Bienes Inmuebles (IBI) cuando la empresa sea propietaria.",
+					"Cuotas de préstamos hipotecarios de la sala o complejo.",
+					"Gastos de limpieza, mantenimiento, conservación y reparación ordinaria de inmuebles, mobiliario y equipos.",
+					"Gastos de suministros como agua, gas, electricidad e internet.",
+					"Gastos de mejora de información de entrada y salida no inventariables.",
+					"Cuotas o licencias de programas informáticos de gestión.",
+					"Primas de seguros de cobertura de riesgos.",
+					"Gastos por acceso a obras protegidas por derechos de autor.",
+					"Gastos de actividades de fidelización y creación de públicos.",
+					"Costes de proyectos culturales de películas europeas o iberoamericanas, incluyendo hasta el 50% de la liquidación a distribuidoras (máximo 300 euros por película).",
+					"Gastos de personal que participe directamente en la explotación de la sala.",
+					"Otros gastos corrientes derivados de la explotación."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cantabria"
+				},
+				"dudas": "La fecha exacta de publicación en el Boletín Oficial de Cantabria no se indica en el documento, por lo que no se puede calcular el último día del plazo."
+			},
 			"docs": [
 				1544026,
 				1544119,
@@ -1976,7 +3205,8 @@
 				1544131,
 				1544132
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "937790",
@@ -2099,14 +3329,40 @@
 				"nombre": "Convocatòria_anticipada_CEM_500_hab_CAST_2027.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937775",
-			"ia": null,
-			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Subvenciones para municipios de hasta 500 habitantes de la demarcación de Girona para financiar centros escolares municipales en 2027.",
+				"paraQuien": "Municipios de hasta 500 habitantes de la demarcación de Girona.",
+				"importe": "Entre 1.000,00 euros y 10.000,00 euros por solicitud.",
+				"importeMaximo": 10000,
+				"plazo": "Del 1 de febrero de 2027 al 26 de febrero de 2027.",
+				"plazoFin": "2027-02-26",
+				"requisitos": [
+					"Ser un municipio de hasta 500 habitantes de la demarcación de Girona.",
+					"Tener un centro escolar municipal.",
+					"Presentar la solicitud mediante el modelo normalizado en la web de la Diputació de Girona.",
+					"Firmar digitalmente la solicitud y presentarla por la plataforma de subvenciones de la Diputació de Girona."
+				],
+				"gastos": [
+					"Financiación de los centros escolares municipales."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Municipios de hasta 500 habitantes de la demarcación de Girona"
+				},
+				"dudas": "Va dirigida exclusivamente a ayuntamientos y municipios, por lo que no aplica para autónomos ni negocios privados."
+			},
 			"docs": [
 				1543991,
 				1543992
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "937774",
@@ -2297,13 +3553,43 @@
 				"nombre": "RESOLUCION Y ANEXOS.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937703",
-			"ia": null,
-			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para entidades sin ánimo de lucro en Ceuta para contratar a personas desempleadas para la realización de obras y servicios de interés general y social.",
+				"paraQuien": "Entidades sin ánimo de lucro con personalidad jurídica propia.",
+				"importe": "Las cuantías anuales varían según el grupo de cotización: de 23.595,96 a 39.327,31 euros por cada trabajador contratado a tiempo completo, con un presupuesto total máximo estimado de 1.185.085,03 euros.",
+				"importeMaximo": 39327.31,
+				"plazo": "Diez días naturales contados a partir del día siguiente al de la publicación del extracto de la resolución en el Boletín Oficial de la Ciudad de Ceuta.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar al corriente de obligaciones tributarias y con la Seguridad Social.",
+					"Carecer de ánimo de lucro.",
+					"Tener sede o delegación y un centro de trabajo en la Ciudad Autónoma de Ceuta.",
+					"Gozar de capacidad técnica y de gestión suficientes para ejecutar el proyecto.",
+					"Contratar al 100 por ciento de los trabajadores desempleados.",
+					"Garantizar un porcentaje de participación de mujeres de al menos el 50 por ciento.",
+					"Disponer de asignación presupuestaria para cubrir la parte no subvencionada."
+				],
+				"gastos": [
+					"Costes salariales y de Seguridad Social de los contratos de los trabajadores participantes.",
+					"Indemnización por residencia si la entidad está obligada a su abono."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Ceuta"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el BOCCE, por lo que el día exacto de cierre del plazo no se puede determinar sin consultar dicho boletín."
+			},
 			"docs": [
 				1543784
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "937680",
@@ -6040,13 +7326,40 @@
 				"nombre": "Decret_aprovació_BASES.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936449",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda en forma de bonos de consumo para incentivar las ventas en comercios, hostelería y servicios de Alcoy.",
+				"paraQuien": "Comercios, establecimientos de hostelería y servicios con local en Alcoy o domicilio fiscal allí si no tienen local.",
+				"importe": "Cada bono vale 20 euros. El cliente paga el 50 por ciento y el ayuntamiento pone el otro 50 por ciento. Máximo 10 bonos por persona.",
+				"importeMaximo": 200,
+				"plazo": "Desde el día siguiente a la publicación de las bases en el BOP de Alicante hasta el 15 de noviembre de 2026.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener un local permanente abierto al público en Alcoy o domicilio fiscal en el municipio.",
+					"Estar dado de alta en los epígrafes del IAE de comercio minorista, hostelería o servicios de proximidad.",
+					"Aportar el certificado de situación en el censo de actividades económicas de la Agencia Tributaria."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Alcoy"
+				},
+				"dudas": "No se indica una fecha exacta de publicación en el BOP para calcular el día de inicio del plazo de solicitud."
+			},
 			"docs": [
 				1540236
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite",
+			"cierreDescartado": {
+				"fecha": "2026-11-15",
+				"motivo": "no coincide con la de la BDNS (2026-12-31)"
+			}
 		},
 		{
 			"codigo": "936422",
@@ -6718,13 +8031,40 @@
 				"nombre": "Orden Premios XIX Edición .pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936344",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Premios de Comercio Tradicional de Castilla y León para reconocer la buena gestión, competitividad, modernización y buenas prácticas en pequeñas y medianas empresas del sector.",
+				"paraQuien": "Pequeñas y medianas empresas del sector del comercio minorista.",
+				"importe": "Nueve premios provinciales de 3.000 euros cada uno y un premio regional de 9.000 euros, ambos con trofeo.",
+				"importeMaximo": 9000,
+				"plazo": "Hasta el 6 de noviembre de 2026 inclusive.",
+				"plazoFin": "2026-11-06",
+				"requisitos": [
+					"Tener el domicilio social en Castilla y León.",
+					"Estar dedicado al comercio minorista y dado de alta en los epígrafes 64, 65 y 66 del impuesto de actividades económicas, o en la división 47 de la clasificación nacional de actividades económicas (CNAE 2025).",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y frente a la Seguridad Social.",
+					"No estar en régimen de franquicia.",
+					"No estar incluido en los grupos o clases excluidos de CNAE (tabaco, combustible, farmacias o puestos de venta y mercadillos).",
+					"Presentar solo una candidatura por negocio.",
+					"No haber obtenido el premio en alguna de las últimas cinco ediciones."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Castilla y León"
+				},
+				"dudas": null
+			},
 			"docs": [
 				1539986
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936334",
@@ -6999,14 +8339,52 @@
 				"nombre": "Documento convocatoria (castellano).PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936308",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas en forma de anticipos reintegrables para impulsar el establecimiento, ampliación y renovación de implantaciones productivas o de servicios técnicos en el extranjero por parte de empresas vascas.",
+				"paraQuien": "Pequeñas, medianas y grandes empresas con una instalación productiva en el País Vasco.",
+				"importe": "Hasta el 50 % de la inversión para pequeñas y microempresas, el 35 % para medianas y el 25 % para grandes empresas, con un máximo de 1.000.000 euros por empresa.",
+				"importeMaximo": 1000000,
+				"plazo": "Desde el 20 de octubre de 2026 hasta el 20 de noviembre de 2026.",
+				"plazoFin": "2026-11-20",
+				"requisitos": [
+					"Contar con una instalación productiva en la Comunidad Autónoma del País Vasco con personal propio implicado en el proyecto.",
+					"Estar al corriente en el cumplimiento de obligaciones tributarias, con la Seguridad Social y por reintegro de subvenciones.",
+					"Realizar un proyecto de inversión en el exterior de al menos 120.000 euros.",
+					"Iniciar la inversión en 2026 y con posterioridad a la presentación de la solicitud.",
+					"No encontrarse en ninguna de las circunstancias de prohibición del artículo 13 de la Ley Reguladora del Régimen de Subvenciones.",
+					"No estar sujeto a una orden de recuperación de ayudas pendiente de la Comisión Europea.",
+					"No dedicarse a la producción, comercialización y financiación de armamento o tecnología militar no encuadrada en la Estrategia Europea de Seguridad."
+				],
+				"gastos": [
+					"Propiedad industrial y patentes",
+					"Aplicaciones informáticas",
+					"Terrenos y bienes naturales",
+					"Construcciones",
+					"Instalaciones técnicas",
+					"Maquinaria",
+					"Utillaje",
+					"Otras instalaciones",
+					"Mobiliario",
+					"Equipos para procesos de información"
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No se especifica si los autónomos persona física sin personalidad jurídica societaria pueden solicitar la ayuda, ya que el texto menciona únicamente a personas jurídicas."
+			},
 			"docs": [
 				1539889,
 				1539890
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936295",
@@ -7118,15 +8496,48 @@
 				"nombre": "20260923_CONVOCATORIA EMPRENEDORIA + anexo - castella.docx.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936295",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas de hasta 4.000 € para fomentar la creación y el establecimiento de nuevas empresas en el municipio de Vila-seca.",
+				"paraQuien": "Personas físicas y jurídicas, de naturaleza privada, que instalen una nueva actividad económica con domicilio social en el municipio de Vila-seca.",
+				"importe": "Hasta 4.000 € por negocio, con límites según el tipo de gasto (hasta 60% en adaptación de locales y hasta 30% en utillaje, material informático y telefonía, o cuotas de la Seguridad Social).",
+				"importeMaximo": 4000,
+				"plazo": "Desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Tarragona y durante un plazo de 15 días hábiles.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar al corriente de las obligaciones tributarias con el Ayuntamiento de Vila-seca, AEAT, Agencia Tributaria Catalana y con la Seguridad Social.",
+					"Estar al corriente de pago de cualquier subvención anterior del Ayuntamiento.",
+					"Disponer de cuenta bancaria de la que sea titular.",
+					"Desarrollar una actividad lícita que no suponga discriminación ni atente contra la dignidad o los derechos humanos.",
+					"No haber sido objeto de sanciones por prácticas laborales discriminatorias por razón de sexo.",
+					"Acreditar el alta en el censo de empresas entre el 1 de enero de 2025 y el 30 de junio de 2026.",
+					"Acreditar nueva alta en el RETA o en una mutualidad alternativa vinculada a la nueva actividad.",
+					"Presentar una memoria de actividad y disponer de los permisos necesarios."
+				],
+				"gastos": [
+					"Gastos de adaptación de locales",
+					"Utillaje",
+					"Material informático y telefonía",
+					"Cuotas de la Seguridad Social"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Vila-seca"
+				},
+				"dudas": "No se indica la fecha exacta de publicación en el Boletín Oficial de la Provincia de Tarragona, por lo que no se puede calcular el último día del plazo."
+			},
 			"docs": [
 				1539872,
 				1539873,
 				1539874
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936281",
@@ -7166,13 +8577,41 @@
 				"nombre": "BASES_SUBVENCIONES_MANTEQUILLA_DE_SORIA__2026_-JGL_76310_273925_9.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936281",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para ganaderías de vacuno de leche en Soria para asegurar la producción para la Mantequilla de Soria.",
+				"paraQuien": "Titulares de una explotación ganadera de vacuno de leche en Soria e inscritos en la Denominación de Origen Protegida Mantequilla de Soria.",
+				"importe": "El 50 % de los gastos con un máximo de 365 euros por vaca en producción (presupuesto total de 30.000 euros).",
+				"importeMaximo": null,
+				"plazo": "20 días hábiles siguientes a la publicación en el Boletín Oficial de la Provincia.",
+				"plazoFin": "2026-11-16",
+				"requisitos": [
+					"Ser titular de una explotación ganadera de vacuno de leche ubicada en la provincia de Soria.",
+					"Estar inscrito en el Consejo Regulador de la Denominación de Origen Protegida Mantequilla de Soria.",
+					"Estar al corriente de pagos en Hacienda y Seguridad Social."
+				],
+				"gastos": [
+					"Adquisición de ganado.",
+					"Gastos de alimentación.",
+					"Gastos veterinarios (excepto gastos de inseminación).",
+					"Ayudas a la adecuación de infraestructuras y material de control y seguimiento para el manejo del ganado."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Soria"
+				},
+				"dudas": "No se indica el importe máximo total que puede recibir cada negocio en conjunto, solo el límite por vaca."
+			},
 			"docs": [
 				1539758
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936264",
@@ -7212,14 +8651,41 @@
 				"nombre": "20260803_Uns_altres_Anunci_convocatoria_ajuts_emprenedoria_26_castella.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936264",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para impulsar la creación de nuevos negocios, comercios y servicios en el municipio de Artés, con un presupuesto total de 10.000 euros.",
+				"paraQuien": "Personas físicas o jurídicas que pongan en marcha un negocio en un establecimiento, local o despacho profesional en Artés.",
+				"importe": "El presupuesto total de la convocatoria es de diez mil euros (10.000 €).",
+				"importeMaximo": null,
+				"plazo": "Veinte días naturales a contar desde el día siguiente de la publicación del anuncio en el Boletín Oficial de la Provincia de Barcelona.",
+				"plazoFin": null,
+				"requisitos": [
+					"Poner en marcha el negocio en un establecimiento abierto al público, nave, local o despacho profesional en Artés.",
+					"Tener un máximo de 10 empleados y un volumen de negocio anual que no supere los dos millones de euros.",
+					"Estar al corriente de pagos con el Ayuntamiento, Hacienda y la Seguridad Social.",
+					"Disponer de la licencia de actividad o haber presentado la comunicación previa o declaración responsable.",
+					"No haber recibido otras subvenciones para las mismas actuaciones.",
+					"Presentar una única solicitud por cada persona física o jurídica.",
+					"En el caso de empresas, disponer de escritura de constitución e inscripción en el Registro Mercantil."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": 10,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Artés"
+				},
+				"dudas": "No se especifica la cantidad exacta de dinero que recibirá cada negocio individual, ya que solo se indica el presupuesto total."
+			},
 			"docs": [
 				1539713,
 				1539714
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936260",
@@ -7259,13 +8725,40 @@
 				"nombre": "BASES_SUBVENCION_MEJORA_GENETICA__2026__firmadas.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936260",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para la mejora genética en explotaciones ganaderas de vacuno, equino, ovino y caprino en la provincia de Soria.",
+				"paraQuien": "Titulares de explotaciones ganaderas de vacuno, equino, ovino o caprino en Soria.",
+				"importe": "El 30 % de los gastos subvencionables, con un máximo de 1.000 euros por animal para vacuno y equino, 150 euros por animal para ovino y caprino, y 25 euros por vaca lechera para dosis seminales. El presupuesto total es de 30.000 euros.",
+				"importeMaximo": 1000,
+				"plazo": "Veinte días hábiles contados a partir del día siguiente al de la publicación de la convocatoria en el Boletín Oficial de la Provincia.",
+				"plazoFin": "2026-11-16",
+				"requisitos": [
+					"Tener una explotación ganadera de vacuno, equino, ovino o caprino ubicada en la provincia de Soria.",
+					"Estar debidamente inscrito en los registros correspondientes.",
+					"Estar al corriente en el cumplimiento de obligaciones tributarias y frente a la Seguridad Social.",
+					"No encontrarse en las prohibiciones de la Ley General de Subvenciones."
+				],
+				"gastos": [
+					"Adquisición de animales selectos para el cruzamiento industrial en vacuno, equino, ovino y caprino de carne.",
+					"Adquisición de dosis seminales de animales selectos en vacuno, equino, ovino y caprino de leche."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Soria"
+				},
+				"dudas": "Si las peticiones superan el presupuesto total, la ayuda se reduce proporcionalmente para todos."
+			},
 			"docs": [
 				1539707
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936259",
@@ -7306,13 +8799,14 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936259",
 			"ia": null,
-			"iaIntentos": 3,
+			"iaIntentos": 4,
 			"iaError": "no es un PDF (Empresas.cas -2026.docx)",
 			"docs": [
 				1539688,
 				1539690
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaIntentadoEl": "2026-10-28"
 		},
 		{
 			"codigo": "936233",
@@ -7356,13 +8850,38 @@
 				"nombre": "20261016_Otros_ANUNCIO  BASES Y CONVOCATORIA CERTAMEN PINTURA XXXV.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936233",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de pintura para artistas nacionales o extranjeros con un único premio de 4.000 euros.",
+				"paraQuien": "Artistas nacionales o extranjeros mayores de 18 años.",
+				"importe": "4.000 euros para un único premio.",
+				"importeMaximo": 4000,
+				"plazo": "Inscripción digital antes del 30 de noviembre de 2026. Entrega de la obra del 9 al 28 de diciembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Ser mayor de 18 años.",
+					"Presentar un máximo de una obra, de la que se sea autor y propietario.",
+					"La obra debe ser original y estar firmada.",
+					"El formato de la obra debe medir entre 73 cm y 130 cm por cualquiera de sus lados.",
+					"La obra debe haber sido ejecutada entre los años 2022 y 2026."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
 			"docs": [
 				1539619
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936226",
@@ -7406,14 +8925,48 @@
 				"nombre": "Convocatoria de la subvención (castellano).PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936226",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para mejorar, modernizar y adaptar pequeños negocios y servicios en Amposta.",
+				"paraQuien": "Pequeñas empresas comerciales, actividades y de servicios, micro o pequeñas empresas ubicadas en Amposta.",
+				"importe": "Hasta el 50% del coste de las acciones, con un máximo de 6.000 euros.",
+				"importeMaximo": 6000,
+				"plazo": "Desde el día siguiente de la publicación en el BOPT hasta el 27 de noviembre de 2026.",
+				"plazoFin": "2026-11-27",
+				"requisitos": [
+					"Tener el negocio ubicado en el término municipal de Amposta.",
+					"Cumplir la normativa comercial y de protección de los derechos de los consumidores.",
+					"Informar del horario de atención al público de forma visible desde el exterior, incluso con el local cerrado.",
+					"Ofrecer en catalán la información comercial, carteles de información general y etiquetado de productos.",
+					"Estar incluido en la lista de epígrafes admitidos de comercio, servicios, actividades profesionales o artísticas.",
+					"Presentar la solicitud en el Registro General del Ayuntamiento con el modelo normalizado."
+				],
+				"gastos": [
+					"Actuaciones de seguridad como alarmas, detectores y cámaras.",
+					"Renovación y mejora tecnológica.",
+					"Acciones de eficiencia energética e iluminación de bajo consumo.",
+					"Gestión de residuos con bolsas y envases reutilizables o biodegradables.",
+					"Reformas y mejora de la imagen del establecimiento.",
+					"Ampliación del local comercial anexionando espacios contiguos.",
+					"Instalación o renovación de rotulación interior y exterior en catalán."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Amposta"
+				},
+				"dudas": "No se especifica un número máximo de empleados ni una antigüedad mínima obligatoria."
+			},
 			"docs": [
 				1541612,
 				1541613
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936188",
@@ -7457,13 +9010,41 @@
 				"nombre": "Orden Desempleados SEPE 2026 + Anexo I firmada Consejera.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936188",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para entidades de formación destinadas a impartir cursos del Plan WAVE PLUS para actualizar las competencias laborales de personas desempleadas en Aragón.",
+				"paraQuien": "Entidades de formación con centros inscritos en el Registro de Centros Colaboradores de Aragón o en el Registro Estatal de Entidades de Formación.",
+				"importe": "El importe se calcula aplicando los módulos económicos específicos (coste por hora y alumno) indicados para cada especialidad formativa en el Anexo I.",
+				"importeMaximo": 150000,
+				"plazo": "Cinco días hábiles a contar desde el día siguiente al de la publicación de la convocatoria en el Boletín Oficial de Aragón.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener centros de formación inscritos en el Registro de Centros Colaboradores de Aragón o en el Registro Estatal.",
+					"Disponer de instalaciones en Aragón debidamente inscritas y aptas para impartir la formación.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social, y no tener deudas con la Comunidad Autónoma de Aragón.",
+					"No haber sido sancionado por resoluciones firmes en materia de igualdad de género o derechos LGTBI.",
+					"Cumplir con los requisitos de la Ley General de Subvenciones y la normativa de subvenciones de Aragón."
+				],
+				"gastos": [
+					"Costes directos e indirectos de la formación.",
+					"Costes de servicios de apoyo para la discapacidad del alumnado, en su caso."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Aragón"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de Aragón, por lo que no se puede calcular el día exacto de cierre del plazo."
+			},
 			"docs": [
 				1539523
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936173",
@@ -7503,13 +9084,43 @@
 				"nombre": "Convocatoria ayudas Eurotaxi.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936173",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para comprar vehículos adaptados para taxi (Eurotaxi) o cambiar vehículos actuales por otros adaptados en San Javier.",
+				"paraQuien": "Titulares de licencia municipal de taxi en San Javier.",
+				"importe": "Hasta el 100% del coste subvencionable, con un máximo de 3.000 euros por beneficiario.",
+				"importeMaximo": 3000,
+				"plazo": "20 días hábiles a partir del día siguiente al de la publicación en el Boletín Oficial de la Región de Murcia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser titular en activo de una licencia municipal de taxi del Ayuntamiento de San Javier.",
+					"Ejercer efectivamente la actividad.",
+					"Cumplir los requisitos exigidos en la normativa municipal reguladora del servicio de taxi.",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y con la Seguridad Social.",
+					"No estar incurso en prohibiciones para obtener la condición de beneficiario.",
+					"Tener adscrito el vehículo a la correspondiente licencia municipal."
+				],
+				"gastos": [
+					"La adquisición de vehículos Eurotaxi nuevos.",
+					"La adaptación de vehículos para su conversión en Eurotaxi.",
+					"La sustitución de vehículos existentes por otros adaptados."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "San Javier"
+				},
+				"dudas": "No se indica la fecha exacta de publicación en el boletín oficial para calcular el último día del plazo."
+			},
 			"docs": [
 				1539475
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936158",
@@ -7550,13 +9161,39 @@
 				"nombre": "Documento convocatoria castellano.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936158",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para proyectos de desarrollo y fabricación de tecnologías estratégicas fundamentales y emergentes, y sus cadenas de valor, enmarcadas en la Plataforma de Tecnologías Estratégicas para Europa (STEP).",
+				"paraQuien": "Empresas canarias que cumplan los requisitos de constitución, plantilla y domicilio en Canarias.",
+				"importe": "El porcentaje subvencionable depende del tamaño de la empresa (45% para pequeñas, 35% para medianas y 25% para grandes empresas en proyectos de desarrollo experimental), con un presupuesto elegible mínimo de 500.000,00 € y máximo de 1.500.000,00 €.",
+				"importeMaximo": 1500000,
+				"plazo": "15 días hábiles a contar desde las 9:00 horas del día siguiente a la publicación en el Boletín Oficial de Canarias del extracto de la convocatoria hasta las 14:00 horas del último día.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar válidamente constituida y disponer de personalidad jurídica propia.",
+					"Tener su domicilio social y fiscal y un establecimiento permanente en la Comunidad Autónoma de Canarias.",
+					"Contar con una o más personas en plantilla.",
+					"Contar con un compromiso explícito en materia de igualdad entre mujeres y hombres.",
+					"Estar al corriente en el cumplimiento de sus obligaciones tributarias, frente a la Seguridad Social y por reintegro de subvenciones.",
+					"No ser empresa que opere en los sectores excluidos por el artículo 1 del Reglamento (UE) 2023/2831 de ayudas de minimis."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La fecha exacta de fin de plazo no se puede determinar porque depende de la fecha de publicación en el Boletín Oficial de Canarias."
+			},
 			"docs": [
 				1542909
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936136",
@@ -7759,13 +9396,50 @@
 				"nombre": "01 Convocatoria 2026 fda.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936129",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Ayuntamiento de Santander para promover la creación de empresas, la contratación de trabajadores y el retorno de talento joven.",
+				"paraQuien": "Negocios, autónomos y empresas que tengan actividad o centro de trabajo en Santander.",
+				"importe": "Programa I (Santander Crea): hasta 3.000 € o 4.000 € según perfil. Programa II (Santander Emplea): 4.000 € por contrato, con incrementos posibles.",
+				"importeMaximo": 5000,
+				"plazo": "20 días naturales desde el día siguiente al de la publicación del extracto de la convocatoria en el Boletín Oficial de Cantabria.",
+				"plazoFin": null,
+				"requisitos": [
+					"Desarrollar la actividad o contar con centro de trabajo en el municipio de Santander.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y el Ayuntamiento de Santander.",
+					"No tener pendiente de justificación ninguna otra subvención anterior del Ayuntamiento de Santander.",
+					"Mantener la actividad o el contrato durante el tiempo mínimo exigido según el programa.",
+					"Cumplir con los requisitos de fecha de inicio de actividad o de contratación establecidos en cada programa."
+				],
+				"gastos": [
+					"Adquisición de inmuebles afectos a la actividad.",
+					"Arrendamiento de local de negocio.",
+					"Acondicionamiento de inmuebles afectos a la actividad.",
+					"Maquinaria, herramientas y utillaje.",
+					"Medios de transporte afectos a la actividad, cuando la actividad principal esté relacionada con el transporte.",
+					"Equipos informáticos y de oficina.",
+					"Software, páginas web, plataformas de comercio electrónico y desarrollo de aplicaciones.",
+					"Derechos de traspaso, cánones, marcas y otro inmovilizado inmaterial.",
+					"Honorarios, proyectos, licencias y autorizaciones para la constitución y puesta en marcha.",
+					"Altas en suministros.",
+					"Mobiliario y enseres."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Santander"
+				},
+				"dudas": "La fecha exacta de publicación en el Boletín Oficial de Cantabria no aparece en el texto, por lo que no se puede calcular el día exacto de cierre del plazo."
+			},
 			"docs": [
 				1539381
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936108",
@@ -7806,13 +9480,38 @@
 				"nombre": "BASES AYUDAS CONTRATACION Y AUTOEMPLEO.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936108",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas económicas del Ayuntamiento de Viana para fomentar la contratación laboral de personas desempleadas y la creación de empleo autónomo.",
+				"paraQuien": "Empresas residentes en Viana, profesionales y autónomos que contraten a desempleados, o personas físicas que inicien un proyecto de autoempleo.",
+				"importe": "Entre 500 y 2.000 euros por contrato según el tipo, o 2.000 euros para autoempleo. La cantidad puede incrementarse un 50% si el contratado o autónomo es mujer, menor de 25 años, mayor de 50, tiene discapacidad o procede de Renta Garantizada o Empleo protegido.",
+				"importeMaximo": 3000,
+				"plazo": "Desde el 1 de enero de 2027 hasta el 31 de diciembre de 2027.",
+				"plazoFin": "2027-12-31",
+				"requisitos": [
+					"Estar al corriente en obligaciones tributarias y de Seguridad Social.",
+					"Estar al corriente de pago con el Ayuntamiento.",
+					"No haber sido excluido de programas de empleo por infracciones muy graves.",
+					"No hallarse en prohibiciones de la Ley General de Subvenciones.",
+					"Estar empadronado en Viana con una antigüedad mínima de dos años en el caso del trabajador contratado o del autónomo que emprende."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Viana"
+				},
+				"dudas": "No se especifica el presupuesto total exacto de la convocatoria en el texto, solo que se atiende hasta el límite del crédito disponible."
+			},
 			"docs": [
 				1539339
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936047",
@@ -7860,13 +9559,40 @@
 				"nombre": "6.CONVOCATORIA CONTRATACIONES_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936047",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para contratar a personas desempleadas, dirigidas a empresas y comercios del municipio.",
+				"paraQuien": "Empresas, personas físicas o jurídicas y entidades sin ánimo de lucro de cualquier forma jurídica.",
+				"importe": "Hasta un máximo de 2.500 euros por contratación a jornada completa de al menos seis meses de duración.",
+				"importeMaximo": 2500,
+				"plazo": "20 días hábiles a partir del día siguiente a la publicación de la convocatoria en el BOP.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener la ubicación física y razón social en el municipio de Sedaví.",
+					"Estar al corriente en el pago de tributos locales, Seguridad Social y Agencia Tributaria.",
+					"Realizar contratos de trabajo a lo largo del año en curso, hasta el fin del plazo de solicitudes.",
+					"No contratar a parientes de hasta el segundo grado ni a trabajadores que provengan de un ERTE previo de la empresa.",
+					"No haber realizado la contratación a través de una ETT ni en el marco de ofertas públicas de empleo o programas de empleo público.",
+					"No mantener contratas del Ayuntamiento.",
+					"Mantener las condiciones laborales y retribuciones salariales del convenio."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sedaví"
+				},
+				"dudas": "La fecha exacta de publicación en el BOP no se indica en el documento, por lo que no se puede calcular el último día del plazo."
+			},
 			"docs": [
 				1539184
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936044",
@@ -7915,14 +9641,46 @@
 				"nombre": "CONVOCATORIA PRESENTACIÓN DE ALIMENTOS EN GUATEMALA Y PANAMÁ 2027_084114.PDF"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936044",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para la participación agrupada de empresas en la Presentación de alimentos en Guatemala y Panamá 2027.",
+				"paraQuien": "Empresas del sector alimentación que desarrollen su actividad económica en Castilla-La Mancha.",
+				"importe": "El 80% de los costes subvencionables, con un máximo de 5.630,00 euros por negocio.",
+				"importeMaximo": 5630,
+				"plazo": "Desde el día siguiente de la publicación en el Diario Oficial de Castilla-La Mancha hasta el 9 de noviembre de 2026.",
+				"plazoFin": "2026-11-09",
+				"requisitos": [
+					"Desarrollar la actividad económica en Castilla-La Mancha.",
+					"Estar al corriente en el cumplimiento de obligaciones tributarias, con la Seguridad Social y por reintegro de subvenciones.",
+					"Disponer de un plan de prevención de riesgos laborales cuando estén obligados a ello y no haber sido sancionados por falta muy grave en esta materia en el último año.",
+					"No tener la consideración de empresa en crisis.",
+					"No haber puesto fin a una actividad idéntica en el Espacio Económico Europeo en los dos años anteriores ni tener planes de hacerlo.",
+					"No haber sido objeto de sanciones firmes por prácticas laborales discriminatorias.",
+					"Estar dado de alta en la plataforma de notificaciones telemáticas de la Junta de Comunidades de Castilla-La Mancha."
+				],
+				"gastos": [
+					"Cuota de participación en Guatemala",
+					"Cuota de participación en Panamá",
+					"Viaje de una persona",
+					"Transporte de muestras"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "El importe total máximo del crédito destinado es de 56.300 euros y el número máximo de beneficiarios es de 10 empresas."
+			},
 			"docs": [
 				1542031,
 				1542032
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936034",
@@ -7962,13 +9720,41 @@
 				"nombre": "6.CONVOCATORIA comercio -2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936034",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para comercios, autónomos y microempresas en Sedaví para sufragar costes de funcionamiento, evolución tecnológica y modernización.",
+				"paraQuien": "Comercios locales, autónomos y microempresas con establecimiento o local comercial minorista abierto al público.",
+				"importe": "El 70 % de las facturas presentadas, con un máximo de 1.000 euros por negocio. El presupuesto total es de 21.406,39 euros.",
+				"importeMaximo": 1000,
+				"plazo": "20 días hábiles a partir del día siguiente a la publicación de la convocatoria en el BOP.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener la razón social y ubicación física en el término municipal de Sedaví.",
+					"Contar con un establecimiento o local comercial minorista con apertura al público.",
+					"Estar al corriente de pagos con la Seguridad Social, la Agencia Tributaria y con el Ayuntamiento de Sedaví."
+				],
+				"gastos": [
+					"Elementos de modernización del negocio como códigos QR, cartas telemáticas, ordenadores y terminales TPV.",
+					"Gastos necesarios para la puesta en marcha de servicios de reparto a domicilio.",
+					"Gastos necesarios para la digitalización del negocio, plataformas de venta online y páginas web.",
+					"Gastos corrientes como alquileres de locales, suministros y coste de autónomos o seguridad social."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sedaví"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el BOP para calcular el último día del plazo de solicitud."
+			},
 			"docs": [
 				1539146
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936021",
@@ -8016,13 +9802,40 @@
 				"nombre": "6 CONVOCATORIA autónomos_2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936021",
-			"ia": null,
-			"iaIntentos": 3,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para autónomos destinadas a sufragar los gastos de puesta en marcha del negocio en el municipio de Sedaví.",
+				"paraQuien": "Personas que se constituyan como autónomos durante el año en curso.",
+				"importe": "1.000 euros por negocio, pudiendo incrementarse en 500 euros más hasta un total de 1.500 euros si el negocio está o va a estar en el mercado interior municipal.",
+				"importeMaximo": 1500,
+				"plazo": "20 días hábiles a partir del día siguiente a la publicación de la convocatoria en el BOP.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar constituido como autónomo durante el año en curso y hasta la fecha de finalización del plazo de solicitudes.",
+					"Tener la razón social y ubicación física del negocio en el término municipal de Sedaví.",
+					"Estar al corriente de pagos con la Seguridad Social, la Agencia Tributaria y con los tributos locales.",
+					"No ser un negocio de profesiones liberales.",
+					"No ser un autónomo dependiente."
+				],
+				"gastos": [
+					"Cualquier gasto en que el autónomo haya incurrido para poner en marcha su negocio."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sedaví"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el BOP para calcular el último día del plazo."
+			},
 			"docs": [
 				1539109
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "935995",
@@ -8173,13 +9986,39 @@
 				"nombre": "20261017_Resolución_Decreto_DECRETO 2026-0757 [05. Decreto aprobación bases ayudas comercio y hostelería 2026].pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935991",
-			"ia": null,
-			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para inversiones en locales comerciales y de hostelería que mejoren el medio ambiente, la rehabilitación, conservación y digitalización.",
+				"paraQuien": "Personas físicas mayores de edad, menores emancipados y personas jurídicas u otras entidades sin personalidad.",
+				"importe": "Hasta el 80% del proyecto subvencionable, con un máximo de 1.500,00 euros.",
+				"importeMaximo": 1500,
+				"plazo": "Hasta el 9 de diciembre de 2026, incluido.",
+				"plazoFin": "2026-12-09",
+				"requisitos": [
+					"Realizar la inversión en el municipio de Cariñena entre el 1 de noviembre de 2025 y el 31 de octubre de 2026.",
+					"Estar al corriente de pagos con obligaciones tributarias, Hacienda Municipal y Seguridad Social.",
+					"No estar incurso en prohibiciones para obtener la condición de beneficiario según la Ley General de Subvenciones.",
+					"Presentar la solicitud y la documentación requerida en plazo."
+				],
+				"gastos": [
+					"Inversiones en locales comerciales y hostelería que contribuyan a la mejora medioambiental, rehabilitación, conservación y digitalización."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cariñena"
+				},
+				"dudas": null
+			},
 			"docs": [
 				1539039
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "935985",
@@ -8430,13 +10269,39 @@
 				"nombre": "20261008_Publicación_Anuncio Aprobación Bases específicas reguladoras de la subvención a la producción de determinadas variedades de uva para la obtención de vino de calidad elaborado en El Hierro en 2026.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935970",
-			"ia": null,
-			"iaIntentos": 2,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda para la producción de determinadas variedades de uva destinadas a la elaboración de vino de calidad en El Hierro.",
+				"paraQuien": "Viticultores y bodegas de El Hierro que produzcan variedades específicas de uva.",
+				"importe": "Entre 0,65 € y 1,50 € por kilogramo de uva, según la variedad.",
+				"importeMaximo": null,
+				"plazo": "15 días hábiles a partir del día siguiente al de la publicación de las bases en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar inscrito en el Consejo Regulador de la Denominación de Origen El Hierro.",
+					"Ejercer actividad vitícola en la isla de El Hierro al menos el año de la convocatoria.",
+					"Entregar kilos de uva destinados a la elaboración de vino en El Hierro.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social si se pide más de 3.000 €.",
+					"Estar al corriente de pagos con el Cabildo de El Hierro y sus empresas públicas.",
+					"Tener justificadas subvenciones anteriores concedidas por el Cabildo."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "El Hierro"
+				},
+				"dudas": "El texto menciona la fecha exacta de publicación en la BDNS, pero el plazo depende de la publicación en el boletín oficial provincial, por lo que la fecha de cierre exacta no se puede concretar."
+			},
 			"docs": [
 				1538957
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "935961",
@@ -8626,16 +10491,43 @@
 				"nombre": "20261016_Publicación_Anuncio_ANUNCIO EXTRACTO CONVOCATORIA.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935899",
-			"ia": null,
-			"iaIntentos": 1,
-			"iaError": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gem",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para titulares de explotaciones agrarias que participen con ganado selecto en la feria de octubre de 2026 en El Barco de Ávila.",
+				"paraQuien": "Personas físicas o jurídicas que sean titulares de explotaciones agrarias con ganado selecto.",
+				"importe": "El importe total disponible para todas las ayudas es de 4.000 euros.",
+				"importeMaximo": null,
+				"plazo": "Veinte días hábiles desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Ávila.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar debidamente registrado en el registro correspondiente.",
+					"Solicitar la ayuda y presentar ganado en las ferias de ganado selecto.",
+					"Ser productor de ganado de alguna raza selecta.",
+					"Estar al corriente de obligaciones con Hacienda y la Seguridad Social.",
+					"No tener deudas con el Ayuntamiento de El Barco de Ávila."
+				],
+				"gastos": [
+					"Participación en la Feria, subastas, exposiciones o concursos ganaderos."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "El Barco de Ávila"
+				},
+				"dudas": "No se especifica la cantidad exacta de dinero que recibirá cada negocio individual, solo el presupuesto total de 4.000 euros."
+			},
 			"docs": [
 				1538763,
 				1538767,
 				1538794,
 				1538818
 			],
-			"comprobada": "2026-10-28"
+			"comprobada": "2026-10-28",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "935857",
@@ -13483,16 +15375,16 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-10-28T11:31:51.646Z",
+			"fecha": "2026-10-28T19:43:52.721Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 165,
+			"fichasComprobadas": 0,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-10-28T12:03:43.642Z",
-			"pendientes": 27,
-			"leidas": 40,
-			"fallidas": 0,
+			"fecha": "2026-10-28T19:59:50.449Z",
+			"pendientes": 1,
+			"leidas": 39,
+			"fallidas": 1,
 			"ultimaLectura": "2026-10-28"
 		}
 	}
