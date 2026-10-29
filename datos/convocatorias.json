@@ -1,6 +1,1075 @@
 {
-	"actualizado": "2026-10-29T11:41:48.993Z",
+	"actualizado": "2026-10-29T19:45:36.001Z",
 	"convocatorias": [
+		{
+			"codigo": "938863",
+			"titulo": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES EN REGIMEN DE   CONCURRENCIA COMPETITIVA EN EL MARCO DE LAS BASES REGULADORAS ESPECIFICAS PARA EL OTORGAMIENTO DE LAS SUBVENCIONES PARA IMPULSAR LA ACTUALIZACION TECNOLOGICA Y MEJORA DE LOS ESTABLECIMIENTOS",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "MARTORELLES",
+				"nivel3": "AYUNTAMIENTO DE MARTORELLES"
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 5000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES511",
+					"nombre": "Barcelona"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-02",
+			"fin": "2026-11-15",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://bop.diba.cat/anunci/4007031/bases-reguladores-per-a-la-convocatoria-d-ajuts-per-impulsar-l-actualitzacio-tecnologica-i-millora-dels-establiments-comercials-i-de-serveis-versio-en-catala-i-castella-ajuntament-de-martorelles",
+			"documento": {
+				"id": 1547141,
+				"nombre": "D.A._28.10._-APROVACIÓ_CONVOCATÒRIA_DAJUTS__IMPULS_ACTUALITZACIO_TECNOLOGICA.pdf"
+			},
+			"docs": [
+				1547141
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938863",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para pequeños comercios y empresas de servicios destinadas a realizar mejoras tecnológicas, reformas en el local o compra de equipamiento.",
+				"paraQuien": "Autónomos y empresas que realicen una actividad comercial o de servicios en Martorelles.",
+				"importe": "El presupuesto total municipal es de 5.000 € (no se detalla el importe individual por negocio).",
+				"importeMaximo": null,
+				"plazo": "Desde la publicación en la BDNS hasta el 15 de noviembre de 2026.",
+				"plazoFin": "2026-11-15",
+				"requisitos": [
+					"Tener un negocio o actividad comercial o de servicios en el término municipal de Martorelles.",
+					"Haber iniciado la actividad antes de la entrada en vigor de la convocatoria."
+				],
+				"gastos": [
+					"Inversiones en tecnología para el establecimiento.",
+					"Obras de mejora en el local.",
+					"Compra de bienes o elementos inventariables."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Martorelles"
+				},
+				"dudas": "No se indica en el documento el límite máximo ni el porcentaje subvencionable por cada solicitud."
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938851",
+			"titulo": "Convocatoria del primer premio “Dulcinea con Talento #Cohesión territorial en femenino” Aula Gen Z y Despoblación de la Universidad de Castilla-La Mancha. Año 2026",
+			"organo": {
+				"nivel1": "OTROS",
+				"nivel2": "UNIVERSIDAD DE CASTILLA-LA MANCHA",
+				"nivel3": null
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Investigación, desarrollo e innovación",
+			"inicio": "2026-10-29",
+			"fin": "2026-11-27",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.uclm.es/es/empresas/mecenazgo/catedrasaulasempresa/aula-gen-z-y-despoblacion",
+			"documento": {
+				"id": 1547108,
+				"nombre": "Convocatoria-1er-premio_Dulcinea-Aula_GenZ-UCLM-26.pdf"
+			},
+			"docs": [
+				1547108
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938851",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Premios para reconocer e impulsar proyectos de emprendimiento liderados por mujeres jóvenes en el entorno rural de Castilla-La Mancha.",
+				"paraQuien": "Mujeres emprendedoras menores de 35 años cuya actividad económica esté radicada en un municipio rural de Castilla-La Mancha.",
+				"importe": "1º Premio: 1.000 €, 2º Premio: 500 € y hasta dos accésits de 250 € cada uno.",
+				"importeMaximo": 1000,
+				"plazo": "Hasta las 23:59 horas del 27 de noviembre de 2026.",
+				"plazoFin": "2026-11-27",
+				"requisitos": [
+					"Ser una mujer emprendedora menor de 35 años.",
+					"Tener relación con el entorno rural de Castilla-La Mancha.",
+					"La sede social de la actividad debe estar en una localidad de Castilla-La Mancha.",
+					"El proyecto emprendedor debe haberse puesto en marcha hace un máximo de 10 años.",
+					"Estar al corriente de las obligaciones tributarias y de la Seguridad Social.",
+					"No estar incursa en ninguna prohibición legal para ser beneficiaria."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": 120,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938828",
+			"titulo": "Bases y convocatoria del programa \"Bono Consumo Cocentaina 2026\" de ayudas económicas para potenciar, junto con el Ayuntamiento, el comercio local y los sectores de la hostelería y servicios del municipio de Cocentaina",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "COCENTAINA",
+				"nivel3": "AYUNTAMIENTO DE COCENTAINA"
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 202475,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "02 de noviembre de 2.026",
+			"textoFin": "30 de noviembre de 2.026",
+			"bases": "https://www.dip-alicante.es/bop2/pdftotal/2026/10/08_192/2026_007564.pdf",
+			"documento": {
+				"id": 1547056,
+				"nombre": "20261029_Publicació_Anunci_11. EXTRACTE ANUNCI BOP.pdf"
+			},
+			"docs": [
+				1547056
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938828",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para apoyar el comercio local mediante bonos consumo en Cocentaina.",
+				"paraQuien": "Establecimientos ubicados en el término municipal de Cocentaina.",
+				"importe": "El importe total de la dotación asciende a 202.475,00 euros.",
+				"importeMaximo": null,
+				"plazo": "Del 2 de noviembre de 2026 al 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Estar ubicado en el término municipal de Cocentaina.",
+					"Cumplir los requisitos establecidos en la convocatoria."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cocentaina"
+				},
+				"dudas": "No especifica el importe exacto que recibe cada negocio ni los detalles concretos de los requisitos."
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938821",
+			"titulo": "Convocatòria subvenció impuls activitat empresarial de Mollet del Vallès",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "MOLLET DEL VALLÈS",
+				"nivel3": "AYUNTAMIENTO DE MOLLET DEL VALLÈS"
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 85000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES511",
+					"nombre": "Barcelona"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "20 días naturales desde la publicación al BOPB",
+			"textoFin": "20 dies naturales des de la publicació al BOPB",
+			"bases": "https://www.molletvalles.cat/",
+			"documento": {
+				"id": 1547049,
+				"nombre": "Anuncio_convocatoria_subvención_impuls_activitat_empresarial_2026.pdf"
+			},
+			"docs": [
+				1547049,
+				1547050
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938821",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda para impulsar la actividad empresarial mediante proyectos que mejoren el atractivo, la competitividad o la funcionalidad del negocio.",
+				"paraQuien": "Empresarios, ya sean personas físicas o jurídicas, con o sin ánimo de lucro, que sean titulares de una actividad empresarial.",
+				"importe": "La dotación máxima total para esta convocatoria es de 85.000 euros.",
+				"importeMaximo": null,
+				"plazo": "20 días naturales a contar desde el día siguiente de la publicación en el Boletín Oficial de la Provincia de Barcelona.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser titular de la actividad empresarial como persona física o jurídica.",
+					"Presentar una breve memoria del proyecto con antecedentes, justificación, objetivos, programa, calendario y coste total.",
+					"Indicar el tipo de establecimiento y el servicio que presta.",
+					"Justificar el gasto según el objeto de la convocatoria y el importe solicitado."
+				],
+				"gastos": [
+					"Renovación exterior",
+					"Renovación interior",
+					"Introducción de nuevas tecnologías",
+					"Supresión de barreras arquitectónicas",
+					"Mejoras en eficiencia energética"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Mollet del Vallès"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el boletín oficial ni el importe máximo que puede recibir cada negocio individualmente."
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938805",
+			"titulo": "CONVOCATORIA PÚBLICA PARA LA CONCESIÓN DE AYUDAS Y SUBVENCIONES, MEDIANTE CONCURRENCIA LIBRE NO COMPETITIVA, PARA LA MEJORA DE LA ACCESIBILIDAD Y EL ESTADO DE CONSERVACIÓN DE LOS EDIFICOS DE VIVIENDAS Y LOCALES COMERCIALES DEL MUNICIPIO,  AÑO 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VILAFRANCA DEL PENEDÈS",
+				"nivel3": "AYUNTAMIENTO DE VILAFRANCA DEL PENEDÈS"
+			},
+			"sede": "https://seu.vilafranca.cat/",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 120000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES511",
+					"nombre": "Barcelona"
+				}
+			],
+			"finalidad": "Infraestructuras",
+			"inicio": null,
+			"fin": "2026-11-20",
+			"textoInicio": "DIA SIGUIENTE A LA PUBLICACIÓN DE LA CONVOCATORIA EL BOPB",
+			"textoFin": null,
+			"bases": "https://seu.vilafranca.cat/",
+			"documento": {
+				"id": 1546987,
+				"nombre": "Convocatòria ajuts accessibiliat 2026-Trasllat_decret-castella.pdf"
+			},
+			"docs": [
+				1546987,
+				1546988
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938805",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para mejorar la accesibilidad y el estado de conservación de edificios de viviendas y locales comerciales en Vilafranca del Penedès.",
+				"paraQuien": "Comunidades de propietarios y otros casos para obras en edificios de viviendas y locales comerciales.",
+				"importe": "Hasta 10.000 euros para comunidades de propietarios y hasta 5.000 euros para el resto de casos.",
+				"importeMaximo": 10000,
+				"plazo": "Desde el día siguiente de su publicación en el BOP hasta el 20 de noviembre de 2026.",
+				"plazoFin": "2026-11-20",
+				"requisitos": [
+					"Las obras deben haberse ejecutado entre el 1 de enero de 2026 y el 30 de junio de 2027.",
+					"Disponer de la licencia o comunicación de obra correspondiente."
+				],
+				"gastos": [
+					"Actuaciones de supresión de barreras arquitectónicas",
+					"Trabajos de conservación y mejora de los edificios de viviendas y locales comerciales"
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Vilafranca del Penedès"
+				},
+				"dudas": "No detalla los requisitos específicos para autónomos o sociedades más allá de ser solicitantes para locales comerciales o edificios."
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938775",
+			"titulo": "Visita feria CIFF I Copenhague",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 4160,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-04",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1546917,
+				"nombre": "CONVOCATORIA VISITA A CIFF I 2027_101943.PDF"
+			},
+			"docs": [
+				1546917,
+				1546918
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938775",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica para que negocios de moda de Castilla-La Mancha viajen como visitantes profesionales a la feria CIFF en Copenhague en febrero de 2027.",
+				"paraQuien": "Autónomos y empresas del sector de la moda que tengan su actividad económica en Castilla-La Mancha.",
+				"importe": "El 65 % del coste del viaje de una persona, con un máximo de 1.040 € de ayuda.",
+				"importeMaximo": 1040,
+				"plazo": "Desde el día siguiente a su publicación en el Diario Oficial de Castilla-La Mancha hasta el 4 de diciembre de 2026.",
+				"plazoFin": "2026-12-04",
+				"requisitos": [
+					"Desarrollar la actividad económica en Castilla-La Mancha.",
+					"Pertenecer al sector de la moda.",
+					"Estar al corriente de pagos con Hacienda, la Junta de Comunidades y la Seguridad Social.",
+					"Estar dado de alta en el RETA si eres autónomo.",
+					"Disponer de plan de prevención de riesgos laborales si la normativa te obliga a ello.",
+					"No ser considerada empresa en crisis.",
+					"No haber recibido otra ayuda pública de la Junta de Castilla-La Mancha para estos mismos gastos.",
+					"No haber sido sancionado por discriminación laboral o por infracciones de igualdad de género."
+				],
+				"gastos": [
+					"Desplazamiento y alojamiento de una persona para visitar la feria entre el 1 y el 5 de febrero de 2027."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "938754",
+			"titulo": "CONVOCATORIA PREMIOS DE ESCAPARATISMO",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "PATERNA",
+				"nivel3": "AYUNTAMIENTO DE PATERNA"
+			},
+			"sede": "https://sede.paterna.es/opensiac/informacionpublica/tramitesinfo.action?tramitesInfoForm.id=616",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2400,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES52",
+					"nombre": "COMUNIDAD VALENCIANA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-16",
+			"fin": "2026-12-04",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://sede.paterna.es/opensiac/informacionpublica/catalogos_retrieve.action?idCatalogo=24",
+			"documento": {
+				"id": 1546841,
+				"nombre": "Decreto convocatoria.pdf"
+			},
+			"docs": [
+				1546841
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938754",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de escaparatismo navideño que premia las mejores decoraciones de escaparates para mejorar la imagen comercial y fomentar el ambiente festivo en el municipio.",
+				"paraQuien": "Comerciantes y empresas de servicios cuya actividad comercial se desarrolle en Paterna.",
+				"importe": "Primer premio: 1.200 €, segundo premio: 750 €, tercer premio: 450 €.",
+				"importeMaximo": 1200,
+				"plazo": "Del 16 de noviembre al 4 de diciembre de 2026.",
+				"plazoFin": "2026-12-04",
+				"requisitos": [
+					"Desarrollar la actividad comercial en el municipio de Paterna.",
+					"Inscribirse a través de la sede electrónica del Ayuntamiento de Paterna.",
+					"Estar al corriente de pagos con la Hacienda, la Seguridad Social y el Ayuntamiento.",
+					"No tener ninguna prohibición legal para recibir subvenciones.",
+					"Tener la decoración terminada el 10 de diciembre y mantenerla hasta el 6 de enero de 2027."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Paterna"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938740",
+			"titulo": "Acuerdo de 05 de octubre de 2026 de Junta de Gobierno Local, por el que se aprueban las Bases reguladoras de la organización y celebración del XII Concurso de Belenes 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VILLANUEVA DEL PARDILLO",
+				"nivel3": "AYUNTAMIENTO DE VILLANUEVA DEL PARDILLO"
+			},
+			"sede": "https://www.vvapardillo.org/",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 900,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": "2026-10-05",
+			"fin": "2026-12-09",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.vvapardillo.org/images/doc/cultura/2026/BASES%20CONCURSO%20BELENES2026.pdf",
+			"documento": {
+				"id": 1546818,
+				"nombre": "Certificado JGL.pdf"
+			},
+			"docs": [
+				1546818,
+				1546819
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938740",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Acuerdo municipal por el que se aprueban las bases del XII Concurso de Belenes 2026 para promover las tradiciones populares de las fiestas navideñas.",
+				"paraQuien": "No consta en el documento quién puede participar (las bases completas no vienen incluidas).",
+				"importe": "No consta la cuantía ni los premios en el documento.",
+				"importeMaximo": null,
+				"plazo": "El plazo finaliza el 9 de diciembre de 2026 (según registro oficial en la BDNS).",
+				"plazoFin": "2026-12-09",
+				"requisitos": [
+					"No constan en el texto del acuerdo publicado."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "El documento es únicamente el certificado de aprobación del acuerdo y no incluye el contenido de las bases con los premios, categorías o requisitos de participación."
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "938732",
+			"titulo": "CONVOCATORIA IV CONCURSO DE DECORACIÓN NAVIDEÑA DE BALCONES, VENTANAS Y OTROS ELEMENTOS ARQUITECTÓNICOS",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "NAVARRETE",
+				"nivel3": "AYUNTAMIENTO DE NAVARRETE"
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 350,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES23",
+					"nombre": "LA RIOJA"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente al de la publicación del extracto de la convocatoria en el B.O.R.",
+			"textoFin": "Hasta las 13:00 h. del 16/12/2026 (Hora peninsular)",
+			"bases": "https://navarrete.sedelectronica.es/preview-document/e1bd9b68-0343-4bcd-82e4-a7bac9e4ff6b/",
+			"documento": {
+				"id": 1546801,
+				"nombre": "9. EXTRACTO ANUNCIO BDNS.pdf"
+			},
+			"docs": [
+				1546801
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938732",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña para balcones, ventanas, jardines y elementos arquitectónicos de viviendas en Navarrete.",
+				"paraQuien": "Personas mayores de edad propietarias o inquilinas de una vivienda en Navarrete, así como empresas, sociedades y asociaciones.",
+				"importe": "200 € para la decoración más navideña y 150 € para la más sostenible (menos retenciones de IRPF).",
+				"importeMaximo": 200,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el Boletín Oficial de La Rioja hasta las 13:00 h del 16 de diciembre de 2026.",
+				"plazoFin": "2026-12-16",
+				"requisitos": [
+					"Ser mayor de edad y ser propietario o inquilino de una vivienda en Navarrete.",
+					"Pueden participar personas a título individual, asociaciones, empresas y sociedades.",
+					"La decoración debe ser visible desde la calle o desde espacios comunes.",
+					"Hay que mantener la decoración instalada del 16 de diciembre de 2026 al 6 de enero de 2027.",
+					"Cada vivienda solo puede participar una vez."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Navarrete"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938728",
+			"titulo": "Convocatoria de movilidad para Personal Docente e Investigador (PDI) de la Universidad de Salamanca. Proyecto Erasmus KA-171. Ruanda.",
+			"organo": {
+				"nivel1": "OTROS",
+				"nivel2": "UNIVERSIDAD DE SALAMANCA",
+				"nivel3": null
+			},
+			"sede": "sede.usal.es",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2518,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "XXXX",
+					"nombre": "TODO EL MUNDO"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": "2026-11-02",
+			"fin": "2026-11-09",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://internacional.usal.es/wp-content/uploads/sites/194/2026/04/bases-reguladoras-convocatorias-ayudas-programa-movilidad-erasmus-pdi-ptgas.pdf",
+			"documento": {
+				"id": 1546792,
+				"nombre": "Convocatoria_KA171_2025_PDI_Ruanda_firmada.pdf"
+			},
+			"docs": [
+				1546792,
+				1546794
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938728",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Beca de movilidad Erasmus+ para que un docente o investigador de la Universidad de Salamanca realice una estancia de enseñanza de 5 días en la Universidad de Ruanda.",
+				"paraQuien": "Personal Docente e Investigador (PDI) en nómina de la Universidad de Salamanca del área de Físicas.",
+				"importe": "Hasta 2.518 € en total: 1.188 € para el viaje más 190 € al día por manutención y estancia (5 días de trabajo y hasta 2 días de viaje).",
+				"importeMaximo": 2518,
+				"plazo": "Desde el 2 hasta el 9 de noviembre de 2026 en la sede electrónica de la USAL.",
+				"plazoFin": "2026-11-09",
+				"requisitos": [
+					"Formar parte de la plantilla en nómina como PDI de la Universidad de Salamanca tanto al pedirla como durante el viaje.",
+					"Pertenecer al área de estudio de Físicas.",
+					"Contar con el visto bueno de la dirección del departamento.",
+					"Comprometerse a impartir un mínimo de 8 horas lectivas durante la estancia.",
+					"Tener el programa de enseñanza aprobado por ambas universidades antes de viajar."
+				],
+				"gastos": [
+					"Billetes de desplazamiento (ida y vuelta).",
+					"Alojamiento y manutención (dietas por día)."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "938721",
+			"titulo": "Feria Marca",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 37440,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "10",
+					"nombre": "Industria alimentaria"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-11-27",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1546789,
+				"nombre": "CONVOCATORIA FERIA MARCA 2027_081018.PDF"
+			},
+			"docs": [
+				1546789,
+				1546790
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938721",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para apoyar a negocios del sector alimentario de Castilla-La Mancha en su participación en la feria internacional Marca 2027 en Bolonia (Italia).",
+				"paraQuien": "Autónomos, empresas, cooperativas y agrupaciones del sector de la alimentación que tengan actividad económica en Castilla-La Mancha.",
+				"importe": "Hasta 4.680 € por negocio, cubriendo el 65 % del coste del stand (fijado en 7.200 €).",
+				"importeMaximo": 4680,
+				"plazo": "Hasta el 27 de noviembre de 2026.",
+				"plazoFin": "2026-11-27",
+				"requisitos": [
+					"Desarrollar la actividad económica en el sector alimentario dentro de Castilla-La Mancha.",
+					"Tener contratado previamente un stand dentro del pabellón español en la feria.",
+					"Estar al corriente de obligaciones tributarias, Seguridad Social y reintegro de subvenciones.",
+					"Disponer de un plan de prevención de riesgos laborales si está obligado a ello.",
+					"No haber recibido otra ayuda de la Junta de Castilla-La Mancha para estos mismos gastos.",
+					"No haber sido sancionado por falta muy grave en prevención de riesgos o discriminación laboral.",
+					"No superar el límite de 300.000 € en ayudas minimis durante tres años."
+				],
+				"gastos": [
+					"Alquiler del espacio expositivo",
+					"Acondicionamiento del stand"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "938705",
+			"titulo": "SUBVENCIÓN POR CONCURRENCIA COMPETITIVA: CONCURSO DE DECORACIÓN NAVIDEÑA “ILUMINA MONFORTE”, ANUALIDAD 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "MONFORTE DEL CID",
+				"nivel3": "AYUNTAMIENTO DE MONFORTE DEL CID"
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1750,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la publicación del extracto de la convocatoria en el B.O.P. de Alicante",
+			"textoFin": "HASTA LAS 14:00 HORAS DEL 4 DE DICIEMBRE DE 2026",
+			"bases": "http://www.dip-alicante.es/bop2/pdftotal/2021/03/25_57/2021_003355.pdf",
+			"documento": {
+				"id": 1546736,
+				"nombre": "20261028_Otros_DECRETO 2026-1357 [0.7 Decreto de Alcaldía].pdf"
+			},
+			"docs": [
+				1546736,
+				1546740,
+				1546742,
+				1546744
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938705",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña para incentivar y premiar el adorno de escaparates e interiores de locales comerciales y hosteleros de Monforte del Cid.",
+				"paraQuien": "Comercios, locales hosteleros, particulares y colectivos del municipio de Monforte del Cid.",
+				"importe": "En la categoría Comercio/Hostelería: 1.º premio de 500 €, 2.º premio de 300 € y 3.º premio de 100 €.",
+				"importeMaximo": 500,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el BOP de Alicante hasta las 14:00 horas del 4 de diciembre de 2026.",
+				"plazoFin": "2026-12-04",
+				"requisitos": [
+					"Tener el establecimiento ubicado en el municipio de Monforte del Cid.",
+					"Estar de alta y contar con todos los permisos necesarios para la actividad comercial.",
+					"Estar al corriente de las obligaciones con Hacienda, la Seguridad Social y el Ayuntamiento.",
+					"No tener subvenciones pendientes de justificar fuera de plazo con el Ayuntamiento.",
+					"Mantener la decoración expuesta del 21 de diciembre de 2026 al 10 de enero de 2027.",
+					"Incluir visiblemente en la decoración el nombre del concurso: ILUMINA MONFORTE."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Monforte del Cid"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "938668",
+			"titulo": "Baes reguladoras y convocatoria para la concesión de subvenciones destinadas  a personas deportistas y entidades deportivas del municipio de Manacor del año 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "MANACOR",
+				"nivel3": "AYUNTAMIENTO DE MANACOR"
+			},
+			"sede": "https://manacor.eadministracio.cat/info.5",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "93.1",
+					"nombre": "Actividades deportivas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES53",
+					"nombre": "ILLES BALEARS"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://manacor.eadministracio.cat/info.5",
+			"documento": {
+				"id": 1546590,
+				"nombre": "bases castella.pdf"
+			},
+			"docs": [
+				1546590,
+				1546591
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938668",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas del Ayuntamiento de Manacor para financiar actividades de escuelas deportivas, deporte federado, participación de deportistas individuales en competiciones fuera de Mallorca y organización de eventos deportivos.",
+				"paraQuien": "Clubes, entidades y asociaciones deportivas sin ánimo de lucro de Manacor, y deportistas individuales empadronados en el municipio.",
+				"importe": "Hasta 4.000 € para deporte federado o eventos deportivos, hasta 1.300 € para escuelas de iniciación y hasta 600 € por competición para deportistas individuales (máximo el 75 % del coste total).",
+				"importeMaximo": 4000,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de las Islas Baleares (BOIB).",
+				"plazoFin": null,
+				"requisitos": [
+					"Las entidades deben ser sin ánimo de lucro y tener domicilio social en Manacor.",
+					"Las entidades deben estar inscritas en el Registro de Entidades Deportivas de Baleares y en el Registro Municipal de Manacor.",
+					"Estar afiliadas o adscritas a la federación deportiva correspondiente (para escuelas y deporte federado).",
+					"Los deportistas individuales deben estar empadronados en Manacor y tener licencia federativa en vigor.",
+					"Realizar las actividades deportivas entre el 1 de noviembre de 2025 y el 31 de diciembre de 2026.",
+					"Estar al corriente de las obligaciones tributarias con Hacienda, la Seguridad Social y el Ayuntamiento de Manacor."
+				],
+				"gastos": [
+					"Licencias, cuotas e inscripciones en competiciones",
+					"Arbitrajes, jueces y servicios técnicos",
+					"Desplazamientos, transporte y alojamiento",
+					"Material deportivo fungible, ropa y equipamiento específico",
+					"Sueldos o servicios de personal técnico, entrenadores y monitores",
+					"Alquiler de instalaciones deportivas y seguros",
+					"Trofeos, medallas, avituallamiento y servicios sanitarios en eventos",
+					"Gastos de comunicación, publicidad y difusión"
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Manacor"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938645",
+			"titulo": "CONVOCATORIA DE AYUDAS AL SECTOR AGRÍCOLA Y GANADERO DE YECLA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "YECLA",
+				"nivel3": "AYUNTAMIENTO DE YECLA"
+			},
+			"sede": "yecla.sedipualba.es",
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES62",
+					"nombre": "REGION DE MURCIA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "7 días naturales posteriores a la publicación del anuncio en el BORM",
+			"textoFin": "Transcurridos 7 días naturales posteriores a la publicación del anuncio en el BORM",
+			"bases": "https://yecla.sedipualba.es/firma/documento.aspx?csv=H7AACTN4Y7RQ4RN2HP3Q&modo=abrir",
+			"documento": {
+				"id": 1546537,
+				"nombre": "CERTIJUNTA 27-10-26_ 9º. CONVOCATORIA AYUDAS SECTOR AGRÍCOLA Y GANADERO... - SEFYCU 4520067.pdf"
+			},
+			"docs": [
+				1546537
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938645",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas directas del Ayuntamiento de Yecla para agricultores y ganaderos para hacer frente al aumento de los costes de producción.",
+				"paraQuien": "Titulares de explotaciones agrícolas y ganaderas de Yecla a tiempo completo.",
+				"importe": "Hasta 1.000,00 € por cada persona beneficiaria, dependiendo del número total de solicitudes.",
+				"importeMaximo": 1000,
+				"plazo": "7 días naturales posteriores a la publicación del anuncio en el BORM.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar inscrito en el Sistema Especial para Trabajadores por Cuenta Propia Agrarios o ganaderos a tiempo completo.",
+					"Que la explotación agraria se encuentre en el término municipal de Yecla.",
+					"Estar empadronado en el municipio de Yecla al menos 5 años."
+				],
+				"gastos": [
+					"Reparación y alquiler de maquinaria",
+					"Compras de piensos para la alimentación pecuaria",
+					"Compras de productos fitosanitarios químicos no biotecnológicos",
+					"Compras de productos fertilizantes químicos no biológicos",
+					"Cuotas pagadas por cotización en la Seguridad Social de los trabajadores por cuenta propia o autónomos"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Yecla"
+				},
+				"dudas": "No se indica la fecha exacta de publicación en el BORM, por lo que no se puede calcular el último día del plazo."
+			},
+			"comprobada": "2026-10-29",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
 		{
 			"codigo": "938604",
 			"titulo": "Convocatoria de ayuda a las explotaciones agrícolas y ganaderas del Principado de Asturias para paliar los daños ocasionados por determinados incendios forestales ocurridos durante el meses de agosto de 2025.",
@@ -15505,15 +16574,15 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-10-29T11:41:48.993Z",
+			"fecha": "2026-10-29T19:45:36.001Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 181,
+			"fichasComprobadas": 0,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-10-29T11:57:45.960Z",
+			"fecha": "2026-10-29T20:12:11.062Z",
 			"pendientes": 0,
-			"leidas": 5,
+			"leidas": 14,
 			"fallidas": 0,
 			"ultimaLectura": "2026-10-29"
 		}
