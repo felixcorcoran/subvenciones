@@ -1,6 +1,877 @@
 {
-	"actualizado": "2026-10-30T11:33:47.927Z",
+	"actualizado": "2026-10-30T19:34:53.325Z",
 	"convocatorias": [
+		{
+			"codigo": "939101",
+			"titulo": "Convocatoria Premio Alimentos de España Mejores Aceites de Oliva Virgen Extra, campaña 2026-2027.",
+			"organo": {
+				"nivel1": "ESTADO",
+				"nivel2": "MINISTERIO DE AGRICULTURA, PESCA Y ALIMENTACIÓN",
+				"nivel3": "DIRECCIÓN GENERAL DE ALIMENTACIÓN"
+			},
+			"sede": null,
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 0.01,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES",
+					"nombre": "ESPAÑA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": "2026-12-03",
+			"textoInicio": "A partir del día siguiente de la publicación del extracto de la convocatoria en el BOE",
+			"textoFin": null,
+			"bases": "https://www.boe.es/boe/dias/2023/04/19/pdfs/BOE-A-2023- 9624.pdf",
+			"documento": {
+				"id": 1547856,
+				"nombre": "report_Convocatoria PAE Mejores AOVEs 2026-2027.pdf"
+			},
+			"docs": [
+				1547856
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939101",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso oficial para reconocer y promocionar los mejores aceites de oliva virgen extra españoles de la campaña 2026-2027.",
+				"paraQuien": "Almazaras autorizadas que tengan su sede social en España.",
+				"importe": "Sin asignación económica. Consiste en un diploma acreditativo y un distintivo de excelencia.",
+				"importeMaximo": null,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el BOE hasta el 3 de diciembre de 2026.",
+				"plazoFin": "2026-12-03",
+				"requisitos": [
+					"Tener la sede social en España y ser una almazara autorizada.",
+					"Presentar un lote de aceite a granel de al menos 10.000 kg de la campaña 2026-2027.",
+					"El aceite debe proceder de aceitunas recolectadas en España.",
+					"Estar al corriente en el pago de las obligaciones tributarias y de la Seguridad Social.",
+					"No haber sido sancionado en firme en los últimos dos años por infracciones agroalimentarias.",
+					"No tener una resolución firme que retire la autorización de la almazara.",
+					"En la modalidad ecológica, contar con la certificación oficial en vigor."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939097",
+			"titulo": "APROBACIÓN DE BASES Y CONVOCATORIA DEL XXIV CONCURSO De ENGALANAMIENTO De ESCAPARATES COMERCIALES, Y DEL VII DE ENGALANAMIENTO DE FACHADAS Y BALCONES, PARA LA NAVIDAD DE 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "LLÍRIA",
+				"nivel3": "AYUNTAMIENTO DE LLÍRIA"
+			},
+			"sede": "llíria.es",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1300,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47.1",
+					"nombre": "Comercio al por menor no especializado"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde la publicación de la convocatoria en el BOP",
+			"textoFin": "09 de diciembre 2026",
+			"bases": "lliria.es",
+			"documento": {
+				"id": 1547854,
+				"nombre": "04. PROPORSTA PROVACIÓ DE BASES I CONVOCATÒRIA DEL XXIV CAST. BNS.docx"
+			},
+			"docs": [
+				1547854,
+				1547855
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939097",
+			"ia": null,
+			"comprobada": "2026-10-30",
+			"iaIntentos": 1,
+			"iaIntentadoEl": "2026-10-30",
+			"iaError": "no es un PDF (04. PROPORSTA PROVACIÓ DE BASES I CONVOCATÒRIA DEL XXIV CAST. BNS.docx)"
+		},
+		{
+			"codigo": "939068",
+			"titulo": "37 CONVOCATORIA BECA DE ESTUDIOS MUSICALES ANTONIO PÉREZ VERDÚ",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALCOY/ALCOI",
+				"nivel3": "AYUNTAMIENTO DE ALCOY/ALCOI"
+			},
+			"sede": null,
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2250,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "15 DIAS NATURALES A PARTIR DEL DIA SIGUIENTE A LA PUBLICACIÓN EN EL BOLETIN OFICIAL DE LA PROVINCIA",
+			"textoFin": "15 DIAS NATURALES A PARTIR DEL DIA SIGUIENTE A LA PUBLICACIÓN EN EL BOLETIN OFICIAL DE LA PROVINCIA",
+			"bases": "https://sedeelectronica.alcoi.org/export/sites/sede/es/generales/areas/secretaria/ordenanzas/descarga/ordenanza_subvenciones_2015.pdf",
+			"documento": {
+				"id": 1547755,
+				"nombre": "Certificado_de_acuerdo_de_JGL-2.pdf"
+			},
+			"docs": [
+				1547755
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939068",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Beca para ayudar a un músico novel a realizar estudios de perfeccionamiento musical durante el curso 2026-2027.",
+				"paraQuien": "Personas de hasta 30 años que hayan terminado el Grado Profesional de Música y estén vinculadas a la ciudad de Alcoy.",
+				"importe": "2.250 € por beneficiario",
+				"importeMaximo": 2250,
+				"plazo": "15 días naturales a partir del día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Alicante.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener como máximo 30 años.",
+					"Haber finalizado los estudios de Grado Profesional de Música.",
+					"Tener vinculación con Alcoy por nacimiento, residencia, formación o participación en sus entidades musicales.",
+					"Estar al corriente de pagos con Hacienda y la Seguridad Social.",
+					"No tener deudas pendientes con el Ayuntamiento de Alcoy.",
+					"No tener pendiente la justificación de subvenciones municipales anteriores."
+				],
+				"gastos": [
+					"Estudios de perfeccionamiento musical durante el curso lectivo y/o las anualidades 2026-2027."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Alcoy"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939063",
+			"titulo": "Convocatoria Pyme Global 2026, Misión comercial a Cabo Verde (Santiago), que tendrá lugar del 14 al 16 de diciembre de 2026 para las empresas de Gran Canaria.",
+			"organo": {
+				"nivel1": "OTROS",
+				"nivel2": "CÁMARA DE COMERCIO DE GRAN CANARIA",
+				"nivel3": null
+			},
+			"sede": "https://sede.camara.es/sede/grancanaria",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 9651.4,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "P",
+					"nombre": "ADMINISTRACIÓN PÚBLICA Y DEFENSA; SEGURIDAD SOCIAL OBLIGATORIA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				},
+				{
+					"codigo": "V",
+					"nombre": "ORGANISMOS EXTRATERRITORIALES"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES705",
+					"nombre": "Gran Canaria"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": "2026-11-17",
+			"textoInicio": "A las 8.00 hora canaria del día siguiente hábil de la publicación en el BOP Las Palmas",
+			"textoFin": "A las 14:00h (hora canaria)",
+			"bases": "https://sede.camara.es/sede/grancanaria",
+			"documento": {
+				"id": 1547733,
+				"nombre": "2026_Modelo de convocatoria de ayudas_Pyme Global_MCCaboVerde2026.pdf"
+			},
+			"docs": [
+				1547733,
+				1547734,
+				1547735,
+				1547737
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939063",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica para participar en una misión comercial en Cabo Verde entre el 14 y el 16 de diciembre de 2026. Cubre el 85 % de los gastos del viaje y de la agenda de reuniones.",
+				"paraQuien": "Pequeñas y medianas empresas y autónomos con centro de trabajo en Gran Canaria que tengan interés comercial en Cabo Verde.",
+				"importe": "Hasta 1.640,74 € por empresa para un participante, o hasta 2.371,98 € si viajan dos personas (cubre el 85 % del gasto elegible).",
+				"importeMaximo": 2371.98,
+				"plazo": "Desde las 8:00 horas del día hábil siguiente a la publicación en el BOP hasta el 17 de noviembre de 2026 a las 14:00 horas (hora canaria), o hasta agotar presupuesto.",
+				"plazoFin": "2026-11-17",
+				"requisitos": [
+					"Tener domicilio social o centro productivo en la demarcación de la Cámara de Gran Canaria.",
+					"Haber facturado al menos 100.000 € en la última anualidad.",
+					"Tener una plantilla media de al menos 2 empleados en el año 2025.",
+					"Estar dado de alta en el Impuesto de Actividades Económicas (IAE).",
+					"Estar al día en los pagos con Hacienda y la Seguridad Social.",
+					"No ser autónomo societario ni autónomo colaborador.",
+					"Quedan excluidas las comunidades de bienes, sociedades civiles y entidades sin ánimo de lucro.",
+					"Cumplir la regla de minimis de no superar 300.000 € en ayudas en los últimos tres años."
+				],
+				"gastos": [
+					"Gastos de transporte y viaje",
+					"Alojamiento y manutención durante los 3 días de la actividad",
+					"Elaboración de la agenda de trabajo en destino (hasta 1.000 €)",
+					"Costes indirectos (7 % fijo sobre los costes directos)"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939038",
+			"titulo": "CONVOCATORIA SUBVENCIONES DESTINADAS A LA ADQUISICIÓN DE LOS BONOS CONSUMO SAX 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SAX",
+				"nivel3": "AYUNTAMIENTO DE SAX"
+			},
+			"sede": "https://bonosconsumosax.es",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 188337,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-09",
+			"fin": "2026-12-13",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://sax.sedelectronica.es/preview-document/ce56d2c0-89cd-43fe-84e3-2b926da850d6/",
+			"documento": {
+				"id": 1547691,
+				"nombre": "20261029_Resolución_DECRETO 2026-1850 [Resolución PR_2026_1839 - Actuación genérica con fiscalización] (1).pdf"
+			},
+			"docs": [
+				1547691
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939038",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Campaña de bonos consumo para impulsar el comercio local en Sax. Los vecinos empadronados obtienen bonos descuento y los comercios adheridos reciben el dinero descontado tras validarlo en la plataforma.",
+				"paraQuien": "Comercios y negocios con establecimiento en Sax que se adhieran a la campaña, y vecinos mayores de 18 años empadronados en el municipio.",
+				"importe": "Hasta 100 € en bonos por vecino empadronado. El presupuesto total asignado es de 188.337 €.",
+				"importeMaximo": 100,
+				"plazo": "Descarga y uso de bonos por tramos desde el 9 de noviembre hasta el 13 de diciembre de 2026.",
+				"plazoFin": "2026-12-13",
+				"requisitos": [
+					"Tener el establecimiento donde se ejerce la actividad localizado en el término municipal de Sax.",
+					"Estar dado de alta en el censo tributario y en la Seguridad Social.",
+					"Estar al corriente de pagos con Hacienda Estatal, Autonómica, Ayuntamiento de Sax y Seguridad Social.",
+					"No estar incurso en las prohibiciones generales para recibir subvenciones.",
+					"No pertenecer a sectores excluidos como tabaco, farmacia, vehículos, combustibles o alimentación de más de 400 m2.",
+					"Registrarse como establecimiento colaborador en la plataforma web habilitada."
+				],
+				"gastos": [
+					"Ventas de bienes o servicios realizadas en el establecimiento por un importe mínimo de 20 € por cada bono de 10 € utilizado."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sax"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "939012",
+			"titulo": "ORDEN AGA//2026, de 26 de octubre, por la que se convocan subvenciones en materia de transformación y comercialización de productos de la pesca, para el periodo 2021-2027,cofinanciadas por el FEMPA y la C.A. de Aragón, para el año 2027",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ARAGÓN",
+				"nivel3": "DIRECCIÓN GENERAL DE INNOVACIÓN Y PROMOCIÓN AGROALIMENTARIA"
+			},
+			"sede": "https://aragon.es/tramites",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 992812.22,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES24",
+					"nombre": "ARAGON"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Al día siguiente de la publicación de la orden en el Boletín Oficial de Aragón",
+			"textoFin": "15 días hábiles a contar desde el día siguiente al de la publicación de la convocatoria en el BOA",
+			"bases": "https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=1362053240404&type=pdf",
+			"documento": {
+				"id": 1547612,
+				"nombre": "CSVPC05KGI6LD110XFIL 14070 Orden AGA TRANSFORMACION_DE_LA_PESCA_2027.pdf"
+			},
+			"docs": [
+				1547612
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939012",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para realizar inversiones en actividades de transformación y comercialización de productos de la pesca y la acuicultura en Aragón.",
+				"paraQuien": "Autónomos y PYMEs (microempresas, pequeñas y medianas empresas) del sector pesquero o de la transformación y comercialización de productos pesqueros y acuícolas.",
+				"importe": "Hasta el 50 % de la inversión subvencionable, con un máximo de 700.000 € por proyecto. El proyecto debe superar los 100.000 € de inversión total.",
+				"importeMaximo": 700000,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de Aragón.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser autónomo o PYME según la definición comunitaria.",
+					"Realizar la inversión dentro del territorio de Aragón.",
+					"Acreditar la viabilidad económica de la empresa y la viabilidad técnica y económica del proyecto.",
+					"Cumplir las normas mínimas en medio ambiente, higiene y salud pública.",
+					"Estar al corriente de pagos con la Hacienda pública y la Seguridad Social.",
+					"Presentar un proyecto con una inversión total no inferior a 100.000 €.",
+					"Si la ayuda supera 30.000 €, cumplir los plazos de pago a proveedores de la ley de morosidad.",
+					"Aportar al menos tres ofertas de distintos proveedores para cada gasto solicitado."
+				],
+				"gastos": [
+					"Construcción, ampliación, modernización o acondicionamiento de inmuebles.",
+					"Adquisición de maquinaria, instalaciones y equipos de primer uso.",
+					"Costes generales como honorarios de técnicos, asesores y estudios de viabilidad (máximo 8 %).",
+					"Programas informáticos vinculados a producción y comercialización.",
+					"Elementos de transporte interno del proyecto.",
+					"Equipos y mobiliario para laboratorio."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "938963",
+			"titulo": "Resolución de 28 de octubre de 2026, del Director del Instituto de Fomento de la Región de Murcia, por delegación, de convocatoria de ayudas a la participación en ferias, eventos y misiones comerciales. Feria Macfruit-Growtech Europe. Italia 2027.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "REGIÓN DE MURCIA",
+				"nivel3": "INSTITUTO DE FOMENTO DE LA REGIÓN DE MURCIA (INFO)"
+			},
+			"sede": "https://sede.institutofomentomurcia.es/infodirecto",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 58800,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01.6",
+					"nombre": "Actividades de apoyo a la agricultura, a la ganadería y de preparación posterior a la cosecha"
+				},
+				{
+					"codigo": "94.1",
+					"nombre": "Actividades de organizaciones empresariales, profesionales y patronales"
+				},
+				{
+					"codigo": "36",
+					"nombre": "Captación, depuración y distribución de agua"
+				},
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47.4",
+					"nombre": "Comercio al por menor de equipos para las tecnologías de la información y las comunicaciones"
+				},
+				{
+					"codigo": "42.9",
+					"nombre": "Construcción de otros proyectos de ingeniería civil"
+				},
+				{
+					"codigo": "20.6",
+					"nombre": "Fabricación de fibras artificiales y sintéticas"
+				},
+				{
+					"codigo": "28",
+					"nombre": "Fabricación de maquinaria y equipo n.c.o.p."
+				},
+				{
+					"codigo": "27.1",
+					"nombre": "Fabricación de motores, generadores y transformadores eléctricos, y de aparatos de distribución y control eléctrico"
+				},
+				{
+					"codigo": "27.9",
+					"nombre": "Fabricación de otro material y equipo eléctrico"
+				},
+				{
+					"codigo": "20.5",
+					"nombre": "Fabricación de otros productos químicos"
+				},
+				{
+					"codigo": "20.2",
+					"nombre": "Fabricación de pesticidas, desinfectantes y otros productos agroquímicos"
+				},
+				{
+					"codigo": "27.2",
+					"nombre": "Fabricación de pilas y acumuladores eléctricos"
+				},
+				{
+					"codigo": "24.1",
+					"nombre": "Fabricación de productos básicos de hierro, acero y ferroaleaciones"
+				},
+				{
+					"codigo": "22",
+					"nombre": "Fabricación de productos de caucho y plásticos"
+				},
+				{
+					"codigo": "16.2",
+					"nombre": "Fabricación de productos de madera, corcho, cestería y espartería"
+				},
+				{
+					"codigo": "26",
+					"nombre": "Fabricación de productos informáticos, electrónicos y ópticos"
+				},
+				{
+					"codigo": "25",
+					"nombre": "Fabricación de productos metálicos, excepto maquinaria y equipo"
+				},
+				{
+					"codigo": "20.1",
+					"nombre": "Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias"
+				},
+				{
+					"codigo": "24.2",
+					"nombre": "Fabricación de tubos, tuberías, perfiles huecos y sus accesorios, de acero"
+				},
+				{
+					"codigo": "29",
+					"nombre": "Fabricación de vehículos de motor, remolques y semirremolques"
+				},
+				{
+					"codigo": "32.9",
+					"nombre": "Industrias manufactureras n.c.o.p."
+				},
+				{
+					"codigo": "43.2",
+					"nombre": "Instalaciones eléctricas, de fontanería y otras instalaciones en obras de construcción"
+				},
+				{
+					"codigo": "72",
+					"nombre": "Investigación y desarrollo"
+				},
+				{
+					"codigo": "94.9",
+					"nombre": "Otras actividades asociativas"
+				},
+				{
+					"codigo": "82.9",
+					"nombre": "Otras actividades de apoyo a las empresas n.c.o.p."
+				},
+				{
+					"codigo": "43.9",
+					"nombre": "Otras actividades de construcción especializada"
+				},
+				{
+					"codigo": "70.2",
+					"nombre": "Otras actividades de consultoría de gestión empresarial"
+				},
+				{
+					"codigo": "74.9",
+					"nombre": "Otras actividades profesionales, científicas y técnicas n.c.o.p."
+				},
+				{
+					"codigo": "62",
+					"nombre": "Programación, consultoría y otras actividades relacionadas con la informática"
+				},
+				{
+					"codigo": "33",
+					"nombre": "Reparación, mantenimiento e instalación de maquinaria y equipos"
+				},
+				{
+					"codigo": "95.3",
+					"nombre": "Reparación y mantenimiento de vehículos de motor y motocicletas"
+				},
+				{
+					"codigo": "71",
+					"nombre": "Servicios técnicos de arquitectura e ingeniería; ensayos y análisis técnicos"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES620",
+					"nombre": "Murcia"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": "2026-12-18",
+			"textoInicio": "Desde el día siguiente a la publicación en el BORM.",
+			"textoFin": null,
+			"bases": "https://www.borm.es/services/anuncio/ano/2024/numero/2148/pdf?id=826601",
+			"documento": {
+				"id": 1547436,
+				"nombre": "BORM MACFRUIT GROWTECH 27-Copia.pdf"
+			},
+			"docs": [
+				1547436,
+				1547437,
+				1547438
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938963",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención para apoyar a empresas de la Región de Murcia a participar en la feria Macfruit - Growtech Europe 2027 en Italia.",
+				"paraQuien": "Pymes y comunidades de bienes con actividad en la Región de Murcia dedicadas a la tecnología agrícola, envases, embalajes y maquinaria post-cosecha.",
+				"importe": "Hasta 7.350 € de subvención bruta (70 % del coste elegible)",
+				"importeMaximo": 7350,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el BORM hasta el 18 de diciembre de 2026",
+				"plazoFin": "2026-12-18",
+				"requisitos": [
+					"Ser PYME o comunidad de bienes.",
+					"Tener la actividad del proyecto ubicada en la Región de Murcia.",
+					"Pertenecer al sector de tecnología agrícola, envases, embalajes o maquinaria post-cosecha.",
+					"Estar dado de alta en uno de los códigos de actividad (CNAE) indicados en la convocatoria.",
+					"Abonar la cuota de participación de 3.150 € + IVA.",
+					"Presentar la solicitud telemáticamente con certificado digital."
+				],
+				"gastos": [
+					"Consultoría o asistencia externa especializada en el mercado objetivo.",
+					"Derechos de admisión e inserción en el catálogo oficial.",
+					"Reserva de espacio y alquiler de stand, sala o local.",
+					"Diseño y construcción del stand o local de exposición.",
+					"Servicios de la feria (luz, agua, limpieza, seguridad, etc.).",
+					"Gastos de organización y coordinación de la acción.",
+					"Servicios de intérpretes y traductores."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "Para pedir la ayuda hay que pagar primero 3.150 € + IVA de cuota de participación a la Cámara de Comercio, que solo se devuelve si te quedas fuera por no cumplir requisitos o falta de presupuesto."
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938961",
+			"titulo": "Convocatoria 1/2026. Ayudas LEADER 2023-2027, apoyo a inversiones M01, M02 y M03",
+			"organo": {
+				"nivel1": "OTROS",
+				"nivel2": "SIERRA OESTE - ASOCIACIÓN PARA EL DESARROLLO INTEGRAL DE LA SIERRA OESTE DE MADRID",
+				"nivel3": null
+			},
+			"sede": "https://adisierraoestedemadrid.sedelectronica.es/?x=eG6XSLG589hG7M67jHfFWCDlYZ*xjKnCYEa3yyIcg6Ntj8uxgu63YyStfBaEDgMzQ4wEn*Kt-1cB7HPmetAqE*Rw",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1607562.29,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Publicación Convocatoria",
+			"textoFin": "20 días habiles desde publicación",
+			"bases": "https://www.sierraoeste.org/wp-content/uploads/Resol-Presi.-Conv-1.2026-M01-M03_V2.pdf",
+			"documento": {
+				"id": 1547411,
+				"nombre": "Resol Presi. Conv 1.2026 M01-M03_V2.pdf"
+			},
+			"docs": [
+				1547411,
+				1547418
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938961",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para el apoyo a inversiones en agroindustrialización del sector primario, protección del tejido empresarial y desarrollo de empresas turísticas en la Sierra Oeste de Madrid.",
+				"paraQuien": "Negocios y proyectos situados en los municipios de la Sierra Oeste de Madrid que cumplan los requisitos de las medidas de inversión.",
+				"importe": "La cuantía total máxima de la convocatoria es de 1.607.562,29 euros.",
+				"importeMaximo": null,
+				"plazo": "20 días hábiles contados a partir del día siguiente al de la publicación de esta convocatoria en forma de extracto en el Boletín Oficial de la Comunidad de Madrid.",
+				"plazoFin": null,
+				"requisitos": [
+					"El negocio debe estar en uno de los municipios de la Sierra Oeste de Madrid incluidos en el ámbito de actuación.",
+					"El proyecto debe ajustarse a las características, objetivos y requisitos de las Bases Reguladoras.",
+					"Presentar el modelo de solicitud de ayuda debidamente cumplimentado junto con la documentación requerida.",
+					"Las personas jurídicas deben presentar la solicitud de forma obligatoria a través de la Sede electrónica."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Aldea del Fresno, Batres, Cadalso de los Vidrios, Cenicientos, Chapinería, Colmenar del Arroyo, Fresnedillas de la Oliva, Navalagamella, Navas del Rey, Pelayos de la Presa, Quijorna, Robledo de Chavela, Rozas de Puerto Real, San Martín de Valdeiglesias, Santa María de la Alameda, Valdemaqueda, Valdemorillo, Villa del Prado, Villamanta, Villamantilla, Villanueva de Perales y Zarzalejo"
+				},
+				"dudas": "Las condiciones exactas sobre quién puede ser beneficiario y los gastos permitidos remiten al artículo 3 y 5 de las Bases Reguladoras, que no se incluyen íntegras en este documento."
+			},
+			"comprobada": "2026-10-30",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
 		{
 			"codigo": "938897",
 			"titulo": "CONVOCATORIA SUBVENCIONES EJECUCIÓN PLANES FORMACIÓN PERSONAS TRABAJADORAS OCUPADAS 2026",
@@ -16543,16 +17414,16 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-10-30T11:33:47.927Z",
+			"fecha": "2026-10-30T19:34:53.325Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 196,
+			"fichasComprobadas": 0,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-10-30T11:39:09.548Z",
-			"pendientes": 0,
-			"leidas": 5,
-			"fallidas": 0,
+			"fecha": "2026-10-30T20:01:34.693Z",
+			"pendientes": 1,
+			"leidas": 7,
+			"fallidas": 1,
 			"ultimaLectura": "2026-10-30"
 		}
 	}
