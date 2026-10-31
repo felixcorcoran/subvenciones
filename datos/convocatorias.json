@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-10-31T11:06:30.524Z",
+	"actualizado": "2026-10-31T18:41:37.500Z",
 	"convocatorias": [
 		{
 			"codigo": "939182",
@@ -198,7 +198,7 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939097",
 			"ia": null,
 			"comprobada": "2026-10-31",
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-10-31",
 			"iaError": "no es un PDF (04. PROPORSTA PROVACIÓ DE BASES I CONVOCATÒRIA DEL XXIV CAST. BNS.docx)"
 		},
@@ -17207,7 +17207,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-10-30",
+			"comprobada": "2026-10-31",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17283,7 +17283,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-10-30",
+			"comprobada": "2026-10-31",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -17368,7 +17368,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-10-30",
+			"comprobada": "2026-10-31",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17442,21 +17442,21 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-10-30",
+			"comprobada": "2026-10-31",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-10-31T11:06:30.524Z",
+			"fecha": "2026-10-31T18:41:37.500Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 4,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-10-31T11:20:01.504Z",
-			"pendientes": 1,
-			"leidas": 7,
+			"fecha": "2026-10-31T18:41:37.682Z",
+			"pendientes": 0,
+			"leidas": 0,
 			"fallidas": 1,
 			"ultimaLectura": "2026-10-31"
 		}
