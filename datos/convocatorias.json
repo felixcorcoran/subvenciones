@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-11-01T11:59:37.723Z",
+	"actualizado": "2026-11-01T19:02:27.061Z",
 	"convocatorias": [
 		{
 			"codigo": "939182",
@@ -17116,7 +17116,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-10-31",
+			"comprobada": "2026-11-01",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17192,7 +17192,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-10-31",
+			"comprobada": "2026-11-01",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -17277,7 +17277,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-10-31",
+			"comprobada": "2026-11-01",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17351,19 +17351,19 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-10-31",
+			"comprobada": "2026-11-01",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-01T11:59:37.723Z",
+			"fecha": "2026-11-01T19:02:27.061Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 4,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-01T11:59:38.000Z",
+			"fecha": "2026-11-01T19:02:27.221Z",
 			"pendientes": 0,
 			"leidas": 0,
 			"fallidas": 0,
