@@ -1,6 +1,478 @@
 {
-	"actualizado": "2026-11-02T13:47:36.658Z",
+	"actualizado": "2026-11-02T22:50:58.981Z",
 	"convocatorias": [
+		{
+			"codigo": "939280",
+			"titulo": "Concurso infantil de postales navideñas 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "BERANTEVILLA",
+				"nivel3": "AYUNTAMIENTO DE BERANTEVILLA"
+			},
+			"sede": null,
+			"publicada": "2026-11-02",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "90.1",
+					"nombre": "Actividades de creación artística"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES211",
+					"nombre": "Araba/Álava"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": "2026-11-09",
+			"fin": "2026-11-30",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://berantevilla.es/wp-content/uploads/2026/11/2026_1301_9246929_Decreto_182-2026_Bases_postales_navidenas2026_2026-306.pdf",
+			"documento": {
+				"id": 1548306,
+				"nombre": "2026_1301_9246929_Decreto_182-2026_Bases_postales_navidenas2026_2026--306.pdf"
+			},
+			"docs": [
+				1548306
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939280",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso infantil de postales navideñas en Berantevilla con dos categorías por edades.",
+				"paraQuien": "Niños y niñas de 4 a 12 años, empadronados o no en el municipio.",
+				"importe": "Bono de 50 € en material escolar por categoría para canjear en una librería específica.",
+				"importeMaximo": 50,
+				"plazo": "Desde el 3 hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Tener entre 4 y 12 años de edad.",
+					"Presentar una postal navideña original, inédita y en formato A4.",
+					"Entregar el trabajo en sobre cerrado con código o símbolo para garantizar el anonimato.",
+					"Aportar la autorización firmada por el padre, madre o tutor legal."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939276",
+			"titulo": "Ayudas para compensar el sobrecoste de los fertilizantes como consecuencia de la crisis de Oriente Medio para el año 2026",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ILLES BALEARS",
+				"nivel3": "FONDO DE GARANTÍA AGRARIA Y PESQUERA DE LAS ISLAS BALEARES (FOGAIBA)"
+			},
+			"sede": "http://www.caib.es",
+			"publicada": "2026-11-02",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1500000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES53",
+					"nombre": "ILLES BALEARS"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2026-11-06",
+			"fin": "2026-11-27",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.caib.es/eboibfront/es/2026/12353/721552/orden-41-2026-de-28-de-octubre-del-consejero-de-ag",
+			"documento": {
+				"id": 1548328,
+				"nombre": "AJ_43.26_-_Resol._Ajuda_als_Fertilitzants_v9_ES_OK_imprimible.pdf"
+			},
+			"docs": [
+				1548328,
+				1548329
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939276",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica extraordinaria para compensar el encarecimiento de los fertilizantes en el sector agrícola de las Islas Baleares provocado por la crisis en Oriente Medio.",
+				"paraQuien": "Agricultores (personas físicas, jurídicas o agrupaciones sin personalidad) titulares de explotaciones agrícolas en las Islas Baleares que estén inscritas en el registro autonómico.",
+				"importe": "Desde 67 €/ha en secano y 176 €/ha en regadío (o 38,33 €/ha y 92,50 €/ha si ya cobraron la ayuda estatal). Pago mínimo de 100 € y máximo de 50.000 € por negocio.",
+				"importeMaximo": 50000,
+				"plazo": "Desde el día siguiente a la publicación de la resolución en el BOIB hasta el 27 de noviembre de 2026.",
+				"plazoFin": "2026-11-27",
+				"requisitos": [
+					"Estar inscrito en el Registro Autonómico de Explotaciones Agrícolas (REA) de las Illes Balears.",
+					"Pertenecer a alguno de los sectores agrícolas incluidos en la normativa de la Unión Europea.",
+					"Tener la explotación catalogada como prioritaria o haber sido beneficiario de ayudas PAC específicas previas.",
+					"Estar al corriente de los pagos con Hacienda (estatal y autonómica) y con la Seguridad Social.",
+					"No tener sanciones ni prohibiciones para recibir subvenciones públicas.",
+					"Cumplir los plazos de pago a proveedores si se solicita una ayuda superior a 30.000 €.",
+					"Mantener las condiciones requeridas durante al menos tres meses desde que se pide la ayuda."
+				],
+				"gastos": [
+					"Sobrecoste en la compra de fertilizantes para la actividad agrícola."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939272",
+			"titulo": "CONVOCATORIA CONCURSO DE ESCAPARATISMO Y AMBIENTACIÓN COMERCIAL NAVIDEÑA 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ELCHE/ELX",
+				"nivel3": "AYUNTAMIENTO DE ELCHE/ELX"
+			},
+			"sede": "sede.elche.es",
+			"publicada": "2026-11-02",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 10000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "56",
+					"nombre": "Servicios de comidas y bebidas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": "2026-12-07",
+			"textoInicio": "Publicación en el BOP de Alicante",
+			"textoFin": null,
+			"bases": "https://www.dip-alicante.es/bop2/pdftotal/2026/01/27_17/2026_000514.pdf",
+			"documento": {
+				"id": 1548319,
+				"nombre": "20261029 JGL CONCURSO ESCPARATES DE NAVIDAD.pdf"
+			},
+			"docs": [
+				1548319
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939272",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña de escaparates y locales en Elche con premios económicos para promover las compras en el comercio local y la hostelería.",
+				"paraQuien": "Pequeñas y medianas empresas, autónomos y personas jurídicas con local a pie de calle abierto al público en Elche.",
+				"importe": "Premios de 250 € a 2.000 € según la categoría y posición. Presupuesto total de 10.000 €.",
+				"importeMaximo": 2000,
+				"plazo": "Desde la publicación del extracto en el Boletín Oficial de la Provincia de Alicante hasta el 7 de diciembre de 2026.",
+				"plazoFin": "2026-12-07",
+				"requisitos": [
+					"Ser autónomo, pyme o persona jurídica.",
+					"Tener tienda física y domicilio social en Elche.",
+					"Desarrollar la actividad en un local a pie de calle abierto al público.",
+					"No tener consideración de gran superficie comercial.",
+					"Decorar el escaparate o establecimiento con motivos navideños.",
+					"Aportar tres fotografías de la decoración junto con la inscripción.",
+					"Mantener la decoración intacta del 4 de diciembre de 2026 al 6 de enero de 2027."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Elche"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939244",
+			"titulo": "Premios del concurso escaparatismo de Navidad 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SAGUNTO/SAGUNT",
+				"nivel3": "AYUNTAMIENTO DE SAGUNTO/SAGUNT"
+			},
+			"sede": null,
+			"publicada": "2026-11-02",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 900,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-13",
+			"fin": "2026-12-07",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://sagunt.sedipualba.es/firma/documento.aspx?csv=J9AAFFKNTLXCXL22733D&modo=abrir",
+			"documento": {
+				"id": 1548243,
+				"nombre": "Resolución Nº 10992 de 30_10_2026 _IP RESOLUCIÓN ALCALDIA POR AVOCACIÓN CONCURSO DE ESCAPARATISMO 2026_ - SEGRA 1256470.pdf"
+			},
+			"docs": [
+				1548243,
+				1548244,
+				1548245
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939244",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso del Ayuntamiento de Sagunto para premiar la decoración e imaginación en los escaparates navideños de los comercios del municipio y dinamizar la actividad comercial.",
+				"paraQuien": "Establecimientos comerciales del municipio de Sagunto.",
+				"importe": "Presupuesto total máximo de 900,00 € (el documento no especifica el importe individual de los premios).",
+				"importeMaximo": null,
+				"plazo": "Desde el 13 de noviembre hasta el 7 de diciembre de 2026.",
+				"plazoFin": "2026-12-07",
+				"requisitos": [
+					"Ser un establecimiento comercial ubicado en el municipio de Sagunto.",
+					"Decorar el escaparate del comercio entre el 7 y el 14 de diciembre de 2026.",
+					"Presentar la solicitud a través de la sede electrónica del Ayuntamiento.",
+					"Cumplir con las bases de la ordenanza reguladora municipal."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sagunto"
+				},
+				"dudas": "No se desglosa el número ni el importe de los premios individuales, únicamente la cuantía total de 900 €."
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939213",
+			"titulo": "CONVOCATORIA SUBVENCIONES FOMENTO ACTIVIDAD EMPRENDERDORA `CHEQUE EMPRENDEDOR` 2026 (EXPTE. 9105/2026)",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TEULADA",
+				"nivel3": "AYUNTAMIENTO DE TEULADA"
+			},
+			"sede": null,
+			"publicada": "2026-11-02",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES52",
+					"nombre": "COMUNIDAD VALENCIANA"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": "2026-11-05",
+			"fin": "2026-11-18",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://teuladamoraira.sedelectronica.es",
+			"documento": {
+				"id": 1548179,
+				"nombre": "20261029_Certificado_Certificado_de_acuerdos_Certificado_de_acuerdo_(6).pdf"
+			},
+			"docs": [
+				1548179
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939213",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica a fondo perdido de 500 euros del Ayuntamiento de Teulada para apoyar a nuevos emprendedores y empresas en los gastos de constitución e inicio de la actividad.",
+				"paraQuien": "Autónomos, pymes, micropymes, sociedades civiles y comunidades de bienes que inicien una actividad en un local abierto al público en Teulada.",
+				"importe": "500 € a fondo perdido por empresa",
+				"importeMaximo": 500,
+				"plazo": "10 días hábiles desde el día siguiente a la publicación en el Boletín Oficial de la Provincia de Alicante. Fecha límite según la BDNS: 18 de noviembre de 2026.",
+				"plazoFin": "2026-11-18",
+				"requisitos": [
+					"Iniciar la actividad en un local abierto al público en Teulada entre el 1 de octubre de 2025 y el 10 de octubre de 2026.",
+					"Tener el domicilio fiscal y el desarrollo de la actividad en el municipio de Teulada.",
+					"Tener la consideración de microempresa.",
+					"Contar con un proyecto viable técnica y económicamente.",
+					"Mantener la actividad del negocio como mínimo hasta el 31 de diciembre de 2026.",
+					"Estar al corriente de los pagos con Hacienda, la Seguridad Social y el Ayuntamiento de Teulada.",
+					"No incurrir en las prohibiciones generales para recibir subvenciones públicas."
+				],
+				"gastos": [
+					"Tasa municipal de apertura del local",
+					"Gastos de notaría y Registro Mercantil",
+					"Rótulos y carteles comerciales del local",
+					"Obras de mantenimiento, mejoras o pintura en las instalaciones comerciales",
+					"Estudios o prospecciones de mercado",
+					"Alquiler del local comercial",
+					"Servicios de asesoría fiscal, contable y laboral",
+					"Proyectos técnicos redactados por ingenieros o arquitectos",
+					"Diseño, dominio y mantenimiento de página web o redes sociales",
+					"Gastos de promoción y publicidad",
+					"Licencias de programas informáticos",
+					"Material fungible de oficina"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Teulada"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939195",
+			"titulo": "Convocatoria pública de subvenciones destinadas a la realización de operaciones de formación en el marco de la \"ESCUELA DE HOSTELERÍA” de la Ciudad Autónoma de Melilla. Anualidad 2026-27",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CIUDAD AUTÓNOMA DE MELILLA",
+				"nivel3": "CONSEJERÍA DE ECONOMÍA, COMERCIO, INNOVACIÓN TECNOLÓGICA, TURISMO Y FOMENTO"
+			},
+			"sede": "https://sede.melilla.es/",
+			"publicada": "2026-11-02",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 369000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES64",
+					"nombre": "CIUDAD AUTONOMA DE MELILLA"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "el día siguiente a la publicación del extracto en el BOME",
+			"textoFin": "30 días hábiles",
+			"bases": "https://bomemelilla.es/bome/BOME-BX-2023-91",
+			"documento": {
+				"id": 1548122,
+				"nombre": "ORDEN 20260023607_29-10-2026- SUBVENCIONES ESCUELA HOSTELERIA 2026.pdf"
+			},
+			"docs": [
+				1548122
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939195",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención para que una entidad especializada imparta 6 itinerarios de formación en hostelería en las instalaciones de la Escuela de Hostelería de Melilla durante los años 2026 y 2027.",
+				"paraQuien": "Entidades e instituciones especializadas en formación en hostelería y turismo que tengan personalidad jurídica propia y cumplan requisitos de experiencia previa y solvencia.",
+				"importe": "Hasta el 100 % del coste elegible, con un máximo de 396.000 € para la entidad seleccionada.",
+				"importeMaximo": 396000,
+				"plazo": "30 días hábiles a contar desde el día siguiente a la publicación del extracto en el BOME.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener personalidad jurídica propia.",
+					"Estar especializada en formación en hostelería y turismo.",
+					"Haber realizado cursos de formación en hostelería por un valor acumulado de al menos 594.000 € en los últimos tres años.",
+					"Contar con los medios materiales y personales necesarios para realizar los cursos en Melilla.",
+					"Estar al corriente de los pagos con Hacienda y la Seguridad Social.",
+					"Tener un saldo medio en cuenta en los últimos 12 meses de al menos el 5 % del total de la ayuda solicitada.",
+					"Solicitar la totalidad de los 6 proyectos de formación indicados en la convocatoria."
+				],
+				"gastos": [
+					"Costes elegibles de la impartición de las operaciones formativas según las bases reguladoras (se excluyen dietas, viajes y alojamiento del profesorado, prácticas en empresas, asistencia a concursos, y alquileres o leasing)."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": 36,
+					"antiguedadMaxMeses": null,
+					"municipio": "Melilla"
+				},
+				"dudas": "La fecha exacta de fin de plazo depende de la publicación del extracto en el BOME, la cual no consta en el documento."
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.5-flash"
+		},
 		{
 			"codigo": "939182",
 			"titulo": "PROYECTOS INTEGRALES DE EMPLEO, FORM.E INSERCIÓN (CONTRATOS) 2026-2027",
@@ -1029,6 +1501,83 @@
 			},
 			"comprobada": "2026-11-02",
 			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "938886",
+			"titulo": "Convocatoria para la concesión de ayudas a los titulares de licencias de taxi para la adaptación de vehículos autotaxis para personas con movilidad reducida",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTANYÍ",
+				"nivel3": "AYUNTAMIENTO DE SANTANYÍ"
+			},
+			"sede": null,
+			"publicada": "2026-10-29",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 6000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "49",
+					"nombre": "Transporte terrestre y por tubería"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES532",
+					"nombre": "Mallorca"
+				}
+			],
+			"finalidad": "Subvenciones al transporte",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación extracto en BOIB",
+			"textoFin": "15 días naturales a contar desde el día siguiente a la publicación del extracto en el BOIB",
+			"bases": "https://www.caib.es/eboibfront/eli/es-ib-01070579/pre/2025/01/25/(1)/dof/spa/html",
+			"documento": {
+				"id": 1547196,
+				"nombre": "Convocatoria subvención adaptación autotaxis 2026.pdf"
+			},
+			"docs": [
+				1547196,
+				1547198,
+				1547203
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938886",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica del Ayuntamiento de Santanyí para cubrir los gastos de compra o adaptación de taxis para personas con movilidad reducida realizados durante el año 2025.",
+				"paraQuien": "Taxistas (autónomos o empresas) con licencia municipal de autotaxi en vigor en Santanyí.",
+				"importe": "Hasta un máximo de 6.000 € por solicitante (se reparte el presupuesto total de 6.000 € entre todas las solicitudes aprobadas).",
+				"importeMaximo": 6000,
+				"plazo": "15 días naturales a contar desde el día siguiente a la publicación del extracto en el Boletín Oficial de las Islas Baleares (BOIB).",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener una licencia municipal de autotaxi del Ayuntamiento de Santanyí en vigor.",
+					"Haber adaptado o comprado un vehículo taxi adaptado durante el año 2025.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y el Ayuntamiento de Santanyí.",
+					"No estar incurso en ninguna prohibición legal para cobrar subvenciones públicas.",
+					"Prestar servicio prioritario a personas con movilidad reducida.",
+					"Mantener el vehículo adaptado destinado a este fin durante al menos 4 años tras recibir la ayuda."
+				],
+				"gastos": [
+					"Adaptación de un vehículo autotaxi para transporte de personas con movilidad reducida realizada en 2025.",
+					"Compra de un vehículo autotaxi adaptado realizada en 2025."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Santanyí"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-02",
+			"iaModelo": "gemini-3.7-flash"
 		},
 		{
 			"codigo": "938863",
@@ -17192,7 +17741,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-01",
+			"comprobada": "2026-11-02",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -17277,7 +17826,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-01",
+			"comprobada": "2026-11-02",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17351,23 +17900,23 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-01",
+			"comprobada": "2026-11-02",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-02T13:47:36.658Z",
+			"fecha": "2026-11-02T22:50:58.981Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 3,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-02T13:47:36.833Z",
+			"fecha": "2026-11-02T23:12:48.936Z",
 			"pendientes": 0,
-			"leidas": 0,
+			"leidas": 7,
 			"fallidas": 0,
-			"ultimaLectura": "2026-10-31"
+			"ultimaLectura": "2026-11-02"
 		}
 	}
 }
