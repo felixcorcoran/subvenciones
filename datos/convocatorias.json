@@ -1,6 +1,900 @@
 {
-	"actualizado": "2026-11-03T12:58:36.167Z",
+	"actualizado": "2026-11-03T20:34:13.209Z",
 	"convocatorias": [
+		{
+			"codigo": "939614",
+			"titulo": "Extracto de acuerdo de fecha 22 octubre 2026 convocatoria y concesión de subvenciones en régimen de concurrencia competitiva para sufragar gastos corrientes de actividades agrícolas, ganaderas y de pesca tradicional de Adeje",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ADEJE",
+				"nivel3": "AYUNTAMIENTO DE ADEJE"
+			},
+			"sede": "https://www.adeje.es/",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 60000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES709",
+					"nombre": "Tenerife"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente a la publicación del extracto de la convocatoria en el BOP",
+			"textoFin": "Transcurridos DIEZ DÍAS (10) hábiles a partir del día siguiente a la publicación convocatoria en BOP",
+			"bases": "https://www.bopsantacruzdetenerife.es/boletines/2026/30-10-26/30-10-26.pdf",
+			"documento": {
+				"id": 1549178,
+				"nombre": "20261023_Certificado_Certificado de acuerdos_Certificado de acuerdo.pdf"
+			},
+			"docs": [
+				1549178
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939614",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas económicas del Ayuntamiento de Adeje para financiar los gastos corrientes del ejercicio 2026 soportados por autónomos y pequeñas empresas de los subsectores agrícola, ganadero y de pesca tradicional.",
+				"paraQuien": "Autónomos, empresas, sociedades civiles y comunidades de bienes titulares de actividades agrícolas, ganaderas o de pesca artesanal vinculadas al municipio de Adeje.",
+				"importe": "Fondo total de 60.000 € (20.000 € por sector: agrícola, ganadero y pesquero), a repartir a partes iguales entre los solicitantes admitidos de cada línea, con un máximo de 20.000 € por negocio.",
+				"importeMaximo": 20000,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ejercer la actividad por cuenta propia o a través de sociedad mercantil o entidad sin personalidad jurídica.",
+					"Para agricultura y ganadería: tener la explotación ubicada en el municipio de Adeje.",
+					"Para pesca tradicional: tener el puerto base en Adeje, o estar empadronado en Adeje, o tener allí el domicilio fiscal.",
+					"Estar al corriente de pagos con Hacienda (estatal y canaria), la Seguridad Social y el Ayuntamiento de Adeje.",
+					"No tener deudas pendientes de reintegro con el Ayuntamiento de Adeje.",
+					"No estar incurso en ninguna de las prohibiciones generales para recibir subvenciones públicas.",
+					"Estar inscrito en el Registro de Explotaciones Ganaderas de Canarias si la actividad ganadera lo requiere.",
+					"Haber pagado efectivamente los gastos justificados antes de presentar la solicitud."
+				],
+				"gastos": [
+					"Electricidad, gas, combustibles y lubricantes necesarios para la actividad",
+					"Alimentación para el ganado",
+					"Fertilizantes y productos fitosanitarios",
+					"Mantenimiento y reparación corriente de sistemas de riego (sin que sean inversiones o mejoras de vida útil)",
+					"Servicios profesionales (veterinarios, ingeniería agronómica, asesoría contable, fiscal y laboral)",
+					"Alquiler, mantenimiento y reparación de maquinaria o equipos",
+					"Salarios, cotizaciones de empleados y cuotas de autónomo del titular",
+					"Seguros de la actividad, licencias, tasas administrativas y consumibles o programas informáticos"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Adeje"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "939550",
+			"titulo": "Acuerdo de la Junta de Gobierno Local de 23-10-2026, por el que se aprueban las Bases reguladoras que han de regir el IV Concurso del Cartel de la Semana Santa del Alcalá de Henares de 2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALCALÁ DE HENARES",
+				"nivel3": "AYUNTAMIENTO DE ALCALÁ DE HENARES"
+			},
+			"sede": null,
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1500,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "91",
+					"nombre": "Actividades de bibliotecas, archivos, museos y otras actividades culturales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES3",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-04",
+			"fin": "2026-12-15",
+			"textoInicio": "A partir del día siguiente a la publicacion de la Convocatoria en Base de Datos Nacional de Subv.",
+			"textoFin": "finalizará el 15 de diciembre de 2026 (inclusive)   a las 14:00 horas",
+			"bases": "www.ayto-alcaladehenares.es",
+			"documento": {
+				"id": 1549022,
+				"nombre": "ACUERDO Y BASES CARTEL S. SANTA 2027.pdf"
+			},
+			"docs": [
+				1549022
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939550",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso para seleccionar el cartel anunciador de la Semana Santa de Alcalá de Henares del año 2027.",
+				"paraQuien": "Cualquier persona física mayor de edad, o jóvenes de 16 a 17 años que cuenten con autorización de sus padres o tutores.",
+				"importe": "Un único premio de 1.500 € para la obra ganadora.",
+				"importeMaximo": 1500,
+				"plazo": "Hasta el 15 de diciembre de 2026 a las 14:00 horas.",
+				"plazoFin": "2026-12-15",
+				"requisitos": [
+					"Ser persona física mayor de edad o tener entre 16 y 17 años con autorización de padres o tutores.",
+					"Presentar un máximo de tres obras por participante.",
+					"Las obras deben ser originales e inéditas, sin haber sido publicadas o usadas previamente.",
+					"No está permitido el uso de inteligencia artificial generativa para crear o modificar la obra.",
+					"La temática debe reflejar la Semana Santa de Alcalá de Henares.",
+					"La obra debe tener un formato vertical de 50 x 70 cm montada en foam de 5 mm y acompañarse de copia digital.",
+					"Incluir los textos y logotipos oficiales indicados en las bases.",
+					"Presentar la obra sin firma ni seudónimo de forma presencial en la Concejalía de Fiestas y Tradiciones Populares."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939499",
+			"titulo": "CONVOCATORIA DE SUBVENCIONES EN FORMA DE BONOS\nDESCUENTO PARA INCENTIVAR EL CONSUMO EN EL \nCOMERCIO Y LOS SERVICIOS DE BORJA",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "BORJA",
+				"nivel3": "AYUNTAMIENTO DE BORJA"
+			},
+			"sede": "https://borja.sedelectronica.es/info.0",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 12000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES243",
+					"nombre": "Zaragoza"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "desde la publicación del anuncio en el BOPZ",
+			"textoFin": "hasta el décimo día posterior desde la publicación de la convocatoria en el BOPZ",
+			"bases": "https://borja.sedelectronica.es/info.0",
+			"documento": {
+				"id": 1548884,
+				"nombre": "20261030_Otros_CONVOCATORIA 2026.pdf"
+			},
+			"docs": [
+				1548884,
+				1548887,
+				1548888
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939499",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas en forma de bonos-descuento (BonoBorja 2026) para comercios y servicios de Borja, con una compensación de 5 euros por cada bono canjeado y justificado.",
+				"paraQuien": "Comercios minoristas y establecimientos de servicios que tengan un local abierto al público en Borja y cumplan los requisitos.",
+				"importe": "5 euros por cada bono válidamente canjeado y justificado, con un límite máximo de 500 euros por establecimiento.",
+				"importeMaximo": 500,
+				"plazo": "El plazo de presentación de solicitudes es de 5 días hábiles a contar desde el día siguiente al de la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Zaragoza.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar de alta en el Impuesto sobre Actividades Económicas en un epígrafe admitido y tener establecimiento físico en Borja.",
+					"Ser autónomo, microempresa o pequeña empresa.",
+					"Estar al corriente de las obligaciones tributarias, con la Seguridad Social y con el Ayuntamiento de Borja.",
+					"No estar incurso en las prohibiciones para obtener la condición de beneficiaria.",
+					"Disponer de medios para registrar los bonos y facilitar la comprobación de las ventas."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Borja"
+				},
+				"dudas": "La fecha exacta de publicación en el BOPZ no se indica, por lo que el día de cierre del plazo de solicitud no se puede calcular con certeza."
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "939494",
+			"titulo": "Orden comedores escolas infantís 0-3 para  2026/27",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "GALICIA",
+				"nivel3": "CONSELLERÍA DE POLÍTICA SOCIAL E IGUALDAD"
+			},
+			"sede": "si",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1137274.71,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85.6",
+					"nombre": "Actividades auxiliares a la educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES11",
+					"nombre": "GALICIA"
+				}
+			],
+			"finalidad": "Servicios Sociales y Promoción Social",
+			"inicio": "2026-11-16",
+			"fin": "2026-12-16",
+			"textoInicio": "Sexto día hábil seguinte ao da publicación",
+			"textoFin": "Día en que se cumpra un mes desde a data en que se abra o prazo de presentación de solicitudes",
+			"bases": "https://www.xunta.gal/diario-oficial-galicia",
+			"documento": {
+				"id": 1548892,
+				"nombre": "Orde_ComedoresEpis_2025_DOG_gal_20261103_122307.pdf"
+			},
+			"docs": [
+				1548892,
+				1548893,
+				1548894,
+				1548895,
+				1548896,
+				1548897
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939494",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas destinadas a entidades privadas de iniciativa social para compensar los gastos de comedor escolar de los niños de 0 a 3 años matriculados en sus escuelas infantiles durante el curso 2026/2027.",
+				"paraQuien": "Entidades privadas de iniciativa social que sean titulares de escuelas infantiles de 0 a 3 años en funcionamiento dentro de Galicia.",
+				"importe": "Compensación mensual equivalente a las tarifas públicas autonómicas no cobradas a las familias, más 25,95 € adicionales al mes por niño o niña usuario (máximo 11 meses). Presupuesto total de 1.137.274,71 €.",
+				"importeMaximo": null,
+				"plazo": "Se inicia a las 8:00 del sexto día hábil tras la publicación de la convocatoria en el DOG y termina a las 23:59 del día en que se cumpla un mes.",
+				"plazoFin": "2026-12-16",
+				"requisitos": [
+					"Ser una entidad privada de iniciativa social titular de una o más escuelas infantiles de 0-3 años en funcionamiento en Galicia.",
+					"Estar inscrita en el Registro Único de Entidades Prestadoras de Servicios Sociales (RUEPSS).",
+					"Disponer del permiso de inicio de actividades para el servicio de escuela infantil concedido por la Consellería competente.",
+					"Acreditar que los niños del servicio de comedor residen en Galicia y siguen el calendario gallegos de vacunación infantil.",
+					"Aplicar en la escuela infantil una tarifa equivalente al régimen de precios de las escuelas públicas infantiles 0-3 de Galicia.",
+					"No utilizar el servicio de comedor por días sueltos para acogerse a la subvención."
+				],
+				"gastos": [
+					"Servicio de comedor prestado con personal propio o contratado (catering), incluyendo la compra de alimentos para los niños de la escuela."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "939480",
+			"titulo": "Convocatòria anticipada de subvencions per al finançament d`equipaments escènics i musicals multifuncionals E3- Exercici 2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GIRONA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GIRONA"
+			},
+			"sede": null,
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 57000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "91",
+					"nombre": "Actividades de bibliotecas, archivos, museos y otras actividades culturales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": "2027-01-01",
+			"fin": "2027-12-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "http://www.ddgi.cat/basescast/2026/Bases_equipamientos_ecenicos_musicales.pdf",
+			"documento": {
+				"id": 1548859,
+				"nombre": "CAST_Convocatoria_anticipada_E3_2027.pdf"
+			},
+			"docs": [
+				1548859,
+				1548861
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939480",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para financiar la programación estable y profesional en equipamientos escénicos y musicales multifuncionales de las comarcas de Girona para el año 2027.",
+				"paraQuien": "Personas o entidades que gestionen equipamientos escénicos y musicales multifuncionales en las comarcas de Girona.",
+				"importe": "Entre 1.000 € y 30.000 € por ayuda. Presupuesto total de 57.000 €, con posibilidad de ampliación de hasta 30.000 € adicionales.",
+				"importeMaximo": 30000,
+				"plazo": "Desde el día siguiente a la publicación en el BOPG hasta el 29 de enero de 2027.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ubicarse en las comarcas de Girona.",
+					"Contar con un equipamiento escénico o musical multifuncional.",
+					"Ofrecer una programación estable y profesional.",
+					"Presentar la solicitud y la firma de forma electrónica a través de la plataforma de la Diputació de Girona."
+				],
+				"gastos": [
+					"Actuaciones, actividades o inversiones realizadas entre el 1 de noviembre de 2026 y el 31 de octubre de 2027."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No consta en el extracto el tipo exacto de personalidad jurídica (autónomo o sociedad) admitido."
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.6-flash",
+			"cierreDescartado": {
+				"fecha": "2027-01-29",
+				"motivo": "no coincide con la de la BDNS (2027-12-31)"
+			}
+		},
+		{
+			"codigo": "939451",
+			"titulo": "CONVOCATORIA PARA LA CONCESIÓN DE SUBVENCIONES DESTINADAS A LA ORGANIZACIÓN  DE PRUEBAS DE BICICLETA DE MONTAÑA,  ORGANIZADAS POR CLUBS Y ASOCIACIONES DEPORTIVAS DE LA COMARCA DEL BAJO ARAGÓN DURANTE EL AÑO 2026. BTT 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "COMARCA DE BAJO ARAGÓN",
+				"nivel3": "COMARCA DE BAJO ARAGÓN"
+			},
+			"sede": "https://bajoaragon.sedipualba.es/",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 5000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES242",
+					"nombre": "Teruel"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Tras la publicación en el BOPTE",
+			"textoFin": "10 días hábiles tras la publicación en el BOPTE",
+			"bases": "https://bajoaragon.sedipualba.es/tablondeanuncios/anuncio.aspx?id=82971",
+			"documento": {
+				"id": 1548780,
+				"nombre": "BASES CONCURRENCIA COMPETITIVA PRORRATEADA PARA PRUEBAS DE BTT 2026.docx"
+			},
+			"docs": [
+				1548780,
+				1548781,
+				1548783,
+				1548784,
+				1548789,
+				1548790
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939451",
+			"ia": null,
+			"comprobada": "2026-11-03",
+			"iaIntentos": 1,
+			"iaIntentadoEl": "2026-11-03",
+			"iaError": "no es un PDF (BASES CONCURRENCIA COMPETITIVA PRORRATEADA PARA PRUEBAS DE BTT 2026.docx)"
+		},
+		{
+			"codigo": "939422",
+			"titulo": "CONVOCATORIA DE SUBVENCIONES DE AYUDAS A EMPRESAS DE SECTORES DE PROXIMIDAD EN ENTIDADES LOCALES DE LA PROVINCIA DE GRANADA EN RIESGO DE DESPOBLACIÓN– 2026. OFICINA DE RETO DEMOGRÁFICO.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE GRANADA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE GRANADA"
+			},
+			"sede": null,
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 500000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "84.1",
+					"nombre": "Administración pública y de la política económica, social y medioambiental"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES614",
+					"nombre": "Granada"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "06/11/2026",
+			"textoFin": "19/11/2026",
+			"bases": "https://www.dipgra.es/diputacion/delegaciones/economia-y-atencion-al-alcalde/servicio-gestion-presupuestaria-y-contable/presupuesto-general-00001/presupuestos-por-ejercicio-y-organismo/",
+			"documento": {
+				"id": 1548721,
+				"nombre": "CERTIFICADO_NA_5_JUNTA_DE_GOBIERNO_27.10.2026.pdf"
+			},
+			"docs": [
+				1548721
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939422",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "La Diputación de Granada concede ayudas económicas para apoyar a comercios, hostelería, hospedaje y servicios personales ubicados en pequeñas localidades o entidades locales autónomas en riesgo de despoblación. La ayuda busca financiar los gastos corrientes del negocio durante el año 2026.",
+				"paraQuien": "Autónomos y pequeñas o medianas empresas de comercio minorista, alimentación, hospedaje y servicios personales situados en municipios o ELAs de Granada de hasta 1.000 habitantes.",
+				"importe": "Hasta 1.000 € por actividad económica (pago único)",
+				"importeMaximo": 1000,
+				"plazo": "Del 6 al 19 de noviembre de 2026 (10 días hábiles tras la publicación en el Boletín Oficial de la Provincia).",
+				"plazoFin": "2026-11-19",
+				"requisitos": [
+					"Estar empadronado en una localidad o ELA de la provincia de Granada de hasta 1.000 habitantes incluida en la convocatoria.",
+					"Ser trabajador autónomo o pyme con menos de 250 trabajadores.",
+					"Tener la actividad económica en el mismo municipio o ELA donde se está empadronado.",
+					"Pertenecer a los sectores de comercio al por menor, servicio de alimentación, hospedaje o servicios personales (divisiones IAE 64, 65, 66, 67, 68, 69 o 97).",
+					"Contar con un local comercial u oficina física abierta al público en el municipio.",
+					"Estar al corriente en los pagos con Hacienda y la Seguridad Social."
+				],
+				"gastos": [
+					"Alquiler del local comercial u oficina",
+					"Suministros del local (luz, agua, teléfono e internet)",
+					"Cuotas pagadas a la Seguridad Social",
+					"Servicios profesionales necesarios para el negocio (asesoría, gestoría, etc.)",
+					"Otros gastos corrientes indispensables para la actividad realizados en 2026"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 249,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939417",
+			"titulo": "ORDEN DE LA CONVOCATORIA DEL AÑO 2027 DE LAS LÍNEAS DE AYUDA CORRESPONDIENTES A LA INTERVENCIÓN DE DESARROLLO RURAL (PEPAC 2023-2027) “6613 ZONAS CON LIMITACIONES NATURALES U OTRAS LIMITACIONES ESPECÍFICAS” EN LA REGIÓN DE MURCIA.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "REGIÓN DE MURCIA",
+				"nivel3": "CONSEJERÍA DE AGUA, AGRICULTURA, GANADERÍA Y PESCA"
+			},
+			"sede": "https://sede.carm.es/SgaCac/inicio/inicioAplicacion.action",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 4789166.67,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES62",
+					"nombre": "REGION DE MURCIA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2027-02-01",
+			"fin": "2027-04-30",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.borm.es/#/home/anuncio/18-12-2024/6392",
+			"documento": {
+				"id": 1548682,
+				"nombre": "Orden convocatoria Interv. 6613_ 2027 (COPIA).pdf"
+			},
+			"docs": [
+				1548682
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939417",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Pagos por hectárea para apoyar la renta de agricultores y ganaderos con explotaciones ubicadas en zonas de montaña o con limitaciones naturales en la Región de Murcia.",
+				"paraQuien": "Agricultores y ganaderos (personas físicas, jurídicas y comunidades de bienes) que sean agricultores activos y a título principal con explotaciones situadas en la Región de Murcia.",
+				"importe": "160 € por hectárea en zonas de montaña y 140 € por hectárea en zonas con limitaciones naturales (el importe se reduce a mayor superficie y es del 40 % en superficies pastables). El presupuesto total es de 4.789.166,67 €.",
+				"importeMaximo": null,
+				"plazo": "Desde el 1 de febrero hasta el 30 de abril de 2027 (con periodo de modificación de la solicitud hasta el 31 de mayo de 2027).",
+				"plazoFin": "2027-04-30",
+				"requisitos": [
+					"Tener la condición de agricultor o ganadero no pluriactivo.",
+					"Ser titular de una explotación agraria inscrita (o haber solicitado la inscripción) en el Registro de Explotaciones Agrarias de la Región de Murcia.",
+					"Cumplir la condición de agricultor activo.",
+					"Ser Agricultor a Título Principal (ATP) o tener la explotación inscrita como prioritaria (salvo jóvenes agricultores).",
+					"Estar al corriente en los pagos con la Hacienda estatal, autonómica y la Seguridad Social.",
+					"Tener las parcelas o recintos situados en los municipios o zonas autorizadas de la Región de Murcia.",
+					"Mantener la actividad agraria en la explotación sin tener cultivos en situación de abandono.",
+					"Si la ayuda supera los 30.000 €, cumplir con los plazos de pago legales a proveedores."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "939415",
+			"titulo": "Rehabilitación de balsas de riego para la mejora de condiciones de seguridad",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "COMUNITAT VALENCIANA",
+				"nivel3": "SECRETARÍA AUTONÓMICA DE AGRICULTURA, AGUA, GANADERÍA Y PESCA"
+			},
+			"sede": null,
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 5000000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "36",
+					"nombre": "Captación, depuración y distribución de agua"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES52",
+					"nombre": "COMUNIDAD VALENCIANA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2026-01-01",
+			"fin": "2026-12-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://dogv.gva.es/es/resultat-dogv?signatura=2025/17242",
+			"documento": {
+				"id": 1548719,
+				"nombre": "01- 2026-11-02  Convocatoria BALSAS 2026_Castellano_firmado.pdf"
+			},
+			"docs": [
+				1548719,
+				1548720
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939415",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas destinadas a financiar el 50 % del coste de las obras de rehabilitación y mejora de las condiciones de seguridad de las balsas de riego existentes en la Comunitat Valenciana.",
+				"paraQuien": "Comunidades de regantes y otras entidades de riego sin ánimo de lucro de la Comunitat Valenciana que sean titulares de balsas de riego inscritas en el registro correspondiente.",
+				"importe": "El 50 % de los gastos subvencionables aprobados, con un tope por operación del 30 % del importe global máximo de la convocatoria.",
+				"importeMaximo": null,
+				"plazo": "Dos meses a contar desde el día siguiente al de la publicación del extracto en el Diari Oficial de la Generalitat Valenciana (fecha límite registrada en la BDNS: 31/12/2026).",
+				"plazoFin": "2026-12-31",
+				"requisitos": [
+					"Ser comunidad de regantes u otra entidad de riego sin ánimo de lucro de la Comunitat Valenciana legalmente constituida.",
+					"Ser titular de balsas de riego inscritas en el Registro de Balsas para Riego de la Comunitat Valenciana.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"Contar con la aprobación de la solicitud mediante acuerdo adoptado en Junta o Asamblea General (celebrada en el ejercicio actual o el anterior).",
+					"Tener acreditados los derechos de riego mediante concesión o inscripción de la Confederación Hidrográfica.",
+					"No haber iniciado las obras antes de presentar la solicitud de la ayuda."
+				],
+				"gastos": [
+					"Costes de ejecución por contrata de las obras de rehabilitación de la balsa.",
+					"Honorarios por la redacción del proyecto técnico, visado y estudio geotécnico (hasta un máximo del 5 % del presupuesto de ejecución material).",
+					"Cartel de publicidad de la inversión (siempre que esté en el presupuesto del proyecto).",
+					"IVA soportado no recuperable ni deducible."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939409",
+			"titulo": "Acuerdo de 23/10/2026 del C.R. del ILC, por el que se convocan subvenciones para proyectos audiovisuales relacionados con la provincia de León 2026-2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE LEÓN",
+				"nivel3": "INSTITUTO LEONES DE CULTURA"
+			},
+			"sede": null,
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "59",
+					"nombre": "Producción cinematográfica, de vídeo y de programas de televisión, grabación de sonido y edición musical"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES413",
+					"nombre": "León"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "DÍA SIGUIENTE A LA PUBLICACIÓN EN EL BOP DEL EXTRACTO DE LA CONVOCATORIA",
+			"textoFin": "20 DÍAS HÁBILES A PARTIR DEL SIGUIENTE A LA PUBLICACIÓN EN EL BOP DEL EXTRACTO DE LA CONVOCATORI",
+			"bases": "https://transparencia.dipuleon.es/export/sites/transparencia/.galleries/Normativa/Ordenanzas-y-Reglamentos/Subvenciones/Ordenanza-General-de-Subvenciones.pdf",
+			"documento": {
+				"id": 1548693,
+				"nombre": "Bases_convocatoria_subvenciones_AUDIOVISUALES_2026-2027.pdf"
+			},
+			"docs": [
+				1548693,
+				1548694,
+				1548695
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939409",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para financiar la preproducción, producción, grabación, postproducción o difusión de proyectos audiovisuales que tengan relación con la provincia de León.",
+				"paraQuien": "Profesionales autónomos y empresas del sector audiovisual.",
+				"importe": "Hasta 10.000 € por proyecto (máximo el 80 % del coste total). Presupuesto total de 100.000 €.",
+				"importeMaximo": 10000,
+				"plazo": "20 días hábiles a contar desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser profesional autónomo o empresa del sector audiovisual.",
+					"El proyecto debe grabarse en León o tratar sobre personajes, historia, costumbres o patrimonio de la provincia.",
+					"Aportar al menos un 20 % de la inversión total con fondos propios o de terceros.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y la Diputación de León.",
+					"No tener otra ayuda de la Diputación de León o del Instituto Leonés de Cultura para el mismo proyecto y fin."
+				],
+				"gastos": [
+					"Honorarios de guion, música y derechos de autor.",
+					"Contratación de equipo artístico (actores, figuración) y técnico (dirección, fotografía, montaje, sonido).",
+					"Escenografía, decorados, vestuario y maquillaje.",
+					"Alquiler de estudios de rodaje, maquinaria y transportes.",
+					"Postproducción, etalonaje, efectos visuales y animación.",
+					"Seguros relacionados directamente con el proyecto.",
+					"Copias y publicidad (hasta un máximo del 20 % del coste del proyecto), doblaje y subtitulado.",
+					"Desarrollo del proyecto (búsqueda de escenarios, casting y asesoramientos)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939389",
+			"titulo": "Bases reguladoras y convocatoria 2026 del Concurso de Escaparates de Oñati.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "OÑATI",
+				"nivel3": "AYUNTAMIENTO DE OÑATI"
+			},
+			"sede": "https://uzt.gipuzkoa.eus/WAS/AYTO/USCServicioCiudadanoVer15WEB/home.do?ayto=059&hizkuntza=EU",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 3500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "96",
+					"nombre": "Servicios personales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES212",
+					"nombre": "Gipuzkoa"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-10-29",
+			"fin": "2026-11-27",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.oñati.eus/es/tramites/subvenciones/subvenciones-gestionadas-por-el-departamento-de-socioeconomia?set_language=es",
+			"documento": {
+				"id": 1548607,
+				"nombre": "Oinarrien eta deialdiaren onarpena_Aprobación de las bases y convocatoria.docx"
+			},
+			"docs": [
+				1548607,
+				1548608,
+				1548611
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939389",
+			"ia": null,
+			"comprobada": "2026-11-03",
+			"iaIntentos": 1,
+			"iaIntentadoEl": "2026-11-03",
+			"iaError": "no es un PDF (Oinarrien eta deialdiaren onarpena_Aprobación de las bases y convocatoria.docx)"
+		},
+		{
+			"codigo": "939373",
+			"titulo": "Orden de 3/11/2026, de AGR, por la que se convocan determinadas subvenciones a la transformación de los productos agrarios, silvícolas y de la alimentación en Castilla y León amparadas por la intervención 6842.2 del PEPAC - Línea J02",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA Y LEÓN",
+				"nivel3": "CONSEJERÍA DE AGRICULTURA, GANADERÍA, MEDIO RURAL Y POLÍTICA AMBIENTAL"
+			},
+			"sede": "https://www.tramitacastillayleon.jcyl.es",
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 35000000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "10",
+					"nombre": "Industria alimentaria"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES41",
+					"nombre": "CASTILLA Y LEON"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": "2026-11-13",
+			"textoInicio": "Día siguiente a la publicación de extracto de la convocatoria",
+			"textoFin": null,
+			"bases": "https://bocyl.jcyl.es/boletines/2023/12/28/pdf/BOCYL-D-28122023-30.pdf",
+			"documento": {
+				"id": 1548551,
+				"nombre": "Intervencion6842_2_lineaJ02.pdf"
+			},
+			"docs": [
+				1548551
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939373",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para promover inversiones productivas y mejorar la competitividad en la transformación y comercialización de productos agrícolas, forestales y alimentarios en Castilla y León.",
+				"paraQuien": "Empresas y entidades que realicen actividades de transformación y comercialización de productos agrarios, silvícolas y de la alimentación en Castilla y León.",
+				"importe": "Presupuesto total para la convocatoria de 35.000.000,00 euros. No se especifica el límite o porcentaje máximo por negocio en la orden.",
+				"importeMaximo": null,
+				"plazo": "Desde el día siguiente a la publicación del extracto de la orden en el Boletín Oficial de Castilla y León hasta las 14:00 horas del 13 de noviembre de 2026.",
+				"plazoFin": "2026-11-13",
+				"requisitos": [
+					"Presentar la solicitud obligatoriamente por medios electrónicos a través de la aplicación SIEX.",
+					"No haber iniciado los trabajos ni la ejecución de las inversiones antes de registrar la solicitud.",
+					"Acreditar el no inicio mediante declaración responsable e imágenes georreferenciadas jpg tomadas con máximo 36 horas de antelación.",
+					"Aportar al menos tres ofertas de distintos proveedores para cada elemento de la inversión proyectada.",
+					"Estar al corriente en las obligaciones tributarias y con la Seguridad Social.",
+					"Aportar memoria, planos descriptivos y un plan de negocio o proyecto empresarial que garantice la viabilidad."
+				],
+				"gastos": [
+					"Edificación, urbanización exterior y cerramientos.",
+					"Instalaciones eléctricas, térmicas, de frío, de generación solar o aire comprimido.",
+					"Maquinaria, equipos de procesamiento, cintas transportadoras, silos, secaderos, hornos y depósitos.",
+					"Equipamiento de laboratorio y equipos de transporte interno.",
+					"Adquisición de edificios.",
+					"Honorarios técnicos de proyecto y dirección de obra (hasta el 4 % del total de la inversión).",
+					"Inversiones en instalaciones de tratamiento de aguas residuales (EDAR) y protección ambiental."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "No se indica en el texto el porcentaje de subvención ni el importe máximo que puede recibir cada negocio de forma individual."
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.6-flash"
+		},
 		{
 			"codigo": "939280",
 			"titulo": "Concurso infantil de postales navideñas 2026",
@@ -551,6 +1445,79 @@
 			},
 			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "939103",
+			"titulo": "CONCURSO ESCAPARATES PROMOCIÓN COMERCIO EN NAVIDAD 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VALENCIA",
+				"nivel3": "AYUNTAMIENTO DE VALENCIA"
+			},
+			"sede": "https://sede.valencia.es",
+			"publicada": "2026-10-30",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 10000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "El plazo de presentación de solicitudes será de 20 días naturales  desde el sig.public.BOP",
+			"textoFin": "20 días naturales a partir del siguiente a la publicación del extracto convocatoria en el Bop.",
+			"bases": "https://sede.valencia.es/sede/ordenanzas/index.xhtml",
+			"documento": {
+				"id": 1548674,
+				"nombre": "Acuerdo_29-10-2026.pdf"
+			},
+			"docs": [
+				1548674
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939103",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso del Ayuntamiento de València para premiar a los establecimientos comerciales con los escaparates navideños mejor decorados.",
+				"paraQuien": "Autónomos, microempresas y pequeñas empresas que sean titulares de un local comercial en la ciudad de València.",
+				"importe": "1er premio de 3.000 €, 2º premio de 2.000 € y 5 accésits de 1.000 € cada uno.",
+				"importeMaximo": 3000,
+				"plazo": "20 días naturales a partir del día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia (BOP).",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser titular de un establecimiento comercial permanente situado al menos en planta baja en la ciudad de València.",
+					"Tener como actividad principal la venta al por menor o la prestación de servicios.",
+					"Pertenecer a la categoría de autónomos, microempresas o pequeñas empresas.",
+					"Estar al corriente de las obligaciones tributarias, con la Seguridad Social y sin deudas con el Ayuntamiento de València.",
+					"Decorar el escaparate con la temática de la fiesta y los valores de la Navidad.",
+					"Tener el escaparate disponible desde el 1 hasta el 30 de diciembre de 2026.",
+					"Enviar 3 fotografías del escaparate decorado junto a la solicitud."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "València"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-03",
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "939101",
@@ -17066,7 +18033,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -17151,7 +18118,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17234,7 +18201,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17310,7 +18277,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17381,7 +18348,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17458,7 +18425,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17534,7 +18501,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -17619,7 +18586,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17693,22 +18660,22 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-02",
+			"comprobada": "2026-11-03",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-03T12:58:36.167Z",
+			"fecha": "2026-11-03T20:34:13.209Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 9,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-03T13:02:27.931Z",
-			"pendientes": 0,
-			"leidas": 1,
-			"fallidas": 0,
+			"fecha": "2026-11-03T20:49:25.191Z",
+			"pendientes": 2,
+			"leidas": 11,
+			"fallidas": 2,
 			"ultimaLectura": "2026-11-03"
 		}
 	}
