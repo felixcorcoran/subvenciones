@@ -1,6 +1,690 @@
 {
-	"actualizado": "2026-11-04T13:14:07.469Z",
+	"actualizado": "2026-11-04T20:53:13.680Z",
 	"convocatorias": [
+		{
+			"codigo": "939897",
+			"titulo": "ORDEN de la Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria por la que se convocan para la campaña 2026, las ayudas de la Acción III.5 “Ayuda para el consumo humano de carne fresca de vacuno, porcino, conejo, caprino, ovino y pollo",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANARIAS",
+				"nivel3": "CONSEJERÍA DE AGRICULTURA, GANADERÍA, PESCA Y SOBERANÍA ALIMENTARIA"
+			},
+			"sede": null,
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2685520,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES70",
+					"nombre": "CANARIAS"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Del 15 de Enero de 2027",
+			"textoFin": "Al 31 de Enero de 2027",
+			"bases": "https://www.gobiernodecanarias.org/boc/",
+			"documento": {
+				"id": 1549929,
+				"nombre": "PO CARNE FRESCA-V FINAL.pdf"
+			},
+			"docs": [
+				1549929
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939897",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del programa POSEI de Canarias para fomentar el consumo de carne fresca de origen local (vacuno, porcino, conejo, caprino, ovino, pollo y gallina) sacrificada durante el año 2026.",
+				"paraQuien": "Propietarios de canales de carne sacrificadas en mataderos autorizados de la Comunidad Autónoma de Canarias durante 2026.",
+				"importe": "Importes unitarios por tonelada de peso canal (desde 96 €/t hasta 300 €/t según especie) y por cabeza sacrificada en caprino y ovino. Presupuesto total de 2.685.520 €.",
+				"importeMaximo": null,
+				"plazo": "Del 15 al 31 de enero de 2027, ambos inclusive.",
+				"plazoFin": "2027-01-31",
+				"requisitos": [
+					"Ser propietario de las canales de carne a la salida del matadero.",
+					"Haber sacrificado las cantidades de carne en mataderos autorizados de Canarias durante el año 2026.",
+					"Presentar la solicitud por medios electrónicos."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939875",
+			"titulo": "Feria ISM",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 11250,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "10",
+					"nombre": "Industria alimentaria"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-11",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1549869,
+				"nombre": "CONVOCATORIA FERIA ISM 2027_112750.PDF"
+			},
+			"docs": [
+				1549869,
+				1549870
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939875",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica del Instituto de Promoción Exterior de Castilla-La Mancha para apoyar a empresas del sector dulce a participar como expositoras en la feria internacional ISM 2027 en Colonia (Alemania).",
+				"paraQuien": "Empresas, autónomos, cooperativas y otras entidades del sector dulce que tengan su actividad económica en Castilla-La Mancha.",
+				"importe": "El 30 % del coste subvencionable de alquiler y acondicionamiento del espacio, con un máximo de 2.250 € por empresa.",
+				"importeMaximo": 2250,
+				"plazo": "Desde el día siguiente a la publicación de la convocatoria en el Diario Oficial de Castilla-La Mancha hasta el 11 de diciembre de 2026.",
+				"plazoFin": "2026-12-11",
+				"requisitos": [
+					"Desarrollar la actividad económica del sector dulce en Castilla-La Mancha.",
+					"Tener un espacio contratado con la feria ISM 2027 o ser admitido por ICEX en el pabellón español.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y en reintegro de subvenciones.",
+					"Contar con un plan de prevención de riesgos laborales si por ley corresponde.",
+					"No haber sido sancionado por infracciones graves en prevención de riesgos o discriminación laboral.",
+					"No acumular más de 300.000 € en ayudas de minimis durante los últimos tres años.",
+					"No recibir otras ayudas o subvenciones públicas de la Junta para este mismo proyecto."
+				],
+				"gastos": [
+					"Alquiler del espacio expositivo",
+					"Acondicionamiento del espacio expositivo"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "939857",
+			"titulo": "ORDEN DE LA CONSEJERÍA DE TURISMO, CULTURA Y DEPORTES POR LA QUE SE AUTORIZA EL GASTO Y SE APRUEBA LA CONVOCATORIA DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA COMPETITIVA DESTINADAS A ESTABLECIMIENTOS TURISTICOS PRIVADOS DE LA REGIÓN DE MURCIA PARA MEJORA",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "REGIÓN DE MURCIA",
+				"nivel3": "CONSEJERÍA DE TURISMO, CULTURA Y DEPORTES"
+			},
+			"sede": null,
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 600000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES62",
+					"nombre": "REGION DE MURCIA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "el día siguiente a la publicación del extracto de la convocatoria en el BORM",
+			"textoFin": "10 días a partir del día siguiente a la publicación del extracto en la convocatoria en el BORM",
+			"bases": "https://www.borm.es",
+			"documento": {
+				"id": 1549809,
+				"nombre": "Orden Convocatoria accesibilidad empresas 2026 (COPIA).pdf"
+			},
+			"docs": [
+				1549809
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939857",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para financiar obras, soluciones de ingeniería y equipamiento orientados a la mejora de la accesibilidad universal en establecimientos turísticos privados de la Región de Murcia.",
+				"paraQuien": "Autónomos, sociedades privadas y comunidades de bienes propietarias o explotadoras de alojamientos turísticos, agencias de viajes, parques temáticos, empresas de turismo activo o bodegas enoturísticas en la Región de Murcia.",
+				"importe": "Hasta el 100 % de la cantidad solicitada, con un límite máximo de 50.000 € por proyecto.",
+				"importeMaximo": 50000,
+				"plazo": "Diez días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Región de Murcia (BORM).",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar registrado, ubicado y desarrollar la actividad turística en el territorio de la Región de Murcia.",
+					"Ser propietario o contar con contrato vigente de explotación, arrendamiento o concesión que autorice expresamente a realizar obras.",
+					"Hallarse al corriente de las obligaciones tributarias con la Hacienda regional y la estatal.",
+					"Estar al corriente en el cumplimiento de las obligaciones con la Seguridad Social.",
+					"No tener deudas pendientes por reintegro de subvenciones.",
+					"No encontrarse en situación de empresa en crisis ni con orden de recuperación pendiente de ayudas.",
+					"Iniciar las obras o actuaciones con posterioridad a la fecha de presentación de la solicitud."
+				],
+				"gastos": [
+					"Redacción de proyectos técnicos y dirección facultativa de las obras.",
+					"Ejecución de obras de adaptación, rampas, ascensores adaptados, aseos accesibles y reforma de accesos.",
+					"Adquisición de bienes, equipos tecnológicos y productos de apoyo para personas con discapacidad.",
+					"Gestión administrativa de la solicitud (hasta un 4 % de la ayuda pedida, máx. 3.000 €).",
+					"Gestión y auditoría de la justificación técnica y económica (hasta un 7 % de la ayuda, máx. 7.000 €)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939852",
+			"titulo": "Feria Fruit Logística",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 26000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "10",
+					"nombre": "Industria alimentaria"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-11",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1549811,
+				"nombre": "CONVOCATORIA FERIA FRUIT LOGISTICA 2027_103851.PDF"
+			},
+			"docs": [
+				1549811,
+				1549812
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939852",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda para que empresas del sector de la fruta y la hortaliza de Castilla-La Mancha participen como expositoras en la feria Fruit Logística 2027 en Berlín.",
+				"paraQuien": "Autónomos, empresas, cooperativas y agrupaciones del sector hortofrutícola que ejerzan su actividad en Castilla-La Mancha.",
+				"importe": "El 65 % del coste del espacio y su acondicionamiento, con un máximo de 5.200 € por negocio.",
+				"importeMaximo": 5200,
+				"plazo": "Desde el día siguiente a su publicación en el Diario Oficial de Castilla-La Mancha hasta el 11 de diciembre de 2026.",
+				"plazoFin": "2026-12-11",
+				"requisitos": [
+					"Desarrollar la actividad económica en Castilla-La Mancha.",
+					"Pertenecer al sector hortofrutícola.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"Tener contratado previamente un stand dentro del pabellón de Castilla-La Mancha gestionado por el IPEX.",
+					"No haber recibido otra subvención de la Junta de Castilla-La Mancha para esta misma acción.",
+					"Disponer de plan de prevención de riesgos laborales si es obligatorio para tu empresa."
+				],
+				"gastos": [
+					"Alquiler del espacio expositivo",
+					"Acondicionamiento del espacio expositivo"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939798",
+			"titulo": "ORDEN de la Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria por la que se convocan para la campaña 2026, la Ayuda a la Producción y Comercialización de Cochinilla DOP",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANARIAS",
+				"nivel3": "CONSEJERÍA DE AGRICULTURA, GANADERÍA, PESCA Y SOBERANÍA ALIMENTARIA"
+			},
+			"sede": null,
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 14848,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES7",
+					"nombre": "CANARIAS"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Del 1 de Enero de 2027",
+			"textoFin": "Al 31 de Enero de 2027",
+			"bases": "https://www.gobiernodecanarias.org/boc/",
+			"documento": {
+				"id": 1549666,
+				"nombre": "PROYECTO DE ORDEN-COCHINILLA-FINAL.pdf"
+			},
+			"docs": [
+				1549666
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939798",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica por kilo para apoyar la producción y venta de cochinilla con Denominación de Origen Protegida (DOP) en Canarias durante la campaña 2026.",
+				"paraQuien": "Productores titulares de explotaciones de tuneras destinadas a cochinilla inscritos en la DOP Cochinilla de Canarias.",
+				"importe": "16 € por kilo comercializado para productores generales y 32 € por kilo para agricultores profesionales (presupuesto total de 14.848 €).",
+				"importeMaximo": null,
+				"plazo": "Del 1 al 31 de enero de 2027, ambos inclusive.",
+				"plazoFin": "2027-01-31",
+				"requisitos": [
+					"Tener una explotación de tuneras para cochinilla inscrita en la DOP Cochinilla de Canarias.",
+					"Haber vendido cochinilla DOP de tu explotación durante el año 2026 y justificarlo con facturas.",
+					"Tener la condición de agricultor activo durante la campaña 2026.",
+					"Haber presentado la declaración responsable de agricultor activo entre el 1 de enero y el 31 de julio.",
+					"Tener las parcelas o recintos registrados en el SIGPAC con uso de frutales (FY).",
+					"Para cobrar la cuantía máxima de 32 €/kg, cumplir los requisitos de agricultor profesional."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "939759",
+			"titulo": "VII Concurso de decoración de Navidad del Ayuntamiento de Toén",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TOÉN",
+				"nivel3": "AYUNTAMIENTO DE TOÉN"
+			},
+			"sede": "http://concellodetoen.sedelectronica.es",
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 750,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES113",
+					"nombre": "Ourense"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": "2026-12-18",
+			"textoInicio": "Día siguiente al de la publicación del extracto de la convocatoria en el BOP",
+			"textoFin": "A LAS 14:30",
+			"bases": "http://concellodetoen.sedelectronica.es/",
+			"documento": {
+				"id": 1549623,
+				"nombre": "20261104_Certificado_Certificado Xunta de Goberno_CERTIFICACIÓN ACORDO XGL aprobación bases concurso exp 2021.2026_es.pdf"
+			},
+			"docs": [
+				1549608,
+				1549623,
+				1549624
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939759",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña del Ayuntamiento de Toén con una categoría específica para premiar el mejor escaparate comercial del municipio.",
+				"paraQuien": "Autónomos y empresas titulares de un establecimiento comercial en el Ayuntamiento de Toén (también hay categorías para vecinos particulares y entidades sin ánimo de lucro).",
+				"importe": "200 € para el escaparate comercial ganador (el presupuesto total del concurso es de 750 €).",
+				"importeMaximo": 200,
+				"plazo": "Hasta el 18 de diciembre de 2026 a las 14:30 horas (el inicio depende de la publicación en el BOP de Ourense).",
+				"plazoFin": "2026-12-18",
+				"requisitos": [
+					"Tener un establecimiento comercial situado en el Ayuntamiento de Toén.",
+					"La decoración debe ser visible desde el espacio público.",
+					"La temática debe girar en torno a la Navidad (estilo y técnica libres).",
+					"Cada participante solo puede presentar una decoración.",
+					"Mantener la decoración expuesta hasta el 6 de enero de 2027.",
+					"Permitir la visita del jurado el día 23/12/2026 entre las 17:30 y las 20:30 horas.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"No ser miembro de la corporación local, empleado municipal ni familiar de primer grado."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Toén"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "939750",
+			"titulo": "Bases y Convocatoria reguladoras de los premios que se otorguen con motivo del concurso de decoración de escaparates navideños Laredo 2026-2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "LAREDO",
+				"nivel3": "AYUNTAMIENTO DE LAREDO"
+			},
+			"sede": "https://sede.laredo.es/",
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1700,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES13",
+					"nombre": "CANTABRIA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-27",
+			"fin": "2026-12-04",
+			"textoInicio": "27 DE NOVIEMBRE DE 2026",
+			"textoFin": "04 DE DICIEMBRE DE 2026, ANTES DE LAS 12:00 H.",
+			"bases": "https://www.laredo.es/09/archivos/bases-reguladoras-concurso-de-decoracion-de-escapa.pdf",
+			"documento": {
+				"id": 1549565,
+				"nombre": "EXTRACTO CONVOCATORIA CONCURSO DECORACION DE ESCAPARATES NAVIDEÑOS.docx"
+			},
+			"docs": [
+				1549565,
+				1549594,
+				1549597,
+				1549599
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939750",
+			"ia": null,
+			"comprobada": "2026-11-04",
+			"iaIntentos": 1,
+			"iaIntentadoEl": "2026-11-04",
+			"iaError": "no es un PDF (EXTRACTO CONVOCATORIA CONCURSO DECORACION DE ESCAPARATES NAVIDEÑOS.docx)"
+		},
+		{
+			"codigo": "939653",
+			"titulo": "NUEVA CONVOCATORIA  PLAN INTEGRAL DE  APOYO A PYME'S 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABRA",
+				"nivel3": "AYUNTAMIENTO DE CABRA"
+			},
+			"sede": null,
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 15772.45,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES",
+					"nombre": "ESPAÑA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A PARTIR DEL DIA SIGUIENTE DE LA PUBLICACION DEL EXTRACTO  DE LA CONVOCATORIA EN EL BOP DE CÓRDOBA",
+			"textoFin": "FINALIZARÁ EN TODO CASO EL 30/11/2026",
+			"bases": "https://bop.dipucordoba.es/visor-pdf/29-07-2025/BOP-A-2025-2470.pdf",
+			"documento": {
+				"id": 1549371,
+				"nombre": "2 CONVOCATORIA PYMES.pdf"
+			},
+			"docs": [
+				1549371
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939653",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas del Ayuntamiento de Cabra para pymes y autónomos locales divididas en 4 líneas: creación de empresas, incentivos a la contratación indefinida, emprendimiento de jóvenes y mujeres mayores de 45 años, y pago del alquiler del local de negocio.",
+				"paraQuien": "Autónomos y pymes con domicilio fiscal o centro de trabajo en Cabra que hayan iniciado actividad recientemente, hayan contratado personal de forma indefinida o alquilen un local de negocio.",
+				"importe": "Entre 1.000 € y 2.000 € según la línea (1.500 € por inicio de actividad; de 1.000 € a 2.000 € por contratación/ampliación; hasta el 50 % del alquiler con un tope de 2.000 €). El presupuesto global es de 15.772,45 €.",
+				"importeMaximo": null,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el BOP de Córdoba hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Tener la condición de pyme o persona trabajadora autónoma con centro de trabajo o domicilio fiscal en Cabra.",
+					"Para creación (Línea 1): haberse constituido y dado de alta en Hacienda y Seguridad Social entre el 01/10/2025 y el 20/11/2026.",
+					"Para emprendimiento (Línea 3): tener hasta 35 años o ser mujer mayor de 45 años e iniciar actividad entre el 01/10/2025 y el 20/11/2026.",
+					"Para contratación (Línea 2): haber hecho contratos indefinidos o ampliaciones a completa entre el 01/10/2025 y el 20/11/2026.",
+					"Para alquiler (Línea 4): contar con al menos 12 meses de contrato de arrendamiento para taller, fábrica, tienda u oficina.",
+					"En alquiler, quedan excluidos viviendas, almacenes, grandes superficies, locales municipales o contratos entre partes vinculadas.",
+					"Cumplir con los requisitos y aportar la documentación exigida en las bases reguladoras de cada línea."
+				],
+				"gastos": [
+					"Gastos de inicio y puesta en marcha de la nueva actividad económica.",
+					"Costes salariales derivados de nuevas contrataciones indefinidas o ampliaciones de jornada.",
+					"Renta mensual del alquiler del local de negocio (excluyendo IVA, suministros, tasas o comunidad)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cabra"
+				},
+				"dudas": "Varios requisitos específicos y la documentación requerida remiten a las bases reguladoras de 2025 y no aparecen detallados en la convocatoria."
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "939649",
+			"titulo": "CONVO SUBVENCION COMIDAS A DOMICILIO 2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTA PERPÈTUA DE MOGODA",
+				"nivel3": "AYUNTAMIENTO DE SANTA PERPÈTUA DE MOGODA"
+			},
+			"sede": null,
+			"publicada": "2026-11-04",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 35000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES511",
+					"nombre": "Barcelona"
+				}
+			],
+			"finalidad": "Servicios Sociales y Promoción Social",
+			"inicio": "2026-11-16",
+			"fin": "2027-12-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://bop.diba.cat/anunci/3882637/bases-reguladores-especifiques-per-a-la-concessio-de-subvencions-en-regim-de-concurrencia-competitiva-versio-en-catala-i-castella-ajuntament-de-santa-perpetua-de-mogoda",
+			"documento": {
+				"id": 1549372,
+				"nombre": "Convo_Àpats_a_dom._27_castellano.pdf"
+			},
+			"docs": [
+				1549372,
+				1549373
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939649",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas sociales individuales del Ayuntamiento de Santa Perpètua de Mogoda para financiar el servicio de comida a domicilio durante el año 2027. Están destinadas a personas mayores o dependientes que se encuentren en situación de vulnerabilidad.",
+				"paraQuien": "Personas mayores de 65 años o con dependencia empadronadas o atendidas en el municipio, en situación de vulnerabilidad social o económica. No aplica a empresas ni a autónomos.",
+				"importe": "Cubre el 50%, 75% o 100% del coste del servicio según el baremo de servicios sociales. El presupuesto global es de 35.000 €.",
+				"importeMaximo": null,
+				"plazo": "Del 16 al 25 de noviembre de 2026, aunque se podrán admitir solicitudes posteriores si no pudieron presentarse en fecha.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener 65 años o más, o bien una situación de dependencia reconocida.",
+					"Acreditar una situación de gran vulnerabilidad económica según el baremo municipal.",
+					"Necesitar una comida diaria garantizada por motivos de salud valorados por Servicios Sociales.",
+					"Tener dificultades de movilidad o que la vivienda no reúna condiciones adecuadas para cocinar."
+				],
+				"gastos": [
+					"Facturas del servicio de catering y comida a domicilio autorizadas."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Santa Perpètua de Mogoda"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.8-flash",
+			"cierreDescartado": {
+				"fecha": "2026-11-25",
+				"motivo": "no coincide con la de la BDNS (2027-12-31)"
+			}
+		},
 		{
 			"codigo": "939614",
 			"titulo": "Extracto de acuerdo de fecha 22 octubre 2026 convocatoria y concesión de subvenciones en régimen de concurrencia competitiva para sufragar gastos corrientes de actividades agrícolas, ganaderas y de pesca tradicional de Adeje",
@@ -159,6 +843,86 @@
 			},
 			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "939517",
+			"titulo": "CONVO SUBV. COMEDOR GENTE MAYOR 2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTA PERPÈTUA DE MOGODA",
+				"nivel3": "AYUNTAMIENTO DE SANTA PERPÈTUA DE MOGODA"
+			},
+			"sede": null,
+			"publicada": "2026-11-03",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 30000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES511",
+					"nombre": "Barcelona"
+				}
+			],
+			"finalidad": "Servicios Sociales y Promoción Social",
+			"inicio": "2026-11-16",
+			"fin": "2027-12-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://bop.diba.cat/anunci/3882637/bases-reguladores-especifiques-per-a-la-concessio-de-subvencions-en-regim-de-concurrencia-competitiva-versio-en-catala-i-castella-ajuntament-de-santa-perpetua-de-mogoda",
+			"documento": {
+				"id": 1549354,
+				"nombre": "Convo_Comedor_Gente_Major_2027_CASTELLANO.pdf"
+			},
+			"docs": [
+				1549354,
+				1549355
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939517",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas individuales asistenciales para cubrir el coste de una comida diaria a través del servicio de comedor social para personas mayores o en situación de dependencia durante el año 2027.",
+				"paraQuien": "Personas mayores de 65 años o en situación de dependencia con vulnerabilidad económica o social (no dirigida a negocios ni profesionales).",
+				"importe": "Cubre el 50 %, 75 % o 100 % del coste del servicio de comedor según baremo social (presupuesto total municipal de 30.000 €).",
+				"importeMaximo": null,
+				"plazo": "Del 16 al 25 de noviembre de 2026, aunque se podrán atender solicitudes posteriores debidamente justificadas.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener más de 65 años o una situación de dependencia reconocida.",
+					"Acreditar gran vulnerabilidad económica según el baremo municipal de ayudas sociales.",
+					"Tener necesidad justificada por motivos de salud de garantizar una comida diaria.",
+					"No incurrir en las prohibiciones para ser beneficiario de la Ley General de Subvenciones."
+				],
+				"gastos": [
+					"Coste de la comida diaria del servicio de comedor correspondiente."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Santa Perpètua de Mogoda"
+				},
+				"dudas": "Es una ayuda social para particulares, no aplica a autónomos ni empresas."
+			},
+			"comprobada": "2026-11-04",
+			"iaModelo": "gemini-3.8-flash",
+			"cierreDescartado": {
+				"fecha": "2026-11-25",
+				"motivo": "no coincide con la de la BDNS (2027-12-31)"
+			}
 		},
 		{
 			"codigo": "939499",
@@ -442,7 +1206,7 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939451",
 			"ia": null,
 			"comprobada": "2026-11-04",
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-04",
 			"iaError": "no es un PDF (BASES CONCURRENCIA COMPETITIVA PRORRATEADA PARA PRUEBAS DE BTT 2026.docx)"
 		},
@@ -810,7 +1574,7 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939389",
 			"ia": null,
 			"comprobada": "2026-11-04",
-			"iaIntentos": 2,
+			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-04",
 			"iaError": "no es un PDF (Oinarrien eta deialdiaren onarpena_Aprobación de las bases y convocatoria.docx)"
 		},
@@ -16903,7 +17667,7 @@
 			"docs": [
 				1536835
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-03",
@@ -16983,7 +17747,7 @@
 				1536572,
 				1536573
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17056,7 +17820,7 @@
 				1536558,
 				1536559
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-05-01",
@@ -17260,7 +18024,7 @@
 				1536496,
 				1536497
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17340,7 +18104,7 @@
 				1536485,
 				1536486
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17431,7 +18195,7 @@
 				1536477,
 				1536478
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17537,7 +18301,7 @@
 			"docs": [
 				1536397
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17612,7 +18376,7 @@
 				1536310,
 				1536311
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17761,7 +18525,7 @@
 				1536204,
 				1536205
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17838,7 +18602,7 @@
 				1536149,
 				1538756
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17915,7 +18679,7 @@
 				1536113,
 				1536114
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17991,7 +18755,7 @@
 				1536093,
 				1536095
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18062,7 +18826,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -18147,7 +18911,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18230,7 +18994,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18306,7 +19070,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18377,7 +19141,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18454,7 +19218,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18530,7 +19294,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -18615,7 +19379,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18689,22 +19453,22 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-03",
+			"comprobada": "2026-11-04",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-04T13:14:07.469Z",
+			"fecha": "2026-11-04T20:53:13.680Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 21,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-04T13:17:53.339Z",
-			"pendientes": 2,
-			"leidas": 4,
-			"fallidas": 2,
+			"fecha": "2026-11-04T21:02:26.538Z",
+			"pendientes": 1,
+			"leidas": 9,
+			"fallidas": 3,
 			"ultimaLectura": "2026-11-04"
 		}
 	}
