@@ -1,6 +1,700 @@
 {
-	"actualizado": "2026-11-05T13:27:43.929Z",
+	"actualizado": "2026-11-05T21:10:26.483Z",
 	"convocatorias": [
+		{
+			"codigo": "940203",
+			"titulo": "Bases que regirán el III Concurso de Decoración Navideña en Fachadas y Escaparates comerciales de Talavera",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TALAVERA DE LA REINA",
+				"nivel3": "AYUNTAMIENTO DE TALAVERA DE LA REINA"
+			},
+			"sede": null,
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES425",
+					"nombre": "Toledo"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-05",
+			"fin": "2026-11-30",
+			"textoInicio": "Desde el día siguiente al de la publicación del extracto de la presente convocatoria en B.O.P.",
+			"textoFin": null,
+			"bases": "www.talavera.es",
+			"documento": {
+				"id": 1550673,
+				"nombre": "Acuerdo_JGL..pdf"
+			},
+			"docs": [
+				1550673
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940203",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso municipal que premia la decoración navideña en fachadas y escaparates de los comercios de Talavera de la Reina durante las fiestas de 2026.",
+				"paraQuien": "Pequeños y medianos comercios minoristas situados en el municipio de Talavera de la Reina.",
+				"importe": "Un premio de 1.500 € para la mejor fachada y 1.000 € para el mejor escaparate.",
+				"importeMaximo": 1500,
+				"plazo": "Hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Tener un establecimiento comercial minorista en Talavera de la Reina.",
+					"Estar al corriente de pago con la Hacienda Pública, la Seguridad Social y el Ayuntamiento.",
+					"No tener subvenciones pendientes de justificar fuera de plazo con el Ayuntamiento.",
+					"Mantener la decoración iluminada del 27 de noviembre de 2026 al 6 de enero de 2027.",
+					"Entregar la autorización por escrito del propietario del local o la comunidad de propietarios.",
+					"No ocupar ni obstaculizar la vía pública con la decoración.",
+					"Usar elementos decorativos que no sean rígidos ni pesados."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Talavera de la Reina"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-05",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940179",
+			"titulo": "Resolución del Consejero de Educación y Universidades por la cual se convocan ayudas para financiar actividades del programa \"Viu la cultura\" para el curso 2026-2027",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ILLES BALEARS",
+				"nivel3": "DIRECCIÓN GENERAL DE INNOVACIÓN Y COMUNIDAD EDUCATIVA"
+			},
+			"sede": null,
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 150000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85.6",
+					"nombre": "Actividades auxiliares a la educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES53",
+					"nombre": "ILLES BALEARS"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": "2027-05-03",
+			"fin": "2027-06-18",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.caib.es/eboibfront/eli/es-ib/o/2025/07/12/20/dof/spa/html",
+			"documento": {
+				"id": 1550624,
+				"nombre": "Document BDNS (castellà).PDF"
+			},
+			"docs": [
+				1550624,
+				1550625
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940179",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para financiar los gastos de las actividades culturales y pedagógicas del programa «Viu la cultura» durante el curso académico 2026-2027.",
+				"paraQuien": "Centros educativos públicos, centros concertados y escuelas infantiles de 0-3 años dependientes de entidades locales de les Illes Balears.",
+				"importe": "Importe fijo por actividad según tipología: talleres e itinerarios (150 € una sesión, 225 € dos sesiones) y espectáculos (210 € una sesión, 315 € dos sesiones). Máximo 10 actividades por centro.",
+				"importeMaximo": null,
+				"plazo": "Del 3 de mayo de 2027 al 18 de junio de 2027.",
+				"plazoFin": "2027-06-18",
+				"requisitos": [
+					"Ser un centro público, concertado o escuela infantil 0-3 de titularidad local de les Illes Balears.",
+					"Haber participado en el programa «Viu la cultura» para el curso académico 2026-2027.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social (centros concertados y escuelas de infantil locales).",
+					"Pertenecer a la red de escuelas infantiles públicas de les Illes Balears mediante convenio vigente.",
+					"Contar con la autorización de la Consejería de Educación y Universidades.",
+					"Estar integrada y mantener al día sus datos en el programa de gestión educativa de la Consejería.",
+					"No estar incurso en prohibiciones para recibir subvenciones ni haber sido sancionado por infracciones graves o discriminación."
+				],
+				"gastos": [
+					"Actividades pedagógicas y culturales del catálogo del programa «Viu la cultura» (talleres, itinerarios y espectáculos)."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-05",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940167",
+			"titulo": "Exp S121-2026-6911 Convocatòria concessió subvencions equitat i inclusió alumnat NESE 2026-2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "PREMIÀ DE MAR",
+				"nivel3": "AYUNTAMIENTO DE PREMIÀ DE MAR"
+			},
+			"sede": null,
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 300000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES51",
+					"nombre": "CATALUÑA"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": "2026-11-13",
+			"fin": "2026-12-03",
+			"textoInicio": "https://premiademar.cat/fitxes.php?categoria=1185",
+			"textoFin": "https://premiademar.cat/fitxes.php?categoria=1185",
+			"bases": "https://premiademar.cat/fitxa.php?id=38206",
+			"documento": {
+				"id": 1550595,
+				"nombre": "Convocatoria_cat_cast.pdf"
+			},
+			"docs": [
+				1550595,
+				1550596
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940167",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Subvenciones extraordinarias del Ayuntamiento de Premià de Mar destinadas a escuelas e institutos para financiar proyectos educativos que apliquen medidas para reducir la segregación escolar en el curso 2026-2027.",
+				"paraQuien": "Escuelas e institutos públicos y concertados situados en Premià de Mar, y centros educativos con alumnado empadronado en el municipio escolarizado fuera de este por necesidades específicas de apoyo educativo (NESE).",
+				"importe": "Presupuesto total de 300.000 €.",
+				"importeMaximo": null,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Barcelona.",
+				"plazoFin": "2026-12-03",
+				"requisitos": [
+					"Tener sede, delegación o centro de trabajo en Premià de Mar o escolarizar a alumnado NESE empadronado en el municipio.",
+					"Impartir enseñanzas en etapa obligatoria.",
+					"No incurrir en ninguna de las prohibiciones legales para recibir subvenciones públicas.",
+					"Estar al corriente en las obligaciones con la Hacienda Pública y la Seguridad Social.",
+					"No haber recibido sanciones o sentencias firmes por prácticas laborales discriminatorias por razón de sexo o género.",
+					"Presentar una memoria descriptiva completa del proyecto educativo firmada por la dirección.",
+					"Demostrar que el proyecto impacta a un mínimo del 25 % del alumnado del centro.",
+					"En centros NESE fuera del municipio, acreditar la obligatoriedad de escolarización mediante informe de la Generalitat de Catalunya."
+				],
+				"gastos": [
+					"Proyectos educativos dirigidos a reducir el índice de segregación escolar en el municipio."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Premià de Mar"
+				},
+				"dudas": "No consta el importe máximo individual que puede percibir cada centro educativo o proyecto."
+			},
+			"comprobada": "2026-11-05",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940145",
+			"titulo": "ACUERDO DE JUNTA DE GOBIERNO LOCAL DE FECHA 30 DE OCTUBRE DE 2026 POR EL QUE SE APRUEBA LA CONVOCATORIA DEL CONCURSO DE VILLANCICOS DE LAS FIESTAS DE NAVIDAD 2026/2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALMERÍA",
+				"nivel3": "AYUNTAMIENTO DE ALMERÍA"
+			},
+			"sede": "https://www.almeriaciudad.es/oficina-virtual/",
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 4800,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "P",
+					"nombre": "ADMINISTRACIÓN PÚBLICA Y DEFENSA; SEGURIDAD SOCIAL OBLIGATORIA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES611",
+					"nombre": "Almería"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día posterior a publicación en B.O.P.A.",
+			"textoFin": "Veinte días naturales posteriores a la publicación",
+			"bases": "https://almeriaciudad.es/uploads/normativas/2024-09/29.--bases_reguladoras_concesion_subvenciones.pdf",
+			"documento": {
+				"id": 1550535,
+				"nombre": "Certificado_acuerdo.pdf"
+			},
+			"docs": [
+				1550535,
+				1550537
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940145",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de villancicos navideños organizado por el Ayuntamiento de Almería para promover la cultura y la tradición musical navideña.",
+				"paraQuien": "Grupos de particulares, asociaciones, centros educativos, parroquias o colectivos culturales de hasta 30 integrantes.",
+				"importe": "Premios de 1.000 € (primer premio) y 600 € (segundo premio) en modalidades juvenil y adultos; lotes de material escolar y cultural de hasta 500 € en modalidad infantil.",
+				"importeMaximo": 1000,
+				"plazo": "20 días naturales contados desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Almería.",
+				"plazoFin": null,
+				"requisitos": [
+					"Formar un grupo de máximo 30 personas.",
+					"Interpretar dos villancicos con música y voz en directo.",
+					"Participar únicamente en una modalidad o categoría.",
+					"Cada integrante solo puede participar en un único grupo.",
+					"Designar a una persona representante si el grupo no tiene personalidad jurídica.",
+					"Aportar la autorización de padres, madres o tutores en el caso de participantes menores de edad."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Almería"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-05",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "940138",
+			"titulo": "ACUERDO DE JUNTA DE GOBIERNO LOCAL DE FECHA 30 DE OCTUBRE DE 2026 POR EL QUE SE APRUEBA LA CONVOCATORIA DEL CONCURSO LOCAL DE BELENES, CON MOTIVO DE LAS FIESTAS DE NAVIDAD 2026/2027.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALMERÍA",
+				"nivel3": "AYUNTAMIENTO DE ALMERÍA"
+			},
+			"sede": "https://www.almeriaciudad.es/oficina-virtual/",
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 4800,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "P",
+					"nombre": "ADMINISTRACIÓN PÚBLICA Y DEFENSA; SEGURIDAD SOCIAL OBLIGATORIA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES611",
+					"nombre": "Almería"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día posterior a publicación en B.O.P.A.",
+			"textoFin": "Veinte días naturales posteriores a la publicación",
+			"bases": "https://almeriaciudad.es/uploads/normativas/2024-09/29.--bases_reguladoras_concesion_subvenciones.pdf",
+			"documento": {
+				"id": 1550500,
+				"nombre": "Certificado de acuerdo.pdf"
+			},
+			"docs": [
+				1550500,
+				1550502
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940138",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso local de belenes navideños en Almería para fomentar la tradición belenística. Se conceden premios en metálico y diplomas en varias modalidades, entre ellas comercios, asociaciones, entidades y personas físicas.",
+				"paraQuien": "Comercios, personas físicas, asociaciones educativas, centros docentes, parroquias, hermandades e instituciones con belén en Almería.",
+				"importe": "En la modalidad de comercios: 1.er premio de 500 € y 2.º premio de 300 €. En asociaciones y entidades: hasta 900 €. Se pueden conceder accésits de 200 €.",
+				"importeMaximo": 900,
+				"plazo": "20 días naturales contados desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Almería.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener el belén instalado en un local, comercio, sede o domicilio situado en el municipio de Almería.",
+					"Las entidades participantes deben estar legalmente constituidas.",
+					"El belén debe estar abierto al público y accesible para la visita del jurado los días 16, 17 y 18 de diciembre de 2026.",
+					"El belén debe respetar las normas mínimas de tradición popular y litúrgica.",
+					"Presentar la solicitud oficial junto con la declaración responsable requerida."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Almería"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-05",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940135",
+			"titulo": "CONCESION AYUDA DESTINADA A MADRES I PADRES O TUTORES LEGALES DE ALUMNOS PARA EL SERVICIO DE GUARDERIA , CURSO 2025-2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VALLFOGONA DE RIPOLLÈS",
+				"nivel3": "AYUNTAMIENTO DE VALLFOGONA DE RIPOLLÈS"
+			},
+			"sede": "https://vallfogona.cat/",
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1800,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": "2026-11-26",
+			"textoInicio": "05/11/2026",
+			"textoFin": null,
+			"bases": "https://tauler.seu-e.cat/detall?idEns=1717070005&idEdicte=1717070005_718568",
+			"documento": {
+				"id": 1550504,
+				"nombre": "CONVOCATORIA AYUDA SERVICIO GUARDERIA 2025-2026.pdf"
+			},
+			"docs": [
+				1550504,
+				1550505
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940135",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas para cubrir los gastos de guardería del curso escolar 2025-2026 destinados a familias de Vallfogona de Ripollès.",
+				"paraQuien": "Madres, padres o tutores legales de alumnos matriculados en una guardería autorizada.",
+				"importe": "Hasta 600,00 € por alumno",
+				"importeMaximo": 600,
+				"plazo": "15 días contados a partir del día siguiente a la publicación de la convocatoria, con fecha límite el 26 de noviembre de 2026.",
+				"plazoFin": "2026-11-26",
+				"requisitos": [
+					"Padres o tutores y el alumno deben estar empadronados en Vallfogona de Ripollès durante todo el curso.",
+					"El alumno debe estar matriculado en una guardería autorizada por el Departamento de Educación.",
+					"Ambos padres o tutores deben estar trabajando al inscribir al niño y durante los meses de la ayuda.",
+					"Comprometerse a matricular al alumno en la escuela pública del municipio a partir de un año de edad."
+				],
+				"gastos": [
+					"Cuotas mensuales de la guardería de septiembre a julio",
+					"Matrícula del curso escolar",
+					"Cuotas del servicio de acogida matinal"
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Vallfogona de Ripollès"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-05",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "940086",
+			"titulo": "Subvenciones para proyectos de cooperación al desarrollo 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TAFALLA",
+				"nivel3": "AYUNTAMIENTO DE TAFALLA"
+			},
+			"sede": null,
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 47000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "V",
+					"nombre": "ORGANISMOS EXTRATERRITORIALES"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES220",
+					"nombre": "Navarra"
+				}
+			],
+			"finalidad": "Cooperación internacional para el desarrollo y cultural",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "desde el día siguiente al de la publicación de la convocatoria en el Boletín Oficial de Navarra",
+			"textoFin": "dentro de los 30 días naturales  partir del día siguiente al de la publicación del extracto en BON",
+			"bases": "https://bon.navarra.es/es/anuncio/-/texto/2017/193/23",
+			"documento": {
+				"id": 1550415,
+				"nombre": "convocatoria - SEFYCU 405047diligenciado secretario.pdf"
+			},
+			"docs": [
+				1550415
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940086",
+			"ia": null,
+			"comprobada": "2026-11-05"
+		},
+		{
+			"codigo": "940056",
+			"titulo": "Resolución de la Secretaría de Estado de Energía por la que se aprueba la convocatoria para la concesión de ayudas públicas en 2027 del Programa Nacional de Exploración Minera 2026-2030",
+			"organo": {
+				"nivel1": "ESTADO",
+				"nivel2": "MINISTERIO PARA LA TRANSICIÓN ECOLÓGICA Y EL RETO DEMOGRÁFICO",
+				"nivel3": "DIRECCIÓN GENERAL DE POLÍTICA ENERGÉTICA Y MINAS"
+			},
+			"sede": null,
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1400000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES",
+					"nombre": "ESPAÑA"
+				}
+			],
+			"finalidad": "Industria y Energía",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "DÍA SIGUIENTE DE PUBLICACIÓN EXTRACTO EN BOE",
+			"textoFin": "UN MES A PARTIR DE PUBLICACIÓN EXTRACTO EN BOE",
+			"bases": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-8469",
+			"documento": {
+				"id": 1550310,
+				"nombre": "Convocatoria Ayudas PNEM 2027.pdf"
+			},
+			"docs": [
+				1550310
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940056",
+			"ia": null,
+			"comprobada": "2026-11-05"
+		},
+		{
+			"codigo": "940023",
+			"titulo": "CONVOCATORIA DE SUBVENCIÓN PARA LA RENOVACIÓN DE LA FLOTA DE TAXIS DE MELILLA PARA EL AÑO 2026",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CIUDAD AUTÓNOMA DE MELILLA",
+				"nivel3": "CONSEJERÍA DE MEDIO AMBIENTE Y NATURALEZA"
+			},
+			"sede": "https://sede.melilla.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS2_HOME",
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 135859.95,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES64",
+					"nombre": "CIUDAD AUTONOMA DE MELILLA"
+				}
+			],
+			"finalidad": "Subvenciones al transporte",
+			"inicio": null,
+			"fin": "2026-11-20",
+			"textoInicio": "AL DÍA SIGUIENTE DE LA PUBLICACIÓN EN EL BOME",
+			"textoFin": "20 DE NOVIEMBRE DE 2026",
+			"bases": "https://bomemelilla.es/",
+			"documento": {
+				"id": 1550267,
+				"nombre": "SUBVENCIÓN RENOVACIÓN TAXI.pdf"
+			},
+			"docs": [
+				1550267
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940023",
+			"ia": null,
+			"comprobada": "2026-11-05"
+		},
+		{
+			"codigo": "940015",
+			"titulo": "Subvenciones a la producción de espectáculos de artes escénicas de carácter profesional, 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE TENERIFE",
+				"nivel3": "CABILDO INSULAR DE TENERIFE"
+			},
+			"sede": "https://sede.tenerife.es/es/tramites",
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 210000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES709",
+					"nombre": "Tenerife"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la publicación en el BOC del extracto de la convocatoria",
+			"textoFin": "Quince (15) días naturales",
+			"bases": "https://www.gobiernodecanarias.org/boc/",
+			"documento": {
+				"id": 1550266,
+				"nombre": "07 PROD ESCEN 26 aprob bases y convocat (acuerdo CG).pdf"
+			},
+			"docs": [
+				1550266
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940015",
+			"ia": null,
+			"comprobada": "2026-11-05"
+		},
+		{
+			"codigo": "939979",
+			"titulo": "Feria ISM",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-11-05",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 11250,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "10",
+					"nombre": "Industria alimentaria"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-11",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1550161,
+				"nombre": "CONVOCATORIA FERIA ISM 2027_112750.PDF"
+			},
+			"docs": [
+				1550161,
+				1550162
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939979",
+			"ia": null,
+			"comprobada": "2026-11-05"
+		},
 		{
 			"codigo": "939897",
 			"titulo": "ORDEN de la Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria por la que se convocan para la campaña 2026, las ayudas de la Acción III.5 “Ayuda para el consumo humano de carne fresca de vacuno, porcino, conejo, caprino, ovino y pollo",
@@ -16832,7 +17526,7 @@
 			"docs": [
 				1537382
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -16909,7 +17603,7 @@
 				1537275,
 				1537278
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -16983,7 +17677,7 @@
 			"docs": [
 				1537283
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17056,7 +17750,7 @@
 				1537272,
 				1537273
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -17172,7 +17866,7 @@
 				1537035,
 				1537036
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -17251,7 +17945,7 @@
 				1536908,
 				1536909
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -17332,7 +18026,7 @@
 				1536899,
 				1536900
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -17408,7 +18102,7 @@
 			"docs": [
 				1536840
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17485,7 +18179,7 @@
 			"docs": [
 				1536839
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -17558,7 +18252,7 @@
 				1536837,
 				1536838
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -17638,7 +18332,7 @@
 			"docs": [
 				1536835
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-03",
@@ -17718,7 +18412,7 @@
 				1536572,
 				1536573
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17791,7 +18485,7 @@
 				1536558,
 				1536559
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-05-01",
@@ -17995,7 +18689,7 @@
 				1536496,
 				1536497
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18075,7 +18769,7 @@
 				1536485,
 				1536486
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18166,7 +18860,7 @@
 				1536477,
 				1536478
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18272,7 +18966,7 @@
 			"docs": [
 				1536397
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18347,7 +19041,7 @@
 				1536310,
 				1536311
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18496,7 +19190,7 @@
 				1536204,
 				1536205
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18573,7 +19267,7 @@
 				1536149,
 				1538756
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18650,7 +19344,7 @@
 				1536113,
 				1536114
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18726,7 +19420,7 @@
 				1536093,
 				1536095
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18797,7 +19491,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -18882,7 +19576,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18965,7 +19659,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19041,7 +19735,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19112,7 +19806,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19189,7 +19883,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19265,7 +19959,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -19350,7 +20044,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19424,23 +20118,23 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-04",
+			"comprobada": "2026-11-05",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-05T13:27:43.929Z",
+			"fecha": "2026-11-05T21:10:26.483Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 31,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-05T13:29:33.607Z",
-			"pendientes": 5,
-			"leidas": 0,
+			"fecha": "2026-11-05T21:21:45.561Z",
+			"pendientes": 10,
+			"leidas": 6,
 			"fallidas": 0,
-			"ultimaLectura": "2026-11-04"
+			"ultimaLectura": "2026-11-05"
 		}
 	}
 }
