@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-11-07T11:54:24.116Z",
+	"actualizado": "2026-11-07T18:58:56.737Z",
 	"convocatorias": [
 		{
 			"codigo": "940577",
@@ -54,7 +54,7 @@
 					]
 				}
 			],
-			"iaIntentos": 1,
+			"iaIntentos": 2,
 			"iaIntentadoEl": "2026-11-07",
 			"iaError": "no es un PDF (Convocatoria v. castell.docx)"
 		},
@@ -13246,7 +13246,7 @@
 			"docs": [
 				1540123
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936399",
@@ -13324,7 +13324,7 @@
 			"docs": [
 				1540113
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936372",
@@ -13399,7 +13399,7 @@
 				1540028,
 				1540029
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936365",
@@ -13480,7 +13480,7 @@
 				1540021,
 				1540023
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936358",
@@ -13557,7 +13557,7 @@
 			"docs": [
 				1539998
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936334",
@@ -13634,7 +13634,7 @@
 			"docs": [
 				1539953
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936330",
@@ -13712,7 +13712,7 @@
 				1539938,
 				1539957
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936310",
@@ -13788,7 +13788,7 @@
 				1539893,
 				1539895
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936308",
@@ -13876,7 +13876,7 @@
 				1539889,
 				1539890
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14029,7 +14029,7 @@
 				1539873,
 				1539874
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14103,7 +14103,7 @@
 			"docs": [
 				1539758
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14177,7 +14177,7 @@
 				1539713,
 				1539714
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14250,7 +14250,7 @@
 			"docs": [
 				1539707
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14298,7 +14298,7 @@
 				1539688,
 				1539690
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaIntentadoEl": "2026-10-28"
 		},
 		{
@@ -14373,7 +14373,7 @@
 			"docs": [
 				1539619
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14458,7 +14458,7 @@
 				1541612,
 				1541613
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14536,7 +14536,7 @@
 			"docs": [
 				1539523
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14612,7 +14612,7 @@
 			"docs": [
 				1539475
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14685,7 +14685,7 @@
 			"docs": [
 				1542909
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14776,7 +14776,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -14931,7 +14931,7 @@
 			"docs": [
 				1539381
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15003,7 +15003,7 @@
 			"docs": [
 				1539339
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15084,7 +15084,7 @@
 			"docs": [
 				1539184
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15172,7 +15172,7 @@
 				1542031,
 				1542032
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15246,7 +15246,7 @@
 			"docs": [
 				1539146
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15327,7 +15327,7 @@
 			"docs": [
 				1539109
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15465,7 +15465,7 @@
 				1539059,
 				1539060
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -15537,7 +15537,7 @@
 			"docs": [
 				1539039
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15640,7 +15640,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15712,7 +15712,7 @@
 			"docs": [
 				1538957
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15786,7 +15786,7 @@
 			"docs": [
 				1538945
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15862,7 +15862,7 @@
 			"docs": [
 				1538935
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15938,7 +15938,7 @@
 				1538794,
 				1538818
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16013,7 +16013,7 @@
 				1538742,
 				1538743
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16088,7 +16088,7 @@
 				1538740,
 				1538741
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-02-12",
@@ -16164,7 +16164,7 @@
 				1538736,
 				1538737
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-02-12",
@@ -16247,7 +16247,7 @@
 				1538729,
 				1538730
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-01-29",
@@ -16323,7 +16323,7 @@
 				1538579,
 				1538581
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -16421,7 +16421,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16496,7 +16496,7 @@
 			"docs": [
 				1540145
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16581,7 +16581,7 @@
 				1538316,
 				1538317
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16658,7 +16658,7 @@
 			"docs": [
 				1538297
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16754,7 +16754,7 @@
 				1546324,
 				1546325
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -20336,16 +20336,16 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-07T11:54:24.116Z",
+			"fecha": "2026-11-07T18:58:56.737Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 43,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-07T11:54:24.390Z",
+			"fecha": "2026-11-07T18:58:56.910Z",
 			"pendientes": 1,
 			"leidas": 0,
-			"fallidas": 2,
+			"fallidas": 1,
 			"ultimaLectura": "2026-11-06"
 		}
 	}
