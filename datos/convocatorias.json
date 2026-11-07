@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-11-06T20:31:28.452Z",
+	"actualizado": "2026-11-07T11:54:24.116Z",
 	"convocatorias": [
 		{
 			"codigo": "940577",
@@ -34,11 +34,29 @@
 			"textoInicio": "Des des dia seguent a la publicació de l'extracte de la publicació al BOIB",
 			"textoFin": "15 dies hàbils des de l'endemà de la publlicació de la convocatòria al BOIB",
 			"bases": "https://www.caib.es/eboibfront/pdf/es/2017/21/972049 www.caib.es/eboibfront/pdf/ca/2018/96/1014444",
-			"documento": null,
-			"docs": [],
+			"documento": {
+				"id": 1551492,
+				"nombre": "Convocatoria v. castell.docx"
+			},
+			"docs": [
+				1551492,
+				1551493
+			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940577",
 			"ia": null,
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07",
+			"cambios": [
+				{
+					"fecha": "2026-11-07",
+					"campos": [
+						"documento",
+						"documentos"
+					]
+				}
+			],
+			"iaIntentos": 1,
+			"iaIntentadoEl": "2026-11-07",
+			"iaError": "no es un PDF (Convocatoria v. castell.docx)"
 		},
 		{
 			"codigo": "940549",
@@ -115,7 +133,7 @@
 				},
 				"dudas": "La fecha límite exacta de presentación de solicitudes depende del día concreto en que se publique la convocatoria en el Boletín Oficial de Bizkaia."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -194,7 +212,7 @@
 				},
 				"dudas": "No consta la fecha límite exacta del plazo, ya que depende del día de la publicación efectiva de la convocatoria en el Boletín Oficial de Bizkaia."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -276,7 +294,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -373,7 +391,7 @@
 				},
 				"dudas": "Las cuantías exactas de la subvención y los porcentajes por actuación no vienen detallados en esta resolución, sino en sus bases reguladoras."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -448,7 +466,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -522,7 +540,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -595,7 +613,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -673,7 +691,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -752,7 +770,7 @@
 				},
 				"dudas": "No consta el importe máximo individual que puede percibir cada centro educativo o proyecto."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -831,7 +849,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -909,7 +927,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -985,7 +1003,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -1062,7 +1080,7 @@
 				},
 				"dudas": "No consta el importe máximo por proyecto o entidad."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1136,7 +1154,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta en la que se publicará el extracto de la convocatoria en el BOE, de la cual depende el inicio del plazo de un mes."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1209,7 +1227,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1291,7 +1309,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1375,7 +1393,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1459,7 +1477,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1528,7 +1546,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1614,7 +1632,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash",
 			"cambios": [
 				{
@@ -1701,7 +1719,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1786,7 +1804,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1858,7 +1876,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -1936,7 +1954,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -1992,9 +2010,9 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939750",
 			"ia": null,
-			"comprobada": "2026-11-06",
-			"iaIntentos": 2,
-			"iaIntentadoEl": "2026-11-06",
+			"comprobada": "2026-11-07",
+			"iaIntentos": 3,
+			"iaIntentadoEl": "2026-11-07",
 			"iaError": "no es un PDF (EXTRACTO CONVOCATORIA CONCURSO DECORACION DE ESCAPARATES NAVIDEÑOS.docx)"
 		},
 		{
@@ -2071,7 +2089,7 @@
 				},
 				"dudas": "Varios requisitos específicos y la documentación requerida remiten a las bases reguladoras de 2025 y no aparecen detallados en la convocatoria."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -2147,7 +2165,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash",
 			"cierreDescartado": {
 				"fecha": "2026-11-25",
@@ -2234,7 +2252,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -2310,7 +2328,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2386,7 +2404,7 @@
 				},
 				"dudas": "Es una ayuda social para particulares, no aplica a autónomos ni empresas."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash",
 			"cierreDescartado": {
 				"fecha": "2026-11-25",
@@ -2463,7 +2481,7 @@
 				},
 				"dudas": "La fecha exacta de publicación en el BOPZ no se indica, por lo que el día de cierre del plazo de solicitud no se puede calcular con certeza."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -2542,7 +2560,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -2618,7 +2636,7 @@
 				},
 				"dudas": "No consta en el extracto el tipo exacto de personalidad jurídica (autónomo o sociedad) admitido."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cierreDescartado": {
 				"fecha": "2027-01-29",
@@ -2674,7 +2692,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939451",
 			"ia": null,
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-04",
 			"iaError": "no es un PDF (BASES CONCURRENCIA COMPETITIVA PRORRATEADA PARA PRUEBAS DE BTT 2026.docx)"
@@ -2754,7 +2772,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2828,7 +2846,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -2906,7 +2924,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2991,7 +3009,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3042,7 +3060,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939389",
 			"ia": null,
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-04",
 			"iaError": "no es un PDF (Oinarrien eta deialdiaren onarpena_Aprobación de las bases y convocatoria.docx)"
@@ -3127,7 +3145,7 @@
 				},
 				"dudas": "No se especifica en el documento el porcentaje ni el tope máximo individual de ayuda asignable a un único beneficiario."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -3205,7 +3223,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3281,7 +3299,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3357,7 +3375,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -3445,7 +3463,7 @@
 				},
 				"dudas": "No se desglosa el número ni el importe de los premios individuales, únicamente la cuantía total de 900 €."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3531,7 +3549,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3610,7 +3628,7 @@
 				},
 				"dudas": "No se especifica si los autónomos individuales pueden solicitarla, ya que se dirige a entidades e instituciones con personalidad jurídica."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -3698,7 +3716,7 @@
 				},
 				"dudas": "El presupuesto total de la convocatoria asciende a 7.950.380 euros distribuidos entre los años 2026 y 2027."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -3771,7 +3789,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -3845,7 +3863,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3891,7 +3909,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939097",
 			"ia": null,
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-10-31",
 			"iaError": "no es un PDF (04. PROPORSTA PROVACIÓ DE BASES I CONVOCATÒRIA DEL XXIV CAST. BNS.docx)"
@@ -3968,7 +3986,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4130,7 +4148,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4204,7 +4222,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -4285,7 +4303,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -4495,7 +4513,7 @@
 				},
 				"dudas": "Para pedir la ayuda hay que pagar primero 3.150 € + IVA de cuota de participación a la Cámara de Comercio, que solo se devuelve si te quedas fuera por no cumplir requisitos o falta de presupuesto."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4642,7 +4660,7 @@
 				},
 				"dudas": "Las condiciones exactas sobre quién puede ser beneficiario y los gastos permitidos remiten al artículo 3 y 5 de las Bases Reguladoras, que no se incluyen íntegras en este documento."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -4721,7 +4739,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4798,7 +4816,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -4870,7 +4888,7 @@
 				},
 				"dudas": "No se indica en el documento el límite máximo ni el porcentaje subvencionable por cada solicitud."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4942,7 +4960,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -5018,7 +5036,7 @@
 				},
 				"dudas": "No especifica el importe exacto que recibe cada negocio ni los detalles concretos de los requisitos."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -5095,7 +5113,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta de publicación en el boletín oficial ni el importe máximo que puede recibir cada negocio individualmente."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -5172,7 +5190,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash",
 			"cambios": [
 				{
@@ -5261,7 +5279,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -5342,7 +5360,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -5412,7 +5430,7 @@
 				},
 				"dudas": "El documento es únicamente el certificado de aprobación del acuerdo y no incluye el contenido de las bases con los premios, categorías o requisitos de participación."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -5486,7 +5504,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -5561,7 +5579,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -5647,7 +5665,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -5737,7 +5755,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -5821,7 +5839,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -5896,7 +5914,7 @@
 				},
 				"dudas": "No se indica la fecha exacta de publicación en el BORM, por lo que no se puede calcular el último día del plazo."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -5973,7 +5991,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6049,7 +6067,7 @@
 				},
 				"dudas": "La fecha concreta de apertura y cierre del plazo depende de la publicación del anuncio en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6120,7 +6138,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -6195,7 +6213,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6271,7 +6289,7 @@
 				},
 				"dudas": "La fecha exacta de publicación en el DOGV no se conoce en el texto, por lo que el día concreto de cierre del plazo no se puede determinar."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -6358,7 +6376,7 @@
 				},
 				"dudas": "No queda claro si se abrirá un nuevo plazo si el crédito presupuestario total de 50.000 euros se agota rápidamente."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -6442,7 +6460,7 @@
 				},
 				"dudas": "No se indica la fecha exacta de publicación en el BOE, por lo que no se puede determinar el último día exacto del plazo."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -6527,7 +6545,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -6676,7 +6694,7 @@
 				},
 				"dudas": "No queda claro si los emprendedores que aún no se han dado de alta pueden solicitarla, ya que menciona la puesta en marcha pero exige aportar plantillas medias e informes de cotización."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -6803,7 +6821,7 @@
 				},
 				"dudas": "Existe contradicción entre el texto de las bases (que fija el fin de plazo el 31 de mayo de 2027) y la ficha de la BDNS (que menciona un mes desde la publicación)."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -6886,7 +6904,7 @@
 				},
 				"dudas": "No se detallan los gastos concretos permitidos ni el texto completo de los requisitos del punto 5 de las Bases en este extracto."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -6959,7 +6977,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -7040,7 +7058,7 @@
 				},
 				"dudas": "La fecha exacta de fin de plazo no se puede determinar al depender de la publicación en el boletín oficial."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -7121,7 +7139,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -7202,7 +7220,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -7272,7 +7290,7 @@
 				},
 				"dudas": "El documento es el acuerdo de aprobación municipal y no incluye las bases detalladas con los plazos de publicación de los trabajos ni la forma de envío."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -7342,7 +7360,7 @@
 				},
 				"dudas": "No se especifica una fecha exacta de fin de plazo porque depende del día en que se publique en el boletín oficial."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -7413,7 +7431,7 @@
 				},
 				"dudas": "No se indica la cuantía concreta que recibe cada empresa por cada trabajador contratado ni se aclara si los autónomos pueden solicitarla."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -7494,7 +7512,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -7588,7 +7606,7 @@
 				},
 				"dudas": "No se especifica la cantidad máxima exacta que puede recibir cada negocio individual ya que el importe se distribuye entre las solicitudes admitidas."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-12-04",
@@ -7665,7 +7683,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-10-30",
@@ -7741,7 +7759,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -7809,7 +7827,7 @@
 				},
 				"dudas": "El anuncio aprueba el gasto global pero no especifica el importe máximo por negocio ni los requisitos detallados."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -7897,7 +7915,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de la Provincia, por lo que no se puede calcular el día exacto de cierre del plazo."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -7971,7 +7989,7 @@
 				},
 				"dudas": "La fecha exacta de publicación en el BOP de Toledo no figura en el documento, por lo que el día de inicio del plazo queda condicionado a dicha publicación oficial."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8056,7 +8074,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8129,7 +8147,7 @@
 				},
 				"dudas": "La fecha exacta de fin de plazo depende del día de publicación en el Boletín Oficial del Principado de Asturias."
 			},
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8205,7 +8223,7 @@
 			"docs": [
 				1544560
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937983",
@@ -8282,7 +8300,7 @@
 			"docs": [
 				1544522
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937934",
@@ -8439,7 +8457,7 @@
 				1544453,
 				1544454
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937907",
@@ -8528,7 +8546,7 @@
 			"docs": [
 				1544374
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-10-29",
@@ -8617,7 +8635,7 @@
 				1544260,
 				1544261
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-11-04",
@@ -8715,7 +8733,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8794,7 +8812,7 @@
 				1544139,
 				1544155
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8867,7 +8885,7 @@
 			"docs": [
 				1544125
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937806",
@@ -8949,7 +8967,7 @@
 				1544399,
 				1544402
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937804",
@@ -9025,7 +9043,7 @@
 				1544060,
 				1544061
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cierreDescartado": {
 				"fecha": "2027-03-12",
 				"motivo": "no coincide con la de la BDNS (2027-12-31)"
@@ -9107,7 +9125,7 @@
 				1544058,
 				1544059
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937802",
@@ -9184,7 +9202,7 @@
 				1544055,
 				1544056
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937796",
@@ -9270,7 +9288,7 @@
 				1544131,
 				1544132
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -9360,7 +9378,7 @@
 			"docs": [
 				1544016
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937775",
@@ -9435,7 +9453,7 @@
 				1543991,
 				1543992
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -9513,7 +9531,7 @@
 				1543989,
 				1543990
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937704",
@@ -9587,7 +9605,7 @@
 			"docs": [
 				1543779
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937703",
@@ -9662,7 +9680,7 @@
 			"docs": [
 				1543784
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -9738,7 +9756,7 @@
 				1543702,
 				1543703
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937669",
@@ -9819,7 +9837,7 @@
 				1543670,
 				1543671
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937644",
@@ -9894,7 +9912,7 @@
 				1543507,
 				1543565
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937629",
@@ -9970,7 +9988,7 @@
 			"docs": [
 				1543505
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937520",
@@ -10042,7 +10060,7 @@
 			"docs": [
 				1543246
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937467",
@@ -10115,7 +10133,7 @@
 				1543153,
 				1543154
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-11-03",
@@ -10255,7 +10273,7 @@
 				1543119,
 				1543127
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937440",
@@ -10328,7 +10346,7 @@
 			"docs": [
 				1543088
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937353",
@@ -10420,7 +10438,7 @@
 				1542874,
 				1542878
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937289",
@@ -10493,7 +10511,7 @@
 				1545643,
 				1545644
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-10-29",
@@ -10584,7 +10602,7 @@
 				1542673,
 				1542675
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937192",
@@ -10672,7 +10690,7 @@
 				1542470,
 				1542471
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937108",
@@ -10744,7 +10762,7 @@
 				1542211,
 				1542216
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937103",
@@ -10829,7 +10847,7 @@
 				1542171,
 				1542213
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937102",
@@ -10905,7 +10923,7 @@
 			"docs": [
 				1547380
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-10-31",
@@ -10991,7 +11009,7 @@
 			"docs": [
 				1547379
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-10-31",
@@ -11156,7 +11174,7 @@
 				1542166,
 				1542264
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937046",
@@ -11230,7 +11248,7 @@
 			"docs": [
 				1542025
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937020",
@@ -11310,7 +11328,7 @@
 				1541925,
 				1541928
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "937001",
@@ -11419,7 +11437,7 @@
 				1541834,
 				1541835
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936951",
@@ -11494,7 +11512,7 @@
 				1541713,
 				1541714
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936950",
@@ -11578,7 +11596,7 @@
 				1550165,
 				1550166
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cambios": [
 				{
 					"fecha": "2026-11-06",
@@ -11662,7 +11680,7 @@
 				1541696,
 				1542974
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936894",
@@ -11739,7 +11757,7 @@
 				1541624,
 				1541625
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936870",
@@ -11815,7 +11833,7 @@
 			"docs": [
 				1541544
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936865",
@@ -11891,7 +11909,7 @@
 			"docs": [
 				1541542
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936809",
@@ -11967,7 +11985,7 @@
 			"docs": [
 				1541395
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936763",
@@ -12043,7 +12061,7 @@
 				1541308,
 				1541309
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936729",
@@ -12133,7 +12151,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936649",
@@ -12280,7 +12298,7 @@
 				1540967,
 				1540969
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936640",
@@ -12405,7 +12423,7 @@
 			"docs": [
 				1540961
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936534",
@@ -12499,7 +12517,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936514",
@@ -12578,7 +12596,7 @@
 			"docs": [
 				1540424
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936511",
@@ -12656,86 +12674,7 @@
 				1540415,
 				1540416
 			],
-			"comprobada": "2026-11-06"
-		},
-		{
-			"codigo": "936476",
-			"titulo": "Resolución de la Decana de la Facultad de Bellas Artes por la que se publican las bases reguladoras y se realiza la Segunda Convocatoria Internacional de Residencia y Proyecto Site-Specific. Casa de las Chirimías, Laboratorio de Innovación Expositiva.",
-			"organo": {
-				"nivel1": "OTROS",
-				"nivel2": "UNIVERSIDAD DE GRANADA",
-				"nivel3": null
-			},
-			"sede": null,
-			"publicada": "2026-10-20",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 2000,
-			"beneficiarios": [
-				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "91",
-					"nombre": "Actividades de bibliotecas, archivos, museos y otras actividades culturales"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES614",
-					"nombre": "Granada"
-				}
-			],
-			"finalidad": "Cultura",
-			"inicio": "2026-10-22",
-			"fin": "2026-11-06",
-			"textoInicio": null,
-			"textoFin": "La hora en que finaliza el plazo es las 19:00 hora peninsular española",
-			"bases": "https://secretariageneral.ugr.es/sites/webugr/secretariageneral/public/inline-files/BOUGR/342/342-3%20BBRR%20Casa%20Chirim%C3%ADas.pdf",
-			"documento": {
-				"id": 1540301,
-				"nombre": "CONVOCATORIA INTERNACIONAL CHIRIMÍAS FINAL (1).pdf"
-			},
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936476",
-			"ia": {
-				"categoria": "otro",
-				"resumen": "Convocatoria internacional de residencia artística para realizar un proyecto expositivo en la Casa de las Chirimías en Granada durante 2027.",
-				"paraQuien": "Artistas de cualquier edad, nacionalidad, lugar de residencia o disciplina artística.",
-				"importe": "Hasta 2.000 € por persona (hasta 1.500 € para producción y transporte, y 500 € en especie para alojamiento y desayuno).",
-				"importeMaximo": 2000,
-				"plazo": "Del 22 de octubre al 6 de noviembre de 2026, hasta las 19:00 h (hora peninsular).",
-				"plazoFin": "2026-11-06",
-				"requisitos": [
-					"Ser artista de cualquier disciplina, edad, nacionalidad o lugar de residencia.",
-					"Presentar un proyecto artístico pensado específicamente para la Casa de las Chirimías.",
-					"Tener disponibilidad para realizar la residencia de 8 días en Granada y participar en las actividades.",
-					"Estar al día con las obligaciones tributarias y con la Seguridad Social.",
-					"Estar al día en el pago de deudas por reintegro de subvenciones."
-				],
-				"gastos": [
-					"Gastos de producción de la obra",
-					"Gastos de transporte derivados del proyecto"
-				],
-				"condiciones": {
-					"autonomos": "si",
-					"sociedades": "no",
-					"emprendedores": "no_consta",
-					"maxEmpleados": null,
-					"antiguedadMinMeses": null,
-					"antiguedadMaxMeses": null,
-					"municipio": null
-				},
-				"dudas": null
-			},
-			"iaIntentos": 1,
-			"iaModelo": "gemini-3.5-flash",
-			"docs": [
-				1540301,
-				1540522,
-				1540524,
-				1540528
-			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936467",
@@ -12825,7 +12764,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936460",
@@ -12901,7 +12840,7 @@
 			"docs": [
 				1540311
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"cierreDescartado": {
 				"fecha": "2026-11-15",
 				"motivo": "no coincide con la de la BDNS (2026-11-30)"
@@ -12990,7 +12929,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936449",
@@ -13060,7 +12999,7 @@
 			"docs": [
 				1540236
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-15",
@@ -13155,7 +13094,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-06",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -13228,7 +13167,7 @@
 			"docs": [
 				1540121
 			],
-			"comprobada": "2026-11-06"
+			"comprobada": "2026-11-07"
 		},
 		{
 			"codigo": "936400",
@@ -13619,87 +13558,6 @@
 				1539998
 			],
 			"comprobada": "2026-11-06"
-		},
-		{
-			"codigo": "936344",
-			"titulo": "Orden de 20 de Octubre de 2026 de la Consejería de Industria, Universidades, Empleo y Comercio por la que se convoca la «XIX Edición de los Premios de Comercio Tradicional de la Comunidad de Castilla y León»",
-			"organo": {
-				"nivel1": "AUTONOMICA",
-				"nivel2": "CASTILLA Y LEÓN",
-				"nivel3": "CONSEJERÍA DE INDUSTRIA, UNIVERSIDADES, EMPLEO Y COMERCIO"
-			},
-			"sede": "https://www.tramitacastillayleon.jcyl.es",
-			"publicada": "2026-10-20",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 36000,
-			"beneficiarios": [
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "47.9",
-					"nombre": "Actividades de servicios de intermediación para el comercio al por menor"
-				},
-				{
-					"codigo": "47.4",
-					"nombre": "Comercio al por menor de equipos para las tecnologías de la información y las comunicaciones"
-				},
-				{
-					"codigo": "47.1",
-					"nombre": "Comercio al por menor no especializado"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES41",
-					"nombre": "CASTILLA Y LEON"
-				}
-			],
-			"finalidad": "Comercio, Turismo y Pymes",
-			"inicio": "2026-10-23",
-			"fin": "2026-11-06",
-			"textoInicio": null,
-			"textoFin": null,
-			"bases": "http://bocyl.jcyl.es/boletines/2001/10/09/pdf/BOCYL-D-09102001-1.pdf",
-			"documento": {
-				"id": 1539986,
-				"nombre": "Orden Premios XIX Edición .pdf"
-			},
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936344",
-			"ia": {
-				"categoria": "premio",
-				"resumen": "Premios de Comercio Tradicional de Castilla y León para reconocer la buena gestión, competitividad, modernización y buenas prácticas en pequeñas y medianas empresas del sector.",
-				"paraQuien": "Pequeñas y medianas empresas del sector del comercio minorista.",
-				"importe": "Nueve premios provinciales de 3.000 euros cada uno y un premio regional de 9.000 euros, ambos con trofeo.",
-				"importeMaximo": 9000,
-				"plazo": "Hasta el 6 de noviembre de 2026 inclusive.",
-				"plazoFin": "2026-11-06",
-				"requisitos": [
-					"Tener el domicilio social en Castilla y León.",
-					"Estar dedicado al comercio minorista y dado de alta en los epígrafes 64, 65 y 66 del impuesto de actividades económicas, o en la división 47 de la clasificación nacional de actividades económicas (CNAE 2025).",
-					"Estar al corriente en el cumplimiento de las obligaciones tributarias y frente a la Seguridad Social.",
-					"No estar en régimen de franquicia.",
-					"No estar incluido en los grupos o clases excluidos de CNAE (tabaco, combustible, farmacias o puestos de venta y mercadillos).",
-					"Presentar solo una candidatura por negocio.",
-					"No haber obtenido el premio en alguna de las últimas cinco ediciones."
-				],
-				"gastos": [],
-				"condiciones": {
-					"autonomos": "si",
-					"sociedades": "si",
-					"emprendedores": "no",
-					"maxEmpleados": null,
-					"antiguedadMinMeses": null,
-					"antiguedadMaxMeses": null,
-					"municipio": "Castilla y León"
-				},
-				"dudas": null
-			},
-			"docs": [
-				1539986
-			],
-			"comprobada": "2026-11-06",
-			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "936334",
@@ -15683,114 +15541,6 @@
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
-			"codigo": "935985",
-			"titulo": "Visita Profesional a la feria Food Ingredients Frankfurt 2026",
-			"organo": {
-				"nivel1": "OTROS",
-				"nivel2": "CÁMARA DE COMERCIO DE CÁCERES",
-				"nivel3": null
-			},
-			"sede": "https://sede.camara.es/sede/caceres",
-			"publicada": "2026-10-16",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 12370.76,
-			"beneficiarios": [
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "A",
-					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
-				},
-				{
-					"codigo": "G",
-					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
-				},
-				{
-					"codigo": "I",
-					"nombre": "HOSTELERÍA"
-				},
-				{
-					"codigo": "C",
-					"nombre": "INDUSTRIA MANUFACTURERA"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES43",
-					"nombre": "EXTREMADURA"
-				}
-			],
-			"finalidad": "Otras actuaciones de carácter económico",
-			"inicio": "2026-10-23",
-			"fin": "2026-11-06",
-			"textoInicio": "Desde las 9 horas del día siguiente a la publicación del extracto de esta convocatoria en el BOP",
-			"textoFin": null,
-			"bases": "https://camaracaceres.com/",
-			"documento": {
-				"id": 1545563,
-				"nombre": "2026_CONVOCATORIA FOOD INGREDIENTS FRANKFURT 2026_CORREGIDA.pdf"
-			},
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935985",
-			"ia": {
-				"categoria": "ayuda",
-				"resumen": "Ayuda económica y técnica para que pymes y autónomos extremeños asistan a la feria Food Ingredients 2026 en Fráncfort (Alemania). Cubre el 85 % de los gastos de viaje, estancia y costes indirectos.",
-				"paraQuien": "Pymes y autónomos con sede o centro productivo en Extremadura que pertenezcan al sector agroalimentario, bebidas, hostelería, restauración, catering, vinos, agroturismo, o sean intermediarios comerciales.",
-				"importe": "Hasta 1.159,61 € por empresa (o hasta 2.319,23 € si asisten 2 representantes). Financia el 85 % del gasto baremado; la empresa debe pagar y adelantar el 15 % restante.",
-				"importeMaximo": 2319.23,
-				"plazo": "Desde las 09:00 h del día hábil siguiente a publicarse en el Boletín Oficial de Cáceres hasta el 06/11/2026 a las 14:00 h (o antes si se cubren las 5 plazas).",
-				"plazoFin": "2026-11-06",
-				"requisitos": [
-					"Tener domicilio social o centro productivo en Extremadura.",
-					"Ser autónomo o sociedad (quedan fuera sociedades civiles, comunidades de bienes, autónomos societarios y colaboradores).",
-					"Tener una facturación mínima de 100.000 € en el último año.",
-					"Haber tenido al menos 2 empleados contratados de media durante el año 2025.",
-					"Estar de alta en el IAE (la producción agraria o pesquera en bruto no entra, salvo si elaboran y comercializan producto transformado).",
-					"Estar al día con la Agencia Tributaria y con la Seguridad Social.",
-					"No haber recibido más de 300.000 € en ayudas 'minimis' durante los últimos 3 años.",
-					"No haber participado en esta misma actuación más de 4 veces en distintas convocatorias."
-				],
-				"gastos": [
-					"Desplazamiento y transporte (monto fijo de 429 € por persona).",
-					"Alojamiento y manutención (282 € por día, hasta 3 días por persona).",
-					"Gastos indirectos (un 7 % extra calculado sobre los costes directos de viaje y estancia)."
-				],
-				"condiciones": {
-					"autonomos": "si",
-					"sociedades": "si",
-					"emprendedores": "no",
-					"maxEmpleados": null,
-					"antiguedadMinMeses": null,
-					"antiguedadMaxMeses": null,
-					"municipio": null
-				},
-				"dudas": "El día exacto en que empieza el plazo no está fijado en el texto porque depende de la fecha de publicación del extracto en el Boletín Oficial de Cáceres."
-			},
-			"docs": [
-				1539022,
-				1539023,
-				1539024,
-				1545563
-			],
-			"cambios": [
-				{
-					"fecha": "2026-10-27",
-					"campos": [
-						"inicio"
-					]
-				},
-				{
-					"fecha": "2026-10-28",
-					"campos": [
-						"documento",
-						"documentos"
-					]
-				}
-			],
-			"comprobada": "2026-11-06",
-			"iaModelo": "gemini-3.8-flash"
-		},
-		{
 			"codigo": "935979",
 			"titulo": "Visita profesional a la feria FOOD ÁFRICA 2026 en El Cairo (Egipto)",
 			"organo": {
@@ -17088,7 +16838,7 @@
 				1538204,
 				1538205
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17169,7 +16919,7 @@
 				1540989,
 				1540990
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17254,7 +17004,7 @@
 				1540983,
 				1540984
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17337,7 +17087,7 @@
 				1540156,
 				1540157
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17491,7 +17241,7 @@
 			"docs": [
 				1538046
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17575,7 +17325,7 @@
 				1539698,
 				1539699
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-12-15",
@@ -17661,7 +17411,7 @@
 				1539041,
 				1539042
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17754,7 +17504,7 @@
 				1540936,
 				1540937
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-08-26",
@@ -17842,7 +17592,7 @@
 				1539739,
 				1539740
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17917,7 +17667,7 @@
 			"docs": [
 				1537430
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17988,7 +17738,7 @@
 			"docs": [
 				1537382
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18065,7 +17815,7 @@
 				1537275,
 				1537278
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -18139,7 +17889,7 @@
 			"docs": [
 				1537283
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18212,7 +17962,7 @@
 				1537272,
 				1537273
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -18328,7 +18078,7 @@
 				1537035,
 				1537036
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18407,7 +18157,7 @@
 				1536908,
 				1536909
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -18488,7 +18238,7 @@
 				1536899,
 				1536900
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -18564,7 +18314,7 @@
 			"docs": [
 				1536840
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18641,7 +18391,7 @@
 			"docs": [
 				1536839
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18714,7 +18464,7 @@
 				1536837,
 				1536838
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -18794,7 +18544,7 @@
 			"docs": [
 				1536835
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-03",
@@ -18874,7 +18624,7 @@
 				1536572,
 				1536573
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18947,7 +18697,7 @@
 				1536558,
 				1536559
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-05-01",
@@ -19151,7 +18901,7 @@
 				1536496,
 				1536497
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19231,7 +18981,7 @@
 				1536485,
 				1536486
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19322,7 +19072,7 @@
 				1536477,
 				1536478
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19428,7 +19178,7 @@
 			"docs": [
 				1536397
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19503,7 +19253,7 @@
 				1536310,
 				1536311
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19652,7 +19402,7 @@
 				1536204,
 				1536205
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19729,7 +19479,7 @@
 				1536149,
 				1538756
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19806,7 +19556,7 @@
 				1536113,
 				1536114
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19882,7 +19632,7 @@
 				1536093,
 				1536095
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19953,7 +19703,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -20038,7 +19788,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20121,7 +19871,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20197,7 +19947,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20268,7 +20018,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20345,7 +20095,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20421,7 +20171,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -20506,7 +20256,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20580,22 +20330,22 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-05",
+			"comprobada": "2026-11-07",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-06T20:31:28.452Z",
+			"fecha": "2026-11-07T11:54:24.116Z",
 			"nuevasSinFicha": 0,
 			"fichasComprobadas": 200,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-06T20:51:49.512Z",
+			"fecha": "2026-11-07T11:54:24.390Z",
 			"pendientes": 1,
-			"leidas": 19,
-			"fallidas": 1,
+			"leidas": 0,
+			"fallidas": 2,
 			"ultimaLectura": "2026-11-06"
 		}
 	}

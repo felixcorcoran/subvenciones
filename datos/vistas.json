@@ -263,6 +263,10 @@
 		"motivo": "concesión directa",
 		"fecha": "2026-10-24"
 	},
+	"935985": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-07"
+	},
 	"936004": {
 		"motivo": "concesión directa",
 		"fecha": "2026-10-24"
@@ -306,6 +310,10 @@
 	"936336": {
 		"motivo": "concesión directa",
 		"fecha": "2026-10-24"
+	},
+	"936344": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-07"
 	},
 	"936351": {
 		"motivo": "concesión directa",
@@ -366,6 +374,10 @@
 	"936469": {
 		"motivo": "cerrada",
 		"fecha": "2026-11-06"
+	},
+	"936476": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-07"
 	},
 	"936485": {
 		"motivo": "concesión directa",
@@ -1438,5 +1450,9 @@
 	"940555": {
 		"motivo": "concesión directa",
 		"fecha": "2026-11-06"
+	},
+	"940587": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-07"
 	}
 }
