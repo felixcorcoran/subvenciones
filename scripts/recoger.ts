@@ -19,7 +19,7 @@
  *   DIAS_ATRAS     días hacia atrás en la primera pasada (por defecto 14)
  *   MAX_COMPROBAR  fichas guardadas que se vuelven a pedir como mucho (por defecto 200)
  */
-import { buscarNuevas, ficha, type Ficha } from './bdns.ts';
+import { buscarNuevas, ficha, inicioBusqueda, type Ficha } from './bdns.ts';
 import { guardarDatos, guardarVistas, hoyIso, leerDatos, leerVistas } from './almacen.ts';
 import { aConvocatoria, actualizar, fichaValida } from './fichas.ts';
 import { revisarCierreIa } from './lectura.ts';
@@ -30,17 +30,9 @@ const datos = leerDatos();
 const vistas = leerVistas();
 const guardadas = new Map(datos.convocatorias.map((c) => [c.codigo, c]));
 
-// Desde la última pasada (con unos días de margen: hay convocatorias que se
-// registran con fecha de días anteriores), o DIAS_ATRAS la primera vez
-const diasAtras = Number(process.env.DIAS_ATRAS ?? 14);
-const desde = new Date();
-if (datos.actualizado) {
-	const ultima = new Date(datos.actualizado);
-	ultima.setDate(ultima.getDate() - 4);
-	desde.setTime(Math.max(ultima.getTime(), Date.now() - 30 * 86_400_000));
-} else {
-	desde.setDate(desde.getDate() - diasAtras);
-}
+// Desde la última pasada (con margen: hay convocatorias que aparecen días
+// después de su fecha de registro), o DIAS_ATRAS la primera vez
+const desde = inicioBusqueda(datos.actualizado, new Date(), Number(process.env.DIAS_ATRAS ?? 14));
 
 const encontradas = await buscarNuevas(desde, new Date());
 const nuevas = encontradas.filter((r) => !guardadas.has(r.numeroConvocatoria) && !vistas[r.numeroConvocatoria]);
