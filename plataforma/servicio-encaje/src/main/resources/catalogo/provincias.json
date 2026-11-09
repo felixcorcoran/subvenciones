@@ -1,0 +1,356 @@
+[
+	{
+		"codigo": "ES111",
+		"nombre": "A Coruña",
+		"comunidad": "Galicia",
+		"codigoComunidad": "ES11"
+	},
+	{
+		"codigo": "ES421",
+		"nombre": "Albacete",
+		"comunidad": "Castilla-La Mancha",
+		"codigoComunidad": "ES42"
+	},
+	{
+		"codigo": "ES521",
+		"nombre": "Alicante / Alacant",
+		"comunidad": "Comunitat Valenciana",
+		"codigoComunidad": "ES52"
+	},
+	{
+		"codigo": "ES611",
+		"nombre": "Almería",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES211",
+		"nombre": "Araba/Álava",
+		"comunidad": "País Vasco",
+		"codigoComunidad": "ES21"
+	},
+	{
+		"codigo": "ES120",
+		"nombre": "Asturias",
+		"comunidad": "Asturias",
+		"codigoComunidad": "ES12"
+	},
+	{
+		"codigo": "ES411",
+		"nombre": "Ávila",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES431",
+		"nombre": "Badajoz",
+		"comunidad": "Extremadura",
+		"codigoComunidad": "ES43"
+	},
+	{
+		"codigo": "ES511",
+		"nombre": "Barcelona",
+		"comunidad": "Cataluña",
+		"codigoComunidad": "ES51"
+	},
+	{
+		"codigo": "ES213",
+		"nombre": "Bizkaia",
+		"comunidad": "País Vasco",
+		"codigoComunidad": "ES21"
+	},
+	{
+		"codigo": "ES412",
+		"nombre": "Burgos",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES432",
+		"nombre": "Cáceres",
+		"comunidad": "Extremadura",
+		"codigoComunidad": "ES43"
+	},
+	{
+		"codigo": "ES612",
+		"nombre": "Cádiz",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES130",
+		"nombre": "Cantabria",
+		"comunidad": "Cantabria",
+		"codigoComunidad": "ES13"
+	},
+	{
+		"codigo": "ES522",
+		"nombre": "Castellón / Castelló",
+		"comunidad": "Comunitat Valenciana",
+		"codigoComunidad": "ES52"
+	},
+	{
+		"codigo": "ES630",
+		"nombre": "Ceuta",
+		"comunidad": "Ceuta",
+		"codigoComunidad": "ES63"
+	},
+	{
+		"codigo": "ES422",
+		"nombre": "Ciudad Real",
+		"comunidad": "Castilla-La Mancha",
+		"codigoComunidad": "ES42"
+	},
+	{
+		"codigo": "ES613",
+		"nombre": "Córdoba",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES423",
+		"nombre": "Cuenca",
+		"comunidad": "Castilla-La Mancha",
+		"codigoComunidad": "ES42"
+	},
+	{
+		"codigo": "ES531",
+		"nombre": "Eivissa y Formentera",
+		"comunidad": "Illes Balears",
+		"codigoComunidad": "ES53"
+	},
+	{
+		"codigo": "ES703",
+		"nombre": "El Hierro",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES704",
+		"nombre": "Fuerteventura",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES212",
+		"nombre": "Gipuzkoa",
+		"comunidad": "País Vasco",
+		"codigoComunidad": "ES21"
+	},
+	{
+		"codigo": "ES512",
+		"nombre": "Girona",
+		"comunidad": "Cataluña",
+		"codigoComunidad": "ES51"
+	},
+	{
+		"codigo": "ES705",
+		"nombre": "Gran Canaria",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES614",
+		"nombre": "Granada",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES424",
+		"nombre": "Guadalajara",
+		"comunidad": "Castilla-La Mancha",
+		"codigoComunidad": "ES42"
+	},
+	{
+		"codigo": "ES615",
+		"nombre": "Huelva",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES241",
+		"nombre": "Huesca",
+		"comunidad": "Aragón",
+		"codigoComunidad": "ES24"
+	},
+	{
+		"codigo": "ES616",
+		"nombre": "Jaén",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES706",
+		"nombre": "La Gomera",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES707",
+		"nombre": "La Palma",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES230",
+		"nombre": "La Rioja",
+		"comunidad": "La Rioja",
+		"codigoComunidad": "ES23"
+	},
+	{
+		"codigo": "ES708",
+		"nombre": "Lanzarote",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES413",
+		"nombre": "León",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES513",
+		"nombre": "Lleida",
+		"comunidad": "Cataluña",
+		"codigoComunidad": "ES51"
+	},
+	{
+		"codigo": "ES112",
+		"nombre": "Lugo",
+		"comunidad": "Galicia",
+		"codigoComunidad": "ES11"
+	},
+	{
+		"codigo": "ES300",
+		"nombre": "Madrid",
+		"comunidad": "Comunidad de Madrid",
+		"codigoComunidad": "ES30"
+	},
+	{
+		"codigo": "ES617",
+		"nombre": "Málaga",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES532",
+		"nombre": "Mallorca",
+		"comunidad": "Illes Balears",
+		"codigoComunidad": "ES53"
+	},
+	{
+		"codigo": "ES640",
+		"nombre": "Melilla",
+		"comunidad": "Melilla",
+		"codigoComunidad": "ES64"
+	},
+	{
+		"codigo": "ES533",
+		"nombre": "Menorca",
+		"comunidad": "Illes Balears",
+		"codigoComunidad": "ES53"
+	},
+	{
+		"codigo": "ES620",
+		"nombre": "Murcia",
+		"comunidad": "Región de Murcia",
+		"codigoComunidad": "ES62"
+	},
+	{
+		"codigo": "ES220",
+		"nombre": "Navarra",
+		"comunidad": "Navarra",
+		"codigoComunidad": "ES22"
+	},
+	{
+		"codigo": "ES113",
+		"nombre": "Ourense",
+		"comunidad": "Galicia",
+		"codigoComunidad": "ES11"
+	},
+	{
+		"codigo": "ES414",
+		"nombre": "Palencia",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES114",
+		"nombre": "Pontevedra",
+		"comunidad": "Galicia",
+		"codigoComunidad": "ES11"
+	},
+	{
+		"codigo": "ES415",
+		"nombre": "Salamanca",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES416",
+		"nombre": "Segovia",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES618",
+		"nombre": "Sevilla",
+		"comunidad": "Andalucía",
+		"codigoComunidad": "ES61"
+	},
+	{
+		"codigo": "ES417",
+		"nombre": "Soria",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES514",
+		"nombre": "Tarragona",
+		"comunidad": "Cataluña",
+		"codigoComunidad": "ES51"
+	},
+	{
+		"codigo": "ES709",
+		"nombre": "Tenerife",
+		"comunidad": "Canarias",
+		"codigoComunidad": "ES70"
+	},
+	{
+		"codigo": "ES242",
+		"nombre": "Teruel",
+		"comunidad": "Aragón",
+		"codigoComunidad": "ES24"
+	},
+	{
+		"codigo": "ES425",
+		"nombre": "Toledo",
+		"comunidad": "Castilla-La Mancha",
+		"codigoComunidad": "ES42"
+	},
+	{
+		"codigo": "ES523",
+		"nombre": "Valencia / València",
+		"comunidad": "Comunitat Valenciana",
+		"codigoComunidad": "ES52"
+	},
+	{
+		"codigo": "ES418",
+		"nombre": "Valladolid",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES419",
+		"nombre": "Zamora",
+		"comunidad": "Castilla y León",
+		"codigoComunidad": "ES41"
+	},
+	{
+		"codigo": "ES243",
+		"nombre": "Zaragoza",
+		"comunidad": "Aragón",
+		"codigoComunidad": "ES24"
+	}
+]

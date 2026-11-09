@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: servicio-encaje
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/subvenciones}
+    username: ${DATABASE_USER:subvenciones}
+    password: ${DATABASE_PASSWORD:subvenciones}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
