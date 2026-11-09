@@ -16,11 +16,13 @@
 	<description>Servicios del Radar de subvenciones: recoger, leer con IA, encajar y avisar</description>
 
 	<modules>
+		<module>seguridad</module>
 		<module>servicio-encaje</module>
 		<module>servicio-recogida</module>
 		<module>servicio-lectura</module>
 		<module>servicio-avisos</module>
 		<module>servicio-preguntas</module>
+		<module>pasarela</module>
 	</modules>
 
 	<properties>
@@ -30,6 +32,11 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>es.felixcorcoran.subvenciones</groupId>
+				<artifactId>seguridad</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.tngtech.archunit</groupId>
 				<artifactId>archunit-junit5</artifactId>

@@ -21,7 +21,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | 1. Base | `servicio-encaje` hexagonal; PostgreSQL + Flyway; Testcontainers; CI; Docker | hecha |
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
-| 4. Seguridad | OAuth2 / OIDC con Keycloak, Spring Security, gateway | pendiente |
+| 4. Seguridad | OAuth2 / OIDC con Keycloak; cada servicio, resource server con Spring Security; pasarela con CORS y límite por IP | hecha |
 | 5. Operación | Kubernetes (kind + Helm), OpenTelemetry + Grafana, AWS con Terraform | pendiente |
 
 ## Cómo encaja todo
@@ -40,7 +40,26 @@ Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo p
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: OAuth2 con Keycloak, Kubernetes, OpenTelemetry y AWS.
+Lo siguiente: Kubernetes, OpenTelemetry y AWS.
+
+## Seguridad y pasarela
+
+Desde fuera solo se entra por la **pasarela** (Spring Cloud Gateway, puerto 8000), que reparte cada
+ruta a su servicio, atiende CORS para las webs del radar y limita por IP las rutas públicas
+(preguntar, apuntarse, el encaje). La identidad la da **Keycloak** (OAuth2 / OIDC): cada servicio
+es un *resource server* que valida el JWT y decide con sus propias reglas
+([decisión 0007](docs/decisiones/0007-seguridad-oauth2.md)):
+
+| Rutas | Acceso |
+| --- | --- |
+| `POST /api/v1/encajes`, `POST /api/v1/convocatorias/{codigo}/preguntas`, `/api/v1/suscripciones/**`, `POST /api/v1/baja/**` | públicas (las suscripciones, con el token del enlace del correo) |
+| `POST /api/v1/recogidas`, `/lecturas`, `/indices`, `/avisos/pasada`, `PUT /api/v1/convocatorias/{codigo}` | rol `admin` de Keycloak |
+| `GET /actuator/health` | pública |
+| todo lo demás | usuario autenticado |
+
+Las reglas son comunes (módulo `seguridad`, una autoconfiguración) y cada servicio solo declara sus
+listas. Se prueban con un Keycloak de verdad en Testcontainers, en cada servicio (401 sin token, 403
+sin rol) y de punta a punta en `docker compose` con `herramientas/prueba-seguridad.mjs`.
 
 ## servicio-recogida
 
@@ -203,6 +222,8 @@ docker compose up --build     # PostgreSQL, Kafka, Mailpit y los cuatro servicio
 
 | Servicio | Puerto | Para lanzarlo a mano |
 | --- | --- | --- |
+| **pasarela** | 8000 | la entrada: todas las rutas de abajo, con CORS y límite por IP |
+| Keycloak | 8180 | tokens: `POST /realms/subvenciones/protocol/openid-connect/token` |
 | servicio-encaje | 8080 | `POST /api/v1/encajes` con un perfil |
 | servicio-recogida | 8081 | `POST /api/v1/recogidas` (contra la BDNS real) |
 | servicio-lectura | 8082 | `POST /api/v1/lecturas` (con `GEMINI_API_KEY` en el entorno; 3 por pasada en local) |
@@ -211,7 +232,15 @@ docker compose up --build     # PostgreSQL, Kafka, Mailpit y los cuatro servicio
 | Mailpit | 8025 | los correos, sin que salgan de la máquina |
 
 En local nada está programado: cada pasada se lanza a mano, en orden (avisos para fijar lo ya
-visto, recogida, lectura, avisos).
+visto, recogida, lectura, avisos), con un token del cliente `operaciones`, que tiene el rol `admin`.
+Su secreto es solo para local y está en `infra/keycloak/realm-subvenciones.json`:
+
+```sh
+TOKEN=$(curl -s localhost:8180/realms/subvenciones/protocol/openid-connect/token \
+  -d grant_type=client_credentials -d client_id=operaciones -d client_secret=<secreto del realm local> \
+  | jq -r .access_token)
+curl -X POST localhost:8000/api/v1/recogidas -H "Authorization: Bearer $TOKEN"
+```
 
 Para cargar en el encaje las convocatorias ya leídas de la web como eventos (en Git Bash, con
 `MSYS_NO_PATHCONV=1` delante de `docker compose exec`):
@@ -233,3 +262,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 - [0004 Outbox transaccional para publicar eventos](docs/decisiones/0004-outbox.md)
 - [0005 Los avisos preguntan al servicio de encaje por REST](docs/decisiones/0005-avisos-preguntan-al-encaje.md)
 - [0006 Respuestas sobre las bases: solo con citas literales comprobadas](docs/decisiones/0006-respuestas-con-citas.md)
+- [0007 Seguridad: OAuth2 con Keycloak, validada en cada servicio](docs/decisiones/0007-seguridad-oauth2.md)

@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: servicio-lectura
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak: quién emite los tokens y dónde están sus claves públicas
+          issuer-uri: ${KEYCLOAK_EMISOR:http://localhost:8180/realms/subvenciones}
+          jwk-set-uri: ${KEYCLOAK_CLAVES:http://localhost:8180/realms/subvenciones/protocol/openid-connect/certs}
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/lectura}
     username: ${DATABASE_USER:subvenciones}
@@ -30,6 +37,11 @@ subvenciones:
   lectura:
     cron: ${LECTURA_CRON:0 0 7-22 * * *}
     max-por-pasada: ${MAX_ANALIZAR:10}
+
+# Rutas sin token y rutas solo para el rol admin de Keycloak (módulo seguridad); lo demás pide usuario
+subvenciones.seguridad:
+  publicas: []
+  admin: ["POST /api/v1/lecturas"]
 
 management:
   endpoints:

@@ -130,6 +130,16 @@ class RecogidaIntegracionTest {
 		esperar(() -> jdbc.sql("SELECT count(*) FROM outbox WHERE publicado IS NULL").query(Integer.class).single() == 0);
 	}
 
+	@Test
+	void lanzarUnaPasadaAManoEsSoloParaAdministracion() throws Exception {
+		MockMvc seguro = MockMvcBuilders.webAppContextSetup(contexto)
+				.apply(org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity()).build();
+		seguro.perform(post("/api/v1/recogidas")).andExpect(status().isUnauthorized());
+		seguro.perform(post("/api/v1/recogidas")
+				.with(org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt()))
+				.andExpect(status().isForbidden());
+	}
+
 	/** Los eventos de una convocatoria en el tópico, en el orden en que llegaron */
 	private List<JsonNode> leer(String clave, int cuantos) {
 		Map<String, Object> config = Map.of(

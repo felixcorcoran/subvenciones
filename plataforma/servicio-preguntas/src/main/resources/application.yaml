@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: servicio-preguntas
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak: quién emite los tokens y dónde están sus claves públicas
+          issuer-uri: ${KEYCLOAK_EMISOR:http://localhost:8180/realms/subvenciones}
+          jwk-set-uri: ${KEYCLOAK_CLAVES:http://localhost:8180/realms/subvenciones/protocol/openid-connect/certs}
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/preguntas}
     username: ${DATABASE_USER:subvenciones}
@@ -29,6 +36,11 @@ subvenciones:
   preguntas:
     cron: ${INDEXADO_CRON:0 30 * * * *}
     indexar-por-pasada: ${INDEXAR_POR_PASADA:10}
+
+# Rutas sin token y rutas solo para el rol admin de Keycloak (módulo seguridad); lo demás pide usuario
+subvenciones.seguridad:
+  publicas: ["POST /api/v1/convocatorias/*/preguntas"]
+  admin: ["POST /api/v1/indices"]
 
 management:
   endpoints:

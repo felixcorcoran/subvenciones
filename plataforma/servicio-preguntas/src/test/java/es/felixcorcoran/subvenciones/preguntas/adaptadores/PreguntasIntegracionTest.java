@@ -126,6 +126,19 @@ class PreguntasIntegracionTest {
 				.andExpect(status().isNotFound());
 	}
 
+	@Test
+	void indexarAManoEsSoloParaAdministracionYPreguntarEsPublico() throws Exception {
+		MockMvc seguro = MockMvcBuilders.webAppContextSetup(contexto)
+				.apply(org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity()).build();
+		seguro.perform(post("/api/v1/indices")).andExpect(status().isUnauthorized());
+		seguro.perform(post("/api/v1/indices")
+				.with(org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt()))
+				.andExpect(status().isForbidden());
+		seguro.perform(post("/api/v1/convocatorias/NO-EXISTE/preguntas").contentType(MediaType.APPLICATION_JSON)
+				.content("{\"pregunta\":\"¿Plazo?\"}"))
+				.andExpect(status().isNotFound());
+	}
+
 	private static void esperar(BooleanSupplier condicion) throws InterruptedException {
 		Instant limite = Instant.now().plusSeconds(30);
 		while (!condicion.getAsBoolean()) {

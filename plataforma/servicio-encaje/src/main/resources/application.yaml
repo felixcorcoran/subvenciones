@@ -1,6 +1,13 @@
 spring:
   application:
     name: servicio-encaje
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak: quién emite los tokens y dónde están sus claves públicas
+          issuer-uri: ${KEYCLOAK_EMISOR:http://localhost:8180/realms/subvenciones}
+          jwk-set-uri: ${KEYCLOAK_CLAVES:http://localhost:8180/realms/subvenciones/protocol/openid-connect/certs}
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/subvenciones}
     username: ${DATABASE_USER:subvenciones}
@@ -16,6 +23,11 @@ spring:
     producer:
       # La cola de errores no puede perder mensajes
       acks: all
+
+# Rutas sin token y rutas solo para el rol admin de Keycloak (módulo seguridad); lo demás pide usuario
+subvenciones.seguridad:
+  publicas: ["POST /api/v1/encajes"]
+  admin: ["PUT /api/v1/convocatorias/**"]
 
 management:
   endpoints:

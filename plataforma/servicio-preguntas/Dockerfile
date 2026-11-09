@@ -3,12 +3,16 @@ FROM eclipse-temurin:25-jdk AS build
 WORKDIR /src
 COPY .mvn .mvn
 COPY mvnw pom.xml ./
+# Todos los pom (Maven tiene que ver todos los módulos del proyecto padre); el código, solo el que hace falta
+COPY seguridad/pom.xml seguridad/
 COPY servicio-encaje/pom.xml servicio-encaje/
 COPY servicio-recogida/pom.xml servicio-recogida/
 COPY servicio-lectura/pom.xml servicio-lectura/
 COPY servicio-avisos/pom.xml servicio-avisos/
 COPY servicio-preguntas/pom.xml servicio-preguntas/
+COPY pasarela/pom.xml pasarela/
 RUN sh mvnw -B -q -pl servicio-preguntas -am dependency:go-offline
+COPY seguridad/src seguridad/src
 COPY servicio-preguntas/src servicio-preguntas/src
 RUN sh mvnw -B -q -pl servicio-preguntas -am package -DskipTests \
  && java -Djarmode=tools -jar servicio-preguntas/target/servicio-preguntas-*.jar extract --layers --launcher --destination /extraido

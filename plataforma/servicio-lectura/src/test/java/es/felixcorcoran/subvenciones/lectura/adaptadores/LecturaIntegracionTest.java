@@ -125,6 +125,17 @@ class LecturaIntegracionTest {
 		assertThat(c.get("iaModelo").asString()).isEqualTo("modelo-de-prueba");
 	}
 
+	@Test
+	void lanzarUnaLecturaAManoEsSoloParaAdministracion() throws Exception {
+		MockMvc seguro = MockMvcBuilders.webAppContextSetup(contexto)
+				.apply(org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity()).build();
+		var sinPermiso = org.springframework.test.web.servlet.result.MockMvcResultMatchers.status();
+		seguro.perform(post("/api/v1/lecturas")).andExpect(sinPermiso.isUnauthorized());
+		seguro.perform(post("/api/v1/lecturas")
+				.with(org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt()))
+				.andExpect(sinPermiso.isForbidden());
+	}
+
 	private JsonNode leer() {
 		Map<String, Object> config = Map.of(
 				ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafka.getBootstrapServers(),

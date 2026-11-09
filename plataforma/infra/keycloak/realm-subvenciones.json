@@ -1,0 +1,76 @@
+{
+  "realm": "subvenciones",
+  "enabled": true,
+  "displayName": "Radar de subvenciones (local)",
+  "accessTokenLifespan": 300,
+  "sslRequired": "external",
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Lanzar pasadas (recogida, lectura, avisos), indexar y cargar convocatorias a mano"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "operaciones",
+      "name": "Operaciones (tareas de administración)",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "7dj5ZsIhZh9hPiwuTvyfjLFSKmSL29ZH",
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "protocol": "openid-connect"
+    },
+    {
+      "clientId": "solo-lectura",
+      "name": "Cliente sin rol de administración (para pruebas)",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "TdL0nlrtE0NKM2KxiG_idid-UMMCFS3C",
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "protocol": "openid-connect"
+    },
+    {
+      "clientId": "radar-web",
+      "name": "Panel web (futuro)",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": [
+        "http://localhost:4200/*"
+      ],
+      "webOrigins": [
+        "http://localhost:4200"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      },
+      "protocol": "openid-connect"
+    }
+  ],
+  "users": [
+    {
+      "username": "service-account-operaciones",
+      "enabled": true,
+      "serviceAccountClientId": "operaciones",
+      "realmRoles": [
+        "default-roles-subvenciones",
+        "admin"
+      ]
+    },
+    {
+      "username": "service-account-solo-lectura",
+      "enabled": true,
+      "serviceAccountClientId": "solo-lectura",
+      "realmRoles": [
+        "default-roles-subvenciones"
+      ]
+    }
+  ]
+}
