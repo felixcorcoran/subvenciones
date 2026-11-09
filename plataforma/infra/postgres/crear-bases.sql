@@ -3,3 +3,4 @@
 CREATE DATABASE recogida;
 CREATE DATABASE lectura;
 CREATE DATABASE avisos;
+CREATE DATABASE preguntas;

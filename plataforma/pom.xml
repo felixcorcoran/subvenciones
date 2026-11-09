@@ -20,6 +20,7 @@
 		<module>servicio-recogida</module>
 		<module>servicio-lectura</module>
 		<module>servicio-avisos</module>
+		<module>servicio-preguntas</module>
 	</modules>
 
 	<properties>
