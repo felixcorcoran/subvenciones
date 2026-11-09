@@ -46,6 +46,25 @@ export async function getBytes(ruta: string): Promise<Buffer> {
 export const fechaBdns = (d: Date) =>
 	`${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
 
+/**
+ * Días de margen antes de la última pasada. La búsqueda filtra por la fecha de
+ * registro (fechaRecepcion), pero una convocatoria solo aparece cuando se
+ * publica, a veces una semana o más después: 938128 se registró el 27/10 y no
+ * salió hasta el 3/11. Con 4 días de margen se perdían.
+ */
+export const MARGEN_DIAS = 14;
+const DIA_MS = 86_400_000;
+
+/**
+ * Desde qué fecha buscar: la última pasada menos el margen (como mucho 30 días
+ * atrás) o, la primera vez, `diasAtras` días.
+ */
+export function inicioBusqueda(actualizado: string | undefined, ahora: Date, diasAtras: number): Date {
+	if (!actualizado) return new Date(ahora.getTime() - diasAtras * DIA_MS);
+	const conMargen = new Date(actualizado).getTime() - MARGEN_DIAS * DIA_MS;
+	return new Date(Math.max(conMargen, ahora.getTime() - 30 * DIA_MS));
+}
+
 export interface ResultadoBusqueda {
 	id: number;
 	numeroConvocatoria: string;
