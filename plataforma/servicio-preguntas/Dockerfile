@@ -5,7 +5,7 @@ COPY .mvn .mvn
 COPY mvnw pom.xml ./
 COPY servicio-encaje/pom.xml servicio-encaje/
 COPY servicio-recogida/pom.xml servicio-recogida/
-COPY servicio-preguntas/pom.xml servicio-preguntas/
+COPY servicio-lectura/pom.xml servicio-lectura/
 COPY servicio-avisos/pom.xml servicio-avisos/
 COPY servicio-preguntas/pom.xml servicio-preguntas/
 RUN sh mvnw -B -q -pl servicio-preguntas -am dependency:go-offline
