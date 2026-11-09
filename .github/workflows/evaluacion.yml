@@ -1,0 +1,37 @@
+name: Evaluación de las preguntas
+
+# «Pregunta a la convocatoria» contra Gemini de verdad, con las preguntas de
+# plataforma/servicio-preguntas/src/test/resources/evaluacion/preguntas.json.
+# Se lanza a mano: gasta cupo del nivel gratuito. En cada push, CI pasa la misma
+# evaluación con las respuestas grabadas (workflow Plataforma).
+on:
+  workflow_dispatch:
+
+jobs:
+  evaluacion:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plataforma
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+          cache: maven
+      - name: Evaluar contra Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: sh mvnw -B test -pl servicio-preguntas -am -Dtest=EvaluacionTest -Dsurefire.failIfNoSpecifiedTests=false -Devaluacion=real
+      - name: Informe
+        if: always()
+        run: |
+          if [ -f servicio-preguntas/target/evaluacion.md ]; then
+            cat servicio-preguntas/target/evaluacion.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evaluacion
+          path: plataforma/servicio-preguntas/target/evaluacion.md

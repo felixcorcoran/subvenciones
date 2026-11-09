@@ -1,7 +1,8 @@
 # Entorno local: docker compose up --build (desde plataforma/)
 services:
   postgres:
-    image: postgres:17-alpine
+    # PostgreSQL 17 con pgvector (la búsqueda por significado de servicio-preguntas)
+    image: pgvector/pgvector:pg17
     environment:
       POSTGRES_DB: subvenciones
       POSTGRES_USER: subvenciones
@@ -111,6 +112,24 @@ services:
         condition: service_healthy
       mailpit:
         condition: service_started
+
+  servicio-preguntas:
+    build:
+      context: .
+      dockerfile: servicio-preguntas/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/preguntas
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      # En local no se programa: una convocatoria se indexa al preguntarle, o con POST localhost:8084/api/v1/indices
+      INDEXADO_CRON: "-"
+    ports:
+      - "8084:8084"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
 
   # Recoge los correos en local sin mandarlos a nadie: http://localhost:8025
   mailpit:

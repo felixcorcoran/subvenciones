@@ -20,7 +20,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | --- | --- | --- |
 | 1. Base | `servicio-encaje` hexagonal; PostgreSQL + Flyway; Testcontainers; CI; Docker | hecha |
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
-| 3. IA medida | «Pregunta a la convocatoria» (RAG con citas) y evaluación con datos en CI | pendiente |
+| 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak, Spring Security, gateway | pendiente |
 | 5. Operación | Kubernetes (kind + Helm), OpenTelemetry + Grafana, AWS con Terraform | pendiente |
 
@@ -30,16 +30,17 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
                     «convocatorias»                       «convocatorias.leidas»
 BDNS ─► recogida ──────────────────────► lectura (Gemini) ─────────────┬──────────► encaje ◄── POST /api/v1/encajes
        (6:30)     publicada / cambiada /    (cada hora)                 │            (REST)            │
-                  cerrada                                               └──────────► avisos ───────────┘
-                                                                                     (9:00) ──► correo
+                  cerrada                                               ├──────────► avisos ───────────┘
+                                                                        │            (9:00) ──► correo
+                                                                        └──────────► preguntas (pgvector + Gemini)
+                                                                                     ◄── POST /api/v1/convocatorias/{codigo}/preguntas
 ```
 
 Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo por Kafka (y los
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: «pregunta a la convocatoria» (RAG con citas, pgvector), OAuth2 con Keycloak,
-Kubernetes, OpenTelemetry y AWS.
+Lo siguiente: OAuth2 con Keycloak, Kubernetes, OpenTelemetry y AWS.
 
 ## servicio-recogida
 
@@ -113,6 +114,43 @@ POST   /api/v1/baja/{token}               baja con un clic desde el gestor de co
 POST   /api/v1/avisos/pasada              lanza la pasada a mano (en la fase 4, solo administradores)
 ```
 
+## servicio-preguntas
+
+«Pregunta a la convocatoria»: preguntas en lenguaje normal sobre las bases de una convocatoria,
+respondidas **solo con citas literales de las bases y su página**, o «no consta».
+
+```
+POST /api/v1/convocatorias/939979/preguntas   {"pregunta":"¿Pueden pedirla los autónomos?"}
+→ {"texto":"Sí, …","consta":true,"citas":[{"pagina":2,"texto":"las personas físicas que se encuentren en alta en el Régimen Especial de Trabajadores Autónomos (RETA)"}], …}
+```
+
+- **RAG con pgvector:** el PDF se parte en pasajes que no cruzan de página, con su vector
+  (embeddings de Gemini, 768 dimensiones, índice HNSW). Se buscan los 6 más parecidos de esa
+  convocatoria y Gemini responde con ellos.
+- **Nada inventado, comprobado en código:** cada cita tiene que estar tal cual en su pasaje; si no
+  queda ninguna, la respuesta es «no consta». Un PDF escaneado se marca y se dice que esas bases no
+  se pueden consultar ([decisión 0006](docs/decisiones/0006-respuestas-con-citas.md)).
+- **Evaluación con datos** (`EvaluacionTest`): 20 preguntas reales sobre las bases de cuatro
+  convocatorias, con su respuesta y su página, más una convocatoria escaneada. Mide si acierta cuándo
+  consta, si inventa (tiene que ser 0), si cita la página buena y si la respuesta lleva el dato. En
+  cada push se pasa con las respuestas de Gemini grabadas; el workflow
+  [`evaluacion.yml`](../.github/workflows/evaluacion.yml) la pasa a mano contra Gemini de verdad.
+
+Resultado contra Gemini el 9 de noviembre de 2026 (las respuestas esperadas están pendientes de
+revisión humana):
+
+| Métrica | Resultado |
+| --- | --- |
+| Inventa una respuesta cuando las bases no lo dicen | 0 de 4 |
+| Citas descartadas por no ser literales | 0 de 17 |
+| Acierta si consta o no | 18 de 20 (90 %) |
+| Cita en la página buena | 14 de 16 (88 %) |
+| Respuesta con el dato esperado | 13 de 16 (81 %) |
+
+Los fallos son del lado prudente: dos «no consta» cuando sí constaba y una respuesta que da el
+presupuesto total de la convocatoria en vez del máximo por empresa (con su cita, en la página
+buena, pero sin responder a lo que se preguntaba).
+
 ## servicio-encaje
 
 Dice si un negocio puede pedir una ayuda: **sí**, **revisa** o **no**, siempre con sus motivos.
@@ -169,6 +207,7 @@ docker compose up --build     # PostgreSQL, Kafka, Mailpit y los cuatro servicio
 | servicio-recogida | 8081 | `POST /api/v1/recogidas` (contra la BDNS real) |
 | servicio-lectura | 8082 | `POST /api/v1/lecturas` (con `GEMINI_API_KEY` en el entorno; 3 por pasada en local) |
 | servicio-avisos | 8083 | `POST /api/v1/suscripciones`, `POST /api/v1/avisos/pasada` |
+| servicio-preguntas | 8084 | `POST /api/v1/convocatorias/{codigo}/preguntas` (con `GEMINI_API_KEY`) |
 | Mailpit | 8025 | los correos, sin que salgan de la máquina |
 
 En local nada está programado: cada pasada se lanza a mano, en orden (avisos para fijar lo ya
@@ -193,3 +232,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 - [0003 Los servicios se hablan con eventos de Kafka](docs/decisiones/0003-eventos-kafka.md)
 - [0004 Outbox transaccional para publicar eventos](docs/decisiones/0004-outbox.md)
 - [0005 Los avisos preguntan al servicio de encaje por REST](docs/decisiones/0005-avisos-preguntan-al-encaje.md)
+- [0006 Respuestas sobre las bases: solo con citas literales comprobadas](docs/decisiones/0006-respuestas-con-citas.md)

@@ -42,7 +42,7 @@ jobs:
     needs: pruebas
     strategy:
       matrix:
-        servicio: [servicio-encaje, servicio-recogida, servicio-lectura, servicio-avisos]
+        servicio: [servicio-encaje, servicio-recogida, servicio-lectura, servicio-avisos, servicio-preguntas]
     steps:
       - uses: actions/checkout@v4
       - run: docker build -f ${{ matrix.servicio }}/Dockerfile -t subvenciones/${{ matrix.servicio }} .
