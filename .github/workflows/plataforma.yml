@@ -37,9 +37,12 @@ jobs:
           name: informes-pruebas
           path: plataforma/**/target/surefire-reports/
 
-  imagen:
+  imagenes:
     runs-on: ubuntu-latest
     needs: pruebas
+    strategy:
+      matrix:
+        servicio: [servicio-encaje, servicio-recogida, servicio-lectura, servicio-avisos]
     steps:
       - uses: actions/checkout@v4
-      - run: docker build -f servicio-encaje/Dockerfile -t subvenciones/servicio-encaje .
+      - run: docker build -f ${{ matrix.servicio }}/Dockerfile -t subvenciones/${{ matrix.servicio }} .

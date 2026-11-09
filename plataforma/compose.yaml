@@ -8,10 +8,72 @@ services:
       POSTGRES_PASSWORD: subvenciones
     ports:
       - "5432:5432"
+    volumes:
+      - ./infra/postgres/crear-bases.sql:/docker-entrypoint-initdb.d/crear-bases.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U subvenciones -d subvenciones"]
       interval: 5s
       retries: 10
+
+  # Kafka en modo KRaft, sin ZooKeeper: un solo nodo que hace de broker y de controlador
+  kafka:
+    image: apache/kafka:4.1.0
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: INTERNO://:29092,EXTERNO://:9092,CONTROLADOR://:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNO://kafka:29092,EXTERNO://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNO:PLAINTEXT,EXTERNO:PLAINTEXT,CONTROLADOR:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNO
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLADOR
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+    ports:
+      - "9092:9092"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:29092 > /dev/null"]
+      interval: 5s
+      retries: 20
+
+  servicio-recogida:
+    build:
+      context: .
+      dockerfile: servicio-recogida/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/recogida
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      # En local no se programa: se lanza a mano con POST localhost:8081/api/v1/recogidas
+      RECOGIDA_CRON: "-"
+    ports:
+      - "8081:8081"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+
+  servicio-lectura:
+    build:
+      context: .
+      dockerfile: servicio-lectura/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/lectura
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      # La clave de Google AI Studio (proyecto sin facturación) se toma del entorno; sin ella no se lee nada
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      # Pocas por pasada en local, para no gastar el cupo gratuito
+      MAX_ANALIZAR: ${MAX_ANALIZAR:-3}
+      # En local no se programa: se lanza a mano con POST localhost:8082/api/v1/lecturas
+      LECTURA_CRON: "-"
+    ports:
+      - "8082:8082"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
 
   servicio-encaje:
     build:
@@ -19,8 +81,40 @@ services:
       dockerfile: servicio-encaje/Dockerfile
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/subvenciones
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
     ports:
       - "8080:8080"
     depends_on:
       postgres:
         condition: service_healthy
+      kafka:
+        condition: service_healthy
+
+  servicio-avisos:
+    build:
+      context: .
+      dockerfile: servicio-avisos/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/avisos
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      ENCAJE_URL: http://servicio-encaje:8080
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      # En local no se programa: se lanza a mano con POST localhost:8083/api/v1/avisos/pasada
+      AVISOS_CRON: "-"
+    ports:
+      - "8083:8083"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+
+  # Recoge los correos en local sin mandarlos a nadie: http://localhost:8025
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports:
+      - "8025:8025"
+      - "1025:1025"

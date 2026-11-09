@@ -1,0 +1,30 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  application:
+    name: servicio-recogida
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/recogida}
+    username: ${DATABASE_USER:subvenciones}
+    password: ${DATABASE_PASSWORD:subvenciones}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      # Un evento confirmado está en todas las réplicas, y un reintento no lo duplica
+      acks: all
+      properties:
+        enable.idempotence: true
+
+subvenciones:
+  bdns:
+    url: ${BDNS_URL:https://www.infosubvenciones.es/bdnstrans/api}
+  recogida:
+    # Cada mañana a las 6:30 (hora de Madrid); «-» la desactiva
+    cron: ${RECOGIDA_CRON:0 30 6 * * *}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

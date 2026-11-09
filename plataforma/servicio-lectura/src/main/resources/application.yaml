@@ -1,0 +1,38 @@
+server:
+  port: ${PORT:8082}
+
+spring:
+  application:
+    name: servicio-lectura
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/lectura}
+    username: ${DATABASE_USER:subvenciones}
+    password: ${DATABASE_PASSWORD:subvenciones}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: servicio-lectura
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    producer:
+      acks: all
+      properties:
+        enable.idempotence: true
+
+subvenciones:
+  bdns:
+    url: ${BDNS_URL:https://www.infosubvenciones.es/bdnstrans/api}
+  gemini:
+    url: ${GEMINI_URL:https://generativelanguage.googleapis.com/v1beta/models}
+    # Clave de Google AI Studio de un proyecto SIN facturación. Sin clave, no se lee nada
+    clave: ${GEMINI_API_KEY:}
+    modelos: ${GEMINI_MODELS:gemini-3.8-flash,gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-3.5-flash-lite}
+  lectura:
+    cron: ${LECTURA_CRON:0 0 7-22 * * *}
+    max-por-pasada: ${MAX_ANALIZAR:10}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

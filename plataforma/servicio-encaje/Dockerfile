@@ -4,6 +4,9 @@ WORKDIR /src
 COPY .mvn .mvn
 COPY mvnw pom.xml ./
 COPY servicio-encaje/pom.xml servicio-encaje/
+COPY servicio-recogida/pom.xml servicio-recogida/
+COPY servicio-lectura/pom.xml servicio-lectura/
+COPY servicio-avisos/pom.xml servicio-avisos/
 RUN sh mvnw -B -q -pl servicio-encaje -am dependency:go-offline
 COPY servicio-encaje/src servicio-encaje/src
 RUN sh mvnw -B -q -pl servicio-encaje -am package -DskipTests \

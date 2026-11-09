@@ -4,6 +4,7 @@ import java.time.Clock;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
+import java.util.UUID;
 
 import es.felixcorcoran.subvenciones.encaje.dominio.Catalogo;
 import es.felixcorcoran.subvenciones.encaje.dominio.Convocatoria;
@@ -19,12 +20,15 @@ public class ServicioDeEncaje {
 	}
 
 	private final Convocatorias convocatorias;
+	private final EventosProcesados eventos;
 	private final ReglasDeEncaje reglas;
 	private final Catalogo catalogo;
 	private final Clock reloj;
 
-	public ServicioDeEncaje(Convocatorias convocatorias, ReglasDeEncaje reglas, Catalogo catalogo, Clock reloj) {
+	public ServicioDeEncaje(Convocatorias convocatorias, EventosProcesados eventos, ReglasDeEncaje reglas,
+			Catalogo catalogo, Clock reloj) {
 		this.convocatorias = convocatorias;
+		this.eventos = eventos;
 		this.reglas = reglas;
 		this.catalogo = catalogo;
 		this.reloj = reloj;
@@ -32,6 +36,18 @@ public class ServicioDeEncaje {
 
 	public void registrar(Convocatoria convocatoria) {
 		convocatorias.guardar(convocatoria);
+	}
+
+	/**
+	 * Registra la convocatoria que trae un evento, solo si ese evento no se había aplicado ya. Quien
+	 * llama tiene que hacerlo en una transacción, para que el apunte y la convocatoria vayan juntos.
+	 *
+	 * @return false si el evento estaba repetido y no se ha hecho nada
+	 */
+	public boolean registrarDesdeEvento(UUID idEvento, Convocatoria convocatoria) {
+		if (!eventos.apuntar(idEvento)) return false;
+		convocatorias.guardar(convocatoria);
+		return true;
 	}
 
 	/**

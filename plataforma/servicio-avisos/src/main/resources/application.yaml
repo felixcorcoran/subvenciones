@@ -1,0 +1,46 @@
+server:
+  port: ${PORT:8083}
+
+spring:
+  application:
+    name: servicio-avisos
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/avisos}
+    username: ${DATABASE_USER:subvenciones}
+    password: ${DATABASE_PASSWORD:subvenciones}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: servicio-avisos
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    producer:
+      acks: all
+  mail:
+    # Sin host, los correos solo se apuntan en el log. En local, Mailpit (docker compose)
+    host: ${SMTP_HOST:}
+    port: ${SMTP_PORT:1025}
+    username: ${SMTP_USER:}
+    password: ${SMTP_PASSWORD:}
+
+subvenciones:
+  encaje:
+    url: ${ENCAJE_URL:http://localhost:8080}
+  avisos:
+    cron: ${AVISOS_CRON:0 0 9 * * *}
+    # Tope diario de correos de avisos (el plan gratuito de Resend llega a 100)
+    max-correos-dia: ${MAX_CORREOS_DIA:90}
+    remitente: ${AVISOS_REMITENTE:Radar de subvenciones <avisos@felixcorcoran.es>}
+    web: ${AVISOS_WEB:http://localhost:4200}
+    api: ${AVISOS_API:http://localhost:8083}
+    radar: ${RADAR_WEB:https://subvenciones.felixcorcoran.es}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  health:
+    # Sin SMTP en local o en pruebas, la salud no depende del correo
+    mail:
+      enabled: false
