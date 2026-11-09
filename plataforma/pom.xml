@@ -17,6 +17,7 @@
 
 	<modules>
 		<module>servicio-encaje</module>
+		<module>servicio-recogida</module>
 	</modules>
 
 	<properties>

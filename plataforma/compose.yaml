@@ -8,6 +8,8 @@ services:
       POSTGRES_PASSWORD: subvenciones
     ports:
       - "5432:5432"
+    volumes:
+      - ./infra/postgres/crear-bases.sql:/docker-entrypoint-initdb.d/crear-bases.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U subvenciones -d subvenciones"]
       interval: 5s
@@ -34,6 +36,23 @@ services:
       test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:29092 > /dev/null"]
       interval: 5s
       retries: 20
+
+  servicio-recogida:
+    build:
+      context: .
+      dockerfile: servicio-recogida/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/recogida
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      # En local no se programa: se lanza a mano con POST localhost:8081/api/v1/recogidas
+      RECOGIDA_CRON: "-"
+    ports:
+      - "8081:8081"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
 
   servicio-encaje:
     build:

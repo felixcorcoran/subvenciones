@@ -19,7 +19,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | Fase | Qué | Estado |
 | --- | --- | --- |
 | 1. Base | `servicio-encaje` hexagonal; PostgreSQL + Flyway; Testcontainers; CI; Docker | hecha |
-| 2. Servicios y eventos | Kafka con idempotencia y DLT (hecho en el encaje); recogida, lectura con IA y avisos como servicios; outbox | **en marcha** |
+| 2. Servicios y eventos | hecho: Kafka con idempotencia y DLT, `servicio-recogida` con outbox. Falta: lectura con IA y avisos | **en marcha** |
 | 3. IA medida | «Pregunta a la convocatoria» (RAG con citas) y evaluación con datos en CI | pendiente |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak, Spring Security, gateway | pendiente |
 | 5. Operación | Kubernetes (kind + Helm), OpenTelemetry + Grafana, AWS con Terraform | pendiente |
@@ -32,6 +32,33 @@ BDNS ─► recogida ─(convocatoria.publicada)─► lectura IA ─(convocator
                                        pregunta a la convocatoria (RAG)     suscripciones (OAuth2)
           PostgreSQL (+ pgvector) · Kafka (KRaft) · OpenTelemetry → Grafana · Keycloak
 ```
+
+## servicio-recogida
+
+Cada mañana (6:30, hora de Madrid) busca en la API pública de la BDNS las convocatorias para
+empresas registradas desde la última pasada, guarda las que se pueden pedir y vuelve a leer la
+ficha de las guardadas. Lo traduce de `scripts/recoger.ts` y `scripts/fichas.ts` con las mismas
+reglas:
+
+- Se descartan las de concesión directa y las ya cerradas.
+- Un fallo de consulta nunca cierra ni borra nada: sin ficha completa, la convocatoria se queda
+  como estaba y se reintenta.
+- Si la ficha deja de traer un dato que antes traía, se conserva el anterior.
+- Solo se retiran las que han cerrado según la fecha de la BDNS.
+
+Cada cambio sale como evento en el tópico `convocatorias` (clave = código):
+`convocatoria.publicada`, `convocatoria.cambiada` (con los campos que han cambiado) y
+`convocatoria.cerrada`. Se publican con una **outbox transaccional**: el evento se guarda en la misma
+transacción que la convocatoria y un relevo lo envía a Kafka, así que no se pierde aunque el
+servicio caiga a mitad de pasada ([decisión 0004](docs/decisiones/0004-outbox.md)).
+
+```
+POST /api/v1/recogidas   lanza una pasada a mano y devuelve su resumen (en la fase 4, solo administradores)
+```
+
+Contra la BDNS real, la primera pasada (14 días) encontró 300 convocatorias para empresas, guardó
+118 y descartó 182 (178 de concesión directa y 4 cerradas), en unos dos minutos con la pausa entre
+peticiones.
 
 ## servicio-encaje
 
@@ -80,7 +107,8 @@ Hace falta JDK 25 y Docker. Desde `plataforma/`:
 
 ```sh
 ./mvnw verify                 # unitarias, contrato, arquitectura, PostgreSQL y Kafka con Testcontainers
-docker compose up --build     # PostgreSQL + Kafka + servicio-encaje en :8080
+docker compose up --build     # PostgreSQL + Kafka + servicio-recogida (:8081) + servicio-encaje (:8080)
+curl -X POST localhost:8081/api/v1/recogidas   # una pasada contra la BDNS real
 ```
 
 Para cargar las convocatorias reales de la web como eventos (en Git Bash, con
@@ -100,3 +128,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 - [0001 Arquitectura hexagonal](docs/decisiones/0001-arquitectura-hexagonal.md)
 - [0002 La plataforma, en el mismo repositorio que la web](docs/decisiones/0002-mismo-repositorio.md)
 - [0003 Los servicios se hablan con eventos de Kafka](docs/decisiones/0003-eventos-kafka.md)
+- [0004 Outbox transaccional para publicar eventos](docs/decisiones/0004-outbox.md)
