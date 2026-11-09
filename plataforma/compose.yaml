@@ -45,6 +45,8 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/recogida
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
+      KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       # En local no se programa: se lanza a mano con POST localhost:8081/api/v1/recogidas
       RECOGIDA_CRON: "-"
     ports:
@@ -62,6 +64,8 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/lectura
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
+      KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       # La clave de Google AI Studio (proyecto sin facturación) se toma del entorno; sin ella no se lee nada
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       # Pocas por pasada en local, para no gastar el cupo gratuito
@@ -83,6 +87,8 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/subvenciones
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
+      KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
     ports:
       - "8080:8080"
     depends_on:
@@ -98,6 +104,8 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/avisos
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
+      KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       ENCAJE_URL: http://servicio-encaje:8080
       SMTP_HOST: mailpit
       SMTP_PORT: 1025
@@ -120,6 +128,8 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/preguntas
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
+      KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       # En local no se programa: una convocatoria se indexa al preguntarle, o con POST localhost:8084/api/v1/indices
       INDEXADO_CRON: "-"
@@ -130,6 +140,42 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
+
+  # Keycloak: el proveedor de identidad (OAuth2 / OIDC). Realm, rol admin y clientes en infra/keycloak
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.2
+    command: ["start-dev", "--import-realm"]
+    environment:
+      # La misma dirección en el emisor de los tokens, se pidan desde fuera o desde otro contenedor
+      KC_HOSTNAME: http://localhost:8180
+      KC_HOSTNAME_BACKCHANNEL_DYNAMIC: "true"
+      KC_HEALTH_ENABLED: "true"
+    volumes:
+      - ./infra/keycloak/realm-subvenciones.json:/opt/keycloak/data/import/realm-subvenciones.json:ro
+    ports:
+      - "8180:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/localhost/9000 && printf 'GET /health/ready HTTP/1.1
+Host: localhost
+Connection: close
+
+' >&3 && grep -q UP <&3"]
+      interval: 5s
+      retries: 40
+
+  # La única entrada desde fuera: rutas, CORS y límite por IP
+  pasarela:
+    build:
+      context: .
+      dockerfile: pasarela/Dockerfile
+    environment:
+      ENCAJE_URL: http://servicio-encaje:8080
+      RECOGIDA_URL: http://servicio-recogida:8081
+      LECTURA_URL: http://servicio-lectura:8082
+      AVISOS_URL: http://servicio-avisos:8083
+      PREGUNTAS_URL: http://servicio-preguntas:8084
+    ports:
+      - "8000:8000"
 
   # Recoge los correos en local sin mandarlos a nadie: http://localhost:8025
   mailpit:

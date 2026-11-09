@@ -44,7 +44,7 @@ jobs:
       # Cada imagen da su resultado, aunque otra falle
       fail-fast: false
       matrix:
-        servicio: [servicio-encaje, servicio-recogida, servicio-lectura, servicio-avisos, servicio-preguntas]
+        servicio: [servicio-encaje, servicio-recogida, servicio-lectura, servicio-avisos, servicio-preguntas, pasarela]
     steps:
       - uses: actions/checkout@v4
       - run: docker build -f ${{ matrix.servicio }}/Dockerfile -t subvenciones/${{ matrix.servicio }} .

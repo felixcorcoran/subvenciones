@@ -144,6 +144,19 @@ class AvisosIntegracionTest {
 		assertThat(jdbc.sql("SELECT count(*) FROM avisos").query(Integer.class).single()).isZero();
 	}
 
+	@Test
+	void laPasadaAManoEsSoloParaAdministracionYLasSuscripcionesSonPublicas() throws Exception {
+		MockMvc seguro = MockMvcBuilders.webAppContextSetup(contexto)
+				.apply(org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity()).build();
+		seguro.perform(post("/api/v1/avisos/pasada")).andExpect(status().isUnauthorized());
+		seguro.perform(post("/api/v1/avisos/pasada")
+				.with(org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt()))
+				.andExpect(status().isForbidden());
+		// Sin token: el enlace del correo es la llave; uno que no existe da 404, no 401
+		seguro.perform(get("/api/v1/suscripciones/" + "a".repeat(43))).andExpect(status().isNotFound());
+		seguro.perform(post("/api/v1/baja/" + "a".repeat(43))).andExpect(status().isOk());
+	}
+
 	private static void esperar(BooleanSupplier condicion) throws InterruptedException {
 		Instant limite = Instant.now().plusSeconds(30);
 		while (!condicion.getAsBoolean()) {

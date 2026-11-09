@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: servicio-avisos
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Keycloak: quién emite los tokens y dónde están sus claves públicas
+          issuer-uri: ${KEYCLOAK_EMISOR:http://localhost:8180/realms/subvenciones}
+          jwk-set-uri: ${KEYCLOAK_CLAVES:http://localhost:8180/realms/subvenciones/protocol/openid-connect/certs}
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/avisos}
     username: ${DATABASE_USER:subvenciones}
@@ -34,6 +41,11 @@ subvenciones:
     web: ${AVISOS_WEB:http://localhost:4200}
     api: ${AVISOS_API:http://localhost:8083}
     radar: ${RADAR_WEB:https://subvenciones.felixcorcoran.es}
+
+# Rutas sin token y rutas solo para el rol admin de Keycloak (módulo seguridad); lo demás pide usuario
+subvenciones.seguridad:
+  publicas: ["/api/v1/suscripciones/**", "POST /api/v1/baja/**"]
+  admin: ["POST /api/v1/avisos/pasada"]
 
 management:
   endpoints:
