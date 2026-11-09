@@ -29,6 +29,12 @@ Node 24. Más detalle en `README.md`.
 - `src/data/formas.json`, `public/municipios/*.json`: siluetas y municipios (generados con
   `npm run formas` / `npm run catalogos`, no editar a mano).
 - `tests/`: Vitest.
+- `plataforma/`: servicios Spring Boot (Java 25, Maven multimódulo, hexagonal) para enseñar la
+  arquitectura completa; plan en `../felixcorcoran-landing/estrategia/plan-proyecto-empleo.md`. No
+  sustituye a la web. Código y documentación en español. Su propio workflow
+  (`.github/workflows/plataforma.yml`). Comandos desde `plataforma/`: `./mvnw verify` con
+  `JAVA_HOME` apuntando a `~/.jdks/jdk-25.0.4.1+1` (el `java` del PATH es el 8). Las pruebas con
+  Testcontainers necesitan Docker: se saltan en local sin él y en CI fallan si se saltan.
 
 ## Reglas
 
@@ -37,7 +43,9 @@ Node 24. Más detalle en `README.md`.
 - **`encaje.ts` tiene un contrato con el repo `../alertas`**: su `EncajeService` (Java) lo traduce
   frase por frase y se prueba con casos generados desde aquí. Si cambias el encaje, avisa de que
   hay que regenerar los casos en alertas (`npx tsx herramientas/casos-encaje.mts ../subvenciones`)
-  y adaptar el Java.
+  y adaptar el Java. Lo mismo para `plataforma/servicio-encaje` (`ReglasDeEncaje`): copiar los casos
+  regenerados de `alertas/api/src/test/resources/encaje/casos.json` a
+  `plataforma/servicio-encaje/src/test/resources/contrato/casos-encaje.json`.
 - Coste cero: no meter servicios de pago; la clave de Gemini debe ser de un proyecto sin facturación.
 - `datos/*.json` son grandes y los genera CI: no leerlos enteros, usar búsquedas puntuales.
 
@@ -46,4 +54,4 @@ Node 24. Más detalle en `README.md`.
 - `npx astro dev --background`, `npm test`, `npm run check`, `npm run build`.
 - `npm run recoger`, `GEMINI_API_KEY=… npm run analizar`. No leer ni mostrar `.env.local`.
 
-No leer: `node_modules/`, `dist/`, `.astro/`, `public/municipios/`.
+No leer: `node_modules/`, `dist/`, `.astro/`, `public/municipios/`, `plataforma/**/target/`.

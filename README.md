@@ -40,6 +40,10 @@ Las pruebas (Vitest, en `tests/`) cubren el encaje de cada ayuda con un negocio 
 
 La clave de Gemini tiene que ser de un proyecto de Google AI Studio sin facturación, para quedarse en el nivel gratuito.
 
+## Plataforma
+
+En [`plataforma/`](plataforma/README.md) está la arquitectura con la que lo llevaría una empresa: servicios Spring Boot con arquitectura hexagonal, Kafka, PostgreSQL, Docker, Kubernetes, observabilidad y OAuth2. Se está construyendo por fases. Las reglas del encaje se prueban contra las de esta web, y la web sigue funcionando igual: la plataforma tiene su propio workflow, que solo se lanza cuando cambia esa carpeta.
+
 ---
 
 Hecho por [Félix Corcoran](https://dev.felixcorcoran.es). Los resúmenes son orientativos: lo que vale es la convocatoria oficial.
