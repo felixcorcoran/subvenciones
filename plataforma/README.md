@@ -18,8 +18,8 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 
 | Fase | Qué | Estado |
 | --- | --- | --- |
-| 1. Base | `servicio-encaje` hexagonal; PostgreSQL + Flyway; Testcontainers; CI; Docker | **en marcha** |
-| 2. Servicios y eventos | recogida, lectura con IA y avisos como servicios; Kafka; outbox; DLT | pendiente |
+| 1. Base | `servicio-encaje` hexagonal; PostgreSQL + Flyway; Testcontainers; CI; Docker | hecha |
+| 2. Servicios y eventos | Kafka con idempotencia y DLT (hecho en el encaje); recogida, lectura con IA y avisos como servicios; outbox | **en marcha** |
 | 3. IA medida | «Pregunta a la convocatoria» (RAG con citas) y evaluación con datos en CI | pendiente |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak, Spring Security, gateway | pendiente |
 | 5. Operación | Kubernetes (kind + Helm), OpenTelemetry + Grafana, AWS con Terraform | pendiente |
@@ -57,7 +57,12 @@ Jackson, JDBC o de los adaptadores. Ver la [decisión 0001](docs/decisiones/0001
 calculados por el propio `src/lib/encaje.ts` de la web y exige el mismo estado y los mismos
 motivos, en el mismo orden.
 
-### API
+### Entradas
+
+- **Kafka**, tópico `convocatorias.leidas`: eventos `convocatoria.leida` con la clave = código. Cada
+  evento se aplica una sola vez aunque llegue repetido, y lo que no se puede aplicar va a
+  `convocatorias.leidas.dlt` sin bloquear lo demás. Ver la [decisión 0003](docs/decisiones/0003-eventos-kafka.md).
+- **REST:**
 
 ```
 PUT  /api/v1/convocatorias/{codigo}   una convocatoria en el formato de la web (204)
@@ -74,8 +79,18 @@ curl -X POST localhost:8080/api/v1/encajes -H 'Content-Type: application/json' \
 Hace falta JDK 25 y Docker. Desde `plataforma/`:
 
 ```sh
-./mvnw verify                 # unitarias, contrato, arquitectura y PostgreSQL con Testcontainers
-docker compose up --build     # PostgreSQL + servicio-encaje en :8080
+./mvnw verify                 # unitarias, contrato, arquitectura, PostgreSQL y Kafka con Testcontainers
+docker compose up --build     # PostgreSQL + Kafka + servicio-encaje en :8080
+```
+
+Para cargar las convocatorias reales de la web como eventos (en Git Bash, con
+`MSYS_NO_PATHCONV=1` delante de `docker compose exec`):
+
+```sh
+node herramientas/eventos-convocatorias.mjs ../datos/convocatorias.json \
+  | docker compose exec -T kafka /opt/kafka/bin/kafka-console-producer.sh \
+      --bootstrap-server localhost:29092 --topic convocatorias.leidas \
+      --property parse.key=true --property key.separator=$'\t'
 ```
 
 Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna se salta, falla.
@@ -84,3 +99,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 
 - [0001 Arquitectura hexagonal](docs/decisiones/0001-arquitectura-hexagonal.md)
 - [0002 La plataforma, en el mismo repositorio que la web](docs/decisiones/0002-mismo-repositorio.md)
+- [0003 Los servicios se hablan con eventos de Kafka](docs/decisiones/0003-eventos-kafka.md)

@@ -14,7 +14,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
@@ -22,21 +21,13 @@ import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.postgresql.PostgreSQLContainer;
 
 /**
- * El servicio entero contra un PostgreSQL de verdad en un contenedor, migrado por Flyway. Sin
- * Docker se salta; en CI no puede saltarse.
+ * La API REST con el servicio entero, contra PostgreSQL migrado por Flyway. Aquí no se escucha
+ * Kafka, para que esta clase no consuma los mensajes de {@link KafkaEncajeTest}.
  */
-@SpringBootTest
-@Testcontainers(disabledWithoutDocker = true)
-class ApiEncajeTest {
-
-	@Container
-	@ServiceConnection
-	static final PostgreSQLContainer postgres = new PostgreSQLContainer("postgres:17-alpine");
+@SpringBootTest(properties = "spring.kafka.listener.auto-startup=false")
+class ApiEncajeTest extends PruebaConContenedores {
 
 	/** Hoy es 1 de diciembre de 2026 */
 	@TestConfiguration

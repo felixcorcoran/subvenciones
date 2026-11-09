@@ -10,7 +10,9 @@ import org.springframework.jdbc.core.simple.JdbcClient;
 
 import es.felixcorcoran.subvenciones.encaje.adaptadores.salida.catalogo.CatalogoJson;
 import es.felixcorcoran.subvenciones.encaje.adaptadores.salida.persistencia.ConvocatoriasPostgres;
+import es.felixcorcoran.subvenciones.encaje.adaptadores.salida.persistencia.EventosProcesadosPostgres;
 import es.felixcorcoran.subvenciones.encaje.aplicacion.Convocatorias;
+import es.felixcorcoran.subvenciones.encaje.aplicacion.EventosProcesados;
 import es.felixcorcoran.subvenciones.encaje.aplicacion.ServicioDeEncaje;
 import es.felixcorcoran.subvenciones.encaje.dominio.Catalogo;
 import es.felixcorcoran.subvenciones.encaje.dominio.ReglasDeEncaje;
@@ -44,7 +46,13 @@ public class ServicioEncajeApplication {
 	}
 
 	@Bean
-	ServicioDeEncaje servicioDeEncaje(Convocatorias convocatorias, Catalogo catalogo, Clock reloj) {
-		return new ServicioDeEncaje(convocatorias, new ReglasDeEncaje(catalogo), catalogo, reloj);
+	EventosProcesados eventosProcesados(JdbcClient jdbc) {
+		return new EventosProcesadosPostgres(jdbc);
+	}
+
+	@Bean
+	ServicioDeEncaje servicioDeEncaje(Convocatorias convocatorias, EventosProcesados eventos, Catalogo catalogo,
+			Clock reloj) {
+		return new ServicioDeEncaje(convocatorias, eventos, new ReglasDeEncaje(catalogo), catalogo, reloj);
 	}
 }

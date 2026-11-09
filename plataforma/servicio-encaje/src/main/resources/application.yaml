@@ -5,6 +5,17 @@ spring:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/subvenciones}
     username: ${DATABASE_USER:subvenciones}
     password: ${DATABASE_PASSWORD:subvenciones}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: servicio-encaje
+      # Un servicio nuevo empieza por el principio del tópico: así reconstruye su copia de lectura
+      auto-offset-reset: earliest
+      # Solo se confirma el offset tras guardar en la base de datos
+      enable-auto-commit: false
+    producer:
+      # La cola de errores no puede perder mensajes
+      acks: all
 
 management:
   endpoints:
