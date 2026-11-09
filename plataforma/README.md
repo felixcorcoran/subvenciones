@@ -19,19 +19,27 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | Fase | Qué | Estado |
 | --- | --- | --- |
 | 1. Base | `servicio-encaje` hexagonal; PostgreSQL + Flyway; Testcontainers; CI; Docker | hecha |
-| 2. Servicios y eventos | hecho: Kafka con idempotencia y DLT, `servicio-recogida` con outbox. Falta: lectura con IA y avisos | **en marcha** |
+| 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria» (RAG con citas) y evaluación con datos en CI | pendiente |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak, Spring Security, gateway | pendiente |
 | 5. Operación | Kubernetes (kind + Helm), OpenTelemetry + Grafana, AWS con Terraform | pendiente |
 
-## Hacia dónde va
+## Cómo encaja todo
 
 ```
-BDNS ─► recogida ─(convocatoria.publicada)─► lectura IA ─(convocatoria.leida)─► encaje ─(encaje.encontrado)─► avisos ─► correo
-                                                  │                                │
-                                       pregunta a la convocatoria (RAG)     suscripciones (OAuth2)
-          PostgreSQL (+ pgvector) · Kafka (KRaft) · OpenTelemetry → Grafana · Keycloak
+                    «convocatorias»                       «convocatorias.leidas»
+BDNS ─► recogida ──────────────────────► lectura (Gemini) ─────────────┬──────────► encaje ◄── POST /api/v1/encajes
+       (6:30)     publicada / cambiada /    (cada hora)                 │            (REST)            │
+                  cerrada                                               └──────────► avisos ───────────┘
+                                                                                     (9:00) ──► correo
 ```
+
+Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo por Kafka (y los
+avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
+Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
+
+Lo siguiente: «pregunta a la convocatoria» (RAG con citas, pgvector), OAuth2 con Keycloak,
+Kubernetes, OpenTelemetry y AWS.
 
 ## servicio-recogida
 
@@ -59,6 +67,51 @@ POST /api/v1/recogidas   lanza una pasada a mano y devuelve su resumen (en la fa
 Contra la BDNS real, la primera pasada (14 días) encontró 300 convocatorias para empresas, guardó
 118 y descartó 182 (178 de concesión directa y 4 cerradas), en unos dos minutos con la pausa entre
 peticiones.
+
+## servicio-lectura
+
+Escucha el tópico `convocatorias` y lee con Gemini las bases de cada convocatoria nueva, como
+`scripts/analizar.ts`, `gemini.ts` y `lectura.ts`: qué financia, para quién, cuánto, el plazo, los
+requisitos y las condiciones del formulario. Solo lo que dice el documento: lo que no consta queda
+como «no consta».
+
+- **Nivel gratuito:** una cadena de modelos. Si uno agota su cupo del día o ya no existe, no se
+  vuelve a probar hasta el día siguiente; si ninguno puede responder, lo pendiente sigue en la
+  siguiente pasada (cada hora de 7:00 a 22:00).
+- **No se fía de la respuesta:** se valida antes de guardarla; una respuesta a medias cuenta como
+  intento fallido. Tras tres fallos espera dos semanas; un documento nuevo da otra oportunidad.
+- **Fecha de cierre de las bases:** solo se usa si no contradice a la BDNS, el plazo leído la nombra
+  y no hay dudas sobre él (con la excepción del plazo previo al periodo de la BDNS).
+- **Relee** si la recogida avisa de que cambió el documento o el plazo; mientras, mantiene lo leído.
+- Publica `convocatoria.leida` en `convocatorias.leidas` con outbox: la convocatoria entera tal como
+  la publicó la recogida, más `ia`. Es el mismo formato que `datos/convocatorias.json` de la web.
+
+```
+POST /api/v1/lecturas   lanza una pasada a mano (en la fase 4, solo administradores)
+```
+
+## servicio-avisos
+
+Las suscripciones y los correos, como el repositorio [alertas](https://github.com/felixcorcoran/alertas):
+
+- Alta con doble confirmación (la respuesta es la misma esté o no el email apuntado), cambios y
+  baja con un clic (`List-Unsubscribe`, RFC 8058). Solo se guarda el email, el perfil del negocio y
+  unas fechas; el token de 256 bits de cada enlace es la única llave a sus datos.
+- Escucha `convocatorias.leidas`. Cada mañana (9:00) reparte las ayudas abiertas que han llegado
+  desde la última pasada: pregunta al encaje una vez por persona, crea un aviso si puede pedirla o
+  tiene que revisarla y manda un correo por persona, con un tope diario.
+- La primera pasada no avisa de lo que ya estaba publicado.
+- En local, los correos van a Mailpit (http://localhost:8025) y no salen de la máquina.
+
+```
+POST   /api/v1/suscripciones              alta (email, perfil del formulario, acepto)
+POST   /api/v1/suscripciones/confirmar    confirmar con el token del correo
+GET    /api/v1/suscripciones/{token}      ver
+PUT    /api/v1/suscripciones/{token}      cambiar el negocio
+DELETE /api/v1/suscripciones/{token}      baja
+POST   /api/v1/baja/{token}               baja con un clic desde el gestor de correo
+POST   /api/v1/avisos/pasada              lanza la pasada a mano (en la fase 4, solo administradores)
+```
 
 ## servicio-encaje
 
@@ -107,11 +160,21 @@ Hace falta JDK 25 y Docker. Desde `plataforma/`:
 
 ```sh
 ./mvnw verify                 # unitarias, contrato, arquitectura, PostgreSQL y Kafka con Testcontainers
-docker compose up --build     # PostgreSQL + Kafka + servicio-recogida (:8081) + servicio-encaje (:8080)
-curl -X POST localhost:8081/api/v1/recogidas   # una pasada contra la BDNS real
+docker compose up --build     # PostgreSQL, Kafka, Mailpit y los cuatro servicios
 ```
 
-Para cargar las convocatorias reales de la web como eventos (en Git Bash, con
+| Servicio | Puerto | Para lanzarlo a mano |
+| --- | --- | --- |
+| servicio-encaje | 8080 | `POST /api/v1/encajes` con un perfil |
+| servicio-recogida | 8081 | `POST /api/v1/recogidas` (contra la BDNS real) |
+| servicio-lectura | 8082 | `POST /api/v1/lecturas` (con `GEMINI_API_KEY` en el entorno; 3 por pasada en local) |
+| servicio-avisos | 8083 | `POST /api/v1/suscripciones`, `POST /api/v1/avisos/pasada` |
+| Mailpit | 8025 | los correos, sin que salgan de la máquina |
+
+En local nada está programado: cada pasada se lanza a mano, en orden (avisos para fijar lo ya
+visto, recogida, lectura, avisos).
+
+Para cargar en el encaje las convocatorias ya leídas de la web como eventos (en Git Bash, con
 `MSYS_NO_PATHCONV=1` delante de `docker compose exec`):
 
 ```sh
@@ -129,3 +192,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 - [0002 La plataforma, en el mismo repositorio que la web](docs/decisiones/0002-mismo-repositorio.md)
 - [0003 Los servicios se hablan con eventos de Kafka](docs/decisiones/0003-eventos-kafka.md)
 - [0004 Outbox transaccional para publicar eventos](docs/decisiones/0004-outbox.md)
+- [0005 Los avisos preguntan al servicio de encaje por REST](docs/decisiones/0005-avisos-preguntan-al-encaje.md)

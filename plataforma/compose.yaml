@@ -54,6 +54,27 @@ services:
       kafka:
         condition: service_healthy
 
+  servicio-lectura:
+    build:
+      context: .
+      dockerfile: servicio-lectura/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/lectura
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      # La clave de Google AI Studio (proyecto sin facturación) se toma del entorno; sin ella no se lee nada
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      # Pocas por pasada en local, para no gastar el cupo gratuito
+      MAX_ANALIZAR: ${MAX_ANALIZAR:-3}
+      # En local no se programa: se lanza a mano con POST localhost:8082/api/v1/lecturas
+      LECTURA_CRON: "-"
+    ports:
+      - "8082:8082"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+
   servicio-encaje:
     build:
       context: .
@@ -68,3 +89,32 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
+
+  servicio-avisos:
+    build:
+      context: .
+      dockerfile: servicio-avisos/Dockerfile
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/avisos
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      ENCAJE_URL: http://servicio-encaje:8080
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      # En local no se programa: se lanza a mano con POST localhost:8083/api/v1/avisos/pasada
+      AVISOS_CRON: "-"
+    ports:
+      - "8083:8083"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+
+  # Recoge los correos en local sin mandarlos a nadie: http://localhost:8025
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports:
+      - "8025:8025"
+      - "1025:1025"

@@ -18,6 +18,8 @@
 	<modules>
 		<module>servicio-encaje</module>
 		<module>servicio-recogida</module>
+		<module>servicio-lectura</module>
+		<module>servicio-avisos</module>
 	</modules>
 
 	<properties>
