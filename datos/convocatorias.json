@@ -1,6 +1,1096 @@
 {
-	"actualizado": "2026-11-09T14:15:04.050Z",
+	"actualizado": "2026-11-09T23:30:50.291Z",
 	"convocatorias": [
+		{
+			"codigo": "940941",
+			"titulo": "AYUDAS ACCESIBILIDAD Y FACHADAS",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TORRENT",
+				"nivel3": "AYUNTAMIENTO DE TORRENT"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 200000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Acceso a la vivienda y fomento de la edificación",
+			"inicio": "2026-10-20",
+			"fin": "2027-10-21",
+			"textoInicio": "Ayudas accesibilidad y fachadas",
+			"textoFin": "Ayudas accesibilidad y fachadas",
+			"bases": "https://torrent.es/ayudas-y-subvenciones/todas-las-ayudas-y-subvenciones/",
+			"documento": {
+				"id": 1552455,
+				"nombre": "CERTIFICADO_DE_ACUERDO_ACCESIBILIDAD_Y_FACHADAS.pdf"
+			},
+			"docs": [
+				1552455,
+				1552456,
+				1552457
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940941",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para realizar obras de mejora de la accesibilidad y restauración de fachadas exteriores en edificios residenciales situados en el municipio de Torrent.",
+				"paraQuien": "Personas físicas, personas jurídicas o comunidades de propietarios que sean dueñas de edificios residenciales o de viviendas donde se hagan las obras.",
+				"importe": "Hasta el 50 % del coste total de la obra, con un máximo de 4.000 € o de 8.000 € si se incluye la primera instalación de ascensor en un edificio plurifamiliar.",
+				"importeMaximo": 8000,
+				"plazo": "15 días hábiles contados desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Valencia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser persona física, jurídica o comunidad de propietarios dueña del edificio residencial o la vivienda.",
+					"Estar al corriente de las obligaciones con la Agencia Tributaria, la Seguridad Social y el Ayuntamiento de Torrent.",
+					"Para obras de restauración de fachada, el edificio debe haberse construido antes del año 1998.",
+					"Para obras de accesibilidad, el edificio debe ser residencial plurifamiliar y las obras deben afectar a elementos comunes.",
+					"Contar con licencia de obras o declaración responsable presentada antes de la publicación de la convocatoria (salvo si la obra proviene de una orden de ejecución).",
+					"Las obras deben haber finalizado entre el 16 de noviembre de 2024 y el último día del plazo de presentación de solicitudes."
+				],
+				"gastos": [
+					"Coste de ejecución material",
+					"Gastos generales (máximo 13 %)",
+					"Beneficio industrial (máximo 6 %)",
+					"IVA"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Torrent"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940933",
+			"titulo": "AYUDAS INMUEBLES PROTEGIDOS",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TORRENT",
+				"nivel3": "AYUNTAMIENTO DE TORRENT"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 200000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Acceso a la vivienda y fomento de la edificación",
+			"inicio": "2026-10-20",
+			"fin": "2027-10-20",
+			"textoInicio": "Ayudas inmuebles patrimoniales",
+			"textoFin": "Ayudas inmuebles patrimoniales",
+			"bases": "https://torrent.es/ayudas-y-subvenciones/todas-las-ayudas-y-subvenciones/",
+			"documento": {
+				"id": 1552433,
+				"nombre": "CERTIFICADO_DE_ACUERDO_INMUEBLES_PATRIMONIALES.pdf"
+			},
+			"docs": [
+				1552433,
+				1552434,
+				1552435
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940933",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención para cubrir parte del coste de obras de rehabilitación integral, sustitución o nueva planta en edificios residenciales protegidos o situados en entornos patrimoniales de Torrent.",
+				"paraQuien": "Personas físicas o jurídicas y comunidades de propietarios que sean dueñas de edificios residenciales o viviendas en zonas patrimoniales o protegidas de Torrent.",
+				"importe": "El 30 % del coste de las obras ejecutadas, con un máximo de 30.000 € por ayuda.",
+				"importeMaximo": 30000,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Valencia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser persona física, jurídica o comunidad de propietarios dueña del inmueble o vivienda residencial.",
+					"El inmueble debe estar en el Entorno Patrimonial Centro, catalogado en el PGOU o protegido según el patrimonio local de Torrent.",
+					"Las obras deben haber finalizado entre el 14 de noviembre de 2024 y el último día del plazo de solicitudes.",
+					"Aportar certificado final de obra firmado por un técnico competente.",
+					"Tener concedida la licencia de obras o presentada la declaración responsable antes de iniciar los gastos.",
+					"Estar al corriente de pagos con la Agencia Tributaria, la Seguridad Social y el Ayuntamiento de Torrent.",
+					"No tener pendiente de pago el reintegro de subvenciones concedidas anteriormente por el Ayuntamiento."
+				],
+				"gastos": [
+					"Coste de ejecución material de las obras de rehabilitación integral, sustitución o nueva planta",
+					"Gastos generales del contratista (hasta un máximo del 13 %)",
+					"Beneficio industrial del contratista (hasta un máximo del 6 %)",
+					"IVA de las obras"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Torrent"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "940878",
+			"titulo": "Subvención a la persona emprendedora que quiera poner en marcha una nueva actividad económica para el alquiler de un local comercial vacío situado en Irura. Convocatoria de 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "IRURA",
+				"nivel3": "AYUNTAMIENTO DE IRURA"
+			},
+			"sede": "https://www.irura.eus/eu",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES212",
+					"nombre": "Gipuzkoa"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-30",
+			"textoInicio": "Argitaratu eta hurrengo egunetik hasita / Desde el dia siguiente de la fecha de publicación",
+			"textoFin": null,
+			"bases": "https://www.irura.eus/eu/hasiera",
+			"documento": {
+				"id": 1552273,
+				"nombre": "Deialdia.pdf"
+			},
+			"docs": [
+				1552273,
+				1552274,
+				1552277,
+				1552279,
+				1552282,
+				1552287
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940878",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda destinada a personas emprendedoras para financiar el alquiler de un local comercial vacío en Irura al poner en marcha una nueva actividad económica.",
+				"paraQuien": "Personas emprendedoras que vayan a iniciar una nueva actividad económica en un local comercial vacío de Irura.",
+				"importe": "Presupuesto total de 2.000 €",
+				"importeMaximo": null,
+				"plazo": "Desde el día siguiente a la publicación en el Boletín Oficial de Gipuzkoa hasta el 30 de diciembre de 2026.",
+				"plazoFin": "2026-12-30",
+				"requisitos": [
+					"Poner en marcha una nueva actividad económica.",
+					"Alquilar un local comercial vacío ubicado en el municipio de Irura.",
+					"Cumplir los requisitos fijados en el artículo 3 de la Ordenanza municipal."
+				],
+				"gastos": [
+					"Alquiler de un local comercial vacío en Irura."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Irura"
+				},
+				"dudas": "El documento remite a la Ordenanza municipal para ver los requisitos detallados y no especifica el importe máximo por negocio."
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940822",
+			"titulo": "Acuerdo por el que se aprueban las Bases de la convocatoria de ayudas para el desarrollo rural de la isla de Mallorca para el período 2023-2027, vinculadas a proyectos relacionados con los ámbitos agrario y/o ambiental y enmarcados en la EDLP 2023-2027",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ILLES BALEARS",
+				"nivel3": "FONDO DE GARANTÍA AGRARIA Y PESQUERA DE LAS ISLAS BALEARES (FOGAIBA)"
+			},
+			"sede": "https://www.caib.es/seucaib/ca/201/empreses/tramites/tramite/6573581",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1100000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES532",
+					"nombre": "Mallorca"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "04/11/2026",
+			"textoFin": "15/12/2026",
+			"bases": "https://www.caib.es/eboibfront/eli/esib/ o/2023/04/05/10/dof/spa/html",
+			"documento": {
+				"id": 1552141,
+				"nombre": "10973_cast.pdf"
+			},
+			"docs": [
+				1552141,
+				1552142
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940822",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para impulsar proyectos agrarios y ambientales en zonas rurales de la isla de Mallorca. Financia tanto iniciativas comerciales o productivas como proyectos sin fin lucrativo que busquen diversificar la economía, modernizar explotaciones o proteger el entorno.",
+				"paraQuien": "Autónomos (o personas físicas que vayan a darse de alta con el proyecto), empresas mercantiles de hasta 49 trabajadores, cooperativas, comunidades de bienes y entidades sin ánimo de lucro.",
+				"importe": "Hasta 50.000 € por persona y convocatoria. La ayuda cubre el 50 % de la inversión en proyectos productivos (el 60 % si es una explotación agraria prioritaria) y hasta el 90 % en proyectos no productivos.",
+				"importeMaximo": 50000,
+				"plazo": "Primera convocatoria: del 4 de noviembre de 2026 al 15 de diciembre de 2026. Segunda convocatoria: del 15 de abril al 15 de mayo de 2027. Tercera convocatoria: del 1 de septiembre al 1 de octubre de 2027.",
+				"plazoFin": "2026-12-15",
+				"requisitos": [
+					"Ubicación del proyecto en municipios y zonas rurales elegibles de Mallorca (quedan excluidas zonas urbanas costeras concretas).",
+					"Tener al menos 18 años si la solicitud la presenta un autónomo.",
+					"Si se presenta como empresa mercantil, tener como máximo 49 trabajadores.",
+					"Hacer una inversión de al menos 5.000 €.",
+					"Obtener la puntuación mínima en la baremación (39 puntos para proyectos productivos y 36 para no productivos).",
+					"Estar al corriente de pagos con Hacienda y la Seguridad Social.",
+					"No ser una empresa en crisis ni estar sancionado por discriminación de género en los últimos 3 años.",
+					"Si se solicitan más de 30.000 € de ayuda, acreditar que se paga a proveedores dentro del plazo legal."
+				],
+				"gastos": [
+					"Construcción, compra (con arrendamiento financiero) o reforma de inmuebles.",
+					"Compra o alquiler con opción de compra de maquinaria y equipamiento nuevos.",
+					"Nóminas de personal contratado para el proyecto y hasta un 15 % del sueldo de quien lo coordine o administre.",
+					"Contratación de asistencias técnicas y servicios de empresas externas.",
+					"Programas informáticos, patentes, marcas y licencias.",
+					"Honorarios de arquitectos, ingenieros o estudios de viabilidad (hasta el 10 % de la inversión en obras y maquinaria)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": 49,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940774",
+			"titulo": "BASES REGULADORAS PARA LA CONCESIÓN DE SUBVENCIONES COMO PREMIOS CAMPAÑA DE FOMENTO DEL COMERCIO LOCAL “ROMPE Y GANA NAVIDAD 2026/2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CIEMPOZUELOS",
+				"nivel3": "AYUNTAMIENTO DE CIEMPOZUELOS"
+			},
+			"sede": "https://sede.ayto-ciempozuelos.org/eAdmin/Sede.do",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 5000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES3",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-11-23",
+			"textoInicio": "El día siguiente a la publicación en el BOCM",
+			"textoFin": "Hasta el 23 de noviembre 2026",
+			"bases": "https://ayto-ciempozuelos.org/index.php/download/subvenciones-del-ayuntamiento-de-ciempozuelos/",
+			"documento": {
+				"id": 1552049,
+				"nombre": "1. BASES .pdf"
+			},
+			"docs": [
+				1552049
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940774",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Premios y sorteo 'Rompe y Gana Navidad 2026/2027' para impulsar el consumo en los comercios locales de Ciempozuelos mediante la entrega de vales rasca y gana a los clientes por compras superiores a 5 €.",
+				"paraQuien": "Comercios de Ciempozuelos que se adhieran a la campaña y personas residentes en España mayores de 18 años que compren en ellos.",
+				"importe": "Se reparten 5.000 € en 21 vales premiados: un premio principal de 3.000 € (en 12 vales de 250 €) y 20 premios de 100 € para gastar en los comercios adheridos.",
+				"importeMaximo": 3000,
+				"plazo": "Adhesión de comercios hasta el 23 de noviembre de 2026. La campaña de compras con entrega de vales abarca del 14 de diciembre de 2026 al 5 de enero de 2027.",
+				"plazoFin": "2026-11-23",
+				"requisitos": [
+					"Los comercios deben inscribirse enviando un correo electrónico antes del 23 de noviembre de 2026.",
+					"Los participantes premiados deben residir en España y tener más de 18 años.",
+					"Realizar una compra igual o superior a 5 € en los comercios adheridos.",
+					"Presentar el vale premiado junto con el ticket o factura de la compra y el DNI o NIE.",
+					"Estar al corriente en las obligaciones tributarias, de Seguridad Social y fiscales con el Ayuntamiento."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Ciempozuelos"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940736",
+			"titulo": "GC CONVOCATORIA DE SUBVENCIONES EXTRAORDINARIAS AL SECTOR GANADERO DE GRAN CANARIA EN RESPUESTA A LA CRISIS EN ORIENTE PRÓXIMO INICIADA EN FEBRERO DE 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE GRAN CANARIA",
+				"nivel3": "CABILDO INSULAR DE GRAN CANARIA"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1800000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES705",
+					"nombre": "Gran Canaria"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2026-11-12",
+			"fin": "2026-11-24",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+			"documento": {
+				"id": 1551987,
+				"nombre": "CONVOCATORIA ganaderia ORIENTE_PROXIMO DEFINITIVO.pdf"
+			},
+			"docs": [
+				1551987
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940736",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención extraordinaria para compensar la pérdida de ingresos y el incremento en los costes de los insumos del sector ganadero en Gran Canaria provocados por la crisis de Oriente Próximo.",
+				"paraQuien": "Personas físicas (autónomos) y jurídicas titulares de explotaciones ganaderas en Gran Canaria.",
+				"importe": "Mínimo de 1.000 € por solicitante más una cuantía calculada por unidad de ganado mayor (UGM), con un máximo de 50.000 € por negocio.",
+				"importeMaximo": 50000,
+				"plazo": "10 días hábiles contados a partir del día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Las Palmas.",
+				"plazoFin": "2026-11-24",
+				"requisitos": [
+					"Ser titular de una explotación ganadera en Gran Canaria inscrita y actualizada a 28 de febrero de 2026.",
+					"Contar con un censo mínimo de 3 unidades de ganado mayor (UGM) a fecha de septiembre de 2026.",
+					"Estar afectado económicamente por la crisis de Oriente Próximo iniciada en febrero de 2026.",
+					"Estar al corriente en las obligaciones tributarias (Estatal y Canaria) y con la Seguridad Social.",
+					"No acumular más de 50.000 € en ayudas de minimis agrícolas durante un periodo de tres años.",
+					"No tener deudas en periodo ejecutivo, ni subvenciones pendientes de justificar o reintegrar con el Cabildo de Gran Canaria.",
+					"Cumplir con los plazos legales de pago a proveedores establecidos en la ley contra la morosidad comercial."
+				],
+				"gastos": [
+					"Incremento de los costes de los insumos propios de la actividad ganadera derivado de la crisis."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940704",
+			"titulo": "GC CONVOCATORIA DE SUBVENCIONES EXTRAORDINARIAS AL SECTOR PESQUERO ARTESANAL Y ACUÍCOLA DE GRAN CANARIA EN RESPUESTA A LA CRISIS EN ORIENTE PRÓXIMO INICIADA EN FEBRERO DE 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE GRAN CANARIA",
+				"nivel3": "CABILDO INSULAR DE GRAN CANARIA"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 400000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "03",
+					"nombre": "Pesca y acuicultura"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES705",
+					"nombre": "Gran Canaria"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2026-11-12",
+			"fin": "2026-11-24",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+			"documento": {
+				"id": 1551940,
+				"nombre": "CONVOCATORIA PESCA ORIENTE CON ANEXOS DEFINITIVA.pdf"
+			},
+			"docs": [
+				1551940
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940704",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas extraordinarias del Cabildo de Gran Canaria para compensar el sobrecoste de los insumos y medios de producción (combustible, piensos, energía) sufridos por el sector pesquero artesanal y la acuicultura debido a la crisis en Oriente Próximo.",
+				"paraQuien": "Personas físicas o jurídicas armadoras de buques pesqueros artesanales con puerto base en Gran Canaria y titulares de explotaciones acuícolas con granjas en producción en las costas de Gran Canaria.",
+				"importe": "En pesca artesanal, 1.500 € fijos por buque más una cuantía variable según la eslora, con un límite de 40.000 € por beneficiario. En acuicultura, reparto del fondo asignado (30.000 €) proporcionalmente a la superficie concesional.",
+				"importeMaximo": 40000,
+				"plazo": "10 días hábiles contados a partir del día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Las Palmas (fecha límite BDNS: 24/11/2026).",
+				"plazoFin": "2026-11-24",
+				"requisitos": [
+					"Ser armador de buques pesqueros artesanales en activo (lista 3ª) o titular de explotación acuícola en vigor en Gran Canaria.",
+					"Tener puerto base en Gran Canaria o haberlo solicitado antes de abril de 2026; en acuicultura, estar funcionando desde antes del 1 de marzo de 2026.",
+					"Pertenecer a una cofradía o cooperativa de pescadores de Gran Canaria (sector pesquero).",
+					"Acreditar actividad pesquera regular entre el 1 de marzo de 2026 y la publicación de la convocatoria (notas de venta o kilos descargados).",
+					"Estar al corriente con la Hacienda Estatal, Canaria y la Seguridad Social, y sin deudas ejecutivas con el Cabildo.",
+					"Haber sufrido afectación económica por la crisis de Oriente Próximo iniciada en febrero de 2026.",
+					"No superar el límite acumulado de 40.000 € en ayudas de minimis recibidas entre 2024 y 2026.",
+					"Cumplir con los plazos de pago a proveedores exigidos por la ley contra la morosidad."
+				],
+				"gastos": [
+					"Sobrecostes operacionales y de insumos como combustible, piensos, equipamiento o facturas energéticas."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940682",
+			"titulo": "Presentación de producto vino en Paises Bajos y Chequia",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 42705,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "11",
+					"nombre": "Fabricación de bebidas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-11-30",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1551894,
+				"nombre": "CONVOCATORIA PP VINO EN PAÍSES BAJOS Y CHEQUIA 2027_092916.PDF"
+			},
+			"docs": [
+				1551894,
+				1551895
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940682",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para que bodegas y empresas del sector del vino participen en la presentación de producto en Ámsterdam (Países Bajos) y Praga (Chequia), que tendrá lugar del 25 al 26 de enero de 2027.",
+				"paraQuien": "Autónomos, empresas, cooperativas, clústeres y entidades de gestión de D.O.P. e I.G.P. del sector del vino que desarrollen su actividad económica en Castilla-La Mancha.",
+				"importe": "Hasta el 65 % del coste subvencionable, con un importe máximo de 3.185 € por empresa (máximo 1.690 € por cuota de participación, 975 € por viaje y 520 € por transporte de muestras).",
+				"importeMaximo": 3185,
+				"plazo": "Desde el día siguiente a la publicación de la convocatoria en el Diario Oficial de Castilla-La Mancha hasta el 30 de noviembre de 2026.",
+				"plazoFin": "2026-11-30",
+				"requisitos": [
+					"Desarrollar la actividad económica en Castilla-La Mancha.",
+					"Pertenecer al sector del vino.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"No estar incurso en prohibiciones para recibir subvenciones públicas.",
+					"Disponer de un plan de prevención de riesgos laborales si la ley lo exige.",
+					"No haber sido sancionado por discriminación laboral de género.",
+					"No tener la consideración de empresa en crisis."
+				],
+				"gastos": [
+					"Cuota de participación en la acción de promoción",
+					"Gastos de viaje de un representante de la empresa",
+					"Coste del transporte de muestras de vino"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940659",
+			"titulo": "Concurso de Escaparates Navideños VII en Casas Ibáñez.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CASAS-IBÁÑEZ",
+				"nivel3": "AYUNTAMIENTO DE CASAS-IBÁÑEZ"
+			},
+			"sede": "https://casasibanez.sedipualba.es/default.aspx",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 700,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES421",
+					"nombre": "Albacete"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Una vez publicado extracto en B.O.P. , desde el día 9 de diciembre 2026.",
+			"textoFin": "Hasta el día 17 de diciembre de 2026, ambos días incluidos (9 y 17)",
+			"bases": "https://casasibanez.sedipualba.es/tablondeanuncios/anuncio.aspx?id=73817",
+			"documento": {
+				"id": 1551776,
+				"nombre": "Resolución Nº 2150 de 09_11_2026 _RESOLUCIÓN APROBACIÓN BASES CONCURSO VII DE ESCAPARATES NAVIDEÑOS_ - SEGRA 956016.pdf"
+			},
+			"docs": [
+				1551776
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940659",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso que premia la creatividad, iluminación y ambiente festivo en los escaparates de los comercios de Casas Ibáñez durante las fiestas navideñas.",
+				"paraQuien": "Personas físicas y jurídicas titulares de comercios abiertos al público en Casas Ibáñez.",
+				"importe": "Premios en metálico: 300 € para el primer premio, 250 € para el segundo y 150 € para el tercero (total de 700 € en premios).",
+				"importeMaximo": 300,
+				"plazo": "Del 9 al 17 de diciembre de 2026, ambos inclusive (una vez publicado el anuncio en el Boletín Oficial de la Provincia).",
+				"plazoFin": "2026-12-17",
+				"requisitos": [
+					"Ser titular de un comercio regularmente abierto al público en el término municipal de Casas Ibáñez.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y no tener deudas tributarias con el Ayuntamiento.",
+					"No estar incurso en prohibiciones para recibir subvenciones públicas.",
+					"Tener instalado el escaparate navideño el día 18 de diciembre de 2026.",
+					"Mantener decorado e iluminado el escaparate hasta las 22:00 horas, al menos desde el 18 de diciembre de 2026 hasta el 7 de enero de 2027.",
+					"Colocar en lugar visible del escaparate el distintivo de participante entregado por el Ayuntamiento."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Casas Ibáñez"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "940656",
+			"titulo": "RESOLUCIÓNpor la que se aprueba la convocatoria derivada de las bases reguladoras que deben regir la concesión de subvenciones para el episodio meteorológico de octubre de 2026",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CATALUÑA",
+				"nivel3": "CONSORCI DE COMERÇ, ARTESANIA I MODA DE CATALUNYA"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 5000000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47.8",
+					"nombre": "Comercio al por menor de vehículos de motor, motocicletas y sus repuestos y accesorios"
+				},
+				{
+					"codigo": "47.1",
+					"nombre": "Comercio al por menor no especializado"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES51",
+					"nombre": "CATALUÑA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-16",
+			"fin": "2026-12-16",
+			"textoInicio": null,
+			"textoFin": "22 de julio de 2021",
+			"bases": "https://dogc.gencat.cat/es/document-del-dogc/index.html?documentId=1058636",
+			"documento": {
+				"id": 1551793,
+				"nombre": "RESOLUCIO_convocatoria_subvencions_PLUGES_TORRENCIALS_2026_V3_castella_signed_CA.pdf"
+			},
+			"docs": [
+				1551793,
+				1551794
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940656",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas directas para reparar daños y reponer equipamiento en negocios que sufrieron el impacto de las lluvias torrenciales de principios de octubre de 2026 en varias comarcas catalanas.",
+				"paraQuien": "Autónomos en RETA y pequeñas y medianas empresas (pymes) con locales dañados en las comarcas catalanas afectadas.",
+				"importe": "Entre 5.000 € y 20.000 € en función de los gastos (5.000 € para gastos de 2.001 a 10.000 €; 10.000 € de 10.001 a 25.000 €; 15.000 € de 25.001 a 50.000 €; y 20.000 € si superan los 50.000 €).",
+				"importeMaximo": 20000,
+				"plazo": "Desde el 16 de noviembre de 2026 a las 9:00 h hasta el 16 de diciembre de 2026 a las 14:00 h.",
+				"plazoFin": "2026-12-16",
+				"requisitos": [
+					"Estar dado de alta en el RETA o ser pequeña o mediana empresa (pyme).",
+					"Tener una actividad económica incluida en los IAE fijados en las bases.",
+					"Tener el establecimiento afectado en alguna de las comarcas catalanas incluidas en la convocatoria.",
+					"Haber sufrido gastos necesarios para recuperar la actividad de al menos 2.000 € (sin contar el IVA).",
+					"No superar el límite de 300.000 € en ayudas de minimis en los últimos 3 años."
+				],
+				"gastos": [
+					"Obras y reparaciones en el local, nave, taller o almacén (suelos, paredes, techos, puertas, ventanas, agua, luz, gas o climatización).",
+					"Sistemas de drenaje, desagües y extracción de agua.",
+					"Reparación o reposición de maquinaria y equipos profesionales estropeados.",
+					"Compra o arreglo de mobiliario, herramientas, utillaje, rótulos y equipos informáticos o electrónicos de uso profesional."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La lista concreta de actividades económicas e IAE subvencionables no aparece en este texto y remite a las bases reguladoras."
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "940652",
+			"titulo": "ORDEN Consejera de Economía, Competitividad y Empleo se aprueba para 2026 la convocatoria de subvenciones para el desarrollo del Plan WAVE PLUS Ocupados, destinado a la actualización de las competencias laborales y mejora de la empleabilidad",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ARAGÓN",
+				"nivel3": "INSTITUTO ARAGONÉS DE EMPLEO (INAEM)"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 8983840,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES24",
+					"nombre": "ARAGON"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación en el BOA",
+			"textoFin": "Diez días hábiles, contados a partir del día siguiente a la publicación de la convocatoria en BOA",
+			"bases": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-4715",
+			"documento": {
+				"id": 1551739,
+				"nombre": "CSVEN4ITIC1KI1I0XFIL Orden Ocupados SEPE 2026 con Anexo I.pdf"
+			},
+			"docs": [
+				1551739
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940652",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para que academias, centros y entidades de formación ejecuten programas de formación dirigidos prioritariamente a personas trabajadoras ocupadas en Aragón durante los años 2026 y 2027.",
+				"paraQuien": "Entidades locales y entidades de formación privadas acreditadas o inscritas que dispongan de instalaciones en la Comunidad Autónoma de Aragón.",
+				"importe": "Hasta 150.000 € por entidad con un solo centro o hasta 300.000 € si dispone de más de un centro. Ningún programa formativo podrá superar los 150.000 €.",
+				"importeMaximo": 300000,
+				"plazo": "10 días hábiles contados a partir del día siguiente al de la publicación del extracto de la convocatoria en el Boletín Oficial de Aragón.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar acreditado o inscrito en el Registro de Centros Colaboradores de Aragón o en el Registro Estatal a la fecha de publicación.",
+					"Contar con instalaciones en Aragón inscritas que permitan impartir las especialidades solicitadas.",
+					"Impartir la formación directamente sin subcontratar la ejecución del programa.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"No tener deudas pendientes con la Comunidad Autónoma de Aragón (salvo compensación si la deuda es menor a la ayuda).",
+					"No haber sido sancionado por discriminación de género ni por violencia o discriminación contra personas LGTBI.",
+					"Cumplir con los plazos de pago a proveedores (ley de morosidad) en subvenciones superiores a 30.000 €.",
+					"No haber incurrido en incumplimientos en la convocatoria de formación correspondiente al año 2024."
+				],
+				"gastos": [
+					"Costes directos e indirectos necesarios para la impartición de la formación.",
+					"Contratación de personal docente.",
+					"Contratación de personal de apoyo para participantes con discapacidad."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "La fecha exacta de cierre del plazo depende del día concreto en que se publique la convocatoria en el Boletín Oficial de Aragón."
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940640",
+			"titulo": "Subvenciones destinadas a la limpieza, la retirada, el transporte y el tratamiento de los residuos deamianto a causa de episodios meteorológicos excepcionales ocatastróficos informados por el Servicio Meteorológico de Cataluña (Meteocat)",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CATALUÑA",
+				"nivel3": "AGÈNCIA DE RESIDUS DE CATALUNYA"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 669016,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "38",
+					"nombre": "Actividades de recogida, tratamiento y eliminación de residuos"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES51",
+					"nombre": "CATALUÑA"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": "2026-11-17",
+			"fin": "2026-12-17",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://dogc.gencat.cat/es/document-del-dogc/?documentId=1028854",
+			"documento": {
+				"id": 1551760,
+				"nombre": "Convocatoria_ES.pdf"
+			},
+			"docs": [
+				1551760,
+				1551761
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940640",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para cubrir hasta el 100 % del coste de la limpieza, retirada, transporte y tratamiento de cubiertas con amianto que hayan quedado dañadas por tormentas o episodios meteorológicos excepcionales en zonas afectadas de Cataluña.",
+				"paraQuien": "Personas físicas, autónomos, empresas, comunidades de vecinos y entidades públicas propietarias de inmuebles con techos de amianto dañados por temporales.",
+				"importe": "Hasta el 100 % del coste de los trabajos. El importe máximo en ayudas de minimis no puede superar los 300.000 € por empresa en un período de 3 años. El presupuesto total es de 669.016,00 €.",
+				"importeMaximo": 300000,
+				"plazo": "Desde las 9:00 h del 17 de noviembre de 2026 hasta las 14:00 h del 17 de diciembre de 2026.",
+				"plazoFin": "2026-12-17",
+				"requisitos": [
+					"Tener cubiertas de amianto dañadas por temporales recogidos en el informe del Meteocat del 23 de octubre de 2026.",
+					"Contratar o haber contratado las obras de retiro a una empresa inscrita en el Registro de empresas con riesgo de amianto (RERA).",
+					"Entregar los residuos a una empresa gestora de residuos autorizada inscrita en el registro oficial correspondiente (RGPGRC).",
+					"No tener los daños cubiertos por ningún seguro.",
+					"Presentar la solicitud de forma telemática en la Sede electrónica."
+				],
+				"gastos": [
+					"Limpieza, retirada, transporte y tratamiento de los residuos de cubiertas con amianto.",
+					"Gastos de retiradas de amianto dañadas ya efectuadas por una empresa RERA."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": "Los requisitos detallados de las personas solicitantes remiten a las bases reguladoras aprobadas en la Resolución TER/4069/2025."
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940622",
+			"titulo": "CONCURSO DE ESCAPARATES NAVIDEÑOS 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CUERVO DE SEVILLA, EL",
+				"nivel3": "AYUNTAMIENTO DE CUERVO DE SEVILLA, EL"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES618",
+					"nombre": "Sevilla"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la publicación de las presentes bases.",
+			"textoFin": "04/12/2026",
+			"bases": "www.dipusevilla.es/bop",
+			"documento": {
+				"id": 1551710,
+				"nombre": "3. BASES CONCURSO ESCAPARATES.pdf"
+			},
+			"docs": [
+				1551707,
+				1551710
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940622",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña de escaparates y establecimientos para dinamizar y promocionar el comercio local y la hostelería en El Cuervo de Sevilla.",
+				"paraQuien": "Comerciantes y hosteleros con establecimiento abierto al público en El Cuervo de Sevilla.",
+				"importe": "1.º premio: 250 € + obsequio; 2.º premio: 150 € + obsequio; siguiente premio: 100 € + obsequio.",
+				"importeMaximo": 250,
+				"plazo": "Hasta el 4 de diciembre de 2026.",
+				"plazoFin": "2026-12-04",
+				"requisitos": [
+					"Tener un establecimiento comercial o de hostelería abierto al público en El Cuervo de Sevilla.",
+					"Colocar en un lugar visible del escaparate el cartel que acredita la participación.",
+					"Mantener la decoración navideña desde el 10 de diciembre hasta el 6 de enero.",
+					"Tener el escaparate iluminado como mínimo hasta las 22:00 horas durante todo el periodo de exposición."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "El Cuervo de Sevilla"
+				},
+				"dudas": "Las bases listan por error dos veces el «2º Premio» (uno de 150 € y otro de 100 €)."
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.8-flash"
+		},
+		{
+			"codigo": "940620",
+			"titulo": "IV concurso de Belenes",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "NÁQUERA",
+				"nivel3": "AYUNTAMIENTO DE NÁQUERA"
+			},
+			"sede": null,
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 600,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día después de la publicación  en el BOPV",
+			"textoFin": "10 días hábiles a contar a partir del día siguiente a la publicación de la convocatoria en el BOPV",
+			"bases": "https://naquera.sedelectronica.es/transparency/32100b86-e416-42ac-a571-a8147a5fbf5f/",
+			"documento": {
+				"id": 1551706,
+				"nombre": "bases y convocatoria IV Concurso de belenes.pdf"
+			},
+			"docs": [
+				1551706
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940620",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso municipal de belenes navideños en Nàquera con varias categorías (familiar, infantil, comercios/asociaciones y especial) que otorga premios en especie consistentes en lotes de productos navideños.",
+				"paraQuien": "Personas físicas residentes en Nàquera, asociaciones locales inscritas en el registro municipal y comercios.",
+				"importe": "Lotes de productos navideños de hasta 80 € por premio, con un crédito total de 600 €.",
+				"importeMaximo": 80,
+				"plazo": "10 días hábiles a contar a partir del día siguiente a la publicación de la convocatoria en el BOPV, tablón de edictos y web municipal.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser persona física de Nàquera o asociación local inscrita en el registro municipal.",
+					"Incluir de forma obligatoria la escena del nacimiento en el belén.",
+					"Tener el belén totalmente terminado en el momento de la visita del jurado.",
+					"Estar presente en el domicilio o local cuando el jurado realice la visita.",
+					"Ceder los derechos de imagen de la decoración al Ayuntamiento de Nàquera."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Nàquera"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de la Provincia para determinar la fecha concreta de finalización del plazo."
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
 		{
 			"codigo": "940577",
 			"titulo": "Convocatoria de subvenciones a entidades con y sin ánimo de lucro que comercialicen producto de Mallorca para paliar los efectos económicos negativos en materia de suministros de energia derivados de la guerra en el Oriente Medio en el año 2026",
@@ -6071,6 +7161,79 @@
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
+			"codigo": "938526",
+			"titulo": "CONCURSO AMBIENTEMOS LA NAVIDAD EN EL DISTRITO DE PATRAIX",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VALENCIA",
+				"nivel3": "AYUNTAMIENTO DE VALENCIA"
+			},
+			"sede": "https://sede.valencia.es",
+			"publicada": "2026-10-28",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 900,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "90",
+					"nombre": "Actividades de creación artística y artes escénicas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES",
+					"nombre": "ESPAÑA"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "solicitudes participación a partir del día siguiente de la publicación de la convocatoria en el bop",
+			"textoFin": "y hasta el 10 diciembre 2026 (ambos inclusive)",
+			"bases": "https://sede.valencia.es/sede/ordenanzas/index.xhtml",
+			"documento": {
+				"id": 1549925,
+				"nombre": "03_BASES_CONCURSO_CAST..pdf"
+			},
+			"docs": [
+				1549925
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938526",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso para premiar la mejor decoración navideña en los escaparates de los comercios del distrito de Patraix en València.",
+				"paraQuien": "Autónomos y empresas titulares de un comercio local en la demarcación de la Junta Municipal de Patraix.",
+				"importe": "Tres premios de 300 € cada uno.",
+				"importeMaximo": 300,
+				"plazo": "Desde el día siguiente a la publicación de la convocatoria en el BOP hasta el 10 de diciembre de 2026.",
+				"plazoFin": "2026-12-10",
+				"requisitos": [
+					"Ser persona física o jurídica titular de un comercio local en el distrito de Patraix.",
+					"Estar al día con la Hacienda Estatal, la Seguridad Social y el Ayuntamiento de València.",
+					"No estar inhabilitado para recibir subvenciones públicas.",
+					"Presentar una única propuesta por comercio.",
+					"La decoración debe ser inédita, original y con temática navideña.",
+					"Tener el escaparate decorado antes del 20 de diciembre de 2026 y mantenerlo expuesto al menos hasta el 24 de diciembre."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "València"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
 			"codigo": "938510",
 			"titulo": "AYUDAS A LOS PARTICIPANTES EN LA EXPOSICION DE BELENES 2026/2027",
 			"organo": {
@@ -7917,6 +9080,78 @@
 			},
 			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "938128",
+			"titulo": "III CONCURSO ÁRBOLES NAVIDAD",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TOMIÑO",
+				"nivel3": "AYUNTAMIENTO DE TOMIÑO"
+			},
+			"sede": "https://tomino.sedelectronica.gal/dossier.1",
+			"publicada": "2026-10-27",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1050,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES11",
+					"nombre": "GALICIA"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": "2026-11-09",
+			"fin": "2026-12-09",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://tomino.sedelectronica.gal/dossier.1",
+			"documento": {
+				"id": 1544914,
+				"nombre": "BNDS.pdf"
+			},
+			"docs": [
+				1544914,
+				1544915
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938128",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso del Ayuntamiento de Tomiño para premiar el diseño y elaboración de árboles de Navidad con materiales reciclados o ecológicos.",
+				"paraQuien": "Vecinos de Tomiño organizados en grupos de al menos dos personas físicas (familias, amigos, asociaciones o alumnado). Quedan excluidas las personas jurídicas.",
+				"importe": "Tres premios económicos: 600 € para el 1.º puesto, 300 € para el 2.º y 150 € para el 3.º.",
+				"importeMaximo": 600,
+				"plazo": "Desde el 9 de noviembre hasta el 9 de diciembre de 2026.",
+				"plazoFin": "2026-12-09",
+				"requisitos": [
+					"Participar en grupos de mínimo dos personas físicas (no se permiten personas jurídicas).",
+					"Pertenecer a la vecindad de Tomiño.",
+					"Presentar un único árbol por grupo elaborado con materiales ecológicos o reciclados.",
+					"El árbol debe medir entre 0,90 y 1,50 metros de altura y resistir la intemperie.",
+					"Estar al corriente de las obligaciones tributarias con el Ayuntamiento de Tomiño, la Seguridad Social, la AEAT y la Agencia Tributaria de Galicia."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Tomiño"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "938097",
@@ -16587,7 +17822,7 @@
 				1538204,
 				1538205
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16668,7 +17903,7 @@
 				1540989,
 				1540990
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16753,7 +17988,7 @@
 				1540983,
 				1540984
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16836,7 +18071,7 @@
 				1540156,
 				1540157
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16990,7 +18225,7 @@
 			"docs": [
 				1538046
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17074,7 +18309,7 @@
 				1539698,
 				1539699
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-12-15",
@@ -17160,7 +18395,7 @@
 				1539041,
 				1539042
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17253,7 +18488,7 @@
 				1540936,
 				1540937
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-08-26",
@@ -17341,7 +18576,7 @@
 				1539739,
 				1539740
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17416,7 +18651,7 @@
 			"docs": [
 				1537430
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17487,7 +18722,7 @@
 			"docs": [
 				1537382
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -17564,7 +18799,7 @@
 				1537275,
 				1537278
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -17638,7 +18873,7 @@
 			"docs": [
 				1537283
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17711,7 +18946,7 @@
 				1537272,
 				1537273
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -17827,7 +19062,7 @@
 				1537035,
 				1537036
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -17906,7 +19141,7 @@
 				1536908,
 				1536909
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -17987,7 +19222,7 @@
 				1536899,
 				1536900
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -18063,7 +19298,7 @@
 			"docs": [
 				1536840
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18140,7 +19375,7 @@
 			"docs": [
 				1536839
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18213,7 +19448,7 @@
 				1536837,
 				1536838
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -18293,7 +19528,7 @@
 			"docs": [
 				1536835
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-03",
@@ -18373,7 +19608,7 @@
 				1536572,
 				1536573
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18446,7 +19681,7 @@
 				1536558,
 				1536559
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-05-01",
@@ -18650,7 +19885,7 @@
 				1536496,
 				1536497
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18730,7 +19965,7 @@
 				1536485,
 				1536486
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18821,7 +20056,7 @@
 				1536477,
 				1536478
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18927,7 +20162,7 @@
 			"docs": [
 				1536397
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18967,24 +20202,22 @@
 			"textoFin": "El plazo de presentación de solicitudes será de 20 días naturales, a contar desde el día siguiente d",
 			"bases": "https://sedeelectronica.alicante.es/servicios.php",
 			"documento": {
-				"id": 1536310,
-				"nombre": "Acuerdo_JGL_06-10-2026.pdf"
+				"id": 1551736,
+				"nombre": "Acuerdo_Rectificacion_18.pdf"
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935110",
 			"ia": {
-				"categoria": "ayuda",
-				"resumen": "Ayudas para asociaciones y federaciones de comerciantes y hosteleros para hacer campañas, mejorar la digitalización y dinamizar el sector comercial.",
-				"paraQuien": "Asociaciones y federaciones de comerciantes y hosteleros sin ánimo de lucro.",
-				"importe": "El presupuesto total disponible es de 200.000 euros.",
-				"importeMaximo": null,
-				"plazo": "20 días naturales desde el día siguiente a la publicación.",
-				"plazoFin": null,
+				"categoria": "otro",
+				"resumen": "Corrección de un error en los criterios de valoración de las subvenciones para asociaciones del sector del comercio y la hostelería de Alicante para el año 2026. Se rectifica el tramo de asociados de 41 a 70 socios para la asignación de puntos y cuantía máxima.",
+				"paraQuien": "Asociaciones del sector de comercio y hostelería del municipio de Alicante que cuenten con al menos 30 asociados.",
+				"importe": "Desde 6.500 € hasta 27.500 € por asociación, según el número de socios.",
+				"importeMaximo": 27500,
+				"plazo": "Hasta el 5 de noviembre de 2026.",
+				"plazoFin": "2026-11-05",
 				"requisitos": [
-					"Ser una asociación o federación sin ánimo de lucro.",
-					"Tener el domicilio social en el municipio de Alicante.",
-					"Tener asociados al menos 30 establecimientos o locales comerciales o de hostelería.",
-					"La presidencia y la junta directiva deben estar en activo en los sectores de comercio o hostelería.",
-					"Disponer de ingresos propios de al menos el 15 por ciento del presupuesto que se solicita."
+					"Ser una asociación dedicada a la promoción o desarrollo del sector comercio y hostelería.",
+					"Contar con un mínimo de 30 socios pertenecientes a la asociación.",
+					"Estar radicada o desarrollar la actividad en el municipio de Alicante."
 				],
 				"gastos": [],
 				"condiciones": {
@@ -18996,14 +20229,23 @@
 					"antiguedadMaxMeses": null,
 					"municipio": "Alicante"
 				},
-				"dudas": "No se indica la fecha exacta de publicación en el boletín para calcular el último día de plazo ni la cantidad máxima exacta que puede recibir cada asociación."
+				"dudas": null
 			},
 			"docs": [
-				1536310,
-				1536311
+				1551736,
+				1551737
 			],
-			"comprobada": "2026-11-08",
-			"iaModelo": "gemini-3.5-flash-lite"
+			"comprobada": "2026-11-09",
+			"iaModelo": "gemini-3.6-flash",
+			"cambios": [
+				{
+					"fecha": "2026-11-09",
+					"campos": [
+						"documento",
+						"documentos"
+					]
+				}
+			]
 		},
 		{
 			"codigo": "935071",
@@ -19151,7 +20393,7 @@
 				1536204,
 				1536205
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19228,7 +20470,7 @@
 				1536149,
 				1538756
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19305,7 +20547,7 @@
 				1536113,
 				1536114
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19381,7 +20623,7 @@
 				1536093,
 				1536095
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19452,7 +20694,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -19537,7 +20779,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19620,7 +20862,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19696,7 +20938,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19767,7 +21009,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19844,7 +21086,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19920,7 +21162,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -20005,7 +21247,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20079,23 +21321,23 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-08",
+			"comprobada": "2026-11-09",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-09T14:15:04.050Z",
+			"fecha": "2026-11-09T23:30:50.291Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 41,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-09T14:15:04.293Z",
+			"fecha": "2026-11-10T00:03:27.484Z",
 			"pendientes": 0,
-			"leidas": 0,
+			"leidas": 17,
 			"fallidas": 0,
-			"ultimaLectura": "2026-11-06"
+			"ultimaLectura": "2026-11-09"
 		}
 	}
 }
