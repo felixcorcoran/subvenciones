@@ -22,7 +22,7 @@ import org.springframework.transaction.support.TransactionTemplate;
  */
 public class RelevoOutbox {
 
-	record Pendiente(long orden, String topico, String clave, String carga) {
+	record Pendiente(long orden, String topico, String clave, String carga, String traza) {
 	}
 
 	private static final int LOTE = 100;
@@ -30,11 +30,13 @@ public class RelevoOutbox {
 	private final JdbcClient jdbc;
 	private final KafkaTemplate<String, String> kafka;
 	private final TransactionTemplate transaccion;
+	private final Traza traza;
 
-	public RelevoOutbox(JdbcClient jdbc, KafkaTemplate<String, String> kafka, TransactionTemplate transaccion) {
+	public RelevoOutbox(JdbcClient jdbc, KafkaTemplate<String, String> kafka, TransactionTemplate transaccion, Traza traza) {
 		this.jdbc = jdbc;
 		this.kafka = kafka;
 		this.transaccion = transaccion;
+		this.traza = traza;
 	}
 
 	@Scheduled(fixedDelayString = "${subvenciones.outbox.cada:1s}")
@@ -47,21 +49,15 @@ public class RelevoOutbox {
 
 	private int publicarLote() {
 		List<Pendiente> pendientes = jdbc.sql("""
-				SELECT orden, topico, clave, carga::text FROM outbox
+				SELECT orden, topico, clave, carga::text, traza FROM outbox
 				WHERE publicado IS NULL ORDER BY orden LIMIT :lote FOR UPDATE SKIP LOCKED
 				""")
 				.param("lote", LOTE)
-				.query((rs, i) -> new Pendiente(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4)))
+				.query((rs, i) -> new Pendiente(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)))
 				.list();
 		for (Pendiente p : pendientes) {
-			try {
-				kafka.send(p.topico(), p.clave(), p.carga()).get(30, TimeUnit.SECONDS);
-			} catch (InterruptedException e) {
-				Thread.currentThread().interrupt();
-				throw new IllegalStateException("Interrumpido publicando la outbox", e);
-			} catch (Exception e) {
-				throw new IllegalStateException("No se pudo publicar el evento " + p.orden() + " en " + p.topico(), e);
-			}
+			// Dentro de la traza en la que se anotó: el envío a Kafka lleva su «traceparent»
+			traza.continuar(p.traza(), "outbox publicar", () -> enviar(p));
 		}
 		if (!pendientes.isEmpty()) {
 			jdbc.sql("UPDATE outbox SET publicado = now() WHERE orden IN (:ordenes)")
@@ -69,6 +65,17 @@ public class RelevoOutbox {
 					.update();
 		}
 		return pendientes.size();
+	}
+
+	private void enviar(Pendiente p) {
+		try {
+			kafka.send(p.topico(), p.clave(), p.carga()).get(30, TimeUnit.SECONDS);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			throw new IllegalStateException("Interrumpido publicando la outbox", e);
+		} catch (Exception e) {
+			throw new IllegalStateException("No se pudo publicar el evento " + p.orden() + " en " + p.topico(), e);
+		}
 	}
 
 	/** Lo publicado hace más de una semana ya no hace falta */

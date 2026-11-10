@@ -20,6 +20,7 @@ import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.bdns.DocumentosB
 import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.gemini.GeminiHttp;
 import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.outbox.OutboxPostgres;
 import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.outbox.RelevoOutbox;
+import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.outbox.Traza;
 import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.persistencia.DatosOriginales;
 import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.persistencia.EventosProcesadosPostgres;
 import es.felixcorcoran.subvenciones.lectura.adaptadores.salida.persistencia.LecturasPostgres;
@@ -82,13 +83,20 @@ public class ServicioLecturaApplication {
 	}
 
 	@Bean
-	OutboxPostgres outbox(JdbcClient jdbc, JsonMapper json, Clock reloj) {
-		return new OutboxPostgres(jdbc, json, reloj);
+	OutboxPostgres outbox(JdbcClient jdbc, JsonMapper json, Clock reloj, Traza traza) {
+		return new OutboxPostgres(jdbc, json, reloj, traza);
 	}
 
 	@Bean
-	RelevoOutbox relevoOutbox(JdbcClient jdbc, KafkaTemplate<String, String> kafka, TransactionTemplate transaccion) {
-		return new RelevoOutbox(jdbc, kafka, transaccion);
+	RelevoOutbox relevoOutbox(JdbcClient jdbc, KafkaTemplate<String, String> kafka, TransactionTemplate transaccion, Traza traza) {
+		return new RelevoOutbox(jdbc, kafka, transaccion, traza);
+	}
+
+	/** La traza a través de la outbox; sin trazas configuradas, no hace nada */
+	@Bean
+	Traza traza(org.springframework.beans.factory.ObjectProvider<io.micrometer.tracing.Tracer> tracer,
+			org.springframework.beans.factory.ObjectProvider<io.micrometer.tracing.propagation.Propagator> propagador) {
+		return new Traza(tracer.getIfAvailable(), propagador.getIfAvailable());
 	}
 
 	@Bean

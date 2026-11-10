@@ -29,11 +29,13 @@ public class OutboxPostgres implements Eventos {
 	private final JdbcClient jdbc;
 	private final JsonMapper json;
 	private final Clock reloj;
+	private final Traza traza;
 
-	public OutboxPostgres(JdbcClient jdbc, JsonMapper json, Clock reloj) {
+	public OutboxPostgres(JdbcClient jdbc, JsonMapper json, Clock reloj, Traza traza) {
 		this.jdbc = jdbc;
 		this.json = json;
 		this.reloj = reloj;
+		this.traza = traza;
 	}
 
 	@Override
@@ -49,14 +51,15 @@ public class OutboxPostgres implements Eventos {
 		if (evento instanceof Evento.Cambiada cambiada) sobre.put("campos", cambiada.campos());
 
 		jdbc.sql("""
-				INSERT INTO outbox (id, topico, clave, carga, creado)
-				VALUES (:id, :topico, :clave, CAST(:carga AS jsonb), :creado)
+				INSERT INTO outbox (id, topico, clave, carga, creado, traza)
+				VALUES (:id, :topico, :clave, CAST(:carga AS jsonb), :creado, :traza)
 				""")
 				.param("id", id)
 				.param("topico", TOPICO)
 				.param("clave", evento.convocatoria().codigo())
 				.param("carga", json.writeValueAsString(sobre))
 				.param("creado", Timestamp.from(ahora))
+				.param("traza", traza.actual())
 				.update();
 	}
 }

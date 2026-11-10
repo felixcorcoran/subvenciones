@@ -22,7 +22,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak; cada servicio, resource server con Spring Security; pasarela con CORS y límite por IP | hecha |
-| 5. Operación | Kubernetes (kind + Helm), OpenTelemetry + Grafana, AWS con Terraform | pendiente |
+| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana. Falta: Kubernetes (kind + Helm) y AWS con Terraform | **en marcha** |
 
 ## Cómo encaja todo
 
@@ -40,7 +40,7 @@ Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo p
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: Kubernetes, OpenTelemetry y AWS.
+Lo siguiente: Kubernetes y AWS.
 
 ## Seguridad y pasarela
 
@@ -60,6 +60,19 @@ es un *resource server* que valida el JWT y decide con sus propias reglas
 Las reglas son comunes (módulo `seguridad`, una autoconfiguración) y cada servicio solo declara sus
 listas. Se prueban con un Keycloak de verdad en Testcontainers, en cada servicio (401 sin token, 403
 sin rol) y de punta a punta en `docker compose` con `herramientas/prueba-seguridad.mjs`.
+
+## Observabilidad
+
+Todos los servicios mandan trazas y métricas por **OpenTelemetry** (OTLP). En local las recibe
+`grafana/otel-lgtm` y se ven en Grafana (http://localhost:3000). Una recogida lanzada por la
+pasarela se sigue en **una sola traza**: pasarela → recogida (con cada llamada a la BDNS) →
+publicación de cada evento por la outbox → consumo en la lectura. La traza no se corta en la outbox
+porque el contexto se guarda con el evento y el relevo la continúa al publicar
+([decisión 0008](docs/decisiones/0008-observabilidad.md)).
+
+```sh
+node herramientas/prueba-trazas.mjs infra/keycloak/realm-subvenciones.json   # con docker compose arriba
+```
 
 ## servicio-recogida
 
@@ -223,6 +236,7 @@ docker compose up --build     # PostgreSQL, Kafka, Mailpit y los cuatro servicio
 | Servicio | Puerto | Para lanzarlo a mano |
 | --- | --- | --- |
 | **pasarela** | 8000 | la entrada: todas las rutas de abajo, con CORS y límite por IP |
+| Grafana | 3000 | trazas (Tempo), métricas (Prometheus) y logs |
 | Keycloak | 8180 | tokens: `POST /realms/subvenciones/protocol/openid-connect/token` |
 | servicio-encaje | 8080 | `POST /api/v1/encajes` con un perfil |
 | servicio-recogida | 8081 | `POST /api/v1/recogidas` (contra la BDNS real) |
@@ -263,3 +277,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 - [0005 Los avisos preguntan al servicio de encaje por REST](docs/decisiones/0005-avisos-preguntan-al-encaje.md)
 - [0006 Respuestas sobre las bases: solo con citas literales comprobadas](docs/decisiones/0006-respuestas-con-citas.md)
 - [0007 Seguridad: OAuth2 con Keycloak, validada en cada servicio](docs/decisiones/0007-seguridad-oauth2.md)
+- [0008 Observabilidad con OpenTelemetry, y trazas que cruzan la outbox](docs/decisiones/0008-observabilidad.md)
