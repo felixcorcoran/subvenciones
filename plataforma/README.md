@@ -22,7 +22,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak; cada servicio, resource server con Spring Security; pasarela con CORS y límite por IP | hecha |
-| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana. Falta: Kubernetes (kind + Helm) y AWS con Terraform | **en marcha** |
+| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana; Kubernetes en local (kind + Helm). Falta: AWS con Terraform | **en marcha** |
 
 ## Cómo encaja todo
 
@@ -40,7 +40,7 @@ Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo p
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: Kubernetes y AWS.
+Lo siguiente: AWS.
 
 ## Seguridad y pasarela
 
@@ -73,6 +73,29 @@ porque el contexto se guarda con el evento y el relevo la continúa al publicar
 ```sh
 node herramientas/prueba-trazas.mjs infra/keycloak/realm-subvenciones.json   # con docker compose arriba
 ```
+
+## Kubernetes
+
+El chart de Helm ([`despliegue/helm/subvenciones`](despliegue/helm/subvenciones)) despliega los cinco
+servicios y la pasarela con una sola plantilla: comprobaciones de arranque, vida y disponibilidad
+(las que publica Spring Boot en Kubernetes), límites de memoria, usuario sin privilegios y los
+secretos en un `Secret`. Para un clúster local incluye también PostgreSQL, Kafka, Keycloak, Grafana
+y Mailpit (`infra.activada`); en uno de verdad serían servicios gestionados.
+
+En local con [kind](https://kind.sigs.k8s.io), tras construir las imágenes con `docker compose build`:
+
+```sh
+kind create cluster --name subvenciones --image kindest/node:v1.33.1
+for s in servicio-encaje servicio-recogida servicio-lectura servicio-avisos servicio-preguntas pasarela; do
+  docker tag plataforma-$s subvenciones/$s:local && kind load docker-image --name subvenciones subvenciones/$s:local
+done
+helm install subvenciones despliegue/helm/subvenciones --wait --timeout 10m
+kubectl port-forward svc/pasarela 8000:8000 & kubectl port-forward svc/keycloak 8180:8080 &
+```
+
+La imagen del nodo se fija en Kubernetes 1.33 porque las versiones nuevas no arrancan con cgroup v1
+(el de Docker Desktop sobre WSL 2 sin actualizar). Probado así: los 11 pods listos y las 8
+comprobaciones de `herramientas/prueba-seguridad.mjs` bien, por la pasarela y con tokens de Keycloak.
 
 ## servicio-recogida
 

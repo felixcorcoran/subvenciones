@@ -1,0 +1,104 @@
+{{- /* Un Deployment y un Service por cada servicio de values.yaml, todos con la misma forma */ -}}
+{{- range $nombre, $s := .Values.servicios }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $nombre }}
+  labels:
+    app.kubernetes.io/name: {{ $nombre }}
+    app.kubernetes.io/part-of: subvenciones
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ $nombre }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ $nombre }}
+        app.kubernetes.io/part-of: subvenciones
+    spec:
+      # Sin las variables que Kubernetes inyecta por cada Service (PASARELA_PORT=tcp://…)
+      enableServiceLinks: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+      containers:
+        - name: {{ $nombre }}
+          image: "{{ $.Values.imagen.registro }}/{{ $nombre }}:{{ $.Values.imagen.etiqueta }}"
+          imagePullPolicy: {{ $.Values.imagen.politica }}
+          ports:
+            - name: http
+              containerPort: {{ $s.puerto }}
+          env:
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: {{ $.Values.comun.otlp | quote }}
+            {{- if ne (toString $s.seguridad) "false" }}
+            - name: KEYCLOAK_EMISOR
+              value: {{ $.Values.comun.keycloak.emisor | quote }}
+            - name: KEYCLOAK_CLAVES
+              value: {{ $.Values.comun.keycloak.claves | quote }}
+            {{- end }}
+            {{- if $s.kafka }}
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: {{ $.Values.comun.kafka | quote }}
+            {{- end }}
+            {{- if $s.baseDeDatos }}
+            - name: DATABASE_URL
+              value: "jdbc:postgresql://{{ $.Values.comun.baseDeDatos.servidor }}/{{ $s.baseDeDatos }}"
+            - name: DATABASE_USER
+              value: {{ $.Values.comun.baseDeDatos.usuario | quote }}
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef: { name: subvenciones, key: base-de-datos }
+            {{- end }}
+            {{- if $s.gemini }}
+            - name: GEMINI_API_KEY
+              valueFrom:
+                secretKeyRef: { name: subvenciones, key: gemini }
+            {{- end }}
+            {{- range $clave, $valor := $s.env }}
+            - name: {{ $clave }}
+              value: {{ $valor | quote }}
+            {{- end }}
+          # Spring Boot detecta Kubernetes y publica estas dos comprobaciones
+          startupProbe:
+            httpGet: { path: /actuator/health/liveness, port: http }
+            periodSeconds: 5
+            failureThreshold: 60
+          livenessProbe:
+            httpGet: { path: /actuator/health/liveness, port: http }
+            periodSeconds: 10
+          readinessProbe:
+            httpGet: { path: /actuator/health/readiness, port: http }
+            periodSeconds: 5
+          resources:
+            {{- toYaml $.Values.recursos | nindent 12 }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: { drop: ["ALL"] }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $nombre }}
+  labels:
+    app.kubernetes.io/part-of: subvenciones
+spec:
+  selector:
+    app.kubernetes.io/name: {{ $nombre }}
+  ports:
+    - name: http
+      port: {{ $s.puerto }}
+      targetPort: http
+{{- end }}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: subvenciones
+type: Opaque
+stringData:
+  base-de-datos: {{ .Values.secretos.baseDeDatos | quote }}
+  gemini: {{ .Values.secretos.gemini | quote }}

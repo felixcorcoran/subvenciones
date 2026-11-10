@@ -37,6 +37,17 @@ jobs:
           name: informes-pruebas
           path: plataforma/**/target/surefire-reports/
 
+  chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # El chart lleva una copia del realm y del SQL de las bases: tienen que ser iguales a los de infra/
+      - run: |
+          diff infra/postgres/crear-bases.sql despliegue/helm/subvenciones/ficheros/crear-bases.sql
+          diff infra/keycloak/realm-subvenciones.json despliegue/helm/subvenciones/ficheros/realm-subvenciones.json
+      - run: helm lint despliegue/helm/subvenciones
+      - run: helm template prueba despliegue/helm/subvenciones > /dev/null
+
   imagenes:
     runs-on: ubuntu-latest
     needs: pruebas
