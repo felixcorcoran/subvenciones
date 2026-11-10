@@ -1,6 +1,644 @@
 {
-	"actualizado": "2026-11-10T13:44:11.017Z",
+	"actualizado": "2026-11-10T20:57:28.680Z",
 	"convocatorias": [
+		{
+			"codigo": "941239",
+			"titulo": "Resolución de 6 de noviembre de 2026 de la Presidencia del CDTI E.P.E. por la que se aprueba la convocatoria para el año 2026 del procedimiento de concesión de ayudas destinadas a proyectos INNTERCONECTA-STEP, cofinanciada por FEDER",
+			"organo": {
+				"nivel1": "ESTADO",
+				"nivel2": "MINISTERIO DE CIENCIA, INNOVACIÓN Y UNIVERSIDADES",
+				"nivel3": "CENTRO PARA EL DESARROLLO TECNOLÓGICO Y LA INNOVACIÓN E.P.E"
+			},
+			"sede": "https://sede.cdti.gob.es/AreaPublica/home.aspx",
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 150000000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "72",
+					"nombre": "Investigación y desarrollo"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES",
+					"nombre": "ESPAÑA"
+				}
+			],
+			"finalidad": "Investigación, desarrollo e innovación",
+			"inicio": "2026-11-17",
+			"fin": "2026-12-23",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-8122",
+			"documento": {
+				"id": 1553183,
+				"nombre": "Convocatoria CDTI-STEP 2026.pdf"
+			},
+			"docs": [
+				1553183
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941239",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para financiar proyectos de investigación y desarrollo tecnológico en grupo, enfocados en tecnologías digitales, energías limpias y eficientes o biotecnología.",
+				"paraQuien": "Agrupaciones de entre 2 y 6 empresas (al menos una PYME) con personalidad jurídica que realicen proyectos de I+D en colaboración.",
+				"importe": "Subvención no inferior al 40% del presupuesto del proyecto. El presupuesto total del proyecto debe estar entre 1.000.000 € y 4.000.000 € (mínimo 175.000 € por empresa).",
+				"importeMaximo": null,
+				"plazo": "Del 17 de noviembre de 2026 al 23 de diciembre de 2026 a las 12:00 horas (hora peninsular).",
+				"plazoFin": "2026-12-23",
+				"requisitos": [
+					"Formar un grupo de 2 a 6 empresas con personalidad jurídica propia en España.",
+					"Al menos dos empresas del grupo deben ser independientes entre sí y al menos una debe ser PYME.",
+					"Desarrollar el proyecto en al menos 2 de las CCAA participantes (Andalucía, Baleares, Canarias, Castilla-La Mancha, Castilla y León, C. Valenciana, Extremadura, Galicia o Murcia).",
+					"Presupuesto total del proyecto entre 1.000.000 € y 4.000.000 €.",
+					"Presupuesto elegible mínimo por empresa de 175.000 €.",
+					"Subcontratar al menos el 10% del presupuesto a centros o instituciones de investigación.",
+					"Tener depositadas las cuentas anuales del ejercicio 2025 en el registro oficial correspondiente.",
+					"No estar en crisis ni tener deudas con la Administración o pendientes de reintegro."
+				],
+				"gastos": [
+					"Personal investigador, técnico y auxiliar dedicado al proyecto (incluye socios autónomos).",
+					"Amortización de equipos, instrumental y material inventariable utilizado en el proyecto.",
+					"Compra de licencias, patentes, investigación contractual y consultoría técnica.",
+					"Materiales, suministros y gastos generales derivados directamente del proyecto.",
+					"Informe de auditoría hasta 1.500 € por empresa y año.",
+					"Viajes para reuniones de coordinación entre socios del grupo hasta 5.000 € por empresa."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941231",
+			"titulo": "BASES CONCURSO «JUNTOS ILUMINAMOS LA NAVIDAD 2026»",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALMUSSAFES",
+				"nivel3": "AYUNTAMIENTO DE ALMUSSAFES"
+			},
+			"sede": null,
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1800,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "El día siguiente a la publicación de esta convocatoria en el BOP de Valencia.",
+			"textoFin": "Hasta el 9 de diciembre de 2026 a las 14:00h.",
+			"bases": "https://wp.me/panQjS-jvh",
+			"documento": {
+				"id": 1553158,
+				"nombre": "Bases Junts Il·luminem Nadal 2026 - SEFYCU 8727198.pdf"
+			},
+			"docs": [
+				1553158,
+				1553160
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941231",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración navideña en Almussafes que premia la creatividad en fachadas, escaparates y espacios con vales de compra para gastar en el comercio local.",
+				"paraQuien": "Comercios y negocios locales, vecinos mayores de edad, asociaciones, comunidades de vecinos y colegios de Almussafes.",
+				"importe": "Un premio de 400 € en vales de compra para la categoría de comercio o negocio.",
+				"importeMaximo": 400,
+				"plazo": "Hasta el 9 de diciembre de 2026 a las 14:00 horas.",
+				"plazoFin": "2026-12-09",
+				"requisitos": [
+					"Tener el establecimiento comercial o negocio ubicado en el municipio de Almussafes.",
+					"Decorar la ventana, escaparate o fachada del local con motivo navideño.",
+					"Presentar entre 1 y 3 fotos del espacio decorado en formato vertical y sin firmas ni marcas.",
+					"Mantener la decoración montada durante todo el plazo del concurso.",
+					"Tener encendida la iluminación decorativa al menos de 19:00 a 22:00 horas.",
+					"Estar al día en los pagos con la Hacienda Estatal, la Seguridad Social y el Ayuntamiento."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Almussafes"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941228",
+			"titulo": "AYUDAS A LA INICIATIVA EMPRENDEDORA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "GIBRALEÓN",
+				"nivel3": "AYUNTAMIENTO DE GIBRALEÓN"
+			},
+			"sede": "https://gibraleon.sedelectronica.es/",
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 10000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES615",
+					"nombre": "Huelva"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "dia siguiente a publicación en BOP",
+			"textoFin": "diez dias naturales tras publicacion en BOP",
+			"bases": "https://gibraleon.sedelectronica.es/",
+			"documento": {
+				"id": 1553159,
+				"nombre": "Certificado de acuerdo.pdf"
+			},
+			"docs": [
+				1553159
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941228",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para poner en marcha un nuevo negocio o dar el salto al empleo autónomo en Gibraleón, cubriendo gastos del día a día.",
+				"paraQuien": "Personas que empiezan una actividad o pequeños negocios creados recientemente en Gibraleón.",
+				"importe": "1.000 € por negocio, con un máximo total de 10 ayudas disponibles.",
+				"importeMaximo": 1000,
+				"plazo": "Diez días naturales contados a partir del día siguiente a la publicación en el Boletín Oficial de la Provincia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Iniciar la actividad entre el 1 de diciembre de 2025 y el 30 de noviembre de 2026.",
+					"Tener el domicilio social en Gibraleón.",
+					"Hacer el pago de las solicitudes por orden de llegada.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y el Ayuntamiento.",
+					"Tener o estar tramitando la licencia de actividad, o presentar una declaración jurada si no es obligatoria."
+				],
+				"gastos": [
+					"Alquiler",
+					"Suministros como agua, luz, teléfono o gas",
+					"Gastos de explotación para desarrollar la actividad"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": 250,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Gibraleón"
+				},
+				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de la Provincia."
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.5-flash-lite"
+		},
+		{
+			"codigo": "941211",
+			"titulo": "CONVOCATORIA Y BASES REGULADORAS DE AYUDAS MUNICIPALES PARA MODERNIZACIÓN SOSTENIBLE DE EXPLOTACIONES AGRARIAS 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ANDÚJAR",
+				"nivel3": "AYUNTAMIENTO DE ANDÚJAR"
+			},
+			"sede": null,
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 30000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES616",
+					"nombre": "Jaén"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "AL DÍA SIGUIENTE DE LA PUBLICACIÓN EN EL BOP",
+			"textoFin": "A LOS DIEZ DÍAS HÁBILES",
+			"bases": "http://www.andujar.es/fileadmin/pdfs/portal_transparencia/Normas_y_Acuerdos/Ordenanza_General_de_las_Bases_Reguladoras_de_la_Concesion_de_Subvenciones_por_el_Ayuntamiento_de_Andujar.pdf",
+			"documento": {
+				"id": 1553060,
+				"nombre": "7.- RESOLUCIÓN AYUDAS AGRICULTURA 26_f.pdf"
+			},
+			"docs": [
+				1553060,
+				1553099
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941211",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas a fondo perdido para apoyar pequeñas inversiones en explotaciones agrarias de Andújar, orientadas a mejorar la eficiencia hídrica, la sostenibilidad ambiental y la competitividad del sector.",
+				"paraQuien": "Titulares de explotaciones agrarias ubicadas en el término municipal de Andújar.",
+				"importe": "Presupuesto total de 30.000,00 € (no se especifica la cuantía por individual).",
+				"importeMaximo": null,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia.",
+				"plazoFin": null,
+				"requisitos": [
+					"La explotación agraria debe estar radicada en el término municipal de Andújar."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Andújar"
+				},
+				"dudas": "El documento aprueba la convocatoria pero no detalla el importe máximo por solicitante ni la lista específica de gastos subvencionables."
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941199",
+			"titulo": "Ayuda a Emprendedores 2026 (Agricultura)",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE LEÓN",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE LEÓN"
+			},
+			"sede": null,
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 300000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES413",
+					"nombre": "León"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": "2027-01-01",
+			"fin": "2027-03-31",
+			"textoInicio": "1 de enero de 2027",
+			"textoFin": "31 de marzo de 2027",
+			"bases": "https://www.dipuleon.es/file;jsessionid=FA9DBCB94D1AC779A344F4CE0645D2AD/31SgncDu9RU",
+			"documento": {
+				"id": 1553045,
+				"nombre": "Certif._4_Pleno_28_octubre_2026._Convocatoria_y_bases_Ayudas_Emprendedores_2026_-_SEFYCU_7358167.pdf"
+			},
+			"docs": [
+				1553045,
+				1553046,
+				1553047,
+				1553048,
+				1553049,
+				1553050,
+				1553051,
+				1553052,
+				1553053
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941199",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas destinadas a apoyar a nuevos emprendedores mediante la cobertura del 90 % de las cuotas pagadas al Régimen Especial de Trabajadores Autónomos (RETA) por el inicio de su actividad empresarial.",
+				"paraQuien": "Personas físicas que inicien su actividad como autónomos y fijen el domicilio fiscal y del negocio en municipios de la provincia de León de menos de 20.000 habitantes.",
+				"importe": "El 90 % de la cuota pagada al RETA entre el 1 de octubre de 2025 y el 31 de diciembre de 2026 (con base máxima de cotización de 1.221,00 €). Presupuesto total de 950.000,00 €.",
+				"importeMaximo": null,
+				"plazo": "Del 1 de enero de 2027 al 31 de marzo de 2027.",
+				"plazoFin": "2027-03-31",
+				"requisitos": [
+					"Ser persona física y causar alta en el RETA entre el 1 de octubre de 2025 y el 31 de diciembre de 2026.",
+					"Iniciar la actividad y darse de alta en el IAE en ese mismo período.",
+					"Tener el domicilio fiscal y de la actividad en un municipio de León de menos de 20.000 habitantes.",
+					"Contar con un plan de empresa viable con proyección de al menos 3 años.",
+					"No encontrarse dentro de los 3 años anteriores a la edad mínima de jubilación.",
+					"No haber recibido esta ayuda en convocatorias anteriores.",
+					"En municipios de más de 2.000 habitantes, no se admiten altas en la Agrupación 67 del IAE.",
+					"Los profesionales liberales deben disponer de despacho abierto en el municipio del alta."
+				],
+				"gastos": [
+					"Cuotas pagadas a la Seguridad Social por el alta en el Régimen Especial de Trabajadores Autónomos (RETA)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941198",
+			"titulo": "Ayuda Emprendedores 2026 (Pesca y acuicultura)",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE LEÓN",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE LEÓN"
+			},
+			"sede": null,
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES413",
+					"nombre": "León"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": "2027-01-01",
+			"fin": "2027-03-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.dipuleon.es/file;jsessionid=FA9DBCB94D1AC779A344F4CE0645D2AD/31SgncDu9RU",
+			"documento": {
+				"id": 1553036,
+				"nombre": "Certif._4_Pleno_28_octubre_2026._Convocatoria_y_bases_Ayudas_Emprendedores_2026_-_SEFYCU_7358167.pdf"
+			},
+			"docs": [
+				1553036,
+				1553037,
+				1553038,
+				1553039,
+				1553040,
+				1553041,
+				1553042,
+				1553043,
+				1553044
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941198",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvención para cubrir el 90 % de las cuotas a la Seguridad Social (RETA) de personas que inicien una actividad como autónomas en municipios leoneses de menos de 20.000 habitantes.",
+				"paraQuien": "Personas físicas que se den de alta como autónomas e inicien una actividad empresarial en la provincia de León.",
+				"importe": "El 90 % de las cuotas pagadas a la Seguridad Social por el alta en RETA entre el 1 de octubre de 2025 y el 31 de diciembre de 2026 (calculado sobre una base máxima de cotización de 1.221,00 €).",
+				"importeMaximo": null,
+				"plazo": "Desde el 1 de enero de 2027 hasta el 31 de marzo de 2027.",
+				"plazoFin": "2027-03-31",
+				"requisitos": [
+					"Darse de alta en el IAE y en el RETA entre el 1 de octubre de 2025 y el 31 de diciembre de 2026.",
+					"Tener el domicilio fiscal y el de la actividad en un municipio de la provincia de León de menos de 20.000 habitantes.",
+					"Ser la primera alta en RETA o llevar al menos dos meses de baja y darse de alta en una actividad distinta.",
+					"Tener un plan de empresa que demuestre la viabilidad del negocio a al menos tres años.",
+					"En localidades de más de 2.000 habitantes no se aceptan altas en la Agrupación 67 del IAE.",
+					"Los profesionales liberales deben tener despacho abierto en el municipio del alta en el IAE.",
+					"No estar dentro de los tres años anteriores a la edad mínima de jubilación.",
+					"No haber sido beneficiario de esta ayuda en convocatorias anteriores."
+				],
+				"gastos": [
+					"Cuotas pagadas a la Seguridad Social por el alta en el Régimen Especial de Trabajadores Autónomos (RETA)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941194",
+			"titulo": "BASES REGULADORAS Y CONVOCATORIA PARA LA SELECCIÓN DE ESTABLECIMIENTOS COMERCIALES PARTICIPANTES EN LA CAMPAÑA DE BONOS COMERCIO “CONSUME RURAL” PARA LA REACTIVACIÓN DEL COMERCIO MINORISTA DE PROXIMIDAD EN LA PROVINCIA DE SEGOVIA, 2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE SEGOVIA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE SEGOVIA"
+			},
+			"sede": "https://sede.dipsegovia.es/info.0",
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES416",
+					"nombre": "Segovia"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-17",
+			"fin": "2027-01-08",
+			"textoInicio": "A partir del primer día siguiente hábil desde la publicación del extracto en el BOP de Segovia.",
+			"textoFin": null,
+			"bases": "https://www.dipsegovia.es/la-institucion/servicios/subvenciones-promocion-provincial",
+			"documento": {
+				"id": 1553020,
+				"nombre": "Bases selección comercios bonos comercio 2027-Ver.5 final.pdf"
+			},
+			"docs": [
+				1553020
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941194",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Selección de comercios minoristas de la provincia de Segovia para la campaña Consume Rural 2027. Los negocios adheridos aplican descuentos a los clientes mediante bonos y la Diputación les reembolsa el dinero de los bonos canjeados.",
+				"paraQuien": "Comercios minoristas de la provincia de Segovia (autónomos y empresas) situados en municipios de menos de 20.000 habitantes.",
+				"importe": "Inicialmente 1.000 € por comercio (100 bonos de 10 € cada uno). Si quedan bonos sobrantes, se podrán repartir entre los comercios inscritos.",
+				"importeMaximo": 1000,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el BOP de Segovia hasta el 8 de enero de 2027.",
+				"plazoFin": "2027-01-08",
+				"requisitos": [
+					"Tener local comercial abierto en un municipio de la provincia de Segovia con menos de 20.000 habitantes.",
+					"Estar de alta en la Agencia Tributaria y en la Seguridad Social.",
+					"Pertenecer a alguno de los epígrafes del IAE indicados en la convocatoria.",
+					"Tener los permisos y licencias necesarios para ejercer la actividad comercial.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social y la Diputación de Segovia.",
+					"No ser filial de grandes empresas de ámbito nacional o internacional con más de 10 trabajadores.",
+					"Aceptar los bonos como parte del pago y colocar la publicidad de la campaña en el local."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-10",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941068",
+			"titulo": "ORDEN AGA/___/2026, de 7 de noviembre, por la que se convocan subvenciones para la promoción del vino en los mercados de terceros países, para el periodo de ejecución comprendido entre el 1 de marzo y el 31 de diciembre de 2027 (ejercicio financiero 2028)",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ARAGÓN",
+				"nivel3": "DIRECCIÓN GENERAL DE INNOVACIÓN Y PROMOCIÓN AGROALIMENTARIA"
+			},
+			"sede": "https://www.aragon.es/tramites",
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 3000000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES24",
+					"nombre": "ARAGON"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": "2026-12-31",
+			"textoInicio": "Al día siguiente de la publicación de la orden en el Boletín Oficial de Aragón",
+			"textoFin": null,
+			"bases": "https://www.boe.es/buscar/pdf/2022/BOE-A-2022-17475-consolidado.pdf",
+			"documento": {
+				"id": 1552756,
+				"nombre": "CSVN14HU6G1KA1I0XFIL 14070 Orden y anexos_promocion_vino_terceros_paises_FEAGA_2028.pdf"
+			},
+			"docs": [
+				1552756
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941068",
+			"ia": null,
+			"comprobada": "2026-11-10"
+		},
+		{
+			"codigo": "941018",
+			"titulo": "XVIII CAMPAÑA COMPRA A CASA 2026-2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "OLLERIA, L'",
+				"nivel3": "AYUNTAMIENTO DE OLLERIA, L'"
+			},
+			"sede": "Sede electrónica de l'Ajuntament de L'Olleria",
+			"publicada": "2026-11-10",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 7200,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-27",
+			"fin": "2027-01-05",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://lolleria.sede.dival.es/tablondeanuncios",
+			"documento": {
+				"id": 1552630,
+				"nombre": "RESOLUCION ALCALDIA cast.docx"
+			},
+			"docs": [
+				1552630,
+				1552631
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941018",
+			"ia": null,
+			"comprobada": "2026-11-10"
+		},
 		{
 			"codigo": "940976",
 			"titulo": "Convocatoria 2027, subvenciones de EDLP",
@@ -312,6 +950,52 @@
 			},
 			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940871",
+			"titulo": "Programa de subvenciones dirigido a entes de gestión, asociaciones, mancomunidades y consorcios turísticos para la mejora de la calidad, competitividad y actividades turísticas, de la provincia de A Coruña, en el año 2027. (DP0030/2027)",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE A CORUÑA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE CORUÑA, A"
+			},
+			"sede": "https://sede.dacoruna.gal/",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2365000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES111",
+					"nombre": "A Coruña"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": "2026-11-20",
+			"fin": "2026-12-18",
+			"textoInicio": "20/11/2026 08:00",
+			"textoFin": "18/12/2026 14:00",
+			"bases": "https://bop.dacoruna.gal/bopportal/publicado/2025/09/29/2025_0000006296.pdf",
+			"documento": {
+				"id": 1552667,
+				"nombre": "Bases y convocatoria DP0030-2027.pdf"
+			},
+			"docs": [
+				1552667,
+				1552669
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940871",
+			"ia": null,
+			"comprobada": "2026-11-10"
 		},
 		{
 			"codigo": "940822",
@@ -16553,7 +17237,7 @@
 			"docs": [
 				1538957
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16627,7 +17311,7 @@
 			"docs": [
 				1538945
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16703,7 +17387,7 @@
 			"docs": [
 				1538935
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16779,7 +17463,7 @@
 				1538794,
 				1538818
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16854,7 +17538,7 @@
 				1538742,
 				1538743
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16929,7 +17613,7 @@
 				1538740,
 				1538741
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-02-12",
@@ -17005,7 +17689,7 @@
 				1538736,
 				1538737
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-02-12",
@@ -17088,7 +17772,7 @@
 				1538729,
 				1538730
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-01-29",
@@ -17164,7 +17848,7 @@
 				1538579,
 				1538581
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -17262,7 +17946,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17347,7 +18031,7 @@
 				1538316,
 				1538317
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17424,7 +18108,7 @@
 			"docs": [
 				1538297
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17520,7 +18204,7 @@
 				1546324,
 				1546325
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -17604,7 +18288,7 @@
 				1538204,
 				1538205
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17685,7 +18369,7 @@
 				1540989,
 				1540990
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17768,7 +18452,7 @@
 				1540156,
 				1540157
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17922,7 +18606,7 @@
 			"docs": [
 				1538046
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18006,7 +18690,7 @@
 				1539698,
 				1539699
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-12-15",
@@ -18092,7 +18776,7 @@
 				1539041,
 				1539042
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18185,7 +18869,7 @@
 				1540936,
 				1540937
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-08-26",
@@ -18273,7 +18957,7 @@
 				1539739,
 				1539740
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18348,7 +19032,7 @@
 			"docs": [
 				1537430
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18419,7 +19103,7 @@
 			"docs": [
 				1537382
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18496,7 +19180,7 @@
 				1537275,
 				1537278
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -18570,7 +19254,7 @@
 			"docs": [
 				1537283
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18643,7 +19327,7 @@
 				1537272,
 				1537273
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -18759,7 +19443,7 @@
 				1537035,
 				1537036
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18838,7 +19522,7 @@
 				1536908,
 				1536909
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -18919,7 +19603,7 @@
 				1536899,
 				1536900
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -18995,7 +19679,7 @@
 			"docs": [
 				1536840
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19072,7 +19756,7 @@
 			"docs": [
 				1536839
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -19145,7 +19829,7 @@
 				1536837,
 				1536838
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -19225,7 +19909,7 @@
 			"docs": [
 				1536835
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-03",
@@ -19305,7 +19989,7 @@
 				1536572,
 				1536573
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19378,7 +20062,7 @@
 				1536558,
 				1536559
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-05-01",
@@ -19582,7 +20266,7 @@
 				1536496,
 				1536497
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19662,7 +20346,7 @@
 				1536485,
 				1536486
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19753,7 +20437,7 @@
 				1536477,
 				1536478
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19859,7 +20543,7 @@
 			"docs": [
 				1536397
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20008,7 +20692,7 @@
 				1536204,
 				1536205
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20085,7 +20769,7 @@
 				1536149,
 				1538756
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20162,7 +20846,7 @@
 				1536113,
 				1536114
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20238,7 +20922,7 @@
 				1536093,
 				1536095
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20309,7 +20993,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -20394,7 +21078,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20477,7 +21161,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20553,7 +21237,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20624,7 +21308,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20701,7 +21385,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20777,7 +21461,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -20862,7 +21546,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20936,21 +21620,21 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-09",
+			"comprobada": "2026-11-10",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-10T13:44:11.017Z",
+			"fecha": "2026-11-10T20:57:28.680Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 52,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-10T13:49:03.620Z",
-			"pendientes": 2,
-			"leidas": 1,
+			"fecha": "2026-11-10T21:14:31.607Z",
+			"pendientes": 5,
+			"leidas": 7,
 			"fallidas": 0,
 			"ultimaLectura": "2026-11-10"
 		}
