@@ -135,6 +135,11 @@ Hacen falta una cuenta de AWS con credenciales en la terminal, la AWS CLI, `terr
 (`aws eks describe-cluster-versions`) y mira el coste en la calculadora de AWS: casi todo es el
 clúster EKS, los dos nodos y RDS, y se cobra por hora.
 
+Con `aws login`, las credenciales duran unos 15 minutos y Terraform no las renueva solo: si caducan
+a mitad de `apply`, lo creado queda marcado como «tainted». Se le quita la marca
+(`terraform untaint …`, para no borrar y recrear el clúster) y se vuelve a lanzar con credenciales
+nuevas: `eval "$(aws configure export-credentials --format env)"`.
+
 ```sh
 cd despliegue/terraform
 terraform init && terraform apply

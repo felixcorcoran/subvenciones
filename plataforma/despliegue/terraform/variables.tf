@@ -17,9 +17,9 @@ variable "version_kubernetes" {
 }
 
 variable "tipo_nodo" {
-  description = "Tipo de instancia de los nodos. Los seis servicios, Kafka, Keycloak y Grafana piden unos 6 GB de memoria"
+  description = "Tipo de instancia de los nodos. Los seis servicios, Kafka, Keycloak y Grafana piden unos 6 GB de memoria. Con el plan gratuito de AWS solo se pueden lanzar tipos aptos para la capa gratuita (aws ec2 describe-instance-types --filters Name=free-tier-eligible,Values=true): de ellos, m7i-flex.large es el único con 8 GiB"
   type        = string
-  default     = "t3.large"
+  default     = "m7i-flex.large"
 }
 
 variable "numero_nodos" {

@@ -15,7 +15,10 @@ tiene que poder borrarse con un solo `terraform destroy`.
 - **Terraform** (`despliegue/terraform`) crea la red, el clúster, la base de datos y los registros
   de imágenes. Recursos de AWS escritos directamente, sin módulos de terceros: se lee entero y cada
   pieza está a la vista. Estado en local: es la demo de una persona.
-- **EKS** con un grupo de nodos gestionado (2 × `t3.large`). `upgrade_policy` en `STANDARD`: el
+- **EKS** con un grupo de nodos gestionado (2 × `m7i-flex.large`, 8 GiB). Con el plan gratuito de
+  AWS solo se pueden lanzar instancias aptas para la capa gratuita, y de ellas es la única con
+  memoria suficiente; `t3.large` se queda sin nodos (EKS no da error: el grupo se queda en
+  «creando» y el motivo solo aparece en CloudTrail). `upgrade_policy` en `STANDARD`: el
   clúster nunca pasa solo al soporte ampliado, que se cobra aparte.
 - **RDS PostgreSQL 17** (`db.t4g.micro`) con una base por servicio, como en local. pgvector viene
   incluido. Sin IP pública: solo se entra desde el grupo de seguridad del clúster. Sin copias ni
