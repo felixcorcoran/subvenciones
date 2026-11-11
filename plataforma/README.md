@@ -22,7 +22,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak; cada servicio, resource server con Spring Security; pasarela con CORS y límite por IP | hecha |
-| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana; Kubernetes en local (kind + Helm); AWS con Terraform (EKS, RDS, ECR) escrito y validado. Falta: aplicarlo y grabar la demo | **en marcha** |
+| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana, panel propio y alertas por correo; Kubernetes en local (kind + Helm); AWS con Terraform (EKS, RDS, ECR) escrito y validado. Falta: aplicarlo y grabar la demo | **en marcha** |
 
 ## Cómo encaja todo
 
@@ -73,6 +73,27 @@ porque el contexto se guarda con el evento y el relevo la continúa al publicar
 ```sh
 node herramientas/prueba-trazas.mjs infra/keycloak/realm-subvenciones.json   # con docker compose arriba
 ```
+
+**Panel y alertas** ([`infra/grafana`](infra/grafana), cargados al arrancar Grafana): el panel
+*Subvenciones › Plataforma* enseña peticiones, latencia p95 y errores por servicio, el retraso de
+los consumidores de Kafka, la outbox, las colas de errores y la memoria y CPU de cada JVM. Dos
+métricas son propias (módulo `observabilidad`):
+
+- `subvenciones.kafka.cola.errores`: mensajes que acaban en una cola de errores, por tópico. Se
+  engancha solo a cualquier `DefaultErrorHandler` del servicio.
+- `subvenciones.outbox.pendientes` y `subvenciones.outbox.antiguedad`: eventos sin publicar y
+  segundos que lleva esperando el más antiguo.
+
+| Alerta | Salta cuando |
+| --- | --- |
+| Mensajes en una cola de errores | algún mensaje va a una DLT |
+| La outbox no publica | un evento lleva más de 5 minutos sin salir a Kafka |
+| Errores 5xx | un servicio da más de 5 en 10 minutos |
+| Un servicio ha dejado de mandar métricas | mandaba en la última hora y lleva 3 minutos callado |
+
+Avisan por correo; en local llegan a Mailpit (http://localhost:8025). Probado así: un mensaje roto
+en `convocatorias.leidas` fue a las colas de errores de encaje, avisos y preguntas, y llegaron los
+tres correos; al parar `servicio-encaje`, llegó el de «ha dejado de mandar métricas».
 
 ## Kubernetes
 

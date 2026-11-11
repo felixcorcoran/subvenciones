@@ -81,6 +81,12 @@ public class ServicioRecogidaApplication {
 		return new RelevoOutbox(jdbc, kafka, transaccion, traza);
 	}
 
+	/** Eventos pendientes de la outbox y antigüedad del más viejo, para el panel y las alertas */
+	@Bean
+	es.felixcorcoran.subvenciones.observabilidad.MetricasDeOutbox metricasDeOutbox(JdbcClient jdbc, Clock reloj) {
+		return new es.felixcorcoran.subvenciones.observabilidad.MetricasDeOutbox(jdbc, reloj);
+	}
+
 	/** La traza a través de la outbox; sin trazas configuradas, no hace nada */
 	@Bean
 	Traza traza(org.springframework.beans.factory.ObjectProvider<io.micrometer.tracing.Tracer> tracer,

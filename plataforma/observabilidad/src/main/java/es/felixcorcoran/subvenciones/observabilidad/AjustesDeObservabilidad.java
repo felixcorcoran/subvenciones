@@ -36,6 +36,8 @@ public class AjustesDeObservabilidad implements EnvironmentPostProcessor, Ordere
 		ajustes.put("management.tracing.sampling.probability", "1.0");
 		ajustes.put("spring.kafka.template.observation-enabled", "true");
 		ajustes.put("spring.kafka.listener.observation-enabled", "true");
+		// Los cubos del histograma de las peticiones HTTP, para la latencia p95 del panel
+		ajustes.put("management.metrics.distribution.percentiles-histogram.http.server.requests", "true");
 		// Los logs no se exportan por OTLP: llevan el id de traza y se leen con el resto del contenedor
 		ajustes.put("management.logging.export.otlp.enabled", "false");
 

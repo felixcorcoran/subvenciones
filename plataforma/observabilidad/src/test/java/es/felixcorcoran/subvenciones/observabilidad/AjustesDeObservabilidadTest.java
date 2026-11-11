@@ -25,6 +25,7 @@ class AjustesDeObservabilidadTest {
 		assertThat(e.getProperty("management.otlp.metrics.export.enabled")).isEqualTo("false");
 		assertThat(e.getProperty("spring.kafka.listener.observation-enabled")).isEqualTo("true");
 		assertThat(e.getProperty("management.tracing.sampling.probability")).isEqualTo("1.0");
+		assertThat(e.getProperty("management.metrics.distribution.percentiles-histogram.http.server.requests")).isEqualTo("true");
 	}
 
 	@Test

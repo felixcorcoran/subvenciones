@@ -34,4 +34,7 @@ tarde y en otro hilo (la outbox, [0004](0004-outbox.md)).
   `herramientas/prueba-trazas.mjs`.
 - La lectura con IA se hace más tarde, en una pasada propia: esa pasada es otra traza. Unirla a la
   de la recogida exigiría guardar el contexto con cada convocatoria pendiente; no se ha hecho.
-- Falta un panel de Grafana propio y alertas (por ejemplo, si llega algo a una cola de errores).
+- Panel y alertas (añadidos después): un panel propio y cuatro alertas por correo, cargados al
+  arrancar Grafana desde `infra/grafana`. Para las colas de errores y la outbox hacían falta métricas
+  propias. Un contador que aparece por primera vez no tiene muestra anterior y `increase()` no lo
+  ve, así que la alerta de las colas de errores lo compara con su valor de hace 15 minutos.

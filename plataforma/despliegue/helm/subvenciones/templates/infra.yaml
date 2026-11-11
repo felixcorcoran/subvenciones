@@ -12,6 +12,19 @@ data:
 {{ .Files.Get "ficheros/crear-bases.sql" | indent 4 }}
   realm-subvenciones.json: |
 {{ .Files.Get "ficheros/realm-subvenciones.json" | indent 4 }}
+---
+# El panel y las alertas de Grafana (copias de infra/grafana)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana
+data:
+  paneles.yaml: |
+{{ .Files.Get "ficheros/grafana/paneles.yaml" | indent 4 }}
+  alertas.yaml: |
+{{ .Files.Get "ficheros/grafana/alertas.yaml" | indent 4 }}
+  panel-plataforma.json: |
+{{ .Files.Get "ficheros/grafana/panel-plataforma.json" | indent 4 }}
 {{- if .Values.infra.postgres }}
 ---
 apiVersion: apps/v1
@@ -155,6 +168,19 @@ spec:
         - name: lgtm
           image: grafana/otel-lgtm:0.11.10
           ports: [{ containerPort: 3000 }, { containerPort: 4318 }]
+          # Las alertas llegan por correo a Mailpit
+          env:
+            - { name: GF_SMTP_ENABLED, value: "true" }
+            - { name: GF_SMTP_HOST, value: "mailpit:1025" }
+            - { name: GF_SMTP_FROM_ADDRESS, value: "grafana@subvenciones.local" }
+            - { name: GF_SMTP_STARTTLS_POLICY, value: "NoStartTLS" }
+          volumeMounts:
+            - { name: grafana, mountPath: /otel-lgtm/grafana/conf/provisioning/dashboards/subvenciones.yaml, subPath: paneles.yaml }
+            - { name: grafana, mountPath: /otel-lgtm/grafana/conf/provisioning/alerting/subvenciones.yaml, subPath: alertas.yaml }
+            - { name: grafana, mountPath: /otel-lgtm/subvenciones/panel-plataforma.json, subPath: panel-plataforma.json }
+      volumes:
+        - name: grafana
+          configMap: { name: grafana }
 ---
 apiVersion: v1
 kind: Service
