@@ -12,6 +12,7 @@ data:
 {{ .Files.Get "ficheros/crear-bases.sql" | indent 4 }}
   realm-subvenciones.json: |
 {{ .Files.Get "ficheros/realm-subvenciones.json" | indent 4 }}
+{{- if .Values.infra.postgres }}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -54,6 +55,7 @@ metadata:
 spec:
   selector: { app.kubernetes.io/name: postgres }
   ports: [{ port: 5432 }]
+{{- end }}
 ---
 apiVersion: apps/v1
 kind: Deployment

@@ -24,6 +24,11 @@ comun:
     servidor: postgres:5432
     usuario: subvenciones
 
+# Contenedor previo que espera a PostgreSQL y crea la base del servicio si falta (pg_isready y
+# psql). Es la misma imagen que la base de datos local, así que en kind ya está descargada
+esperaBaseDeDatos:
+  imagen: pgvector/pgvector:pg17
+
 # Secretos. Los de aquí son solo para local; en un clúster de verdad se dan al instalar
 # (--set secretos.baseDeDatos=…) o se usa un Secret ya existente
 secretos:
@@ -80,3 +85,5 @@ servicios:
 # PostgreSQL (con pgvector), Kafka, Keycloak, Grafana y Mailpit dentro del clúster: solo para local
 infra:
   activada: true
+  # PostgreSQL dentro del clúster. En AWS es false: la base de datos es RDS (ver despliegue/terraform)
+  postgres: true
