@@ -47,6 +47,21 @@ jobs:
           diff infra/keycloak/realm-subvenciones.json despliegue/helm/subvenciones/ficheros/realm-subvenciones.json
       - run: helm lint despliegue/helm/subvenciones
       - run: helm template prueba despliegue/helm/subvenciones > /dev/null
+      # Los valores de AWS: sin PostgreSQL en el clúster (RDS)
+      - run: helm template prueba despliegue/helm/subvenciones --set infra.postgres=false > /dev/null
+
+  # La infraestructura de AWS se comprueba sin credenciales ni estado: formato y validez, no se aplica
+  terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plataforma/despliegue/terraform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform fmt -check -recursive
+      - run: terraform init -backend=false -input=false
+      - run: terraform validate
 
   imagenes:
     runs-on: ubuntu-latest

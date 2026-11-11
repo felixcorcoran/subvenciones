@@ -22,7 +22,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak; cada servicio, resource server con Spring Security; pasarela con CORS y límite por IP | hecha |
-| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana; Kubernetes en local (kind + Helm). Falta: AWS con Terraform | **en marcha** |
+| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana; Kubernetes en local (kind + Helm); AWS con Terraform (EKS, RDS, ECR) escrito y validado. Falta: aplicarlo y grabar la demo | **en marcha** |
 
 ## Cómo encaja todo
 
@@ -40,7 +40,7 @@ Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo p
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: AWS.
+Lo siguiente: levantar la demo en AWS, grabarla y apagarla.
 
 ## Seguridad y pasarela
 
@@ -94,8 +94,49 @@ kubectl port-forward svc/pasarela 8000:8000 & kubectl port-forward svc/keycloak 
 ```
 
 La imagen del nodo se fija en Kubernetes 1.33 porque las versiones nuevas no arrancan con cgroup v1
-(el de Docker Desktop sobre WSL 2 sin actualizar). Probado así: los 11 pods listos y las 8
-comprobaciones de `herramientas/prueba-seguridad.mjs` bien, por la pasarela y con tokens de Keycloak.
+(el de Docker Desktop sobre WSL 2 sin actualizar). Probado así: los 11 pods listos sin ningún
+reinicio y las 8 comprobaciones de `herramientas/prueba-seguridad.mjs` bien, por la pasarela y con
+tokens de Keycloak (con `port-forward` también a los puertos 8080 a 8084, que el script comprueba).
+
+Antes de arrancar, cada servicio espera a PostgreSQL y crea su base si falta (un contenedor previo
+con `pg_isready` y `psql`). En local las bases ya existen; en AWS las crea ese paso.
+
+## AWS
+
+[`despliegue/terraform`](despliegue/terraform) crea la red, un clúster EKS, PostgreSQL en RDS y un
+repositorio de ECR por servicio; el resto (Kafka, Keycloak, Grafana, Mailpit) va con el mismo chart
+dentro del clúster ([decisión 0009](docs/decisiones/0009-aws-con-terraform.md)). Es para levantar la
+demo, grabarla y **apagarla**: sin NAT ni balanceador, sin copias de la base de datos, y todo se
+borra con `terraform destroy`. En CI solo se comprueba (`terraform fmt` y `validate`).
+
+Hacen falta una cuenta de AWS con credenciales en la terminal, la AWS CLI, `terraform`, `kubectl` y
+`helm`. Antes, comprueba que la versión de `version_kubernetes` está en soporte estándar
+(`aws eks describe-cluster-versions`) y mira el coste en la calculadora de AWS: casi todo es el
+clúster EKS, los dos nodos y RDS, y se cobra por hora.
+
+```sh
+cd despliegue/terraform
+terraform init && terraform apply
+aws eks update-kubeconfig --name "$(terraform output -raw cluster)"
+REGISTRO=$(terraform output -raw registro)
+terraform output -raw valores_helm > aws.values.yaml
+cd ../..
+
+aws ecr get-login-password | docker login --username AWS --password-stdin "$REGISTRO"
+for s in servicio-encaje servicio-recogida servicio-lectura servicio-avisos servicio-preguntas pasarela; do
+  docker tag plataforma-$s "$REGISTRO/subvenciones/$s:demo" && docker push "$REGISTRO/subvenciones/$s:demo"
+done
+helm install subvenciones despliegue/helm/subvenciones -f despliegue/terraform/aws.values.yaml \
+  --set secretos.baseDeDatos="$(terraform -chdir=despliegue/terraform output -raw contrasena_base_de_datos)" \
+  --wait --timeout 15m
+kubectl port-forward svc/pasarela 8000:8000 & kubectl port-forward svc/keycloak 8180:8080 &
+
+# Al acabar, siempre:
+helm uninstall subvenciones
+terraform -chdir=despliegue/terraform destroy
+```
+
+Escrito y validado, **aún no aplicado** contra una cuenta de AWS.
 
 ## servicio-recogida
 
@@ -301,3 +342,4 @@ Sin Docker, las pruebas con Testcontainers se saltan en local; en CI, si alguna 
 - [0006 Respuestas sobre las bases: solo con citas literales comprobadas](docs/decisiones/0006-respuestas-con-citas.md)
 - [0007 Seguridad: OAuth2 con Keycloak, validada en cada servicio](docs/decisiones/0007-seguridad-oauth2.md)
 - [0008 Observabilidad con OpenTelemetry, y trazas que cruzan la outbox](docs/decisiones/0008-observabilidad.md)
+- [0009 AWS con Terraform: EKS y RDS, el resto con el mismo chart](docs/decisiones/0009-aws-con-terraform.md)
