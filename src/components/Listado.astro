@@ -1,0 +1,167 @@
+---
+/**
+ * Una página de ayudas abiertas generada al construir: por comunidad
+ * (src/pages/comunidades/) o por sector (src/pages/sectores/). Son las
+ * búsquedas que hace la gente («ayudas autónomos Andalucía») y llevan al
+ * asistente para saber cuáles puede pedir cada negocio.
+ */
+import Base from '../layouts/Base.astro';
+import Tarjeta from './Tarjeta.astro';
+import type { ConvocatoriaWeb } from '../lib/tipos';
+import { COMUNIDADES, SECTORES } from '../lib/lista';
+import '../styles/tarjetas.css';
+
+interface Props {
+	title: string;
+	description: string;
+	eyebrow: string;
+	h1: string;
+	lead: string;
+	grupos: { titulo: string; texto: string; lista: ConvocatoriaWeb[] }[];
+	hoy: string;
+	/** Sin ayudas propias, la página no aporta nada a un buscador */
+	noindex?: boolean;
+	/** La propia página, para no enlazarla en «Más ayudas» */
+	actual: string;
+}
+
+const { title, description, eyebrow, h1, lead, grupos, hoy, noindex = false, actual } = Astro.props;
+---
+
+<Base title={title} description={description} noindex={noindex}>
+	<main class="listado">
+		<a class="volver" href="/">← Todas las ayudas</a>
+		<p class="eyebrow">{eyebrow}</p>
+		<h1>{h1}</h1>
+		<p class="lead">{lead}</p>
+		<p class="cta"><a class="boton" href="/?empezar">¿Cuáles puede pedir tu negocio?</a></p>
+
+		{
+			grupos
+				.filter((g) => g.lista.length > 0)
+				.map((g) => (
+					<section class="grupo">
+						<h2 class="grupo-titulo">
+							{g.titulo} ({g.lista.length})
+						</h2>
+						<p class="grupo-texto">{g.texto}</p>
+						<ol class="lista">
+							{g.lista.map((c) => (
+								<Tarjeta c={c} hoy={hoy} />
+							))}
+						</ol>
+					</section>
+				))
+		}
+		{grupos.every((g) => g.lista.length === 0) && <p class="grupo-texto vacio">Ahora mismo no hay ninguna abierta. El radar mira las nuevas cada mañana.</p>}
+
+		<nav class="explorar" aria-label="Más ayudas">
+			<p class="eyebrow">Ayudas por comunidad</p>
+			<ul>{COMUNIDADES.filter((c) => `/comunidades/${c.slug}` !== actual).map((c) => <li><a href={`/comunidades/${c.slug}`}>{c.nombre}</a></li>)}</ul>
+			<p class="eyebrow">Ayudas por sector</p>
+			<ul>{SECTORES.filter((s) => `/sectores/${s.slug}` !== actual).map((s) => <li><a href={`/sectores/${s.slug}`}>{s.nombre}</a></li>)}</ul>
+		</nav>
+
+		<p class="nota">
+			Resúmenes hechos con IA a partir de las bases de cada convocatoria, con datos del Sistema Nacional de Publicidad de Subvenciones (BDNS). Es
+			una orientación: antes de pedir una ayuda, lee su convocatoria oficial.
+		</p>
+	</main>
+</Base>
+
+<style>
+	.listado {
+		box-sizing: border-box;
+		width: var(--frame);
+		margin-inline: auto;
+		padding: calc(var(--nav-top) + var(--nav-height) + clamp(2rem, 6vw, 4rem)) 0 clamp(3rem, 8vw, 6rem);
+		flex: 1;
+	}
+
+	.listado > * {
+		max-width: 52rem;
+	}
+
+	.volver {
+		display: inline-block;
+		margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		text-decoration: none;
+	}
+
+	.volver:hover {
+		color: var(--text);
+	}
+
+	h1 {
+		margin: 0.75rem 0 1rem;
+		font-size: clamp(1.9rem, 4.5vw, 3rem);
+		font-weight: 400;
+		line-height: 1.08;
+		letter-spacing: -0.035em;
+	}
+
+	.lead {
+		margin: 0;
+		font-size: clamp(1rem, 1.6vw, 1.125rem);
+		font-weight: 300;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+	.cta {
+		margin: 1.75rem 0 0;
+	}
+
+	.boton {
+		display: inline-flex;
+		align-items: center;
+		min-height: 3rem;
+		padding: 0 1.4rem;
+		border-radius: 999px;
+		background: var(--text);
+		color: var(--bg);
+		font-size: 0.9375rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.vacio {
+		margin-top: 2.5rem;
+	}
+
+	.explorar {
+		margin-top: clamp(2.5rem, 6vw, 4rem);
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--rule);
+	}
+
+	.explorar ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.1rem;
+		margin: 0.6rem 0 1.5rem;
+		padding: 0;
+		list-style: none;
+		font-size: 0.875rem;
+	}
+
+	.explorar a {
+		color: var(--text-muted);
+		text-decoration-color: rgb(var(--ink) / 0.2);
+		text-underline-offset: 0.2em;
+	}
+
+	.explorar a:hover {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+	}
+
+	.nota {
+		margin: 1rem 0 0;
+		font-size: 0.8125rem;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+</style>

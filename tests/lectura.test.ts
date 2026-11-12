@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa } from '../scripts/lectura';
+import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa, titularValido } from '../scripts/lectura';
 import { cierre } from '../src/lib/encaje';
 import type { Analisis, Convocatoria } from '../src/lib/tipos';
 import { analisis, convocatoria, HOY } from './ayudas';
@@ -119,5 +119,22 @@ describe('respuesta de la IA', () => {
 		expect(analisisValido(analisis({}, { autonomos: 'quizá' as never }))).toBe(false);
 		expect(analisisValido({ ...analisis(), condiciones: undefined })).toBe(false);
 		expect(analisisValido(null)).toBe(false);
+	});
+});
+
+describe('titular corto', () => {
+	it('se queda si es breve; sin punto final', () => {
+		expect(titularValido('  Ayudas al alquiler de locales en Cabra. ')).toBe('Ayudas al alquiler de locales en Cabra');
+	});
+
+	it('vacío o demasiado largo: no se usa (la web enseña el resumen)', () => {
+		expect(titularValido('   ')).toBeUndefined();
+		expect(titularValido(undefined)).toBeUndefined();
+		expect(titularValido('x'.repeat(91))).toBeUndefined();
+	});
+
+	it('un análisis sin titular sigue siendo válido; uno con titular que no es texto, no', () => {
+		expect(analisisValido(analisis())).toBe(true);
+		expect(analisisValido({ ...analisis(), titular: 3 })).toBe(false);
 	});
 });

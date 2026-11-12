@@ -1,0 +1,35 @@
+---
+/** Las ayudas abiertas de cada comunidad, y las de toda España */
+import type { GetStaticPaths } from 'astro';
+import Listado from '../../components/Listado.astro';
+import datos from '../../../datos/convocatorias.json';
+import type { Datos } from '../../lib/tipos';
+import { enLista, estado } from '../../lib/estado';
+import { hoyMadrid } from '../../lib/fechas';
+import { COMUNIDADES, deComunidad, esEstatal, porCierre } from '../../lib/lista';
+import { aWeb } from '../../lib/web';
+
+export const getStaticPaths = (() => COMUNIDADES.map((k) => ({ params: { slug: k.slug }, props: { k } }))) satisfies GetStaticPaths;
+
+const { k } = Astro.props;
+const hoy = hoyMadrid();
+const abiertas = (datos as Datos).convocatorias.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && enLista(estado(c, hoy))).map(aWeb);
+const propias = abiertas.filter((c) => deComunidad(c, k.codigo)).sort(porCierre);
+const estatales = abiertas.filter((c) => esEstatal(c) && !deComunidad(c, k.codigo)).sort(porCierre);
+const lead = `${propias.length === 1 ? 'Una convocatoria abierta' : `${propias.length} convocatorias abiertas`} para negocios de ${k.nombre} (de su gobierno, diputaciones y ayuntamientos)${estatales.length ? ` y ${estatales.length} para toda España` : ''}. Se actualiza cada mañana con las nuevas.`;
+---
+
+<Listado
+	title={`Ayudas y subvenciones para negocios en ${k.nombre} · Radar de subvenciones`}
+	description={`Ayudas abiertas para autónomos y empresas de ${k.nombre}, explicadas en claro: para quién, cuánto y hasta cuándo. Se actualiza cada mañana.`}
+	eyebrow="Ayudas por comunidad"
+	h1={`Ayudas para negocios en ${k.nombre}`}
+	lead={lead}
+	grupos={[
+		{ titulo: `De ${k.nombre}`, texto: 'Las que cierran antes, primero.', lista: propias },
+		{ titulo: 'Para toda España', texto: 'También valen para negocios de aquí, si cumplen sus requisitos.', lista: estatales },
+	]}
+	hoy={hoy}
+	noindex={propias.length === 0}
+	actual={`/comunidades/${k.slug}`}
+/>

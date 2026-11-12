@@ -54,4 +54,12 @@ describe('vigilancia de la recogida', () => {
 	it('datos de antes de la vigilancia (sin salud): solo se mira la fecha de la recogida', () => {
 		expect(diagnostico({ actualizado: '2026-10-25T05:40:00Z', convocatorias: [] }, AHORA)).toEqual([]);
 	});
+
+	it('avisa si se acumulan las lecturas fallidas de la IA', () => {
+		const lectura = { fecha: '2026-10-25T05:50:00Z', pendientes: 2, leidas: 5, fallidas: 1, ultimaLectura: '2026-10-25' };
+		expect(diagnostico(datos(undefined, { lectura: { ...lectura, conError: 7 } }), AHORA)).toEqual([]);
+		const p = diagnostico(datos(undefined, { lectura: { ...lectura, conError: 20 } }), AHORA);
+		expect(p.map((x) => x.tipo)).toEqual(['ia']);
+		expect(p[0].texto).toContain('20 convocatorias');
+	});
 });

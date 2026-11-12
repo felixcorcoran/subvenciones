@@ -43,3 +43,12 @@ export function plazoPrevio(c: Convocatoria): boolean {
 	if (!fecha || !/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !c.inicio) return false;
 	return fecha < c.inicio && fecha >= c.publicada && mencionaFecha(c.ia!.plazo ?? '', fecha);
 }
+
+/**
+ * El día de hoy (AAAA-MM-DD) en hora de Madrid. Con la fecha UTC, entre las
+ * 00:00 y la 01:00 o las 02:00 de España el plazo se calculaba con el día anterior.
+ */
+export function hoyMadrid(ahora = new Date()): string {
+	// sv-SE da AAAA-MM-DD
+	return ahora.toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' });
+}

@@ -1,0 +1,210 @@
+/* Las tarjetas de las ayudas: las pinta el navegador en la portada
+   (index.astro) y el servidor en las listas por comunidad y sector y en
+   «Otras ayudas» de cada ficha (Tarjeta.astro). */
+
+.grupo {
+	margin-top: 2.5rem;
+}
+
+.grupo-titulo,
+details.grupo > summary {
+	margin: 0;
+	font-size: 1.125rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+details.grupo > summary {
+	cursor: pointer;
+}
+
+.grupo-texto {
+	margin: 0.375rem 0 0;
+	font-size: 0.9375rem;
+	color: var(--text-muted);
+}
+
+.lista {
+	display: grid;
+	gap: 1rem;
+	margin: 1.25rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ayuda {
+	position: relative;
+	padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(1.125rem, 2.5vw, 1.75rem);
+	border-radius: 1.25rem;
+	background: rgb(var(--surface-rgb) / 0.75);
+	border: 1px solid var(--rule);
+}
+
+.ayuda::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 1.25rem;
+	bottom: 1.25rem;
+	width: 3px;
+	border-radius: 0 3px 3px 0;
+	background: var(--estado, transparent);
+}
+
+.ayuda--si {
+	--estado: #3f8f5f;
+}
+.ayuda--revisa {
+	--estado: #d49a2a;
+}
+.ayuda--no {
+	--estado: rgb(var(--ink) / 0.25);
+}
+
+.ayuda-organo {
+	margin: 0;
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+
+.ayuda h3 {
+	margin: 0.5rem 0 0;
+	font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: -0.015em;
+}
+
+.ayuda h3 a {
+	color: inherit;
+	text-decoration: none;
+	background-image: linear-gradient(var(--accent), var(--accent));
+	background-size: 0 1px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.35s var(--ease-out);
+}
+
+.ayuda h3 a:hover {
+	background-size: 100% 1px;
+}
+
+.ayuda-datos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0.875rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ayuda-datos li {
+	padding: 0.3rem 0.75rem;
+	border-radius: 999px;
+	background: rgb(var(--ink) / 0.05);
+	font-size: 0.8125rem;
+	line-height: 1.4;
+}
+
+.ayuda-datos li.pronto {
+	background: var(--accent-soft);
+}
+
+.ayuda-datos li.sin-comprobar {
+	background: none;
+	box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.18);
+	color: var(--text-muted);
+}
+
+.motivos {
+	display: grid;
+	gap: 0.3rem;
+	margin: 1rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.motivo {
+	position: relative;
+	padding-left: 1.5rem;
+	font-size: 0.875rem;
+	line-height: 1.45;
+}
+
+.motivo::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1rem;
+	text-align: center;
+	font-weight: 600;
+}
+
+.motivo--bien::before {
+	content: '✓';
+	color: #3f8f5f;
+}
+.motivo--revisa::before {
+	content: '?';
+	color: #b07d16;
+}
+.motivo--no::before {
+	content: '✕';
+	color: var(--accent-text);
+}
+
+.ayuda-mas {
+	margin-top: 1rem;
+	padding-top: 0.875rem;
+	border-top: 1px solid var(--rule);
+	font-size: 0.9375rem;
+	line-height: 1.55;
+}
+
+.ayuda-mas summary {
+	cursor: pointer;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.ayuda-mas h4 {
+	margin: 1.125rem 0 0.25rem;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+
+.ayuda-mas p,
+.ayuda-mas ul {
+	margin: 0.25rem 0 0;
+}
+
+.ayuda-mas ul {
+	padding-left: 1.25rem;
+}
+
+.ayuda-mas .oficial {
+	margin-top: 1.125rem;
+	font-size: 0.8125rem;
+	color: var(--text-muted);
+}
+
+.enlaces {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.25rem;
+	margin-top: 0.75rem !important;
+}
+
+.enlaces a {
+	color: var(--text);
+	text-decoration: underline;
+	text-decoration-color: var(--accent);
+	text-underline-offset: 0.25em;
+	font-size: 0.875rem;
+}

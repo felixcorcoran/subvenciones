@@ -1,0 +1,96 @@
+---
+/**
+ * Página no encontrada. Lo normal es llegar por el enlace a una ayuda que ya
+ * no está (las cerradas se quedan unos meses en datos/cerradas.json; después
+ * desaparecen): se dice y se lleva a las abiertas, con el enlace oficial si
+ * la dirección era de una ficha.
+ */
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="No encontrada · Radar de subvenciones" description="Esta página no existe o la ayuda ya no está en el radar." noindex>
+	<main class="no-encontrada">
+		<p class="eyebrow">Radar de subvenciones</p>
+		<h1 data-titulo>Esta página no existe</h1>
+		<p class="texto" data-texto>Puede que la dirección esté mal escrita.</p>
+		<div class="acciones">
+			<a class="boton" href="/?empezar">Ver las ayudas para tu negocio</a>
+			<a class="boton boton--claro" href="/">Ir a la portada</a>
+			<a class="boton boton--claro" data-oficial hidden target="_blank" rel="noopener">Buscarla en la BDNS ↗</a>
+		</div>
+	</main>
+</Base>
+
+<script>
+	// /ayudas/<código>: una ayuda que ya no está; se ofrece su ficha oficial
+	const m = location.pathname.match(/^\/ayudas\/(\d{3,8})\/?$/);
+	if (m) {
+		document.querySelector('[data-titulo]')!.textContent = 'Esta ayuda ya no está en el radar';
+		document.querySelector('[data-texto]')!.textContent =
+			'Lo más probable es que su plazo haya terminado. Mira las que siguen abiertas o consulta la convocatoria oficial.';
+		const oficial = document.querySelector<HTMLAnchorElement>('[data-oficial]')!;
+		oficial.href = `https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/${m[1]}`;
+		oficial.textContent = `Convocatoria ${m[1]} en la BDNS ↗`;
+		oficial.hidden = false;
+	}
+</script>
+
+<style>
+	.no-encontrada {
+		box-sizing: border-box;
+		width: var(--frame);
+		margin-inline: auto;
+		padding: calc(var(--nav-top) + var(--nav-height) + clamp(2rem, 8vw, 5rem)) 0 clamp(3rem, 8vw, 6rem);
+		flex: 1;
+	}
+
+	.no-encontrada > * {
+		max-width: 46rem;
+	}
+
+	h1 {
+		margin: 0.75rem 0 1rem;
+		font-size: clamp(1.9rem, 4.5vw, 3rem);
+		font-weight: 400;
+		line-height: 1.08;
+		letter-spacing: -0.035em;
+	}
+
+	.texto {
+		margin: 0;
+		font-size: 1.0625rem;
+		font-weight: 300;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+	.acciones {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 2rem;
+	}
+
+	.boton {
+		display: inline-flex;
+		align-items: center;
+		min-height: 3rem;
+		padding: 0 1.4rem;
+		border-radius: 999px;
+		background: var(--text);
+		color: var(--bg);
+		font-size: 0.9375rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.boton[hidden] {
+		display: none;
+	}
+
+	.boton--claro {
+		background: none;
+		color: var(--text);
+		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.25);
+	}
+</style>

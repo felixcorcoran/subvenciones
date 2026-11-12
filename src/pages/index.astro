@@ -1,14 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import '../styles/tarjetas.css';
 import Asistente from '../components/Asistente.astro';
 import datos from '../../datos/convocatorias.json';
 import type { Datos } from '../lib/tipos';
 import { estado, type Estado } from '../lib/estado';
+import { hoyMadrid } from '../lib/fechas';
+import { COMUNIDADES, SECTORES } from '../lib/lista';
 
 const { actualizado, convocatorias } = datos as Datos;
 // La web se construye cada día con los datos: la fecha de construcción es «hoy».
 // Solo cuentan las ayudas (no premios ni otras); las sin leer aún, también
-const hoy = new Date().toISOString().slice(0, 10);
+const hoy = hoyMadrid();
 const cuenta = (e: Estado) => convocatorias.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && estado(c, hoy) === e).length;
 const conFecha = cuenta('abierta');
 const proximas = cuenta('proxima');
@@ -65,6 +68,17 @@ const description =
 					</div>
 					<h2 id="resultado-titulo"></h2>
 					<p id="resumen" class="resumen"></p>
+					<!-- Solo en «Todas las ayudas»: buscar y acotar en el navegador, sobre lo ya descargado -->
+					<div id="filtros" class="filtros" role="search" hidden>
+						<label class="sr-only" for="buscar">Buscar entre las ayudas</label>
+						<input id="buscar" type="search" placeholder="Buscar: comercio, alquiler, Cabra…" autocomplete="off" enterkeyhint="search" />
+						<label class="sr-only" for="filtro-comunidad">Comunidad</label>
+						<select id="filtro-comunidad">
+							<option value="">Toda España</option>
+							{COMUNIDADES.map((c) => <option value={c.codigo}>{c.nombre}</option>)}
+						</select>
+						<label class="pronto-filtro"><input type="checkbox" id="filtro-pronto" /> Cierran en 15 días o menos</label>
+					</div>
 					<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
 				</div>
 				<div id="grupos"></div>
@@ -88,6 +102,12 @@ const description =
 						<p id="avisos-estado" class="avisos-estado" role="status" aria-live="polite"></p>
 					</form>
 				</section>
+				<nav class="explorar" aria-labelledby="explorar-titulo">
+					<p id="explorar-titulo" class="eyebrow">Ayudas por comunidad</p>
+					<ul>{COMUNIDADES.map((c) => <li><a href={`/comunidades/${c.slug}`}>{c.nombre}</a></li>)}</ul>
+					<p class="eyebrow">Ayudas por sector</p>
+					<ul>{SECTORES.map((s) => <li><a href={`/sectores/${s.slug}`}>{s.nombre}</a></li>)}</ul>
+				</nav>
 				<p class="aviso-fuente">
 					Es una orientación: antes de pedir una ayuda, lee su convocatoria oficial, que es la que vale. Datos del{' '}
 					<a href="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias" target="_blank" rel="noopener">Sistema Nacional de Publicidad de Subvenciones</a>; resúmenes hechos con IA a partir de las bases.
@@ -99,7 +119,10 @@ const description =
 		<script>
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
 			import { enLista, estado as estadoDe, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../lib/estado';
+			import { hoyMadrid } from '../lib/fechas';
+			import { cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, textoMotivo, titularDe } from '../lib/lista';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
+			import type { Detalles } from '../lib/web';
 
 			const estado = document.querySelector<HTMLParagraphElement>('#estado')!;
 			const resultado = document.querySelector<HTMLElement>('#resultado')!;
@@ -124,14 +147,27 @@ const description =
 				return (cache = data.convocatorias);
 			}
 
+			// Requisitos y gastos de todas, en una sola petición; si falla, se vuelve a pedir la próxima vez
+			let pedidaDetalles: Promise<Detalles> | null = null;
+			const detalles = (): Promise<Detalles> =>
+				(pedidaDetalles ??= fetch('/detalles.json')
+					.then((r) => {
+						if (!r.ok) throw new Error(String(r.status));
+						return r.json() as Promise<Detalles>;
+					})
+					.catch((): Detalles => {
+						pedidaDetalles = null;
+						return {};
+					}));
+
 			const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
 
-			const hoy = () => new Date().toISOString().slice(0, 10);
+			// El día en hora de Madrid: con la fecha UTC, de madrugada se usaba el día anterior
+			const hoy = () => hoyMadrid();
 
 			function plazo(c: ConvocatoriaWeb): { texto: string; pronto: boolean } {
-				const fin = cierre(c);
-				const dias = fin ? Math.ceil((Date.parse(fin) - Date.now()) / 86_400_000) : Infinity;
-				return { texto: textoPlazo(c, hoy()), pronto: dias <= 7 };
+				const dias = diasHasta(c, hoy());
+				return { texto: textoPlazo(c, hoy()), pronto: dias !== null && dias <= 7 };
 			}
 
 			function tarjeta(c: ConvocatoriaWeb, e: Encaje | null) {
@@ -140,7 +176,7 @@ const description =
 				const organo = [c.organo.nivel3, municipioDe(c) ?? c.organo.nivel2].filter((v, i, a) => v && a.indexOf(v) === i).join(' · ');
 				// El título lleva a la ficha de la convocatoria (/ayudas/<código>)
 				const titulo = el('h3');
-				const ficha = el('a', '', c.ia?.resumen ?? c.titulo);
+				const ficha = el('a', '', titularDe(c));
 				ficha.href = `/ayudas/${c.codigo}`;
 				titulo.append(ficha);
 				cabeza.append(el('p', 'ayuda-organo', organo), titulo);
@@ -161,24 +197,43 @@ const description =
 
 				if (e) {
 					const motivos = el('ul', 'motivos');
-					for (const m of e.motivos) motivos.append(el('li', `motivo motivo--${m.tipo}`, m.texto));
+					const municipio = municipioDe(c);
+					for (const m of e.motivos) motivos.append(el('li', `motivo motivo--${m.tipo}`, textoMotivo(m, municipio)));
 					item.append(motivos);
 				}
 
 				const mas = el('details', 'ayuda-mas');
 				mas.append(el('summary', '', 'Requisitos y detalles'));
 				if (c.ia) {
+					// Con titular corto, el resumen completo va aquí
+					if (c.ia.titular) mas.append(el('h4', '', 'Qué financia'), el('p', '', c.ia.resumen));
 					mas.append(el('h4', '', 'Para quién'), el('p', '', c.ia.paraQuien));
-					if (c.ia.requisitos.length) {
-						const ul = el('ul');
-						for (const r of c.ia.requisitos) ul.append(el('li', '', r));
-						mas.append(el('h4', '', 'Requisitos'), ul);
-					}
-					if (c.ia.gastos.length) {
-						const ul = el('ul');
-						for (const g of c.ia.gastos) ul.append(el('li', '', g));
-						mas.append(el('h4', '', 'En qué se puede gastar'), ul);
-					}
+					// Requisitos y gastos llegan aparte (detalles.json) al abrir el primero
+					const hueco = el('div', 'ayuda-detalle');
+					mas.append(hueco);
+					mas.addEventListener(
+						'toggle',
+						async () => {
+							if (!mas.open || hueco.dataset.cargado) return;
+							hueco.dataset.cargado = '1';
+							const d = (await detalles())[c.codigo];
+							if (!d) {
+								// Sin conexión o sin datos: se dice y se reintenta al volver a abrir
+								delete hueco.dataset.cargado;
+								hueco.replaceChildren(el('p', '', 'No hemos podido cargar los requisitos: míralos en la ficha completa.'));
+								return;
+							}
+							hueco.replaceChildren();
+							const lista = (titulo: string, items: string[]) => {
+								if (!items.length) return;
+								const ul = el('ul');
+								for (const r of items) ul.append(el('li', '', r));
+								hueco.append(el('h4', '', titulo), ul);
+							};
+							lista('Requisitos', d.requisitos);
+							lista('En qué se puede gastar', d.gastos);
+						},
+					);
 					if (c.ia.importe) mas.append(el('h4', '', 'Importe'), el('p', '', c.ia.importe));
 					if (c.ia.plazo && !c.iaRevisar) mas.append(el('h4', '', 'Plazo'), el('p', '', c.ia.plazo));
 				} else {
@@ -200,7 +255,7 @@ const description =
 					enlaces.append(a);
 				};
 				propio(`/ayudas/${c.codigo}`, 'Ficha completa');
-				if (cierre(c)) propio(`/ayudas/${c.codigo}.ics`, 'Añadir el plazo al calendario', `plazo-${c.codigo}.ics`);
+				if (cierre(c) && (diasHasta(c, hoy()) ?? -1) >= 0) propio(`/ayudas/${c.codigo}.ics`, 'Añadir el plazo al calendario', `plazo-${c.codigo}.ics`);
 				enlace(c.enlace, 'Convocatoria oficial (BDNS)');
 				if (c.bases) enlace(c.bases, 'Bases');
 				if (c.sede) enlace(c.sede, 'Dónde se solicita');
@@ -211,53 +266,107 @@ const description =
 
 			let ultima: { perfil: Perfil | null } = { perfil: null };
 
+			const filtros = document.querySelector<HTMLElement>('#filtros')!;
+			const buscar = document.querySelector<HTMLInputElement>('#buscar')!;
+			const filtroComunidad = document.querySelector<HTMLSelectElement>('#filtro-comunidad')!;
+			const filtroPronto = document.querySelector<HTMLInputElement>('#filtro-pronto')!;
+			const titulo = document.querySelector<HTMLElement>('#resultado-titulo')!;
+			const resumen = document.querySelector<HTMLElement>('#resumen')!;
+			const avisosTitulo = document.querySelector<HTMLElement>('#avisos-titulo')!;
+
+			/** Con los filtros de «Todas las ayudas» */
+			function filtradas(lista: ConvocatoriaWeb[]): ConvocatoriaWeb[] {
+				const comunidad = filtroComunidad.value;
+				return lista.filter((c) => {
+					if (!coincide(c, buscar.value)) return false;
+					// Una comunidad: las suyas y las de toda España
+					if (comunidad && !deComunidad(c, comunidad) && !esEstatal(c)) return false;
+					if (filtroPronto.checked) {
+						const dias = diasHasta(c, hoy());
+						if (dias === null || dias > 15) return false;
+					}
+					return true;
+				});
+			}
+
 			function pintar() {
 				if (!cache) return;
 				const perfil = ultima.perfil;
 				// Fuera de la lista: las cerradas desde la última construcción y las «por verificar»
 				const visibles = cache.filter((c) => (verPremios.checked || !c.ia || c.ia.categoria === 'ayuda') && enLista(estadoDe(c, hoy())));
-				const orden = (a: ConvocatoriaWeb, b: ConvocatoriaWeb) => (cierre(a) ?? '9999').localeCompare(cierre(b) ?? '9999');
 				grupos.replaceChildren();
+				filtros.hidden = Boolean(perfil);
 
 				if (!perfil) {
-					document.querySelector('#resultado-titulo')!.textContent = 'Todas las ayudas';
-					document.querySelector('#resumen')!.textContent = `${visibles.length} convocatorias, las que cierran antes primero`;
-					const ol = el('ol', 'lista');
-					for (const c of [...visibles].sort(orden)) ol.append(tarjeta(c, null));
-					grupos.append(ol);
+					const lista = filtradas(visibles).sort(porCierre);
+					titulo.textContent = 'Todas las ayudas';
+					const filtrando = lista.length !== visibles.length;
+					resumen.textContent = filtrando
+						? `${lista.length} de ${visibles.length} convocatorias, las que cierran antes primero`
+						: `${visibles.length} convocatorias, las que cierran antes primero`;
+					if (!lista.length) grupos.append(el('p', 'grupo-texto vacio', 'Ninguna con esos filtros. Prueba con otras palabras o con toda España.'));
+					else {
+						const ol = el('ol', 'lista');
+						for (const c of lista) ol.append(tarjeta(c, null));
+						grupos.append(ol);
+					}
 				} else {
-					const evaluadas = visibles.map((c) => ({ c, e: encaje(c, perfil) })).sort((a, b) => orden(a.c, b.c));
+					const evaluadas = visibles.map((c) => ({ c, e: encaje(c, perfil, hoy()), cerca: cercania(c, perfil, municipioDe(c)) }));
 					const de = (s: Encaje['estado']) => evaluadas.filter((x) => x.e.estado === s);
-					const si = de('si');
-					const revisa = de('revisa');
-					const no = de('no');
-					document.querySelector('#resultado-titulo')!.textContent =
-						si.length + revisa.length ? 'Las ayudas para tu negocio' : 'Ahora mismo no hay ayudas que encajen';
-					document.querySelector('#resumen')!.textContent =
-						`${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan`;
+					const si = de('si').sort((a, b) => porCierre(a.c, b.c));
+					// «Revisa», primero las más cercanas al negocio: su municipio, su provincia, su comunidad, toda España
+					const revisa = de('revisa').sort((a, b) => a.cerca - b.cerca || porCierre(a.c, b.c));
+					const no = de('no').sort((a, b) => porCierre(a.c, b.c));
+					titulo.textContent = si.length
+						? 'Las ayudas para tu negocio'
+						: revisa.length
+							? 'Ninguna encaja del todo, pero hay ayudas que revisar'
+							: 'Ahora mismo no hay ayudas que encajen';
+					resumen.textContent = `${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan`;
 
-					const grupo = (titulo: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
+					const grupo = (nombre: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
 						if (!lista.length) return;
 						const ol = el('ol', 'lista');
 						for (const { c, e } of lista) ol.append(tarjeta(c, e));
 						if (plegado) {
 							const d = el('details', `grupo grupo--${clase}`);
-							d.append(el('summary', '', `${titulo} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							d.append(el('summary', '', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
 							grupos.append(d);
 						} else {
 							const s = el('section', `grupo grupo--${clase}`);
-							s.append(el('h3', 'grupo-titulo', `${titulo} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							s.append(el('h3', 'grupo-titulo', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
 							grupos.append(s);
 						}
 					};
 					grupo('Puedes pedirlas', 'Encajan con lo que nos has dicho. Aun así, lee los requisitos antes de pedirlas.', si, 'si');
-					grupo('Revisa los detalles', 'Podrían encajar, pero falta algún dato o hay que comprobar algo en las bases.', revisa, 'revisa');
+					grupo(
+						'Revisa los detalles',
+						'Podrían encajar, pero falta algún dato o hay que comprobar algo en las bases. Primero, las más cercanas a tu negocio.',
+						revisa,
+						'revisa',
+					);
 					grupo('No encajan', 'Por qué no, en cada una.', no, 'no', true);
+					// Sin ninguna que se pueda pedir ya, lo útil es que le avisemos: el recuadro, arriba
+					if (!si.length) {
+						grupos.before(avisos);
+						avisosTitulo.textContent = 'Te avisamos en cuanto salga una ayuda para tu negocio';
+					} else {
+						grupos.after(avisos);
+						avisosTitulo.textContent = '¿Te avisamos cuando salgan ayudas nuevas para tu negocio?';
+					}
 				}
 				// Los avisos, solo con un negocio (no en «todas las ayudas»)
 				avisos.hidden = !perfil;
 				resultado.hidden = false;
 			}
+
+			let espera: ReturnType<typeof setTimeout> | undefined;
+			buscar.addEventListener('input', () => {
+				clearTimeout(espera);
+				espera = setTimeout(pintar, 150);
+			});
+			filtroComunidad.addEventListener('change', pintar);
+			filtroPronto.addEventListener('change', pintar);
 
 			// Apuntarse a los avisos con las respuestas del asistente: la misma API que
 			// alertas.felixcorcoran.es, que manda el correo para confirmar
@@ -592,8 +701,26 @@ const description =
 	}
 
 	.intro.empezada .empezar,
-	.intro.empezada .meta {
+	.intro.empezada .meta,
+	.intro.empezada .lead {
 		display: none;
+	}
+
+	/* Con preguntas o resultados, la portada se queda en un título pequeño: en
+	   el móvil ocupaba la primera pantalla entera y las ayudas quedaban debajo */
+	.intro.empezada h1 {
+		margin-bottom: 0;
+		font-size: clamp(1.5rem, 3.6vw, 2.25rem);
+	}
+
+	/* Con resultados, ni eso: el título de los resultados ya dice qué es */
+	.intro.empezada:has(~ .resultado:not([hidden])) h1 {
+		display: none;
+	}
+
+	.tu-negocio .enlace {
+		padding-block: 0.25rem;
+		font-size: 0.875rem;
 	}
 
 	.estado:empty {
@@ -774,217 +901,6 @@ const description =
 		cursor: pointer;
 	}
 
-	:global(.grupo) {
-		margin-top: 2.5rem;
-	}
-
-	:global(.grupo-titulo),
-	:global(details.grupo > summary) {
-		margin: 0;
-		font-size: 1.125rem;
-		font-weight: 600;
-		letter-spacing: -0.01em;
-	}
-
-	:global(details.grupo > summary) {
-		cursor: pointer;
-	}
-
-	:global(.grupo-texto) {
-		margin: 0.375rem 0 0;
-		font-size: 0.9375rem;
-		color: var(--text-muted);
-	}
-
-	:global(.lista) {
-		display: grid;
-		gap: 1rem;
-		margin: 1.25rem 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	:global(.ayuda) {
-		position: relative;
-		padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(1.125rem, 2.5vw, 1.75rem);
-		border-radius: 1.25rem;
-		background: rgb(var(--surface-rgb) / 0.75);
-		border: 1px solid var(--rule);
-	}
-
-	:global(.ayuda::before) {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 1.25rem;
-		bottom: 1.25rem;
-		width: 3px;
-		border-radius: 0 3px 3px 0;
-		background: var(--estado, transparent);
-	}
-
-	:global(.ayuda--si) {
-		--estado: #3f8f5f;
-	}
-	:global(.ayuda--revisa) {
-		--estado: #d49a2a;
-	}
-	:global(.ayuda--no) {
-		--estado: rgb(var(--ink) / 0.25);
-	}
-
-	:global(.ayuda-organo) {
-		margin: 0;
-		font-size: 0.75rem;
-		font-weight: 500;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--text-muted);
-	}
-
-	:global(.ayuda h3) {
-		margin: 0.5rem 0 0;
-		font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
-		font-weight: 500;
-		line-height: 1.35;
-		letter-spacing: -0.015em;
-	}
-
-	:global(.ayuda h3 a) {
-		color: inherit;
-		text-decoration: none;
-		background-image: linear-gradient(var(--accent), var(--accent));
-		background-size: 0 1px;
-		background-position: 0 100%;
-		background-repeat: no-repeat;
-		transition: background-size 0.35s var(--ease-out);
-	}
-
-	:global(.ayuda h3 a:hover) {
-		background-size: 100% 1px;
-	}
-
-	:global(.ayuda-datos) {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin: 0.875rem 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	:global(.ayuda-datos li) {
-		padding: 0.3rem 0.75rem;
-		border-radius: 999px;
-		background: rgb(var(--ink) / 0.05);
-		font-size: 0.8125rem;
-		line-height: 1.4;
-	}
-
-	:global(.ayuda-datos li.pronto) {
-		background: var(--accent-soft);
-	}
-
-	:global(.ayuda-datos li.sin-comprobar) {
-		background: none;
-		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.18);
-		color: var(--text-muted);
-	}
-
-	:global(.motivos) {
-		display: grid;
-		gap: 0.3rem;
-		margin: 1rem 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	:global(.motivo) {
-		position: relative;
-		padding-left: 1.5rem;
-		font-size: 0.875rem;
-		line-height: 1.45;
-	}
-
-	:global(.motivo::before) {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 1rem;
-		text-align: center;
-		font-weight: 600;
-	}
-
-	:global(.motivo--bien::before) {
-		content: '✓';
-		color: #3f8f5f;
-	}
-	:global(.motivo--revisa::before) {
-		content: '?';
-		color: #b07d16;
-	}
-	:global(.motivo--no::before) {
-		content: '✕';
-		color: var(--accent-text);
-	}
-
-	:global(.ayuda-mas) {
-		margin-top: 1rem;
-		padding-top: 0.875rem;
-		border-top: 1px solid var(--rule);
-		font-size: 0.9375rem;
-		line-height: 1.55;
-	}
-
-	:global(.ayuda-mas summary) {
-		cursor: pointer;
-		font-size: 0.875rem;
-		font-weight: 500;
-	}
-
-	:global(.ayuda-mas h4) {
-		margin: 1.125rem 0 0.25rem;
-		font-size: 0.8125rem;
-		font-weight: 600;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: var(--text-muted);
-	}
-
-	:global(.ayuda-mas p),
-	:global(.ayuda-mas ul) {
-		margin: 0.25rem 0 0;
-	}
-
-	:global(.ayuda-mas ul) {
-		padding-left: 1.25rem;
-	}
-
-	:global(.ayuda-mas .oficial) {
-		margin-top: 1.125rem;
-		font-size: 0.8125rem;
-		color: var(--text-muted);
-	}
-
-	:global(.enlaces) {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem 1.25rem;
-		margin-top: 0.75rem !important;
-	}
-
-	:global(.enlaces a) {
-		color: var(--text);
-		text-decoration: underline;
-		text-decoration-color: var(--accent);
-		text-underline-offset: 0.25em;
-		font-size: 0.875rem;
-	}
-
-
-
-
-
 	/* La portada, centrada: una pregunta y un botón, como la entrada de una
 	   herramienta. Los resultados siguen a la izquierda,
 	   que se leen mejor */
@@ -1028,6 +944,80 @@ const description =
 		text-align: center;
 	}
 
+
+	.filtros {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1rem;
+		margin-top: 1.25rem;
+	}
+
+	.filtros[hidden] {
+		display: none;
+	}
+
+	.filtros input[type='search'],
+	.filtros select {
+		box-sizing: border-box;
+		height: 2.75rem;
+		padding: 0 1rem;
+		border-radius: 0.875rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 1rem;
+	}
+
+	.filtros input[type='search'] {
+		flex: 1 1 16rem;
+	}
+
+	.filtros select {
+		flex: 0 1 14rem;
+	}
+
+	.filtros :focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.pronto-filtro {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		cursor: pointer;
+	}
+
+	.explorar {
+		margin-top: clamp(2.5rem, 6vw, 4rem);
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--rule);
+	}
+
+	.explorar ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.1rem;
+		margin: 0.6rem 0 1.5rem;
+		padding: 0;
+		list-style: none;
+		font-size: 0.875rem;
+	}
+
+	.explorar a {
+		color: var(--text-muted);
+		text-decoration-color: rgb(var(--ink) / 0.2);
+		text-underline-offset: 0.2em;
+	}
+
+	.explorar a:hover {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+	}
 
 	.aviso-fuente {
 		margin: clamp(2rem, 5vw, 3rem) 0 0;

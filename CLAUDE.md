@@ -8,7 +8,9 @@ Node 24. Más detalle en `README.md`.
 
 1. `scripts/recoger.ts` (+ `bdns.ts`, `almacen.ts`, `fichas.ts`): baja convocatorias de la API BDNS
    a `datos/convocatorias.json` y vuelve a comprobar a diario la ficha de las guardadas
-   (`comprobada`, `cambios`). Nunca cierra ni borra datos por un fallo de consulta.
+   (`comprobada`, `cambios`). Nunca cierra ni borra datos por un fallo de consulta. Rellena hacia
+   atrás por tramos (`tramoRelleno`, `datos.relleno`) y guarda lo mínimo de las retiradas en
+   `datos/cerradas.json` (su ficha sigue unos meses con `noindex`).
 2. `scripts/analizar.ts` (+ `gemini.ts`, `lectura.ts`): Gemini lee el PDF de las bases y rellena
    resumen y condiciones. Cadena de modelos del nivel gratuito; relee si `iaRevisar`.
 3. `src/lib/encaje.ts`: en el navegador, clasifica cada ayuda en «Puedes pedirla» / «Revisa» /
@@ -17,15 +19,21 @@ Node 24. Más detalle en `README.md`.
 
 ## Mapa
 
-- `src/lib/`: `encaje.ts`, `estado.ts` (abierta / próxima / sin fecha / por verificar / cerrada,
-  fuera del contrato con alertas), `fechas.ts` (`cierre`, `fechaLarga`; sin dependencias para que los
+- `src/lib/`: `lista.ts` (solo presentación: titular, cercanía, búsqueda, comunidades y sectores,
+  `indexable`; no toca el contrato del encaje), `web.ts` (lo que llega al navegador), `imagen.ts`
+  (imagen al compartir), `encaje.ts`, `estado.ts` (abierta / próxima / sin fecha / por verificar / cerrada,
+  fuera del contrato con alertas), `fechas.ts` (`cierre`, `fechaLarga`, `hoyMadrid`: usar siempre esta para «hoy»; sin dependencias para que los
   scripts de Node puedan importarlo: `encaje.ts` importa JSON), `sectores.ts` (CNAE-2025), `zonas.ts`,
   `calendario.ts`, `tipos.ts`.
 - `scripts/lectura.ts`: `revisarCierreIa` deja en `ia.plazoFin` solo fechas de las bases fiables;
   alertas lee `datos/convocatorias.json` directamente, así que la regla vive en los datos.
 - `scripts/salud.ts` + `.github/workflows/vigilar.yml`: vigilancia diaria con un issue.
 - `src/components/Asistente.astro`: el formulario pregunta a pregunta.
-- `src/pages/ayudas/`: ficha de cada convocatoria; `convocatorias.json.ts` la expone como JSON.
+- `src/pages/ayudas/`: ficha de cada convocatoria (y de las cerradas, `Cerrada.astro`);
+  `convocatorias.json.ts` y `detalles.json.ts` la exponen como JSON. `comunidades/`, `sectores/`
+  (`Listado.astro`, `Tarjeta.astro`), `rss.xml.ts`, `og/`, `404.astro`. Estilos de tarjeta en
+  `src/styles/tarjetas.css`. Cabeceras en `vercel.json` (CSP: si se añade un dominio externo, hay que
+  ponerlo ahí).
 - `src/data/formas.json`, `public/municipios/*.json`: siluetas y municipios (generados con
   `npm run formas` / `npm run catalogos`, no editar a mano).
 - `tests/`: Vitest.

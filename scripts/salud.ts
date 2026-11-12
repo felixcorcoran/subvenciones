@@ -8,6 +8,9 @@
  *   (hay dos pasadas al día, así que hace falta que fallen varias seguidas).
  * - Fallo parcial de una fuente: la BDNS no devuelve muchas fichas, o la IA
  *   lleva días sin leer nada teniendo bases pendientes.
+ * - Lecturas que se acumulan con error: la IA lee, pero muchas bases no
+ *   (PDF escaneado, demasiado grande, respuesta incompleta…) y la web las
+ *   enseña como «Aún no hemos leído sus bases».
  * - Ejecución correcta sin cambios: no es un problema.
  */
 import type { Datos } from '../src/lib/tipos.ts';
@@ -16,6 +19,8 @@ export const HORAS_SIN_RECOGIDA = 30;
 export const DIAS_SIN_LECTURA = 3;
 /** Fichas sin poder comprobar a partir de las que se avisa (y más de la mitad de las pedidas) */
 export const MIN_FICHAS_FALLIDAS = 5;
+/** Convocatorias con la lectura de la IA fallida a partir de las que se avisa */
+export const MIN_LECTURAS_FALLIDAS = 15;
 
 export interface Problema {
 	tipo: 'ejecucion' | 'bdns' | 'ia';
@@ -61,6 +66,12 @@ export function diagnostico(datos: Datos, ahora = new Date()): Problema[] {
 				texto: `La IA no lee bases desde ${desde ? `el ${desde}` : 'que hay vigilancia'} y hay ${l.pendientes} pendientes. Mira el paso «npm run analizar» (cupo de Gemini, modelos, clave).`,
 			});
 		}
+	}
+	if (l?.conError != null && l.conError >= MIN_LECTURAS_FALLIDAS) {
+		problemas.push({
+			tipo: 'ia',
+			texto: `Hay ${l.conError} convocatorias cuya lectura con IA ha fallado (en la web salen como «Aún no hemos leído sus bases»). Busca \`iaError\` en datos/convocatorias.json para ver por qué.`,
+		});
 	}
 	return problemas;
 }

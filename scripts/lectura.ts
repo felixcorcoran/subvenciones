@@ -77,6 +77,7 @@ export function analisisValido(a: unknown): a is Analisis {
 		['ayuda', 'premio', 'otro'].includes(x.categoria as string) &&
 		texto(x.resumen) &&
 		(x.resumen as string).trim() !== '' &&
+		(x.titular === undefined || texto(x.titular)) &&
 		texto(x.paraQuien) &&
 		texto(x.importe) &&
 		numeroONulo(x.importeMaximo) &&
@@ -95,4 +96,10 @@ export function analisisValido(a: unknown): a is Analisis {
 		numeroONulo(k.antiguedadMaxMeses) &&
 		(k.municipio === null || texto(k.municipio))
 	);
+}
+
+/** El titular corto, o nada si no sirve (vacío o demasiado largo): entonces la web usa el resumen */
+export function titularValido(t: string | undefined): string | undefined {
+	const limpio = t?.trim().replace(/\.$/, '');
+	return limpio && limpio.length <= 90 ? limpio : undefined;
 }

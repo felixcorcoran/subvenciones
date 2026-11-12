@@ -65,6 +65,34 @@ export function inicioBusqueda(actualizado: string | undefined, ahora: Date, dia
 	return new Date(Math.max(conMargen, ahora.getTime() - 30 * DIA_MS));
 }
 
+const isoDia = (d: Date) => d.toISOString().slice(0, 10);
+const menosDias = (iso: string, dias: number) => isoDia(new Date(Date.parse(`${iso}T00:00:00Z`) - dias * DIA_MS));
+
+/**
+ * Carga de las convocatorias anteriores al arranque del radar, poco a poco:
+ * la búsqueda diaria solo trae las nuevas, y las que se registraron antes y
+ * siguen abiertas no aparecían nunca. Cada pasada busca `tramo` días más
+ * atrás de lo ya buscado, hasta `dias` antes del arranque. Devuelve el tramo
+ * que toca (fechas AAAA-MM-DD, ambas incluidas) y cómo queda el relleno, o
+ * null si ya está completo.
+ *
+ * `masAntigua` es la primera fecha que cubrió la búsqueda normal (la
+ * convocatoria guardada más antigua), para empezar justo antes.
+ */
+export function tramoRelleno(
+	relleno: { desde: string; limite: string } | undefined,
+	hoy: string,
+	masAntigua: string,
+	dias: number,
+	tramo: number,
+): { desde: string; hasta: string; siguiente: { desde: string; limite: string } } | null {
+	const actual = relleno ?? { desde: masAntigua, limite: menosDias(hoy, dias) };
+	if (actual.desde <= actual.limite) return null;
+	const hasta = menosDias(actual.desde, 1);
+	const desde = [menosDias(actual.desde, tramo), actual.limite].sort().at(-1)!;
+	return { desde, hasta, siguiente: { desde, limite: actual.limite } };
+}
+
 export interface ResultadoBusqueda {
 	id: number;
 	numeroConvocatoria: string;

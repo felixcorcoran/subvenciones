@@ -8,6 +8,11 @@ export interface Analisis {
 	categoria: 'ayuda' | 'premio' | 'otro';
 	/** Qué financia, en una o dos frases claras */
 	resumen: string;
+	/**
+	 * Lo mismo en un titular corto (unos 60 caracteres), para las tarjetas y el
+	 * título de la ficha. Las leídas antes de existir no lo tienen: se usa el resumen.
+	 */
+	titular?: string;
 	/** A quién va dirigida, dicho como lo entendería el dueño de un negocio */
 	paraQuien: string;
 	/** «Hasta 3.000 € por negocio», «El 50 % del gasto»… o «No lo indica» */
@@ -104,6 +109,8 @@ export interface Salud {
 		fallidas: number;
 		/** Día de la última lectura correcta */
 		ultimaLectura: string | null;
+		/** Convocatorias cuya lectura ha fallado (se reintentan, con pausa tras tres fallos) */
+		conError?: number;
 	};
 }
 
@@ -111,4 +118,28 @@ export interface Datos {
 	actualizado: string;
 	convocatorias: Convocatoria[];
 	salud?: Salud;
+	/**
+	 * Carga de las convocatorias anteriores al arranque del radar (scripts/recoger.ts):
+	 * cada pasada busca un tramo más atrás, hasta `limite`. `desde` es la fecha más
+	 * antigua ya buscada (AAAA-MM-DD).
+	 */
+	relleno?: { desde: string; limite: string };
+}
+
+/**
+ * Lo que queda de una convocatoria retirada por cerrada (datos/cerradas.json):
+ * su ficha sigue publicada unos meses, sin indexar, para que los enlaces
+ * compartidos y los de los buscadores no acaben en un error.
+ */
+export interface Cerrada {
+	codigo: string;
+	titulo: string;
+	/** El titular o el resumen de la IA, si se leyó */
+	resumen: string | null;
+	organo: string;
+	/** Fecha de cierre con la que se retiró */
+	cierre: string;
+	enlace: string;
+	/** Día en que se retiró */
+	retirada: string;
 }

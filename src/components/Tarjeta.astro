@@ -1,0 +1,35 @@
+---
+/**
+ * Una ayuda en las listas que se generan al construir (por comunidad, por
+ * sector y «Otras ayudas» de cada ficha): la misma tarjeta que pinta el
+ * navegador en la portada (index.astro, `tarjeta`), sin motivos porque no
+ * hay un negocio con el que comparar. Estilos en src/styles/tarjetas.css.
+ */
+import type { ConvocatoriaWeb } from '../lib/tipos';
+import { cierre, municipioDe } from '../lib/encaje';
+import { plazoSinFecha, textoPlazo } from '../lib/estado';
+import { diasHasta, titularDe } from '../lib/lista';
+
+interface Props {
+	c: ConvocatoriaWeb;
+	hoy: string;
+}
+
+const { c, hoy } = Astro.props;
+const organo = [c.organo.nivel3, municipioDe(c) ?? c.organo.nivel2].filter((v, i, a) => v && a.indexOf(v) === i).join(' · ');
+const dias = diasHasta(c, hoy);
+const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+const importe = c.ia?.importeMaximo ? `Hasta ${euros(c.ia.importeMaximo)}` : c.presupuesto ? `Presupuesto total: ${euros(c.presupuesto)}` : null;
+---
+
+<li class="ayuda ayuda--neutra">
+	<div class="ayuda-cabeza">
+		<p class="ayuda-organo">{organo}</p>
+		<h3><a href={`/ayudas/${c.codigo}`}>{titularDe(c)}</a></h3>
+	</div>
+	<ul class="ayuda-datos">
+		<li class={dias !== null && dias <= 7 ? 'pronto' : ''}>{textoPlazo(c, hoy)}</li>
+		{!cierre(c) && plazoSinFecha(c) && <li class="sin-comprobar">Sin fecha de cierre confirmada</li>}
+		{importe && <li>{importe}</li>}
+	</ul>
+</li>

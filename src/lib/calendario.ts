@@ -35,7 +35,7 @@ function siguiente(iso: string): string {
 export function eventoIcs(c: ConvocatoriaWeb, ficha: string): string | null {
 	const fin = cierre(c);
 	if (!fin) return null;
-	const nombre = c.ia?.resumen ?? c.titulo;
+	const nombre = c.ia?.titular ?? c.ia?.resumen ?? c.titulo;
 	const corto = nombre.length > 90 ? `${nombre.slice(0, 87).trimEnd()}…` : nombre;
 	const lineas = [
 		'BEGIN:VCALENDAR',
