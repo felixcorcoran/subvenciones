@@ -28,7 +28,7 @@ export async function imagenFicha(d: DatosImagen): Promise<Buffer> {
 		{ name: 'Sora', data: fuente(500), weight: 500, style: 'normal' },
 	];
 	const titular = d.titular.length > 110 ? `${d.titular.slice(0, 107).trimEnd()}…` : d.titular;
-	const organo = d.organo.length > 70 ? `${d.organo.slice(0, 67).trimEnd()}…` : d.organo;
+	const organo = d.organo.length > 90 ? `${d.organo.slice(0, 87).trimEnd()}…` : d.organo;
 	const chip = (texto: string, fondo: string) =>
 		h('div', { display: 'flex', padding: '12px 26px', borderRadius: 999, background: fondo, fontSize: 28, color: '#171717' }, texto);
 	const arbol = h(
@@ -36,7 +36,7 @@ export async function imagenFicha(d: DatosImagen): Promise<Buffer> {
 		{ width: 1200, height: 630, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '64px 72px', background: '#FAF9F6', fontFamily: 'Sora' },
 		[
 			h('div', { display: 'flex', flexDirection: 'column' }, [
-				h('div', { display: 'flex', fontSize: 24, fontWeight: 500, letterSpacing: 3, color: '#6B6B6B', textTransform: 'uppercase' }, organo),
+				h('div', { display: 'flex', fontSize: organo.length > 55 ? 20 : 24, fontWeight: 500, letterSpacing: organo.length > 55 ? 2 : 3, color: '#6B6B6B', textTransform: 'uppercase' }, organo),
 				h('div', { display: 'flex', marginTop: 28, fontSize: titular.length > 70 ? 50 : 60, lineHeight: 1.12, letterSpacing: -1.5, color: '#171717' }, titular),
 			]),
 			h('div', { display: 'flex', flexDirection: 'column' }, [

@@ -32,4 +32,5 @@ const lead = `${propias.length === 1 ? 'Una convocatoria abierta' : `${propias.l
 	hoy={hoy}
 	noindex={propias.length === 0}
 	actual={`/comunidades/${k.slug}`}
+	seguir={{ nombre: k.nombre, ics: `/comunidades/${k.slug}.ics`, rss: `/comunidades/${k.slug}.xml` }}
 />

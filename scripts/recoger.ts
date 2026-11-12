@@ -28,7 +28,7 @@
 import { buscarNuevas, ficha, inicioBusqueda, tramoRelleno, type Ficha, type ResultadoBusqueda } from './bdns.ts';
 import { aCerrada, guardarCerradas, guardarDatos, guardarVistas, hoyIso, leerCerradas, leerDatos, leerVistas } from './almacen.ts';
 import { aConvocatoria, actualizar, fichaValida } from './fichas.ts';
-import { revisarCierreIa } from './lectura.ts';
+import { limpiarMunicipio, revisarCierreIa } from './lectura.ts';
 import { estado } from '../src/lib/estado.ts';
 
 const hoy = hoyIso();
@@ -99,7 +99,7 @@ for (const r of [...nuevas, ...delRelleno]) {
 		descartar(f.codigoBDNS, 'concesión directa');
 		continue;
 	}
-	const c = aConvocatoria(f, hoy);
+	const c = { ...aConvocatoria(f, hoy), alta: hoy };
 	if (c.fin && c.fin < hoy) {
 		descartar(c.codigo, 'cerrada');
 		continue;
@@ -141,7 +141,10 @@ console.log(`${comprobadas} fichas comprobadas (${cambiadas} con cambios), ${fal
 // La fecha de cierre que la IA sacó de las bases solo se queda si no
 // contradice a la BDNS y no es dudosa (también con lo leído en días anteriores)
 let descartadas = 0;
+let municipios = 0;
 for (const c of guardadas.values()) {
+	// También con lo leído antes de la regla (limpiarMunicipio, lectura.ts)
+	if (limpiarMunicipio(c)) municipios++;
 	if (revisarCierreIa(c)) {
 		descartadas++;
 		console.log(`  ${c.codigo}: fecha de cierre de las bases descartada (${c.cierreDescartado!.motivo})`);
@@ -176,6 +179,7 @@ datos.salud = {
 guardarDatos(datos);
 guardarVistas(vistas);
 guardarCerradas(archivo, hoy);
+if (municipios) console.log(`${municipios} «municipios» que eran una comunidad o provincia entera, quitados`);
 console.log(
 	`${anadidas} añadidas${rellenoSinFicha ? ` (${rellenoSinFicha} del relleno sin ficha)` : ''}${datos.relleno ? ` · relleno hasta el ${datos.relleno.desde}` : ''}, ${cerradas} cerradas retiradas, ${descartadas} fechas de la IA descartadas; ${datos.convocatorias.length} guardadas (${porVerificar} por verificar)`,
 );

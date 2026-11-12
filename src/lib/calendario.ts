@@ -32,16 +32,13 @@ function siguiente(iso: string): string {
 	return d.toISOString().slice(0, 10);
 }
 
-export function eventoIcs(c: ConvocatoriaWeb, ficha: string): string | null {
+/** Las líneas de un evento (VEVENT) con el plazo, o null si no hay fecha de cierre */
+function evento(c: ConvocatoriaWeb, ficha: string): string[] | null {
 	const fin = cierre(c);
 	if (!fin) return null;
 	const nombre = c.ia?.titular ?? c.ia?.resumen ?? c.titulo;
 	const corto = nombre.length > 90 ? `${nombre.slice(0, 87).trimEnd()}…` : nombre;
-	const lineas = [
-		'BEGIN:VCALENDAR',
-		'VERSION:2.0',
-		'PRODID:-//felixcorcoran.es//Radar de subvenciones//ES',
-		'CALSCALE:GREGORIAN',
+	return [
 		'BEGIN:VEVENT',
 		`UID:bdns-${c.codigo}@subvenciones.felixcorcoran.es`,
 		`DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
@@ -56,7 +53,38 @@ export function eventoIcs(c: ConvocatoriaWeb, ficha: string): string | null {
 		'TRIGGER:-P3D',
 		'END:VALARM',
 		'END:VEVENT',
-		'END:VCALENDAR',
 	];
-	return lineas.map(plegar).join('\r\n') + '\r\n';
+}
+
+const calendario = (eventos: string[][], cabecera: string[] = []) =>
+	[
+		'BEGIN:VCALENDAR',
+		'VERSION:2.0',
+		'PRODID:-//felixcorcoran.es//Radar de subvenciones//ES',
+		'CALSCALE:GREGORIAN',
+		...cabecera,
+		...eventos.flat(),
+		'END:VCALENDAR',
+	]
+		.map(plegar)
+		.join('\r\n') + '\r\n';
+
+export function eventoIcs(c: ConvocatoriaWeb, ficha: string): string | null {
+	const e = evento(c, ficha);
+	return e ? calendario([e]) : null;
+}
+
+/**
+ * Un calendario con el plazo de varias ayudas (los de una comunidad), para
+ * suscribirse una vez: el programa de calendario lo vuelve a pedir cada día y
+ * van apareciendo las nuevas. `fichaDe` da la dirección de cada ficha.
+ */
+export function calendarioIcs(lista: ConvocatoriaWeb[], fichaDe: (c: ConvocatoriaWeb) => string, nombre: string): string {
+	const eventos = lista.map((c) => evento(c, fichaDe(c))).filter((e): e is string[] => e !== null);
+	return calendario(eventos, [
+		`X-WR-CALNAME:${escapar(nombre)}`,
+		'X-WR-TIMEZONE:Europe/Madrid',
+		'REFRESH-INTERVAL;VALUE=DURATION:PT12H',
+		'X-PUBLISHED-TTL:PT12H',
+	]);
 }

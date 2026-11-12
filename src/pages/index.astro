@@ -79,7 +79,10 @@ const description =
 						</select>
 						<label class="pronto-filtro"><input type="checkbox" id="filtro-pronto" /> Cierran en 15 días o menos</label>
 					</div>
-					<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
+					<div class="casillas">
+						<label class="premios" id="guardadas-filtro" hidden><input type="checkbox" id="solo-guardadas" /> <span>Solo mis guardadas</span></label>
+						<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
+					</div>
 				</div>
 				<div id="grupos"></div>
 				<!-- Los avisos por email (alertas.felixcorcoran.es): con las respuestas que ya ha dado, solo falta el email -->
@@ -101,6 +104,11 @@ const description =
 						</label>
 						<p id="avisos-estado" class="avisos-estado" role="status" aria-live="polite"></p>
 					</form>
+					<!-- Sin email: los plazos de su comunidad en el calendario, o su RSS -->
+					<p id="avisos-sin-email" class="avisos-sin-email" hidden>
+						¿Prefieres no dar tu email? <a data-webcal>Los plazos de <span data-comunidad></span> en tu calendario</a>{' · '}
+						<a data-google target="_blank" rel="noopener">en Google Calendar ↗</a>{' · '}<a data-rss>RSS</a>
+					</p>
 				</section>
 				<nav class="explorar" aria-labelledby="explorar-titulo">
 					<p id="explorar-titulo" class="eyebrow">Ayudas por comunidad</p>
@@ -120,9 +128,10 @@ const description =
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
 			import { enLista, estado as estadoDe, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../lib/estado';
 			import { hoyMadrid } from '../lib/fechas';
-			import { cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, textoMotivo, titularDe } from '../lib/lista';
+			import { COMUNIDADES, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, textoMotivo, titularDe } from '../lib/lista';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
 			import type { Detalles } from '../lib/web';
+			import { alternarGuardada, esNueva, guardadas, registrarVisita } from '../lib/visitas';
 
 			const estado = document.querySelector<HTMLParagraphElement>('#estado')!;
 			const resultado = document.querySelector<HTMLElement>('#resultado')!;
@@ -164,6 +173,8 @@ const description =
 
 			// El día en hora de Madrid: con la fecha UTC, de madrugada se usaba el día anterior
 			const hoy = () => hoyMadrid();
+			// Para marcar las que han entrado en el radar desde la visita anterior
+			const visitaAnterior = registrarVisita(hoy());
 
 			function plazo(c: ConvocatoriaWeb): { texto: string; pronto: boolean } {
 				const dias = diasHasta(c, hoy());
@@ -179,11 +190,25 @@ const description =
 				const ficha = el('a', '', titularDe(c));
 				ficha.href = `/ayudas/${c.codigo}`;
 				titulo.append(ficha);
-				cabeza.append(el('p', 'ayuda-organo', organo), titulo);
+				// Guardarla en este navegador, para seguirla (filtro «Solo mis guardadas»)
+				const guardar = el('button', 'guardar');
+				guardar.type = 'button';
+				const pintarGuardar = (si: boolean) => {
+					guardar.textContent = si ? '★ Guardada' : '☆ Guardar';
+					guardar.setAttribute('aria-pressed', String(si));
+					guardar.setAttribute('aria-label', `${si ? 'Quitar de guardadas' : 'Guardar'}: ${titularDe(c)}`);
+				};
+				pintarGuardar(guardadas().has(c.codigo));
+				guardar.addEventListener('click', () => {
+					pintarGuardar(alternarGuardada(c.codigo));
+					contarGuardadas();
+				});
+				cabeza.append(guardar, el('p', 'ayuda-organo', organo), titulo);
 				item.append(cabeza);
 
 				const datosClave = el('ul', 'ayuda-datos');
 				const p = plazo(c);
+				if (esNueva(c, visitaAnterior)) datosClave.append(el('li', 'nueva', 'Nueva'));
 				const plazoLi = el('li', p.pronto ? 'pronto' : '', p.texto);
 				datosClave.append(plazoLi);
 				// Con el plazo dicho con palabras, que quede claro que no hay fecha confirmada
@@ -270,6 +295,14 @@ const description =
 			const buscar = document.querySelector<HTMLInputElement>('#buscar')!;
 			const filtroComunidad = document.querySelector<HTMLSelectElement>('#filtro-comunidad')!;
 			const filtroPronto = document.querySelector<HTMLInputElement>('#filtro-pronto')!;
+			const soloGuardadas = document.querySelector<HTMLInputElement>('#solo-guardadas')!;
+			const guardadasFiltro = document.querySelector<HTMLElement>('#guardadas-filtro')!;
+			/** El contador de «Solo mis guardadas»: solo se ve si hay alguna (o si está marcado) */
+			function contarGuardadas() {
+				const n = cache ? cache.filter((c) => guardadas().has(c.codigo)).length : 0;
+				guardadasFiltro.querySelector('span')!.textContent = `Solo mis guardadas (${n})`;
+				guardadasFiltro.hidden = n === 0 && !soloGuardadas.checked;
+			}
 			const titulo = document.querySelector<HTMLElement>('#resultado-titulo')!;
 			const resumen = document.querySelector<HTMLElement>('#resumen')!;
 			const avisosTitulo = document.querySelector<HTMLElement>('#avisos-titulo')!;
@@ -293,7 +326,16 @@ const description =
 				if (!cache) return;
 				const perfil = ultima.perfil;
 				// Fuera de la lista: las cerradas desde la última construcción y las «por verificar»
-				const visibles = cache.filter((c) => (verPremios.checked || !c.ia || c.ia.categoria === 'ayuda') && enLista(estadoDe(c, hoy())));
+				const mias = guardadas();
+				const visibles = cache.filter(
+					(c) =>
+						(verPremios.checked || !c.ia || c.ia.categoria === 'ayuda') &&
+						enLista(estadoDe(c, hoy())) &&
+						(!soloGuardadas.checked || mias.has(c.codigo)),
+				);
+				const nuevas = visibles.filter((c) => esNueva(c, visitaAnterior)).length;
+				const yNuevas = nuevas ? ` · ${nuevas === 1 ? '1 nueva' : `${nuevas} nuevas`} desde tu última visita` : '';
+				contarGuardadas();
 				grupos.replaceChildren();
 				filtros.hidden = Boolean(perfil);
 
@@ -302,8 +344,8 @@ const description =
 					titulo.textContent = 'Todas las ayudas';
 					const filtrando = lista.length !== visibles.length;
 					resumen.textContent = filtrando
-						? `${lista.length} de ${visibles.length} convocatorias, las que cierran antes primero`
-						: `${visibles.length} convocatorias, las que cierran antes primero`;
+						? `${lista.length} de ${visibles.length} convocatorias, las que cierran antes primero${yNuevas}`
+						: `${visibles.length} convocatorias, las que cierran antes primero${yNuevas}`;
 					if (!lista.length) grupos.append(el('p', 'grupo-texto vacio', 'Ninguna con esos filtros. Prueba con otras palabras o con toda España.'));
 					else {
 						const ol = el('ol', 'lista');
@@ -322,7 +364,7 @@ const description =
 						: revisa.length
 							? 'Ninguna encaja del todo, pero hay ayudas que revisar'
 							: 'Ahora mismo no hay ayudas que encajen';
-					resumen.textContent = `${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan`;
+					resumen.textContent = `${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan${yNuevas}`;
 
 					const grupo = (nombre: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
 						if (!lista.length) return;
@@ -474,6 +516,17 @@ const description =
 				const tu = document.querySelector<HTMLElement>('#tu-negocio')!;
 				tu.hidden = false;
 				document.querySelector('#respuestas')!.replaceChildren(...respuestas(perfil).map((t) => el('li', '', t)));
+				// La alternativa sin email: el calendario y el RSS de su comunidad
+				const comunidad = COMUNIDADES.find((k) => k.codigo === provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad);
+				const sinEmail = document.querySelector<HTMLElement>('#avisos-sin-email')!;
+				if (comunidad) {
+					const webcal = `webcal://${location.host}/comunidades/${comunidad.slug}.ics`;
+					sinEmail.querySelector('[data-comunidad]')!.textContent = comunidad.nombre;
+					sinEmail.querySelector<HTMLAnchorElement>('[data-webcal]')!.href = webcal;
+					sinEmail.querySelector<HTMLAnchorElement>('[data-google]')!.href = `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcal)}`;
+					sinEmail.querySelector<HTMLAnchorElement>('[data-rss]')!.href = `/comunidades/${comunidad.slug}.xml`;
+				}
+				sinEmail.hidden = !comunidad;
 				await cargar();
 				ultima = { perfil };
 				pintar();
@@ -501,6 +554,7 @@ const description =
 			});
 
 			verPremios.addEventListener('change', pintar);
+			soloGuardadas.addEventListener('change', pintar);
 
 			// El perfil en la dirección: ?provincia=ES617&municipio=Marbella&forma=autonomo…
 			function aParametros(p: Perfil): string {
@@ -713,9 +767,16 @@ const description =
 		font-size: clamp(1.5rem, 3.6vw, 2.25rem);
 	}
 
-	/* Con resultados, ni eso: el título de los resultados ya dice qué es */
+	/* Con resultados, ni eso a la vista: el título de los resultados ya dice qué
+	   es. Se queda para los lectores de pantalla (la página necesita su h1) */
 	.intro.empezada:has(~ .resultado:not([hidden])) h1 {
-		display: none;
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 
 	.tu-negocio .enlace {
@@ -869,6 +930,25 @@ const description =
 		text-underline-offset: 0.2em;
 	}
 
+	.avisos-sin-email {
+		margin: 1.25rem 0 0;
+		padding-top: 1rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.875rem;
+		line-height: 1.7;
+		color: var(--text-muted);
+	}
+
+	.avisos-sin-email[hidden] {
+		display: none;
+	}
+
+	.avisos-sin-email a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
 	.avisos-estado {
 		margin: 0.75rem 0 0;
 		font-size: 0.9375rem;
@@ -888,6 +968,16 @@ const description =
 		margin: 0;
 		font-size: 1.0625rem;
 		line-height: 1.5;
+	}
+
+	.casillas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 1.5rem;
+	}
+
+	.premios[hidden] {
+		display: none;
 	}
 
 	.premios {

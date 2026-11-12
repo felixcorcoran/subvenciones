@@ -18,6 +18,7 @@ import { comunidadDe, deComunidad, indexable, porCierre, seccionesDe, SECTORES, 
 import { aWeb } from '../../lib/web';
 import { seccionDe } from '../../lib/sectores';
 import { nombreZona } from '../../lib/zonas';
+import { site } from '../../data/site';
 import '../../styles/tarjetas.css';
 
 // Las guardadas y, unos meses, las retiradas por cerradas (datos/cerradas.json):
@@ -105,6 +106,8 @@ const masEn = comunidad
 		? { texto: `Todas las de ${sector.nombre.toLowerCase()}`, href: `/sectores/${sector.slug}`, titulo: 'Otras ayudas para el mismo sector' }
 		: null;
 const imagenOg = `/og/${c.codigo}.png`;
+// Avisar de un error en la ficha: un correo con el código y la dirección ya puestos
+const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en la ficha ${c.codigo}`)}&body=${encodeURIComponent(`Ficha: ${new URL(`/ayudas/${c.codigo}`, Astro.site).href}\n\nLo que está mal:\n`)}`;
 ---
 
 {retirada ? <Cerrada r={retirada} /> : (
@@ -137,6 +140,8 @@ const imagenOg = `/og/${c.codigo}.png`;
 					)
 				}
 				<a class="boton boton--claro" href="/?empezar" data-pedirla>¿Puede pedirla tu negocio?</a>
+				<!-- Solo con JavaScript: se guarda en este navegador (portada, «Solo mis guardadas») -->
+				<button type="button" class="boton boton--claro" data-guardar hidden aria-pressed="false">☆ Guardar</button>
 			</div>
 
 			<!-- Si ya respondió las preguntas en este navegador, el veredicto va aquí mismo -->
@@ -242,7 +247,7 @@ const imagenOg = `/og/${c.codigo}.png`;
 
 			<p class="nota">
 				Resumen hecho con IA a partir de las bases de la convocatoria. Es una orientación: antes de pedirla, lee la convocatoria oficial, que es
-				la que vale.
+				la que vale. ¿Ves algo mal? <a href={avisarError}>Avísanos</a>.
 			</p>
 		</article>
 	</main>
@@ -254,6 +259,19 @@ const imagenOg = `/og/${c.codigo}.png`;
 	import { hoyMadrid } from '../../lib/fechas';
 	import { textoMotivo } from '../../lib/lista';
 	import type { ConvocatoriaWeb } from '../../lib/tipos';
+	import { alternarGuardada, guardadas } from '../../lib/visitas';
+
+	const botonGuardar = document.querySelector<HTMLButtonElement>('[data-guardar]');
+	const codigo = location.pathname.match(/\/ayudas\/(\d+)/)?.[1];
+	if (botonGuardar && codigo) {
+		const pintar = (si: boolean) => {
+			botonGuardar.textContent = si ? '★ Guardada' : '☆ Guardar';
+			botonGuardar.setAttribute('aria-pressed', String(si));
+		};
+		pintar(guardadas().has(codigo));
+		botonGuardar.addEventListener('click', () => pintar(alternarGuardada(codigo)));
+		botonGuardar.hidden = false;
+	}
 
 	const TITULOS = { si: 'Puedes pedirla', revisa: 'Revisa los detalles: podría encajar', no: 'No encaja con tu negocio' };
 	const caja = document.querySelector<HTMLElement>('#veredicto');
@@ -440,6 +458,28 @@ const imagenOg = `/og/${c.codigo}.png`;
 
 	.boton:hover {
 		transform: translateY(-1px);
+	}
+
+	.boton[hidden] {
+		display: none;
+	}
+
+	button.boton {
+		border: 0;
+		font: inherit;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	.boton[aria-pressed='true'] {
+		color: var(--accent-text);
+	}
+
+	.nota a {
+		color: inherit;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
 	}
 
 	.boton--claro {

@@ -109,6 +109,12 @@ details.grupo > summary {
 	line-height: 1.4;
 }
 
+.ayuda-datos li.nueva {
+	background: var(--text);
+	color: var(--bg);
+	font-weight: 500;
+}
+
 .ayuda-datos li.pronto {
 	background: var(--accent-soft);
 }
@@ -207,4 +213,28 @@ details.grupo > summary {
 	text-decoration-color: var(--accent);
 	text-underline-offset: 0.25em;
 	font-size: 0.875rem;
+}
+
+/* Guardar la ayuda en este navegador (portada) */
+.guardar {
+	float: right;
+	margin: -0.35rem -0.5rem 0.25rem 0.75rem;
+	padding: 0.35rem 0.6rem;
+	border: 0;
+	border-radius: 999px;
+	background: none;
+	color: var(--text-muted);
+	font: inherit;
+	font-size: 0.8125rem;
+	cursor: pointer;
+}
+
+.guardar:hover,
+.guardar[aria-pressed='true'] {
+	color: var(--accent-text);
+}
+
+.guardar:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 1px;
 }

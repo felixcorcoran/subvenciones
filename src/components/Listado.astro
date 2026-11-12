@@ -23,18 +23,32 @@ interface Props {
 	noindex?: boolean;
 	/** La propia página, para no enlazarla en «Más ayudas» */
 	actual: string;
+	/** Calendario de plazos y RSS de la página (las de una comunidad) */
+	seguir?: { nombre: string; ics: string; rss: string };
 }
 
-const { title, description, eyebrow, h1, lead, grupos, hoy, noindex = false, actual } = Astro.props;
+const { title, description, eyebrow, h1, lead, grupos, hoy, noindex = false, actual, seguir } = Astro.props;
+const webcal = seguir ? new URL(seguir.ics, Astro.site).href.replace(/^https?:/, 'webcal:') : null;
 ---
 
-<Base title={title} description={description} noindex={noindex}>
+<Base title={title} description={description} noindex={noindex} rss={seguir && { titulo: `Ayudas nuevas en ${seguir.nombre}`, href: seguir.rss }}>
 	<main class="listado">
 		<a class="volver" href="/">← Todas las ayudas</a>
 		<p class="eyebrow">{eyebrow}</p>
 		<h1>{h1}</h1>
 		<p class="lead">{lead}</p>
 		<p class="cta"><a class="boton" href="/?empezar">¿Cuáles puede pedir tu negocio?</a></p>
+		{
+			seguir && webcal && (
+				<p class="seguir">
+					Síguelas sin dar tu email: <a href={webcal}>los plazos en tu calendario</a>
+					<span aria-hidden="true"> · </span>
+					<a href={`https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcal)}`} target="_blank" rel="noopener">en Google Calendar ↗</a>
+					<span aria-hidden="true"> · </span>
+					<a href={seguir.rss}>RSS</a>
+				</p>
+			)
+		}
 
 		{
 			grupos
@@ -125,6 +139,19 @@ const { title, description, eyebrow, h1, lead, grupos, hoy, noindex = false, act
 		font-size: 0.9375rem;
 		font-weight: 500;
 		text-decoration: none;
+	}
+
+	.seguir {
+		margin: 1rem 0 0;
+		font-size: 0.875rem;
+		line-height: 1.7;
+		color: var(--text-muted);
+	}
+
+	.seguir a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
 	}
 
 	.vacio {

@@ -18,7 +18,7 @@
 import { documento } from './bdns.ts';
 import { GeminiUnavailable, generateJson } from './gemini.ts';
 import { guardarDatos, hoyIso, leerDatos } from './almacen.ts';
-import { analisisValido, porLeer, revisarCierreIa, titularValido } from './lectura.ts';
+import { analisisValido, limpiarMunicipio, porLeer, revisarCierreIa, titularValido } from './lectura.ts';
 import { cierre } from '../src/lib/fechas.ts';
 import { estado } from '../src/lib/estado.ts';
 import type { Analisis, Convocatoria } from '../src/lib/tipos.ts';
@@ -63,7 +63,7 @@ Reglas:
 - condiciones.autonomos / sociedades: "si" si pueden pedirla, "no" si quedan fuera, "no_consta" si no lo dice.
 - condiciones.emprendedores: "si" si pueden pedirla personas que aún no han empezado su negocio (por ejemplo, ayudas para darse de alta), "no" si hay que tener ya la actividad en marcha, "no_consta" si no lo dice.
 - condiciones.maxEmpleados: el máximo de trabajadores permitido, o null. antiguedadMinMeses: meses mínimos de actividad, o null. antiguedadMaxMeses: si solo vale para negocios creados hace menos de X meses, esos meses; si no, null.
-- condiciones.municipio: si el negocio tiene que estar en un municipio concreto, su nombre; si no, null.
+- condiciones.municipio: si el negocio tiene que estar en uno o varios municipios concretos, sus nombres separados por comas. Si la condición es estar en una comunidad autónoma o una provincia entera, null (esa zona ya se sabe por otra vía). Si no hay condición de municipio, null.
 - dudas: una frase corta con lo importante que no queda claro, o null.`;
 
 const SINO = { type: 'STRING', enum: ['si', 'no', 'no_consta'] };
@@ -150,6 +150,8 @@ for (const c of pendientes) {
 		else delete data.titular;
 		c.ia = data;
 		c.iaModelo = model;
+		// «Cataluña» no es un municipio (limpiarMunicipio, lectura.ts)
+		limpiarMunicipio(c);
 		// La fecha de cierre leída solo se queda si no contradice a la BDNS y no es dudosa
 		delete c.cierreDescartado;
 		if (revisarCierreIa(c)) console.log(`  ${c.codigo}: fecha de cierre de las bases descartada (${c.cierreDescartado!.motivo})`);

@@ -110,3 +110,7 @@ export function indexable(c: ConvocatoriaWeb, hoy: string): boolean {
 	const e = estado(c, hoy);
 	return (!c.ia || c.ia.categoria === 'ayuda') && e !== 'por_verificar' && e !== 'plazo_previo_cerrado' && e !== 'cerrada';
 }
+
+/** Las ayudas de la lista (sin premios ni otras, sin cerradas ni «por verificar») */
+export const ayudasAbiertas = <T extends ConvocatoriaWeb>(lista: T[], hoy: string): T[] =>
+	lista.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && ['abierta', 'proxima', 'sin_fecha'].includes(estado(c, hoy)));

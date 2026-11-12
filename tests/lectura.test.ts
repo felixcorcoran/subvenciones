@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa, titularValido } from '../scripts/lectura';
+import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa, limpiarMunicipio, titularValido } from '../scripts/lectura';
 import { cierre } from '../src/lib/encaje';
 import type { Analisis, Convocatoria } from '../src/lib/tipos';
 import { analisis, convocatoria, HOY } from './ayudas';
@@ -136,5 +136,26 @@ describe('titular corto', () => {
 	it('un análisis sin titular sigue siendo válido; uno con titular que no es texto, no', () => {
 		expect(analisisValido(analisis())).toBe(true);
 		expect(analisisValido({ ...analisis(), titular: 3 })).toBe(false);
+	});
+});
+
+describe('municipio que en realidad es una comunidad o provincia', () => {
+	const con = (municipio: string, nivel1 = 'AUTONOMICA', regiones = [{ codigo: 'ES51', nombre: 'CATALUÑA' }]) =>
+		convocatoria({ organo: { nivel1, nivel2: 'CATALUÑA', nivel3: 'DEPARTAMENT' }, regiones, ia: analisis({}, { municipio }) }) as Convocatoria;
+
+	it('se quita si convoca un órgano no local y la BDNS ya acota la zona', () => {
+		for (const m of ['Cataluña', 'Comunidad Autónoma de Euskadi', 'Comunitat Valenciana', 'Illes Balears', 'Alicante', 'Melilla']) {
+			const c = con(m);
+			expect(limpiarMunicipio(c), m).toBe(true);
+			expect(c.ia!.condiciones.municipio).toBeNull();
+		}
+	});
+
+	it('se queda si es un municipio, una comarca, lo convoca un ayuntamiento o la BDNS no acota la zona', () => {
+		expect(limpiarMunicipio(con('Sabadell'))).toBe(false);
+		expect(limpiarMunicipio(con('Comarcas gerundenses'))).toBe(false);
+		expect(limpiarMunicipio(con('Almería', 'LOCAL'))).toBe(false);
+		expect(limpiarMunicipio(con('Cataluña', 'AUTONOMICA', [{ codigo: 'ES', nombre: 'ESPAÑA' }]))).toBe(false);
+		expect(limpiarMunicipio(con('Cataluña', 'AUTONOMICA', []))).toBe(false);
 	});
 });

@@ -54,6 +54,8 @@ export interface Convocatoria {
 	sede: string | null;
 	/** Fecha en que se registró en la BDNS (AAAA-MM-DD) */
 	publicada: string;
+	/** Día en que entró en el radar (las del relleno se registraron mucho antes); las antiguas no lo tienen */
+	alta?: string;
 	tipo: string | null;
 	presupuesto: number | null;
 	beneficiarios: string[];

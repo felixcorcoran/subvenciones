@@ -5,6 +5,7 @@
 import type { Analisis, Convocatoria } from '../src/lib/tipos.ts';
 import { mencionaFecha, plazoPrevio } from '../src/lib/fechas.ts';
 import { estado } from '../src/lib/estado.ts';
+import provincias from '../src/data/provincias.json' with { type: 'json' };
 
 /** Intentos fallidos seguidos antes de esperar */
 export const MAX_INTENTOS = 3;
@@ -102,4 +103,49 @@ export function analisisValido(a: unknown): a is Analisis {
 export function titularValido(t: string | undefined): string | undefined {
 	const limpio = t?.trim().replace(/\.$/, '');
 	return limpio && limpio.length <= 90 ? limpio : undefined;
+}
+
+const plano = (s: string) =>
+	s
+		.normalize('NFD')
+		.replace(/\p{M}/gu, '')
+		.toLowerCase()
+		.replace(/[^a-z ]+/g, ' ')
+		.replace(/\s+/g, ' ')
+		.trim();
+/** Comunidades y provincias enteras, con los nombres con que las escriben las bases */
+const ZONAS_ENTERAS = new Set(
+	[
+		...provincias.flatMap((p) => [p.nombre, p.comunidad, ...p.nombre.split('/')]),
+		'España',
+		'Euskadi',
+		'Catalunya',
+		'Comunidad Valenciana',
+		'Islas Baleares',
+		'Principado de Asturias',
+		'Comunidad Foral de Navarra',
+		'Galiza',
+	].map(plano),
+);
+const PREFIJOS = /^(comunidad autonoma (de |del )?|comunidad (de |del )?|ciudad autonoma de |region de |principado de |provincia de )/;
+
+/**
+ * Quita de `condiciones.municipio` lo que no es un municipio: la IA a veces
+ * pone ahí la comunidad o la provincia entera («Cataluña», «Comunidad
+ * Autónoma de Euskadi») y la web decía «Es de Cataluña: normalmente solo para
+ * negocios de allí». Solo si convoca un órgano que no es local: esa zona ya
+ * la da la BDNS (regiones). «Almería» de un ayuntamiento sí es su municipio,
+ * y una comarca o una lista de pueblos se quedan (son una restricción real).
+ * Devuelve si ha cambiado algo.
+ */
+export function limpiarMunicipio(c: Convocatoria): boolean {
+	const m = c.ia?.condiciones.municipio;
+	if (!m || c.organo.nivel1 === 'LOCAL') return false;
+	// Solo si la BDNS ya acota la zona: si la marca para toda España, quitarlo la abriría a todo el país
+	const zonas = c.regiones.filter((r) => r.codigo.startsWith('ES'));
+	if (zonas.length === 0 || zonas.some((r) => r.codigo === 'ES')) return false;
+	const t = plano(m);
+	if (!ZONAS_ENTERAS.has(t) && !ZONAS_ENTERAS.has(t.replace(PREFIJOS, ''))) return false;
+	c.ia!.condiciones.municipio = null;
+	return true;
 }
