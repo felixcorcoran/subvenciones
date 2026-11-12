@@ -22,7 +22,7 @@ La web sigue funcionando igual: esta carpeta tiene su propio workflow
 | 2. Servicios y eventos | recogida, lectura con IA, encaje y avisos unidos por Kafka; idempotencia, DLT y outbox | hecha |
 | 3. IA medida | «Pregunta a la convocatoria»: RAG con pgvector, citas literales comprobadas y evaluación con datos en CI | hecha |
 | 4. Seguridad | OAuth2 / OIDC con Keycloak; cada servicio, resource server con Spring Security; pasarela con CORS y límite por IP | hecha |
-| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana, panel propio y alertas por correo; Kubernetes en local (kind + Helm); AWS con Terraform (EKS, RDS, ECR) escrito y validado. Falta: aplicarlo y grabar la demo | **en marcha** |
+| 5. Operación | hecho: OpenTelemetry (trazas que cruzan Kafka y la outbox, métricas) con Grafana, panel propio y alertas por correo; Kubernetes en local (kind + Helm); AWS con Terraform (EKS, RDS, ECR), levantado, probado y apagado | hecha |
 
 ## Cómo encaja todo
 
@@ -40,7 +40,7 @@ Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo p
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: levantar la demo en AWS, grabarla y apagarla.
+Lo siguiente: el vídeo de la demo.
 
 ## Seguridad y pasarela
 
