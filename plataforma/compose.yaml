@@ -12,7 +12,9 @@ services:
     volumes:
       - ./infra/postgres/crear-bases.sql:/docker-entrypoint-initdb.d/crear-bases.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U subvenciones -d subvenciones"]
+      # Por TCP y contra la última base que se crea: durante la preparación inicial PostgreSQL solo
+      # escucha por socket y luego se reinicia; así los servicios no arrancan hasta que está listo de verdad
+      test: ["CMD-SHELL", "PGPASSWORD=subvenciones psql -h 127.0.0.1 -U subvenciones -d preguntas -c 'select 1' > /dev/null"]
       interval: 5s
       retries: 10
 
@@ -45,10 +47,13 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/recogida
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://lgtm:4318
       KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
       KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       # En local no se programa: se lanza a mano con POST localhost:8081/api/v1/recogidas
       RECOGIDA_CRON: "-"
+      # Días hacia atrás de la primera pasada (menos, para una prueba rápida)
+      SUBVENCIONES_RECOGIDA_DIAS_ATRAS: ${DIAS_ATRAS:-14}
     ports:
       - "8081:8081"
     depends_on:
@@ -64,6 +69,7 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/lectura
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://lgtm:4318
       KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
       KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       # La clave de Google AI Studio (proyecto sin facturación) se toma del entorno; sin ella no se lee nada
@@ -87,6 +93,7 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/subvenciones
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://lgtm:4318
       KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
       KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
     ports:
@@ -104,6 +111,7 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/avisos
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://lgtm:4318
       KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
       KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       ENCAJE_URL: http://servicio-encaje:8080
@@ -128,6 +136,7 @@ services:
     environment:
       DATABASE_URL: jdbc:postgresql://postgres:5432/preguntas
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://lgtm:4318
       KEYCLOAK_EMISOR: http://localhost:8180/realms/subvenciones
       KEYCLOAK_CLAVES: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
@@ -169,6 +178,7 @@ Connection: close
       context: .
       dockerfile: pasarela/Dockerfile
     environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://lgtm:4318
       ENCAJE_URL: http://servicio-encaje:8080
       RECOGIDA_URL: http://servicio-recogida:8081
       LECTURA_URL: http://servicio-lectura:8082
@@ -176,6 +186,23 @@ Connection: close
       PREGUNTAS_URL: http://servicio-preguntas:8084
     ports:
       - "8000:8000"
+
+  # Observabilidad en un contenedor: recibe OTLP (4318) y trae Grafana (3000), Tempo, Prometheus y Loki
+  lgtm:
+    image: grafana/otel-lgtm:0.11.10
+    # El panel «Plataforma» y las alertas (infra/grafana); las alertas llegan por correo a Mailpit
+    environment:
+      GF_SMTP_ENABLED: "true"
+      GF_SMTP_HOST: mailpit:1025
+      GF_SMTP_FROM_ADDRESS: grafana@subvenciones.local
+      GF_SMTP_STARTTLS_POLICY: NoStartTLS
+    volumes:
+      - ./infra/grafana/paneles.yaml:/otel-lgtm/grafana/conf/provisioning/dashboards/subvenciones.yaml:ro
+      - ./infra/grafana/alertas.yaml:/otel-lgtm/grafana/conf/provisioning/alerting/subvenciones.yaml:ro
+      - ./infra/grafana/panel-plataforma.json:/otel-lgtm/subvenciones/panel-plataforma.json:ro
+    ports:
+      - "3000:3000"
+      - "4318:4318"
 
   # Recoge los correos en local sin mandarlos a nadie: http://localhost:8025
   mailpit:
