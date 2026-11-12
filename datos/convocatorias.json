@@ -1,6 +1,846 @@
 {
-	"actualizado": "2026-11-12T13:57:51.544Z",
+	"actualizado": "2026-11-12T21:32:07.456Z",
 	"convocatorias": [
+		{
+			"codigo": "941806",
+			"titulo": "GC CONVOCATORIA DE SUBVENCIONES DESTINADAS A LA CREACIÓN DE EMPRESAS DE INSERCIÓN EN LA ISLA DE GRAN CANARIA, AÑO 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE GRAN CANARIA",
+				"nivel3": "CABILDO INSULAR DE GRAN CANARIA"
+			},
+			"sede": null,
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 379392.11,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "78",
+					"nombre": "Actividades relacionadas con el empleo"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES705",
+					"nombre": "Gran Canaria"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": "2026-11-17",
+			"fin": "2026-11-30",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://cabildogc.grancanaria.com/documents/10180/11297340/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria/33077d88-3822-4049-bca7-af8199d49ef4",
+			"documento": {
+				"id": 1554732,
+				"nombre": "Convocatoria y anexos.pdf"
+			},
+			"docs": [
+				1554732
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941806",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones del Cabildo de Gran Canaria para apoyar la creación de nuevas empresas de inserción laboral en la isla. Financian tanto el salario del personal contratado como las inversiones necesarias para iniciar la actividad.",
+				"paraQuien": "Empresas (sociedades mercantiles, laborales o cooperativas) creadas en Gran Canaria a partir del 1 de abril de 2026 y promovidas por entidades sin ánimo de lucro.",
+				"importe": "Proyectos de entre 40.000 € y 85.000 € (máximo 50.000 € para personal y máximo 35.000 € para inversiones).",
+				"importeMaximo": 85000,
+				"plazo": "10 días hábiles a contar desde el día siguiente a su publicación en el Boletín Oficial de la Provincia de Las Palmas.",
+				"plazoFin": null,
+				"requisitos": [
+					"Estar constituida como sociedad mercantil, laboral o cooperativa entre el 1 de abril de 2026 y la fecha de solicitud.",
+					"Tener la sede social en la isla de Gran Canaria.",
+					"Estar promovida y participada al 100 % por entidades sin ánimo de lucro o de economía social (según los límites legales de su forma jurídica).",
+					"Tener como fin principal la integración laboral de personas en riesgo de exclusión o vulnerabilidad social.",
+					"No haber solicitado la calificación provisional como Empresa de Inserción antes de pedir esta ayuda.",
+					"Estar al corriente de pagos con Hacienda y la Seguridad Social."
+				],
+				"gastos": [
+					"Costes salariales para la contratación de un máximo de 3 personas (entre 6 y 12 meses)",
+					"Maquinaria",
+					"Instalaciones",
+					"Mobiliario",
+					"Vehículos",
+					"Equipamiento informático",
+					"Obras necesarias para arrancar la actividad",
+					"Gastos de notaría y registro por la compra de bienes"
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941792",
+			"titulo": "CONVOCATORIA DE CONCESIÓN EN RÉGIMEN DE CONCURRENCIA COMPETITIVA DE SUBVENCIONES CON DESTINO A COLABORACIÓN DE INICIATIVAS CULTURALES, EJERCICIO 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "BOLTAÑA",
+				"nivel3": "AYUNTAMIENTO DE BOLTAÑA"
+			},
+			"sede": "https://boltana.sedelectronica.es/",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "91",
+					"nombre": "Actividades de bibliotecas, archivos, museos y otras actividades culturales"
+				},
+				{
+					"codigo": "90",
+					"nombre": "Actividades de creación artística y artes escénicas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES241",
+					"nombre": "Huesca"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la publicación del extracto de la convocatoria en el B.O.P.HU.",
+			"textoFin": "20 días naturales desde día siguiente a publicación convocatoria en B.O.P.HU.",
+			"bases": "https://boltana.sedelectronica.es/transparency/8f4bdb69-72b5-471a-b909-96bac77acfa2/",
+			"documento": {
+				"id": 1554691,
+				"nombre": "BASES REGULADORAS SUBVENCIONES CULTURALES.pdf"
+			},
+			"docs": [
+				1554691,
+				1554692,
+				1554693,
+				1554694,
+				1554695,
+				1554696,
+				1554697,
+				1554701
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941792",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para financiar la realización de proyectos, programas y actividades culturales o socio-culturales en el municipio de Boltaña durante el año 2026.",
+				"paraQuien": "Asociaciones locales con sede social y actividad en Boltaña, y personas o profesionales que desarrollen actividades culturales en el municipio.",
+				"importe": "Hasta el 65 % del presupuesto de la actividad, con un máximo de 1.000 €.",
+				"importeMaximo": 1000,
+				"plazo": "20 días naturales a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Huesca.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener la sede social y desarrollar la actividad cultural en el municipio de Boltaña.",
+					"No tener firmado un convenio con el Ayuntamiento de Boltaña para el año 2026.",
+					"No recibir otra subvención por parte del Ayuntamiento de Boltaña.",
+					"Estar al corriente en el pago de las obligaciones tributarias y con la Seguridad Social.",
+					"No incurrir en ninguna de las prohibiciones para ser beneficiario establecidas en la Ley General de Subvenciones."
+				],
+				"gastos": [
+					"Adquisición de muebles, equipamiento o materiales necesarios para realizar la actividad (hasta un máximo del 50 % de la ayuda justificada).",
+					"Gastos directamente relacionados con la organización y desarrollo de actividades culturales durante 2026."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Boltaña"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941764",
+			"titulo": "CONVOCATORIA PÚBLICA DEL XXXIX CERTAMEN DE NACIMIENTOS 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SAN FERNANDO",
+				"nivel3": "AYUNTAMIENTO DE SAN FERNANDO"
+			},
+			"sede": "Registro Electrónico General del Ayuntamiento de San Fernando (https://sede.sanfernando.es",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 3608.4,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES612",
+					"nombre": "Cádiz"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "el día siguiente a la publicación de la convocatoria en el BOP",
+			"textoFin": "diez días hábiles después contados desde el día siguiente a la publicación de la convocatoria en",
+			"bases": "https://www.sanfernando.es/ayto/",
+			"documento": {
+				"id": 1554569,
+				"nombre": "BASES RECTIFICADAS NAC.pdf"
+			},
+			"docs": [
+				1554569,
+				1554580,
+				1554583,
+				1554588
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941764",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso del Ayuntamiento de San Fernando que premia la creación y exposición de nacimientos o belenes navideños de nueva creación instalados en la localidad.",
+				"paraQuien": "Particulares, comercios, empresas, asociaciones, entidades y centros educativos con belenes ubicados en San Fernando.",
+				"importe": "En la modalidad de entidades y comercios: primer premio de 550 €, segundo premio de 500 € y tercer premio de 450 €, además de premios especiales de entidades colaboradoras.",
+				"importeMaximo": 550,
+				"plazo": "10 días hábiles a contar desde el día siguiente al de la publicación de la convocatoria en el Boletín Oficial de la Provincia de Cádiz.",
+				"plazoFin": null,
+				"requisitos": [
+					"Instalar y exponer el belén en el municipio de San Fernando.",
+					"El nacimiento debe ser de nueva creación y tener como tema central El Portal.",
+					"Mantener el belén expuesto del 6 de diciembre al 5 de enero (modalidad entidades y comercios).",
+					"Permitir el acceso del jurado el día de la visita de 17:00 a 22:00 horas.",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y frente a la Seguridad Social."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "San Fernando"
+				},
+				"dudas": "No consta la fecha exacta de publicación en el Boletín Oficial de la Provincia de Cádiz para determinar el día concreto de fin de plazo."
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941739",
+			"titulo": "Bases reguladoras de la convocatoria de subvenciones, en régimen de concurrencia competitiva, de fomento al asociacionismo y participación ciudadana en el ámbito cultural",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABEZÓN DE LA SAL",
+				"nivel3": "AYUNTAMIENTO DE CABEZÓN DE LA SAL"
+			},
+			"sede": "https://sede.cabezondelasal.net",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 13000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES130",
+					"nombre": "Cantabria"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente de la publicación de este extracto en la convocatoria del BOC",
+			"textoFin": "Diez días naturales contados a partir de la publicación de este extracto en la convocatoria del BOC",
+			"bases": "https://www.cabezondelasal.net",
+			"documento": {
+				"id": 1554509,
+				"nombre": "Bases concurrencia competitiva cultura 2026.pdf"
+			},
+			"docs": [
+				1554509
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941739",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas del Ayuntamiento de Cabezón de la Sal para financiar proyectos, actividades y el funcionamiento de asociaciones culturales del municipio durante el año 2026.",
+				"paraQuien": "Asociaciones culturales constituidas o en trámite de inscripción situadas en el municipio de Cabezón de la Sal.",
+				"importe": "Hasta 3.500 € por asociación",
+				"importeMaximo": 3500,
+				"plazo": "10 días naturales a partir del día siguiente al de la publicación del extracto de la convocatoria en el Boletín Oficial de Cantabria (BOC).",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser una asociación cultural legalmente constituida en Cabezón de la Sal.",
+					"Estar inscrita en el Registro Municipal de Asociaciones antes del 1 de julio de 2025 (o haber iniciado el trámite antes de publicarse la convocatoria).",
+					"Haber justificado correctamente las subvenciones de años anteriores concedidas por el Ayuntamiento.",
+					"Estar al corriente de pagos con Hacienda, la Seguridad Social, el Gobierno de Cantabria y el Ayuntamiento.",
+					"No recibir una subvención nominativa en el presupuesto municipal de 2026.",
+					"No estar incurso en prohibiciones para recibir ayudas públicas."
+				],
+				"gastos": [
+					"Gastos corrientes y de funcionamiento necesarios para llevar a cabo la actividad.",
+					"Adquisición de bienes fungibles de duración inferior al ejercicio presupuestario."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Cabezón de la Sal"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941719",
+			"titulo": "CONVOCATORIA Y ANEXOS DE CONCESIÓN DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA NO COMPETITIVA, LE15-LS1 (BONOS DE COMERCIO), DEL EJERCICIO 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "UTRERA",
+				"nivel3": "AYUNTAMIENTO DE UTRERA"
+			},
+			"sede": null,
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 30000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES618",
+					"nombre": "Sevilla"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Plazo de 10 días naturales  a partir de la fecha de publicación del extracto de las bases en bop",
+			"textoFin": "Transcurridos 10 días naturales desde la publicación del extracto en bop",
+			"bases": "www.utrera.org",
+			"documento": {
+				"id": 1554477,
+				"nombre": "acuerdo jgl bonos comercio (2).pdf"
+			},
+			"docs": [
+				1554426,
+				1554427,
+				1554477
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941719",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941708",
+			"titulo": "Bases y convocatoria del concurso de decoración de Navidad 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CARBALLIÑO, O",
+				"nivel3": "AYUNTAMIENTO DE CARBALLIÑO, O"
+			},
+			"sede": "https://carballino.sedelectronica.gal/",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 900,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES113",
+					"nombre": "Ourense"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": "2026-12-11",
+			"textoInicio": "Al día siguiente de la publicación en el BOP Ourense",
+			"textoFin": null,
+			"bases": "https://carballino.sedelectronica.gal/",
+			"documento": {
+				"id": 1554456,
+				"nombre": "20261109_Outros_Bases de convocatoria_Bases y convocatoria Concurso decoración Navidad 2026-cast.pdf"
+			},
+			"docs": [
+				1554454,
+				1554456
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941708",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941707",
+			"titulo": "BASES QUE REGIRAN LA PARTICIPACION DE LOS CENTROS ESCOLARES DE TORREJON DE ARDOZ EN EL `XXVII CERTAMEN LITERARIO ESCOLAR` CURSO 2026/2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "TORREJÓN DE ARDOZ",
+				"nivel3": "AYUNTAMIENTO DE TORREJÓN DE ARDOZ"
+			},
+			"sede": null,
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85",
+					"nombre": "Educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": "2027-01-29",
+			"textoInicio": "EL DIA SIGUIENTE DE LA PUBLICACION EN EL BOCAM",
+			"textoFin": null,
+			"bases": "https://www.ayto-torrejon.es/sites/default/files/intranet//MiPaginaDescargas/744_Ordenanzas%20subvenciones.pdf",
+			"documento": {
+				"id": 1554465,
+				"nombre": "6591480-Certificado_JGL_26_10_2026_punto_2_Educacion_CERTAMEN_LITERARIO_.PDF"
+			},
+			"docs": [
+				1554465
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941707",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941696",
+			"titulo": "Convocatoria Pública y Bases del Concurso de Decoración Navideña con motivo de la Navidad 2026 en el Distrito Norte",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SEVILLA",
+				"nivel3": "AYUNTAMIENTO DE SEVILLA"
+			},
+			"sede": null,
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES618",
+					"nombre": "Sevilla"
+				}
+			],
+			"finalidad": "Servicios Sociales y Promoción Social",
+			"inicio": "2026-11-24",
+			"fin": "2026-12-02",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "http://www.dipusevilla.es/export/bop/200507/14.pdf",
+			"documento": {
+				"id": 1554417,
+				"nombre": "9. RESOLUCION APROBACION BASES CONCURSO firmada.pdf"
+			},
+			"docs": [
+				1554417
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941696",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941687",
+			"titulo": "CONVOCATORIA AUXILIOS ECONOMICOS A OBRAS HIDRAULICAS DE INICIATIVA PRIVADA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE LA PALMA",
+				"nivel3": "CONSEJO INSULAR DE AGUAS DE LA PALMA"
+			},
+			"sede": null,
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 600000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "36",
+					"nombre": "Captación, depuración y distribución de agua"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES707",
+					"nombre": "La Palma"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "DIA SIGUIENTE A LA PUBLICACIÓN DEL EXTRACTO DE LA CONVOCATORIA",
+			"textoFin": "DOS MESES A CONTAR DESDE EL DÍA SIGUIENTE A LA PUBLICACIÓN DEL EXTRACTO DE LA CONVOCATORIA",
+			"bases": "https://www.gobiernodecanarias.org/boc/archivo/2026/224/",
+			"documento": {
+				"id": 1554398,
+				"nombre": "ANUNCIO pdf.pdf"
+			},
+			"docs": [
+				1554398,
+				1554730
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941687",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941683",
+			"titulo": "Feria SangriLa Chengdu",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "INSTITUTO DE PROMOCIÓN EXTERIOR DE CASTILLA-LA MANCHA"
+			},
+			"sede": "https://www.jccm.es/tramites",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 40000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "11",
+					"nombre": "Fabricación de bebidas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": "2026-12-17",
+			"textoInicio": "Desde el día siguiente de su publicación en el DOCM",
+			"textoFin": null,
+			"bases": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2022/08/05/pdf/2022_7238.pdf&tipo=rutaDocm",
+			"documento": {
+				"id": 1554415,
+				"nombre": "CONVOCATORIA FERIA SHANGRILA CHENGDU 2027_095437.PDF"
+			},
+			"docs": [
+				1554415,
+				1554416
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941683",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941669",
+			"titulo": "AYUDAS PARA EL AUTOEMPLEO Y PARA FAVORECER LA INSTALACIÓN DE ACTIVIDADES ECONÓMICAS EN ALMATRET",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ALMATRET",
+				"nivel3": "AYUNTAMIENTO DE ALMATRET"
+			},
+			"sede": null,
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 25000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES51",
+					"nombre": "CATALUÑA"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Dia posterior a su publicación al BOP Lleida",
+			"textoFin": "Agotar existencias",
+			"bases": "https://almatret.eadministracio.cat/board",
+			"documento": {
+				"id": 1554370,
+				"nombre": "convocatoriacastellano.pdf"
+			},
+			"docs": [
+				1554366,
+				1554370
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941669",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941636",
+			"titulo": "Resolución de 10 de noviembre de 2026,  del Director del Instituto de Fomento de la Región de Murcia, por delegación, de convocatoria de ayudas a la participación en ferias, eventos y misiones comerciales. Feria Fruit Logistica 2027.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "REGIÓN DE MURCIA",
+				"nivel3": "INSTITUTO DE FOMENTO DE LA REGIÓN DE MURCIA (INFO)"
+			},
+			"sede": "https://sede.institutofomentomurcia.es/infodirecto",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 49000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "46.2",
+					"nombre": "Comercio al por mayor de materias primas agrarias y de animales vivos"
+				},
+				{
+					"codigo": "46.3",
+					"nombre": "Comercio al por mayor de productos alimenticios, bebidas y tabaco"
+				},
+				{
+					"codigo": "46.9",
+					"nombre": "Comercio al por mayor no especializado"
+				},
+				{
+					"codigo": "47.2",
+					"nombre": "Comercio al por menor de productos alimenticios, bebidas y tabaco"
+				},
+				{
+					"codigo": "46.1",
+					"nombre": "Intermediarios del comercio al por mayor"
+				},
+				{
+					"codigo": "72.1",
+					"nombre": "Investigación y desarrollo experimental en ciencias naturales y técnicas"
+				},
+				{
+					"codigo": "82.9",
+					"nombre": "Otras actividades de apoyo a las empresas n.c.o.p."
+				},
+				{
+					"codigo": "46.8",
+					"nombre": "Otro comercio al por mayor especializado"
+				},
+				{
+					"codigo": "10.3",
+					"nombre": "Procesado y conservación de frutas y hortalizas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES620",
+					"nombre": "Murcia"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la publicación en el BORM.",
+			"textoFin": "Hasta 8 días hábiles a partir del siguiente a la publicación de extracto de esta convocatoria.",
+			"bases": "https://www.borm.es/services/anuncio/ano/2024/numero/2148/pdf?id=826601",
+			"documento": {
+				"id": 1554295,
+				"nombre": "BORM FL 2027-Copia.pdf"
+			},
+			"docs": [
+				1554295,
+				1554297,
+				1554298
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941636",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941610",
+			"titulo": "Acuerdo de la JGL de 11/11/2026 por el que se convocan a través del procedimiento de concurrencia competitiva, subvenciones para el fomento de la actividad comercial mediante ayudas destinadas a financia el coste de la 1ª hora de aparcamiento",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "POZUELO DE ALARCÓN",
+				"nivel3": "AYUNTAMIENTO DE POZUELO DE ALARCÓN"
+			},
+			"sede": "https://sede.pozuelodealarcon.es/sede/main.action",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 84000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "desde el día siguiente a la publicación del extracto en el BOCM",
+			"textoFin": "5 días hábiles para entidades y 10 días hábiles para establecimientos adheridos",
+			"bases": "https://www.bocm.es/boletin/CM_Boletin_BOCM/2012/12/10/BOCM-20121210.PDF",
+			"documento": {
+				"id": 1554225,
+				"nombre": "ANUNCIO.pdf"
+			},
+			"docs": [
+				1554225
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941610",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941608",
+			"titulo": "Resolución de 11 de noviembre de 2026 de la Conselleria de Educación, Cultura y Universidades, por la que se convocan subvenciones al transporte universitario en la Comunitat Valenciana para el curso académico 2025-2026.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "COMUNITAT VALENCIANA",
+				"nivel3": "SECRETARÍA AUTONÓMICA DE UNIVERSIDADES"
+			},
+			"sede": "http://www.gva.es/es/inicio/procedimientos?id_proc=274",
+			"publicada": "2026-11-12",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 200000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85.6",
+					"nombre": "Actividades auxiliares a la educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES52",
+					"nombre": "COMUNIDAD VALENCIANA"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a su publicación en el DOGV",
+			"textoFin": "10 días hábiles a contar desde el día siguiente al de su publicación en el DOGV.",
+			"bases": "http://www.dogv.gva.es/datos/2019/02/08/pdf/2019_1039.pdf",
+			"documento": {
+				"id": 1554227,
+				"nombre": "05 RES CONV TRANSPORTE 25-26_firmado.pdf"
+			},
+			"docs": [
+				1554227,
+				1554228
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941608",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
 		{
 			"codigo": "941582",
 			"titulo": "CONVOCATORIA DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA COMPETITIVA PARA LA REACTIVACIÓN ECONÓMICA DE ESTABLECIMIENTOS Y EMPRESAS AFECTADAS POR OBRAS DE LARGA DURACIÓN EN LA VÍA PÚBLICA DE SANTIAGO DEL TEIDE.",
@@ -1262,6 +2102,54 @@
 			},
 			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "941374",
+			"titulo": "BASES CONCURSO DE DECORACIÓN DE ESCAPARATES DE NAVIDAD 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "AGUILAR DE LA FRONTERA",
+				"nivel3": "AYUNTAMIENTO DE AGUILAR DE LA FRONTERA"
+			},
+			"sede": "https://sede.eprinsa.es/aguilar",
+			"publicada": "2026-11-11",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1025,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES613",
+					"nombre": "Córdoba"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a su publicación en el Boletín Oficial de la Provincia",
+			"textoFin": "Pasados los 20 días naturales al siguiente a su publicación en el B.O.P.",
+			"bases": "https://sede.eprinsa.es/aguilar/tablon-de-edictos",
+			"documento": {
+				"id": 1553667,
+				"nombre": "Anuncio Bases Escaparates Navidad 2026.pdf"
+			},
+			"docs": [
+				1553667
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941374",
+			"ia": null,
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "941367",
@@ -3100,6 +3988,53 @@
 			},
 			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "940672",
+			"titulo": "BASES Y CONVOCATORIA DE SUBVENCIONES DEL PLAN ESTRATÉGICO DE SUBVENCIONES DEL AYUNTAMIENTO DE MARRATXÍ 2024-2025, LÍNEA ESTRATÉGICA B (CULTURA) PARA EL EJERCICIO 2025",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "MARRATXÍ",
+				"nivel3": "AYUNTAMIENTO DE MARRATXÍ"
+			},
+			"sede": "www.marratxi.es",
+			"publicada": "2026-11-09",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 15000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES532",
+					"nombre": "Mallorca"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente de la publicación de estas bases en la web municipal",
+			"textoFin": "A los QUINCE DÍAS HÁBILES",
+			"bases": "https://www.marratxi.es/wp-content/uploads/2024/05/Ordenanca-General-de-Subvencions.pdf",
+			"documento": {
+				"id": 1551860,
+				"nombre": "Bases subv. cultura (castellano).pdf"
+			},
+			"docs": [
+				1551860,
+				1551862
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940672",
+			"ia": null,
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "940659",
@@ -17014,7 +17949,7 @@
 			"docs": [
 				1539953
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936330",
@@ -17092,7 +18027,7 @@
 				1539938,
 				1539957
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936310",
@@ -17168,7 +18103,7 @@
 				1539893,
 				1539895
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936308",
@@ -17256,7 +18191,7 @@
 				1539889,
 				1539890
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17409,7 +18344,7 @@
 				1539873,
 				1539874
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17483,7 +18418,7 @@
 			"docs": [
 				1539758
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17557,7 +18492,7 @@
 				1539713,
 				1539714
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17630,7 +18565,7 @@
 			"docs": [
 				1539707
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17678,7 +18613,7 @@
 				1539688,
 				1539690
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaIntentadoEl": "2026-11-12"
 		},
 		{
@@ -17753,7 +18688,7 @@
 			"docs": [
 				1539619
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17838,7 +18773,7 @@
 				1541612,
 				1541613
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17916,7 +18851,7 @@
 			"docs": [
 				1539523
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -17992,7 +18927,7 @@
 			"docs": [
 				1539475
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18065,7 +19000,7 @@
 			"docs": [
 				1542909
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18156,7 +19091,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18311,7 +19246,7 @@
 			"docs": [
 				1539381
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18383,7 +19318,7 @@
 			"docs": [
 				1539339
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18464,7 +19399,7 @@
 			"docs": [
 				1539184
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18538,7 +19473,7 @@
 			"docs": [
 				1539146
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18619,7 +19554,7 @@
 			"docs": [
 				1539109
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18757,7 +19692,7 @@
 				1539059,
 				1539060
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -18829,7 +19764,7 @@
 			"docs": [
 				1539039
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -18932,7 +19867,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19004,7 +19939,7 @@
 			"docs": [
 				1538957
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19078,7 +20013,7 @@
 			"docs": [
 				1538945
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19154,7 +20089,7 @@
 			"docs": [
 				1538935
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19230,7 +20165,7 @@
 				1538794,
 				1538818
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19305,7 +20240,7 @@
 				1538742,
 				1538743
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19380,7 +20315,7 @@
 				1538740,
 				1538741
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-02-12",
@@ -19456,7 +20391,7 @@
 				1538736,
 				1538737
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-02-12",
@@ -19539,7 +20474,7 @@
 				1538729,
 				1538730
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-01-29",
@@ -19615,7 +20550,7 @@
 				1538579,
 				1538581
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -19713,7 +20648,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19798,7 +20733,7 @@
 				1538316,
 				1538317
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19875,7 +20810,7 @@
 			"docs": [
 				1538297
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -19971,7 +20906,7 @@
 				1546324,
 				1546325
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -20055,7 +20990,7 @@
 				1538204,
 				1538205
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20136,7 +21071,7 @@
 				1540989,
 				1540990
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20219,7 +21154,7 @@
 				1540156,
 				1540157
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20373,7 +21308,7 @@
 			"docs": [
 				1538046
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20457,7 +21392,7 @@
 				1539698,
 				1539699
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-12-15",
@@ -20543,7 +21478,7 @@
 				1539041,
 				1539042
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20636,7 +21571,7 @@
 				1540936,
 				1540937
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-08-26",
@@ -20724,7 +21659,7 @@
 				1539739,
 				1539740
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20799,7 +21734,7 @@
 			"docs": [
 				1537430
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -20870,7 +21805,7 @@
 			"docs": [
 				1537382
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -20947,7 +21882,7 @@
 				1537275,
 				1537278
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -21021,7 +21956,7 @@
 			"docs": [
 				1537283
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -21094,7 +22029,7 @@
 				1537272,
 				1537273
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -21210,7 +22145,7 @@
 				1537035,
 				1537036
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -21289,7 +22224,7 @@
 				1536908,
 				1536909
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -21370,7 +22305,7 @@
 				1536899,
 				1536900
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -21446,7 +22381,7 @@
 			"docs": [
 				1536840
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -21523,7 +22458,7 @@
 			"docs": [
 				1536839
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -21596,7 +22531,7 @@
 				1536837,
 				1536838
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -21676,7 +22611,7 @@
 			"docs": [
 				1536835
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-03",
@@ -21756,7 +22691,7 @@
 				1536572,
 				1536573
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -21829,7 +22764,7 @@
 				1536558,
 				1536559
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-05-01",
@@ -22033,7 +22968,7 @@
 				1536496,
 				1536497
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22113,7 +23048,7 @@
 				1536485,
 				1536486
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22204,7 +23139,7 @@
 				1536477,
 				1536478
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22310,7 +23245,7 @@
 			"docs": [
 				1536397
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22459,7 +23394,7 @@
 				1536204,
 				1536205
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22536,7 +23471,7 @@
 				1536149,
 				1538756
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22613,7 +23548,7 @@
 				1536113,
 				1536114
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22689,7 +23624,7 @@
 				1536093,
 				1536095
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22760,7 +23695,7 @@
 			"docs": [
 				1536016
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-14",
@@ -22845,7 +23780,7 @@
 			"docs": [
 				1536690
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -22928,7 +23863,7 @@
 			"docs": [
 				1541043
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -23004,7 +23939,7 @@
 			"docs": [
 				1535745
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -23075,7 +24010,7 @@
 				1535563,
 				1535564
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -23152,7 +24087,7 @@
 				1536189,
 				1536190
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -23228,7 +24163,7 @@
 				1546837,
 				1546838
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -23313,7 +24248,7 @@
 				1535433,
 				1535434
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -23387,22 +24322,22 @@
 				1535425,
 				1535426
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-12T13:57:51.544Z",
+			"fecha": "2026-11-12T21:32:07.456Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 200,
+			"fichasComprobadas": 75,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-12T14:15:27.133Z",
-			"pendientes": 1,
-			"leidas": 14,
-			"fallidas": 2,
+			"fecha": "2026-11-12T21:41:02.876Z",
+			"pendientes": 13,
+			"leidas": 4,
+			"fallidas": 0,
 			"ultimaLectura": "2026-11-12"
 		}
 	}
