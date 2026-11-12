@@ -95,6 +95,8 @@ Avisan por correo; en local llegan a Mailpit (http://localhost:8025). Probado as
 en `convocatorias.leidas` fue a las colas de errores de encaje, avisos y preguntas, y llegaron los
 tres correos; al parar `servicio-encaje`, llegó el de «ha dejado de mandar métricas».
 
+![El panel de Grafana con tráfico, en la demo de AWS](docs/capturas/aws-grafana.png)
+
 ## Kubernetes
 
 El chart de Helm ([`despliegue/helm/subvenciones`](despliegue/helm/subvenciones)) despliega los cinco
@@ -162,7 +164,21 @@ helm uninstall subvenciones
 terraform -chdir=despliegue/terraform destroy
 ```
 
-Escrito y validado, **aún no aplicado** contra una cuenta de AWS.
+Probado así (11 de noviembre de 2026, plan gratuito de AWS en eu-west-1): EKS 1.35 con dos nodos
+`m7i-flex.large`, RDS PostgreSQL 17 y las seis imágenes en ECR. Los 10 pods quedaron listos sin
+ningún reinicio, las bases las creó el contenedor previo de cada servicio y las 8 comprobaciones de
+`herramientas/prueba-seguridad.mjs` dieron bien. Una recogida real contra la BDNS encontró 354
+convocatorias y guardó 128, y las métricas llegaron a Grafana. Después, `terraform destroy` borró
+los 32 recursos y no quedó nada encendido. Estuvo levantada unas 5 horas y salió de los créditos
+del plan gratuito.
+
+![Nodos de EKS, pods, clúster y base de datos desde la terminal](docs/capturas/aws-terminal.png)
+
+![El clúster en la consola de EKS](docs/capturas/aws-consola-eks.png)
+
+![La base de datos en RDS](docs/capturas/aws-consola-rds.png)
+
+![Los repositorios de imágenes en ECR](docs/capturas/aws-consola-ecr.png)
 
 ## servicio-recogida
 
