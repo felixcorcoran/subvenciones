@@ -1,6 +1,374 @@
 {
-	"actualizado": "2026-11-11T21:30:06.713Z",
+	"actualizado": "2026-11-12T13:57:51.544Z",
 	"convocatorias": [
+		{
+			"codigo": "941582",
+			"titulo": "CONVOCATORIA DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA COMPETITIVA PARA LA REACTIVACIÓN ECONÓMICA DE ESTABLECIMIENTOS Y EMPRESAS AFECTADAS POR OBRAS DE LARGA DURACIÓN EN LA VÍA PÚBLICA DE SANTIAGO DEL TEIDE.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTIAGO DEL TEIDE",
+				"nivel3": "AYUNTAMIENTO DE SANTIAGO DEL TEIDE"
+			},
+			"sede": "https://sede.santiagodelteide.es/",
+			"publicada": "2026-11-11",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 100000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES709",
+					"nombre": "Tenerife"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación en el BOP",
+			"textoFin": "QUINCE días hábiles desde el siguiente a la publicación en BOP",
+			"bases": "https://www.bopsantacruzdetenerife.es/boletines/2026/7-8-26/7-8-26.pdf",
+			"documento": null,
+			"docs": [],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941582",
+			"ia": null,
+			"comprobada": "2026-11-12"
+		},
+		{
+			"codigo": "941574",
+			"titulo": "Programa BALIDATU, programa de ayudas de apoyo para la validación de tecnologías de proyectos empresariales innovadores de San Sebastián en un entorno real",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DONOSTIA/SAN SEBASTIÁN",
+				"nivel3": "FOMENTO DE SAN SEBASTIÁN S.A.- DONOSTIA SUSTAPENA"
+			},
+			"sede": null,
+			"publicada": "2026-11-11",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 60000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "P",
+					"nombre": "ADMINISTRACIÓN PÚBLICA Y DEFENSA; SEGURIDAD SOCIAL OBLIGATORIA"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				},
+				{
+					"codigo": "V",
+					"nombre": "ORGANISMOS EXTRATERRITORIALES"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES212",
+					"nombre": "Gipuzkoa"
+				}
+			],
+			"finalidad": "Investigación, desarrollo e innovación",
+			"inicio": null,
+			"fin": "2026-12-10",
+			"textoInicio": "Desde el día siguiente al de la publicación del extracto en el Boletín Oficial de Gipuzkoa",
+			"textoFin": null,
+			"bases": "www.fomentosansebastian.eus",
+			"documento": {
+				"id": 1554142,
+				"nombre": "PROGRAMA BALIDATU.pdf"
+			},
+			"docs": [
+				1554142,
+				1554143
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941574",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para financiar la realización de proyectos piloto en entornos reales de startups innovadoras de base tecnológica, permitiéndoles validar sus productos o servicios con una entidad tractora antes de su comercialización.",
+				"paraQuien": "Autónomos y pequeñas empresas consideradas startups innovadoras de base tecnológica que hayan participado previamente en programas de innovación de Fomento de San Sebastián.",
+				"importe": "Hasta 20.000 € por proyecto (cubre hasta el 70 % de los gastos subvencionables del piloto).",
+				"importeMaximo": 20000,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el Boletín Oficial de Gipuzkoa hasta el 10 de diciembre de 2026.",
+				"plazoFin": "2026-12-10",
+				"requisitos": [
+					"Desarrollar una actividad económica (alta en IAE) o estar válidamente constituido como empresa.",
+					"Ser una startup innovadora de base tecnológica.",
+					"Ser pequeña empresa con plantilla inferior a 50 personas y facturación/activo máximo de 10 millones de euros.",
+					"Tener el domicilio fiscal o el centro de trabajo en San Sebastián.",
+					"Haber participado en programas de innovación de Fomento de San Sebastián (como EKINN+, EKINN+ Salud o Incubadora).",
+					"Contar con una entidad tractora identificada y presentar carta de compromiso firmada por ambas partes.",
+					"Estar al corriente de las obligaciones tributarias y de la Seguridad Social."
+				],
+				"gastos": [
+					"Subcontrataciones científico-tecnológicas para la adaptación de la solución.",
+					"Compra de licencias, patentes o conocimientos técnicos externos.",
+					"Materiales, componentes, sensores, equipos, servicios cloud y licencias de software.",
+					"Asesoramiento normativo (protección de propiedad intelectual, ciberseguridad) y certificaciones o homologaciones.",
+					"Personal técnico dedicado al piloto (ayuda máxima de 5.000 € para este concepto)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 49,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "San Sebastián"
+				},
+				"dudas": "El inicio exacto del plazo de solicitud depende de la fecha de publicación del extracto en el Boletín Oficial de Gipuzkoa."
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "941572",
+			"titulo": "AYUDAS A LA CONTRATACION INDEFINIDA DIRIGIDAS A PROMOVER LA GENERACIÓN DE EMPLEO DE CALIDAD, ESPECIALMENTE DE PERSONAS DE COLECTIVOS, EN EL MARCO DEL PLAN DE EMPLEO Y DESARROLLO LOCAL DE DONOSTIA SAN SEBASTIAN 2026-2030",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DONOSTIA/SAN SEBASTIÁN",
+				"nivel3": "FOMENTO DE SAN SEBASTIÁN S.A.- DONOSTIA SUSTAPENA"
+			},
+			"sede": "WWW.FOMENTOSANSEBASTIAN.EUS",
+			"publicada": "2026-11-11",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 225000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "P",
+					"nombre": "ADMINISTRACIÓN PÚBLICA Y DEFENSA; SEGURIDAD SOCIAL OBLIGATORIA"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				},
+				{
+					"codigo": "V",
+					"nombre": "ORGANISMOS EXTRATERRITORIALES"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES212",
+					"nombre": "Gipuzkoa"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": "2027-01-31",
+			"textoInicio": "presentarse desde el día siguiente al de la publicación del anuncio de estas bases en el BOG",
+			"textoFin": null,
+			"bases": "www.fomentosansebastian.eus",
+			"documento": {
+				"id": 1554139,
+				"nombre": "PEDLDSS_Bases Ayudas contratacion_2026_cas-firm.pdf"
+			},
+			"docs": [
+				1554139,
+				1554140
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941572",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para pequeñas empresas y autónomos de San Sebastián que realicen contrataciones indefinidas a personas desempleadas e inscritas en Lanbide.",
+				"paraQuien": "Autónomos, pequeñas empresas y entidades de San Sebastián con plantilla inferior a 50 personas.",
+				"importe": "Hasta 8.400 € por contratación indefinida a jornada completa (3.500 € de base más incrementos por salario, conciliación, formación y colectivos prioritarios).",
+				"importeMaximo": 8400,
+				"plazo": "Desde el día siguiente a la publicación de las bases en el BOG hasta el 31 de enero de 2027 (o hasta agotar el presupuesto).",
+				"plazoFin": "2027-01-31",
+				"requisitos": [
+					"Tener el domicilio fiscal o el centro de trabajo en San Sebastián.",
+					"Tener menos de 50 empleados y un volumen de activo o negocio no superior a 10 millones de euros.",
+					"Contratar a personas desempleadas e inscritas en Lanbide en alta con intermediación.",
+					"La persona contratada debe estar empadronada en San Sebastián al menos desde el día anterior al contrato.",
+					"Realizar contratos indefinidos formalizados entre el 02/01/2026 y el 31/12/2026.",
+					"La jornada del contrato debe ser de al menos el 50 % de la jornada completa.",
+					"Mantener la contratación indefinida durante al menos 12 meses.",
+					"Suponer creación neta de empleo respecto a la plantilla media de los 6 meses anteriores."
+				],
+				"gastos": [
+					"Costes salariales de las contrataciones indefinidas subvencionadas"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 49,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "San Sebastián"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
+		},
 		{
 			"codigo": "941558",
 			"titulo": "Subvenciones para la programación de las salas privadas de artes escénicas de Tenerife 2026",
@@ -78,7 +446,7 @@
 				},
 				"dudas": "La fecha exacta de cierre del plazo depende del día de publicación del extracto en el Boletín Oficial de Canarias."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -157,7 +525,7 @@
 				},
 				"dudas": "No especifica claramente si pequeños negocios privados pueden pedirlas, ya que menciona que son para fincas de titularidad pública."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -241,7 +609,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -307,7 +675,7 @@
 				},
 				"dudas": "No se detallan los requisitos específicos ni la cantidad exacta que puede recibir cada negocio."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -381,7 +749,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -450,7 +818,7 @@
 				},
 				"dudas": "No se especifica el importe exacto de los premios individuales que se repartirán."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -528,7 +896,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -605,7 +973,7 @@
 				},
 				"dudas": "No especifica si los autónomos o sociedades mercantiles pueden solicitarla más allá de estar dirigida a museos inscritos y adheridos a la red territorial."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2027-01-29",
@@ -683,7 +1051,7 @@
 				},
 				"dudas": "Para poder recibir el premio es obligatorio asistir en persona al acto de entrega."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -779,8 +1147,43 @@
 				1553910
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941478",
-			"ia": null,
-			"comprobada": "2026-11-11"
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para la digitalización de pymes en comercio electrónico y la transformación digital de la industria manufacturera en Castilla-La Mancha.",
+				"paraQuien": "Pymes, autónomos y emprendedores que ejerzan su actividad en Castilla-La Mancha.",
+				"importe": "Línea 1: 70 % de la inversión (máximo 15.000 €). Línea 2: 40 % o 50 % de la inversión (máximo 120.000 €).",
+				"importeMaximo": 120000,
+				"plazo": "Desde el día siguiente a la publicación en el DOCM hasta el 20 de enero de 2027.",
+				"plazoFin": "2027-01-20",
+				"requisitos": [
+					"Realizar la actividad e inversiones en Castilla-La Mancha.",
+					"Estar al corriente de obligaciones tributarias, Seguridad Social y reintegros.",
+					"No ser una empresa en crisis.",
+					"No superar 300.000 € en ayudas de mínimis acumuladas en tres años.",
+					"Cumplir los plazos de pago a proveedores en ayudas superiores a 30.000 €.",
+					"Disponer de un plan de prevención de riesgos laborales si la ley lo exige.",
+					"Tener un plan de igualdad cuando sea obligatorio por ley.",
+					"No tener sanciones firmes por discriminación laboral o faltas muy graves en riesgos laborales."
+				],
+				"gastos": [
+					"Servicios para implantación y mejora de comercio electrónico.",
+					"Incorporación de Tecnologías de la Electrónica, Información y Comunicaciones (TEICs) en la industria.",
+					"Servicios de consultoría asociados (hasta el 40 % del total).",
+					"Gastos generales e indirectos a tipo fijo (5 % de los costes directos)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "941392",
@@ -824,8 +1227,41 @@
 				1553736
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941392",
-			"ia": null,
-			"comprobada": "2026-11-11"
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas para compensar los gastos generales asumidos durante 2025 por los mataderos de las Illes Balears por prestar el servicio de interés económico general.",
+				"paraQuien": "Empresas (personas jurídicas) titulares de mataderos en las Illes Balears inscritos en el registro sanitario para el sacrificio de animales.",
+				"importe": "Hasta el 100 % de los gastos justificados, con un máximo general de 250.000 € por negocio y un mínimo de 10.000 € según la cantidad de animales sacrificados.",
+				"importeMaximo": 250000,
+				"plazo": "Desde el día siguiente a la publicación de la resolución en el BOIB hasta el 29 de enero de 2027.",
+				"plazoFin": "2027-01-29",
+				"requisitos": [
+					"Ser persona jurídica.",
+					"Ser titular de un matadero en las Illes Balears inscrito en el Registro General Sanitario de Empresas Alimentarias y Alimentos (RGSEAA).",
+					"Haber pagado los gastos subvencionables correspondientes al año 2025.",
+					"Mantener la inscripción y requisitos durante al menos un año tras finalizar el plazo de solicitud.",
+					"Estar al corriente de las obligaciones con la Hacienda estatal, autonómica y la Seguridad Social.",
+					"Si la ayuda supera los 30.000 €, cumplir los plazos de pago legalmente establecidos a proveedores.",
+					"No haber sido sancionado en los últimos 3 años por discriminación de género en el trabajo."
+				],
+				"gastos": [
+					"Alquileres, cánones, transportes, seguros, servicios bancarios y suministros del matadero.",
+					"Tributos autonómicos y de la administración local.",
+					"Gastos de personal: sueldos, salarios y cuotas a la Seguridad Social."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "941367",
@@ -872,8 +1308,36 @@
 				1553669
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941367",
-			"ia": null,
-			"comprobada": "2026-11-11"
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso municipal para premiar el adorno de escaparates navideños en establecimientos comerciales y hosteleros de Durango.",
+				"paraQuien": "Titulares de establecimientos comerciales y de hostelería ubicados en el municipio de Durango.",
+				"importe": "Primer premio: 1.500 €; Segundo premio: 1.000 €; Tercer premio: 500 €; Premio por votación popular: 300 €. Presupuesto total de 3.300 €.",
+				"importeMaximo": 1500,
+				"plazo": "Desde el día siguiente a la publicación en el Boletín Oficial de Bizkaia hasta el 3 de diciembre de 2026.",
+				"plazoFin": "2026-12-03",
+				"requisitos": [
+					"Tener un establecimiento comercial o de hostelería en el municipio de Durango.",
+					"Contar con la correspondiente licencia de apertura.",
+					"Disponer de escaparate y estar situado a pie de calle.",
+					"Estar al corriente en el pago de obligaciones tributarias, Seguridad Social y del Ayuntamiento de Durango.",
+					"Colocar el distintivo de participación en un lugar visible del establecimiento.",
+					"Mantener los escaparates decorados y expuestos al público del 9 de diciembre de 2026 al 6 de enero de 2027."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Durango"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "941287",
@@ -947,7 +1411,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -1086,7 +1550,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -1168,7 +1632,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1246,7 +1710,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1321,7 +1785,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de la Provincia."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -1389,7 +1853,7 @@
 				},
 				"dudas": "El documento aprueba la convocatoria pero no detalla el importe máximo por solicitante ni la lista específica de gastos subvencionables."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1473,7 +1937,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1557,7 +2021,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1630,7 +2094,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -1676,8 +2140,46 @@
 				1552835
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941119",
-			"ia": null,
-			"comprobada": "2026-11-11"
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayudas económicas de la Diputación de A Coruña para financiar la organización de festivales culturales (de cine, música, artes escénicas o mixtos) que se celebren en la provincia durante el año 2027.",
+				"paraQuien": "Autónomos, empresas lucrativas de la Unión Europea, entidades sin ánimo de lucro radicadas en Galicia y ayuntamientos de la provincia de A Coruña que organicen festivales.",
+				"importe": "Para empresas y autónomos, entre 5.000 € y 30.000 € por festival (hasta el 70 % del presupuesto subvencionable).",
+				"importeMaximo": 30000,
+				"plazo": "Desde el 18 de enero de 2027 a las 08:00 hasta el 18 de febrero de 2027 a las 14:00.",
+				"plazoFin": "2027-02-18",
+				"requisitos": [
+					"El festival debe realizarse en la provincia de A Coruña durante el año 2027.",
+					"Haber celebrado un mínimo de 3 ediciones del festival antes de la publicación de esta convocatoria.",
+					"Tener un presupuesto total de gasto para el festival de al menos 10.000 €.",
+					"Contar con un plan de sostenibilidad en los ámbitos social, medioambiental y económico.",
+					"Estar dado de alta en el régimen de autónomos (RETA) o constituido como sociedad antes de presentar la solicitud.",
+					"Estar dado de alta en epígrafes del IAE relacionados con espectáculos (grupo 965 o 851) antes de la solicitud.",
+					"Cumplir con los porcentajes mínimos exigidos de uso del gallego y de contratación de artistas o grupos gallegos.",
+					"Estar al corriente en los pagos con Hacienda y la Seguridad Social."
+				],
+				"gastos": [
+					"Alquileres de recintos y equipos necesarios para el festival.",
+					"Servicios y trabajos contratados a otras empresas para desarrollar el evento.",
+					"Gastos de transporte, alojamiento y manutención del personal o artistas.",
+					"Publicidad y propaganda del evento.",
+					"Seguros de responsabilidad civil y de la actividad durante el festival.",
+					"Compras de material de consumo no inventariable.",
+					"Cotizaciones a la Seguridad Social de los organizadores autónomos o plantilla."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "941068",
@@ -1759,7 +2261,7 @@
 				},
 				"dudas": "El importe exacto por negocio depende del presupuesto total asignado en Conferencia Sectorial y del límite del 5% del presupuesto total de la intervención."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -1809,9 +2311,9 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941018",
 			"ia": null,
-			"comprobada": "2026-11-11",
-			"iaIntentos": 1,
-			"iaIntentadoEl": "2026-11-11",
+			"comprobada": "2026-11-12",
+			"iaIntentos": 2,
+			"iaIntentadoEl": "2026-11-12",
 			"iaError": "no es un PDF (RESOLUCION ALCALDIA cast.docx)"
 		},
 		{
@@ -1882,7 +2384,7 @@
 				},
 				"dudas": "Esta orden publica la distribución del presupuesto entre zonas pero no detalla los requisitos concretos ni los gastos específicos, remitidos a las bases reguladoras."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -1964,7 +2466,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2047,7 +2549,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -2123,7 +2625,7 @@
 				},
 				"dudas": "El documento remite a la Ordenanza municipal para ver los requisitos detallados y no especifica el importe máximo por negocio."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2169,8 +2671,43 @@
 				1552669
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940871",
-			"ia": null,
-			"comprobada": "2026-11-11"
+			"ia": {
+				"categoria": "otro",
+				"resumen": "Ayudas de la Diputación de A Coruña para financiar actividades, eventos e iniciativas turísticas desarrolladas por entes de gestión, asociaciones, mancomunidades y consorcios turísticos de la provincia durante el año 2027.",
+				"paraQuien": "Entes de gestión turística, asociaciones turísticas sin ánimo de lucro, mancomunidades y consorcios turísticos con domicilio fiscal en la provincia de A Coruña.",
+				"importe": "Hasta 150.000 € por solicitud (cubriendo como máximo el 80 % de los gastos subvencionables).",
+				"importeMaximo": 150000,
+				"plazo": "Desde el 20 de noviembre de 2026 a las 08:00 horas hasta el 18 de diciembre de 2026 a las 14:00 horas.",
+				"plazoFin": "2026-12-18",
+				"requisitos": [
+					"Tener domicilio fiscal en la provincia de A Coruña.",
+					"Estar formalmente constituidas e inscritas en el registro público correspondiente antes del 1 de enero de 2027 (o antes del 1 de enero de 2026 en el caso de consorcios y mancomunidades).",
+					"Pertenecer a una de las tipologías de entidades o asociaciones turísticas admitidas en la convocatoria.",
+					"Estar al corriente en las obligaciones tributarias y con la Seguridad Social.",
+					"Presentar solo una solicitud por entidad.",
+					"Utilizar la lengua gallega en la página web oficial y en todos los soportes de difusión del proyecto."
+				],
+				"gastos": [
+					"Trabajos encargados a empresas externas para la realización de la actividad.",
+					"Arrendamientos, cánones, reparaciones y conservación.",
+					"Gastos de transporte y desplazamientos concertados con terceros.",
+					"Publicidad, propaganda, suministros y primas de seguros específicas.",
+					"Gastos de desplazamiento, alojamiento y manutención del personal de la entidad para la actividad.",
+					"Sueldos, salarios y Seguridad Social del personal asignado al proyecto."
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "940822",
@@ -2252,7 +2789,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2323,7 +2860,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2398,7 +2935,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2474,7 +3011,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2561,7 +3098,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2641,7 +3178,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -2722,7 +3259,7 @@
 				},
 				"dudas": "La lista concreta de actividades económicas e IAE subvencionables no aparece en este texto y remite a las bases reguladoras."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -2800,7 +3337,7 @@
 				},
 				"dudas": "La fecha exacta de cierre del plazo depende del día concreto en que se publique la convocatoria en el Boletín Oficial de Aragón."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2876,7 +3413,7 @@
 				},
 				"dudas": "Los requisitos detallados de las personas solicitantes remiten a las bases reguladoras aprobadas en la Resolución TER/4069/2025."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -2947,7 +3484,7 @@
 				},
 				"dudas": "Las bases listan por error dos veces el «2º Premio» (uno de 150 € y otro de 100 €)."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -3018,7 +3555,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de la Provincia para determinar la fecha concreta de finalización del plazo."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3065,8 +3602,39 @@
 				1553424
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940593",
-			"ia": null,
-			"comprobada": "2026-11-11"
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Premios educativos del Ayuntamiento de Coslada (13ª edición) para reconocer proyectos de mejora del éxito escolar e inclusión, el esfuerzo personal del alumnado y el rendimiento académico en la ESO.",
+				"paraQuien": "Centros educativos de Coslada sostenidos con fondos públicos, sus Asociaciones de Madres y Padres (AMPAS) y alumnado matriculado en dichos centros.",
+				"importe": "Premios de 500 € por proyecto para centros o AMPAS (con menciones de 300 €); premios de 300 € para alumnado por esfuerzo personal (y 200 € para su centro); y premios de 250 € por rendimiento académico.",
+				"importeMaximo": 500,
+				"plazo": "Desde la publicación de las bases en el BOCM hasta el 11 de febrero de 2027 (ambos inclusive).",
+				"plazoFin": null,
+				"requisitos": [
+					"Pertenecer a la comunidad educativa de Coslada (centros sostenidos con fondos públicos, AMPAS o alumnado matriculado).",
+					"Las AMPAS deben estar legalizadas e inscritas en los registros de la Comunidad de Madrid y del Ayuntamiento de Coslada.",
+					"Estar al corriente de las obligaciones con el Ayuntamiento de Coslada.",
+					"No estar incurso en las prohibiciones legales para recibir subvenciones públicas.",
+					"Presentar la solicitud y proyecto o candidatura adaptados a la modalidad elegida (éxito escolar, esfuerzo personal o rendimiento académico)."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Coslada"
+				},
+				"dudas": null
+			},
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash",
+			"cierreDescartado": {
+				"fecha": "2027-02-11",
+				"motivo": "no coincide con la de la BDNS (2027-01-31)"
+			}
 		},
 		{
 			"codigo": "940577",
@@ -3111,7 +3679,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940577",
 			"ia": null,
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-11-07",
@@ -3200,7 +3768,7 @@
 				},
 				"dudas": "La fecha límite exacta de presentación de solicitudes depende del día concreto en que se publique la convocatoria en el Boletín Oficial de Bizkaia."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3279,7 +3847,7 @@
 				},
 				"dudas": "No consta la fecha límite exacta del plazo, ya que depende del día de la publicación efectiva de la convocatoria en el Boletín Oficial de Bizkaia."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3361,7 +3929,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3458,7 +4026,7 @@
 				},
 				"dudas": "Las cuantías exactas de la subvención y los porcentajes por actuación no vienen detallados en esta resolución, sino en sus bases reguladoras."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3533,7 +4101,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3607,7 +4175,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3680,7 +4248,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3719,47 +4287,54 @@
 			"textoFin": null,
 			"bases": "https://www.caib.es/eboibfront/eli/es-ib/o/2025/07/12/20/dof/spa/html",
 			"documento": {
-				"id": 1550624,
+				"id": 1553422,
 				"nombre": "Document BDNS (castellà).PDF"
 			},
 			"docs": [
-				1550624,
-				1550625
+				1553422,
+				1553423
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940179",
 			"ia": {
-				"categoria": "ayuda",
-				"resumen": "Ayudas para financiar los gastos de las actividades culturales y pedagógicas del programa «Viu la cultura» durante el curso académico 2026-2027.",
-				"paraQuien": "Centros educativos públicos, centros concertados y escuelas infantiles de 0-3 años dependientes de entidades locales de les Illes Balears.",
-				"importe": "Importe fijo por actividad según tipología: talleres e itinerarios (150 € una sesión, 225 € dos sesiones) y espectáculos (210 € una sesión, 315 € dos sesiones). Máximo 10 actividades por centro.",
+				"categoria": "otro",
+				"resumen": "Subvenciones destinadas a financiar la realización de actividades pedagógicas y culturales (talleres, obras de teatro, conciertos, itinerarios) del catálogo «Viu la cultura» para el curso escolar 2026-2027.",
+				"paraQuien": "Centros educativos públicos, concertados y escuelas infantiles de titularidad municipal o de entidades locales en las Islas Baleares.",
+				"importe": "Presupuesto total de 150.000 €. Se financian entre 150 € y 315 € por actividad (según el tipo y número de sesiones), hasta un máximo de 10 actividades por centro.",
 				"importeMaximo": null,
-				"plazo": "Del 3 de mayo de 2027 al 18 de junio de 2027.",
+				"plazo": "Del 3 de mayo al 18 de junio de 2027.",
 				"plazoFin": "2027-06-18",
 				"requisitos": [
-					"Ser un centro público, concertado o escuela infantil 0-3 de titularidad local de les Illes Balears.",
+					"Ser centro público, concertado o escuela infantil de propiedad de una entidad local en les Illes Balears.",
+					"Impartir educación infantil, primaria, ESO, bachillerato, formación profesional o educación de adultos.",
 					"Haber participado en el programa «Viu la cultura» para el curso académico 2026-2027.",
-					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social (centros concertados y escuelas de infantil locales).",
-					"Pertenecer a la red de escuelas infantiles públicas de les Illes Balears mediante convenio vigente.",
-					"Contar con la autorización de la Consejería de Educación y Universidades.",
-					"Estar integrada y mantener al día sus datos en el programa de gestión educativa de la Consejería.",
-					"No estar incurso en prohibiciones para recibir subvenciones ni haber sido sancionado por infracciones graves o discriminación."
+					"Estar al corriente de las obligaciones fiscales con la Hacienda Estatal y Autonómica, y con la Seguridad Social.",
+					"Las escuelas infantiles locales deben pertenecer a la red pública mediante convenio, tener autorización y estar integradas en el sistema informático de gestión."
 				],
 				"gastos": [
-					"Actividades pedagógicas y culturales del catálogo del programa «Viu la cultura» (talleres, itinerarios y espectáculos)."
+					"Actividades subvencionables del catálogo del programa «Viu la cultura» (talleres, itinerarios y espectáculos)."
 				],
 				"condiciones": {
 					"autonomos": "no",
-					"sociedades": "no_consta",
+					"sociedades": "no",
 					"emprendedores": "no",
 					"maxEmpleados": null,
 					"antiguedadMinMeses": null,
 					"antiguedadMaxMeses": null,
 					"municipio": null
 				},
-				"dudas": null
+				"dudas": "Esta convocatoria está reservada a centros educativos y escuelas infantiles públicas o concertadas, quedando excluidos los autónomos y empresas privadas generales."
 			},
-			"comprobada": "2026-11-11",
-			"iaModelo": "gemini-3.6-flash"
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.6-flash",
+			"cambios": [
+				{
+					"fecha": "2026-11-12",
+					"campos": [
+						"documento",
+						"documentos"
+					]
+				}
+			]
 		},
 		{
 			"codigo": "940167",
@@ -3837,7 +4412,7 @@
 				},
 				"dudas": "No consta el importe máximo individual que puede percibir cada centro educativo o proyecto."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -3916,7 +4491,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -3994,7 +4569,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4070,7 +4645,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -4147,7 +4722,7 @@
 				},
 				"dudas": "No consta el importe máximo por proyecto o entidad."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4221,7 +4796,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta en la que se publicará el extracto de la convocatoria en el BOE, de la cual depende el inicio del plazo de un mes."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4294,7 +4869,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4376,7 +4951,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4460,7 +5035,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4516,22 +5091,23 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939979",
 			"ia": {
 				"categoria": "ayuda",
-				"resumen": "Ayudas para apoyar la participación de empresas y autónomos del sector dulce de Castilla-La Mancha como expositores en la feria internacional ISM 2027 en Alemania.",
-				"paraQuien": "Autónomos, empresas y cooperativas del sector dulce (confitería, chocolates, galletas, aperitivos) que desarrollen su actividad en Castilla-La Mancha.",
-				"importe": "Hasta 2.250 € por empresa (cubre el 30 % del gasto en alquiler y acondicionamiento del stand, sobre un coste máximo de 7.500 €).",
+				"resumen": "Ayuda económica para financiar la participación de negocios del sector dulce como expositores en la feria internacional ISM 2027 en Colonia (Alemania).",
+				"paraQuien": "Autónomos, empresas, cooperativas, clústeres y otras entidades del sector dulce que desarrollen su actividad en Castilla-La Mancha.",
+				"importe": "30 % del coste subvencionable, con un máximo de 2.250 € por negocio.",
 				"importeMaximo": 2250,
-				"plazo": "Desde el día siguiente a la publicación de la convocatoria en el Diario Oficial de Castilla-La Mancha hasta el 11 de diciembre de 2026.",
+				"plazo": "Desde el día siguiente a su publicación en el DOCM hasta el 11 de diciembre de 2026.",
 				"plazoFin": "2026-12-11",
 				"requisitos": [
-					"Desarrollar la actividad económica en Castilla-La Mancha dentro del sector dulce.",
-					"Tener un espacio contratado con la organización de la feria o estar admitido por ICEX en el pabellón español.",
-					"Estar al corriente en sus pagos con la Hacienda estatal, la autonómica y la Seguridad Social.",
-					"Contar con un plan de prevención de riesgos laborales (si la ley se lo exige) y no tener sanciones muy graves en el último año.",
-					"No haber recibido otras subvenciones de la Junta de Castilla-La Mancha para la misma actuación.",
-					"No hallarse en situación de crisis ni tener prohibiciones legales para recibir subvenciones."
+					"Desarrollar la actividad económica en Castilla-La Mancha.",
+					"Pertenecer al sector dulce.",
+					"Estar al corriente de pagos con Hacienda y la Seguridad Social.",
+					"Tener un espacio contratado con la organización de la feria o estar admitido por ICEX.",
+					"Contar con un plan de prevención de riesgos laborales si está obligado a ello.",
+					"No haber recibido otra ayuda pública regional para esta misma actuación.",
+					"No superar el límite de 300.000 € en ayudas de minimis en tres años."
 				],
 				"gastos": [
-					"Alquiler y acondicionamiento del espacio expositivo"
+					"Alquiler y acondicionamiento del espacio expositivo."
 				],
 				"condiciones": {
 					"autonomos": "si",
@@ -4544,9 +5120,8 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
-			"iaRevisar": "documento nuevo",
 			"cambios": [
 				{
 					"fecha": "2026-11-11",
@@ -4624,7 +5199,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4710,7 +5285,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash",
 			"cambios": [
 				{
@@ -4797,7 +5372,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -4853,23 +5428,23 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939852",
 			"ia": {
 				"categoria": "ayuda",
-				"resumen": "Ayuda para que empresas del sector de la fruta y la hortaliza de Castilla-La Mancha participen como expositoras en la feria Fruit Logística 2027 en Berlín.",
-				"paraQuien": "Autónomos, empresas, cooperativas y agrupaciones del sector hortofrutícola que ejerzan su actividad en Castilla-La Mancha.",
-				"importe": "El 65 % del coste del espacio y su acondicionamiento, con un máximo de 5.200 € por negocio.",
+				"resumen": "Ayudas para que empresas del sector hortofrutícola de Castilla-La Mancha participen agrupadas como expositoras en la feria Fruit Logística 2027 en Berlín.",
+				"paraQuien": "Autónomos, empresas, cooperativas y agrupaciones del sector hortofrutícola que desarrollen su actividad en Castilla-La Mancha.",
+				"importe": "5.200 € por negocio (65 % del coste máximo subvencionable de 8.000 €)",
 				"importeMaximo": 5200,
-				"plazo": "Desde el día siguiente a su publicación en el Diario Oficial de Castilla-La Mancha hasta el 11 de diciembre de 2026.",
+				"plazo": "Desde el día siguiente a la publicación en el Diario Oficial de Castilla-La Mancha hasta el 11 de diciembre de 2026",
 				"plazoFin": "2026-12-11",
 				"requisitos": [
-					"Desarrollar la actividad económica en Castilla-La Mancha.",
-					"Pertenecer al sector hortofrutícola.",
-					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
-					"Tener contratado previamente un stand dentro del pabellón de Castilla-La Mancha gestionado por el IPEX.",
-					"No haber recibido otra subvención de la Junta de Castilla-La Mancha para esta misma acción.",
-					"Disponer de plan de prevención de riesgos laborales si es obligatorio para tu empresa."
+					"Desarrollar la actividad económica del sector hortofrutícola en Castilla-La Mancha.",
+					"Estar al corriente en pagos con la Hacienda estatal, autonómica y la Seguridad Social.",
+					"No estar incurso en prohibiciones para recibir subvenciones públicas.",
+					"Tener un plan de prevención de riesgos laborales si la ley lo exige.",
+					"No haber recibido otra ayuda de la Junta de Castilla-La Mancha para los mismos conceptos.",
+					"No ser una empresa en crisis ni tener pendiente la devolución de ayudas declaradas ilegales.",
+					"Contar previamente con un stand contratado en el pabellón de Castilla-La Mancha gestionado por el IPEX."
 				],
 				"gastos": [
-					"Alquiler del espacio expositivo",
-					"Acondicionamiento del espacio expositivo"
+					"Alquiler y acondicionamiento del espacio expositivo"
 				],
 				"condiciones": {
 					"autonomos": "si",
@@ -4882,9 +5457,8 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
-			"iaRevisar": "documento nuevo",
 			"cambios": [
 				{
 					"fecha": "2026-11-11",
@@ -4965,7 +5539,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -5043,7 +5617,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -5099,7 +5673,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939750",
 			"ia": null,
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-07",
 			"iaError": "no es un PDF (EXTRACTO CONVOCATORIA CONCURSO DECORACION DE ESCAPARATES NAVIDEÑOS.docx)"
@@ -5178,7 +5752,7 @@
 				},
 				"dudas": "Varios requisitos específicos y la documentación requerida remiten a las bases reguladoras de 2025 y no aparecen detallados en la convocatoria."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -5254,7 +5828,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash",
 			"cierreDescartado": {
 				"fecha": "2026-11-25",
@@ -5341,7 +5915,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -5417,7 +5991,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -5493,7 +6067,7 @@
 				},
 				"dudas": "Es una ayuda social para particulares, no aplica a autónomos ni empresas."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash",
 			"cierreDescartado": {
 				"fecha": "2026-11-25",
@@ -5570,7 +6144,7 @@
 				},
 				"dudas": "La fecha exacta de publicación en el BOPZ no se indica, por lo que el día de cierre del plazo de solicitud no se puede calcular con certeza."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -5649,7 +6223,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -5725,7 +6299,7 @@
 				},
 				"dudas": "No consta en el extracto el tipo exacto de personalidad jurídica (autónomo o sociedad) admitido."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cierreDescartado": {
 				"fecha": "2027-01-29",
@@ -5781,7 +6355,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939451",
 			"ia": null,
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-04",
 			"iaError": "no es un PDF (BASES CONCURRENCIA COMPETITIVA PRORRATEADA PARA PRUEBAS DE BTT 2026.docx)"
@@ -5861,7 +6435,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -5935,7 +6509,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -6013,7 +6587,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6098,7 +6672,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6149,7 +6723,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939389",
 			"ia": null,
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-11-04",
 			"iaError": "no es un PDF (Oinarrien eta deialdiaren onarpena_Aprobación de las bases y convocatoria.docx)"
@@ -6234,7 +6808,7 @@
 				},
 				"dudas": "No se especifica en el documento el porcentaje ni el tope máximo individual de ayuda asignable a un único beneficiario."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -6312,7 +6886,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6388,7 +6962,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6464,7 +7038,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -6529,33 +7103,32 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939244",
 			"ia": {
 				"categoria": "premio",
-				"resumen": "Concurso del Ayuntamiento de Sagunto para premiar la decoración e imaginación en los escaparates navideños de los comercios del municipio y dinamizar la actividad comercial.",
-				"paraQuien": "Establecimientos comerciales del municipio de Sagunto.",
-				"importe": "Presupuesto total máximo de 900,00 € (el documento no especifica el importe individual de los premios).",
+				"resumen": "Concurso de decoración de escaparates navideños para comercios de Sagunto con el objetivo de atraerte a más clientes e impulsar el comercio local durante la Navidad de 2026.",
+				"paraQuien": "Establecimientos comerciales situados en el municipio de Sagunto.",
+				"importe": "Presupuesto total máximo de 900,00 € (el documento no especifica la cuantía de los premios individuales).",
 				"importeMaximo": null,
-				"plazo": "Desde el 13 de noviembre hasta el 7 de diciembre de 2026.",
+				"plazo": "Del 13 de noviembre al 7 de diciembre de 2026.",
 				"plazoFin": null,
 				"requisitos": [
-					"Ser un establecimiento comercial ubicado en el municipio de Sagunto.",
-					"Decorar el escaparate del comercio entre el 7 y el 14 de diciembre de 2026.",
-					"Presentar la solicitud a través de la sede electrónica del Ayuntamiento.",
-					"Cumplir con las bases de la ordenanza reguladora municipal."
+					"Tener un establecimiento comercial ubicado en el municipio de Sagunto.",
+					"Decorar el escaparate con temática navideña entre el 7 y el 14 de diciembre de 2026.",
+					"Permitir la visita del jurado para valorar el escaparate los días 14 y 15 de diciembre de 2026.",
+					"Cumplir con lo indicado en la ordenanza reguladora municipal."
 				],
 				"gastos": [],
 				"condiciones": {
-					"autonomos": "no_consta",
-					"sociedades": "no_consta",
+					"autonomos": "si",
+					"sociedades": "si",
 					"emprendedores": "no",
 					"maxEmpleados": null,
 					"antiguedadMinMeses": null,
 					"antiguedadMaxMeses": null,
 					"municipio": "Sagunto"
 				},
-				"dudas": "No se desglosa el número ni el importe de los premios individuales, únicamente la cuantía total de 900 €."
+				"dudas": "El documento no especifica el importe individual de cada premio ni la cantidad total de comercios premiados."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
-			"iaRevisar": "cambió el plazo",
 			"cambios": [
 				{
 					"fecha": "2026-11-10",
@@ -6653,7 +7226,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -6732,7 +7305,7 @@
 				},
 				"dudas": "No se especifica si los autónomos individuales pueden solicitarla, ya que se dirige a entidades e instituciones con personalidad jurídica."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -6820,7 +7393,7 @@
 				},
 				"dudas": "El presupuesto total de la convocatoria asciende a 7.950.380 euros distribuidos entre los años 2026 y 2027."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -6893,7 +7466,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -6967,7 +7540,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -7013,7 +7586,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939097",
 			"ia": null,
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaIntentos": 3,
 			"iaIntentadoEl": "2026-10-31",
 			"iaError": "no es un PDF (04. PROPORSTA PROVACIÓ DE BASES I CONVOCATÒRIA DEL XXIV CAST. BNS.docx)"
@@ -7090,7 +7663,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -7252,7 +7825,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -7326,7 +7899,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -7407,7 +7980,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -7617,7 +8190,7 @@
 				},
 				"dudas": "Para pedir la ayuda hay que pagar primero 3.150 € + IVA de cuota de participación a la Cámara de Comercio, que solo se devuelve si te quedas fuera por no cumplir requisitos o falta de presupuesto."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -7764,7 +8337,7 @@
 				},
 				"dudas": "Las condiciones exactas sobre quién puede ser beneficiario y los gastos permitidos remiten al artículo 3 y 5 de las Bases Reguladoras, que no se incluyen íntegras en este documento."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -7851,7 +8424,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -7928,7 +8501,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.7-flash"
 		},
 		{
@@ -8000,7 +8573,7 @@
 				},
 				"dudas": "No se indica en el documento el límite máximo ni el porcentaje subvencionable por cada solicitud."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -8072,7 +8645,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -8148,7 +8721,7 @@
 				},
 				"dudas": "No especifica el importe exacto que recibe cada negocio ni los detalles concretos de los requisitos."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8225,7 +8798,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta de publicación en el boletín oficial ni el importe máximo que puede recibir cada negocio individualmente."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -8302,7 +8875,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash",
 			"cambios": [
 				{
@@ -8391,7 +8964,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -8432,7 +9005,7 @@
 				}
 			],
 			"finalidad": "Comercio, Turismo y Pymes",
-			"inicio": "2026-11-16",
+			"inicio": "2026-11-19",
 			"fin": "2026-12-04",
 			"textoInicio": null,
 			"textoFin": null,
@@ -8442,23 +9015,26 @@
 				"nombre": "Decreto convocatoria.pdf"
 			},
 			"docs": [
-				1546841
+				1546841,
+				1553941
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938754",
 			"ia": {
 				"categoria": "premio",
-				"resumen": "Concurso de escaparatismo navideño que premia las mejores decoraciones de escaparates para mejorar la imagen comercial y fomentar el ambiente festivo en el municipio.",
-				"paraQuien": "Comerciantes y empresas de servicios cuya actividad comercial se desarrolle en Paterna.",
-				"importe": "Primer premio: 1.200 €, segundo premio: 750 €, tercer premio: 450 €.",
+				"resumen": "Concurso de escaparatismo navideño para comercios y empresas de servicios de Paterna, dotado con premios en metálico para las mejores decoraciones.",
+				"paraQuien": "Comerciantes y empresas de servicios con actividad y establecimiento comercial en Paterna.",
+				"importe": "Primer premio de 1.200 €, segundo de 750 € y tercero de 450 € (acompañados de diploma)",
 				"importeMaximo": 1200,
-				"plazo": "Del 16 de noviembre al 4 de diciembre de 2026.",
+				"plazo": "Del 16 de noviembre al 4 de diciembre de 2026",
 				"plazoFin": "2026-12-04",
 				"requisitos": [
-					"Desarrollar la actividad comercial en el municipio de Paterna.",
-					"Inscribirse a través de la sede electrónica del Ayuntamiento de Paterna.",
-					"Estar al corriente de pagos con la Hacienda, la Seguridad Social y el Ayuntamiento.",
-					"No tener ninguna prohibición legal para recibir subvenciones.",
-					"Tener la decoración terminada el 10 de diciembre y mantenerla hasta el 6 de enero de 2027."
+					"Desarrollar la actividad comercial en el término municipal de Paterna.",
+					"Ser comerciante o empresa de servicios.",
+					"Estar al corriente con la Agencia Tributaria, la Seguridad Social y el Ayuntamiento de Paterna.",
+					"No estar incurso en ninguna prohibición legal para recibir subvenciones públicas.",
+					"Tener la decoración del escaparate finalizada el 10 de diciembre de 2026.",
+					"Mantener la decoración y la iluminación como mínimo hasta el 6 de enero de 2027.",
+					"Presentar la solicitud a través de la sede electrónica del Ayuntamiento de Paterna."
 				],
 				"gastos": [],
 				"condiciones": {
@@ -8472,8 +9048,17 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
-			"iaModelo": "gemini-3.6-flash"
+			"comprobada": "2026-11-12",
+			"iaModelo": "gemini-3.8-flash",
+			"cambios": [
+				{
+					"fecha": "2026-11-12",
+					"campos": [
+						"inicio",
+						"documentos"
+					]
+				}
+			]
 		},
 		{
 			"codigo": "938740",
@@ -8542,7 +9127,7 @@
 				},
 				"dudas": "El documento es únicamente el certificado de aprobación del acuerdo y no incluye el contenido de las bases con los premios, categorías o requisitos de participación."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -8616,7 +9201,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -8702,7 +9287,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -8792,7 +9377,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -8876,7 +9461,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -8951,7 +9536,7 @@
 				},
 				"dudas": "No se indica la fecha exacta de publicación en el BORM, por lo que no se puede calcular el último día del plazo."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -9028,7 +9613,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -9104,7 +9689,7 @@
 				},
 				"dudas": "La fecha concreta de apertura y cierre del plazo depende de la publicación del anuncio en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -9177,7 +9762,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -9248,7 +9833,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -9323,7 +9908,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -9399,7 +9984,7 @@
 				},
 				"dudas": "La fecha exacta de publicación en el DOGV no se conoce en el texto, por lo que el día concreto de cierre del plazo no se puede determinar."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -9486,7 +10071,7 @@
 				},
 				"dudas": "No queda claro si se abrirá un nuevo plazo si el crédito presupuestario total de 50.000 euros se agota rápidamente."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -9570,7 +10155,7 @@
 				},
 				"dudas": "No se indica la fecha exacta de publicación en el BOE, por lo que no se puede determinar el último día exacto del plazo."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -9655,7 +10240,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -9804,7 +10389,7 @@
 				},
 				"dudas": "No queda claro si los emprendedores que aún no se han dado de alta pueden solicitarla, ya que menciona la puesta en marcha pero exige aportar plantillas medias e informes de cotización."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
@@ -9931,7 +10516,7 @@
 				},
 				"dudas": "Existe contradicción entre el texto de las bases (que fija el fin de plazo el 31 de mayo de 2027) y la ficha de la BDNS (que menciona un mes desde la publicación)."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -10014,7 +10599,7 @@
 				},
 				"dudas": "No se detallan los gastos concretos permitidos ni el texto completo de los requisitos del punto 5 de las Bases en este extracto."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -10087,7 +10672,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -10168,7 +10753,7 @@
 				},
 				"dudas": "La fecha exacta de fin de plazo no se puede determinar al depender de la publicación en el boletín oficial."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -10249,7 +10834,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -10330,7 +10915,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -10400,7 +10985,7 @@
 				},
 				"dudas": "El documento es el acuerdo de aprobación municipal y no incluye las bases detalladas con los plazos de publicación de los trabajos ni la forma de envío."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash"
 		},
 		{
@@ -10470,7 +11055,7 @@
 				},
 				"dudas": "No se especifica una fecha exacta de fin de plazo porque depende del día en que se publique en el boletín oficial."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -10541,7 +11126,7 @@
 				},
 				"dudas": "No se indica la cuantía concreta que recibe cada empresa por cada trabajador contratado ni se aclara si los autónomos pueden solicitarla."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -10622,7 +11207,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.8-flash",
 			"cambios": [
 				{
@@ -10716,7 +11301,7 @@
 				},
 				"dudas": "No se especifica la cantidad máxima exacta que puede recibir cada negocio individual ya que el importe se distribuye entre las solicitudes admitidas."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-12-04",
@@ -10793,7 +11378,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-10-30",
@@ -10869,7 +11454,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -10916,15 +11501,15 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938180",
 			"ia": {
 				"categoria": "ayuda",
-				"resumen": "Subvenciones para los negocios de Calafell que acepten los vales de descuento de la campaña Bons Calafell durante el año 2026.",
-				"paraQuien": "Establecimientos y negocios situados en Calafell que participen en la campaña de vales de descuento.",
-				"importe": "Presupuesto total de 100.000 €",
+				"resumen": "Subvenciones para compensar a los establecimientos de Calafell por el uso de los vales de descuento de la campaña Bons Calafell 2026.",
+				"paraQuien": "Establecimientos de comercio o servicios ubicados en Calafell.",
+				"importe": "Presupuesto total de 100.000 €.",
 				"importeMaximo": null,
-				"plazo": "Hasta el 15 de diciembre de 2026",
+				"plazo": "Hasta el 15 de diciembre de 2026.",
 				"plazoFin": "2026-12-15",
 				"requisitos": [
 					"Tener un establecimiento en el municipio de Calafell.",
-					"Aceptar los vales de descuento de la campaña Bons Calafell 2026."
+					"Participar en la campaña de vales de descuento Bons Calafell 2026."
 				],
 				"gastos": [],
 				"condiciones": {
@@ -10936,9 +11521,9 @@
 					"antiguedadMaxMeses": null,
 					"municipio": "Calafell"
 				},
-				"dudas": "El anuncio aprueba el gasto global pero no especifica el importe máximo por negocio ni los requisitos detallados."
+				"dudas": "El anuncio no especifica el importe máximo de ayuda por negocio ni las instrucciones concretas de solicitud."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -10955,8 +11540,7 @@
 						"documentos"
 					]
 				}
-			],
-			"iaRevisar": "documento nuevo"
+			]
 		},
 		{
 			"codigo": "938148",
@@ -11034,7 +11618,7 @@
 				},
 				"dudas": "No se especifica la fecha exacta de publicación en el Boletín Oficial de la Provincia, por lo que no se puede calcular el día exacto de cierre del plazo."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -11106,7 +11690,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -11180,7 +11764,7 @@
 				},
 				"dudas": "La fecha exacta de publicación en el BOP de Toledo no figura en el documento, por lo que el día de inicio del plazo queda condicionado a dicha publicación oficial."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -11265,7 +11849,7 @@
 				},
 				"dudas": null
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -11338,7 +11922,7 @@
 				},
 				"dudas": "La fecha exacta de fin de plazo depende del día de publicación en el Boletín Oficial del Principado de Asturias."
 			},
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -11414,7 +11998,7 @@
 			"docs": [
 				1544560
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937983",
@@ -11491,7 +12075,7 @@
 			"docs": [
 				1544522
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937934",
@@ -11648,7 +12232,7 @@
 				1544453,
 				1544454
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937907",
@@ -11737,7 +12321,7 @@
 			"docs": [
 				1544374
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-10-29",
@@ -11826,7 +12410,7 @@
 				1544260,
 				1544261
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-11-04",
@@ -11912,7 +12496,7 @@
 				1544139,
 				1544155
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -11985,7 +12569,7 @@
 			"docs": [
 				1544125
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937804",
@@ -12061,7 +12645,7 @@
 				1544060,
 				1544061
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cierreDescartado": {
 				"fecha": "2027-03-12",
 				"motivo": "no coincide con la de la BDNS (2027-12-31)"
@@ -12143,7 +12727,7 @@
 				1544058,
 				1544059
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937802",
@@ -12220,7 +12804,7 @@
 				1544055,
 				1544056
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937796",
@@ -12306,7 +12890,7 @@
 				1544131,
 				1544132
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -12396,7 +12980,7 @@
 			"docs": [
 				1544016
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937775",
@@ -12471,7 +13055,7 @@
 				1543991,
 				1543992
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -12549,7 +13133,7 @@
 				1543989,
 				1543990
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937704",
@@ -12623,7 +13207,7 @@
 			"docs": [
 				1543779
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937703",
@@ -12698,7 +13282,7 @@
 			"docs": [
 				1543784
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -12774,7 +13358,7 @@
 				1543702,
 				1543703
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937669",
@@ -12855,7 +13439,7 @@
 				1543670,
 				1543671
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937629",
@@ -12931,7 +13515,7 @@
 			"docs": [
 				1543505
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937520",
@@ -13003,7 +13587,7 @@
 			"docs": [
 				1543246
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937467",
@@ -13076,7 +13660,7 @@
 				1543153,
 				1543154
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-11-03",
@@ -13216,7 +13800,7 @@
 				1543119,
 				1543127
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937440",
@@ -13289,7 +13873,7 @@
 			"docs": [
 				1543088
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937353",
@@ -13381,7 +13965,7 @@
 				1542874,
 				1542878
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937289",
@@ -13454,7 +14038,7 @@
 				1545643,
 				1545644
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-10-29",
@@ -13545,7 +14129,7 @@
 				1542673,
 				1542675
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937192",
@@ -13633,7 +14217,7 @@
 				1542470,
 				1542471
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937108",
@@ -13705,7 +14289,7 @@
 				1542211,
 				1542216
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937103",
@@ -13790,7 +14374,7 @@
 				1542171,
 				1542213
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937102",
@@ -13866,7 +14450,7 @@
 			"docs": [
 				1547380
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-10-31",
@@ -13952,7 +14536,7 @@
 			"docs": [
 				1547379
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-10-31",
@@ -14117,7 +14701,7 @@
 				1542166,
 				1542264
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937046",
@@ -14191,7 +14775,7 @@
 			"docs": [
 				1542025
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937020",
@@ -14271,7 +14855,7 @@
 				1541925,
 				1541928
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "937001",
@@ -14380,7 +14964,7 @@
 				1541834,
 				1541835
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936951",
@@ -14455,7 +15039,7 @@
 				1541713,
 				1541714
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936950",
@@ -14539,7 +15123,7 @@
 				1550165,
 				1550166
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-11-06",
@@ -14623,7 +15207,7 @@
 				1541696,
 				1542974
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936894",
@@ -14700,7 +15284,7 @@
 				1541624,
 				1541625
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936870",
@@ -14776,7 +15360,7 @@
 			"docs": [
 				1541544
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936865",
@@ -14852,7 +15436,7 @@
 			"docs": [
 				1541542
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936809",
@@ -14928,7 +15512,7 @@
 			"docs": [
 				1541395
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936763",
@@ -15004,7 +15588,7 @@
 				1541308,
 				1541309
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936729",
@@ -15094,7 +15678,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936649",
@@ -15241,7 +15825,7 @@
 				1540967,
 				1553236
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cambios": [
 				{
 					"fecha": "2026-11-11",
@@ -15374,7 +15958,7 @@
 			"docs": [
 				1540961
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936534",
@@ -15468,7 +16052,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936514",
@@ -15547,7 +16131,7 @@
 			"docs": [
 				1540424
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936511",
@@ -15625,7 +16209,7 @@
 				1540415,
 				1540416
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936467",
@@ -15715,7 +16299,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936460",
@@ -15791,7 +16375,7 @@
 			"docs": [
 				1540311
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"cierreDescartado": {
 				"fecha": "2026-11-15",
 				"motivo": "no coincide con la de la BDNS (2026-11-30)"
@@ -15880,7 +16464,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936449",
@@ -15950,7 +16534,7 @@
 			"docs": [
 				1540236
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-15",
@@ -16045,7 +16629,7 @@
 					]
 				}
 			],
-			"comprobada": "2026-11-11",
+			"comprobada": "2026-11-12",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -16118,7 +16702,7 @@
 			"docs": [
 				1540121
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936400",
@@ -16197,7 +16781,7 @@
 			"docs": [
 				1540123
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936372",
@@ -16272,7 +16856,7 @@
 				1540028,
 				1540029
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936365",
@@ -16353,7 +16937,7 @@
 				1540021,
 				1540023
 			],
-			"comprobada": "2026-11-11"
+			"comprobada": "2026-11-12"
 		},
 		{
 			"codigo": "936334",
@@ -17088,14 +17672,14 @@
 			},
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/936259",
 			"ia": null,
-			"iaIntentos": 4,
+			"iaIntentos": 5,
 			"iaError": "no es un PDF (Empresas.cas -2026.docx)",
 			"docs": [
 				1539688,
 				1539690
 			],
 			"comprobada": "2026-11-11",
-			"iaIntentadoEl": "2026-10-28"
+			"iaIntentadoEl": "2026-11-12"
 		},
 		{
 			"codigo": "936233",
@@ -22809,17 +23393,17 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-11T21:30:06.713Z",
+			"fecha": "2026-11-12T13:57:51.544Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 60,
+			"fichasComprobadas": 200,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-11T21:56:03.682Z",
-			"pendientes": 12,
-			"leidas": 9,
-			"fallidas": 0,
-			"ultimaLectura": "2026-11-11"
+			"fecha": "2026-11-12T14:15:27.133Z",
+			"pendientes": 1,
+			"leidas": 14,
+			"fallidas": 2,
+			"ultimaLectura": "2026-11-12"
 		}
 	}
 }
