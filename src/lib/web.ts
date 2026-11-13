@@ -6,7 +6,7 @@
 import type { Convocatoria, ConvocatoriaWeb } from './tipos.ts';
 
 export function aWeb(c: Convocatoria): ConvocatoriaWeb {
-	const { documento, docs, iaModelo, iaError, iaIntentos, iaIntentadoEl, textoInicio, cierreDescartado, cambios, ...web } = c;
+	const { documento, docs, iaModelo, iaError, iaIntentos, iaIntentadoEl, iaCompletarEl, textoInicio, cierreDescartado, cambios, ...web } = c;
 	return web;
 }
 
@@ -16,7 +16,10 @@ export function aWeb(c: Convocatoria): ConvocatoriaWeb {
  */
 export function aLista(c: Convocatoria): ConvocatoriaWeb {
 	const web = aWeb(c);
-	return web.ia ? { ...web, ia: { ...web.ia, requisitos: [], gastos: [] } } : web;
+	if (!web.ia) return web;
+	// Cómo pedirla y la documentación solo se enseñan en la ficha
+	const { comoPedir, documentacion, dondeSolicitar, enlaceSolicitud, ...ia } = web.ia;
+	return { ...web, ia: { ...ia, requisitos: [], gastos: [] } };
 }
 
 /** Código → requisitos y gastos de cada ayuda de la lista */

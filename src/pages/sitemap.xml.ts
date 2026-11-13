@@ -9,7 +9,7 @@ import datos from '../../datos/convocatorias.json';
 import type { Datos } from '../lib/tipos';
 import { enLista, estado } from '../lib/estado';
 import { hoyMadrid } from '../lib/fechas';
-import { COMUNIDADES, deComunidad, indexable, SECTORES, seccionesDe } from '../lib/lista';
+import { COMUNIDADES, deComunidad, deProvincia, indexable, PROVINCIAS, provinciasDe, SECTORES, seccionesDe } from '../lib/lista';
 
 export const GET: APIRoute = ({ site }) => {
 	const { actualizado, convocatorias } = datos as Datos;
@@ -20,6 +20,9 @@ export const GET: APIRoute = ({ site }) => {
 	const urls = [
 		url('/', dia),
 		...COMUNIDADES.filter((k) => abiertas.some((c) => deComunidad(c, k.codigo))).map((k) => url(`/comunidades/${k.slug}`, dia)),
+		...PROVINCIAS.filter((p) => provinciasDe(p.comunidad.codigo).length > 0 && abiertas.some((c) => deProvincia(c, p.codigo))).map((p) =>
+			url(`/provincias/${p.slug}`, dia),
+		),
 		...SECTORES.filter((s) => abiertas.some((c) => seccionesDe(c).includes(s.letra))).map((s) => url(`/sectores/${s.slug}`, dia)),
 		...convocatorias.filter((c) => indexable(c, hoy)).map((c) => url(`/ayudas/${c.codigo}`, c.cambios?.at(-1)?.fecha ?? c.publicada)),
 	];

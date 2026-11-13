@@ -4,7 +4,8 @@
  */
 import type { Analisis, Convocatoria } from '../src/lib/tipos.ts';
 import { mencionaFecha, plazoPrevio } from '../src/lib/fechas.ts';
-import { estado } from '../src/lib/estado.ts';
+import { enLista, estado } from '../src/lib/estado.ts';
+import { limpiarFinalidades } from '../src/lib/finalidades.ts';
 import provincias from '../src/data/provincias.json' with { type: 'json' };
 
 /** Intentos fallidos seguidos antes de esperar */
@@ -24,6 +25,21 @@ export function porLeer(c: Convocatoria, hoy: string): boolean {
 	const desde = new Date(`${hoy}T00:00:00Z`);
 	desde.setUTCDate(desde.getUTCDate() - DIAS_ESPERA);
 	return c.iaIntentadoEl <= desde.toISOString().slice(0, 10);
+}
+
+/**
+ * Si conviene volver a leer una ya leída para completar lo que se pide desde
+ * después (cómo pedirla, documentación, finalidades): solo las que siguen en
+ * la lista y, si el intento anterior falló, pasada la espera. Va detrás de las
+ * pendientes de verdad (analizar.ts) y nunca cuenta como error.
+ */
+export function porCompletar(c: Convocatoria, hoy: string): boolean {
+	if (!c.documento || !c.ia || c.iaRevisar || c.ia.comoPedir) return false;
+	if (!enLista(estado(c, hoy))) return false;
+	if (!c.iaCompletarEl) return true;
+	const desde = new Date(`${hoy}T00:00:00Z`);
+	desde.setUTCDate(desde.getUTCDate() - DIAS_ESPERA);
+	return c.iaCompletarEl <= desde.toISOString().slice(0, 10);
 }
 
 export { mencionaFecha };
@@ -79,6 +95,11 @@ export function analisisValido(a: unknown): a is Analisis {
 		texto(x.resumen) &&
 		(x.resumen as string).trim() !== '' &&
 		(x.titular === undefined || texto(x.titular)) &&
+		(x.comoPedir === undefined || textos(x.comoPedir)) &&
+		(x.documentacion === undefined || textos(x.documentacion)) &&
+		(x.dondeSolicitar === undefined || x.dondeSolicitar === null || texto(x.dondeSolicitar)) &&
+		(x.enlaceSolicitud === undefined || x.enlaceSolicitud === null || texto(x.enlaceSolicitud)) &&
+		(x.finalidades === undefined || Array.isArray(x.finalidades)) &&
 		texto(x.paraQuien) &&
 		texto(x.importe) &&
 		numeroONulo(x.importeMaximo) &&
@@ -148,4 +169,23 @@ export function limpiarMunicipio(c: Convocatoria): boolean {
 	if (!ZONAS_ENTERAS.has(t) && !ZONAS_ENTERAS.has(t.replace(PREFIJOS, ''))) return false;
 	c.ia!.condiciones.municipio = null;
 	return true;
+}
+
+const lista = (v: string[] | undefined, max: number) => (v ?? []).map((x) => x.trim()).filter(Boolean).slice(0, max);
+
+/**
+ * Deja lo leído en su forma: finalidades solo de las conocidas, listas sin
+ * vacíos y con tope, y el enlace para pedirla solo si es una dirección web
+ * (si responde se comprueba aparte, en analizar.ts).
+ */
+export function normalizarLectura(a: Analisis): Analisis {
+	const enlace = a.enlaceSolicitud?.trim();
+	return {
+		...a,
+		finalidades: limpiarFinalidades(a.finalidades),
+		comoPedir: lista(a.comoPedir, 6),
+		documentacion: lista(a.documentacion, 12),
+		dondeSolicitar: a.dondeSolicitar?.trim() || null,
+		enlaceSolicitud: enlace && /^https?:\/\/[^\s/$.?#][^\s]*$/i.test(enlace) ? enlace : null,
+	};
 }

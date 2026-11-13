@@ -25,9 +25,11 @@ interface Props {
 	actual: string;
 	/** Calendario de plazos y RSS de la página (las de una comunidad) */
 	seguir?: { nombre: string; ics: string; rss: string };
+	/** Enlaces a las provincias de la comunidad */
+	provincias?: { nombre: string; slug: string }[];
 }
 
-const { title, description, eyebrow, h1, lead, grupos, hoy, noindex = false, actual, seguir } = Astro.props;
+const { title, description, eyebrow, h1, lead, grupos, hoy, noindex = false, actual, seguir, provincias = [] } = Astro.props;
 const webcal = seguir ? new URL(seguir.ics, Astro.site).href.replace(/^https?:/, 'webcal:') : null;
 ---
 
@@ -47,6 +49,17 @@ const webcal = seguir ? new URL(seguir.ics, Astro.site).href.replace(/^https?:/,
 					<span aria-hidden="true"> · </span>
 					<a href={seguir.rss}>RSS</a>
 				</p>
+			)
+		}
+
+		{
+			provincias.length > 0 && (
+				<nav class="provincias" aria-label="Por provincia">
+					<span>Por provincia:</span>
+					{provincias.map((p) => (
+						<a href={`/provincias/${p.slug}`}>{p.nombre}</a>
+					))}
+				</nav>
 			)
 		}
 
@@ -149,6 +162,21 @@ const webcal = seguir ? new URL(seguir.ics, Astro.site).href.replace(/^https?:/,
 	}
 
 	.seguir a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.provincias {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem 1rem;
+		margin-top: 1.5rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.provincias a {
 		color: var(--text);
 		text-decoration-color: var(--accent);
 		text-underline-offset: 0.2em;

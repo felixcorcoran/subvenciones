@@ -29,6 +29,16 @@ export interface Analisis {
 	condiciones: Condiciones;
 	/** Lo que no queda claro en las bases */
 	dudas: string | null;
+	/** Para qué sirve (src/lib/finalidades.ts); las leídas antes no lo tienen */
+	finalidades?: string[];
+	/** Cómo se pide, paso a paso (las leídas antes no lo tienen) */
+	comoPedir?: string[];
+	/** Los documentos que hay que presentar */
+	documentacion?: string[];
+	/** Dónde se presenta la solicitud, como lo dicen las bases */
+	dondeSolicitar?: string | null;
+	/** Dirección web para pedirla que aparece en las bases y responde (comprobada al leer) */
+	enlaceSolicitud?: string | null;
 }
 
 export type SiNo = 'si' | 'no' | 'no_consta';
@@ -85,6 +95,12 @@ export interface Convocatoria {
 	/** Día del último intento fallido de la IA */
 	iaIntentadoEl?: string;
 	/**
+	 * Día en que se intentó volver a leer una ya leída para completar lo que
+	 * se añadió después (cómo pedirla, documentación…). Si falla, lo leído se
+	 * queda y se reintenta pasado un tiempo, sin contar como error.
+	 */
+	iaCompletarEl?: string;
+	/**
 	 * Fecha de cierre que la IA sacó de las bases y no se usa (contradice a la
 	 * BDNS o es dudosa: scripts/lectura.ts). En `ia.plazoFin` solo queda una
 	 * fecha de las bases que se pueda usar.
@@ -93,7 +109,10 @@ export interface Convocatoria {
 }
 
 /** Lo que llega a la página (src/pages/convocatorias.json.ts) */
-export type ConvocatoriaWeb = Omit<Convocatoria, 'documento' | 'docs' | 'iaModelo' | 'iaError' | 'iaIntentos' | 'iaIntentadoEl' | 'textoInicio' | 'cierreDescartado'>;
+export type ConvocatoriaWeb = Omit<
+	Convocatoria,
+	'documento' | 'docs' | 'iaModelo' | 'iaError' | 'iaIntentos' | 'iaIntentadoEl' | 'iaCompletarEl' | 'textoInicio' | 'cierreDescartado'
+>;
 
 /** Cómo fue la última pasada de cada parte, para la vigilancia (scripts/salud.ts) */
 export interface Salud {

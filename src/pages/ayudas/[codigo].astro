@@ -19,6 +19,7 @@ import { aWeb } from '../../lib/web';
 import { seccionDe } from '../../lib/sectores';
 import { nombreZona } from '../../lib/zonas';
 import { site } from '../../data/site';
+import { nombreFinalidad } from '../../lib/finalidades';
 import '../../styles/tarjetas.css';
 
 // Las guardadas y, unos meses, las retiradas por cerradas (datos/cerradas.json):
@@ -106,6 +107,11 @@ const masEn = comunidad
 		? { texto: `Todas las de ${sector.nombre.toLowerCase()}`, href: `/sectores/${sector.slug}`, titulo: 'Otras ayudas para el mismo sector' }
 		: null;
 const imagenOg = `/og/${c.codigo}.png`;
+const enlaceFicha = new URL(`/ayudas/${c.codigo}`, Astro.site).href;
+const whatsapp = `https://wa.me/?text=${encodeURIComponent(`${titulo}\n${enlaceFicha}`)}`;
+const finalidades = (ia?.finalidades ?? []).map(nombreFinalidad);
+// El enlace para pedirla que dan las bases (comprobado al leerlas), si no es el mismo que la sede de la BDNS
+const enlacePedir = ia?.enlaceSolicitud && ia.enlaceSolicitud !== c.sede ? ia.enlaceSolicitud : null;
 // Avisar de un error en la ficha: un correo con el código y la dirección ya puestos
 const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en la ficha ${c.codigo}`)}&body=${encodeURIComponent(`Ficha: ${new URL(`/ayudas/${c.codigo}`, Astro.site).href}\n\nLo que está mal:\n`)}`;
 ---
@@ -143,6 +149,10 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 				<!-- Solo con JavaScript: se guarda en este navegador (portada, «Solo mis guardadas») -->
 				<button type="button" class="boton boton--claro" data-guardar hidden aria-pressed="false">☆ Guardar</button>
 			</div>
+			<p class="compartir">
+				Compartir: <a href={whatsapp} target="_blank" rel="noopener">WhatsApp ↗</a>
+				<button type="button" class="compartir-copiar" data-copiar={enlaceFicha} hidden>Copiar el enlace</button>
+			</p>
 
 			<!-- Si ya respondió las preguntas en este navegador, el veredicto va aquí mismo -->
 			<section id="veredicto" class="veredicto" hidden aria-live="polite">
@@ -159,6 +169,7 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 						<section>
 							<h2>Para quién</h2>
 							<p>{ia.paraQuien}</p>
+							{finalidades.length > 0 && <p class="sirve">Sirve para: {finalidades.join(' · ')}</p>}
 						</section>
 						{ia.requisitos.length > 0 && (
 							<section>
@@ -188,6 +199,36 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 							<h2>Plazo</h2>
 							<p>{c.iaRevisar ? 'El plazo ha cambiado en la convocatoria oficial y estamos volviendo a leer las bases. Mientras, mira la fecha de arriba y la convocatoria oficial.' : ia.plazo}</p>
 						</section>
+						{(ia.comoPedir?.length || ia.dondeSolicitar || enlacePedir) && (
+							<section>
+								<h2>Cómo se pide</h2>
+								{ia.dondeSolicitar && <p>{ia.dondeSolicitar}</p>}
+								{ia.comoPedir && ia.comoPedir.length > 0 && (
+									<ol>
+										{ia.comoPedir.map((x) => (
+											<li>{x}</li>
+										))}
+									</ol>
+								)}
+								{enlacePedir && (
+									<p class="pedir">
+										<a href={enlacePedir} target="_blank" rel="noopener">
+											Pedirla en línea (enlace de las bases) ↗
+										</a>
+									</p>
+								)}
+							</section>
+						)}
+						{ia.documentacion && ia.documentacion.length > 0 && (
+							<section>
+								<h2>Documentación que hay que presentar</h2>
+								<ul>
+									{ia.documentacion.map((x) => (
+										<li>{x}</li>
+									))}
+								</ul>
+							</section>
+						)}
 						{ia.dudas && (
 							<section>
 								<h2>Lo que no queda claro</h2>
@@ -262,15 +303,35 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 	import { alternarGuardada, guardadas } from '../../lib/visitas';
 
 	const botonGuardar = document.querySelector<HTMLButtonElement>('[data-guardar]');
-	const codigo = location.pathname.match(/\/ayudas\/(\d+)/)?.[1];
-	if (botonGuardar && codigo) {
+	const ayuda = JSON.parse(document.querySelector('#ayuda-datos')?.textContent || 'null') as ConvocatoriaWeb | null;
+	const codigo = ayuda?.codigo;
+	if (botonGuardar && ayuda && codigo) {
 		const pintar = (si: boolean) => {
 			botonGuardar.textContent = si ? '★ Guardada' : '☆ Guardar';
 			botonGuardar.setAttribute('aria-pressed', String(si));
 		};
 		pintar(guardadas().has(codigo));
-		botonGuardar.addEventListener('click', () => pintar(alternarGuardada(codigo)));
+		botonGuardar.addEventListener('click', () => pintar(alternarGuardada(ayuda)));
 		botonGuardar.hidden = false;
+	}
+
+	// Copiar el enlace (en el móvil, el menú de compartir del sistema)
+	const copiar = document.querySelector<HTMLButtonElement>('[data-copiar]');
+	if (copiar) {
+		const url = copiar.dataset.copiar!;
+		const movil = Boolean(navigator.share) && matchMedia('(pointer: coarse)').matches;
+		copiar.textContent = movil ? 'Más opciones' : 'Copiar el enlace';
+		copiar.hidden = false;
+		copiar.addEventListener('click', async () => {
+			try {
+				if (movil) return void (await navigator.share({ title: document.title, url }));
+				await navigator.clipboard.writeText(url);
+				copiar.textContent = 'Enlace copiado';
+			} catch {
+				copiar.textContent = 'No se ha podido: usa la barra de direcciones';
+			}
+			setTimeout(() => (copiar.textContent = movil ? 'Más opciones' : 'Copiar el enlace'), 2500);
+		});
 	}
 
 	const TITULOS = { si: 'Puedes pedirla', revisa: 'Revisa los detalles: podría encajar', no: 'No encaja con tu negocio' };
@@ -306,6 +367,49 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 </script>
 
 <style>
+	.compartir {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.25rem 1rem;
+		margin: 1rem 0 0;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.compartir a,
+	.compartir-copiar,
+	.pedir a {
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--text);
+		font: inherit;
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+		cursor: pointer;
+	}
+
+	.compartir-copiar[hidden] {
+		display: none;
+	}
+
+	.sirve {
+		margin-top: 0.75rem !important;
+		font-size: 0.9375rem !important;
+		color: var(--text-muted);
+	}
+
+	section ol {
+		margin: 0.5rem 0 0;
+		padding-left: 1.4rem;
+	}
+
+	.pedir {
+		margin-top: 0.75rem !important;
+	}
+
 	.veredicto {
 		padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(1.125rem, 2.5vw, 1.75rem);
 		border-radius: 1.25rem;

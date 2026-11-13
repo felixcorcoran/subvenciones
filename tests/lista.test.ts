@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cercania, coincide, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, textoMotivo, titularDe } from '../src/lib/lista';
+import { cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, textoMotivo, titularDe } from '../src/lib/lista';
 import { hoyMadrid } from '../src/lib/fechas';
 import { analisis, convocatoria, perfil } from './ayudas';
 
@@ -55,5 +55,24 @@ describe('presentación de las listas', () => {
 		// 23:30 UTC del 31 de octubre: en Madrid ya es 1 de noviembre
 		expect(hoyMadrid(new Date('2026-10-31T23:30:00Z'))).toBe('2026-11-01');
 		expect(hoyMadrid(new Date('2026-07-15T21:59:00Z'))).toBe('2026-07-15');
+	});
+
+	it('provincias: catálogo, slugs únicos y a qué provincia es cada ayuda', () => {
+		expect(PROVINCIAS).toHaveLength(59);
+		expect(new Set(PROVINCIAS.map((p) => p.slug)).size).toBe(59);
+		expect(PROVINCIAS.find((p) => p.codigo === 'ES521')?.slug).toBe('alicante-alacant');
+		expect(provinciasDe('ES61')).toHaveLength(8);
+		expect(provinciasDe('ES30')).toEqual([]);
+		const malaguena = convocatoria({ regiones: [{ codigo: 'ES617', nombre: 'Málaga' }] });
+		expect(deProvincia(malaguena, 'ES617')).toBe(true);
+		expect(deProvincia(malaguena, 'ES618')).toBe(false);
+		expect(deTodaLaComunidad(convocatoria({ regiones: [{ codigo: 'ES61', nombre: 'Andalucía' }] }), 'ES61')).toBe(true);
+		expect(deTodaLaComunidad(malaguena, 'ES61')).toBe(false);
+	});
+
+	it('búsqueda por municipio: el del ayuntamiento que convoca', () => {
+		const c = convocatoria({ organo: { nivel1: 'LOCAL', nivel2: 'CABRA', nivel3: 'AYUNTAMIENTO DE CABRA' } });
+		expect(coincide(c, 'cabra')).toBe(true);
+		expect(coincide(convocatoria({ ia: null }), 'marbella')).toBe(false);
 	});
 });

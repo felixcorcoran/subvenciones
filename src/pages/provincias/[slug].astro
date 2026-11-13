@@ -1,0 +1,41 @@
+---
+/** Las ayudas abiertas de cada provincia (o isla): las suyas, las de toda su comunidad y las de toda España */
+import type { GetStaticPaths } from 'astro';
+import Listado from '../../components/Listado.astro';
+import datos from '../../../datos/convocatorias.json';
+import type { Datos } from '../../lib/tipos';
+import { hoyMadrid } from '../../lib/fechas';
+import { ayudasAbiertas, deProvincia, deTodaLaComunidad, esEstatal, porCierre, PROVINCIAS, provinciasDe } from '../../lib/lista';
+import { aWeb } from '../../lib/web';
+
+// Solo las de comunidades con varias provincias: la de una uniprovincial es la de su comunidad
+export const getStaticPaths = (() =>
+	PROVINCIAS.filter((p) => provinciasDe(p.comunidad.codigo).length > 0).map((p) => ({ params: { slug: p.slug }, props: { p } }))) satisfies GetStaticPaths;
+
+const { p } = Astro.props;
+const hoy = hoyMadrid();
+const abiertas = ayudasAbiertas((datos as Datos).convocatorias, hoy).map(aWeb);
+const propias = abiertas.filter((c) => deProvincia(c, p.codigo)).sort(porCierre);
+const comunidad = abiertas.filter((c) => !deProvincia(c, p.codigo) && deTodaLaComunidad(c, p.comunidad.codigo)).sort(porCierre);
+const estatales = abiertas.filter((c) => esEstatal(c) && !deProvincia(c, p.codigo) && !deTodaLaComunidad(c, p.comunidad.codigo)).sort(porCierre);
+const isla = ['ES53', 'ES70'].includes(p.comunidad.codigo);
+const donde = isla ? `la isla de ${p.nombre}` : `la provincia de ${p.nombre}`;
+const lead = `${propias.length === 1 ? 'Una convocatoria abierta' : `${propias.length} convocatorias abiertas`} para negocios de ${donde} (de su diputación, cabildo o consell y de sus ayuntamientos), ${comunidad.length} de toda ${p.comunidad.nombre} y ${estatales.length} para toda España. Se actualiza cada mañana.`;
+---
+
+<Listado
+	title={`Ayudas para negocios en ${p.nombre} · Radar de subvenciones`}
+	description={`Ayudas abiertas para autónomos y empresas de ${donde}, de sus ayuntamientos, de ${p.comunidad.nombre} y estatales, explicadas en claro.`}
+	eyebrow={`Ayudas por ${isla ? 'isla' : 'provincia'} · ${p.comunidad.nombre}`}
+	h1={`Ayudas para negocios en ${p.nombre}`}
+	lead={lead}
+	grupos={[
+		{ titulo: `De ${p.nombre}`, texto: 'De la provincia y de sus municipios. Las que cierran antes, primero.', lista: propias },
+		{ titulo: `De toda ${p.comunidad.nombre}`, texto: 'También valen aquí, si cumples sus requisitos.', lista: comunidad },
+		{ titulo: 'Para toda España', texto: 'También valen aquí, si cumples sus requisitos.', lista: estatales },
+	]}
+	hoy={hoy}
+	noindex={propias.length === 0}
+	actual={`/provincias/${p.slug}`}
+	seguir={{ nombre: p.comunidad.nombre, ics: `/comunidades/${p.comunidad.slug}.ics`, rss: `/comunidades/${p.comunidad.slug}.xml` }}
+/>

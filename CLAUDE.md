@@ -20,18 +20,21 @@ Node 24. Más detalle en `README.md`.
 ## Mapa
 
 - `src/lib/`: `lista.ts` (solo presentación: titular, cercanía, búsqueda, comunidades y sectores,
-  `indexable`; no toca el contrato del encaje), `web.ts` (lo que llega al navegador), `visitas.ts` (guardadas y
-  visita anterior, en localStorage), `rss.ts`, `imagen.ts` (imagen al compartir), `encaje.ts`, `estado.ts` (abierta / próxima / sin fecha / por verificar / cerrada,
+  `indexable`; no toca el contrato del encaje), `web.ts` (lo que llega al navegador), `visitas.ts` (guardadas con su plazo, visita
+  anterior y negocios guardados, en localStorage), `finalidades.ts` (para qué sirve cada ayuda: solo
+  ordena y señala, no entra en el encaje ni se envía a alertas), `rss.ts`, `imagen.ts` (imagen al compartir), `encaje.ts`, `estado.ts` (abierta / próxima / sin fecha / por verificar / cerrada,
   fuera del contrato con alertas), `fechas.ts` (`cierre`, `fechaLarga`, `hoyMadrid`: usar siempre esta para «hoy»; sin dependencias para que los
   scripts de Node puedan importarlo: `encaje.ts` importa JSON), `sectores.ts` (CNAE-2025), `zonas.ts`,
   `calendario.ts`, `tipos.ts`.
 - `scripts/lectura.ts`: `revisarCierreIa` deja en `ia.plazoFin` solo fechas de las bases fiables;
   `limpiarMunicipio` quita de `condiciones.municipio` comunidades o provincias enteras;
+  `normalizarLectura` (finalidades, cómo pedirla, documentación, enlace) y `porCompletar` (relectura
+  de las ya leídas sin «cómo pedirla», sin contar como error);
   alertas lee `datos/convocatorias.json` directamente, así que la regla vive en los datos.
 - `scripts/salud.ts` + `.github/workflows/vigilar.yml`: vigilancia diaria con un issue.
 - `src/components/Asistente.astro`: el formulario pregunta a pregunta.
 - `src/pages/ayudas/`: ficha de cada convocatoria (y de las cerradas, `Cerrada.astro`);
-  `convocatorias.json.ts` y `detalles.json.ts` la exponen como JSON. `comunidades/` (página, `.xml` RSS y `.ics` de plazos), `sectores/`
+  `convocatorias.json.ts` y `detalles.json.ts` la exponen como JSON. `comunidades/` (página, `.xml` RSS y `.ics` de plazos), `provincias/`, `sectores/`
   (`Listado.astro`, `Tarjeta.astro`), `rss.xml.ts`, `og/`, `404.astro`. Estilos de tarjeta en
   `src/styles/tarjetas.css`. Cabeceras en `vercel.json` (CSP: si se añade un dominio externo, hay que
   ponerlo ahí).

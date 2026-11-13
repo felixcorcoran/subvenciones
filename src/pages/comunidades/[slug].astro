@@ -6,7 +6,7 @@ import datos from '../../../datos/convocatorias.json';
 import type { Datos } from '../../lib/tipos';
 import { enLista, estado } from '../../lib/estado';
 import { hoyMadrid } from '../../lib/fechas';
-import { COMUNIDADES, deComunidad, esEstatal, porCierre } from '../../lib/lista';
+import { COMUNIDADES, deComunidad, esEstatal, porCierre, provinciasDe } from '../../lib/lista';
 import { aWeb } from '../../lib/web';
 
 export const getStaticPaths = (() => COMUNIDADES.map((k) => ({ params: { slug: k.slug }, props: { k } }))) satisfies GetStaticPaths;
@@ -32,5 +32,6 @@ const lead = `${propias.length === 1 ? 'Una convocatoria abierta' : `${propias.l
 	hoy={hoy}
 	noindex={propias.length === 0}
 	actual={`/comunidades/${k.slug}`}
+	provincias={provinciasDe(k.codigo)}
 	seguir={{ nombre: k.nombre, ics: `/comunidades/${k.slug}.ics`, rss: `/comunidades/${k.slug}.xml` }}
 />

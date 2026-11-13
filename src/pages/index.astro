@@ -49,6 +49,20 @@ const description =
 						<button type="button" id="anterior" class="enlace" hidden></button>
 						<button type="button" id="todas" class="enlace">Mira todas las ayudas</button>
 					</div>
+					<!-- Los negocios guardados en este navegador (una gestoría, uno por cliente) -->
+					<div id="negocios" class="negocios" hidden>
+						<span class="negocios-titulo">Tus negocios:</span>
+						<ul data-lista></ul>
+					</div>
+				</div>
+				<!-- Si cambia el plazo de una guardada o desaparece (lo normal, que haya cerrado) -->
+				<div id="novedades" class="novedades" role="status" hidden>
+					<p class="novedades-titulo">Cambios en tus ayudas guardadas</p>
+					<ul data-lista></ul>
+					<p class="novedades-acciones">
+						<button type="button" class="enlace" data-ver>Ver mis guardadas</button>
+						<button type="button" class="enlace" data-visto>Entendido</button>
+					</p>
 				</div>
 			</section>
 
@@ -65,6 +79,16 @@ const description =
 						<button type="button" id="cambiar" class="enlace">Cambiar respuestas</button>
 						<button type="button" id="compartir" class="enlace">Copiar el enlace a estos resultados</button>
 						<a href="#avisos" class="enlace">Recibir las nuevas por email</a>
+						<button type="button" id="guardar-negocio" class="enlace">Guardar este negocio</button>
+						<form id="form-negocio" class="form-negocio" hidden>
+							<label for="nombre-negocio">Nombre para este negocio</label>
+							<input id="nombre-negocio" maxlength="60" autocomplete="off" placeholder="Por ejemplo: Bar Pepe" required />
+							<button type="submit" class="boton boton--pequeno">Guardar</button>
+						</form>
+						<label class="cambiar-negocio" id="cambiar-negocio" hidden>
+							<span>Ver otro negocio:</span>
+							<select data-select></select>
+						</label>
 					</div>
 					<h2 id="resultado-titulo"></h2>
 					<p id="resumen" class="resumen"></p>
@@ -82,6 +106,7 @@ const description =
 					<div class="casillas">
 						<label class="premios" id="guardadas-filtro" hidden><input type="checkbox" id="solo-guardadas" /> <span>Solo mis guardadas</span></label>
 						<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
+						<button type="button" id="calendario-guardadas" class="enlace" hidden>Añadir mis guardadas al calendario</button>
 					</div>
 				</div>
 				<div id="grupos"></div>
@@ -131,7 +156,20 @@ const description =
 			import { COMUNIDADES, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, textoMotivo, titularDe } from '../lib/lista';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
 			import type { Detalles } from '../lib/web';
-			import { alternarGuardada, esNueva, guardadas, registrarVisita } from '../lib/visitas';
+			import {
+				alternarGuardada,
+				borrarNegocio,
+				cambiosGuardadas,
+				esNueva,
+				guardadas,
+				guardarNegocio,
+				negocios,
+				registrarVisita,
+				verCambios,
+				type Negocio,
+			} from '../lib/visitas';
+			import { esFinalidad, nombreFinalidad, sirvePara } from '../lib/finalidades';
+			import { calendarioIcs } from '../lib/calendario';
 
 			const estado = document.querySelector<HTMLParagraphElement>('#estado')!;
 			const resultado = document.querySelector<HTMLElement>('#resultado')!;
@@ -200,7 +238,7 @@ const description =
 				};
 				pintarGuardar(guardadas().has(c.codigo));
 				guardar.addEventListener('click', () => {
-					pintarGuardar(alternarGuardada(c.codigo));
+					pintarGuardar(alternarGuardada(c));
 					contarGuardadas();
 				});
 				cabeza.append(guardar, el('p', 'ayuda-organo', organo), titulo);
@@ -209,6 +247,7 @@ const description =
 				const datosClave = el('ul', 'ayuda-datos');
 				const p = plazo(c);
 				if (esNueva(c, visitaAnterior)) datosClave.append(el('li', 'nueva', 'Nueva'));
+				if (e && e.estado !== 'no' && sirvePara(c.ia?.finalidades, ultima.finalidad)) datosClave.append(el('li', 'para-ti', `Para ${nombreFinalidad(ultima.finalidad!).toLowerCase()}`));
 				const plazoLi = el('li', p.pronto ? 'pronto' : '', p.texto);
 				datosClave.append(plazoLi);
 				// Con el plazo dicho con palabras, que quede claro que no hay fecha confirmada
@@ -289,13 +328,28 @@ const description =
 				return item;
 			}
 
-			let ultima: { perfil: Perfil | null } = { perfil: null };
+			/** Lo que se está viendo: el negocio (o ninguno, en «Todas las ayudas») y para qué busca la ayuda */
+			let ultima: { perfil: Perfil | null; finalidad: string | null } = { perfil: null, finalidad: null };
 
 			const filtros = document.querySelector<HTMLElement>('#filtros')!;
 			const buscar = document.querySelector<HTMLInputElement>('#buscar')!;
 			const filtroComunidad = document.querySelector<HTMLSelectElement>('#filtro-comunidad')!;
 			const filtroPronto = document.querySelector<HTMLInputElement>('#filtro-pronto')!;
 			const soloGuardadas = document.querySelector<HTMLInputElement>('#solo-guardadas')!;
+			const calendarioGuardadas = document.querySelector<HTMLButtonElement>('#calendario-guardadas')!;
+			// Los plazos de las guardadas, en un .ics que se descarga (se genera aquí, no sale del navegador)
+			calendarioGuardadas.addEventListener('click', () => {
+				const mias = guardadas();
+				const lista = (cache ?? []).filter((c) => mias.has(c.codigo));
+				const ics = calendarioIcs(lista, (c) => `${location.origin}/ayudas/${c.codigo}`, 'Mis ayudas guardadas');
+				const a = el('a');
+				a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+				a.download = 'ayudas-guardadas.ics';
+				document.body.append(a);
+				a.click();
+				a.remove();
+				setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+			});
 			const guardadasFiltro = document.querySelector<HTMLElement>('#guardadas-filtro')!;
 			/** El contador de «Solo mis guardadas»: solo se ve si hay alguna (o si está marcado) */
 			function contarGuardadas() {
@@ -336,6 +390,8 @@ const description =
 				const nuevas = visibles.filter((c) => esNueva(c, visitaAnterior)).length;
 				const yNuevas = nuevas ? ` · ${nuevas === 1 ? '1 nueva' : `${nuevas} nuevas`} desde tu última visita` : '';
 				contarGuardadas();
+				// Solo si alguna tiene fecha de cierre: si no, el calendario saldría vacío
+				calendarioGuardadas.hidden = !soloGuardadas.checked || !visibles.some((c) => cierre(c));
 				grupos.replaceChildren();
 				filtros.hidden = Boolean(perfil);
 
@@ -353,18 +409,26 @@ const description =
 						grupos.append(ol);
 					}
 				} else {
-					const evaluadas = visibles.map((c) => ({ c, e: encaje(c, perfil, hoy()), cerca: cercania(c, perfil, municipioDe(c)) }));
+					// Las que sirven para lo que busca, primero en cada grupo (sin quitar ninguna)
+					const evaluadas = visibles.map((c) => ({
+						c,
+						e: encaje(c, perfil, hoy()),
+						cerca: cercania(c, perfil, municipioDe(c)),
+						para: sirvePara(c.ia?.finalidades, ultima.finalidad) ? 0 : 1,
+					}));
 					const de = (s: Encaje['estado']) => evaluadas.filter((x) => x.e.estado === s);
-					const si = de('si').sort((a, b) => porCierre(a.c, b.c));
+					const si = de('si').sort((a, b) => a.para - b.para || porCierre(a.c, b.c));
 					// «Revisa», primero las más cercanas al negocio: su municipio, su provincia, su comunidad, toda España
-					const revisa = de('revisa').sort((a, b) => a.cerca - b.cerca || porCierre(a.c, b.c));
+					const revisa = de('revisa').sort((a, b) => a.para - b.para || a.cerca - b.cerca || porCierre(a.c, b.c));
 					const no = de('no').sort((a, b) => porCierre(a.c, b.c));
 					titulo.textContent = si.length
 						? 'Las ayudas para tu negocio'
 						: revisa.length
 							? 'Ninguna encaja del todo, pero hay ayudas que revisar'
 							: 'Ahora mismo no hay ayudas que encajen';
-					resumen.textContent = `${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan${yNuevas}`;
+					const paraTi = [...si, ...revisa].filter((x) => x.para === 0).length;
+					const yParaTi = ultima.finalidad && paraTi ? ` · ${paraTi} para ${nombreFinalidad(ultima.finalidad).toLowerCase()}` : '';
+					resumen.textContent = `${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan${yParaTi}${yNuevas}`;
 
 					const grupo = (nombre: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
 						if (!lista.length) return;
@@ -457,7 +521,7 @@ const description =
 			import { nombreSeccion } from '../lib/sectores';
 			const asistente = document.querySelector<HTMLElement>('#asistente')!;
 			const CLAVE = 'perfil-subvenciones';
-			type Guardado = Perfil & { comunidad?: string };
+			type Guardado = Perfil & { comunidad?: string; finalidad?: string | null };
 			const leerGuardado = (): Guardado | null => {
 				try {
 					return JSON.parse(localStorage.getItem(CLAVE) ?? 'null') as Guardado | null;
@@ -469,7 +533,7 @@ const description =
 			const FORMAS = { autonomo: 'Autónomo o autónoma', sociedad: 'Empresa (sociedad)', emprender: 'Aún no ha empezado' };
 			const PLANTILLA: Record<number, string> = { 0: 'Solo yo', 1: '1 a 9 personas', 10: '10 a 49 personas', 50: '50 a 249 personas', 250: '250 o más' };
 			const ANTIGUEDAD = { nada: '', menos1: 'Menos de un año', '1a3': 'De 1 a 3 años', mas3: 'Más de 3 años' };
-			const respuestas = (p: Perfil) =>
+			const respuestas = (p: Perfil, finalidad: string | null = null) =>
 				[
 					provincias.find((x) => x.codigo === p.provincia)?.nombre ?? '',
 					p.municipio,
@@ -477,6 +541,7 @@ const description =
 					p.forma === 'emprender' ? '' : PLANTILLA[p.empleados],
 					ANTIGUEDAD[p.antiguedad],
 					p.sector ? nombreSeccion(p.sector) : 'Sector sin indicar',
+					finalidad ? `Para: ${nombreFinalidad(finalidad).toLowerCase()}` : '',
 				].filter(Boolean);
 
 			// Si ya respondió antes en este navegador, puede ir directo
@@ -510,12 +575,13 @@ const description =
 			// Los resultados, siempre desde arriba: el título, el negocio y las ayudas.
 			// La dirección no cambia (recargar vuelve a la portada, con «Usa tus
 			// respuestas de antes»); el enlace para compartir lleva las respuestas.
-			async function verAyudas(perfil: Perfil) {
+			async function verAyudas(perfil: Perfil, finalidad: string | null = null) {
+				finalidad = esFinalidad(finalidad) ? finalidad : null;
 				asistente.hidden = true;
 				document.querySelector('.intro')!.classList.add('empezada');
 				const tu = document.querySelector<HTMLElement>('#tu-negocio')!;
 				tu.hidden = false;
-				document.querySelector('#respuestas')!.replaceChildren(...respuestas(perfil).map((t) => el('li', '', t)));
+				document.querySelector('#respuestas')!.replaceChildren(...respuestas(perfil, finalidad).map((t) => el('li', '', t)));
 				// La alternativa sin email: el calendario y el RSS de su comunidad
 				const comunidad = COMUNIDADES.find((k) => k.codigo === provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad);
 				const sinEmail = document.querySelector<HTMLElement>('#avisos-sin-email')!;
@@ -528,19 +594,32 @@ const description =
 				}
 				sinEmail.hidden = !comunidad;
 				await cargar();
-				ultima = { perfil };
+				ultima = { perfil, finalidad };
+				pintarNegocios();
 				pintar();
 				window.scrollTo({ top: 0, behavior: 'instant' });
 				// Para «Usa tus respuestas de antes» al volver (también si llegó por un enlace)
 				try {
 					const comunidad = provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad;
-					localStorage.setItem(CLAVE, JSON.stringify({ ...perfil, comunidad }));
+					localStorage.setItem(CLAVE, JSON.stringify({ ...perfil, comunidad, finalidad }));
 				} catch {}
 			}
-			document.addEventListener('perfil-listo', (e) => verAyudas((e as CustomEvent<Perfil>).detail));
+			document.addEventListener('perfil-listo', (e) => {
+				const { perfil, finalidad } = (e as CustomEvent<{ perfil: Perfil; finalidad: string | null }>).detail;
+				verAyudas(perfil, finalidad);
+			});
+			// Solo el perfil del encaje: la finalidad no va a alertas ni a la comparación
+			const soloPerfil = (g: Guardado): Perfil => ({
+				provincia: g.provincia,
+				municipio: g.municipio ?? '',
+				forma: g.forma,
+				empleados: g.empleados,
+				antiguedad: g.antiguedad,
+				sector: g.sector ?? '',
+			});
 			anterior.addEventListener('click', () => {
 				const p = leerGuardado();
-				if (p) verAyudas(p);
+				if (p) verAyudas(soloPerfil(p), p.finalidad ?? null);
 			});
 
 			document.querySelector('#todas')!.addEventListener('click', async () => {
@@ -548,7 +627,7 @@ const description =
 				document.querySelector<HTMLElement>('#tu-negocio')!.hidden = true;
 				document.querySelector('.intro')!.classList.add('empezada');
 				await cargar();
-				ultima = { perfil: null };
+				ultima = { perfil: null, finalidad: null };
 				pintar();
 				window.scrollTo({ top: 0, behavior: 'instant' });
 			});
@@ -564,6 +643,7 @@ const description =
 					q.set('empleados', String(p.empleados));
 					q.set('antiguedad', p.antiguedad);
 				}
+				if (ultima.finalidad) q.set('para', ultima.finalidad);
 				return q.toString();
 			}
 			function deParametros(q: URLSearchParams): Perfil | null {
@@ -581,6 +661,101 @@ const description =
 					sector: (q.get('sector') ?? '').slice(0, 1).toUpperCase(),
 				};
 			}
+
+			// Los negocios guardados: en la portada, para ir directo; en los resultados, para cambiar de uno a otro
+			const negociosCaja = document.querySelector<HTMLElement>('#negocios')!;
+			const cambiarNegocio = document.querySelector<HTMLElement>('#cambiar-negocio')!;
+			const selectNegocio = cambiarNegocio.querySelector<HTMLSelectElement>('[data-select]')!;
+			const verNegocio = (n: Negocio) => verAyudas(soloPerfil(n.perfil), n.finalidad ?? null);
+			function pintarNegocios() {
+				const lista = negocios();
+				const ul = negociosCaja.querySelector('[data-lista]')!;
+				ul.replaceChildren(
+					...lista.map((n) => {
+						const li = el('li');
+						const ir = el('button', 'enlace', n.nombre);
+						ir.type = 'button';
+						ir.addEventListener('click', () => verNegocio(n));
+						const quitar = el('button', 'quitar', '×');
+						quitar.type = 'button';
+						quitar.setAttribute('aria-label', `Borrar el negocio «${n.nombre}»`);
+						quitar.addEventListener('click', () => {
+							borrarNegocio(n.nombre);
+							pintarNegocios();
+						});
+						li.append(ir, quitar);
+						return li;
+					}),
+				);
+				negociosCaja.hidden = lista.length === 0;
+				// En los resultados: los demás negocios, para cambiar
+				selectNegocio.replaceChildren(
+					Object.assign(el('option', '', 'Elige…'), { value: '' }),
+					...lista.map((n, i) => Object.assign(el('option', '', n.nombre), { value: String(i) })),
+				);
+				cambiarNegocio.hidden = lista.length === 0;
+			}
+			selectNegocio.addEventListener('change', () => {
+				const n = negocios()[Number(selectNegocio.value)];
+				if (selectNegocio.value !== '' && n) verNegocio(n);
+			});
+			const formNegocio = document.querySelector<HTMLFormElement>('#form-negocio')!;
+			const nombreNegocio = document.querySelector<HTMLInputElement>('#nombre-negocio')!;
+			const botonGuardarNegocio = document.querySelector<HTMLButtonElement>('#guardar-negocio')!;
+			botonGuardarNegocio.addEventListener('click', () => {
+				formNegocio.hidden = false;
+				nombreNegocio.focus();
+			});
+			formNegocio.addEventListener('submit', (e) => {
+				e.preventDefault();
+				if (!ultima.perfil || !nombreNegocio.value.trim()) return;
+				guardarNegocio({ nombre: nombreNegocio.value, perfil: ultima.perfil, finalidad: ultima.finalidad });
+				formNegocio.hidden = true;
+				nombreNegocio.value = '';
+				botonGuardarNegocio.textContent = 'Negocio guardado';
+				setTimeout(() => (botonGuardarNegocio.textContent = 'Guardar este negocio'), 2500);
+				pintarNegocios();
+			});
+			pintarNegocios();
+
+			// Cambios en las guardadas desde la última vez: se miran al entrar (solo si hay alguna)
+			const novedades = document.querySelector<HTMLElement>('#novedades')!;
+			async function mirarGuardadas() {
+				if (guardadas().size === 0) return;
+				const lista = await cargar().catch(() => null);
+				if (!lista) return;
+				const cambios = cambiosGuardadas(lista);
+				if (!cambios.length) return;
+				novedades.querySelector('[data-lista]')!.replaceChildren(
+					...cambios.map((x) => {
+						const li = el('li');
+						if (x.tipo === 'fuera') {
+							// Su ficha dice que ha cerrado (o, pasados unos meses, la página de no encontrada lo explica)
+							const a = el('a', '', `La ayuda ${x.codigo}`);
+							a.href = `/ayudas/${x.codigo}`;
+							li.append(a, ' ya no está en el radar: lo normal es que haya cerrado.');
+						}
+						else {
+							const a = el('a', '', titularDe(x.c!));
+							a.href = `/ayudas/${x.codigo}`;
+							li.append(a, `: el plazo ${x.ahora ? `ahora termina el ${fechaLarga(x.ahora)}` : 'ya no tiene fecha de cierre confirmada'}${x.antes ? ` (antes, el ${fechaLarga(x.antes)})` : ''}.`);
+						}
+						return li;
+					}),
+				);
+				estado.textContent = '';
+				novedades.hidden = false;
+			}
+			novedades.querySelector('[data-visto]')!.addEventListener('click', () => {
+				if (cache) verCambios(cache);
+				novedades.hidden = true;
+			});
+			novedades.querySelector('[data-ver]')!.addEventListener('click', async () => {
+				if (cache) verCambios(cache);
+				novedades.hidden = true;
+				soloGuardadas.checked = true;
+				document.querySelector<HTMLButtonElement>('#todas')!.click();
+			});
 
 			const compartir = document.querySelector<HTMLButtonElement>('#compartir')!;
 			compartir.addEventListener('click', async () => {
@@ -610,14 +785,14 @@ const description =
 			if (desdeEnlace) {
 				// Se enseñan sus ayudas y la dirección queda limpia: al recargar, portada
 				history.replaceState(null, '', '/');
-				verAyudas(desdeEnlace).then(() => {
+				verAyudas(desdeEnlace, entrada.get('para')).then(() => {
 					if (alAviso) setTimeout(() => avisos.scrollIntoView({ behavior: 'smooth', block: 'center' }), 400);
 				});
 			}
 			else if (entrada.has('empezar')) {
 				history.replaceState(null, '', '/');
 				abrir();
-			}
+			} else mirarGuardadas();
 		</script>
 </Base>
 
@@ -1034,6 +1209,155 @@ const description =
 		text-align: center;
 	}
 
+
+	/* Tus negocios (portada) y los avisos de cambios en las guardadas */
+	.negocios {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.25rem 0.75rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.negocios[hidden],
+	.novedades[hidden],
+	.intro.empezada .novedades,
+	.form-negocio[hidden],
+	.cambiar-negocio[hidden],
+	#calendario-guardadas[hidden] {
+		display: none;
+	}
+
+	.negocios ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.75rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	/* Los botones de cada negocio y de cada cambio se crean en el navegador: sin el
+	   atributo de ámbito de Astro, sus estilos van con :global dentro de su caja */
+	.negocios :global(li) {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.negocios :global(.enlace) {
+		padding: 0.5rem 0;
+		border: 0;
+		background: none;
+		color: var(--text);
+		font: inherit;
+		text-decoration: underline;
+		text-decoration-color: rgb(var(--ink) / 0.3);
+		text-underline-offset: 0.3em;
+		cursor: pointer;
+	}
+
+	.negocios :global(.quitar) {
+		width: 1.75rem;
+		height: 1.75rem;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--text-muted);
+		font: inherit;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+
+	.negocios :global(.quitar:hover) {
+		color: var(--accent-text);
+	}
+
+	.novedades {
+		max-width: 40rem;
+		margin: 1.75rem auto 0;
+		padding: 1rem 1.25rem;
+		border-radius: 1rem;
+		background: var(--accent-soft);
+		text-align: left;
+		font-size: 0.9375rem;
+		line-height: 1.5;
+	}
+
+	.novedades-titulo {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.novedades ul {
+		margin: 0.5rem 0 0;
+		padding-left: 1.2rem;
+	}
+
+	.novedades :global(a) {
+		color: inherit;
+		text-decoration-color: var(--accent-text);
+		text-underline-offset: 0.2em;
+	}
+
+	.novedades-acciones {
+		display: flex;
+		gap: 1.25rem;
+		margin: 0.5rem 0 0;
+	}
+
+	.novedades .enlace {
+		color: var(--text);
+	}
+
+	/* Guardar el negocio con un nombre, y cambiar a otro guardado */
+	.form-negocio {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+		flex-basis: 100%;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.form-negocio input,
+	.cambiar-negocio select {
+		box-sizing: border-box;
+		height: 2.5rem;
+		padding: 0 0.875rem;
+		border-radius: 0.75rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 1rem;
+	}
+
+	.form-negocio input {
+		flex: 1 1 12rem;
+	}
+
+	.form-negocio input:focus-visible,
+	.cambiar-negocio select:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.boton.boton--pequeno {
+		height: 2.5rem;
+		padding: 0 1.1rem;
+		font-size: 0.875rem;
+	}
+
+	.cambiar-negocio {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
 
 	.filtros {
 		display: flex;

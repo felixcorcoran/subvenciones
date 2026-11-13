@@ -2,12 +2,14 @@
 /**
  * El formulario, pregunta a pregunta: comunidad (con su silueta), provincia o
  * isla, municipio (con autocompletado), forma de trabajo, plantilla,
- * antigüedad y sector. Al terminar lanza el evento «perfil-listo» con el
- * perfil; la página pinta las ayudas.
+ * antigüedad, sector y para qué busca la ayuda. Al terminar lanza el evento
+ * «perfil-listo» con el perfil y la finalidad (que no es parte del perfil del
+ * encaje: solo ordena y señala); la página pinta las ayudas.
  */
 import provincias from '../data/provincias.json';
 import formas from '../data/formas.json';
 import { SECCIONES } from '../lib/sectores';
+import { FINALIDADES } from '../lib/finalidades';
 
 const siluetas = formas as { comunidades: Record<string, string>; provincias: Record<string, string> };
 
@@ -176,6 +178,26 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 			}
 			<li style={`--i: ${sectores.length}`}>
 				<button type="button" class="tarjeta tarjeta--suave" data-sector="">No lo sé o es otra cosa</button>
+			</li>
+		</ul>
+	</div>
+
+	<div class="paso" data-paso="finalidad" hidden>
+		<p class="contador" data-contador></p>
+		<h2 tabindex="-1">¿Para qué buscas la ayuda?</h2>
+		<p class="pista">Pondremos primero las que sirven para eso. No deja fuera ninguna.</p>
+		<ul class="rejilla rejilla--sectores">
+			{
+				FINALIDADES.map((f, i) => (
+					<li style={`--i: ${i}`}>
+						<button type="button" class="tarjeta" data-finalidad={f.clave}>
+							{f.nombre}
+						</button>
+					</li>
+				))
+			}
+			<li style={`--i: ${FINALIDADES.length}`}>
+				<button type="button" class="tarjeta tarjeta--suave" data-finalidad="">Para cualquier cosa</button>
 			</li>
 		</ul>
 	</div>
@@ -606,10 +628,10 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 	const barra = raiz.querySelector<HTMLElement>('[data-barra]')!;
 	const atras = raiz.querySelector<HTMLButtonElement>('[data-atras]')!;
 
-	type Paso = 'comunidad' | 'provincia' | 'municipio' | 'forma' | 'empleados' | 'antiguedad' | 'sector';
-	const ORDEN: Paso[] = ['comunidad', 'provincia', 'municipio', 'forma', 'empleados', 'antiguedad', 'sector'];
+	type Paso = 'comunidad' | 'provincia' | 'municipio' | 'forma' | 'empleados' | 'antiguedad' | 'sector' | 'finalidad';
+	const ORDEN: Paso[] = ['comunidad', 'provincia', 'municipio', 'forma', 'empleados', 'antiguedad', 'sector', 'finalidad'];
 
-	const r: Partial<Perfil> & { comunidad?: string } = {};
+	const r: Partial<Perfil> & { comunidad?: string; finalidad?: string | null } = {};
 	let historial: Paso[] = [];
 
 	const comunidadDe = (codigo?: string) => comunidades.find((c) => c.codigo === codigo);
@@ -641,10 +663,11 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 
 	// Lo ya elegido sale marcado al volver atrás
 	function marcar(paso: HTMLElement) {
-		for (const b of paso.querySelectorAll<HTMLButtonElement>('button[data-comunidad],button[data-provincia],button[data-forma],button[data-empleados],button[data-antiguedad],button[data-sector]')) {
+		for (const b of paso.querySelectorAll<HTMLButtonElement>('button[data-comunidad],button[data-provincia],button[data-forma],button[data-empleados],button[data-antiguedad],button[data-sector],button[data-finalidad]')) {
 			const [clave, valor] = Object.entries(b.dataset)[0];
 			const actual = clave === 'comunidad' ? r.comunidad : clave === 'empleados' ? String(r.empleados ?? '') : (r as Record<string, unknown>)[clave];
-			b.setAttribute('aria-pressed', String(actual !== undefined && String(actual) === valor && (clave !== 'sector' || r.sector !== undefined)));
+			const conValor = clave === 'finalidad' ? r.finalidad !== undefined : clave !== 'sector' || r.sector !== undefined;
+			b.setAttribute('aria-pressed', String(actual !== undefined && String(actual ?? '') === valor && conValor));
 		}
 	}
 
@@ -673,11 +696,12 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 			antiguedad: r.forma === 'emprender' ? 'nada' : (r.antiguedad ?? '1a3'),
 			sector: r.sector ?? '',
 		};
+		const finalidad = r.finalidad || null;
 		try {
-			localStorage.setItem('perfil-subvenciones', JSON.stringify({ ...perfil, comunidad: r.comunidad }));
+			localStorage.setItem('perfil-subvenciones', JSON.stringify({ ...perfil, comunidad: r.comunidad, finalidad }));
 		} catch {}
 		barra.style.setProperty('--p', '100%');
-		document.dispatchEvent(new CustomEvent('perfil-listo', { detail: perfil }));
+		document.dispatchEvent(new CustomEvent('perfil-listo', { detail: { perfil, finalidad } }));
 	}
 
 	// Opciones
@@ -711,6 +735,10 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 		if (d.sector !== undefined) {
 			r.sector = d.sector;
 			return siguiente('sector');
+		}
+		if (d.finalidad !== undefined) {
+			r.finalidad = d.finalidad;
+			return siguiente('finalidad');
 		}
 	});
 
@@ -817,7 +845,7 @@ const sectores = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra));
 
 	// La página abre el asistente desde el principio, o desde una pregunta
 	// concreta para cambiar una respuesta
-	document.addEventListener('empezar-asistente', ((e: CustomEvent<{ desde?: Paso; perfil?: Partial<Perfil> & { comunidad?: string } }>) => {
+	document.addEventListener('empezar-asistente', ((e: CustomEvent<{ desde?: Paso; perfil?: Partial<Perfil> & { comunidad?: string; finalidad?: string | null } }>) => {
 		Object.assign(r, e.detail?.perfil ?? {});
 		if (r.comunidad) {
 			const c = comunidadDe(r.comunidad);

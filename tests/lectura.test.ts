@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa, limpiarMunicipio, titularValido } from '../scripts/lectura';
+import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa, limpiarMunicipio, normalizarLectura, porCompletar, titularValido } from '../scripts/lectura';
 import { cierre } from '../src/lib/encaje';
 import type { Analisis, Convocatoria } from '../src/lib/tipos';
 import { analisis, convocatoria, HOY } from './ayudas';
@@ -157,5 +157,37 @@ describe('municipio que en realidad es una comunidad o provincia', () => {
 		expect(limpiarMunicipio(con('Almería', 'LOCAL'))).toBe(false);
 		expect(limpiarMunicipio(con('Cataluña', 'AUTONOMICA', [{ codigo: 'ES', nombre: 'ESPAÑA' }]))).toBe(false);
 		expect(limpiarMunicipio(con('Cataluña', 'AUTONOMICA', []))).toBe(false);
+	});
+});
+
+describe('cómo pedirla, documentación y finalidades', () => {
+	it('normaliza lo leído: finalidades conocidas, listas sin vacíos y con tope, enlace solo si es una dirección web', () => {
+		const a = normalizarLectura({
+			...analisis(),
+			finalidades: ['digitalizar', 'inventada', 'digitalizar', 'contratar'],
+			comoPedir: [' Entra en la sede ', '', ...Array(8).fill('Paso')],
+			documentacion: ['DNI', '  '],
+			dondeSolicitar: '  ',
+			enlaceSolicitud: 'sede.cabra.es/ayudas',
+		});
+		expect(a.finalidades).toEqual(['digitalizar', 'contratar']);
+		expect(a.comoPedir).toHaveLength(6);
+		expect(a.comoPedir![0]).toBe('Entra en la sede');
+		expect(a.documentacion).toEqual(['DNI']);
+		expect(a.dondeSolicitar).toBeNull();
+		expect(a.enlaceSolicitud).toBeNull();
+		expect(normalizarLectura({ ...analisis(), enlaceSolicitud: 'https://sede.cabra.es/ayudas' }).enlaceSolicitud).toBe('https://sede.cabra.es/ayudas');
+	});
+
+	it('se completan las ya leídas sin «cómo pedirla» que siguen en la lista; si falló, pasada la espera', () => {
+		const leida = (extra: Partial<Convocatoria> = {}) =>
+			({ ...convocatoria({ fin: '2026-12-31' }), documento: { id: 1, nombre: 'bases.pdf' }, ...extra }) as Convocatoria;
+		expect(porCompletar(leida(), HOY)).toBe(true);
+		expect(porCompletar(leida({ ia: { ...analisis(), comoPedir: [] } }), HOY)).toBe(false);
+		expect(porCompletar(leida({ ia: null }), HOY)).toBe(false);
+		expect(porCompletar(leida({ iaRevisar: 'plazo' }), HOY)).toBe(false);
+		expect(porCompletar(leida({ fin: '2026-10-01' }), HOY)).toBe(false);
+		expect(porCompletar(leida({ iaCompletarEl: HOY }), HOY)).toBe(false);
+		expect(porCompletar(leida({ iaCompletarEl: '2026-09-01' }), HOY)).toBe(true);
 	});
 });

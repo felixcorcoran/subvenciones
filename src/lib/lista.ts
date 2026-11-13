@@ -6,7 +6,7 @@
  * contrato con el repo de alertas y no se toca desde aquí).
  */
 import type { ConvocatoriaWeb } from './tipos.ts';
-import { normalizarMunicipio, type Motivo, type Perfil } from './encaje.ts';
+import { municipioDe, normalizarMunicipio, type Motivo, type Perfil } from './encaje.ts';
 import { cierre } from './fechas.ts';
 import { estado } from './estado.ts';
 import { SECCIONES, seccionDe } from './sectores.ts';
@@ -29,6 +29,17 @@ export const COMUNIDADES = [...new Map(provincias.map((p) => [p.codigoComunidad,
 	(a, b) => a.nombre.localeCompare(b.nombre, 'es'),
 );
 
+/** Las provincias (e islas), con su comunidad */
+export const PROVINCIAS = provincias
+	.map((p) => ({ codigo: p.codigo, nombre: p.nombre, slug: slug(p.nombre), comunidad: COMUNIDADES.find((k) => k.codigo === p.codigoComunidad)! }))
+	.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+
+/** Las provincias de una comunidad (vacío si es uniprovincial: su página ya es la de la comunidad) */
+export const provinciasDe = (comunidad: string) => {
+	const suyas = PROVINCIAS.filter((p) => p.comunidad.codigo === comunidad);
+	return suyas.length > 1 ? suyas : [];
+};
+
 /** Los sectores con página propia: los de la CNAE en los que un negocio pide ayudas */
 export const SECTORES = SECCIONES.filter((s) => !['P', 'U', 'V'].includes(s.letra)).map((s) => ({
 	letra: s.letra,
@@ -43,6 +54,12 @@ export const esEstatal = (c: ConvocatoriaWeb) => zonas(c).includes('ES');
 
 /** Si la ayuda es de esa comunidad (o de una provincia o comarca suya) */
 export const deComunidad = (c: ConvocatoriaWeb, codigo: string) => zonas(c).some((z) => z !== 'ES' && z.startsWith(codigo));
+
+/** Si la ayuda es de esa provincia (o de un municipio o comarca suya) */
+export const deProvincia = (c: ConvocatoriaWeb, codigo: string) => zonas(c).some((z) => z.startsWith(codigo));
+
+/** Si la ayuda es para toda la comunidad (no solo para una de sus provincias) */
+export const deTodaLaComunidad = (c: ConvocatoriaWeb, codigo: string) => zonas(c).some((z) => z === codigo);
 
 /** Las secciones de la CNAE de la ayuda; vacío si vale para cualquier sector */
 export function seccionesDe(c: ConvocatoriaWeb): string[] {
@@ -88,7 +105,19 @@ export function coincide(c: ConvocatoriaWeb, busqueda: string): boolean {
 	const palabras = sinTildes(busqueda).toLowerCase().split(/\s+/).filter(Boolean);
 	if (!palabras.length) return true;
 	const texto = sinTildes(
-		[c.titulo, c.ia?.titular, c.ia?.resumen, c.ia?.paraQuien, c.organo.nivel2, c.organo.nivel3, c.codigo, ...c.regiones.map((r) => r.nombre)]
+		[
+			c.titulo,
+			c.ia?.titular,
+			c.ia?.resumen,
+			c.ia?.paraQuien,
+			c.organo.nivel2,
+			c.organo.nivel3,
+			c.codigo,
+			// Buscar por municipio: el del ayuntamiento que convoca y el que exigen las bases
+			municipioDe(c),
+			c.ia?.condiciones.municipio,
+			...c.regiones.map((r) => r.nombre),
+		]
 			.filter(Boolean)
 			.join(' '),
 	).toLowerCase();
