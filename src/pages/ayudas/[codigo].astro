@@ -300,7 +300,7 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 	import { hoyMadrid } from '../../lib/fechas';
 	import { textoMotivo } from '../../lib/lista';
 	import type { ConvocatoriaWeb } from '../../lib/tipos';
-	import { alternarGuardada, guardadas } from '../../lib/visitas';
+	import { alternarGuardada, contarGuardada, guardadas } from '../../lib/visitas';
 
 	const botonGuardar = document.querySelector<HTMLButtonElement>('[data-guardar]');
 	const ayuda = JSON.parse(document.querySelector('#ayuda-datos')?.textContent || 'null') as ConvocatoriaWeb | null;
@@ -311,7 +311,11 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 			botonGuardar.setAttribute('aria-pressed', String(si));
 		};
 		pintar(guardadas().has(codigo));
-		botonGuardar.addEventListener('click', () => pintar(alternarGuardada(ayuda)));
+		botonGuardar.addEventListener('click', () => {
+			const ahora = alternarGuardada(ayuda);
+			pintar(ahora);
+			if (ahora) contarGuardada(codigo);
+		});
 		botonGuardar.hidden = false;
 	}
 

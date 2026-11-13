@@ -115,7 +115,7 @@ const description =
 					<p class="eyebrow">Avisos por email</p>
 					<h3 id="avisos-titulo">¿Te avisamos cuando salgan ayudas nuevas para tu negocio?</h3>
 					<p class="avisos-texto">
-						Cada mañana miramos las convocatorias nuevas y, si alguna encaja con lo que nos has dicho, te llega un correo. Gratis, sin cuenta y con baja en un clic.
+						Cada mañana miramos las convocatorias nuevas y, si alguna encaja con lo que nos has dicho, te llega un correo (o un resumen a la semana, si lo prefieres). Si cambia el plazo de una que te enviamos, también te lo decimos. Gratis, sin cuenta y con baja en un clic.
 					</p>
 					<form id="avisos-form" novalidate>
 						<div class="avisos-fila">
@@ -123,6 +123,16 @@ const description =
 							<input id="avisos-email" type="email" autocomplete="email" inputmode="email" placeholder="Tu email" required />
 							<button type="submit" class="boton">Avisarme <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 6h9M7 2.5 10.5 6 7 9.5"></path></svg></button>
 						</div>
+						<fieldset class="avisos-frecuencia">
+							<legend class="sr-only">Cada cuánto</legend>
+							<label><input type="radio" name="avisos-frecuencia" value="diaria" checked /> Cada día que haya algo</label>
+							<label><input type="radio" name="avisos-frecuencia" value="semanal" /> Un resumen a la semana</label>
+						</fieldset>
+						<!-- Solo si tiene guardadas: sus plazos, también por email (sin marcar: lo elige) -->
+						<label class="avisos-acepto" id="avisos-seguir" hidden>
+							<input type="checkbox" id="avisos-seguidas" />
+							<span data-texto>Avísame también si cambia el plazo de mis ayudas guardadas</span>
+						</label>
 						<label class="avisos-acepto">
 							<input type="checkbox" id="avisos-acepto" />
 							<span>He leído la <a href="https://alertas.felixcorcoran.es/privacidad" target="_blank" rel="noopener" data-site-link>política de privacidad</a>: mi email y estas respuestas solo se usan para enviarme los avisos.</span>
@@ -160,6 +170,7 @@ const description =
 				alternarGuardada,
 				borrarNegocio,
 				cambiosGuardadas,
+				contarGuardada,
 				esNueva,
 				guardadas,
 				guardarNegocio,
@@ -238,7 +249,9 @@ const description =
 				};
 				pintarGuardar(guardadas().has(c.codigo));
 				guardar.addEventListener('click', () => {
-					pintarGuardar(alternarGuardada(c));
+					const ahora = alternarGuardada(c);
+					pintarGuardar(ahora);
+					if (ahora) contarGuardada(c.codigo);
 					contarGuardadas();
 				});
 				cabeza.append(guardar, el('p', 'ayuda-organo', organo), titulo);
@@ -356,6 +369,12 @@ const description =
 				const n = cache ? cache.filter((c) => guardadas().has(c.codigo)).length : 0;
 				guardadasFiltro.querySelector('span')!.textContent = `Solo mis guardadas (${n})`;
 				guardadasFiltro.hidden = n === 0 && !soloGuardadas.checked;
+				// En los avisos, seguir también sus plazos por email
+				const todas = guardadas().size;
+				const seguir = document.querySelector<HTMLElement>('#avisos-seguir')!;
+				seguir.hidden = todas === 0;
+				seguir.querySelector('[data-texto]')!.textContent =
+					todas === 1 ? 'Avísame también si cambia el plazo de mi ayuda guardada' : `Avísame también si cambia el plazo de mis ${todas} ayudas guardadas`;
 			}
 			const titulo = document.querySelector<HTMLElement>('#resultado-titulo')!;
 			const resumen = document.querySelector<HTMLElement>('#resumen')!;
@@ -490,6 +509,8 @@ const description =
 				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return void (avisosEstado.textContent = 'Escribe un email válido.');
 				if (!avisosAcepto.checked) return void (avisosEstado.textContent = 'Para apuntarte, marca que has leído la política de privacidad.');
 
+				const frecuencia = avisosForm.querySelector<HTMLInputElement>('input[name="avisos-frecuencia"]:checked')?.value ?? 'diaria';
+				const seguidas = document.querySelector<HTMLInputElement>('#avisos-seguidas')!.checked ? [...guardadas()].slice(0, 50) : [];
 				const boton = avisosForm.querySelector<HTMLButtonElement>('button')!;
 				boton.disabled = true;
 				avisosEstado.className = 'avisos-estado';
@@ -498,7 +519,7 @@ const description =
 					const r = await fetch(`${ALERTAS}/api/suscripciones`, {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify({ email, perfil, acepto: true }),
+						body: JSON.stringify({ email, perfil, acepto: true, frecuencia, seguidas }),
 					});
 					if (r.status === 429) throw new Error('Demasiados intentos seguidos. Prueba de nuevo en unos minutos.');
 					if (r.status === 400) throw new Error('Revisa el email: no parece válido.');
@@ -1078,6 +1099,34 @@ const description =
 	.avisos-fila .boton:disabled {
 		opacity: 0.6;
 		cursor: progress;
+	}
+
+	.avisos-frecuencia {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.5rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		border: 0;
+		font-size: 0.9375rem;
+	}
+
+	.avisos-frecuencia label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+	}
+
+	.avisos-frecuencia input {
+		width: 1.05rem;
+		height: 1.05rem;
+		margin: 0;
+		accent-color: var(--accent-text);
+	}
+
+	.avisos-acepto[hidden] {
+		display: none;
 	}
 
 	.avisos-acepto {

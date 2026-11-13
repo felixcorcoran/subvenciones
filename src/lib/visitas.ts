@@ -139,3 +139,17 @@ export function borrarNegocio(nombre: string, a = almacen()): Negocio[] {
 	escribir(a, CLAVE_NEGOCIOS, lista);
 	return lista;
 }
+
+/** La API de los avisos (alertas.felixcorcoran.es); en local se puede cambiar con PUBLIC_ALERTAS_API */
+export const ALERTAS_API: string = import.meta.env?.PUBLIC_ALERTAS_API ?? 'https://alertas.felixcorcoran.es';
+
+/**
+ * Cuenta que se ha guardado una ayuda (para saber qué interesa), sin ningún
+ * dato de quién: solo el código. Con sendBeacon, que no espera respuesta ni
+ * retrasa nada; si no se puede, no pasa nada.
+ */
+export function contarGuardada(codigo: string, api = ALERTAS_API) {
+	try {
+		navigator.sendBeacon?.(`${api}/api/guardadas`, JSON.stringify({ codigo }));
+	} catch {}
+}
