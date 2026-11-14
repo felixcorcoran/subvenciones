@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, titularDe } from '../src/lib/lista';
+import { paraComunidad, cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, titularDe } from '../src/lib/lista';
 import { hoyMadrid } from '../src/lib/fechas';
 import { analisis, convocatoria, perfil } from './ayudas';
 
@@ -69,5 +69,16 @@ describe('presentación de las listas', () => {
 		const c = convocatoria({ organo: { nivel1: 'LOCAL', nivel2: 'CABRA', nivel3: 'AYUNTAMIENTO DE CABRA' } });
 		expect(coincide(c, 'cabra')).toBe(true);
 		expect(coincide(convocatoria({ ia: null }), 'marbella')).toBe(false);
+	});
+
+	it('la lista de una comunidad: las suyas, las de su grupo, las estatales y las sin zona', () => {
+		const con = (codigo?: string) => convocatoria({ regiones: codigo ? [{ codigo, nombre: '' }] : [] });
+		expect(paraComunidad(con('ES617'), 'ES61')).toBe(true);
+		expect(paraComunidad(con('ES61'), 'ES61')).toBe(true);
+		expect(paraComunidad(con('ES6'), 'ES61')).toBe(true);
+		expect(paraComunidad(con('ES'), 'ES61')).toBe(true);
+		expect(paraComunidad(con(), 'ES61')).toBe(true);
+		expect(paraComunidad(con('ES300'), 'ES61')).toBe(false);
+		expect(paraComunidad(con('ES62'), 'ES61')).toBe(false);
 	});
 });

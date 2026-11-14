@@ -8,14 +8,13 @@
 import type { APIRoute } from 'astro';
 import datos from '../../datos/convocatorias.json';
 import type { ConvocatoriaWeb, Datos } from '../lib/tipos';
-import { enLista, estado } from '../lib/estado';
 import { hoyMadrid } from '../lib/fechas';
-import { aLista } from '../lib/web';
+import { listaWeb } from '../lib/web';
 
 export const GET: APIRoute = () => {
 	const { actualizado, convocatorias } = datos as Datos;
 	const hoy = hoyMadrid();
-	const web: ConvocatoriaWeb[] = convocatorias.filter((c) => enLista(estado(c, hoy))).map(aLista);
+	const web: ConvocatoriaWeb[] = listaWeb(convocatorias, hoy);
 	return new Response(JSON.stringify({ actualizado, convocatorias: web }), {
 		headers: { 'content-type': 'application/json; charset=utf-8' },
 	});

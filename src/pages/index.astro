@@ -163,7 +163,7 @@ const description =
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
 			import { enLista, estado as estadoDe, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../lib/estado';
 			import { hoyMadrid } from '../lib/fechas';
-			import { COMUNIDADES, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, titularDe } from '../lib/lista';
+			import { COMUNIDADES, paraComunidad, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, titularDe } from '../lib/lista';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
 			import type { Detalles } from '../lib/web';
 			import {
@@ -195,15 +195,31 @@ const description =
 				return node;
 			};
 
-			let cache: ConvocatoriaWeb[] | null = null;
-			async function cargar(): Promise<ConvocatoriaWeb[]> {
-				if (cache) return cache;
+			/** Las listas ya descargadas: '' es la de toda España; ES61…, la de cada comunidad */
+			const listas = new Map<string, ConvocatoriaWeb[]>();
+			async function obtener(comunidad = ''): Promise<ConvocatoriaWeb[]> {
+				const hecha = listas.get(comunidad);
+				if (hecha) return hecha;
+				// Con la de toda España ya descargada, la de una comunidad sale de ella
+				const todas = listas.get('');
+				if (comunidad && todas) {
+					const suya = todas.filter((c) => paraComunidad(c, comunidad));
+					listas.set(comunidad, suya);
+					return suya;
+				}
 				estado.textContent = 'Cargando las convocatorias…';
-				const res = await fetch('/convocatorias.json');
-				const data = (await res.json()) as { convocatorias: ConvocatoriaWeb[] };
-				estado.textContent = '';
-				return (cache = data.convocatorias);
+				try {
+					const res = await fetch(comunidad ? `/convocatorias/${comunidad}.json` : '/convocatorias.json');
+					const data = (await res.json()) as { convocatorias: ConvocatoriaWeb[] };
+					listas.set(comunidad, data.convocatorias);
+					return data.convocatorias;
+				} finally {
+					estado.textContent = '';
+				}
 			}
+			/** La lista que se está enseñando */
+			let cache: ConvocatoriaWeb[] | null = null;
+			const cargar = async (comunidad = '') => (cache = await obtener(comunidad));
 
 			// Requisitos y gastos de todas, en una sola petición; si falla, se vuelve a pedir la próxima vez
 			let pedidaDetalles: Promise<Detalles> | null = null;
@@ -350,9 +366,10 @@ const description =
 			const soloGuardadas = document.querySelector<HTMLInputElement>('#solo-guardadas')!;
 			const calendarioGuardadas = document.querySelector<HTMLButtonElement>('#calendario-guardadas')!;
 			// Los plazos de las guardadas, en un .ics que se descarga (se genera aquí, no sale del navegador)
-			calendarioGuardadas.addEventListener('click', () => {
+			calendarioGuardadas.addEventListener('click', async () => {
 				const mias = guardadas();
-				const lista = (cache ?? []).filter((c) => mias.has(c.codigo));
+				// De toda España: puede haber guardado alguna de otra comunidad
+				const lista = (await obtener()).filter((c) => mias.has(c.codigo));
 				const ics = calendarioIcs(lista, (c) => `${location.origin}/ayudas/${c.codigo}`, 'Mis ayudas guardadas');
 				const a = el('a');
 				a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
@@ -394,6 +411,25 @@ const description =
 				});
 			}
 
+			/** Una lista larga, por tandas: las primeras y un botón «Ver más» (se crean al momento, sin esperar) */
+			const TANDA = 30;
+			function enTandas<T>(items: T[], pintarUno: (x: T) => HTMLElement): HTMLElement[] {
+				const ol = el('ol', 'lista');
+				const mas = el('button', 'ver-mas');
+				mas.type = 'button';
+				let hechas = 0;
+				const seguir = () => {
+					for (const x of items.slice(hechas, hechas + TANDA)) ol.append(pintarUno(x));
+					hechas += TANDA;
+					const quedan = items.length - hechas;
+					if (quedan <= 0) mas.remove();
+					else mas.textContent = `Ver ${Math.min(quedan, TANDA)} más (quedan ${quedan})`;
+				};
+				mas.addEventListener('click', seguir);
+				seguir();
+				return items.length > TANDA ? [ol, mas] : [ol];
+			}
+
 			function pintar() {
 				if (!cache) return;
 				const perfil = ultima.perfil;
@@ -421,11 +457,7 @@ const description =
 						? `${lista.length} de ${visibles.length} convocatorias, las que cierran antes primero${yNuevas}`
 						: `${visibles.length} convocatorias, las que cierran antes primero${yNuevas}`;
 					if (!lista.length) grupos.append(el('p', 'grupo-texto vacio', 'Ninguna con esos filtros. Prueba con otras palabras o con toda España.'));
-					else {
-						const ol = el('ol', 'lista');
-						for (const c of lista) ol.append(tarjeta(c, null));
-						grupos.append(ol);
-					}
+					else grupos.append(...enTandas(lista, (c) => tarjeta(c, null)));
 				} else {
 					// Las que sirven para lo que busca, primero en cada grupo (sin quitar ninguna)
 					const evaluadas = visibles.map((c) => ({
@@ -450,15 +482,14 @@ const description =
 
 					const grupo = (nombre: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
 						if (!lista.length) return;
-						const ol = el('ol', 'lista');
-						for (const { c, e } of lista) ol.append(tarjeta(c, e));
+						const ol = enTandas(lista, ({ c, e }) => tarjeta(c, e));
 						if (plegado) {
 							const d = el('details', `grupo grupo--${clase}`);
-							d.append(el('summary', '', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							d.append(el('summary', '', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ...ol);
 							grupos.append(d);
 						} else {
 							const s = el('section', `grupo grupo--${clase}`);
-							s.append(el('h3', 'grupo-titulo', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							s.append(el('h3', 'grupo-titulo', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ...ol);
 							grupos.append(s);
 						}
 					};
@@ -613,7 +644,7 @@ const description =
 					sinEmail.querySelector<HTMLAnchorElement>('[data-rss]')!.href = `/comunidades/${comunidad.slug}.xml`;
 				}
 				sinEmail.hidden = !comunidad;
-				await cargar();
+				await cargar(provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad ?? '');
 				ultima = { perfil, finalidad };
 				pintarNegocios();
 				pintar();
@@ -742,7 +773,7 @@ const description =
 			const novedades = document.querySelector<HTMLElement>('#novedades')!;
 			async function mirarGuardadas() {
 				if (guardadas().size === 0) return;
-				const lista = await cargar().catch(() => null);
+				const lista = await obtener().catch(() => null);
 				if (!lista) return;
 				const cambios = cambiosGuardadas(lista);
 				if (!cambios.length) return;
@@ -766,12 +797,13 @@ const description =
 				estado.textContent = '';
 				novedades.hidden = false;
 			}
-			novedades.querySelector('[data-visto]')!.addEventListener('click', () => {
-				if (cache) verCambios(cache);
+			// Con la lista de toda España: con la de una comunidad, las de otras parecerían desaparecidas
+			novedades.querySelector('[data-visto]')!.addEventListener('click', async () => {
+				verCambios(await obtener());
 				novedades.hidden = true;
 			});
 			novedades.querySelector('[data-ver]')!.addEventListener('click', async () => {
-				if (cache) verCambios(cache);
+				verCambios(await obtener());
 				novedades.hidden = true;
 				soloGuardadas.checked = true;
 				document.querySelector<HTMLButtonElement>('#todas')!.click();

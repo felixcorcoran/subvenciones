@@ -133,3 +133,14 @@ export function indexable(c: ConvocatoriaWeb, hoy: string): boolean {
 /** Las ayudas de la lista (sin premios ni otras, sin cerradas ni «por verificar») */
 export const ayudasAbiertas = <T extends ConvocatoriaWeb>(lista: T[], hoy: string): T[] =>
 	lista.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && ['abierta', 'proxima', 'sin_fecha'].includes(estado(c, hoy)));
+
+/**
+ * Si la ayuda entra en la lista de una comunidad (/convocatorias/<comunidad>.json):
+ * las suyas y de sus provincias, las de un grupo de comunidades que la incluye
+ * (ES6…), las de toda España y las que no dicen zona. Así un negocio no
+ * descarga las ayudas de toda España para ver las suyas.
+ */
+export const paraComunidad = (c: ConvocatoriaWeb, codigo: string) => {
+	const z = zonas(c);
+	return z.length === 0 || z.some((x) => x.startsWith(codigo) || codigo.startsWith(x));
+};

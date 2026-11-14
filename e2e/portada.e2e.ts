@@ -73,4 +73,23 @@ test.describe('todas las ayudas', () => {
 		await accesible(page);
 		expect(errores).toEqual([]);
 	});
+
+	test('una lista larga se pinta por tandas, con «Ver más»', async ({ page }) => {
+		await page.goto('/');
+		await page.click('#todas');
+		await expect(page.locator('#resumen')).toContainText('convocatorias');
+		const total = Number((await page.locator('#resumen').textContent())!.match(/\d+/)![0]);
+		test.skip(total <= 30, 'Hoy hay pocas ayudas');
+		await expect(page.locator('#grupos li.ayuda')).toHaveCount(30);
+		await page.click('.ver-mas');
+		await expect(page.locator('#grupos li.ayuda')).toHaveCount(Math.min(60, total));
+	});
+
+	test('con un negocio, solo se descarga la lista de su comunidad', async ({ page }) => {
+		const pedidas: string[] = [];
+		page.on('request', (r) => r.url().includes('convocatorias') && pedidas.push(new URL(r.url()).pathname));
+		await page.goto('/?provincia=ES617&forma=autonomo&sector=I&empleados=0&antiguedad=1a3');
+		await expect(page.locator('#resumen')).toContainText('no encajan');
+		expect(pedidas).toEqual(['/convocatorias/ES61.json']);
+	});
 });
