@@ -6,13 +6,30 @@ test.describe('ficha de una ayuda', () => {
 		const codigo = await unaAyuda(page);
 		await page.goto(`/ayudas/${codigo}`);
 		await expect(page.getByRole('heading', { level: 1 })).not.toBeEmpty();
-		await expect(page.locator('a', { hasText: 'Convocatoria oficial (BDNS)' })).toHaveAttribute('href', /infosubvenciones/);
+		await expect(page.locator('.enlaces a', { hasText: 'Convocatoria oficial (BDNS)' })).toHaveAttribute('href', /infosubvenciones/);
 		await expect(page.locator('.compartir')).toContainText('WhatsApp');
 		await page.click('[data-guardar]');
 		await expect(page.locator('[data-guardar]')).toHaveText('★ Guardada');
 		expect(fuera.some((f) => f.startsWith('POST') && f.includes('/api/guardadas'))).toBe(true);
 		await accesible(page);
 		expect(errores).toEqual([]);
+	});
+
+	test('«Qué hacer ahora»: las casillas se recuerdan y al imprimir solo queda lo útil', async ({ page }) => {
+		const codigo = await unaAyuda(page);
+		await page.goto(`/ayudas/${codigo}`);
+		const pasos = page.locator('#que-hacer input[data-paso]');
+		expect(await pasos.count()).toBeGreaterThanOrEqual(3);
+		await pasos.first().check();
+		await expect(page.locator('[data-progreso]')).toHaveText(new RegExp(`1 de ${await pasos.count()} hechos`));
+		await page.reload();
+		await expect(pasos.first()).toBeChecked();
+		await accesible(page);
+
+		await page.emulateMedia({ media: 'print' });
+		await expect(page.locator('#que-hacer')).toBeVisible();
+		await expect(page.locator('header.nav')).toBeHidden();
+		await expect(page.locator('[data-imprimir]')).toBeHidden();
 	});
 
 	test('con respuestas guardadas, dice ahí mismo si encaja', async ({ page }) => {

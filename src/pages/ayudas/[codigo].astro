@@ -115,6 +115,29 @@ const whatsapp = `https://wa.me/?text=${encodeURIComponent(`${titulo}\n${enlaceF
 const finalidades = (ia?.finalidades ?? []).map(nombreFinalidad);
 // El enlace para pedirla que dan las bases (comprobado al leerlas), si no es el mismo que la sede de la BDNS
 const enlacePedir = ia?.enlaceSolicitud && ia.enlaceSolicitud !== c.sede ? ia.enlaceSolicitud : null;
+
+/**
+ * «Qué hacer ahora»: los pasos para pedirla, con casillas que se recuerdan en
+ * el navegador. Con lo que la IA sacó de las bases (documentación, cómo se
+ * pide, dónde); si aún no lo tiene, pasos generales que no afirman nada que
+ * no digan las bases: remiten a ellas.
+ */
+interface Paso {
+	id: string;
+	texto: string;
+	enlace?: { href: string; texto: string };
+}
+const pasos: Paso[] = [{ id: 'leer', texto: 'Lee la convocatoria oficial y comprueba que cumples los requisitos', enlace: { href: c.enlace, texto: 'Convocatoria oficial (BDNS)' } }];
+if (ia?.documentacion?.length) ia.documentacion.forEach((d, i) => pasos.push({ id: `doc-${i}`, texto: `Prepara: ${d}` }));
+else pasos.push({ id: 'doc', texto: 'Mira en las bases qué documentos hay que presentar y prepáralos', enlace: c.bases ? { href: c.bases, texto: 'Bases' } : undefined });
+const donde = enlacePedir ? { href: enlacePedir, texto: 'Pedirla en línea (enlace de las bases)' } : c.sede ? { href: c.sede, texto: 'Dónde se solicita' } : undefined;
+if (ia?.comoPedir?.length) {
+	ia.comoPedir.forEach((x, i) => pasos.push({ id: `paso-${i}`, texto: x }));
+	if (donde) pasos[pasos.length - 1].enlace = donde;
+} else {
+	pasos.push({ id: 'presentar', texto: ia?.dondeSolicitar ? `Presenta la solicitud. ${ia.dondeSolicitar}` : 'Presenta la solicitud donde indican las bases', enlace: donde });
+}
+const limitePasos = fin && !previoCerrado ? `Todo, antes del ${fechaLarga(fin)}${origenCierre(c) === 'bases' ? ' (según las bases)' : ''}.` : null;
 // Avisar de un error en la ficha: un correo con el código y la dirección ya puestos
 const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en la ficha ${c.codigo}`)}&body=${encodeURIComponent(`Ficha: ${new URL(`/ayudas/${c.codigo}`, Astro.site).href}\n\nLo que está mal:\n`)}`;
 ---
@@ -202,36 +225,6 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 							<h2>Plazo</h2>
 							<p>{c.iaRevisar ? 'El plazo ha cambiado en la convocatoria oficial y estamos volviendo a leer las bases. Mientras, mira la fecha de arriba y la convocatoria oficial.' : ia.plazo}</p>
 						</section>
-						{(ia.comoPedir?.length || ia.dondeSolicitar || enlacePedir) && (
-							<section>
-								<h2>Cómo se pide</h2>
-								{ia.dondeSolicitar && <p>{ia.dondeSolicitar}</p>}
-								{ia.comoPedir && ia.comoPedir.length > 0 && (
-									<ol>
-										{ia.comoPedir.map((x) => (
-											<li>{x}</li>
-										))}
-									</ol>
-								)}
-								{enlacePedir && (
-									<p class="pedir">
-										<a href={enlacePedir} target="_blank" rel="noopener">
-											Pedirla en línea (enlace de las bases) ↗
-										</a>
-									</p>
-								)}
-							</section>
-						)}
-						{ia.documentacion && ia.documentacion.length > 0 && (
-							<section>
-								<h2>Documentación que hay que presentar</h2>
-								<ul>
-									{ia.documentacion.map((x) => (
-										<li>{x}</li>
-									))}
-								</ul>
-							</section>
-						)}
 						{ia.dudas && (
 							<section>
 								<h2>Lo que no queda claro</h2>
@@ -242,6 +235,36 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 				) : (
 					<section>
 						<p>Aún no hemos leído sus bases. Mira los requisitos en la convocatoria oficial.</p>
+					</section>
+				)
+			}
+
+			{
+				!previoCerrado && (
+					<section class="que-hacer" id="que-hacer" aria-labelledby="que-hacer-titulo" data-codigo={c.codigo}>
+						<h2 id="que-hacer-titulo">Qué hacer ahora</h2>
+						<p class="progreso" data-progreso hidden />
+						<ol class="pasos">
+							{pasos.map((p) => (
+								<li>
+									<label>
+										<input type="checkbox" data-paso={p.id} />
+										<span>{p.texto}</span>
+									</label>
+									{p.enlace && (
+										<a href={p.enlace.href} target="_blank" rel="noopener">
+											{p.enlace.texto} ↗
+										</a>
+									)}
+								</li>
+							))}
+						</ol>
+						{limitePasos && <p class="limite">{limitePasos}</p>}
+						<p class="imprimir">
+							<button type="button" class="boton boton--claro" data-imprimir hidden>
+								Imprimir o guardar en PDF
+							</button>
+						</p>
 					</section>
 				)
 			}
@@ -333,6 +356,36 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 			if (ahora) contarGuardada(codigo);
 		});
 		botonGuardar.hidden = false;
+	}
+
+	// «Qué hacer ahora»: las casillas se recuerdan en este navegador, por ayuda
+	const queHacer = document.querySelector<HTMLElement>('#que-hacer');
+	if (queHacer) {
+		const clave = `pasos-${queHacer.dataset.codigo}`;
+		const casillas = [...queHacer.querySelectorAll<HTMLInputElement>('input[data-paso]')];
+		const progreso = queHacer.querySelector<HTMLElement>('[data-progreso]')!;
+		let hechos: string[] = [];
+		try {
+			hechos = JSON.parse(localStorage.getItem(clave) ?? '[]') as string[];
+		} catch {}
+		const contar = () => {
+			const n = casillas.filter((x) => x.checked).length;
+			progreso.textContent = n === casillas.length ? 'Todo listo. ¡Suerte!' : `${n} de ${casillas.length} hechos`;
+			progreso.hidden = n === 0;
+		};
+		for (const x of casillas) {
+			x.checked = hechos.includes(x.dataset.paso!);
+			x.addEventListener('change', () => {
+				try {
+					localStorage.setItem(clave, JSON.stringify(casillas.filter((y) => y.checked).map((y) => y.dataset.paso)));
+				} catch {}
+				contar();
+			});
+		}
+		contar();
+		const imprimir = queHacer.querySelector<HTMLButtonElement>('[data-imprimir]')!;
+		imprimir.hidden = false;
+		imprimir.addEventListener('click', () => window.print());
 	}
 
 	// Copiar el enlace (en el móvil, el menú de compartir del sistema)
@@ -427,6 +480,103 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 
 	.pedir {
 		margin-top: 0.75rem !important;
+	}
+
+	.que-hacer .pasos {
+		display: grid;
+		gap: 0.6rem;
+		margin: 0.75rem 0 0;
+		padding: 0;
+		list-style: none;
+		counter-reset: paso;
+	}
+
+	.que-hacer .pasos li {
+		padding: 0.75rem 1rem;
+		border-radius: 0.875rem;
+		background: rgb(var(--surface-rgb) / 0.75);
+		border: 1px solid var(--rule);
+	}
+
+	.que-hacer label {
+		display: flex;
+		gap: 0.75rem;
+		align-items: flex-start;
+		cursor: pointer;
+	}
+
+	.que-hacer input {
+		flex: none;
+		width: 1.15rem;
+		height: 1.15rem;
+		margin: 0.3rem 0 0;
+		accent-color: var(--accent-text);
+	}
+
+	.que-hacer label:has(input:checked) span {
+		color: var(--text-muted);
+		text-decoration: line-through;
+		text-decoration-color: rgb(var(--ink) / 0.35);
+	}
+
+	.que-hacer .pasos a {
+		display: inline-block;
+		margin: 0.35rem 0 0 1.9rem;
+		font-size: 0.875rem;
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.que-hacer .progreso {
+		font-size: 0.875rem !important;
+		font-weight: 500;
+		color: #3f8f5f;
+	}
+
+	.que-hacer .limite {
+		margin-top: 0.75rem !important;
+		font-weight: 500;
+	}
+
+	.que-hacer .imprimir {
+		margin-top: 1rem !important;
+	}
+
+	/* Al imprimir (o guardar en PDF): la ficha, en blanco y negro, sin lo que no sirve en papel */
+	@media print {
+		:global(.nav),
+		:global(.footer),
+		.volver,
+		.acciones,
+		.compartir,
+		.veredicto,
+		.relacionadas,
+		.imprimir,
+		.nota {
+			display: none !important;
+		}
+
+		:global(body) {
+			background: #fff !important;
+			color: #000 !important;
+		}
+
+		main {
+			padding-top: 0 !important;
+		}
+
+		.que-hacer .pasos li {
+			break-inside: avoid;
+			background: none;
+			border-color: #999;
+		}
+
+		.que-hacer .pasos a::after {
+			content: ' (' attr(href) ')';
+			font-size: 0.75rem;
+			word-break: break-all;
+		}
 	}
 
 	.veredicto {
