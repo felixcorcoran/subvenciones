@@ -40,7 +40,8 @@ Node 24. Más detalle en `README.md`.
   ponerlo ahí).
 - `src/data/formas.json`, `public/municipios/*.json`: siluetas y municipios (generados con
   `npm run formas` / `npm run catalogos`, no editar a mano).
-- `tests/`: Vitest.
+- `tests/`: Vitest. `e2e/`: Playwright (`npm run build && npx playwright test`; servidor propio
+  `e2e/servidor.mjs` porque `astro preview` sin terminal se va a segundo plano).
 - `plataforma/`: servicios Spring Boot (Java 25, Maven multimódulo, hexagonal) para enseñar la
   arquitectura completa; plan en `../felixcorcoran-landing/estrategia/plan-proyecto-empleo.md`. No
   sustituye a la web. Código y documentación en español. Su propio workflow

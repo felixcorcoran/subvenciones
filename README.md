@@ -40,7 +40,7 @@ npm run dev
 npm test
 ```
 
-Las pruebas (Vitest, en `tests/`) cubren el encaje de cada ayuda con un negocio (zona, municipio, sector, forma jurídica, plazos), la tabla de sectores de la CNAE-2025, los nombres de zonas y el evento de calendario. Se pasan en cada push con GitHub Actions, junto a `astro check` y el build.
+Las pruebas (Vitest, en `tests/`) cubren el encaje de cada ayuda con un negocio (zona, municipio, sector, forma jurídica, plazos), la tabla de sectores de la CNAE-2025, los nombres de zonas y el evento de calendario. Se pasan en cada push con GitHub Actions, junto a `astro check`, el build y las pruebas en el navegador (`e2e/`, Playwright): el asistente, la búsqueda, las guardadas, la ficha, las páginas por zona y sector y la accesibilidad con axe en tema claro y oscuro, en móvil y escritorio. Se lanzan con `npm run build && npx playwright test`; no salen de la web (lo de fuera se contesta sin red) ni dependen de qué ayudas haya ese día.
 
 La clave de Gemini tiene que ser de un proyecto de Google AI Studio sin facturación, para quedarse en el nivel gratuito.
 
