@@ -44,6 +44,15 @@
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935246",
 		"retirada": "2026-10-27"
 	},
+	"935313": {
+		"codigo": "935313",
+		"titulo": "Ayudas implantación de RSE y participación personas trabajadoras - Minimis",
+		"resumen": "Ayudas del Gobierno Vasco para financiar hasta el 75 % de los costes de elaborar planes de participación laboral, preparar el relevo societario o implantar memorias de sostenibilidad y responsabilidad social empresarial.",
+		"organo": "DEPARTAMENTO DE ECONOMÍA, TRABAJO Y EMPLEO — PAÍS VASCO",
+		"cierre": "2026-11-13",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935313",
+		"retirada": "2026-11-14"
+	},
 	"935314": {
 		"codigo": "935314",
 		"titulo": "Fomento de inversiones en energías renovables, almacenamiento eléctrico e infraestructura de recarga dentro del marco de Factor de Insularidad de las Illes Balears",
@@ -88,6 +97,15 @@
 		"cierre": "2026-11-09",
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935725",
 		"retirada": "2026-11-10"
+	},
+	"935767": {
+		"codigo": "935767",
+		"titulo": "Subvención concurrencia competitiva para realizar actividades y proyectos culturales en 2026",
+		"resumen": "Ayudas para realizar actividades y proyectos culturales en Cantabria durante el año 2026, dirigidas a profesionales, empresas y entidades locales.",
+		"organo": "CONSEJERÍA DE CULTURA, TURISMO Y DEPORTE — CANTABRIA",
+		"cierre": "2026-11-13",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935767",
+		"retirada": "2026-11-14"
 	},
 	"935985": {
 		"codigo": "935985",
@@ -224,6 +242,15 @@
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/937888",
 		"retirada": "2026-11-09"
 	},
+	"938248": {
+		"codigo": "938248",
+		"titulo": "Resolución por la que se aprueba la convocatoria pública de concesión de subvenciones para la realización de acciones de formación profesional en el ámbito laboral, dirigidas a personas trabajadoras ocupadas (Modalidad I), para la anualidad 2026",
+		"resumen": "Ayudas para que centros y entidades de formación organicen e impartan cursos de formación profesional dirigidos principalmente a trabajadores ocupados en Castilla-La Mancha.",
+		"organo": "DIRECCIÓN GENERAL FORMACIÓN PROFESIONAL EN EL ÁMBITO LABORAL — CASTILLA-LA MANCHA",
+		"cierre": "2026-11-13",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938248",
+		"retirada": "2026-11-14"
+	},
 	"938728": {
 		"codigo": "938728",
 		"titulo": "Convocatoria de movilidad para Personal Docente e Investigador (PDI) de la Universidad de Salamanca. Proyecto Erasmus KA-171. Ruanda.",
@@ -232,5 +259,23 @@
 		"cierre": "2026-11-09",
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/938728",
 		"retirada": "2026-11-10"
+	},
+	"939373": {
+		"codigo": "939373",
+		"titulo": "Orden de 3/11/2026, de AGR, por la que se convocan determinadas subvenciones a la transformación de los productos agrarios, silvícolas y de la alimentación en Castilla y León amparadas por la intervención 6842.2 del PEPAC - Línea J02",
+		"resumen": "Subvenciones para apoyar inversiones en la transformación y comercialización de productos agrícolas, forestales y alimentarios en Castilla y León, buscando fomentar el desarrollo del tejido económico rural.",
+		"organo": "CONSEJERÍA DE AGRICULTURA, GANADERÍA, MEDIO RURAL Y POLÍTICA AMBIENTAL — CASTILLA Y LEÓN",
+		"cierre": "2026-11-13",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939373",
+		"retirada": "2026-11-14"
+	},
+	"939992": {
+		"codigo": "939992",
+		"titulo": "RESOLUCIÓN de la directora general de Patrimonio Cultural por la que se convocan subvenciones a galerías de arte de la Comunitat Valenciana para la dinamización, promoción y difusión de la creación artística.",
+		"resumen": "Ayudas para galerías de arte de la Comunitat Valenciana destinadas a financiar la asistencia a ferias, certámenes y eventos de arte, así como la realización de actividades culturales, didácticas y divulgativas.",
+		"organo": "SECRETARÍA AUTONÓMICA DE CULTURA — COMUNITAT VALENCIANA",
+		"cierre": "2026-11-13",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939992",
+		"retirada": "2026-11-14"
 	}
 }
