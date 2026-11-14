@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventoIcs } from '../src/lib/calendario';
+import { eventoIcs, calendarioIcs } from '../src/lib/calendario';
 import { analisis, convocatoria } from './ayudas';
 
 const FICHA = 'https://subvenciones.felixcorcoran.es/ayudas/900001';
@@ -42,5 +42,20 @@ describe('plazo al calendario (.ics)', () => {
 	it('escapa comas, puntos y comas y saltos de línea', () => {
 		const ics = eventoIcs(convocatoria({ titulo: 'Bonos; comercio, hostelería', ia: null }), FICHA)!;
 		expect(desplegar(ics)).toContain('SUMMARY:Cierra el plazo: Bonos\\; comercio\\, hostelería');
+	});
+});
+
+describe('calendario de una comunidad', () => {
+	it('un evento por ayuda con fecha de cierre, con nombre y frecuencia de actualización', () => {
+		const ics = calendarioIcs(
+			[convocatoria({ codigo: '1', fin: '2026-12-01' }), convocatoria({ codigo: '2', fin: null }), convocatoria({ codigo: '3', fin: '2026-12-15' })],
+			(c) => `https://subvenciones.felixcorcoran.es/ayudas/${c.codigo}`,
+			'Plazos de ayudas · Andalucía',
+		);
+		expect(ics.match(/BEGIN:VEVENT/g)).toHaveLength(2);
+		expect(ics).toContain('X-WR-CALNAME:Plazos de ayudas · Andalucía');
+		expect(ics).toContain('REFRESH-INTERVAL;VALUE=DURATION:PT12H');
+		expect(ics.startsWith('BEGIN:VCALENDAR')).toBe(true);
+		expect(ics.trimEnd().endsWith('END:VCALENDAR')).toBe(true);
 	});
 });

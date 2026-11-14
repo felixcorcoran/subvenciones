@@ -1,12 +1,12 @@
 ---
 import { site } from '../data/site';
 
-const t = { label: 'Principal', home: 'Félix Corcoran, inicio', dark: 'Cambiar el tema', work: 'Trabajo', contact: 'Contacto' };
+const t = { label: 'Principal', home: 'Félix Corcoran, inicio', dark: 'Cambiar el tema', alerts: 'Avisos', contact: 'Contacto' };
 ---
 
 <!-- La misma píldora que felixcorcoran.es (src/components/Navbar.astro de la
-     landing): logo, tema, Trabajo y Contacto. Aquí todos los enlaces llevan
-     a la web principal. -->
+     landing): logo, tema y Contacto. En vez de «Trabajo», que aquí no dice
+     nada, los avisos por email del radar (alertas.felixcorcoran.es). -->
 <header class="nav">
 	<nav class="pill" aria-label={t.label}>
 		<a class="logo" href={site.home} aria-label={t.home} data-site-link>
@@ -24,7 +24,7 @@ const t = { label: 'Principal', home: 'Félix Corcoran, inicio', dark: 'Cambiar 
 					</svg>
 				</button>
 			</li>
-			<li><a href={site.work} data-site-link>{t.work}</a></li>
+			<li><a href={site.alertas} data-site-link>{t.alerts}</a></li>
 			<li><a class="highlight" href={site.contact} data-site-link>{t.contact}</a></li>
 		</ul>
 	</nav>

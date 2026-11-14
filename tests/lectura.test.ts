@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa } from '../scripts/lectura';
+import { analisisValido, mencionaFecha, motivoCierreIaDudoso, porLeer, revisarCierreIa, limpiarMunicipio, normalizarLectura, porCompletar, titularValido } from '../scripts/lectura';
 import { cierre } from '../src/lib/encaje';
 import type { Analisis, Convocatoria } from '../src/lib/tipos';
 import { analisis, convocatoria, HOY } from './ayudas';
@@ -119,5 +119,75 @@ describe('respuesta de la IA', () => {
 		expect(analisisValido(analisis({}, { autonomos: 'quizá' as never }))).toBe(false);
 		expect(analisisValido({ ...analisis(), condiciones: undefined })).toBe(false);
 		expect(analisisValido(null)).toBe(false);
+	});
+});
+
+describe('titular corto', () => {
+	it('se queda si es breve; sin punto final', () => {
+		expect(titularValido('  Ayudas al alquiler de locales en Cabra. ')).toBe('Ayudas al alquiler de locales en Cabra');
+	});
+
+	it('vacío o demasiado largo: no se usa (la web enseña el resumen)', () => {
+		expect(titularValido('   ')).toBeUndefined();
+		expect(titularValido(undefined)).toBeUndefined();
+		expect(titularValido('x'.repeat(91))).toBeUndefined();
+	});
+
+	it('un análisis sin titular sigue siendo válido; uno con titular que no es texto, no', () => {
+		expect(analisisValido(analisis())).toBe(true);
+		expect(analisisValido({ ...analisis(), titular: 3 })).toBe(false);
+	});
+});
+
+describe('municipio que en realidad es una comunidad o provincia', () => {
+	const con = (municipio: string, nivel1 = 'AUTONOMICA', regiones = [{ codigo: 'ES51', nombre: 'CATALUÑA' }]) =>
+		convocatoria({ organo: { nivel1, nivel2: 'CATALUÑA', nivel3: 'DEPARTAMENT' }, regiones, ia: analisis({}, { municipio }) }) as Convocatoria;
+
+	it('se quita si convoca un órgano no local y la BDNS ya acota la zona', () => {
+		for (const m of ['Cataluña', 'Comunidad Autónoma de Euskadi', 'Comunitat Valenciana', 'Illes Balears', 'Alicante', 'Melilla']) {
+			const c = con(m);
+			expect(limpiarMunicipio(c), m).toBe(true);
+			expect(c.ia!.condiciones.municipio).toBeNull();
+		}
+	});
+
+	it('se queda si es un municipio, una comarca, lo convoca un ayuntamiento o la BDNS no acota la zona', () => {
+		expect(limpiarMunicipio(con('Sabadell'))).toBe(false);
+		expect(limpiarMunicipio(con('Comarcas gerundenses'))).toBe(false);
+		expect(limpiarMunicipio(con('Almería', 'LOCAL'))).toBe(false);
+		expect(limpiarMunicipio(con('Cataluña', 'AUTONOMICA', [{ codigo: 'ES', nombre: 'ESPAÑA' }]))).toBe(false);
+		expect(limpiarMunicipio(con('Cataluña', 'AUTONOMICA', []))).toBe(false);
+	});
+});
+
+describe('cómo pedirla, documentación y finalidades', () => {
+	it('normaliza lo leído: finalidades conocidas, listas sin vacíos y con tope, enlace solo si es una dirección web', () => {
+		const a = normalizarLectura({
+			...analisis(),
+			finalidades: ['digitalizar', 'inventada', 'digitalizar', 'contratar'],
+			comoPedir: [' Entra en la sede ', '', ...Array(8).fill('Paso')],
+			documentacion: ['DNI', '  '],
+			dondeSolicitar: '  ',
+			enlaceSolicitud: 'sede.cabra.es/ayudas',
+		});
+		expect(a.finalidades).toEqual(['digitalizar', 'contratar']);
+		expect(a.comoPedir).toHaveLength(6);
+		expect(a.comoPedir![0]).toBe('Entra en la sede');
+		expect(a.documentacion).toEqual(['DNI']);
+		expect(a.dondeSolicitar).toBeNull();
+		expect(a.enlaceSolicitud).toBeNull();
+		expect(normalizarLectura({ ...analisis(), enlaceSolicitud: 'https://sede.cabra.es/ayudas' }).enlaceSolicitud).toBe('https://sede.cabra.es/ayudas');
+	});
+
+	it('se completan las ya leídas sin «cómo pedirla» que siguen en la lista; si falló, pasada la espera', () => {
+		const leida = (extra: Partial<Convocatoria> = {}) =>
+			({ ...convocatoria({ fin: '2026-12-31' }), documento: { id: 1, nombre: 'bases.pdf' }, ...extra }) as Convocatoria;
+		expect(porCompletar(leida(), HOY)).toBe(true);
+		expect(porCompletar(leida({ ia: { ...analisis(), comoPedir: [] } }), HOY)).toBe(false);
+		expect(porCompletar(leida({ ia: null }), HOY)).toBe(false);
+		expect(porCompletar(leida({ iaRevisar: 'plazo' }), HOY)).toBe(false);
+		expect(porCompletar(leida({ fin: '2026-10-01' }), HOY)).toBe(false);
+		expect(porCompletar(leida({ iaCompletarEl: HOY }), HOY)).toBe(false);
+		expect(porCompletar(leida({ iaCompletarEl: '2026-09-01' }), HOY)).toBe(true);
 	});
 });

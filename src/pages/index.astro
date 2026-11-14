@@ -1,14 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import '../styles/tarjetas.css';
 import Asistente from '../components/Asistente.astro';
 import datos from '../../datos/convocatorias.json';
 import type { Datos } from '../lib/tipos';
 import { estado, type Estado } from '../lib/estado';
+import { hoyMadrid } from '../lib/fechas';
+import { COMUNIDADES, SECTORES } from '../lib/lista';
 
 const { actualizado, convocatorias } = datos as Datos;
 // La web se construye cada día con los datos: la fecha de construcción es «hoy».
 // Solo cuentan las ayudas (no premios ni otras); las sin leer aún, también
-const hoy = new Date().toISOString().slice(0, 10);
+const hoy = hoyMadrid();
 const cuenta = (e: Estado) => convocatorias.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && estado(c, hoy) === e).length;
 const conFecha = cuenta('abierta');
 const proximas = cuenta('proxima');
@@ -46,6 +49,20 @@ const description =
 						<button type="button" id="anterior" class="enlace" hidden></button>
 						<button type="button" id="todas" class="enlace">Mira todas las ayudas</button>
 					</div>
+					<!-- Los negocios guardados en este navegador (una gestoría, uno por cliente) -->
+					<div id="negocios" class="negocios" hidden>
+						<span class="negocios-titulo">Tus negocios:</span>
+						<ul data-lista></ul>
+					</div>
+				</div>
+				<!-- Si cambia el plazo de una guardada o desaparece (lo normal, que haya cerrado) -->
+				<div id="novedades" class="novedades" role="status" hidden>
+					<p class="novedades-titulo">Cambios en tus ayudas guardadas</p>
+					<ul data-lista></ul>
+					<p class="novedades-acciones">
+						<button type="button" class="enlace" data-ver>Ver mis guardadas</button>
+						<button type="button" class="enlace" data-visto>Entendido</button>
+					</p>
 				</div>
 			</section>
 
@@ -62,10 +79,35 @@ const description =
 						<button type="button" id="cambiar" class="enlace">Cambiar respuestas</button>
 						<button type="button" id="compartir" class="enlace">Copiar el enlace a estos resultados</button>
 						<a href="#avisos" class="enlace">Recibir las nuevas por email</a>
+						<button type="button" id="guardar-negocio" class="enlace">Guardar este negocio</button>
+						<form id="form-negocio" class="form-negocio" hidden>
+							<label for="nombre-negocio">Nombre para este negocio</label>
+							<input id="nombre-negocio" maxlength="60" autocomplete="off" placeholder="Por ejemplo: Bar Pepe" required />
+							<button type="submit" class="boton boton--pequeno">Guardar</button>
+						</form>
+						<label class="cambiar-negocio" id="cambiar-negocio" hidden>
+							<span>Ver otro negocio:</span>
+							<select data-select></select>
+						</label>
 					</div>
 					<h2 id="resultado-titulo"></h2>
 					<p id="resumen" class="resumen"></p>
-					<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
+					<!-- Solo en «Todas las ayudas»: buscar y acotar en el navegador, sobre lo ya descargado -->
+					<div id="filtros" class="filtros" role="search" hidden>
+						<label class="sr-only" for="buscar">Buscar entre las ayudas</label>
+						<input id="buscar" type="search" placeholder="Buscar: comercio, alquiler, Cabra…" autocomplete="off" enterkeyhint="search" />
+						<label class="sr-only" for="filtro-comunidad">Comunidad</label>
+						<select id="filtro-comunidad">
+							<option value="">Toda España</option>
+							{COMUNIDADES.map((c) => <option value={c.codigo}>{c.nombre}</option>)}
+						</select>
+						<label class="pronto-filtro"><input type="checkbox" id="filtro-pronto" /> Cierran en 15 días o menos</label>
+					</div>
+					<div class="casillas">
+						<label class="premios" id="guardadas-filtro" hidden><input type="checkbox" id="solo-guardadas" /> <span>Solo mis guardadas</span></label>
+						<label class="premios"><input type="checkbox" id="ver-premios" /> Mostrar también premios y concursos</label>
+						<button type="button" id="calendario-guardadas" class="enlace" hidden>Añadir mis guardadas al calendario</button>
+					</div>
 				</div>
 				<div id="grupos"></div>
 				<!-- Los avisos por email (alertas.felixcorcoran.es): con las respuestas que ya ha dado, solo falta el email -->
@@ -73,7 +115,7 @@ const description =
 					<p class="eyebrow">Avisos por email</p>
 					<h3 id="avisos-titulo">¿Te avisamos cuando salgan ayudas nuevas para tu negocio?</h3>
 					<p class="avisos-texto">
-						Cada mañana miramos las convocatorias nuevas y, si alguna encaja con lo que nos has dicho, te llega un correo. Gratis, sin cuenta y con baja en un clic.
+						Cada mañana miramos las convocatorias nuevas y, si alguna encaja con lo que nos has dicho, te llega un correo (o un resumen a la semana, si lo prefieres). Si cambia el plazo de una que te enviamos, también te lo decimos. Gratis, sin cuenta y con baja en un clic.
 					</p>
 					<form id="avisos-form" novalidate>
 						<div class="avisos-fila">
@@ -81,13 +123,34 @@ const description =
 							<input id="avisos-email" type="email" autocomplete="email" inputmode="email" placeholder="Tu email" required />
 							<button type="submit" class="boton">Avisarme <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 6h9M7 2.5 10.5 6 7 9.5"></path></svg></button>
 						</div>
+						<fieldset class="avisos-frecuencia">
+							<legend class="sr-only">Cada cuánto</legend>
+							<label><input type="radio" name="avisos-frecuencia" value="diaria" checked /> Cada día que haya algo</label>
+							<label><input type="radio" name="avisos-frecuencia" value="semanal" /> Un resumen a la semana</label>
+						</fieldset>
+						<!-- Solo si tiene guardadas: sus plazos, también por email (sin marcar: lo elige) -->
+						<label class="avisos-acepto" id="avisos-seguir" hidden>
+							<input type="checkbox" id="avisos-seguidas" />
+							<span data-texto>Avísame también si cambia el plazo de mis ayudas guardadas</span>
+						</label>
 						<label class="avisos-acepto">
 							<input type="checkbox" id="avisos-acepto" />
 							<span>He leído la <a href="https://alertas.felixcorcoran.es/privacidad" target="_blank" rel="noopener" data-site-link>política de privacidad</a>: mi email y estas respuestas solo se usan para enviarme los avisos.</span>
 						</label>
 						<p id="avisos-estado" class="avisos-estado" role="status" aria-live="polite"></p>
 					</form>
+					<!-- Sin email: los plazos de su comunidad en el calendario, o su RSS -->
+					<p id="avisos-sin-email" class="avisos-sin-email" hidden>
+						¿Prefieres no dar tu email? <a data-webcal>Los plazos de <span data-comunidad></span> en tu calendario</a>{' · '}
+						<a data-google target="_blank" rel="noopener">en Google Calendar ↗</a>{' · '}<a data-rss>RSS</a>
+					</p>
 				</section>
+				<nav class="explorar" aria-labelledby="explorar-titulo">
+					<p id="explorar-titulo" class="eyebrow">Ayudas por comunidad</p>
+					<ul>{COMUNIDADES.map((c) => <li><a href={`/comunidades/${c.slug}`}>{c.nombre}</a></li>)}</ul>
+					<p class="eyebrow">Ayudas por sector</p>
+					<ul>{SECTORES.map((s) => <li><a href={`/sectores/${s.slug}`}>{s.nombre}</a></li>)}</ul>
+				</nav>
 				<p class="aviso-fuente">
 					Es una orientación: antes de pedir una ayuda, lee su convocatoria oficial, que es la que vale. Datos del{' '}
 					<a href="https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias" target="_blank" rel="noopener">Sistema Nacional de Publicidad de Subvenciones</a>; resúmenes hechos con IA a partir de las bases.
@@ -99,7 +162,25 @@ const description =
 		<script>
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
 			import { enLista, estado as estadoDe, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../lib/estado';
+			import { hoyMadrid } from '../lib/fechas';
+			import { COMUNIDADES, paraComunidad, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, titularDe } from '../lib/lista';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
+			import type { Detalles } from '../lib/web';
+			import {
+				alternarGuardada,
+				borrarNegocio,
+				cambiosGuardadas,
+				contarGuardada,
+				esNueva,
+				guardadas,
+				guardarNegocio,
+				negocios,
+				registrarVisita,
+				verCambios,
+				type Negocio,
+			} from '../lib/visitas';
+			import { esFinalidad, nombreFinalidad, sirvePara } from '../lib/finalidades';
+			import { calendarioIcs } from '../lib/calendario';
 
 			const estado = document.querySelector<HTMLParagraphElement>('#estado')!;
 			const resultado = document.querySelector<HTMLElement>('#resultado')!;
@@ -114,24 +195,55 @@ const description =
 				return node;
 			};
 
-			let cache: ConvocatoriaWeb[] | null = null;
-			async function cargar(): Promise<ConvocatoriaWeb[]> {
-				if (cache) return cache;
+			/** Las listas ya descargadas: '' es la de toda España; ES61…, la de cada comunidad */
+			const listas = new Map<string, ConvocatoriaWeb[]>();
+			async function obtener(comunidad = ''): Promise<ConvocatoriaWeb[]> {
+				const hecha = listas.get(comunidad);
+				if (hecha) return hecha;
+				// Con la de toda España ya descargada, la de una comunidad sale de ella
+				const todas = listas.get('');
+				if (comunidad && todas) {
+					const suya = todas.filter((c) => paraComunidad(c, comunidad));
+					listas.set(comunidad, suya);
+					return suya;
+				}
 				estado.textContent = 'Cargando las convocatorias…';
-				const res = await fetch('/convocatorias.json');
-				const data = (await res.json()) as { convocatorias: ConvocatoriaWeb[] };
-				estado.textContent = '';
-				return (cache = data.convocatorias);
+				try {
+					const res = await fetch(comunidad ? `/convocatorias/${comunidad}.json` : '/convocatorias.json');
+					const data = (await res.json()) as { convocatorias: ConvocatoriaWeb[] };
+					listas.set(comunidad, data.convocatorias);
+					return data.convocatorias;
+				} finally {
+					estado.textContent = '';
+				}
 			}
+			/** La lista que se está enseñando */
+			let cache: ConvocatoriaWeb[] | null = null;
+			const cargar = async (comunidad = '') => (cache = await obtener(comunidad));
+
+			// Requisitos y gastos de todas, en una sola petición; si falla, se vuelve a pedir la próxima vez
+			let pedidaDetalles: Promise<Detalles> | null = null;
+			const detalles = (): Promise<Detalles> =>
+				(pedidaDetalles ??= fetch('/detalles.json')
+					.then((r) => {
+						if (!r.ok) throw new Error(String(r.status));
+						return r.json() as Promise<Detalles>;
+					})
+					.catch((): Detalles => {
+						pedidaDetalles = null;
+						return {};
+					}));
 
 			const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
 
-			const hoy = () => new Date().toISOString().slice(0, 10);
+			// El día en hora de Madrid: con la fecha UTC, de madrugada se usaba el día anterior
+			const hoy = () => hoyMadrid();
+			// Para marcar las que han entrado en el radar desde la visita anterior
+			const visitaAnterior = registrarVisita(hoy());
 
 			function plazo(c: ConvocatoriaWeb): { texto: string; pronto: boolean } {
-				const fin = cierre(c);
-				const dias = fin ? Math.ceil((Date.parse(fin) - Date.now()) / 86_400_000) : Infinity;
-				return { texto: textoPlazo(c, hoy()), pronto: dias <= 7 };
+				const dias = diasHasta(c, hoy());
+				return { texto: textoPlazo(c, hoy()), pronto: dias !== null && dias <= 7 };
 			}
 
 			function tarjeta(c: ConvocatoriaWeb, e: Encaje | null) {
@@ -140,14 +252,31 @@ const description =
 				const organo = [c.organo.nivel3, municipioDe(c) ?? c.organo.nivel2].filter((v, i, a) => v && a.indexOf(v) === i).join(' · ');
 				// El título lleva a la ficha de la convocatoria (/ayudas/<código>)
 				const titulo = el('h3');
-				const ficha = el('a', '', c.ia?.resumen ?? c.titulo);
+				const ficha = el('a', '', titularDe(c));
 				ficha.href = `/ayudas/${c.codigo}`;
 				titulo.append(ficha);
-				cabeza.append(el('p', 'ayuda-organo', organo), titulo);
+				// Guardarla en este navegador, para seguirla (filtro «Solo mis guardadas»)
+				const guardar = el('button', 'guardar');
+				guardar.type = 'button';
+				const pintarGuardar = (si: boolean) => {
+					guardar.textContent = si ? '★ Guardada' : '☆ Guardar';
+					guardar.setAttribute('aria-pressed', String(si));
+					guardar.setAttribute('aria-label', `${si ? 'Quitar de guardadas' : 'Guardar'}: ${titularDe(c)}`);
+				};
+				pintarGuardar(guardadas().has(c.codigo));
+				guardar.addEventListener('click', () => {
+					const ahora = alternarGuardada(c);
+					pintarGuardar(ahora);
+					if (ahora) contarGuardada(c.codigo);
+					contarGuardadas();
+				});
+				cabeza.append(guardar, el('p', 'ayuda-organo', organo), titulo);
 				item.append(cabeza);
 
 				const datosClave = el('ul', 'ayuda-datos');
 				const p = plazo(c);
+				if (esNueva(c, visitaAnterior)) datosClave.append(el('li', 'nueva', 'Nueva'));
+				if (e && e.estado !== 'no' && sirvePara(c.ia?.finalidades, ultima.finalidad)) datosClave.append(el('li', 'para-ti', `Para ${nombreFinalidad(ultima.finalidad!).toLowerCase()}`));
 				const plazoLi = el('li', p.pronto ? 'pronto' : '', p.texto);
 				datosClave.append(plazoLi);
 				// Con el plazo dicho con palabras, que quede claro que no hay fecha confirmada
@@ -168,17 +297,35 @@ const description =
 				const mas = el('details', 'ayuda-mas');
 				mas.append(el('summary', '', 'Requisitos y detalles'));
 				if (c.ia) {
+					// Con titular corto, el resumen completo va aquí
+					if (c.ia.titular) mas.append(el('h4', '', 'Qué financia'), el('p', '', c.ia.resumen));
 					mas.append(el('h4', '', 'Para quién'), el('p', '', c.ia.paraQuien));
-					if (c.ia.requisitos.length) {
-						const ul = el('ul');
-						for (const r of c.ia.requisitos) ul.append(el('li', '', r));
-						mas.append(el('h4', '', 'Requisitos'), ul);
-					}
-					if (c.ia.gastos.length) {
-						const ul = el('ul');
-						for (const g of c.ia.gastos) ul.append(el('li', '', g));
-						mas.append(el('h4', '', 'En qué se puede gastar'), ul);
-					}
+					// Requisitos y gastos llegan aparte (detalles.json) al abrir el primero
+					const hueco = el('div', 'ayuda-detalle');
+					mas.append(hueco);
+					mas.addEventListener(
+						'toggle',
+						async () => {
+							if (!mas.open || hueco.dataset.cargado) return;
+							hueco.dataset.cargado = '1';
+							const d = (await detalles())[c.codigo];
+							if (!d) {
+								// Sin conexión o sin datos: se dice y se reintenta al volver a abrir
+								delete hueco.dataset.cargado;
+								hueco.replaceChildren(el('p', '', 'No hemos podido cargar los requisitos: míralos en la ficha completa.'));
+								return;
+							}
+							hueco.replaceChildren();
+							const lista = (titulo: string, items: string[]) => {
+								if (!items.length) return;
+								const ul = el('ul');
+								for (const r of items) ul.append(el('li', '', r));
+								hueco.append(el('h4', '', titulo), ul);
+							};
+							lista('Requisitos', d.requisitos);
+							lista('En qué se puede gastar', d.gastos);
+						},
+					);
 					if (c.ia.importe) mas.append(el('h4', '', 'Importe'), el('p', '', c.ia.importe));
 					if (c.ia.plazo && !c.iaRevisar) mas.append(el('h4', '', 'Plazo'), el('p', '', c.ia.plazo));
 				} else {
@@ -200,7 +347,7 @@ const description =
 					enlaces.append(a);
 				};
 				propio(`/ayudas/${c.codigo}`, 'Ficha completa');
-				if (cierre(c)) propio(`/ayudas/${c.codigo}.ics`, 'Añadir el plazo al calendario', `plazo-${c.codigo}.ics`);
+				if (cierre(c) && (diasHasta(c, hoy()) ?? -1) >= 0) propio(`/ayudas/${c.codigo}.ics`, 'Añadir el plazo al calendario', `plazo-${c.codigo}.ics`);
 				enlace(c.enlace, 'Convocatoria oficial (BDNS)');
 				if (c.bases) enlace(c.bases, 'Bases');
 				if (c.sede) enlace(c.sede, 'Dónde se solicita');
@@ -209,55 +356,172 @@ const description =
 				return item;
 			}
 
-			let ultima: { perfil: Perfil | null } = { perfil: null };
+			/** Lo que se está viendo: el negocio (o ninguno, en «Todas las ayudas») y para qué busca la ayuda */
+			let ultima: { perfil: Perfil | null; finalidad: string | null } = { perfil: null, finalidad: null };
+
+			const filtros = document.querySelector<HTMLElement>('#filtros')!;
+			const buscar = document.querySelector<HTMLInputElement>('#buscar')!;
+			const filtroComunidad = document.querySelector<HTMLSelectElement>('#filtro-comunidad')!;
+			const filtroPronto = document.querySelector<HTMLInputElement>('#filtro-pronto')!;
+			const soloGuardadas = document.querySelector<HTMLInputElement>('#solo-guardadas')!;
+			const calendarioGuardadas = document.querySelector<HTMLButtonElement>('#calendario-guardadas')!;
+			// Los plazos de las guardadas, en un .ics que se descarga (se genera aquí, no sale del navegador)
+			calendarioGuardadas.addEventListener('click', async () => {
+				const mias = guardadas();
+				// De toda España: puede haber guardado alguna de otra comunidad
+				const lista = (await obtener()).filter((c) => mias.has(c.codigo));
+				const ics = calendarioIcs(lista, (c) => `${location.origin}/ayudas/${c.codigo}`, 'Mis ayudas guardadas');
+				const a = el('a');
+				a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+				a.download = 'ayudas-guardadas.ics';
+				document.body.append(a);
+				a.click();
+				a.remove();
+				setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+			});
+			const guardadasFiltro = document.querySelector<HTMLElement>('#guardadas-filtro')!;
+			/** El contador de «Solo mis guardadas»: solo se ve si hay alguna (o si está marcado) */
+			function contarGuardadas() {
+				const n = cache ? cache.filter((c) => guardadas().has(c.codigo)).length : 0;
+				guardadasFiltro.querySelector('span')!.textContent = `Solo mis guardadas (${n})`;
+				guardadasFiltro.hidden = n === 0 && !soloGuardadas.checked;
+				// En los avisos, seguir también sus plazos por email
+				const todas = guardadas().size;
+				const seguir = document.querySelector<HTMLElement>('#avisos-seguir')!;
+				seguir.hidden = todas === 0;
+				seguir.querySelector('[data-texto]')!.textContent =
+					todas === 1 ? 'Avísame también si cambia el plazo de mi ayuda guardada' : `Avísame también si cambia el plazo de mis ${todas} ayudas guardadas`;
+			}
+			const titulo = document.querySelector<HTMLElement>('#resultado-titulo')!;
+			const resumen = document.querySelector<HTMLElement>('#resumen')!;
+			const avisosTitulo = document.querySelector<HTMLElement>('#avisos-titulo')!;
+
+			/** Con los filtros de «Todas las ayudas» */
+			function filtradas(lista: ConvocatoriaWeb[]): ConvocatoriaWeb[] {
+				const comunidad = filtroComunidad.value;
+				return lista.filter((c) => {
+					if (!coincide(c, buscar.value)) return false;
+					// Una comunidad: las suyas y las de toda España
+					if (comunidad && !deComunidad(c, comunidad) && !esEstatal(c)) return false;
+					if (filtroPronto.checked) {
+						const dias = diasHasta(c, hoy());
+						if (dias === null || dias > 15) return false;
+					}
+					return true;
+				});
+			}
+
+			/** Una lista larga, por tandas: las primeras y un botón «Ver más» (se crean al momento, sin esperar) */
+			const TANDA = 30;
+			function enTandas<T>(items: T[], pintarUno: (x: T) => HTMLElement): HTMLElement[] {
+				const ol = el('ol', 'lista');
+				const mas = el('button', 'ver-mas');
+				mas.type = 'button';
+				let hechas = 0;
+				const seguir = () => {
+					for (const x of items.slice(hechas, hechas + TANDA)) ol.append(pintarUno(x));
+					hechas += TANDA;
+					const quedan = items.length - hechas;
+					if (quedan <= 0) mas.remove();
+					else mas.textContent = `Ver ${Math.min(quedan, TANDA)} más (quedan ${quedan})`;
+				};
+				mas.addEventListener('click', seguir);
+				seguir();
+				return items.length > TANDA ? [ol, mas] : [ol];
+			}
 
 			function pintar() {
 				if (!cache) return;
 				const perfil = ultima.perfil;
 				// Fuera de la lista: las cerradas desde la última construcción y las «por verificar»
-				const visibles = cache.filter((c) => (verPremios.checked || !c.ia || c.ia.categoria === 'ayuda') && enLista(estadoDe(c, hoy())));
-				const orden = (a: ConvocatoriaWeb, b: ConvocatoriaWeb) => (cierre(a) ?? '9999').localeCompare(cierre(b) ?? '9999');
+				const mias = guardadas();
+				const visibles = cache.filter(
+					(c) =>
+						(verPremios.checked || !c.ia || c.ia.categoria === 'ayuda') &&
+						enLista(estadoDe(c, hoy())) &&
+						(!soloGuardadas.checked || mias.has(c.codigo)),
+				);
+				const nuevas = visibles.filter((c) => esNueva(c, visitaAnterior)).length;
+				const yNuevas = nuevas ? ` · ${nuevas === 1 ? '1 nueva' : `${nuevas} nuevas`} desde tu última visita` : '';
+				contarGuardadas();
+				// Solo si alguna tiene fecha de cierre: si no, el calendario saldría vacío
+				calendarioGuardadas.hidden = !soloGuardadas.checked || !visibles.some((c) => cierre(c));
 				grupos.replaceChildren();
+				filtros.hidden = Boolean(perfil);
 
 				if (!perfil) {
-					document.querySelector('#resultado-titulo')!.textContent = 'Todas las ayudas';
-					document.querySelector('#resumen')!.textContent = `${visibles.length} convocatorias, las que cierran antes primero`;
-					const ol = el('ol', 'lista');
-					for (const c of [...visibles].sort(orden)) ol.append(tarjeta(c, null));
-					grupos.append(ol);
+					const lista = filtradas(visibles).sort(porCierre);
+					titulo.textContent = 'Todas las ayudas';
+					const filtrando = lista.length !== visibles.length;
+					resumen.textContent = filtrando
+						? `${lista.length} de ${visibles.length} convocatorias, las que cierran antes primero${yNuevas}`
+						: `${visibles.length} convocatorias, las que cierran antes primero${yNuevas}`;
+					if (!lista.length) grupos.append(el('p', 'grupo-texto vacio', 'Ninguna con esos filtros. Prueba con otras palabras o con toda España.'));
+					else grupos.append(...enTandas(lista, (c) => tarjeta(c, null)));
 				} else {
-					const evaluadas = visibles.map((c) => ({ c, e: encaje(c, perfil) })).sort((a, b) => orden(a.c, b.c));
+					// Las que sirven para lo que busca, primero en cada grupo (sin quitar ninguna)
+					const evaluadas = visibles.map((c) => ({
+						c,
+						e: encaje(c, perfil, hoy()),
+						cerca: cercania(c, perfil, municipioDe(c)),
+						para: sirvePara(c.ia?.finalidades, ultima.finalidad) ? 0 : 1,
+					}));
 					const de = (s: Encaje['estado']) => evaluadas.filter((x) => x.e.estado === s);
-					const si = de('si');
-					const revisa = de('revisa');
-					const no = de('no');
-					document.querySelector('#resultado-titulo')!.textContent =
-						si.length + revisa.length ? 'Las ayudas para tu negocio' : 'Ahora mismo no hay ayudas que encajen';
-					document.querySelector('#resumen')!.textContent =
-						`${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan`;
+					const si = de('si').sort((a, b) => a.para - b.para || porCierre(a.c, b.c));
+					// «Revisa», primero las más cercanas al negocio: su municipio, su provincia, su comunidad, toda España
+					const revisa = de('revisa').sort((a, b) => a.para - b.para || a.cerca - b.cerca || porCierre(a.c, b.c));
+					const no = de('no').sort((a, b) => porCierre(a.c, b.c));
+					titulo.textContent = si.length
+						? 'Las ayudas para tu negocio'
+						: revisa.length
+							? 'Ninguna encaja del todo, pero hay ayudas que revisar'
+							: 'Ahora mismo no hay ayudas que encajen';
+					const paraTi = [...si, ...revisa].filter((x) => x.para === 0).length;
+					const yParaTi = ultima.finalidad && paraTi ? ` · ${paraTi} para ${nombreFinalidad(ultima.finalidad).toLowerCase()}` : '';
+					resumen.textContent = `${si.length} puedes pedirlas · ${revisa.length} para revisar · ${no.length} no encajan${yParaTi}${yNuevas}`;
 
-					const grupo = (titulo: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
+					const grupo = (nombre: string, texto: string, lista: typeof evaluadas, clase: string, plegado = false) => {
 						if (!lista.length) return;
-						const ol = el('ol', 'lista');
-						for (const { c, e } of lista) ol.append(tarjeta(c, e));
+						const ol = enTandas(lista, ({ c, e }) => tarjeta(c, e));
 						if (plegado) {
 							const d = el('details', `grupo grupo--${clase}`);
-							d.append(el('summary', '', `${titulo} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							d.append(el('summary', '', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ...ol);
 							grupos.append(d);
 						} else {
 							const s = el('section', `grupo grupo--${clase}`);
-							s.append(el('h3', 'grupo-titulo', `${titulo} (${lista.length})`), el('p', 'grupo-texto', texto), ol);
+							s.append(el('h3', 'grupo-titulo', `${nombre} (${lista.length})`), el('p', 'grupo-texto', texto), ...ol);
 							grupos.append(s);
 						}
 					};
 					grupo('Puedes pedirlas', 'Encajan con lo que nos has dicho. Aun así, lee los requisitos antes de pedirlas.', si, 'si');
-					grupo('Revisa los detalles', 'Podrían encajar, pero falta algún dato o hay que comprobar algo en las bases.', revisa, 'revisa');
+					grupo(
+						'Revisa los detalles',
+						'Podrían encajar, pero falta algún dato o hay que comprobar algo en las bases. Primero, las más cercanas a tu negocio.',
+						revisa,
+						'revisa',
+					);
 					grupo('No encajan', 'Por qué no, en cada una.', no, 'no', true);
+					// Sin ninguna que se pueda pedir ya, lo útil es que le avisemos: el recuadro, arriba
+					if (!si.length) {
+						grupos.before(avisos);
+						avisosTitulo.textContent = 'Te avisamos en cuanto salga una ayuda para tu negocio';
+					} else {
+						grupos.after(avisos);
+						avisosTitulo.textContent = '¿Te avisamos cuando salgan ayudas nuevas para tu negocio?';
+					}
 				}
 				// Los avisos, solo con un negocio (no en «todas las ayudas»)
 				avisos.hidden = !perfil;
 				resultado.hidden = false;
 			}
+
+			let espera: ReturnType<typeof setTimeout> | undefined;
+			buscar.addEventListener('input', () => {
+				clearTimeout(espera);
+				espera = setTimeout(pintar, 150);
+			});
+			filtroComunidad.addEventListener('change', pintar);
+			filtroPronto.addEventListener('change', pintar);
 
 			// Apuntarse a los avisos con las respuestas del asistente: la misma API que
 			// alertas.felixcorcoran.es, que manda el correo para confirmar
@@ -275,6 +539,8 @@ const description =
 				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return void (avisosEstado.textContent = 'Escribe un email válido.');
 				if (!avisosAcepto.checked) return void (avisosEstado.textContent = 'Para apuntarte, marca que has leído la política de privacidad.');
 
+				const frecuencia = avisosForm.querySelector<HTMLInputElement>('input[name="avisos-frecuencia"]:checked')?.value ?? 'diaria';
+				const seguidas = document.querySelector<HTMLInputElement>('#avisos-seguidas')!.checked ? [...guardadas()].slice(0, 50) : [];
 				const boton = avisosForm.querySelector<HTMLButtonElement>('button')!;
 				boton.disabled = true;
 				avisosEstado.className = 'avisos-estado';
@@ -283,7 +549,7 @@ const description =
 					const r = await fetch(`${ALERTAS}/api/suscripciones`, {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify({ email, perfil, acepto: true }),
+						body: JSON.stringify({ email, perfil, acepto: true, frecuencia, seguidas }),
 					});
 					if (r.status === 429) throw new Error('Demasiados intentos seguidos. Prueba de nuevo en unos minutos.');
 					if (r.status === 400) throw new Error('Revisa el email: no parece válido.');
@@ -306,7 +572,7 @@ const description =
 			import { nombreSeccion } from '../lib/sectores';
 			const asistente = document.querySelector<HTMLElement>('#asistente')!;
 			const CLAVE = 'perfil-subvenciones';
-			type Guardado = Perfil & { comunidad?: string };
+			type Guardado = Perfil & { comunidad?: string; finalidad?: string | null };
 			const leerGuardado = (): Guardado | null => {
 				try {
 					return JSON.parse(localStorage.getItem(CLAVE) ?? 'null') as Guardado | null;
@@ -318,7 +584,7 @@ const description =
 			const FORMAS = { autonomo: 'Autónomo o autónoma', sociedad: 'Empresa (sociedad)', emprender: 'Aún no ha empezado' };
 			const PLANTILLA: Record<number, string> = { 0: 'Solo yo', 1: '1 a 9 personas', 10: '10 a 49 personas', 50: '50 a 249 personas', 250: '250 o más' };
 			const ANTIGUEDAD = { nada: '', menos1: 'Menos de un año', '1a3': 'De 1 a 3 años', mas3: 'Más de 3 años' };
-			const respuestas = (p: Perfil) =>
+			const respuestas = (p: Perfil, finalidad: string | null = null) =>
 				[
 					provincias.find((x) => x.codigo === p.provincia)?.nombre ?? '',
 					p.municipio,
@@ -326,6 +592,7 @@ const description =
 					p.forma === 'emprender' ? '' : PLANTILLA[p.empleados],
 					ANTIGUEDAD[p.antiguedad],
 					p.sector ? nombreSeccion(p.sector) : 'Sector sin indicar',
+					finalidad ? `Para: ${nombreFinalidad(finalidad).toLowerCase()}` : '',
 				].filter(Boolean);
 
 			// Si ya respondió antes en este navegador, puede ir directo
@@ -359,26 +626,51 @@ const description =
 			// Los resultados, siempre desde arriba: el título, el negocio y las ayudas.
 			// La dirección no cambia (recargar vuelve a la portada, con «Usa tus
 			// respuestas de antes»); el enlace para compartir lleva las respuestas.
-			async function verAyudas(perfil: Perfil) {
+			async function verAyudas(perfil: Perfil, finalidad: string | null = null) {
+				finalidad = esFinalidad(finalidad) ? finalidad : null;
 				asistente.hidden = true;
 				document.querySelector('.intro')!.classList.add('empezada');
 				const tu = document.querySelector<HTMLElement>('#tu-negocio')!;
 				tu.hidden = false;
-				document.querySelector('#respuestas')!.replaceChildren(...respuestas(perfil).map((t) => el('li', '', t)));
-				await cargar();
-				ultima = { perfil };
+				document.querySelector('#respuestas')!.replaceChildren(...respuestas(perfil, finalidad).map((t) => el('li', '', t)));
+				// La alternativa sin email: el calendario y el RSS de su comunidad
+				const comunidad = COMUNIDADES.find((k) => k.codigo === provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad);
+				const sinEmail = document.querySelector<HTMLElement>('#avisos-sin-email')!;
+				if (comunidad) {
+					const webcal = `webcal://${location.host}/comunidades/${comunidad.slug}.ics`;
+					sinEmail.querySelector('[data-comunidad]')!.textContent = comunidad.nombre;
+					sinEmail.querySelector<HTMLAnchorElement>('[data-webcal]')!.href = webcal;
+					sinEmail.querySelector<HTMLAnchorElement>('[data-google]')!.href = `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcal)}`;
+					sinEmail.querySelector<HTMLAnchorElement>('[data-rss]')!.href = `/comunidades/${comunidad.slug}.xml`;
+				}
+				sinEmail.hidden = !comunidad;
+				await cargar(provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad ?? '');
+				ultima = { perfil, finalidad };
+				pintarNegocios();
 				pintar();
 				window.scrollTo({ top: 0, behavior: 'instant' });
 				// Para «Usa tus respuestas de antes» al volver (también si llegó por un enlace)
 				try {
 					const comunidad = provincias.find((x) => x.codigo === perfil.provincia)?.codigoComunidad;
-					localStorage.setItem(CLAVE, JSON.stringify({ ...perfil, comunidad }));
+					localStorage.setItem(CLAVE, JSON.stringify({ ...perfil, comunidad, finalidad }));
 				} catch {}
 			}
-			document.addEventListener('perfil-listo', (e) => verAyudas((e as CustomEvent<Perfil>).detail));
+			document.addEventListener('perfil-listo', (e) => {
+				const { perfil, finalidad } = (e as CustomEvent<{ perfil: Perfil; finalidad: string | null }>).detail;
+				verAyudas(perfil, finalidad);
+			});
+			// Solo el perfil del encaje: la finalidad no va a alertas ni a la comparación
+			const soloPerfil = (g: Guardado): Perfil => ({
+				provincia: g.provincia,
+				municipio: g.municipio ?? '',
+				forma: g.forma,
+				empleados: g.empleados,
+				antiguedad: g.antiguedad,
+				sector: g.sector ?? '',
+			});
 			anterior.addEventListener('click', () => {
 				const p = leerGuardado();
-				if (p) verAyudas(p);
+				if (p) verAyudas(soloPerfil(p), p.finalidad ?? null);
 			});
 
 			document.querySelector('#todas')!.addEventListener('click', async () => {
@@ -386,12 +678,13 @@ const description =
 				document.querySelector<HTMLElement>('#tu-negocio')!.hidden = true;
 				document.querySelector('.intro')!.classList.add('empezada');
 				await cargar();
-				ultima = { perfil: null };
+				ultima = { perfil: null, finalidad: null };
 				pintar();
 				window.scrollTo({ top: 0, behavior: 'instant' });
 			});
 
 			verPremios.addEventListener('change', pintar);
+			soloGuardadas.addEventListener('change', pintar);
 
 			// El perfil en la dirección: ?provincia=ES617&municipio=Marbella&forma=autonomo…
 			function aParametros(p: Perfil): string {
@@ -401,6 +694,7 @@ const description =
 					q.set('empleados', String(p.empleados));
 					q.set('antiguedad', p.antiguedad);
 				}
+				if (ultima.finalidad) q.set('para', ultima.finalidad);
 				return q.toString();
 			}
 			function deParametros(q: URLSearchParams): Perfil | null {
@@ -418,6 +712,102 @@ const description =
 					sector: (q.get('sector') ?? '').slice(0, 1).toUpperCase(),
 				};
 			}
+
+			// Los negocios guardados: en la portada, para ir directo; en los resultados, para cambiar de uno a otro
+			const negociosCaja = document.querySelector<HTMLElement>('#negocios')!;
+			const cambiarNegocio = document.querySelector<HTMLElement>('#cambiar-negocio')!;
+			const selectNegocio = cambiarNegocio.querySelector<HTMLSelectElement>('[data-select]')!;
+			const verNegocio = (n: Negocio) => verAyudas(soloPerfil(n.perfil), n.finalidad ?? null);
+			function pintarNegocios() {
+				const lista = negocios();
+				const ul = negociosCaja.querySelector('[data-lista]')!;
+				ul.replaceChildren(
+					...lista.map((n) => {
+						const li = el('li');
+						const ir = el('button', 'enlace', n.nombre);
+						ir.type = 'button';
+						ir.addEventListener('click', () => verNegocio(n));
+						const quitar = el('button', 'quitar', '×');
+						quitar.type = 'button';
+						quitar.setAttribute('aria-label', `Borrar el negocio «${n.nombre}»`);
+						quitar.addEventListener('click', () => {
+							borrarNegocio(n.nombre);
+							pintarNegocios();
+						});
+						li.append(ir, quitar);
+						return li;
+					}),
+				);
+				negociosCaja.hidden = lista.length === 0;
+				// En los resultados: los demás negocios, para cambiar
+				selectNegocio.replaceChildren(
+					Object.assign(el('option', '', 'Elige…'), { value: '' }),
+					...lista.map((n, i) => Object.assign(el('option', '', n.nombre), { value: String(i) })),
+				);
+				cambiarNegocio.hidden = lista.length === 0;
+			}
+			selectNegocio.addEventListener('change', () => {
+				const n = negocios()[Number(selectNegocio.value)];
+				if (selectNegocio.value !== '' && n) verNegocio(n);
+			});
+			const formNegocio = document.querySelector<HTMLFormElement>('#form-negocio')!;
+			const nombreNegocio = document.querySelector<HTMLInputElement>('#nombre-negocio')!;
+			const botonGuardarNegocio = document.querySelector<HTMLButtonElement>('#guardar-negocio')!;
+			botonGuardarNegocio.addEventListener('click', () => {
+				formNegocio.hidden = false;
+				nombreNegocio.focus();
+			});
+			formNegocio.addEventListener('submit', (e) => {
+				e.preventDefault();
+				if (!ultima.perfil || !nombreNegocio.value.trim()) return;
+				guardarNegocio({ nombre: nombreNegocio.value, perfil: ultima.perfil, finalidad: ultima.finalidad });
+				formNegocio.hidden = true;
+				nombreNegocio.value = '';
+				botonGuardarNegocio.textContent = 'Negocio guardado';
+				setTimeout(() => (botonGuardarNegocio.textContent = 'Guardar este negocio'), 2500);
+				pintarNegocios();
+			});
+			pintarNegocios();
+
+			// Cambios en las guardadas desde la última vez: se miran al entrar (solo si hay alguna)
+			const novedades = document.querySelector<HTMLElement>('#novedades')!;
+			async function mirarGuardadas() {
+				if (guardadas().size === 0) return;
+				const lista = await obtener().catch(() => null);
+				if (!lista) return;
+				const cambios = cambiosGuardadas(lista);
+				if (!cambios.length) return;
+				novedades.querySelector('[data-lista]')!.replaceChildren(
+					...cambios.map((x) => {
+						const li = el('li');
+						if (x.tipo === 'fuera') {
+							// Su ficha dice que ha cerrado (o, pasados unos meses, la página de no encontrada lo explica)
+							const a = el('a', '', `La ayuda ${x.codigo}`);
+							a.href = `/ayudas/${x.codigo}`;
+							li.append(a, ' ya no está en el radar: lo normal es que haya cerrado.');
+						}
+						else {
+							const a = el('a', '', titularDe(x.c!));
+							a.href = `/ayudas/${x.codigo}`;
+							li.append(a, `: el plazo ${x.ahora ? `ahora termina el ${fechaLarga(x.ahora)}` : 'ya no tiene fecha de cierre confirmada'}${x.antes ? ` (antes, el ${fechaLarga(x.antes)})` : ''}.`);
+						}
+						return li;
+					}),
+				);
+				estado.textContent = '';
+				novedades.hidden = false;
+			}
+			// Con la lista de toda España: con la de una comunidad, las de otras parecerían desaparecidas
+			novedades.querySelector('[data-visto]')!.addEventListener('click', async () => {
+				verCambios(await obtener());
+				novedades.hidden = true;
+			});
+			novedades.querySelector('[data-ver]')!.addEventListener('click', async () => {
+				verCambios(await obtener());
+				novedades.hidden = true;
+				soloGuardadas.checked = true;
+				document.querySelector<HTMLButtonElement>('#todas')!.click();
+			});
 
 			const compartir = document.querySelector<HTMLButtonElement>('#compartir')!;
 			compartir.addEventListener('click', async () => {
@@ -447,14 +837,14 @@ const description =
 			if (desdeEnlace) {
 				// Se enseñan sus ayudas y la dirección queda limpia: al recargar, portada
 				history.replaceState(null, '', '/');
-				verAyudas(desdeEnlace).then(() => {
+				verAyudas(desdeEnlace, entrada.get('para')).then(() => {
 					if (alAviso) setTimeout(() => avisos.scrollIntoView({ behavior: 'smooth', block: 'center' }), 400);
 				});
 			}
 			else if (entrada.has('empezar')) {
 				history.replaceState(null, '', '/');
 				abrir();
-			}
+			} else mirarGuardadas();
 		</script>
 </Base>
 
@@ -592,8 +982,33 @@ const description =
 	}
 
 	.intro.empezada .empezar,
-	.intro.empezada .meta {
+	.intro.empezada .meta,
+	.intro.empezada .lead {
 		display: none;
+	}
+
+	/* Con preguntas o resultados, la portada se queda en un título pequeño: en
+	   el móvil ocupaba la primera pantalla entera y las ayudas quedaban debajo */
+	.intro.empezada h1 {
+		margin-bottom: 0;
+		font-size: clamp(1.5rem, 3.6vw, 2.25rem);
+	}
+
+	/* Con resultados, ni eso a la vista: el título de los resultados ya dice qué
+	   es. Se queda para los lectores de pantalla (la página necesita su h1) */
+	.intro.empezada:has(~ .resultado:not([hidden])) h1 {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+
+	.tu-negocio .enlace {
+		padding-block: 0.25rem;
+		font-size: 0.875rem;
 	}
 
 	.estado:empty {
@@ -717,6 +1132,34 @@ const description =
 		cursor: progress;
 	}
 
+	.avisos-frecuencia {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.5rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		border: 0;
+		font-size: 0.9375rem;
+	}
+
+	.avisos-frecuencia label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+	}
+
+	.avisos-frecuencia input {
+		width: 1.05rem;
+		height: 1.05rem;
+		margin: 0;
+		accent-color: var(--accent-text);
+	}
+
+	.avisos-acepto[hidden] {
+		display: none;
+	}
+
 	.avisos-acepto {
 		display: flex;
 		gap: 0.75rem;
@@ -737,6 +1180,25 @@ const description =
 	}
 
 	.avisos-acepto a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.avisos-sin-email {
+		margin: 1.25rem 0 0;
+		padding-top: 1rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.875rem;
+		line-height: 1.7;
+		color: var(--text-muted);
+	}
+
+	.avisos-sin-email[hidden] {
+		display: none;
+	}
+
+	.avisos-sin-email a {
 		color: var(--text);
 		text-decoration-color: var(--accent);
 		text-underline-offset: 0.2em;
@@ -763,6 +1225,16 @@ const description =
 		line-height: 1.5;
 	}
 
+	.casillas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 1.5rem;
+	}
+
+	.premios[hidden] {
+		display: none;
+	}
+
 	.premios {
 		display: inline-flex;
 		align-items: center;
@@ -773,217 +1245,6 @@ const description =
 		color: var(--text-muted);
 		cursor: pointer;
 	}
-
-	:global(.grupo) {
-		margin-top: 2.5rem;
-	}
-
-	:global(.grupo-titulo),
-	:global(details.grupo > summary) {
-		margin: 0;
-		font-size: 1.125rem;
-		font-weight: 600;
-		letter-spacing: -0.01em;
-	}
-
-	:global(details.grupo > summary) {
-		cursor: pointer;
-	}
-
-	:global(.grupo-texto) {
-		margin: 0.375rem 0 0;
-		font-size: 0.9375rem;
-		color: var(--text-muted);
-	}
-
-	:global(.lista) {
-		display: grid;
-		gap: 1rem;
-		margin: 1.25rem 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	:global(.ayuda) {
-		position: relative;
-		padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(1.125rem, 2.5vw, 1.75rem);
-		border-radius: 1.25rem;
-		background: rgb(var(--surface-rgb) / 0.75);
-		border: 1px solid var(--rule);
-	}
-
-	:global(.ayuda::before) {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 1.25rem;
-		bottom: 1.25rem;
-		width: 3px;
-		border-radius: 0 3px 3px 0;
-		background: var(--estado, transparent);
-	}
-
-	:global(.ayuda--si) {
-		--estado: #3f8f5f;
-	}
-	:global(.ayuda--revisa) {
-		--estado: #d49a2a;
-	}
-	:global(.ayuda--no) {
-		--estado: rgb(var(--ink) / 0.25);
-	}
-
-	:global(.ayuda-organo) {
-		margin: 0;
-		font-size: 0.75rem;
-		font-weight: 500;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--text-muted);
-	}
-
-	:global(.ayuda h3) {
-		margin: 0.5rem 0 0;
-		font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
-		font-weight: 500;
-		line-height: 1.35;
-		letter-spacing: -0.015em;
-	}
-
-	:global(.ayuda h3 a) {
-		color: inherit;
-		text-decoration: none;
-		background-image: linear-gradient(var(--accent), var(--accent));
-		background-size: 0 1px;
-		background-position: 0 100%;
-		background-repeat: no-repeat;
-		transition: background-size 0.35s var(--ease-out);
-	}
-
-	:global(.ayuda h3 a:hover) {
-		background-size: 100% 1px;
-	}
-
-	:global(.ayuda-datos) {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin: 0.875rem 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	:global(.ayuda-datos li) {
-		padding: 0.3rem 0.75rem;
-		border-radius: 999px;
-		background: rgb(var(--ink) / 0.05);
-		font-size: 0.8125rem;
-		line-height: 1.4;
-	}
-
-	:global(.ayuda-datos li.pronto) {
-		background: var(--accent-soft);
-	}
-
-	:global(.ayuda-datos li.sin-comprobar) {
-		background: none;
-		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.18);
-		color: var(--text-muted);
-	}
-
-	:global(.motivos) {
-		display: grid;
-		gap: 0.3rem;
-		margin: 1rem 0 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	:global(.motivo) {
-		position: relative;
-		padding-left: 1.5rem;
-		font-size: 0.875rem;
-		line-height: 1.45;
-	}
-
-	:global(.motivo::before) {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 1rem;
-		text-align: center;
-		font-weight: 600;
-	}
-
-	:global(.motivo--bien::before) {
-		content: '✓';
-		color: #3f8f5f;
-	}
-	:global(.motivo--revisa::before) {
-		content: '?';
-		color: #b07d16;
-	}
-	:global(.motivo--no::before) {
-		content: '✕';
-		color: var(--accent-text);
-	}
-
-	:global(.ayuda-mas) {
-		margin-top: 1rem;
-		padding-top: 0.875rem;
-		border-top: 1px solid var(--rule);
-		font-size: 0.9375rem;
-		line-height: 1.55;
-	}
-
-	:global(.ayuda-mas summary) {
-		cursor: pointer;
-		font-size: 0.875rem;
-		font-weight: 500;
-	}
-
-	:global(.ayuda-mas h4) {
-		margin: 1.125rem 0 0.25rem;
-		font-size: 0.8125rem;
-		font-weight: 600;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: var(--text-muted);
-	}
-
-	:global(.ayuda-mas p),
-	:global(.ayuda-mas ul) {
-		margin: 0.25rem 0 0;
-	}
-
-	:global(.ayuda-mas ul) {
-		padding-left: 1.25rem;
-	}
-
-	:global(.ayuda-mas .oficial) {
-		margin-top: 1.125rem;
-		font-size: 0.8125rem;
-		color: var(--text-muted);
-	}
-
-	:global(.enlaces) {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem 1.25rem;
-		margin-top: 0.75rem !important;
-	}
-
-	:global(.enlaces a) {
-		color: var(--text);
-		text-decoration: underline;
-		text-decoration-color: var(--accent);
-		text-underline-offset: 0.25em;
-		font-size: 0.875rem;
-	}
-
-
-
-
 
 	/* La portada, centrada: una pregunta y un botón, como la entrada de una
 	   herramienta. Los resultados siguen a la izquierda,
@@ -1028,6 +1289,229 @@ const description =
 		text-align: center;
 	}
 
+
+	/* Tus negocios (portada) y los avisos de cambios en las guardadas */
+	.negocios {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.25rem 0.75rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.negocios[hidden],
+	.novedades[hidden],
+	.intro.empezada .novedades,
+	.form-negocio[hidden],
+	.cambiar-negocio[hidden],
+	#calendario-guardadas[hidden] {
+		display: none;
+	}
+
+	.negocios ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.75rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	/* Los botones de cada negocio y de cada cambio se crean en el navegador: sin el
+	   atributo de ámbito de Astro, sus estilos van con :global dentro de su caja */
+	.negocios :global(li) {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.negocios :global(.enlace) {
+		padding: 0.5rem 0;
+		border: 0;
+		background: none;
+		color: var(--text);
+		font: inherit;
+		text-decoration: underline;
+		text-decoration-color: rgb(var(--ink) / 0.3);
+		text-underline-offset: 0.3em;
+		cursor: pointer;
+	}
+
+	.negocios :global(.quitar) {
+		width: 1.75rem;
+		height: 1.75rem;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--text-muted);
+		font: inherit;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+
+	.negocios :global(.quitar:hover) {
+		color: var(--accent-text);
+	}
+
+	.novedades {
+		max-width: 40rem;
+		margin: 1.75rem auto 0;
+		padding: 1rem 1.25rem;
+		border-radius: 1rem;
+		background: var(--accent-soft);
+		text-align: left;
+		font-size: 0.9375rem;
+		line-height: 1.5;
+	}
+
+	.novedades-titulo {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.novedades ul {
+		margin: 0.5rem 0 0;
+		padding-left: 1.2rem;
+	}
+
+	.novedades :global(a) {
+		color: inherit;
+		text-decoration-color: var(--accent-text);
+		text-underline-offset: 0.2em;
+	}
+
+	.novedades-acciones {
+		display: flex;
+		gap: 1.25rem;
+		margin: 0.5rem 0 0;
+	}
+
+	.novedades .enlace {
+		color: var(--text);
+	}
+
+	/* Guardar el negocio con un nombre, y cambiar a otro guardado */
+	.form-negocio {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+		flex-basis: 100%;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.form-negocio input,
+	.cambiar-negocio select {
+		box-sizing: border-box;
+		height: 2.5rem;
+		padding: 0 0.875rem;
+		border-radius: 0.75rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 1rem;
+	}
+
+	.form-negocio input {
+		flex: 1 1 12rem;
+	}
+
+	.form-negocio input:focus-visible,
+	.cambiar-negocio select:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.boton.boton--pequeno {
+		height: 2.5rem;
+		padding: 0 1.1rem;
+		font-size: 0.875rem;
+	}
+
+	.cambiar-negocio {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.filtros {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1rem;
+		margin-top: 1.25rem;
+	}
+
+	.filtros[hidden] {
+		display: none;
+	}
+
+	.filtros input[type='search'],
+	.filtros select {
+		box-sizing: border-box;
+		height: 2.75rem;
+		padding: 0 1rem;
+		border-radius: 0.875rem;
+		border: 1px solid rgb(var(--ink) / 0.16);
+		background: var(--bg);
+		color: var(--text);
+		font: inherit;
+		font-size: 1rem;
+	}
+
+	.filtros input[type='search'] {
+		flex: 1 1 16rem;
+	}
+
+	.filtros select {
+		flex: 0 1 14rem;
+	}
+
+	.filtros :focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+
+	.pronto-filtro {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		cursor: pointer;
+	}
+
+	.explorar {
+		margin-top: clamp(2.5rem, 6vw, 4rem);
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--rule);
+	}
+
+	.explorar ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.1rem;
+		margin: 0.6rem 0 1.5rem;
+		padding: 0;
+		list-style: none;
+		font-size: 0.875rem;
+	}
+
+	.explorar a {
+		color: var(--text-muted);
+		text-decoration-color: rgb(var(--ink) / 0.2);
+		text-underline-offset: 0.2em;
+	}
+
+	.explorar a:hover {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+	}
 
 	.aviso-fuente {
 		margin: clamp(2rem, 5vw, 3rem) 0 0;

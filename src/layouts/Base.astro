@@ -15,11 +15,17 @@ interface Props {
 	description: string;
 	/** Datos estructurados (schema.org), si los hay */
 	jsonLd?: object;
+	/** Fuera de los buscadores: fichas cerradas, «por verificar», premios… */
+	noindex?: boolean;
+	/** Imagen al compartir (ruta); por defecto la de la web */
+	imagen?: string;
+	/** Un RSS propio de la página (el de una comunidad), además del general */
+	rss?: { titulo: string; href: string };
 }
 
-const { title, description, jsonLd } = Astro.props;
+const { title, description, jsonLd, noindex = false, imagen: rutaImagen = '/og.png', rss } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const imagen = new URL('/og.png', Astro.site);
+const imagen = new URL(rutaImagen, Astro.site);
 ---
 
 <!doctype html>
@@ -30,6 +36,7 @@ const imagen = new URL('/og.png', Astro.site);
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonical} />
+		{noindex && <meta name="robots" content="noindex, follow" />}
 		<meta name="theme-color" content="#FAF9F6" data-theme-color />
 		<!-- Claro por defecto, como felixcorcoran.es; oscuro si se pidió al llegar
 		     (?tema=oscuro, se recuerda y se quita de la barra) o se eligió antes -->
@@ -54,6 +61,8 @@ const imagen = new URL('/og.png', Astro.site);
 		<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="sitemap" href="/sitemap.xml" />
+		{rss && <link rel="alternate" type="application/rss+xml" title={rss.titulo} href={rss.href} />}
+		<link rel="alternate" type="application/rss+xml" title="Radar de subvenciones: ayudas nuevas" href="/rss.xml" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Radar de subvenciones" />
 		<meta property="og:title" content={title} />
@@ -64,7 +73,7 @@ const imagen = new URL('/og.png', Astro.site);
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta name="twitter:card" content="summary_large_image" />
-		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />}
 		<Font cssVariable="--font-sora" preload />
 		<Analytics />
 	</head>

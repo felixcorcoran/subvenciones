@@ -6,17 +6,39 @@
  */
 import type { GetStaticPaths } from 'astro';
 import Base from '../../layouts/Base.astro';
+import Tarjeta from '../../components/Tarjeta.astro';
+import Cerrada from '../../components/Cerrada.astro';
 import datos from '../../../datos/convocatorias.json';
-import type { Convocatoria, Datos } from '../../lib/tipos';
+import archivo from '../../../datos/cerradas.json';
+import type { Cerrada as Retirada, Convocatoria, Datos } from '../../lib/tipos';
 import { cierre, fechaLarga, municipioDe } from '../../lib/encaje';
-import { estado, nombresCambios, origenCierre, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../../lib/estado';
+import { enLista, estado, nombresCambios, origenCierre, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../../lib/estado';
+import { hoyMadrid } from '../../lib/fechas';
+import { comunidadDe, deComunidad, indexable, otrasLineas, porCierre, seccionesDe, SECTORES, titularDe } from '../../lib/lista';
+import { aWeb } from '../../lib/web';
 import { seccionDe } from '../../lib/sectores';
 import { nombreZona } from '../../lib/zonas';
+import { site } from '../../data/site';
+import { nombreFinalidad } from '../../lib/finalidades';
+import '../../styles/tarjetas.css';
 
-export const getStaticPaths = (() =>
-	(datos as Datos).convocatorias.map((c) => ({ params: { codigo: c.codigo }, props: { c } }))) satisfies GetStaticPaths;
+// Las guardadas y, unos meses, las retiradas por cerradas (datos/cerradas.json):
+// así un enlace compartido o de un buscador no acaba en un error
+export const getStaticPaths = (() => {
+	const { convocatorias } = datos as Datos;
+	const guardadas = new Set(convocatorias.map((c) => c.codigo));
+	return [
+		...convocatorias.map((c) => ({ params: { codigo: c.codigo }, props: { c, retirada: null } })),
+		...Object.values(archivo as Record<string, Retirada>)
+			.filter((r) => !guardadas.has(r.codigo))
+			.map((r) => ({ params: { codigo: r.codigo }, props: { c: null, retirada: r } })),
+	];
+}) satisfies GetStaticPaths;
 
-const c = Astro.props.c as Convocatoria;
+const { retirada } = Astro.props as { retirada: Retirada | null };
+// Una retirada se pinta con Cerrada.astro; lo de abajo se calcula con la primera
+// guardada solo para no llenar la plantilla de comprobaciones, y no se usa
+const c = (Astro.props.c ?? (datos as Datos).convocatorias[0]) as Convocatoria;
 const ia = c.ia;
 const fin = cierre(c);
 const municipio = municipioDe(c);
@@ -28,7 +50,7 @@ const euros = (n: number) => n.toLocaleString('es-ES', { style: 'currency', curr
 // En la cabecera, una cifra corta; el importe explicado va en su apartado
 const importe = ia?.importeMaximo ? `Hasta ${euros(ia.importeMaximo)}` : c.presupuesto ? `Presupuesto total: ${euros(c.presupuesto)}` : null;
 // La web se construye cada día con los datos: la fecha de construcción es «hoy»
-const hoy = new Date().toISOString().slice(0, 10);
+const hoy = hoyMadrid();
 const plazo = textoPlazo(c, hoy);
 const porVerificar = estado(c, hoy) === 'por_verificar';
 const previoCerrado = estado(c, hoy) === 'plazo_previo_cerrado';
@@ -40,22 +62,88 @@ const fechasBdns =
 const sinComprobar = sinComprobarDesde(c, hoy);
 const ultimoCambio = c.cambios?.at(-1);
 
-const titulo = ia?.resumen ?? c.titulo;
+const titulo = titularDe(c);
 const title = `${titulo.length > 70 ? `${titulo.slice(0, 67).trimEnd()}…` : titulo} · Radar de subvenciones`;
 const description = [ia?.paraQuien, plazo, importe].filter(Boolean).join(' · ').slice(0, 300) || c.titulo;
+// Fuera de los buscadores lo que no es una oportunidad clara: por verificar, plazo pasado, premios y otras
+const noindex = !indexable(c, hoy);
 
 const jsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'MonetaryGrant',
-	name: c.titulo,
+	name: titulo,
+	alternateName: c.titulo,
 	description: ia?.resumen ?? c.titulo,
-	url: c.enlace,
+	url: new URL(`/ayudas/${c.codigo}`, Astro.site).href,
+	sameAs: c.enlace,
+	identifier: c.codigo,
 	funder: { '@type': 'GovernmentOrganization', name: c.organo.nivel3 || c.organo.nivel2 },
+	...(zonas.length ? { areaServed: zonas.map((name) => ({ '@type': 'AdministrativeArea', name: name === 'toda España' || name === 'Toda España' ? 'España' : name })) } : {}),
 	...(ia?.importeMaximo ? { amount: { '@type': 'MonetaryAmount', currency: 'EUR', maxValue: ia.importeMaximo } } : {}),
 };
+
+// Para «¿Puede pedirla tu negocio?» aquí mismo, con las respuestas guardadas en el navegador
+const paraEncaje = JSON.stringify(aWeb(c)).replace(/</g, '\\u003c');
+
+// Otras ayudas abiertas de su comunidad o, si es estatal, de su sector
+const comunidad = comunidadDe(c);
+const sectoresPropios = seccionesDe(c);
+const sector = sectoresPropios.length === 1 ? SECTORES.find((s) => s.letra === sectoresPropios[0]) : undefined;
+const abiertas = (datos as Datos).convocatorias.filter(
+	(x) => x.codigo !== c.codigo && (!x.ia || x.ia.categoria === 'ayuda') && enLista(estado(x, hoy)),
+);
+// Las otras líneas de la misma convocatoria (cada una con sus condiciones), aparte
+const lineas = otrasLineas(c, abiertas).sort(porCierre);
+const relacionadas = (
+	comunidad
+		? abiertas.filter((x) => deComunidad(x, comunidad.codigo))
+		: sector
+			? abiertas.filter((x) => seccionesDe(x).includes(sector.letra))
+			: []
+)
+	.filter((x) => !lineas.includes(x))
+	.sort(porCierre)
+	.slice(0, 4);
+const masEn = comunidad
+	? { texto: `Todas las de ${comunidad.nombre}`, href: `/comunidades/${comunidad.slug}`, titulo: `Otras ayudas en ${comunidad.nombre}` }
+	: sector
+		? { texto: `Todas las de ${sector.nombre.toLowerCase()}`, href: `/sectores/${sector.slug}`, titulo: 'Otras ayudas para el mismo sector' }
+		: null;
+const imagenOg = `/og/${c.codigo}.png`;
+const enlaceFicha = new URL(`/ayudas/${c.codigo}`, Astro.site).href;
+const whatsapp = `https://wa.me/?text=${encodeURIComponent(`${titulo}\n${enlaceFicha}`)}`;
+const finalidades = (ia?.finalidades ?? []).map(nombreFinalidad);
+// El enlace para pedirla que dan las bases (comprobado al leerlas), si no es el mismo que la sede de la BDNS
+const enlacePedir = ia?.enlaceSolicitud && ia.enlaceSolicitud !== c.sede ? ia.enlaceSolicitud : null;
+
+/**
+ * «Qué hacer ahora»: los pasos para pedirla, con casillas que se recuerdan en
+ * el navegador. Con lo que la IA sacó de las bases (documentación, cómo se
+ * pide, dónde); si aún no lo tiene, pasos generales que no afirman nada que
+ * no digan las bases: remiten a ellas.
+ */
+interface Paso {
+	id: string;
+	texto: string;
+	enlace?: { href: string; texto: string };
+}
+const pasos: Paso[] = [{ id: 'leer', texto: 'Lee la convocatoria oficial y comprueba que cumples los requisitos', enlace: { href: c.enlace, texto: 'Convocatoria oficial (BDNS)' } }];
+if (ia?.documentacion?.length) ia.documentacion.forEach((d, i) => pasos.push({ id: `doc-${i}`, texto: `Prepara: ${d}` }));
+else pasos.push({ id: 'doc', texto: 'Mira en las bases qué documentos hay que presentar y prepáralos', enlace: c.bases ? { href: c.bases, texto: 'Bases' } : undefined });
+const donde = enlacePedir ? { href: enlacePedir, texto: 'Pedirla en línea (enlace de las bases)' } : c.sede ? { href: c.sede, texto: 'Dónde se solicita' } : undefined;
+if (ia?.comoPedir?.length) {
+	ia.comoPedir.forEach((x, i) => pasos.push({ id: `paso-${i}`, texto: x }));
+	if (donde) pasos[pasos.length - 1].enlace = donde;
+} else {
+	pasos.push({ id: 'presentar', texto: ia?.dondeSolicitar ? `Presenta la solicitud. ${ia.dondeSolicitar}` : 'Presenta la solicitud donde indican las bases', enlace: donde });
+}
+const limitePasos = fin && !previoCerrado ? `Todo, antes del ${fechaLarga(fin)}${origenCierre(c) === 'bases' ? ' (según las bases)' : ''}.` : null;
+// Avisar de un error en la ficha: un correo con el código y la dirección ya puestos
+const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en la ficha ${c.codigo}`)}&body=${encodeURIComponent(`Ficha: ${new URL(`/ayudas/${c.codigo}`, Astro.site).href}\n\nLo que está mal:\n`)}`;
 ---
 
-<Base title={title} description={description} jsonLd={jsonLd}>
+{retirada ? <Cerrada r={retirada} /> : (
+<Base title={title} description={description} jsonLd={jsonLd} noindex={noindex} imagen={imagenOg}>
 	<main>
 		<a class="volver" href="/">
 			<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M10.5 6h-9M5 2.5 1.5 6 5 9.5"></path></svg>
@@ -83,8 +171,23 @@ const jsonLd = {
 						</a>
 					)
 				}
-				<a class="boton boton--claro" href="/?empezar">¿Puede pedirla tu negocio?</a>
+				<a class="boton boton--claro" href="/?empezar" data-pedirla>¿Puede pedirla tu negocio?</a>
+				<!-- Solo con JavaScript: se guarda en este navegador (portada, «Solo mis guardadas») -->
+				<button type="button" class="boton boton--claro" data-guardar hidden aria-pressed="false">☆ Guardar</button>
 			</div>
+			<p class="compartir">
+				Compartir: <a href={whatsapp} target="_blank" rel="noopener">WhatsApp ↗</a>
+				<button type="button" class="compartir-copiar" data-copiar={enlaceFicha} hidden>Copiar el enlace</button>
+			</p>
+
+			<!-- Si ya respondió las preguntas en este navegador, el veredicto va aquí mismo -->
+			<section id="veredicto" class="veredicto" hidden aria-live="polite">
+				<h2>Con tus respuestas</h2>
+				<p class="veredicto-titulo" data-titulo></p>
+				<ul class="motivos" data-motivos></ul>
+				<p class="veredicto-pie"><span data-negocio></span> · <a href="/?empezar">Cambiar respuestas</a></p>
+			</section>
+			<script type="application/json" id="ayuda-datos" set:html={paraEncaje} />
 
 			{
 				ia ? (
@@ -92,6 +195,7 @@ const jsonLd = {
 						<section>
 							<h2>Para quién</h2>
 							<p>{ia.paraQuien}</p>
+							{finalidades.length > 0 && <p class="sirve">Sirve para: {finalidades.join(' · ')}</p>}
 						</section>
 						{ia.requisitos.length > 0 && (
 							<section>
@@ -135,6 +239,36 @@ const jsonLd = {
 				)
 			}
 
+			{
+				!previoCerrado && (
+					<section class="que-hacer" id="que-hacer" aria-labelledby="que-hacer-titulo" data-codigo={c.codigo}>
+						<h2 id="que-hacer-titulo">Qué hacer ahora</h2>
+						<p class="progreso" data-progreso hidden />
+						<ol class="pasos">
+							{pasos.map((p) => (
+								<li>
+									<label>
+										<input type="checkbox" data-paso={p.id} />
+										<span>{p.texto}</span>
+									</label>
+									{p.enlace && (
+										<a href={p.enlace.href} target="_blank" rel="noopener">
+											{p.enlace.texto} ↗
+										</a>
+									)}
+								</li>
+							))}
+						</ol>
+						{limitePasos && <p class="limite">{limitePasos}</p>}
+						<p class="imprimir">
+							<button type="button" class="boton boton--claro" data-imprimir hidden>
+								Imprimir o guardar en PDF
+							</button>
+						</p>
+					</section>
+				)
+			}
+
 			<section>
 				<h2>Datos de la convocatoria</h2>
 				<dl>
@@ -162,15 +296,353 @@ const jsonLd = {
 				</p>
 			</section>
 
+			{
+				lineas.length > 0 && (
+					<section class="relacionadas" aria-labelledby="lineas-titulo">
+						<h2 id="lineas-titulo">Otras líneas de esta convocatoria</h2>
+						<p class="lineas-texto">Tienen el mismo título en la BDNS, pero cada línea puede pedir cosas distintas: mira la que encaja contigo.</p>
+						<ol class="lista">
+							{lineas.map((x) => (
+								<Tarjeta c={x} hoy={hoy} />
+							))}
+						</ol>
+					</section>
+				)
+			}
+
+			{
+				relacionadas.length > 0 && masEn && (
+					<section class="relacionadas" aria-labelledby="relacionadas-titulo">
+						<h2 id="relacionadas-titulo">{masEn.titulo}</h2>
+						<ol class="lista">
+							{relacionadas.map((x) => (
+								<Tarjeta c={x} hoy={hoy} />
+							))}
+						</ol>
+						<p class="mas-en">
+							<a href={masEn.href}>{masEn.texto} →</a>
+						</p>
+					</section>
+				)
+			}
+
 			<p class="nota">
 				Resumen hecho con IA a partir de las bases de la convocatoria. Es una orientación: antes de pedirla, lee la convocatoria oficial, que es
-				la que vale.
+				la que vale. ¿Ves algo mal? <a href={avisarError}>Avísanos</a>.
 			</p>
 		</article>
 	</main>
 </Base>
+)}
+
+<script>
+	import { encaje, type Perfil } from '../../lib/encaje';
+	import { hoyMadrid } from '../../lib/fechas';
+	import type { ConvocatoriaWeb } from '../../lib/tipos';
+	import { alternarGuardada, contarGuardada, guardadas } from '../../lib/visitas';
+
+	const botonGuardar = document.querySelector<HTMLButtonElement>('[data-guardar]');
+	const ayuda = JSON.parse(document.querySelector('#ayuda-datos')?.textContent || 'null') as ConvocatoriaWeb | null;
+	const codigo = ayuda?.codigo;
+	if (botonGuardar && ayuda && codigo) {
+		const pintar = (si: boolean) => {
+			botonGuardar.textContent = si ? '★ Guardada' : '☆ Guardar';
+			botonGuardar.setAttribute('aria-pressed', String(si));
+		};
+		pintar(guardadas().has(codigo));
+		botonGuardar.addEventListener('click', () => {
+			const ahora = alternarGuardada(ayuda);
+			pintar(ahora);
+			if (ahora) contarGuardada(codigo);
+		});
+		botonGuardar.hidden = false;
+	}
+
+	// «Qué hacer ahora»: las casillas se recuerdan en este navegador, por ayuda
+	const queHacer = document.querySelector<HTMLElement>('#que-hacer');
+	if (queHacer) {
+		const clave = `pasos-${queHacer.dataset.codigo}`;
+		const casillas = [...queHacer.querySelectorAll<HTMLInputElement>('input[data-paso]')];
+		const progreso = queHacer.querySelector<HTMLElement>('[data-progreso]')!;
+		let hechos: string[] = [];
+		try {
+			hechos = JSON.parse(localStorage.getItem(clave) ?? '[]') as string[];
+		} catch {}
+		const contar = () => {
+			const n = casillas.filter((x) => x.checked).length;
+			progreso.textContent = n === casillas.length ? 'Todo listo. ¡Suerte!' : `${n} de ${casillas.length} hechos`;
+			progreso.hidden = n === 0;
+		};
+		for (const x of casillas) {
+			x.checked = hechos.includes(x.dataset.paso!);
+			x.addEventListener('change', () => {
+				try {
+					localStorage.setItem(clave, JSON.stringify(casillas.filter((y) => y.checked).map((y) => y.dataset.paso)));
+				} catch {}
+				contar();
+			});
+		}
+		contar();
+		const imprimir = queHacer.querySelector<HTMLButtonElement>('[data-imprimir]')!;
+		imprimir.hidden = false;
+		imprimir.addEventListener('click', () => window.print());
+	}
+
+	// Copiar el enlace (en el móvil, el menú de compartir del sistema)
+	const copiar = document.querySelector<HTMLButtonElement>('[data-copiar]');
+	if (copiar) {
+		const url = copiar.dataset.copiar!;
+		const movil = Boolean(navigator.share) && matchMedia('(pointer: coarse)').matches;
+		copiar.textContent = movil ? 'Más opciones' : 'Copiar el enlace';
+		copiar.hidden = false;
+		copiar.addEventListener('click', async () => {
+			try {
+				if (movil) return void (await navigator.share({ title: document.title, url }));
+				await navigator.clipboard.writeText(url);
+				copiar.textContent = 'Enlace copiado';
+			} catch {
+				copiar.textContent = 'No se ha podido: usa la barra de direcciones';
+			}
+			setTimeout(() => (copiar.textContent = movil ? 'Más opciones' : 'Copiar el enlace'), 2500);
+		});
+	}
+
+	const TITULOS = { si: 'Puedes pedirla', revisa: 'Revisa los detalles: podría encajar', no: 'No encaja con tu negocio' };
+	const caja = document.querySelector<HTMLElement>('#veredicto');
+	const datosAyuda = document.querySelector('#ayuda-datos');
+	let perfil: Perfil | null = null;
+	try {
+		perfil = JSON.parse(localStorage.getItem('perfil-subvenciones') ?? 'null') as Perfil | null;
+	} catch {}
+	// Respuestas guardadas por una versión anterior a la que le falte algo: se ignoran
+	if (caja && datosAyuda && perfil?.provincia && perfil.forma && typeof perfil.municipio === 'string') {
+		try {
+			const c = JSON.parse(datosAyuda.textContent ?? '{}') as ConvocatoriaWeb;
+			const e = encaje(c, perfil, hoyMadrid());
+			caja.classList.add(`veredicto--${e.estado}`);
+			caja.querySelector('[data-titulo]')!.textContent = TITULOS[e.estado];
+			const lista = caja.querySelector('[data-motivos]')!;
+			for (const m of e.motivos) {
+				const li = document.createElement('li');
+				li.className = `motivo motivo--${m.tipo}`;
+				li.textContent = m.texto;
+				lista.append(li);
+			}
+			caja.querySelector('[data-negocio]')!.textContent = 'Con lo que respondiste antes en este navegador';
+			caja.hidden = false;
+			// Ya no hace falta el botón que lleva a las preguntas
+			document.querySelector<HTMLElement>('[data-pedirla]')?.remove();
+		} catch {
+			caja.hidden = true;
+		}
+	}
+</script>
 
 <style>
+	.compartir {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.25rem 1rem;
+		margin: 1rem 0 0;
+		font-size: 0.875rem;
+		color: var(--text-muted);
+	}
+
+	.compartir a,
+	.compartir-copiar,
+	.pedir a {
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--text);
+		font: inherit;
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+		cursor: pointer;
+	}
+
+	.compartir-copiar[hidden] {
+		display: none;
+	}
+
+	.sirve {
+		margin-top: 0.75rem !important;
+		font-size: 0.9375rem !important;
+		color: var(--text-muted);
+	}
+
+	section ol {
+		margin: 0.5rem 0 0;
+		padding-left: 1.4rem;
+	}
+
+	.pedir {
+		margin-top: 0.75rem !important;
+	}
+
+	.que-hacer .pasos {
+		display: grid;
+		gap: 0.6rem;
+		margin: 0.75rem 0 0;
+		padding: 0;
+		list-style: none;
+		counter-reset: paso;
+	}
+
+	.que-hacer .pasos li {
+		padding: 0.75rem 1rem;
+		border-radius: 0.875rem;
+		background: rgb(var(--surface-rgb) / 0.75);
+		border: 1px solid var(--rule);
+	}
+
+	.que-hacer label {
+		display: flex;
+		gap: 0.75rem;
+		align-items: flex-start;
+		cursor: pointer;
+	}
+
+	.que-hacer input {
+		flex: none;
+		width: 1.15rem;
+		height: 1.15rem;
+		margin: 0.3rem 0 0;
+		accent-color: var(--accent-text);
+	}
+
+	.que-hacer label:has(input:checked) span {
+		color: var(--text-muted);
+		text-decoration: line-through;
+		text-decoration-color: rgb(var(--ink) / 0.35);
+	}
+
+	.que-hacer .pasos a {
+		display: inline-block;
+		margin: 0.35rem 0 0 1.9rem;
+		font-size: 0.875rem;
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.que-hacer .progreso {
+		font-size: 0.875rem !important;
+		font-weight: 500;
+		color: #3f8f5f;
+	}
+
+	.que-hacer .limite {
+		margin-top: 0.75rem !important;
+		font-weight: 500;
+	}
+
+	.que-hacer .imprimir {
+		margin-top: 1rem !important;
+	}
+
+	/* Al imprimir (o guardar en PDF): la ficha, en blanco y negro, sin lo que no sirve en papel */
+	@media print {
+		:global(.nav),
+		:global(.footer),
+		.volver,
+		.acciones,
+		.compartir,
+		.veredicto,
+		.relacionadas,
+		.imprimir,
+		.nota {
+			display: none !important;
+		}
+
+		:global(body) {
+			background: #fff !important;
+			color: #000 !important;
+		}
+
+		main {
+			padding-top: 0 !important;
+		}
+
+		.que-hacer .pasos li {
+			break-inside: avoid;
+			background: none;
+			border-color: #999;
+		}
+
+		.que-hacer .pasos a::after {
+			content: ' (' attr(href) ')';
+			font-size: 0.75rem;
+			word-break: break-all;
+		}
+	}
+
+	.veredicto {
+		padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(1.125rem, 2.5vw, 1.75rem);
+		border-radius: 1.25rem;
+		background: rgb(var(--surface-rgb) / 0.75);
+		border: 1px solid var(--rule);
+		border-left: 3px solid var(--estado, var(--rule));
+	}
+
+	.veredicto[hidden] {
+		display: none;
+	}
+
+	.veredicto--si {
+		--estado: #3f8f5f;
+	}
+
+	.veredicto--revisa {
+		--estado: #d49a2a;
+	}
+
+	.veredicto--no {
+		--estado: rgb(var(--ink) / 0.25);
+	}
+
+	.veredicto-titulo {
+		font-size: 1.125rem !important;
+		font-weight: 500;
+	}
+
+	.veredicto .motivos {
+		padding-left: 0;
+	}
+
+	.veredicto-pie {
+		margin-top: 0.875rem !important;
+		font-size: 0.875rem !important;
+		color: var(--text-muted);
+	}
+
+	.veredicto-pie a,
+	.mas-en a {
+		color: var(--text);
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
+	}
+
+	.relacionadas .lista {
+		padding-left: 0;
+	}
+
+	.relacionadas .ayuda-datos {
+		padding-left: 0;
+	}
+
+	.lineas-texto {
+		color: var(--text-muted);
+		font-size: 0.9375rem !important;
+	}
+
+	.mas-en {
+		margin-top: 1rem !important;
+		font-size: 0.9375rem;
+	}
+
 	main {
 		box-sizing: border-box;
 		width: var(--frame);
@@ -264,6 +736,28 @@ const jsonLd = {
 
 	.boton:hover {
 		transform: translateY(-1px);
+	}
+
+	.boton[hidden] {
+		display: none;
+	}
+
+	button.boton {
+		border: 0;
+		font: inherit;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	.boton[aria-pressed='true'] {
+		color: var(--accent-text);
+	}
+
+	.nota a {
+		color: inherit;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 0.2em;
 	}
 
 	.boton--claro {

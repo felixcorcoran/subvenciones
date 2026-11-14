@@ -8,6 +8,11 @@ export interface Analisis {
 	categoria: 'ayuda' | 'premio' | 'otro';
 	/** Qué financia, en una o dos frases claras */
 	resumen: string;
+	/**
+	 * Lo mismo en un titular corto (unos 60 caracteres), para las tarjetas y el
+	 * título de la ficha. Las leídas antes de existir no lo tienen: se usa el resumen.
+	 */
+	titular?: string;
 	/** A quién va dirigida, dicho como lo entendería el dueño de un negocio */
 	paraQuien: string;
 	/** «Hasta 3.000 € por negocio», «El 50 % del gasto»… o «No lo indica» */
@@ -24,6 +29,16 @@ export interface Analisis {
 	condiciones: Condiciones;
 	/** Lo que no queda claro en las bases */
 	dudas: string | null;
+	/** Para qué sirve (src/lib/finalidades.ts); las leídas antes no lo tienen */
+	finalidades?: string[];
+	/** Cómo se pide, paso a paso (las leídas antes no lo tienen) */
+	comoPedir?: string[];
+	/** Los documentos que hay que presentar */
+	documentacion?: string[];
+	/** Dónde se presenta la solicitud, como lo dicen las bases */
+	dondeSolicitar?: string | null;
+	/** Dirección web para pedirla que aparece en las bases y responde (comprobada al leer) */
+	enlaceSolicitud?: string | null;
 }
 
 export type SiNo = 'si' | 'no' | 'no_consta';
@@ -49,6 +64,8 @@ export interface Convocatoria {
 	sede: string | null;
 	/** Fecha en que se registró en la BDNS (AAAA-MM-DD) */
 	publicada: string;
+	/** Día en que entró en el radar (las del relleno se registraron mucho antes); las antiguas no lo tienen */
+	alta?: string;
 	tipo: string | null;
 	presupuesto: number | null;
 	beneficiarios: string[];
@@ -78,6 +95,12 @@ export interface Convocatoria {
 	/** Día del último intento fallido de la IA */
 	iaIntentadoEl?: string;
 	/**
+	 * Día en que se intentó volver a leer una ya leída para completar lo que
+	 * se añadió después (cómo pedirla, documentación…). Si falla, lo leído se
+	 * queda y se reintenta pasado un tiempo, sin contar como error.
+	 */
+	iaCompletarEl?: string;
+	/**
 	 * Fecha de cierre que la IA sacó de las bases y no se usa (contradice a la
 	 * BDNS o es dudosa: scripts/lectura.ts). En `ia.plazoFin` solo queda una
 	 * fecha de las bases que se pueda usar.
@@ -86,7 +109,10 @@ export interface Convocatoria {
 }
 
 /** Lo que llega a la página (src/pages/convocatorias.json.ts) */
-export type ConvocatoriaWeb = Omit<Convocatoria, 'documento' | 'docs' | 'iaModelo' | 'iaError' | 'iaIntentos' | 'iaIntentadoEl' | 'textoInicio' | 'cierreDescartado'>;
+export type ConvocatoriaWeb = Omit<
+	Convocatoria,
+	'documento' | 'docs' | 'iaModelo' | 'iaError' | 'iaIntentos' | 'iaIntentadoEl' | 'iaCompletarEl' | 'textoInicio' | 'cierreDescartado'
+>;
 
 /** Cómo fue la última pasada de cada parte, para la vigilancia (scripts/salud.ts) */
 export interface Salud {
@@ -104,6 +130,13 @@ export interface Salud {
 		fallidas: number;
 		/** Día de la última lectura correcta */
 		ultimaLectura: string | null;
+		/** Convocatorias cuya lectura ha fallado (se reintentan, con pausa tras tres fallos) */
+		conError?: number;
+		/** Ya leídas que se intentaron completar (cómo pedirla…) en esta pasada, y cuántas fallaron */
+		completarIntentadas?: number;
+		completarFallidas?: number;
+		/** Primer día de la racha de pasadas en las que Gemini se quedó sin cupo; null si la última tuvo */
+		sinCupoDesde?: string | null;
 	};
 }
 
@@ -111,4 +144,28 @@ export interface Datos {
 	actualizado: string;
 	convocatorias: Convocatoria[];
 	salud?: Salud;
+	/**
+	 * Carga de las convocatorias anteriores al arranque del radar (scripts/recoger.ts):
+	 * cada pasada busca un tramo más atrás, hasta `limite`. `desde` es la fecha más
+	 * antigua ya buscada (AAAA-MM-DD).
+	 */
+	relleno?: { desde: string; limite: string; /** Último día en que avanzó un tramo */ avanzado?: string };
+}
+
+/**
+ * Lo que queda de una convocatoria retirada por cerrada (datos/cerradas.json):
+ * su ficha sigue publicada unos meses, sin indexar, para que los enlaces
+ * compartidos y los de los buscadores no acaben en un error.
+ */
+export interface Cerrada {
+	codigo: string;
+	titulo: string;
+	/** El titular o el resumen de la IA, si se leyó */
+	resumen: string | null;
+	organo: string;
+	/** Fecha de cierre con la que se retiró */
+	cierre: string;
+	enlace: string;
+	/** Día en que se retiró */
+	retirada: string;
 }

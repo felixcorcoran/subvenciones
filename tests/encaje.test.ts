@@ -53,6 +53,21 @@ describe('encaje: zona (códigos NUTS)', () => {
 		expect(motivos(r, 'bien')).toContain('Para toda España');
 	});
 
+	it('marcada para toda España pero de un ayuntamiento o de un municipio: se dice, sin contradecir el motivo del municipio', () => {
+		const espana = [{ codigo: 'ES', nombre: 'ESPAÑA' }];
+		const ayto = encaje(
+			convocatoria({ regiones: espana, organo: { nivel1: 'LOCAL', nivel2: 'CABRA', nivel3: 'AYUNTAMIENTO DE CABRA' } }),
+			perfil(),
+			HOY,
+		);
+		expect(motivos(ayto, 'bien')).toContain('La BDNS la marca para toda España, pero la convoca un ayuntamiento');
+		expect(motivos(ayto, 'bien')).not.toContain('Para toda España');
+		expect(motivos(ayto, 'revisa')).toContain('Es de Cabra: normalmente solo para negocios de allí');
+
+		const bases = encaje(convocatoria({ regiones: espana, ia: analisis({}, { municipio: 'Lucena' }) }), perfil(), HOY);
+		expect(motivos(bases, 'bien')).toContain('La BDNS la marca para toda España, pero las bases la limitan a un municipio');
+	});
+
 	it('la provincia exacta encaja', () => {
 		const r = encaje(convocatoria({ regiones: [{ codigo: 'ES617', nombre: 'Málaga' }] }), perfil(), HOY);
 		expect(r.estado).toBe('si');

@@ -18,3 +18,6 @@ jobs:
       - run: npm test
       - run: npm run check
       - run: npm run build
+      # Los recorridos en el navegador y la accesibilidad (e2e/), sobre la web recién compilada
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test

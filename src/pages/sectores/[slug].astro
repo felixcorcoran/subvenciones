@@ -1,0 +1,33 @@
+---
+/** Las ayudas abiertas solo para un sector (las abiertas a cualquiera están en la portada) */
+import type { GetStaticPaths } from 'astro';
+import Listado from '../../components/Listado.astro';
+import datos from '../../../datos/convocatorias.json';
+import type { Datos } from '../../lib/tipos';
+import { enLista, estado } from '../../lib/estado';
+import { hoyMadrid } from '../../lib/fechas';
+import { porCierre, SECTORES, seccionesDe } from '../../lib/lista';
+import { aWeb } from '../../lib/web';
+
+export const getStaticPaths = (() => SECTORES.map((s) => ({ params: { slug: s.slug }, props: { s } }))) satisfies GetStaticPaths;
+
+const { s } = Astro.props;
+const hoy = hoyMadrid();
+const abiertas = (datos as Datos).convocatorias.filter((c) => (!c.ia || c.ia.categoria === 'ayuda') && enLista(estado(c, hoy))).map(aWeb);
+const propias = abiertas.filter((c) => seccionesDe(c).includes(s.letra)).sort(porCierre);
+const cualquiera = abiertas.filter((c) => seccionesDe(c).length === 0).length;
+const nombre = s.nombre.charAt(0).toLowerCase() + s.nombre.slice(1);
+const lead = `${propias.length === 1 ? 'Una convocatoria abierta' : `${propias.length} convocatorias abiertas`} solo para ${nombre}, de toda España. Además hay ${cualquiera} abiertas a cualquier sector: el asistente te dice cuáles encajan con tu negocio.`;
+---
+
+<Listado
+	title={`Ayudas para ${nombre} · Radar de subvenciones`}
+	description={`Ayudas y subvenciones abiertas para negocios de ${nombre} en toda España, explicadas en claro. Se actualiza cada mañana.`}
+	eyebrow="Ayudas por sector"
+	h1={`Ayudas para ${nombre}`}
+	lead={lead}
+	grupos={[{ titulo: 'Solo para este sector', texto: 'Las que cierran antes, primero. Mira en cada una la zona: muchas son de una comunidad o un ayuntamiento.', lista: propias }]}
+	hoy={hoy}
+	noindex={propias.length === 0}
+	actual={`/sectores/${s.slug}`}
+/>

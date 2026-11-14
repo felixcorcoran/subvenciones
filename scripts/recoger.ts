@@ -16,18 +16,25 @@
  * fecha de cierre se quedan en los datos; la web aparta de la lista las que
  * llevan más de cuatro meses así («por verificar»).
  *
+ * Además, poco a poco, las anteriores al arranque del radar que siguen
+ * abiertas (tramoRelleno, bdns.ts): cada pasada busca RELLENO_TRAMO días más
+ * atrás, hasta RELLENO_DIAS antes del arranque.
+ *
  *   DIAS_ATRAS     días hacia atrás en la primera pasada (por defecto 14)
- *   MAX_COMPROBAR  fichas guardadas que se vuelven a pedir como mucho (por defecto 200)
+ *   MAX_COMPROBAR  fichas guardadas que se vuelven a pedir como mucho (por defecto 400)
+ *   RELLENO_DIAS   hasta cuántos días atrás se cargan las anteriores (por defecto 180; 0 para no hacerlo)
+ *   RELLENO_TRAMO  días que se buscan hacia atrás en cada pasada (por defecto 10)
  */
-import { buscarNuevas, ficha, inicioBusqueda, type Ficha } from './bdns.ts';
-import { guardarDatos, guardarVistas, hoyIso, leerDatos, leerVistas } from './almacen.ts';
+import { buscarNuevas, ficha, inicioBusqueda, tramoRelleno, type Ficha, type ResultadoBusqueda } from './bdns.ts';
+import { aCerrada, guardarCerradas, guardarDatos, guardarVistas, hoyIso, leerCerradas, leerDatos, leerVistas } from './almacen.ts';
 import { aConvocatoria, actualizar, fichaValida } from './fichas.ts';
-import { revisarCierreIa } from './lectura.ts';
+import { limpiarMunicipio, revisarCierreIa } from './lectura.ts';
 import { estado } from '../src/lib/estado.ts';
 
 const hoy = hoyIso();
 const datos = leerDatos();
 const vistas = leerVistas();
+const archivo = leerCerradas();
 const guardadas = new Map(datos.convocatorias.map((c) => [c.codigo, c]));
 
 // Desde la última pasada (con margen: hay convocatorias que aparecen días
@@ -35,8 +42,29 @@ const guardadas = new Map(datos.convocatorias.map((c) => [c.codigo, c]));
 const desde = inicioBusqueda(datos.actualizado, new Date(), Number(process.env.DIAS_ATRAS ?? 14));
 
 const encontradas = await buscarNuevas(desde, new Date());
-const nuevas = encontradas.filter((r) => !guardadas.has(r.numeroConvocatoria) && !vistas[r.numeroConvocatoria]);
+const sinVer = (r: ResultadoBusqueda) => !guardadas.has(r.numeroConvocatoria) && !vistas[r.numeroConvocatoria];
+const nuevas = encontradas.filter(sinVer);
 console.log(`${encontradas.length} convocatorias para empresas desde ${desde.toISOString().slice(0, 10)}; ${nuevas.length} sin ver`);
+
+// El relleno: un tramo más de las anteriores al arranque. Solo se da por
+// buscado si la búsqueda responde; si falla, se repite en la siguiente pasada
+const masAntigua = datos.convocatorias.map((c) => c.publicada).sort()[0] ?? hoy;
+const tramo = Number(process.env.RELLENO_DIAS ?? 180) > 0
+	? tramoRelleno(datos.relleno, hoy, masAntigua, Number(process.env.RELLENO_DIAS ?? 180), Number(process.env.RELLENO_TRAMO ?? 10))
+	: null;
+let delRelleno: ResultadoBusqueda[] = [];
+if (tramo) {
+	try {
+		const vistasAhora = new Set(nuevas.map((r) => r.numeroConvocatoria));
+		delRelleno = (await buscarNuevas(new Date(`${tramo.desde}T00:00:00Z`), new Date(`${tramo.hasta}T12:00:00Z`))).filter(
+			(r) => sinVer(r) && !vistasAhora.has(r.numeroConvocatoria),
+		);
+		datos.relleno = { ...tramo.siguiente, avanzado: hoy };
+		console.log(`Relleno del ${tramo.desde} al ${tramo.hasta}: ${delRelleno.length} sin ver`);
+	} catch (err) {
+		console.warn(`Relleno del ${tramo.desde} al ${tramo.hasta}: la búsqueda falló (${(err as Error).message.slice(0, 120)}); se repite en la siguiente pasada`);
+	}
+}
 
 const descartar = (codigo: string, motivo: string) => (vistas[codigo] = { motivo, fecha: hoy });
 
@@ -52,18 +80,26 @@ async function pedirFicha(codigo: string): Promise<Ficha | string> {
 
 let anadidas = 0;
 let nuevasSinFicha = 0;
-for (const r of nuevas) {
+let rellenoSinFicha = 0;
+const delTramo = new Set(delRelleno.map((r) => r.numeroConvocatoria));
+for (const r of [...nuevas, ...delRelleno]) {
 	const f = await pedirFicha(r.numeroConvocatoria);
 	if (typeof f === 'string') {
-		nuevasSinFicha++;
-		console.warn(`  ${r.numeroConvocatoria}: sin ficha (${f}); se reintenta mañana`);
+		// Las del relleno no vuelven a salir en la búsqueda diaria: solo se apuntan
+		if (delTramo.has(r.numeroConvocatoria)) {
+			rellenoSinFicha++;
+			console.warn(`  ${r.numeroConvocatoria} (relleno): sin ficha (${f})`);
+		} else {
+			nuevasSinFicha++;
+			console.warn(`  ${r.numeroConvocatoria}: sin ficha (${f}); se reintenta mañana`);
+		}
 		continue;
 	}
 	if (/^concesi[oó]n directa/i.test(f.tipoConvocatoria ?? '')) {
 		descartar(f.codigoBDNS, 'concesión directa');
 		continue;
 	}
-	const c = aConvocatoria(f, hoy);
+	const c = { ...aConvocatoria(f, hoy), alta: hoy };
 	if (c.fin && c.fin < hoy) {
 		descartar(c.codigo, 'cerrada');
 		continue;
@@ -75,7 +111,7 @@ for (const r of nuevas) {
 // Volver a pedir la ficha de las guardadas: primero las que hace más que no
 // se comprueban. Las dos pasadas del día no la piden dos veces, y las que
 // están por verificar (sin fecha de cierre y antiguas) solo una vez por semana
-const maxComprobar = Number(process.env.MAX_COMPROBAR ?? 200);
+const maxComprobar = Number(process.env.MAX_COMPROBAR ?? 400);
 const haceUnaSemana = new Date(Date.now() - 7 * 86_400_000).toISOString().slice(0, 10);
 const porComprobar = [...guardadas.values()]
 	.filter((c) => c.comprobada !== hoy && (estado(c, hoy) !== 'por_verificar' || !c.comprobada || c.comprobada <= haceUnaSemana))
@@ -105,7 +141,10 @@ console.log(`${comprobadas} fichas comprobadas (${cambiadas} con cambios), ${fal
 // La fecha de cierre que la IA sacó de las bases solo se queda si no
 // contradice a la BDNS y no es dudosa (también con lo leído en días anteriores)
 let descartadas = 0;
+let municipios = 0;
 for (const c of guardadas.values()) {
+	// También con lo leído antes de la regla (limpiarMunicipio, lectura.ts)
+	if (limpiarMunicipio(c)) municipios++;
 	if (revisarCierreIa(c)) {
 		descartadas++;
 		console.log(`  ${c.codigo}: fecha de cierre de las bases descartada (${c.cierreDescartado!.motivo})`);
@@ -120,6 +159,7 @@ for (const [codigo, c] of guardadas) {
 	if (estado(c, hoy) === 'cerrada') {
 		guardadas.delete(codigo);
 		descartar(codigo, 'cerrada');
+		archivo[codigo] = aCerrada(c, hoy);
 		cerradas++;
 	}
 }
@@ -138,6 +178,8 @@ datos.salud = {
 };
 guardarDatos(datos);
 guardarVistas(vistas);
+guardarCerradas(archivo, hoy);
+if (municipios) console.log(`${municipios} «municipios» que eran una comunidad o provincia entera, quitados`);
 console.log(
-	`${anadidas} añadidas, ${cerradas} cerradas retiradas, ${descartadas} fechas de la IA descartadas; ${datos.convocatorias.length} guardadas (${porVerificar} por verificar)`,
+	`${anadidas} añadidas${rellenoSinFicha ? ` (${rellenoSinFicha} del relleno sin ficha)` : ''}${datos.relleno ? ` · relleno hasta el ${datos.relleno.desde}` : ''}, ${cerradas} cerradas retiradas, ${descartadas} fechas de la IA descartadas; ${datos.convocatorias.length} guardadas (${porVerificar} por verificar)`,
 );

@@ -6,6 +6,7 @@ export const site = {
 	home: 'https://felixcorcoran.es/',
 	work: 'https://felixcorcoran.es/#trabajo',
 	contact: 'https://felixcorcoran.es/contacto',
+	alertas: 'https://alertas.felixcorcoran.es/',
 	diagnostico: 'https://diagnostico.felixcorcoran.es/',
 	legal: 'https://felixcorcoran.es/aviso-legal',
 	privacy: 'https://felixcorcoran.es/privacidad',

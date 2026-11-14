@@ -1,0 +1,104 @@
+---
+/**
+ * La ficha de una convocatoria retirada por cerrada (datos/cerradas.json):
+ * se queda publicada unos meses, fuera de los buscadores, para que quien
+ * llegue por un enlace sepa qué ha pasado y pueda buscar otras.
+ */
+import Base from '../layouts/Base.astro';
+import type { Cerrada } from '../lib/tipos';
+import { fechaLarga } from '../lib/fechas';
+
+interface Props {
+	r: Cerrada;
+}
+
+const { r } = Astro.props;
+const titulo = r.resumen ?? r.titulo;
+---
+
+<Base title={`Cerrada: ${titulo.length > 60 ? `${titulo.slice(0, 57).trimEnd()}…` : titulo} · Radar de subvenciones`} description={`Esta convocatoria cerró el ${fechaLarga(r.cierre)}.`} noindex>
+	<main class="cerrada">
+		<a class="volver" href="/">← Todas las ayudas</a>
+		<p class="eyebrow">{r.organo}</p>
+		<h1>{titulo}</h1>
+		<p class="aviso">El plazo de esta convocatoria terminó el {fechaLarga(r.cierre)} y ya no está en el radar.</p>
+		<div class="acciones">
+			<a class="boton" href="/?empezar">Ver las ayudas abiertas para tu negocio</a>
+			<a class="boton boton--claro" href={r.enlace} target="_blank" rel="noopener">Convocatoria oficial (BDNS) ↗</a>
+		</div>
+		<p class="nota">Título oficial: {r.titulo} · Código BDNS {r.codigo}</p>
+	</main>
+</Base>
+
+<style>
+	.cerrada {
+		box-sizing: border-box;
+		width: var(--frame);
+		margin-inline: auto;
+		padding: calc(var(--nav-top) + var(--nav-height) + clamp(2rem, 6vw, 4rem)) 0 clamp(3rem, 8vw, 6rem);
+		flex: 1;
+	}
+
+	.cerrada > * {
+		max-width: 46rem;
+	}
+
+	.volver {
+		display: inline-block;
+		margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		text-decoration: none;
+	}
+
+	h1 {
+		margin: 0.75rem 0 0;
+		font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+		font-weight: 400;
+		line-height: 1.12;
+		letter-spacing: -0.03em;
+	}
+
+	.aviso {
+		margin: 1.5rem 0 0;
+		padding: 1rem 1.25rem;
+		border-radius: 1rem;
+		background: var(--accent-soft);
+		line-height: 1.5;
+	}
+
+	.acciones {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.75rem;
+	}
+
+	.boton {
+		display: inline-flex;
+		align-items: center;
+		min-height: 3rem;
+		padding: 0 1.4rem;
+		border-radius: 999px;
+		background: var(--text);
+		color: var(--bg);
+		font-size: 0.9375rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.boton--claro {
+		background: none;
+		color: var(--text);
+		box-shadow: inset 0 0 0 1px rgb(var(--ink) / 0.25);
+	}
+
+	.nota {
+		margin: clamp(2rem, 5vw, 3rem) 0 0;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.875rem;
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+</style>
