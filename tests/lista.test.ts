@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { paraComunidad, cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, titularDe } from '../src/lib/lista';
+import { otrasLineas, paraComunidad, cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, titularDe } from '../src/lib/lista';
 import { hoyMadrid } from '../src/lib/fechas';
 import { analisis, convocatoria, perfil } from './ayudas';
 
@@ -80,5 +80,16 @@ describe('presentación de las listas', () => {
 		expect(paraComunidad(con(), 'ES61')).toBe(true);
 		expect(paraComunidad(con('ES300'), 'ES61')).toBe(false);
 		expect(paraComunidad(con('ES62'), 'ES61')).toBe(false);
+	});
+
+	it('otras líneas de la misma convocatoria: mismo órgano y título casi igual', () => {
+		const organo = { nivel1: 'LOCAL', nivel2: 'ALMERIA', nivel3: 'AYUNTAMIENTO DE ALMERIA' };
+		const a = convocatoria({ codigo: '1', organo, titulo: 'Decreto 89/2026 de subvenciones para proyectos audiovisuales en 2026' });
+		const b = convocatoria({ codigo: '2', organo, titulo: 'DECRETO 89/2026 de subvenciones para proyectos audiovisuales, en 2026' });
+		const otroConcurso = convocatoria({ codigo: '3', organo, titulo: 'Acuerdo de 30 de octubre por el que se aprueba el concurso de villancicos' });
+		const parecido = convocatoria({ codigo: '4', organo, titulo: 'Acuerdo de 30 de octubre por el que se aprueba el concurso de belenes' });
+		const otroOrgano = convocatoria({ codigo: '5', titulo: a.titulo });
+		expect(otrasLineas(a, [a, b, otroConcurso, otroOrgano]).map((x) => x.codigo)).toEqual(['2']);
+		expect(otrasLineas(otroConcurso, [parecido])).toEqual([]);
 	});
 });

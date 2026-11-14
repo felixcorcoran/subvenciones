@@ -144,3 +144,23 @@ export const paraComunidad = (c: ConvocatoriaWeb, codigo: string) => {
 	const z = zonas(c);
 	return z.length === 0 || z.some((x) => x.startsWith(codigo) || codigo.startsWith(x));
 };
+
+const palabras = (s: string) => new Set(sinTildes(s).toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length > 2));
+
+/**
+ * Las otras líneas de la misma convocatoria: la BDNS registra a veces cada
+ * línea con su código y el mismo título. Mismo órgano y títulos casi iguales
+ * (95 % de palabras en común: «villancicos» y «belenes» del mismo acuerdo son
+ * dos concursos, no dos líneas). No se juntan en la lista: cada línea tiene
+ * sus condiciones y su encaje; la ficha las enlaza.
+ */
+export function otrasLineas<T extends ConvocatoriaWeb>(c: ConvocatoriaWeb, todas: T[]): T[] {
+	const mias = palabras(c.titulo);
+	return todas.filter((x) => {
+		if (x.codigo === c.codigo || x.organo.nivel3 !== c.organo.nivel3) return false;
+		const suyas = palabras(x.titulo);
+		let comunes = 0;
+		for (const w of mias) if (suyas.has(w)) comunes++;
+		return comunes / Math.max(1, new Set([...mias, ...suyas]).size) >= 0.95;
+	});
+}

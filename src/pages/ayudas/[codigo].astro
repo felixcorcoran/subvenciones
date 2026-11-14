@@ -14,7 +14,7 @@ import type { Cerrada as Retirada, Convocatoria, Datos } from '../../lib/tipos';
 import { cierre, fechaLarga, municipioDe } from '../../lib/encaje';
 import { enLista, estado, nombresCambios, origenCierre, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../../lib/estado';
 import { hoyMadrid } from '../../lib/fechas';
-import { comunidadDe, deComunidad, indexable, porCierre, seccionesDe, SECTORES, titularDe } from '../../lib/lista';
+import { comunidadDe, deComunidad, indexable, otrasLineas, porCierre, seccionesDe, SECTORES, titularDe } from '../../lib/lista';
 import { aWeb } from '../../lib/web';
 import { seccionDe } from '../../lib/sectores';
 import { nombreZona } from '../../lib/zonas';
@@ -92,6 +92,8 @@ const sector = sectoresPropios.length === 1 ? SECTORES.find((s) => s.letra === s
 const abiertas = (datos as Datos).convocatorias.filter(
 	(x) => x.codigo !== c.codigo && (!x.ia || x.ia.categoria === 'ayuda') && enLista(estado(x, hoy)),
 );
+// Las otras líneas de la misma convocatoria (cada una con sus condiciones), aparte
+const lineas = otrasLineas(c, abiertas).sort(porCierre);
 const relacionadas = (
 	comunidad
 		? abiertas.filter((x) => deComunidad(x, comunidad.codigo))
@@ -99,6 +101,7 @@ const relacionadas = (
 			? abiertas.filter((x) => seccionesDe(x).includes(sector.letra))
 			: []
 )
+	.filter((x) => !lineas.includes(x))
 	.sort(porCierre)
 	.slice(0, 4);
 const masEn = comunidad
@@ -269,6 +272,20 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 					{c.sede && <a href={c.sede} target="_blank" rel="noopener">Dónde se solicita ↗</a>}
 				</p>
 			</section>
+
+			{
+				lineas.length > 0 && (
+					<section class="relacionadas" aria-labelledby="lineas-titulo">
+						<h2 id="lineas-titulo">Otras líneas de esta convocatoria</h2>
+						<p class="lineas-texto">Tienen el mismo título en la BDNS, pero cada línea puede pedir cosas distintas: mira la que encaja contigo.</p>
+						<ol class="lista">
+							{lineas.map((x) => (
+								<Tarjeta c={x} hoy={hoy} />
+							))}
+						</ol>
+					</section>
+				)
+			}
 
 			{
 				relacionadas.length > 0 && masEn && (
@@ -464,6 +481,11 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 
 	.relacionadas .ayuda-datos {
 		padding-left: 0;
+	}
+
+	.lineas-texto {
+		color: var(--text-muted);
+		font-size: 0.9375rem !important;
 	}
 
 	.mas-en {
