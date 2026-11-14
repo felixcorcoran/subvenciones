@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, textoMotivo, titularDe } from '../src/lib/lista';
+import { cercania, coincide, deProvincia, deTodaLaComunidad, PROVINCIAS, provinciasDe, COMUNIDADES, comunidadDe, deComunidad, diasHasta, SECTORES, seccionesDe, slug, titularDe } from '../src/lib/lista';
 import { hoyMadrid } from '../src/lib/fechas';
 import { analisis, convocatoria, perfil } from './ayudas';
 
@@ -35,11 +35,6 @@ describe('presentación de las listas', () => {
 		expect(cercania(conZona('ES61'), p, null)).toBe(2);
 		expect(cercania(conZona('ES'), p, null)).toBe(4);
 		expect(cercania(conZona('ES300'), p, null)).toBe(5);
-	});
-
-	it('explica «Para toda España» si la convoca un ayuntamiento', () => {
-		expect(textoMotivo({ tipo: 'bien', texto: 'Para toda España' }, 'Cabra')).toContain('ayuntamiento');
-		expect(textoMotivo({ tipo: 'bien', texto: 'Para toda España' }, null)).toBe('Para toda España');
 	});
 
 	it('búsqueda sin tildes ni mayúsculas y con todas las palabras', () => {

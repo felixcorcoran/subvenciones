@@ -6,7 +6,7 @@
  * contrato con el repo de alertas y no se toca desde aquí).
  */
 import type { ConvocatoriaWeb } from './tipos.ts';
-import { municipioDe, normalizarMunicipio, type Motivo, type Perfil } from './encaje.ts';
+import { municipioDe, normalizarMunicipio, type Perfil } from './encaje.ts';
 import { cierre } from './fechas.ts';
 import { estado } from './estado.ts';
 import { SECCIONES, seccionDe } from './sectores.ts';
@@ -89,16 +89,6 @@ export function cercania(c: ConvocatoriaWeb, p: Perfil, municipio: string | null
 
 /** Ordena por cercanía y, a igual cercanía, por la fecha de cierre (sin fecha, al final) */
 export const porCierre = (a: ConvocatoriaWeb, b: ConvocatoriaWeb) => (cierre(a) ?? '9999').localeCompare(cierre(b) ?? '9999');
-
-/**
- * El texto de un motivo tal como se enseña. La BDNS marca para toda España
- * algunas ayudas de ayuntamientos: «Para toda España» junto a «Es de Cabra»
- * se contradecía, así que se explica.
- */
-export function textoMotivo(m: Motivo, municipio: string | null): string {
-	if (m.texto === 'Para toda España' && municipio) return 'La BDNS la marca para toda España, pero la convoca un ayuntamiento';
-	return m.texto;
-}
 
 /** Si la ayuda contiene todas las palabras buscadas (sin tildes ni mayúsculas) */
 export function coincide(c: ConvocatoriaWeb, busqueda: string): boolean {

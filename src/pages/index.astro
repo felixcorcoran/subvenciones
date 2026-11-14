@@ -163,7 +163,7 @@ const description =
 			import { cierre, encaje, fechaLarga, municipioDe, type Encaje, type Perfil } from '../lib/encaje';
 			import { enLista, estado as estadoDe, plazoSinFecha, sinComprobarDesde, textoPlazo } from '../lib/estado';
 			import { hoyMadrid } from '../lib/fechas';
-			import { COMUNIDADES, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, textoMotivo, titularDe } from '../lib/lista';
+			import { COMUNIDADES, cercania, coincide, deComunidad, diasHasta, esEstatal, porCierre, titularDe } from '../lib/lista';
 			import type { ConvocatoriaWeb } from '../lib/tipos';
 			import type { Detalles } from '../lib/web';
 			import {
@@ -274,8 +274,7 @@ const description =
 
 				if (e) {
 					const motivos = el('ul', 'motivos');
-					const municipio = municipioDe(c);
-					for (const m of e.motivos) motivos.append(el('li', `motivo motivo--${m.tipo}`, textoMotivo(m, municipio)));
+					for (const m of e.motivos) motivos.append(el('li', `motivo motivo--${m.tipo}`, m.texto));
 					item.append(motivos);
 				}
 

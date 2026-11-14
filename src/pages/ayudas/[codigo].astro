@@ -296,9 +296,8 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 )}
 
 <script>
-	import { encaje, municipioDe, type Perfil } from '../../lib/encaje';
+	import { encaje, type Perfil } from '../../lib/encaje';
 	import { hoyMadrid } from '../../lib/fechas';
-	import { textoMotivo } from '../../lib/lista';
 	import type { ConvocatoriaWeb } from '../../lib/tipos';
 	import { alternarGuardada, contarGuardada, guardadas } from '../../lib/visitas';
 
@@ -350,14 +349,13 @@ const avisarError = `mailto:${site.email}?subject=${encodeURIComponent(`Error en
 		try {
 			const c = JSON.parse(datosAyuda.textContent ?? '{}') as ConvocatoriaWeb;
 			const e = encaje(c, perfil, hoyMadrid());
-			const municipio = municipioDe(c);
 			caja.classList.add(`veredicto--${e.estado}`);
 			caja.querySelector('[data-titulo]')!.textContent = TITULOS[e.estado];
 			const lista = caja.querySelector('[data-motivos]')!;
 			for (const m of e.motivos) {
 				const li = document.createElement('li');
 				li.className = `motivo motivo--${m.tipo}`;
-				li.textContent = textoMotivo(m, municipio);
+				li.textContent = m.texto;
 				lista.append(li);
 			}
 			caja.querySelector('[data-negocio]')!.textContent = 'Con lo que respondiste antes en este navegador';

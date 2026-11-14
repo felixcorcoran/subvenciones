@@ -65,9 +65,12 @@ export function nombreMunicipio(s: string): string {
 		.join(' ');
 }
 
+/** Si la convoca un ayuntamiento */
+export const deAyuntamiento = (c: Convocatoria) => c.organo.nivel1 === 'LOCAL' && /^AYUNTAMIENTO|^AJUNTAMENT|^CONCELLO|^UDALA/i.test(c.organo.nivel3);
+
 /** El municipio al que se limita la ayuda, si se sabe */
 export function municipioDe(c: Convocatoria): string | null {
-	if (c.organo.nivel1 === 'LOCAL' && /^AYUNTAMIENTO|^AJUNTAMENT|^CONCELLO|^UDALA/i.test(c.organo.nivel3)) return nombreMunicipio(c.organo.nivel2);
+	if (deAyuntamiento(c)) return nombreMunicipio(c.organo.nivel2);
 	return c.ia?.condiciones.municipio ?? null;
 }
 
@@ -88,7 +91,11 @@ export function encaje(c: Convocatoria, p: Perfil, hoy = new Date().toISOString(
 	const zonas = c.regiones.filter((r) => r.codigo.startsWith('ES'));
 	if (zonas.length === 0) revisa('No indica la zona: comprueba en las bases dónde tiene que estar el negocio');
 	else if (zonas.some((r) => p.provincia.startsWith(r.codigo))) {
-		bien(zonas.some((r) => r.codigo === 'ES') ? 'Para toda España' : 'Es para tu zona');
+		if (!zonas.some((r) => r.codigo === 'ES')) bien('Es para tu zona');
+		// La BDNS marca para toda España algunas ayudas de un solo municipio: se dice, para no contradecir el motivo del municipio
+		else if (!municipioDe(c)) bien('Para toda España');
+		else if (deAyuntamiento(c)) bien('La BDNS la marca para toda España, pero la convoca un ayuntamiento');
+		else bien('La BDNS la marca para toda España, pero las bases la limitan a un municipio');
 	} else no(`Solo para negocios de ${zonas.map((r) => nombreZona(r.codigo, r.nombre)).join(', ')}`);
 
 	// Municipio
