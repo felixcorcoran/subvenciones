@@ -1,0 +1,34 @@
+name: Evaluación de la lectura con IA
+
+# Cómo lee Gemini las bases (scripts/evaluar.ts). Sin modelo: lo ya leído y
+# guardado, sin gastar cupo. Con modelo: lo vuelve a leer con él (gasta cupo
+# del nivel gratuito), para compararlo antes de cambiar la cadena de modelos.
+on:
+  workflow_dispatch:
+    inputs:
+      modelo:
+        description: 'Modelo de Gemini (vacío: lo ya guardado)'
+        required: false
+        default: ''
+      n:
+        description: 'Convocatorias de muestra, además de las anotadas'
+        required: false
+        default: '15'
+
+jobs:
+  evaluar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Evaluar
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MODELO: ${{ inputs.modelo }}
+          N: ${{ inputs.n }}
+        run: |
+          if [ -n "$MODELO" ]; then npm run evaluar -- --modelo "$MODELO" --n "$N"; else npm run evaluar; fi

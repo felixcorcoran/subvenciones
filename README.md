@@ -24,6 +24,17 @@ Una GitHub Action ([`recoger.yml`](.github/workflows/recoger.yml)) lo ejecuta ca
 
 **Vigilancia** ([`vigilar.yml`](.github/workflows/vigilar.yml), `scripts/salud.ts`): cada día a las 10:00 UTC mira lo que dejan apuntado la recogida y la lectura en `datos.salud`. Abre un issue «Radar: la recogida diaria necesita atención» si no hay una recogida completa en más de 30 horas (fallo de la ejecución), si la BDNS deja sin devolver muchas fichas, si la IA lleva tres días sin leer nada con bases pendientes (fallo parcial) si se acumulan 15 o más convocatorias con la lectura fallida, si el relleno hacia atrás lleva tres días sin avanzar, si Gemini lleva tres días seguidos sin cupo o si en una pasada fallan más de la mitad de las relecturas para completar. Una pasada correcta sin cambios no avisa. Hay un solo issue abierto a la vez: se actualiza sin volver a notificar y se cierra solo cuando todo vuelve a estar en orden. Usa el token de la propia Action, sin secretos nuevos.
 
+## Evaluación de la lectura con IA
+
+`npm run evaluar` mide cómo lee Gemini las bases (`scripts/evaluacion.ts`), sin gastar cupo, con lo ya guardado. Con `-- --modelo <modelo>` vuelve a leer una muestra con ese modelo, sin guardar nada, para compararlo antes de cambiar la cadena; también se puede lanzar a mano desde GitHub Actions («Evaluación de la lectura con IA»). Cada campo cuenta como acierto, «no consta» (no es un error: la web lo trata como desconocido) o error.
+
+- **Contra la BDNS**, sin anotar nada: la fecha de cierre de su ficha (se cuenta también la que la IA dio y se apartó por dudosa: se mide la lectura, no el filtro) y el municipio del ayuntamiento que convoca.
+- **Contra casos anotados a mano** en `evaluacion/anotados.json`, leyendo las bases: para lo demás. Cada caso lleva el `codigo` y solo los campos que se han comprobado:
+
+```json
+[{ "codigo": "938128", "nota": "Félix, 14/11/2026", "categoria": "ayuda", "plazoFin": "2026-12-15", "autonomos": "si", "sociedades": "no", "maxEmpleados": 9, "municipio": null, "finalidades": ["digitalizar"] }]
+```
+
 ## Coste: cero
 
 - La API de la BDNS es abierta y su aviso legal permite reutilizar los datos, también con fines comerciales. Se consulta una vez al día, con pausa entre peticiones.

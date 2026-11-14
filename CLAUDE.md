@@ -32,6 +32,9 @@ Node 24. Más detalle en `README.md`.
   de las ya leídas sin «cómo pedirla», sin contar como error);
   alertas lee `datos/convocatorias.json` directamente, así que la regla vive en los datos.
 - `scripts/salud.ts` + `.github/workflows/vigilar.yml`: vigilancia diaria con un issue.
+- `scripts/lectura-ia.ts` (instrucciones, esquema y `crearLector`, compartidos por `analizar.ts` y
+  `evaluar.ts`); `scripts/evaluacion.ts` + `npm run evaluar` (con `tsx`, porque importa `encaje.ts`):
+  mide la lectura contra la BDNS y `evaluacion/anotados.json`.
 - `src/components/Asistente.astro`: el formulario pregunta a pregunta.
 - `src/pages/ayudas/`: ficha de cada convocatoria (y de las cerradas, `Cerrada.astro`);
   `convocatorias.json.ts` y `detalles.json.ts` la exponen como JSON. `comunidades/` (página, `.xml` RSS y `.ics` de plazos), `provincias/`, `sectores/`
