@@ -203,6 +203,8 @@ function aplicar(c: Convocatoria, data: Analisis, model: string) {
 let leidas = 0;
 let fallidas = 0;
 let completadas = 0;
+let completarIntentadas = 0;
+let completarFallidas = 0;
 let sinCupo = false;
 const cola = [...pendientes.map((c) => ({ c, completando: false })), ...completar.map((c) => ({ c, completando: true }))];
 for (const { c, completando } of cola) {
@@ -211,6 +213,7 @@ for (const { c, completando } of cola) {
 		break;
 	}
 	try {
+		if (completando) completarIntentadas++;
 		const r = await leer(c);
 		if (r === 'sin documento') continue;
 		aplicar(c, r.data, r.model);
@@ -226,6 +229,7 @@ for (const { c, completando } of cola) {
 		if (completando) {
 			// Completar no es leer: lo leído se queda, sin error, y se reintenta pasada la espera
 			c.iaCompletarEl = hoy;
+			completarFallidas++;
 			console.warn(`  ${c.codigo}: no se pudo completar (${(err as Error).message.slice(0, 160)}); lo leído se queda`);
 		} else {
 			// Si ya estaba leída (relectura), lo leído antes se queda
@@ -296,6 +300,10 @@ datos.salud = {
 		fallidas,
 		ultimaLectura: leidas > 0 ? hoy : (datos.salud?.lectura?.ultimaLectura ?? null),
 		conError: datos.convocatorias.filter((c) => c.iaError).length,
+		completarIntentadas,
+		completarFallidas,
+		// La racha sin cupo empieza el primer día que falta y se corta en cuanto hay
+		sinCupoDesde: sinCupo ? (datos.salud?.lectura?.sinCupoDesde ?? hoy) : null,
 	},
 };
 guardarDatos(datos);

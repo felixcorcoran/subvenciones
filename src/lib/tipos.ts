@@ -132,6 +132,11 @@ export interface Salud {
 		ultimaLectura: string | null;
 		/** Convocatorias cuya lectura ha fallado (se reintentan, con pausa tras tres fallos) */
 		conError?: number;
+		/** Ya leídas que se intentaron completar (cómo pedirla…) en esta pasada, y cuántas fallaron */
+		completarIntentadas?: number;
+		completarFallidas?: number;
+		/** Primer día de la racha de pasadas en las que Gemini se quedó sin cupo; null si la última tuvo */
+		sinCupoDesde?: string | null;
 	};
 }
 
@@ -144,7 +149,7 @@ export interface Datos {
 	 * cada pasada busca un tramo más atrás, hasta `limite`. `desde` es la fecha más
 	 * antigua ya buscada (AAAA-MM-DD).
 	 */
-	relleno?: { desde: string; limite: string };
+	relleno?: { desde: string; limite: string; /** Último día en que avanzó un tramo */ avanzado?: string };
 }
 
 /**

@@ -11,6 +11,9 @@
  * - Lecturas que se acumulan con error: la IA lee, pero muchas bases no
  *   (PDF escaneado, demasiado grande, respuesta incompleta…) y la web las
  *   enseña como «Aún no hemos leído sus bases».
+ * - Las piezas que van por detrás: el relleno hacia atrás no avanza, Gemini
+ *   lleva días sin cupo (aunque no haya nuevas que leer, se queda sin hacer
+ *   lo de completar y los titulares) o las relecturas fallan casi todas.
  * - Ejecución correcta sin cambios: no es un problema.
  */
 import type { Datos } from '../src/lib/tipos.ts';
@@ -21,6 +24,12 @@ export const DIAS_SIN_LECTURA = 3;
 export const MIN_FICHAS_FALLIDAS = 5;
 /** Convocatorias con la lectura de la IA fallida a partir de las que se avisa */
 export const MIN_LECTURAS_FALLIDAS = 15;
+/** Días sin avanzar el relleno hacia atrás (si aún le queda) a partir de los que se avisa */
+export const DIAS_SIN_RELLENO = 3;
+/** Días seguidos con Gemini sin cupo a partir de los que se avisa */
+export const DIAS_SIN_CUPO = 3;
+/** Relecturas para completar intentadas en una pasada a partir de las que se mira si fallan en bloque */
+export const MIN_COMPLETAR = 5;
 
 export interface Problema {
 	tipo: 'ejecucion' | 'bdns' | 'ia';
@@ -66,6 +75,26 @@ export function diagnostico(datos: Datos, ahora = new Date()): Problema[] {
 				texto: `La IA no lee bases desde ${desde ? `el ${desde}` : 'que hay vigilancia'} y hay ${l.pendientes} pendientes. Mira el paso «npm run analizar» (cupo de Gemini, modelos, clave).`,
 			});
 		}
+	}
+	const hace = (dias: number) => new Date(ahora.getTime() - dias * 86_400_000).toISOString().slice(0, 10);
+	const rel = datos.relleno;
+	if (rel && rel.desde > rel.limite && rel.avanzado && rel.avanzado < hace(DIAS_SIN_RELLENO)) {
+		problemas.push({
+			tipo: 'bdns',
+			texto: `El relleno hacia atrás no avanza desde el ${rel.avanzado} (va por el ${rel.desde}; llega hasta el ${rel.limite}): la búsqueda de la BDNS de ese tramo falla. Mira la Action «Recoger convocatorias».`,
+		});
+	}
+	if (l?.sinCupoDesde && l.sinCupoDesde <= hace(DIAS_SIN_CUPO)) {
+		problemas.push({
+			tipo: 'ia',
+			texto: `Gemini se queda sin cupo en todas las pasadas desde el ${l.sinCupoDesde}: lo de completar y los titulares no avanzan. Revisa la cadena de modelos (GEMINI_MODELS) o baja MAX_COMPLETAR.`,
+		});
+	}
+	if (l?.completarIntentadas != null && l.completarIntentadas >= MIN_COMPLETAR && (l.completarFallidas ?? 0) * 2 > l.completarIntentadas) {
+		problemas.push({
+			tipo: 'ia',
+			texto: `En la lectura del ${dia(l.fecha)} fallaron ${l.completarFallidas} de ${l.completarIntentadas} relecturas para completar «cómo pedirla». Lo leído antes se conserva; mira el registro de «npm run analizar».`,
+		});
 	}
 	if (l?.conError != null && l.conError >= MIN_LECTURAS_FALLIDAS) {
 		problemas.push({

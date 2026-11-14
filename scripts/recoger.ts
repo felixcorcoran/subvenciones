@@ -59,7 +59,7 @@ if (tramo) {
 		delRelleno = (await buscarNuevas(new Date(`${tramo.desde}T00:00:00Z`), new Date(`${tramo.hasta}T12:00:00Z`))).filter(
 			(r) => sinVer(r) && !vistasAhora.has(r.numeroConvocatoria),
 		);
-		datos.relleno = tramo.siguiente;
+		datos.relleno = { ...tramo.siguiente, avanzado: hoy };
 		console.log(`Relleno del ${tramo.desde} al ${tramo.hasta}: ${delRelleno.length} sin ver`);
 	} catch (err) {
 		console.warn(`Relleno del ${tramo.desde} al ${tramo.hasta}: la búsqueda falló (${(err as Error).message.slice(0, 120)}); se repite en la siguiente pasada`);

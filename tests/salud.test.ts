@@ -62,4 +62,22 @@ describe('vigilancia de la recogida', () => {
 		expect(p.map((x) => x.tipo)).toEqual(['ia']);
 		expect(p[0].texto).toContain('20 convocatorias');
 	});
+
+	it('avisa si el relleno hacia atrás deja de avanzar (y no si ya terminó)', () => {
+		const con = (relleno: Datos['relleno']) => ({ ...datos(), relleno });
+		expect(diagnostico(con({ desde: '2026-08-01', limite: '2026-05-01', avanzado: '2026-10-24' }), AHORA)).toEqual([]);
+		const p = diagnostico(con({ desde: '2026-08-01', limite: '2026-05-01', avanzado: '2026-10-20' }), AHORA);
+		expect(p.map((x) => x.tipo)).toEqual(['bdns']);
+		expect(p[0].texto).toContain('2026-10-20');
+		expect(diagnostico(con({ desde: '2026-05-01', limite: '2026-05-01', avanzado: '2026-09-01' }), AHORA)).toEqual([]);
+	});
+
+	it('avisa si Gemini lleva días sin cupo o si las relecturas fallan en bloque', () => {
+		const lectura = { fecha: '2026-10-25T05:50:00Z', pendientes: 0, leidas: 0, fallidas: 0, ultimaLectura: '2026-10-25' };
+		expect(diagnostico(datos(undefined, { lectura: { ...lectura, sinCupoDesde: '2026-10-24' } }), AHORA)).toEqual([]);
+		expect(diagnostico(datos(undefined, { lectura: { ...lectura, sinCupoDesde: '2026-10-21' } }), AHORA).map((x) => x.tipo)).toEqual(['ia']);
+		expect(diagnostico(datos(undefined, { lectura: { ...lectura, completarIntentadas: 10, completarFallidas: 4 } }), AHORA)).toEqual([]);
+		const p = diagnostico(datos(undefined, { lectura: { ...lectura, completarIntentadas: 10, completarFallidas: 8 } }), AHORA);
+		expect(p[0].texto).toContain('8 de 10');
+	});
 });
