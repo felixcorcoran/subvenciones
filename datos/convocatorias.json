@@ -1,6 +1,1261 @@
 {
-	"actualizado": "2026-11-16T13:59:02.637Z",
+	"actualizado": "2026-11-16T23:29:33.471Z",
 	"convocatorias": [
+		{
+			"codigo": "942433",
+			"titulo": "BASES ESPECÍFICAS REGULADORAS SUBVENCIONES PARA LAS NUEVAS PLANTACIONES DE VIÑA Y LA RECUPERACIÓN DEL POTENCIAL PRODUCTIVO DE PARCELAS VITÍCOLAS 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE EL HIERRO",
+				"nivel3": "CABILDO INSULAR DE HIERRO, EL"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 250000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES703",
+					"nombre": "El Hierro"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "elhierro.es",
+			"documento": {
+				"id": 1556609,
+				"nombre": "20261103_Otros_Anuncio aprobación de Bases Subvención nuevas plantaciones de viña 2026.pdf"
+			},
+			"docs": [
+				1556609
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942433",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones para la creación de nuevas plantaciones de viña y la recuperación del potencial productivo de parcelas vitícolas en la isla de El Hierro, priorizando las variedades de uva tradicionales y la incorporación de jóvenes al sector agrícola.",
+				"titular": "Ayudas a la plantación de viña del Cabildo de El Hierro",
+				"paraQuien": "Personas físicas o jurídicas que ejercen o van a comenzar a ejercer la actividad vitícola en la isla de El Hierro.",
+				"importe": "Hasta 29.357,64 € por hectárea (con una superficie máxima financiable de 10.000 m² por beneficiario). Presupuesto total de 250.000 €.",
+				"importeMaximo": 29357.64,
+				"plazo": "15 días hábiles a partir del día siguiente al de la publicación de la convocatoria en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ejercer o ir a ejercer la actividad vitícola en la isla de El Hierro.",
+					"Utilizar variedades de viña preferentes y autorizadas de la isla.",
+					"Respetar las distancias máximas en los marcos de plantación (máximo 2,30 x 2 metros, salvo excepciones autorizadas).",
+					"Para recuperar parcelas mermadas, acreditar la pérdida de producción o superficie mediante informe técnico de la D.O. Vinos de El Hierro.",
+					"Acreditar la propiedad del terreno o un contrato de arrendamiento por un período mínimo de 10 años.",
+					"Mantener el cultivo de la viña durante al menos 8 años.",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y con la Seguridad Social."
+				],
+				"gastos": [
+					"Plantación e instalación de protectores.",
+					"Sistemas de riego por goteo de apoyo.",
+					"Sistemas de elevación o tutorado individualizado.",
+					"Instalación de estructuras de conducción mediante espalderas o parral bajo.",
+					"Adquisición de enmiendas químicas u orgánicas."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "si",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [
+					"empezar",
+					"invertir"
+				],
+				"comoPedir": [
+					"Acceder a la sede electrónica del Cabildo de El Hierro.",
+					"Localizar el trámite en el catálogo de procedimientos.",
+					"Rellenar la solicitud oficial y adjuntar la documentación requerida.",
+					"Firmar y presentar la solicitud utilizando certificado digital."
+				],
+				"documentacion": [
+					"NIF o Tarjeta de identificación fiscal del solicitante y de su representante legal.",
+					"Escritura de constitución o estatutos en caso de personas jurídicas.",
+					"Documento acreditativo de la representación legal.",
+					"Alta en el IAE o acreditación de la condición de agricultor activo.",
+					"Fotocopia de la declaración del IRPF del último ejercicio e informe de vida laboral.",
+					"Presupuesto o proyecto detallado de los sistemas de riego, conducción o protectores.",
+					"Escritura pública, documento de propiedad o contrato de arrendamiento (mínimo 10 años).",
+					"Relación detallada de fincas con recintos SIGPAC y plano de actuaciones.",
+					"Solicitud de licencia municipal, comunicación previa o autorización urbanística.",
+					"Informe del Consejo Regulador de la D.O. Vinos de El Hierro para fincas a recuperar.",
+					"Certificado de inscripción en el Registro de Operadores Ecológicos de Canarias (si aplica).",
+					"Declaración responsable del cumplimiento de requisitos."
+				],
+				"dondeSolicitar": "En la sede electrónica del Cabildo Insular de El Hierro",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.5-flash"
+		},
+		{
+			"codigo": "942427",
+			"titulo": "BASES ESPECÍFICAS REGULADORAS SUBVENCIONES PARA INVERSIONES EN BODEGAS INSCRITAS EN EL REGISTRO DEL CONSEJO REGULADOR DE LA DENOMINACIÓN DE ORIGEN VINOS DE EL HIERRO Y QUESERÍAS EN EL HIERRO 2025-2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE EL HIERRO",
+				"nivel3": "CABILDO INSULAR DE HIERRO, EL"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 135000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES703",
+					"nombre": "El Hierro"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "elhierro.es",
+			"documento": {
+				"id": 1556595,
+				"nombre": "20261104_Otros_Anuncio aprobación de Bases Subvenciones para inversiones en bodegas y queserías 2025-2026.pdf"
+			},
+			"docs": [
+				1556595
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942427",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "El Cabildo de El Hierro concede subvenciones para bodegas con Denominación de Origen y queserías de la isla. Las ayudas financian obras de mejora y ampliación en las instalaciones, adquisición de maquinaria nueva, equipamiento industrial y vehículos de transporte de primera mano para queserías.",
+				"titular": "Ayudas a bodegas y queserías de El Hierro para inversiones",
+				"paraQuien": "Autónomos y empresas que sean titulares de bodegas inscritas en la DO Vinos de El Hierro o de queserías ubicadas en la isla de El Hierro.",
+				"importe": "Hasta el 70 % del presupuesto justificado, con un máximo de 6.000 € por negocio",
+				"importeMaximo": 6000,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación de las bases en el Boletín Oficial de la Provincia de Santa Cruz de Tenerife",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser titular de una bodega inscrita en el registro del Consejo Regulador de la DO Vinos de El Hierro o de una quesería.",
+					"La bodega o quesería debe estar localizada en la isla de El Hierro.",
+					"En el caso de queserías, estar inscrita en el Registro Sanitario de empresas alimentarias.",
+					"Estar al corriente de pagos con la Hacienda estatal, autonómica, la Seguridad Social y el Cabildo de El Hierro.",
+					"No estar incurso en ninguna prohibición legal para recibir subvenciones públicas."
+				],
+				"gastos": [
+					"Obras de mejora o ampliación de las instalaciones, incluidos puntos de venta directa.",
+					"Adquisición de maquinaria nueva y equipamiento industrial.",
+					"Compra de vehículos especiales de transporte de primera mano (exclusivo para queserías)."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [
+					"invertir",
+					"local"
+				],
+				"comoPedir": [
+					"Entrar en la sede electrónica del Cabildo Insular de El Hierro.",
+					"Cumplimentar el modelo normalizado de solicitud disponible en la plataforma web.",
+					"Adjuntar la documentación requerida según el tipo de negocio y la inversión realizada.",
+					"Firmar y presentar la solicitud por medios electrónicos."
+				],
+				"documentacion": [
+					"Modelo normalizado de solicitud cumplimentado y firmado.",
+					"Escritura de constitución, estatutos y DNI del representante (en personas jurídicas).",
+					"Acreditación de la representación legal si procede.",
+					"Certificado del Consejo Regulador de la DO Vinos de El Hierro (para bodegas).",
+					"Registro Sanitario de empresas alimentarias (para queserías).",
+					"Memoria descriptiva de las inversiones o actuaciones.",
+					"Planos de planta y alzado junto a presupuesto detallado (en caso de obras).",
+					"Licencia, comunicación previa o certificado municipal de exención urbanística (en caso de obras).",
+					"Facturas desglosadas y memoria explicativa (para inversiones ya realizadas).",
+					"Declaración responsable de cumplimiento de requisitos firmada."
+				],
+				"dondeSolicitar": "En la sede electrónica del Cabildo Insular de El Hierro",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942420",
+			"titulo": "CONVOCATORIA  PROGRAMA FUENBUSES-FUENTRENES 2026-2027. ACUERDO JGL 13/11/2029 PTO 14.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "FUENLABRADA",
+				"nivel3": "AYUNTAMIENTO DE FUENLABRADA"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 170000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85",
+					"nombre": "Educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Educación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "PUBLICACIÓN",
+			"textoFin": "10 DÍAS HÁBILES",
+			"bases": "https://www.bocm.es/boletin/CM_Orden_BOCM/2018/02/21/BOCM-20180221-42.PDF",
+			"documento": {
+				"id": 1556578,
+				"nombre": "14 certificado JGL 13.11.26.pdf"
+			},
+			"docs": [
+				1556578
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942420",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "El Ayuntamiento de Fuenlabrada subvenciona los gastos de transporte en autobús, tren o metro para excursiones y salidas educativas fuera del centro escolar realizadas por colegios y escuelas del municipio.",
+				"titular": "Ayudas al transporte para excursiones escolares en Fuenlabrada",
+				"paraQuien": "Escuelas infantiles, casas de niños, colegios de educación infantil y primaria, institutos de secundaria, centros de educación especial, centros de adultos y colegios concertados de Fuenlabrada.",
+				"importe": "Calculado a razón de 5,91 € por alumno corregido según el tipo de centro, con un presupuesto total de 170.000 €",
+				"importeMaximo": null,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el BOCM",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser un centro educativo ubicado en el municipio de Fuenlabrada de las tipologías permitidas",
+					"Realizar las excursiones o salidas educativas entre el 18 de noviembre de 2026 y el 17 de noviembre de 2027",
+					"Contratar empresas o profesionales especializados que cumplan la normativa de transporte escolar",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y con la Seguridad Social",
+					"No tener deudas pendientes por reintegro de subvenciones con el Ayuntamiento de Fuenlabrada",
+					"No tener pendiente de justificar una subvención anterior otorgada por el Ayuntamiento para el mismo objeto"
+				],
+				"gastos": [
+					"Transporte escolar por carretera en autobuses discrecionales o líneas urbanas e interurbanas",
+					"Transporte por ferrocarril en trenes de RENFE, Metro o Metro Ligero",
+					"Transporte de ida y vuelta para salidas a granjas escuela u otros centros educativos de más de un día"
+				],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Fuenlabrada"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Acceder a la Sede Electrónica del Ayuntamiento de Fuenlabrada",
+					"Rellenar el formulario de solicitud online y adjuntar los anexos requeridos",
+					"Enviar la solicitud electrónicamente dentro del plazo de 10 días hábiles"
+				],
+				"documentacion": [
+					"Solicitud de subvención (Anexo I) firmada por la dirección o jefatura de estudios",
+					"Declaración responsable de cumplimiento de requisitos para ser beneficiario (Anexo II)",
+					"Declaración de IVA (Anexo III)",
+					"Autorización de publicación de subvenciones (Anexo IV)",
+					"Ficha de terceros acompañada de certificado de titularidad de la cuenta bancaria",
+					"CIF del centro educativo emitido por la Agencia Tributaria (si es la primera vez o no se autoriza consulta)"
+				],
+				"dondeSolicitar": "En la Sede Electrónica del Ayuntamiento de Fuenlabrada",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942397",
+			"titulo": "Convocatoria del concurso de decoración navideña del Ayuntamiento de Santomera-2026 \"Imagina tu Navidad\"",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTOMERA",
+				"nivel3": "AYUNTAMIENTO DE SANTOMERA"
+			},
+			"sede": "www.santomera.es",
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2800,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "90.1",
+					"nombre": "Actividades de creación artística"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES62",
+					"nombre": "REGION DE MURCIA"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-12-04",
+			"fin": "2026-12-17",
+			"textoInicio": "El 04 de diciembre de 2026",
+			"textoFin": "El 17 de diciembre de 2026",
+			"bases": "www.santomera.es",
+			"documento": {
+				"id": 1556508,
+				"nombre": "BasesyConvocatoria_ConcursoDecoracion_Navidad 2026.pdf"
+			},
+			"docs": [
+				1556508
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942397",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "El Ayuntamiento de Santomera convoca el concurso de decoración navideña 'Imagina tu Navidad' para embellecer los establecimientos comerciales, de hostelería y viviendas del municipio durante las fiestas.",
+				"titular": "Concurso de decoración navideña en Santomera",
+				"paraQuien": "Comercios, locales de hostelería, empresas privadas y particulares ubicados en Santomera.",
+				"importe": "Premios de 800 € (1.º premio), 400 € (2.º premio) y 200 € (3.er premio) por categoría.",
+				"importeMaximo": 800,
+				"plazo": "Desde el 4 hasta el 17 de diciembre de 2026.",
+				"plazoFin": "2026-12-17",
+				"requisitos": [
+					"Estar ubicado dentro del término municipal de Santomera.",
+					"Realizar el montaje de decoración navideña en la puerta, fachada, entrada, terraza, escaparates o jardín exterior.",
+					"Mantener la decoración expuesta entre la fecha de presentación de la solicitud y el 7 de enero de 2027.",
+					"Estar al corriente de las obligaciones con la Seguridad Social, la AEAT y el Ayuntamiento de Santomera."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Santomera"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Cumplimentar el modelo de solicitud (Anexo I) y la declaración responsable (Anexo II).",
+					"Tomar un mínimo de tres fotografías del montaje decorativo realizado.",
+					"Presentar la solicitud y las fotos en el Registro General del Ayuntamiento de Santomera.",
+					"Opcionalmente, se pueden enviar más fotos o vídeos al correo cedes@santomera.es indicando el número de registro."
+				],
+				"documentacion": [
+					"Solicitud de inscripción cumplimentada (Anexo I).",
+					"Un mínimo de tres fotografías de la decoración realizada.",
+					"Declaración responsable firmada (Anexo II)."
+				],
+				"dondeSolicitar": "En el Registro General del Ayuntamiento de Santomera.",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942373",
+			"titulo": "Concesión de ayudas específicas para el desarrollo del ámbito agrícola y ganadero de la isla de Formentera para el año 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "FORMENTERA",
+				"nivel3": "AYUNTAMIENTO DE FORMENTERA"
+			},
+			"sede": "https://ovac.conselldeformentera.cat/ovac/castellano/emiservicio/41e6bf9d755e4825af8e6b49e85b5079.asp?&procedencia=cmbIdioma",
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 55000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES531",
+					"nombre": "Eivissa y Formentera"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2026-05-31",
+			"fin": "2026-12-31",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.caib.es/eboibfront/es/2026/12281/seccion-iii-otras-disposiciones-y-actos-administra/472",
+			"documento": {
+				"id": 1556401,
+				"nombre": "BOIB_68,_de_30_de_mayo,_Convocatoria_ayudas_específicas_ámbito_agrícola_y_ganadero_2026.pdf"
+			},
+			"docs": [
+				1556401
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942373",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Subvenciones del Consell Insular de Formentera para apoyar a explotaciones agrícolas y ganaderas de ovino y caprino de la isla, compensando el sobrecoste de la insularidad y los efectos de la sequía.",
+				"titular": "Ayudas al sector agrícola y ganadero en Formentera",
+				"paraQuien": "Personas físicas o jurídicas titulares de explotaciones agrícolas o ganaderas de ovino/caprino situadas en la isla de Formentera.",
+				"importe": "En ganadería, entre 60 € y 85 € por hembra elegible (máximo 4.000 € por titular). En agricultura, hasta 6.000 € para explotaciones prioritarias, 3.500 € para preferentes y 1.500 € para el resto (financiando hasta el 40 % del gasto, o hasta el 60 % en ecológicas).",
+				"importeMaximo": 6000,
+				"plazo": "15 días naturales a contar desde el día siguiente a la publicación de la convocatoria en el BOIB.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener la explotación ubicada en la isla de Formentera",
+					"Estar al corriente de obligaciones con el Consell de Formentera, la AEAT y la Seguridad Social",
+					"En ganadería: estar inscrita en RIEGA y tener al menos 8 hembras elegibles de ovino o caprino",
+					"En ganadería: cumplir con el umbral mínimo de salidas de corderos/cabritos por hembra elegible",
+					"En agricultura: haber realizado actualizaciones en la explotación en los últimos 3 años",
+					"En agricultura: declarar ingresos mínimos de 300 € y generar al menos 0,15 UTA en la última declaración",
+					"En agricultura: contar con las superficies y densidades mínimas de cultivo exigidas",
+					"En agricultura: estar inscrita o en fase de inscripción en el CBPAE"
+				],
+				"gastos": [
+					"Compra de abonos, semillas, plantel, frutales, fitosanitarios autorizados y trampas de control de plagas",
+					"Materiales e instalaciones para el riego como bombas, cañerías, filtros y aspersores",
+					"Servicios de asesoramiento técnico, analíticas y reparaciones de maquinaria",
+					"Compra o alquiler de maquinaria agrícola y contratación de servicios agrícolas",
+					"Elementos de protección de cultivos como vallas, redes, cintas y protectores",
+					"Recambios para maquinaria agrícola y otros insumos necesarios para la producción"
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Formentera"
+				},
+				"dudas": null,
+				"finalidades": [
+					"invertir",
+					"liquidez"
+				],
+				"comoPedir": [
+					"Rellenar y firmar el formulario de solicitud específico de la línea correspondiente (Anexo I o Anexo II)",
+					"Reunir la documentación requerida y la justificación de gastos en su caso",
+					"Presentar la solicitud telemáticamente a través de la sede electrónica del Consell o presencialmente en la Oficina de Atención al Ciudadano"
+				],
+				"documentacion": [
+					"Solicitud oficial firmada (Anexo I o II)",
+					"DNI o CIF del solicitante",
+					"Escritura de constitución y estatutos inscritos en el registro si es persona jurídica",
+					"Acreditación de la representación si se presenta mediante representante",
+					"Certificado de titularidad de la cuenta bancaria",
+					"Cartilla ganadera actualizada a 1 de enero de 2025 (para ganadería)",
+					"Copias de las guías sanitarias de movimientos de animales (para ganadería)",
+					"Cuenta justificativa simplificada (Anexo III) y facturas con justificante de pago (para agricultura)",
+					"Documento acreditativo de inscripción o renovación en el CBPAE (para agricultura)",
+					"Acreditación de agricultor profesional o titularidad de explotación prioritarias/preferente si procede",
+					"Copia de resolución de concesión o pago si se han solicitado otras ayudas para el mismo concepto"
+				],
+				"dondeSolicitar": "En la sede electrónica del Consell Insular de Formentera (OVAC) o en la Oficina de Atención al Ciudadano",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942362",
+			"titulo": "Convocatoria del Premio Iniciativa Joven anualidad 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CONSELL COMARCAL DE PALLARS JUSSÃ ",
+				"nivel3": "CONSELL COMARCAL DE PALLARS JUSSÀ"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES513",
+					"nombre": "Lleida"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Des del dia siguiente de la publicación del extracto de la convocatoria en el BOP de Lleida",
+			"textoFin": "18/12/2026",
+			"bases": "https://ccpallarsjussa.eadministracio.cat/preview-document/e38a4dfc-120d-4647-9714-5371823e5cdc/",
+			"documento": {
+				"id": 1556365,
+				"nombre": "20261116_Publicació_Anunci_ANUNCIO CONVOCATORIA 2026 CASTELLÀ 16112026.pdf"
+			},
+			"docs": [
+				1556365,
+				1556368,
+				1556370
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942362",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "El Consejo Comarcal del Pallars Jussà convoca el Premio Iniciativa Joven 2026 para reconcer y apoyar proyectos o actividades culturales, formativas y de ocio alternativo dirigidos a jóvenes de la comarca.",
+				"titular": "Premio Iniciativa Joven en Pallars Jussà 2026",
+				"paraQuien": "Entidades juveniles sin ánimo de lucro, asociaciones de la comarca con actividades para jóvenes y grupos de jóvenes de 12 a 30 años.",
+				"importe": "Tres premios de 800 €, 700 € y 500 €",
+				"importeMaximo": 800,
+				"plazo": "Hasta el 18 de diciembre de 2026",
+				"plazoFin": "2026-12-18",
+				"requisitos": [
+					"Estar dirigidos mayoritariamente a un público de entre 12 y 30 años",
+					"Desarrollar la iniciativa en el Pallars Jussà o dirigirse a la juventud de la comarca",
+					"Realizar las actividades entre el 1 de enero y el 31 de diciembre del año de la convocatoria",
+					"No consistir en actividades de ocio nocturno a partir de las 24:00 h con promoción de alcohol",
+					"No vulnerar la dignidad humana ni promover la discriminación u odio",
+					"No haber obtenido premio con la misma iniciativa en las tres convocatorias anteriores",
+					"Presentar un máximo de dos iniciativas distintas por entidad o grupo",
+					"En agrupaciones de personas físicas, la persona responsable debe ser mayor de edad"
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Descargar y rellenar la solicitud normalizada",
+					"Grabar un vídeo tipo REEL de unos 30 segundos en formato vertical explicando la iniciativa",
+					"Presentar la candidatura presencialmente en la Oficina Joven del Pallars Jussà o mediante instancia genérica en la sede electrónica"
+				],
+				"documentacion": [
+					"Solicitud oficial según el modelo adjunto",
+					"Memoria explicativa con objetivos, presupuesto, fechas y necesidades del proyecto",
+					"Vídeo tipo REEL de 30 segundos en formato vertical explicando la acción",
+					"Documentos identificativos del solicitante y de la entidad si procede",
+					"Resumen valorativo con fotos o pruebas de la realización si la actividad ya se ejecutó"
+				],
+				"dondeSolicitar": "En la Oficina Joven del Pallars Jussà de forma presencial o en la sede electrónica del Consejo Comarcal del Pallars Jussà",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942328",
+			"titulo": "Bases de participación del concurso de escaparates de navidad de Sopela 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SOPELA",
+				"nivel3": "AYUNTAMIENTO DE SOPELA"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1145,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES213",
+					"nombre": "Bizkaia"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-24",
+			"fin": "2026-12-15",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://sopela.egoitzaelektronikoa.eus/info.0",
+			"documento": {
+				"id": 1556297,
+				"nombre": "20261116_Ebazpena_Alkatetza Dekretua _ Presidentetza Dekretua_DEKRETUA 2026-1967 [Decreto de Alcaldía 4497 2026].pdf"
+			},
+			"docs": [
+				1556297,
+				1556298
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942328",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "El Ayuntamiento de Sopela convoca la II edición del Concurso de Escaparates de Navidad 2026 para premiar la creatividad, la estética y la decoración navideña de los comercios y establecimientos de servicios locales.",
+				"titular": "Concurso de escaparates navideños en Sopela",
+				"paraQuien": "Establecimientos comerciales y de servicios de Sopela",
+				"importe": "Premios en metálico de entre 100 € y 295 € según categoría",
+				"importeMaximo": 295,
+				"plazo": "7 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de Bizkaia (BOB)",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser un establecimiento comercial o de servicios ubicado en Sopela.",
+					"Estar al corriente de las obligaciones tributarias con la Hacienda competente, la Seguridad Social y el Ayuntamiento de Sopela.",
+					"Estar al corriente en el pago de obligaciones por reintegro de subvenciones.",
+					"No incurrir en prohibiciones para ser beneficiario de subvenciones públicas.",
+					"Haber justificado adecuadamente subvenciones concedidas anteriormente por el Ayuntamiento de Sopela.",
+					"No haber sido sancionado por infracciones en materia de igualdad entre mujeres y hombres.",
+					"Decorar y mantener iluminado el escaparate con motivos navideños desde el 11 de diciembre hasta el 6 de enero."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Sopela"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Cumplimentar y firmar la instancia oficial de solicitud y la declaración responsable.",
+					"Presentar la solicitud en la sede electrónica del Ayuntamiento de Sopela o en su Registro presencial."
+				],
+				"documentacion": [
+					"Anexo I: Hoja de solicitud e inscripción oficial.",
+					"Anexo II: Declaración responsable del cumplimiento de requisitos legales y fiscales.",
+					"Anexo III: Ficha de terceros cumplimentada para poder recibir el premio por transferencia bancaria."
+				],
+				"dondeSolicitar": "En la sede electrónica o en el Registro presencial del Ayuntamiento de Sopela",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942327",
+			"titulo": "Acuerdo de Junta de Gobierno de 11 de noviembre de 2026, punto 4.1.1., de aprobación de la Convocatoria para la concesión del VII Premio de Emprendimiento Social, La Noria, de la Diputación de Málaga.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE MÁLAGA",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE MÁLAGA"
+			},
+			"sede": "https://sede.malaga.es/",
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 10000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES617",
+					"nombre": "Málaga"
+				}
+			],
+			"finalidad": "Servicios Sociales y Promoción Social",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Al día siguiente de la publicación de la convocatoria en el BOPMA",
+			"textoFin": "Veinte días hábiles tras la publicación de la Convocatoria en el BOPMA",
+			"bases": "https://www.bopmalaga.es/edicto.php?edicto=20240430-01616-2024-00",
+			"documento": {
+				"id": 1556271,
+				"nombre": "20261111 Convocatoria VII PREMIO EMPRENDIMIENTO SOCIAL, LA NORIA .pdf"
+			},
+			"docs": [
+				1556271
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942327",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Premios de la Diputación de Málaga para reconocer y premiar iniciativas empresariales con alto impacto social, creativas e innovadoras, que se desarrollen o puedan replicarse en la provincia de Málaga.",
+				"titular": "VII Premio de Emprendimiento Social La Noria de Málaga",
+				"paraQuien": "Autónomos y pymes que ya hayan iniciado su actividad empresarial y tengan su proyecto de emprendimiento social en la provincia de Málaga.",
+				"importe": "1.º premio de 5.000 €, 2.º premio de 3.000 € y 3.º premio de 2.000 €",
+				"importeMaximo": 5000,
+				"plazo": "20 días hábiles a contar desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia de Málaga.",
+				"plazoFin": null,
+				"requisitos": [
+					"Haber iniciado la actividad empresarial al presentar la solicitud.",
+					"Ser persona física autónoma o pyme legalmente constituida.",
+					"Tener la actividad económica en la provincia de Málaga o que el proyecto se pueda replicar en ella.",
+					"Que el capital no esté participado en más de un 25 % por una entidad que no sea pyme.",
+					"Tener un proyecto creativo, innovador y de impacto social orientado a cubrir necesidades sociales o mejorar la empleabilidad.",
+					"Contar con un prototipo de producto o servicio probado y testado con resultados medibles.",
+					"Tener un modelo de negocio escalable en la provincia de Málaga.",
+					"Estar al corriente en las obligaciones tributarias y con la Seguridad Social."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [
+					"innovar"
+				],
+				"comoPedir": [
+					"Si estás obligado a relacionarte por medios electrónicos, presenta la solicitud en la sede electrónica de la Diputación de Málaga o a través del Registro Electrónico Común.",
+					"Si no estás obligado a medios electrónicos, puedes presentarla también de forma presencial o por correo certificado en sobre abierto en las oficinas de Correos.",
+					"Dirige la solicitud y toda la documentación a la Presidencia de la Diputación Provincial de Málaga."
+				],
+				"documentacion": [
+					"Solicitud oficial cumplimentada y firmada (Anexo I).",
+					"Resumen del proyecto social de un máximo de 8 páginas.",
+					"Declaración responsable de no estar incurso en prohibiciones para contratar o recibir ayudas (Anexo III).",
+					"Autorización para consultar datos tributarios y de la Seguridad Social (Anexo II).",
+					"Declaración censal de alta de actividad en Hacienda.",
+					"DNI en caso de personas físicas y justificante de alta en autónomos.",
+					"CIF y escritura de constitución o estatutos inscritos en el Registro para personas jurídicas.",
+					"Documento acreditativo de la representación legal y DNI del representante.",
+					"Documentos de inscripción de la empresa en la Seguridad Social y modelo TC1 del último año abonado si tiene trabajadores.",
+					"Formulario firmado de protección de datos (Anexo IV)."
+				],
+				"dondeSolicitar": "En la sede electrónica de la Diputación de Málaga o en el Registro Electrónico Común",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942301",
+			"titulo": "VII CONCURSO LOCAL DE DECORACIÓN NAVIDEÑA EN FACHADAS Y ESTABLECIMIENTOS DE HOSTELERÍA",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VALDEPEÑAS",
+				"nivel3": "AYUNTAMIENTO DE VALDEPEÑAS"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 3235,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES422",
+					"nombre": "Ciudad Real"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": "2026-11-23",
+			"fin": "2026-12-14",
+			"textoInicio": null,
+			"textoFin": null,
+			"bases": "https://www.valdepenas.es/festejos/",
+			"documento": {
+				"id": 1556248,
+				"nombre": "Bases VII CONCURSO LOCAL  DE DECORACIÓN NAVIDEÑA.pdf"
+			},
+			"docs": [
+				1556248
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942301",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso local de decoración navideña para particulares, comercios y locales de hostelería de Valdepeñas, que premia la ornamentación de fachadas, balcones y escaparates con ambientación navideña.",
+				"titular": "Premios de decoración navideña en Valdepeñas",
+				"paraQuien": "Particulares y comercios o negocios de hostelería de Valdepeñas.",
+				"importe": "Premios en metálico desde 50 € hasta 500 € según categoría y clasificación.",
+				"importeMaximo": 500,
+				"plazo": "Del 23 de noviembre al 14 de diciembre de 2026.",
+				"plazoFin": "2026-12-14",
+				"requisitos": [
+					"Estar ubicado en la localidad de Valdepeñas.",
+					"Decorar la fachada, balcón o escaparate con temática de Navidad.",
+					"No emplear elementos con fuego ni pirotecnia.",
+					"Estar al corriente de pago de las obligaciones tributarias."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Valdepeñas"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Presentar la solicitud entre el 23 de noviembre y el 14 de diciembre.",
+					"Las empresas y personas jurídicas deben tramitarlo por la sede electrónica del Ayuntamiento.",
+					"Las personas físicas pueden tramitarlo por la sede electrónica o presencialmente en el Registro del Ayuntamiento."
+				],
+				"documentacion": [
+					"Modelo oficial de solicitud de inscripción.",
+					"Escrito firmado con datos de al menos 4 titulares de viviendas (solo para categoría de calles y zonas residenciales)."
+				],
+				"dondeSolicitar": "En la sede electrónica o en el Registro del Ayuntamiento de Valdepeñas.",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942265",
+			"titulo": "Resolución del 11 de noviembre del 2026, del Director del Instituto de Fomento de la Región de Murcia, por delegación, de convocatoria de ayudas a la participación en ferias, eventos y misiones comerciales. Feria Internacional Blueberries Perú 2027.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "REGIÓN DE MURCIA",
+				"nivel3": "INSTITUTO DE FOMENTO DE LA REGIÓN DE MURCIA (INFO)"
+			},
+			"sede": "https://sede.institutofomentomurcia.es/infodirecto",
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 38500,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01.6",
+					"nombre": "Actividades de apoyo a la agricultura, a la ganadería y de preparación posterior a la cosecha"
+				},
+				{
+					"codigo": "43",
+					"nombre": "Actividades de construcción especializada"
+				},
+				{
+					"codigo": "70",
+					"nombre": "Actividades de las sedes centrales y consultoría de gestión empresarial"
+				},
+				{
+					"codigo": "94.1",
+					"nombre": "Actividades de organizaciones empresariales, profesionales y patronales"
+				},
+				{
+					"codigo": "36",
+					"nombre": "Captación, depuración y distribución de agua"
+				},
+				{
+					"codigo": "46",
+					"nombre": "Comercio al por mayor"
+				},
+				{
+					"codigo": "47",
+					"nombre": "Comercio al por menor"
+				},
+				{
+					"codigo": "28",
+					"nombre": "Fabricación de maquinaria y equipo n.c.o.p."
+				},
+				{
+					"codigo": "27",
+					"nombre": "Fabricación de material y equipo eléctrico"
+				},
+				{
+					"codigo": "22",
+					"nombre": "Fabricación de productos de caucho y plásticos"
+				},
+				{
+					"codigo": "26",
+					"nombre": "Fabricación de productos informáticos, electrónicos y ópticos"
+				},
+				{
+					"codigo": "25",
+					"nombre": "Fabricación de productos metálicos, excepto maquinaria y equipo"
+				},
+				{
+					"codigo": "29",
+					"nombre": "Fabricación de vehículos de motor, remolques y semirremolques"
+				},
+				{
+					"codigo": "20",
+					"nombre": "Industria química"
+				},
+				{
+					"codigo": "42",
+					"nombre": "Ingeniería civil"
+				},
+				{
+					"codigo": "72",
+					"nombre": "Investigación y desarrollo"
+				},
+				{
+					"codigo": "24",
+					"nombre": "Metalurgia"
+				},
+				{
+					"codigo": "94.9",
+					"nombre": "Otras actividades asociativas"
+				},
+				{
+					"codigo": "82.9",
+					"nombre": "Otras actividades de apoyo a las empresas n.c.o.p."
+				},
+				{
+					"codigo": "74",
+					"nombre": "Otras actividades profesionales, científicas y técnicas"
+				},
+				{
+					"codigo": "32",
+					"nombre": "Otras industrias manufactureras"
+				},
+				{
+					"codigo": "62",
+					"nombre": "Programación, consultoría y otras actividades relacionadas con la informática"
+				},
+				{
+					"codigo": "33",
+					"nombre": "Reparación, mantenimiento e instalación de maquinaria y equipos"
+				},
+				{
+					"codigo": "95.3",
+					"nombre": "Reparación y mantenimiento de vehículos de motor y motocicletas"
+				},
+				{
+					"codigo": "71",
+					"nombre": "Servicios técnicos de arquitectura e ingeniería; ensayos y análisis técnicos"
+				},
+				{
+					"codigo": "61",
+					"nombre": "Telecomunicaciones"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES620",
+					"nombre": "Murcia"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": "2026-12-29",
+			"textoInicio": "Desde el día siguiente a la publicación en el BORM.",
+			"textoFin": null,
+			"bases": "https://www.borm.es/services/anuncio/ano/2024/numero/2148/pdf?id=826601",
+			"documento": {
+				"id": 1556142,
+				"nombre": "BORM BLUEBERRIES PERU 27-Copia.pdf"
+			},
+			"docs": [
+				1556142,
+				1556143,
+				1556144
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942265",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "El Instituto de Fomento de la Región de Murcia financia la participación de empresas del sector de tecnología agrícola en la Feria Internacional Blueberries Perú 2027 en Lima. Cubre hasta el 70 % de los gastos elegibles del viaje y del certamen.",
+				"titular": "Ayudas para la Feria Blueberries Perú 2027 en Murcia",
+				"paraQuien": "Empresas del sector de tecnología agrícola de la Región de Murcia que tengan uno de los CNAE admitidos en la convocatoria.",
+				"importe": "Hasta 6.416,67 € de subvención por empresa (máximo el 70 % del coste subvencionable)",
+				"importeMaximo": 6416.67,
+				"plazo": "Desde el día siguiente a la publicación del extracto de la convocatoria en el BORM hasta el 29 de diciembre de 2026",
+				"plazoFin": "2026-12-29",
+				"requisitos": [
+					"Ser una pyme o empresa del sector de tecnología agrícola de la Región de Murcia.",
+					"Tener la actividad dada de alta en uno de los códigos CNAE permitidos en la convocatoria.",
+					"Abonar previamente la cuota de participación de 2.750 € más IVA a la Cámara de Comercio de Murcia."
+				],
+				"gastos": [
+					"Gastos de consultoría o asistencia externa especializada en el mercado de destino.",
+					"Derechos de admisión al certamen.",
+					"Coste de inserción en el catálogo oficial de la feria.",
+					"Reserva de espacio y alquiler de stand, sala o local.",
+					"Gastos de diseño, construcción y decoración del stand o local.",
+					"Servicios de la feria como electricidad, agua, limpieza o seguridad.",
+					"Gastos de organización y coordinación de la acción.",
+					"Gastos de viaje en clase turista para una persona por empresa.",
+					"Gastos de alojamiento, seguro de viaje y visado para una persona por empresa."
+				],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [
+					"exportar"
+				],
+				"comoPedir": [
+					"Pagar la cuota de participación de 2.750 € más IVA en la cuenta bancaria de la Cámara de Comercio de Murcia.",
+					"Acceder a la plataforma en línea del Instituto de Fomento de la Región de Murcia.",
+					"Disponer de un certificado electrónico reconocido para firmar la solicitud.",
+					"Cumplimentar el formulario indicando el código CNAE de la empresa y adjuntar la documentación requerida.",
+					"Enviar la solicitud de forma telemática."
+				],
+				"documentacion": [
+					"Justificante del ingreso bancario de la cuota de participación.",
+					"Solicitud telemática cumplimentada con el CNAE de la entidad solicitante."
+				],
+				"dondeSolicitar": "En la sede electrónica del Instituto de Fomento de la Región de Murcia",
+				"enlaceSolicitud": "https://sede.institutofomentomurcia.es/infodirecto"
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942248",
+			"titulo": "VII CONCURSO DE ESCAPARATES POR NAVIDAD, EN SAN LORENZO LO TIENES 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SAN LORENZO DE EL ESCORIAL",
+				"nivel3": "AYUNTAMIENTO DE SAN LORENZO DE EL ESCORIAL"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 598,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES30",
+					"nombre": "COMUNIDAD DE MADRID"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-11-24",
+			"fin": "2026-12-15",
+			"textoInicio": "FECHA INICIO DE SOLICITUDES",
+			"textoFin": "FECHA FIN DE SOLICITUDES",
+			"bases": "https://www.aytosanlorenzo.es/",
+			"documento": {
+				"id": 1556207,
+				"nombre": "Convocatoria_VII_Concurso_de_Escaparates_2026.pdf"
+			},
+			"docs": [
+				1556207
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942248",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso que premia la decoración y creatividad de los escaparates navideños de comercios situados en San Lorenzo de El Escorial, repartiendo premios en metálico al escaparate más popular y al mejor valorado por un jurado.",
+				"titular": "Concurso de escaparates en San Lorenzo de El Escorial",
+				"paraQuien": "Establecimientos comerciales con escaparate visible desde la vía pública en el municipio.",
+				"importe": "299 € para el escaparate más popular y 299 € para el mejor valorado por el jurado",
+				"importeMaximo": 299,
+				"plazo": "Hasta el 15 de diciembre de 2026",
+				"plazoFin": "2026-12-15",
+				"requisitos": [
+					"Tener un comercio con escaparate visible desde la calle.",
+					"Mantener la decoración del escaparate sin cambios obligatoriamente del 18 al 23 de diciembre."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no_consta",
+					"sociedades": "no_consta",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "San Lorenzo de El Escorial"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Solicitar la inscripción gratis por la sede electrónica con certificado digital, clave o pin 24h.",
+					"También se puede presentar la instancia en el registro del Ayuntamiento o por correo electrónico.",
+					"Enviar por correo electrónico las fotos del escaparate decorado."
+				],
+				"documentacion": [
+					"Instancia general de solicitud",
+					"Fotos del escaparate"
+				],
+				"dondeSolicitar": "En la sede electrónica, en el registro general del Ayuntamiento de San Lorenzo de El Escorial o por correo electrónico en comercio@aytosanlorenzo.es",
+				"enlaceSolicitud": "https://www.aytosanlorenzo.es"
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "942233",
+			"titulo": "Bases y convocatoria del “III Concurso de Escaparates con Motivos Navideños 2026”.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "NAVA",
+				"nivel3": "AYUNTAMIENTO DE NAVA"
+			},
+			"sede": null,
+			"publicada": "2026-11-16",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES12",
+					"nombre": "PRINCIPADO DE ASTURIAS"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Al día siguiente de su publicación en el Boletin Oficial del Principado de Asturias",
+			"textoFin": "Diez días naturales contados a partir de su publicación.",
+			"bases": "www.ayto-nava.es",
+			"documento": {
+				"id": 1556080,
+				"nombre": "Conocatoria 2026 concurso escaparates con motivos navideños (texto completo).pdf"
+			},
+			"docs": [
+				1556080,
+				1556082,
+				1556086
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942233",
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso del Ayuntamiento de Nava para premiar los mejores escaparates con decoración navideña en comercios del municipio.",
+				"titular": "Premios al mejor escaparate navideño en Nava",
+				"paraQuien": "Comercios (no hostelería) ubicados en el pueblo de Nava, abiertos al público y con escaparate a la calle.",
+				"importe": "Premios económicos de 500 € (1.º), 300 € (2.º) y 200 € (3.º)",
+				"importeMaximo": 500,
+				"plazo": "10 días naturales contados a partir del día siguiente a la publicación de la convocatoria en el Boletín Oficial del Principado de Asturias.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser un establecimiento comercial (queda excluida la hostelería).",
+					"Estar ubicado en el pueblo de Nava.",
+					"Estar abierto al público y contar con escaparate expuesto a la calle.",
+					"Exhibir el escaparate decorado del 19 de diciembre de 2026 al 9 de enero de 2027.",
+					"Mantener el escaparate iluminado en el horario comercial habitual.",
+					"Colocar el cartel de participación en un lugar visible del escaparate."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Nava"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Rellenar y firmar la ficha de inscripción normalizada.",
+					"Firmar la autorización para el tratamiento de imágenes.",
+					"Presentar los documentos en el Registro del Ayuntamiento o en su sede electrónica."
+				],
+				"documentacion": [
+					"Ficha de inscripción en modelo normalizado firmada.",
+					"Autorización para el tratamiento de la imagen firmada (mayores de edad)."
+				],
+				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Nava o en su Registro General.",
+				"enlaceSolicitud": "https://aytonava.sedelectronica.e-ayuntamiento.es/"
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.5-flash"
+		},
 		{
 			"codigo": "942134",
 			"titulo": "CONVOCATORIA DEL CONCURSO DE BELENES Y ÁRBOLES DE NAVIDAD 2026",
@@ -35031,7 +36286,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931842",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35132,7 +36387,7 @@
 				"dondeSolicitar": "En la sede electrónica del Principado de Asturias",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -35231,7 +36486,7 @@
 				"dondeSolicitar": "A través del Catálogo de procedimientos de la Sede Electrónica de la Diputació de Lleida.",
 				"enlaceSolicitud": "https://convocatoriafires.diputaciolleida.cat"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -35280,7 +36535,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931777",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35328,7 +36583,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931773",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35377,7 +36632,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931760",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35423,7 +36678,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931692",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35468,7 +36723,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931672",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35515,7 +36770,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931652",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35560,7 +36815,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931614",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35607,7 +36862,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931613",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35724,7 +36979,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931600",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35841,7 +37096,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931599",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -35958,7 +37213,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931598",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36075,7 +37330,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931597",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36195,7 +37450,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931575",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36246,7 +37501,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931568",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36343,7 +37598,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Generalitat",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -36448,7 +37703,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Estella-Lizarra",
 				"enlaceSolicitud": "https://sedeelectronica.estella-lizarra.com/"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -36547,7 +37802,7 @@
 				"dondeSolicitar": "En el registro general electrónico de la sede electrónica del Ayuntamiento de Estella-Lizarra",
 				"enlaceSolicitud": "https://sedeelectronica.estella-lizarra.com/"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -36594,7 +37849,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931488",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36693,7 +37948,7 @@
 				"dondeSolicitar": "En el Registro del Consell Comarcal del Bages, en su sede electrónica o a través de la plataforma EACAT",
 				"enlaceSolicitud": "https://tadaptat.ccbages.cat"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -36742,7 +37997,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931307",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36799,7 +38054,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931203",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -36961,7 +38216,7 @@
 				"dondeSolicitar": "En la Sede electrónica de la Cámara de Comercio de España.",
 				"enlaceSolicitud": "https://sede.camara.es/sede/ceuta"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -37007,7 +38262,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931127",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37053,7 +38308,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931051",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37099,7 +38354,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931024",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37152,7 +38407,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931023",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37197,7 +38452,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931020",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37243,7 +38498,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931013",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37289,7 +38544,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/931002",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37390,7 +38645,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears o en los registros del FOGAIBA y la Consejería.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -37492,7 +38747,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears o registros del FOGAIBA.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -37593,7 +38848,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears o en los registros del FOGAIBA y la Consejería de Agricultura, Pesca y Medio Natural.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -37645,7 +38900,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930968",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37696,7 +38951,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930967",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37741,7 +38996,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930965",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37786,7 +39041,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930877",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37833,7 +39088,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930873",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14",
 			"iaIntentos": 1,
 			"iaIntentadoEl": "2026-11-14",
@@ -37883,7 +39138,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930845",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -37928,7 +39183,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930820",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-14"
 		},
 		{
@@ -38053,7 +39308,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930807",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38178,7 +39433,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930805",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38232,7 +39487,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930785",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38277,7 +39532,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930749",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38389,7 +39644,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración de la Comunidad de Castilla y León",
 				"enlaceSolicitud": "https://www.tramitacastillayleon.jcyl.es"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -38440,7 +39695,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930700",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38497,7 +39752,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930632",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38543,7 +39798,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930604",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38589,7 +39844,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930571",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38636,7 +39891,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930464",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38681,7 +39936,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930375",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38729,7 +39984,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930313",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -38907,7 +40162,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Cámara de Comercio de España (demarcación de Avilés)",
 				"enlaceSolicitud": "https://sede.camara.es/sede/aviles"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -38965,7 +40220,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930103",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39022,7 +40277,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930100",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39079,7 +40334,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/930095",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39154,7 +40409,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Leganés.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -39205,7 +40460,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929974",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39250,7 +40505,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929960",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39349,7 +40604,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929935",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39394,7 +40649,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929927",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39439,7 +40694,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929925",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39491,7 +40746,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929846",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39664,7 +40919,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Cámara de Comercio de Avilés",
 				"enlaceSolicitud": "https://sede.camara.es/sede/aviles"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -39717,7 +40972,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929820",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -39826,7 +41081,7 @@
 				"dondeSolicitar": "En el Registro Electrónico General de la Administración de la Comunidad Autónoma de Cantabria.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -39913,7 +41168,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de San Vicente del Raspeig",
 				"enlaceSolicitud": "https://raspeig.sedipualba.es/"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -40021,7 +41276,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -40067,7 +41322,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929694",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40113,7 +41368,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929691",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40159,7 +41414,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929587",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40204,7 +41459,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929576",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40252,7 +41507,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929568",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40297,7 +41552,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929557",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40366,7 +41621,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929475",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40412,7 +41667,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929472",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40466,7 +41721,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929407",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40516,7 +41771,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929221",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40567,7 +41822,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929192",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40614,7 +41869,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929134",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40660,7 +41915,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929131",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40705,7 +41960,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929084",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40767,7 +42022,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/929072",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40861,7 +42116,7 @@
 				"dondeSolicitar": "En la Sede Electrónica del Gobierno de las Illes Balears y a través de la aplicación de gestión ESOIB.",
 				"enlaceSolicitud": "https://soib.es/convocatories/"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -40912,7 +42167,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928886",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -40958,7 +42213,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928881",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41056,7 +42311,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración del Principado de Asturias",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -41160,7 +42415,7 @@
 				"dondeSolicitar": "En el portal telemático de la sede electrónica del Ayuntamiento de Valls o en su Registro General (OAC).",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.7-flash"
 		},
@@ -41272,7 +42527,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928761",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41320,7 +42575,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928754",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41374,7 +42629,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928735",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41421,7 +42676,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928727",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41468,7 +42723,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928726",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41516,7 +42771,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928683",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41625,7 +42880,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento del Puig de Santa María",
 				"enlaceSolicitud": "https://elpuig.sede.dival.es/"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash",
 			"cierreDescartado": {
@@ -41676,7 +42931,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928529",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41723,7 +42978,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928499",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41819,7 +43074,7 @@
 				"dondeSolicitar": "En el Catálogo de trámites del portal de Internet del Gobierno de Navarra (www.navarra.es).",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -41865,7 +43120,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928382",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -41962,7 +43217,7 @@
 				"dondeSolicitar": "En el Catálogo de trámites del portal de Internet del Gobierno de Navarra.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -42008,7 +43263,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928367",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42054,7 +43309,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928364",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42111,7 +43366,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928349",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42158,7 +43413,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928325",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42205,7 +43460,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928318",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42254,7 +43509,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928304",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42300,7 +43555,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928200",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42347,7 +43602,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928198",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42396,7 +43651,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928171",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42443,7 +43698,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928152",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42650,7 +43905,7 @@
 				"dondeSolicitar": "En la Sede electrónica de la Generalitat de Catalunya.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -42697,7 +43952,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928031",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42743,7 +43998,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/928010",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42868,7 +44123,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.7-flash"
 		},
@@ -42916,7 +44171,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927954",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -42963,7 +44218,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927937",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43026,7 +44281,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927913",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43104,7 +44359,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.7-flash"
 		},
@@ -43158,7 +44413,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927879",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43203,7 +44458,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927850",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43254,7 +44509,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927849",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43300,7 +44555,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927826",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43346,7 +44601,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927817",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43392,7 +44647,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927746",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43520,7 +44775,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927721",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43593,7 +44848,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927719",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43639,7 +44894,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927678",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43738,7 +44993,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Granada mediante el trámite de Instancia o Solicitud general.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
@@ -43788,7 +45043,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927622",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43833,7 +45088,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927621",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43946,7 +45201,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927620",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -43991,7 +45246,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927612",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -44036,7 +45291,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927611",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -44128,7 +45383,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la CARM o presencialmente en los registros oficiales para personas físicas",
 				"enlaceSolicitud": "https://sede.carm.es"
 			},
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -44178,7 +45433,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927545",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -44224,7 +45479,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927404",
 			"ia": null,
-			"comprobada": "2026-11-15",
+			"comprobada": "2026-11-16",
 			"alta": "2026-11-15"
 		},
 		{
@@ -46482,19 +47737,1470 @@
 			"ia": null,
 			"comprobada": "2026-11-16",
 			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925889",
+			"titulo": "BASES REGULADORAS Y CONVOCATORIA DE LA CAMPAÑA DE FOMENTO DEL CONSUMO EN EL COMERCIO LOCAL DE PARCENT,\nMEDIANTE LA EMISIÓN DE BONOS DE COMERCIO, anualidad 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "PARCENT",
+				"nivel3": "AYUNTAMIENTO DE PARCENT"
+			},
+			"sede": "https://parcent.sedipualba.es/",
+			"publicada": "2026-08-21",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 39545,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES521",
+					"nombre": "Alicante / Alacant"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "a partir del día: publicación en BOPA para empresarios  y del 16.9.2026 para particulares",
+			"textoFin": "hasta el 16.10. 2026 para particulares   empresarios hasta 11.9.2026",
+			"bases": "https://www.dip-alicante.es/bop2/pdftotal/2026/07/23_137/2026_005685.pdf",
+			"documento": {
+				"id": 1511756,
+				"nombre": "20260817 - bases-bono-comercio 2026 -V1.docx"
+			},
+			"docs": [
+				1511756,
+				1511757,
+				1511758,
+				1511760
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925889",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925841",
+			"titulo": "Convocatoria de las ayudas para el año 2026 a las Organizaciones Profesionales Agrarias y Cooperativas Agrarias de Cantabria por colaborar en la cumplimentación de las solicitudes de la convocatoria de distintas líneas de ayudas de la solicitud unica.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "CONSEJERÍA DE DESARROLLO RURAL, GANADERÍA, PESCA Y ALIMENTACIÓN"
+			},
+			"sede": null,
+			"publicada": "2026-08-21",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 115000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES13",
+					"nombre": "CANTABRIA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "DIA SIGUIENTE A LA PUBLICACION DEL EXTRACTO EN EL BOC",
+			"textoFin": "1 MES A PARTIR DEL DIA SIGUIENTE A LA PUBLICACIO DEL EXTRACTO EN EL BOC",
+			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=369604",
+			"documento": {
+				"id": 1511643,
+				"nombre": "CONVOCATORIA CUMPLIMENTACION SOLICITUD UNICA.report (1).pdf"
+			},
+			"docs": [
+				1511643,
+				1511644,
+				1511645
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925841",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925816",
+			"titulo": "Orden por la que se aprueba la convocatoria 2027-2028 para la concesión de subv. a proyectos de Innovación Social, anticipada",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANARIAS",
+				"nivel3": "CONSEJERÍA DE UNIVERSIDADES, CIENCIA E INNOVACIÓN Y CULTURA"
+			},
+			"sede": "https://sede.gobiernodecanarias.org/sede/tramites/9525",
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 800000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "72",
+					"nombre": "Investigación y desarrollo"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES70",
+					"nombre": "CANARIAS"
+				}
+			],
+			"finalidad": "Investigación, desarrollo e innovación",
+			"inicio": "2026-10-15",
+			"fin": null,
+			"textoInicio": "A partir de las 09:00 h según resuelvo 5º Convocatoria",
+			"textoFin": "A las 14.00 h según resuelvo 5º Convocatoria",
+			"bases": "http://www.gobiernodecanarias.org/boc/2021/193/",
+			"documento": {
+				"id": 1511522,
+				"nombre": "Documento convocatoria castellano.PDF"
+			},
+			"docs": [
+				1511522
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925816",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925802",
+			"titulo": "SUBVENCIONES DESTINADAS A LA PRODUCCIÓN DE LARGOMETRAJES EN CLM AÑO 2026.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CASTILLA-LA MANCHA",
+				"nivel3": "VICECONSEJERÍA DE CULTURA Y DEPORTES"
+			},
+			"sede": "www.jccm.es",
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 200000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES42",
+					"nombre": "CASTILLA LA MANCHA"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación en el DOCM",
+			"textoFin": "Diez días hábiles a partir del día siguiente a la publicación en el DOCM",
+			"bases": "https://docm.jccm.es/docm/eli/es-cm/o/2021/06/10",
+			"documento": {
+				"id": 1515477,
+				"nombre": "CORRECIÓN ERRORES DE LA RESOLUCION_PROD LARGOMETRAJES 2026-F_130931.PDF"
+			},
+			"docs": [
+				1515477,
+				1515478,
+				1515479,
+				1515480
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925802",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925800",
+			"titulo": "CONVOCATORIA DE LOS II PREMIOS AL USO DEL VALENCIANO EN EL COMERCIO LOCAL DE ONTINYENT 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ONTINYENT",
+				"nivel3": "AYUNTAMIENTO DE ONTINYENT"
+			},
+			"sede": "https://ontinyent.sedipualba.es/",
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 3000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "94.1",
+					"nombre": "Actividades de organizaciones empresariales, profesionales y patronales"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES523",
+					"nombre": "Valencia / València"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "AL DIA SIGUIENTE DE LA PUBLICACIÓN EN EL BOP DE VALENCIA",
+			"textoFin": "15 DIAS HABILES DESPUÉS DE SU PUBLICACIÓN EN EL BOP DE VALENCIA",
+			"bases": "https://www.ontinyent.es/va/pagina/pressupostos-2026",
+			"documento": {
+				"id": 1511398,
+				"nombre": "CONVOCATORIA II PREMIOS USO VALENCIÀ EN EL COMERCIO LOCAL - SEFYCU 8520286.pdf"
+			},
+			"docs": [
+				1511398,
+				1511399
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925800",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925798",
+			"titulo": "Programa de ayudas para apoyar la creación de nuevas empresas en San Sebastián en el año 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DONOSTIA/SAN SEBASTIÁN",
+				"nivel3": "FOMENTO DE SAN SEBASTIÁN S.A.- DONOSTIA SUSTAPENA"
+			},
+			"sede": null,
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 300000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "O",
+					"nombre": "ACTIVIDADES ADMINISTRATIVAS Y SERVICIOS AUXILIARES"
+				},
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				},
+				{
+					"codigo": "J",
+					"nombre": "ACTIVIDADES DE EDICIÓN, RADIODIFUSIÓN Y PRODUCCIÓN Y DISTRIBUCIÓN DE CONTENIDOS"
+				},
+				{
+					"codigo": "U",
+					"nombre": "ACTIVIDADES DE LOS HOGARES COMO EMPLEADORES Y COMO PRODUCTORES DE BIENES Y SERVICIOS NO DIFERENCIADOS PARA USO PROPIO"
+				},
+				{
+					"codigo": "L",
+					"nombre": "ACTIVIDADES FINANCIERAS Y DE SEGUROS"
+				},
+				{
+					"codigo": "M",
+					"nombre": "ACTIVIDADES INMOBILIARIAS"
+				},
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "R",
+					"nombre": "ACTIVIDADES SANITARIAS Y DE SERVICIOS SOCIALES"
+				},
+				{
+					"codigo": "P",
+					"nombre": "ADMINISTRACIÓN PÚBLICA Y DEFENSA; SEGURIDAD SOCIAL OBLIGATORIA"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "G",
+					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "Q",
+					"nombre": "EDUCACIÓN"
+				},
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "B",
+					"nombre": "INDUSTRIAS EXTRACTIVAS"
+				},
+				{
+					"codigo": "V",
+					"nombre": "ORGANISMOS EXTRATERRITORIALES"
+				},
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				},
+				{
+					"codigo": "E",
+					"nombre": "SUMINISTRO DE AGUA, ACTIVIDADES DE SANEAMIENTO, GESTIÓN DE RESIDUOS Y DESCONTAMINACIÓN"
+				},
+				{
+					"codigo": "D",
+					"nombre": "SUMINISTRO DE ENERGIA ELECTRICA, GAS, VAPOR Y AIRE ACONDICIONADO"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES212",
+					"nombre": "Gipuzkoa"
+				}
+			],
+			"finalidad": "Desempleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la fecha de publicación en el Boletín Oficial de Gipuzkoa",
+			"textoFin": "31/12/2026",
+			"bases": "www.fomentosansebastian.eus",
+			"documento": {
+				"id": 1511395,
+				"nombre": "Bases Creacion_2026.pdf"
+			},
+			"docs": [
+				1511395,
+				1511396
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925798",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925740",
+			"titulo": "Resolución SOD/TEC/26/26 de 20 de agosto de 2026, por la que se convoca para el año 2026 la línea de subvenciones del programa de “Personal Técnico Especializado”. REG (UE) 2023/2831 minimis General.",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "SOCIEDAD PARA EL DESARROLLO REGIONAL DE CANTABRIA, S.A."
+			},
+			"sede": "https://ayudas.sodercan.es",
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 700000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES130",
+					"nombre": "Cantabria"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto en el BOC",
+			"textoFin": "30 de octubre de 2026",
+			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=438007",
+			"documento": {
+				"id": 1511150,
+				"nombre": "Convocatoria PERSONAL TÉCNICO ESPECIALIZADO 2026.pdf"
+			},
+			"docs": [
+				1511150
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925740",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925738",
+			"titulo": "Resolución SOD/TEC/26/26 de 20 de agosto de 2026, por la que se convoca para el año 2026 la línea de subvenciones del programa de “Personal Técnico Especializado”. REG (UE) 1408/2013 minimis agrícola",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "SOCIEDAD PARA EL DESARROLLO REGIONAL DE CANTABRIA, S.A."
+			},
+			"sede": "https://ayudas.sodercan.es",
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES130",
+					"nombre": "Cantabria"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto en el BOC",
+			"textoFin": "30 de octubre de 2026",
+			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=438007",
+			"documento": {
+				"id": 1511136,
+				"nombre": "Convocatoria PERSONAL TÉCNICO ESPECIALIZADO 2026.pdf"
+			},
+			"docs": [
+				1511136
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925738",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925734",
+			"titulo": "Resolución SOD/TEC/26/26 de 20 de agosto de 2026, por la que se convoca para el año 2026 la línea de subvenciones del programa de “Personal Técnico Especializado”. REG (UE) 717/2014 minimis pesca y acuicultura",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "SOCIEDAD PARA EL DESARROLLO REGIONAL DE CANTABRIA, S.A."
+			},
+			"sede": "https://ayudas.sodercan.es",
+			"publicada": "2026-08-20",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "N",
+					"nombre": "ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS"
+				},
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				},
+				{
+					"codigo": "F",
+					"nombre": "CONSTRUCCIÓN"
+				},
+				{
+					"codigo": "C",
+					"nombre": "INDUSTRIA MANUFACTURERA"
+				},
+				{
+					"codigo": "K",
+					"nombre": "TELECOMUNICACIONES, PROGRAMACIÓN INFORMÁTICA, CONSULTORÍA, INFRAESTRUCTURA INFORMÁTICA Y OTROS SERVICIOS DE INFORMACIÓN"
+				},
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES130",
+					"nombre": "Cantabria"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto en el BOC",
+			"textoFin": "30 de octubre de 2026",
+			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=438007",
+			"documento": {
+				"id": 1511126,
+				"nombre": "Convocatoria PERSONAL TÉCNICO ESPECIALIZADO 2026.pdf"
+			},
+			"docs": [
+				1511126
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925734",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925589",
+			"titulo": "Acuerdo por el cual se aprueban las Bases de la convocatoria de ayudas para el desarrollo rural de la isla de Menorca por el periodo 2023-2027, vinculadas a proyectos relacionados con los ámbitos agrario y/o ambiental y enmarcados en la Estrategia de Desa",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "ILLES BALEARS",
+				"nivel3": "FONDO DE GARANTÍA AGRARIA Y PESQUERA DE LAS ISLAS BALEARES (FOGAIBA)"
+			},
+			"sede": "https://www.caib.es/seucaib/ca/200/persones%20/tramites/tramite/6536010",
+			"publicada": "2026-08-19",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 990000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES533",
+					"nombre": "Menorca"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "05/08/2026",
+			"textoFin": "31/08/2026",
+			"bases": "https://www.caib.es/eboibfront/eli/es-ib/o/2023/04/05/10/dof/spa/html",
+			"documento": {
+				"id": 1510740,
+				"nombre": "Convocatoria castellano BOIB 7855.pdf"
+			},
+			"docs": [
+				1510737,
+				1510740
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925589",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925461",
+			"titulo": "CONVOCATORIA DE AYUDAS A LA CREACIÓN DE EMPRESAS LOCALES: FOMENTO DEL EMPRENDIMIENTO EN MONTILLA. CONVOCATORIA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "MONTILLA",
+				"nivel3": "AYUNTAMIENTO DE MONTILLA"
+			},
+			"sede": null,
+			"publicada": "2026-08-18",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 50000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES613",
+					"nombre": "Córdoba"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "01-09-2026",
+			"textoFin": "10-09-2026",
+			"bases": "https://montilla.es/wp-content/uploads/2026/07/8CBE2F75E7DB357B3910.pdf",
+			"documento": {
+				"id": 1510516,
+				"nombre": "DECRETO CONVOCATORIA 21225-2026.pdf"
+			},
+			"docs": [
+				1510516
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925461",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925319",
+			"titulo": "CONV. PROGRAMAS TELEFORMACIÓN TRANSVERSALES Y SECTORIALES P. OCUPADAS 2026-2028",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "LA RIOJA",
+				"nivel3": "CONSEJERÍA DE EDUCACIÓN Y EMPLEO"
+			},
+			"sede": null,
+			"publicada": "2026-08-17",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 1000000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "78",
+					"nombre": "Actividades relacionadas con el empleo"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES230",
+					"nombre": "La Rioja"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Desde el día siguiente a la publicación de la Resolución de convocatoria en el B.O.R.",
+			"textoFin": "15 días hábiles desde el siguiente a la publicación de la convocatoria en B.O.R.",
+			"bases": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2019-4715",
+			"documento": {
+				"id": 1510146,
+				"nombre": "RESOLUCION_Convocat.pdf"
+			},
+			"docs": [
+				1510146
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925319",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925252",
+			"titulo": "SUBV DESTINADAS A ENTIDADES PRIVADAS PARA ACTUACIONES DE PROMOCION DEL COMERCIO LOCAL",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "VINARÒS",
+				"nivel3": "AYUNTAMIENTO DE VINARÒS"
+			},
+			"sede": null,
+			"publicada": "2026-08-17",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 5000,
+			"beneficiarios": [
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "S",
+					"nombre": "ACTIVIDADES ARTÍSTICAS, DEPORTIVAS Y DE ENTRETENIMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES522",
+					"nombre": "Castellón / Castelló"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": "2026-08-07",
+			"fin": "2026-12-30",
+			"textoInicio": "dia siguiente publicacion BOP",
+			"textoFin": "15 dias naturales desde la publicación de la convocatoria",
+			"bases": "https://bop.dipcas.es/PortalBOP/",
+			"documento": {
+				"id": 1512116,
+				"nombre": "BDNS.pdf"
+			},
+			"docs": [
+				1512116
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925252",
+			"ia": {
+				"categoria": "otro",
+				"resumen": "El Ayuntamiento de Vinaròs convoca subvenciones destinadas a asociaciones de comerciantes locales sin ánimo de lucro para realizar actividades de promoción del comercio local.",
+				"titular": "Ayudas para la promoción del comercio local en Vinaròs",
+				"paraQuien": "Asociaciones empresariales de comerciantes sin ánimo de lucro que tengan su sede en Vinaròs.",
+				"importe": "Presupuesto total de 5.000 €",
+				"importeMaximo": null,
+				"plazo": "15 días naturales desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Provincia.",
+				"plazoFin": null,
+				"requisitos": [
+					"Ser una asociación empresarial de comerciantes.",
+					"Tener la sede en Vinaròs.",
+					"No tener ánimo de lucro.",
+					"Estar inscrita en el Registro Municipal de Asociaciones o haber pedido la inscripción antes de que termine el plazo.",
+					"Contar con la habilitación legal necesaria."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "no",
+					"sociedades": "no",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Vinaròs"
+				},
+				"dudas": "No se especifica el límite de dinero máximo que puede recibir una sola asociación.",
+				"finalidades": [
+					"exportar"
+				],
+				"comoPedir": [
+					"Presentar la instancia dentro del plazo de 15 días naturales desde la publicación de la convocatoria.",
+					"Revisar el Tablón de Anuncios del Ayuntamiento de Vinaròs o la Base de Datos Nacional de Subvenciones para consultar los detalles de la publicación."
+				],
+				"documentacion": [],
+				"dondeSolicitar": "En el Ayuntamiento de Vinaròs",
+				"enlaceSolicitud": null
+			},
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16",
+			"iaModelo": "gemini-3.6-flash"
+		},
+		{
+			"codigo": "925231",
+			"titulo": "Convocatoria de ayudas a las entidades asociativas agrarias para la colaboración en la prestación de servicios de asesoramiento que incluya la gestión técnico-económica, a las explotaciones agrarias en la Comunidad Autónoma de Cantabria para el año 2026",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "CONSEJERÍA DE DESARROLLO RURAL, GANADERÍA, PESCA Y ALIMENTACIÓN"
+			},
+			"sede": null,
+			"publicada": "2026-08-17",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 456000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES13",
+					"nombre": "CANTABRIA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "DIA SIGUIENTE A LA PUBLICACION DEL EXTRACTO EN EL BOC",
+			"textoFin": "QUINCE DIAS HABILES CONTADOS A PARTIR DEL DIA SIGUIENTE AL DE LA PUBLICACION DEL EXTRACTO EN EL BOC",
+			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=314997",
+			"documento": {
+				"id": 1509892,
+				"nombre": "CONVOCATORIA AYUDAS ENTIDADES SERVICIOS ASESORAMIENTO.report (1).pdf"
+			},
+			"docs": [
+				1509892,
+				1509893,
+				1509894,
+				1509895,
+				1509898,
+				1509899,
+				1509900,
+				1509902
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925231",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925228",
+			"titulo": "Premio del 16ª Certamen Internacional de la Cestería Roser Albó (CICRA) de Salt, año 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SALT",
+				"nivel3": "AYUNTAMIENTO DE SALT"
+			},
+			"sede": "https://www.seu-e.cat/ca/web/salt/seu-electronica",
+			"publicada": "2026-08-17",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 2000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "I",
+					"nombre": "HOSTELERÍA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES512",
+					"nombre": "Girona"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "El día siguiente de la publicación de la convocatoria en el BOP de Girona.",
+			"textoFin": "Hasta 30 dias antes del inicio de la feria",
+			"bases": "https://bpm.salt.cat/OAC/downloadR/45fa2dcc-255b-4843-bf94-4e2220d37fe4",
+			"documento": {
+				"id": 1509872,
+				"nombre": "DecretConvocatòriaCICRACASTdil_amb signatures.pdf"
+			},
+			"docs": [
+				1509872,
+				1509874
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925228",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925214",
+			"titulo": "Convocatoria de subvenciones para el desarrollo del programa de fomento del deporte base en los centros educativos públicos del municipio de Avilés, para el curso escolar 2026-2027",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "AVILÉS",
+				"nivel3": "FUNDACIÓN DEPORTIVA MUNICIPAL DE AVILÉS"
+			},
+			"sede": null,
+			"publicada": "2026-08-17",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 93060,
+			"beneficiarios": [
+				"GRAN EMPRESA",
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "93.1",
+					"nombre": "Actividades deportivas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES12",
+					"nombre": "PRINCIPADO DE ASTURIAS"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto BOPA",
+			"textoFin": "10 días hábiles después de la publicación",
+			"bases": "https://miprincipado.asturias.es/bopa/2019/06/04/2019-05178.pdf",
+			"documento": {
+				"id": 1509852,
+				"nombre": "Aprobacion_convocatoria.pdf"
+			},
+			"docs": [
+				1509852
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925214",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925199",
+			"titulo": "Ayudas minimis bioseguridad rumiantes",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CATALUÑA",
+				"nivel3": "DEPARTAMENT D'AGRICULTURA, RAMADERIA, PESCA I ALIMENTACIÓ"
+			},
+			"sede": null,
+			"publicada": "2026-08-17",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 320000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES51",
+					"nombre": "CATALUÑA"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": "2026-09-02",
+			"fin": null,
+			"textoInicio": "Des de l’endemà de la publicació en el diari oficial de la convocatòria inicial",
+			"textoFin": "10 Dies Hàbils",
+			"bases": "https://dogc.gencat.cat/es/document-del-dogc/index.html?documentId=1021755",
+			"documento": {
+				"id": 1514933,
+				"nombre": "RESOLUCIÓN BIOSEGURIDAD RUMIANTES.pdf"
+			},
+			"docs": [
+				1514933,
+				1514934
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925199",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925172",
+			"titulo": "CONVOCATORIA DE SUBVENCIONES PARA ACCIONES FORMATIVAS PARA DESEMPLEADOS FPED 2026",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANARIAS",
+				"nivel3": "SERVICIO CANARIO DE EMPLEO"
+			},
+			"sede": "https://sede.gobiernodecanarias.org/sede/tramites/7457",
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 58500000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "85.5",
+					"nombre": "Otra educación"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES70",
+					"nombre": "CANARIAS"
+				}
+			],
+			"finalidad": "Fomento del Empleo",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente a la publicación del extracto en el Boletín Oficial de Canarias",
+			"textoFin": "15 días hábiles, contados a partir del día siguiente a la publicación del extracto en el B.O.C.",
+			"bases": "https://www.boe.es/buscar/act.php?id=BOE-A-1984-17387",
+			"documento": {
+				"id": 1510164,
+				"nombre": "Documento convocatoria castellano.PDF"
+			},
+			"docs": [
+				1510164
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925172",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925167",
+			"titulo": "Decreto de la Presidencia n.º 2026/1584, de fecha 8 de julio de 2026, por el que convocan las Subvenciones destinadas al sector del Taxi de la Isla de La Gomera, en la anualidad 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE LA GOMERA",
+				"nivel3": "CABILDO INSULAR DE LA GOMERA"
+			},
+			"sede": "https://lagomera.sedelectronica.es",
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 250000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES706",
+					"nombre": "La Gomera"
+				}
+			],
+			"finalidad": "Subvenciones al transporte",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día hábil siguiente a la publicación del extracto de la convocatoria en el BOP",
+			"textoFin": "A los 20 días hábiles contados a partir del día siguiente al de la publicación del extracto en BOP",
+			"bases": "https://www.bopsantacruzdetenerife.es/bopsc2/index.php",
+			"documento": {
+				"id": 1509746,
+				"nombre": "20260814_Otros_EXTRACTO CONVOCATORIA SUBV TAXIS.pdf"
+			},
+			"docs": [
+				1509746
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925167",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925135",
+			"titulo": "Acuerdo de Consejo de Gobierno, del Cabildo Insular de Lanzarote y La Graciosa, por el que se aprueba la Convocatoria de Subvenciones para la Mitigación del Cambio Climático y Transición Energética en las islas de Lanzarote y La Graciosa",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE LANZAROTE",
+				"nivel3": "CABILDO INSULAR DE LANZAROTE"
+			},
+			"sede": null,
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 662994.5,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES708",
+					"nombre": "Lanzarote"
+				}
+			],
+			"finalidad": "Industria y Energía",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Al día siguiente hábil desde la publicación en el BOP de Las Palmas",
+			"textoFin": "Un mes desde la publicación en el BOP de Las Palmas",
+			"bases": "https://sede.gobiernodecanarias.org/boc/boc-a-2020-177-3076.pdf",
+			"documento": {
+				"id": 1509704,
+				"nombre": "Certificado de acuerdos_Certificado de acuerdo-2.pdf"
+			},
+			"docs": [
+				1509704
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925135",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925089",
+			"titulo": "SUBVENCIÓN EN MATERIA DE AGRICULTURA, GANADERÍA Y PESCA 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "ANTIGUA",
+				"nivel3": "AYUNTAMIENTO DE ANTIGUA"
+			},
+			"sede": null,
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 150000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES704",
+					"nombre": "Fuerteventura"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "DIA SIGUIENTE A LA PUBLICACIÓN EN EL BOP DE LAS PALMAS",
+			"textoFin": "15 DÍAS NATURALES",
+			"bases": "SUBVENCIÓN EN MATERIA DE AGRICULTURA, GANADERÍA Y PESCA 2026",
+			"documento": {
+				"id": 1509622,
+				"nombre": "20260626_Certificado_Certificado Junta de Gobierno_2779.2026 Certificado acuerdo JGL.2026.14 de 25.06.2026.pdf"
+			},
+			"docs": [
+				1509622
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925089",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925059",
+			"titulo": "Extracto del Acuerdo de 31/07/2026 de la JGL de Sevilla, por el que se aprueba la Convocatoria pública de subvenciones destinadas al apoyo, mantenimiento y reactivación de establecimientos comerciales en la calle Pagés del Corro.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SEVILLA",
+				"nivel3": "AYUNTAMIENTO DE SEVILLA"
+			},
+			"sede": null,
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 78000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES618",
+					"nombre": "Sevilla"
+				}
+			],
+			"finalidad": "Comercio, Turismo y Pymes",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "A partir del día siguiente de la publicación del  presente  extracto de la convocatoria en el BOP.",
+			"textoFin": "veinte días hábiles desde el día siguiente a la publicación en el BOP",
+			"bases": "http://www.dipusevilla.es/export/bop/200507/14.pdf",
+			"documento": {
+				"id": 1509543,
+				"nombre": "11. ACUERDO JG SUBV PAGÉS DEL CORRO.report.pdf"
+			},
+			"docs": [
+				1509543
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925059",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925057",
+			"titulo": "Resolución  del  Consejero  de  Fomento, Vivienda,Ordenación  del  Territorio  y  Medio  Ambiente,de 14 de agosto de 2026,por  la  que se  aprueba  la convocatoria  de subvenciones destinadas a las líneas de transporte público regular nocturno de viajeros",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANTABRIA",
+				"nivel3": "CONSEJERÍA DE FOMENTO, ORDENACIÓN DELTERRITORIO Y MEDIO AMBIENTE"
+			},
+			"sede": null,
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 30000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "H",
+					"nombre": "TRANSPORTE Y ALMACENAMIENTO"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES13",
+					"nombre": "CANTABRIA"
+				}
+			],
+			"finalidad": "Subvenciones al transporte",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "a partir del dia siguiente a la publicación en el boletin del extracto",
+			"textoFin": "15 dias  a partir de publicación",
+			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=438978",
+			"documento": {
+				"id": 1509540,
+				"nombre": "4 Resolución_de_convocatoria_servicios_nocturnos_2026.pdf"
+			},
+			"docs": [
+				1509540,
+				1509541
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925057",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925055",
+			"titulo": "CONVOCATORIA DE AYUDAS AL SECTOR APICOLA DE LA PROVINCIA DE BURGOS, EN EL AÑO 2026 (API/2026)",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "DIPUTACIÓN PROV. DE BURGOS",
+				"nivel3": "DIPUTACIÓN PROVINCIAL DE BURGOS"
+			},
+			"sede": "https://sede.diputaciondeburgos.es",
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 20000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "A",
+					"nombre": "AGRICULTURA, GANADERÍA, SILVICULTURA Y PESCA"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES412",
+					"nombre": "Burgos"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente a la publicación del extracto en el Boletín Oficial de la Provincia de Burgos",
+			"textoFin": "1 mes desde el día siguiente a  la publicación del extracto en el Boletín Oficial de la Provincia",
+			"bases": "https: //www.burgos.es/diputacion/informacion/documentos/ordenanza-general-de-subvenciones",
+			"documento": {
+				"id": 1512189,
+				"nombre": "28 API2026_BASES_MODIFICADAS.pdf"
+			},
+			"docs": [
+				1509531,
+				1509532,
+				1509534,
+				1509535,
+				1512189
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925055",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "925048",
+			"titulo": "SUBVENCIONES DESTINADAS AL FOMENTO Y APOYO DE LA EMPRENDEDURÍA EN EL MUNICIPIO DE SANTA CRUZ DE LA PALMA, ANUALIDAD 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "SANTA CRUZ DE LA PALMA",
+				"nivel3": "AYUNTAMIENTO DE SANTA CRUZ DE LA PALMA"
+			},
+			"sede": "https://sede.santacruzdelapalma.es/",
+			"publicada": "2026-08-14",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 33000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES707",
+					"nombre": "La Palma"
+				}
+			],
+			"finalidad": "Otras actuaciones de carácter económico",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Día siguiente de su publicación en Boletín Oficial de la Provincia",
+			"textoFin": "10 días hábiles a partir del día siguiente a la publicación de la convocatoria en BOP",
+			"bases": "http://www.bopsantacruzdetenerife.es/bopsc2/sumario.php?codigopub=1&fecha_mas_reciente=2026-06-27",
+			"documento": {
+				"id": 1509501,
+				"nombre": "Decreto CONVOCATORIA Emprendimiento 2026.pdf"
+			},
+			"docs": [
+				1509501,
+				1509504,
+				1509506,
+				1509507,
+				1509510,
+				1509511
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925048",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "924933",
+			"titulo": "Convocatoria de subvenciones en régimen de concurrencia competitiva destinadas al desarrollo de largometrajes y series y a la producción de cortometrajes en la isla de Gran Canaria. Categoría de ficción, documental o animación. Anualidad 2026.",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE GRAN CANARIA",
+				"nivel3": "CABILDO INSULAR DE GRAN CANARIA"
+			},
+			"sede": null,
+			"publicada": "2026-08-13",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 150000,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "90",
+					"nombre": "Actividades de creación artística y artes escénicas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES705",
+					"nombre": "Gran Canaria"
+				}
+			],
+			"finalidad": "Cultura",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "a partir del día siguiente al de la publicación de la convocatoria en el B.O.P.",
+			"textoFin": "20 días naturales contados a partir del día siguiente al de la publicación de la convocatoria",
+			"bases": "https://transparencia.grancanaria.com/documents/150668/1274749/Ordenanza+General+de+Subvenciones+del+Cabildo+de+Gran+Canaria.pdf/12857022-e8e6-c930-4d86-3b64c83a59be?t=1683101346832",
+			"documento": {
+				"id": 1509217,
+				"nombre": "0 PAV26 0 Convocatoria.pdf"
+			},
+			"docs": [
+				1509217
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924933",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
+		},
+		{
+			"codigo": "924905",
+			"titulo": "CONVOCATORIA DE SUBVENCIONES EN RÉGIMEN DE CONCURRENCIA COMPETITIVA PARA INTERVENCIONES SOBRE BIENES INMUEBLES INTEGRANTES DEL PATRIMONIO CULTURAL DE CANARIAS EN LANZAROTE Y LA GRACIOSA - EJERCICIO 2026",
+			"organo": {
+				"nivel1": "LOCAL",
+				"nivel2": "CABILDO INSULAR DE LANZAROTE",
+				"nivel3": "CABILDO INSULAR DE LANZAROTE"
+			},
+			"sede": "https://cabildodelanzarote.sedelectronica.es/",
+			"publicada": "2026-08-13",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 250000,
+			"beneficiarios": [
+				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "T",
+					"nombre": "OTROS SERVICIOS"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES708",
+					"nombre": "Lanzarote"
+				}
+			],
+			"finalidad": "Otras Prestaciones económicas",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "Un mes desde el día siguiente al de la publicación de la convocatoria en el BOP de Las Palmas",
+			"textoFin": "Un mes desde el día siguiente al de la publicación de la convocatoria en el BOP de Las Palmas",
+			"bases": "https://www.boplaspalmas.net/boletines/2026/08-7-26/08-7-26.pdf",
+			"documento": {
+				"id": 1509178,
+				"nombre": "Acuerdo Consejo de Gobierno Insular - Convocatoria Subvenciones concurrencia competitiva Servicio Patrimonio Historico Cabildo Lanzarote 2026.pdf"
+			},
+			"docs": [
+				1509178
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924905",
+			"ia": null,
+			"comprobada": "2026-11-16",
+			"alta": "2026-11-16"
 		}
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-16T13:59:02.637Z",
+			"fecha": "2026-11-16T23:29:33.471Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 400,
+			"fichasComprobadas": 138,
 			"fichasFallidas": 0
 		},
 		"lectura": {
-			"fecha": "2026-11-16T14:17:05.355Z",
-			"pendientes": 161,
-			"leidas": 4,
+			"fecha": "2026-11-17T00:01:32.863Z",
+			"pendientes": 187,
+			"leidas": 13,
 			"fallidas": 0,
 			"ultimaLectura": "2026-11-16",
 			"conError": 12,
@@ -46504,7 +49210,7 @@
 		}
 	},
 	"relleno": {
-		"desde": "2026-08-23",
+		"desde": "2026-08-13",
 		"limite": "2026-05-18",
 		"avanzado": "2026-11-16"
 	}
