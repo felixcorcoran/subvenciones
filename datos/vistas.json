@@ -1,4 +1,896 @@
 {
+	"910546": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910575": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910584": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910589": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910606": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910616": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910622": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910628": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910630": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910638": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910640": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910663": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910670": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910681": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910683": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910691": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910693": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910698": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910699": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910701": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910702": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910704": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910705": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910721": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910744": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910746": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910752": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910756": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910757": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910761": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910777": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910781": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910782": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910783": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910799": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910812": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910836": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"910878": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910880": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910901": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910903": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910909": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910910": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910930": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910934": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910955": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"910962": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911009": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911024": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911059": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911145": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911149": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911166": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911182": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911184": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911186": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911187": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911191": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911199": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911205": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911219": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911229": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911241": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911256": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911294": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911297": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911319": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911327": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911328": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911335": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911346": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911347": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911358": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911368": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911384": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911392": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911397": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911400": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911450": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911451": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911453": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911455": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911476": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911495": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911498": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911501": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911511": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911522": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911529": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911534": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911535": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911537": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911538": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911565": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911583": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911612": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911618": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911624": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911625": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911626": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911627": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911628": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911629": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911699": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911704": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911712": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911743": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911751": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911752": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911765": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911791": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911803": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911820": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911835": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911868": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911872": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911898": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911906": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911916": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911919": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911929": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"911949": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911951": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911954": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911957": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"911966": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912002": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912019": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912020": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912053": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912060": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912062": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912068": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912076": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912084": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912086": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912102": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912103": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912104": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912105": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912117": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912134": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912137": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912142": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912152": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912159": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912163": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912166": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912169": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912174": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912183": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912188": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912194": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912195": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912201": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912206": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912209": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912215": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912219": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912227": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912236": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912255": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912260": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912272": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912288": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912313": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912316": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912323": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912332": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912341": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912355": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912370": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912374": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912375": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912380": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912392": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912399": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912400": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912403": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912404": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912428": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912433": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912442": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912448": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912457": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912458": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912496": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912497": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912500": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912504": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912522": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912526": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912535": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912536": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912564": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912587": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912624": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912648": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912652": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912685": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912687": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912688": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912689": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912690": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912691": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912692": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912694": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912696": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912698": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912700": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912706": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912712": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912720": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912734": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912742": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912745": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912748": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912757": {
+		"motivo": "concesión directa",
+		"fecha": "2026-11-20"
+	},
+	"912789": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912790": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912807": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912808": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
+	"912809": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
 	"912844": {
 		"motivo": "cerrada",
 		"fecha": "2026-11-19"
@@ -8387,6 +9279,10 @@
 		"motivo": "cerrada",
 		"fecha": "2026-10-27"
 	},
+	"935561": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
 	"935568": {
 		"motivo": "concesión directa",
 		"fecha": "2026-10-24"
@@ -9587,6 +10483,10 @@
 		"motivo": "cerrada",
 		"fecha": "2026-11-14"
 	},
+	"939422": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
+	},
 	"939436": {
 		"motivo": "concesión directa",
 		"fecha": "2026-11-03"
@@ -10202,6 +11102,10 @@
 	"942007": {
 		"motivo": "concesión directa",
 		"fecha": "2026-11-13"
+	},
+	"942010": {
+		"motivo": "cerrada",
+		"fecha": "2026-11-20"
 	},
 	"942017": {
 		"motivo": "concesión directa",

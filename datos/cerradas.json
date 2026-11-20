@@ -170,6 +170,15 @@
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935553",
 		"retirada": "2026-10-27"
 	},
+	"935561": {
+		"codigo": "935561",
+		"titulo": "Fomento de inversiones en energías renovables, almacenamiento eléctrico e infraestructura de recarga dentro del marco de Factor de Insularidad de las Illes Balears",
+		"resumen": "Ayudas para inversiones en energías renovables, almacenamiento eléctrico e infraestructura de recarga en las Illes Balears.",
+		"organo": "DIRECCIÓN GENERAL DE ECONOMÍA CIRCULAR, TRANSICIÓN ENERGÉTICA Y CAMBIO CLIMÁTICO — ILLES BALEARS",
+		"cierre": "2026-10-17",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/935561",
+		"retirada": "2026-11-20"
+	},
 	"935651": {
 		"codigo": "935651",
 		"titulo": "Business Center CLM Sirha Lyon",
@@ -485,6 +494,15 @@
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939373",
 		"retirada": "2026-11-14"
 	},
+	"939422": {
+		"codigo": "939422",
+		"titulo": "CONVOCATORIA DE SUBVENCIONES DE AYUDAS A EMPRESAS DE SECTORES DE PROXIMIDAD EN ENTIDADES LOCALES DE LA PROVINCIA DE GRANADA EN RIESGO DE DESPOBLACIÓN– 2026. OFICINA DE RETO DEMOGRÁFICO.",
+		"resumen": "La Diputación de Granada concede ayudas económicas para apoyar a comercios, hostelería, hospedaje y servicios personales ubicados en pequeñas localidades o entidades locales autónomas en riesgo de despoblación. La ayuda busca financiar los gastos corrientes del negocio durante el año 2026.",
+		"organo": "DIPUTACIÓN PROVINCIAL DE GRANADA — DIPUTACIÓN PROV. DE GRANADA",
+		"cierre": "2026-11-19",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939422",
+		"retirada": "2026-11-20"
+	},
 	"939992": {
 		"codigo": "939992",
 		"titulo": "RESOLUCIÓN de la directora general de Patrimonio Cultural por la que se convocan subvenciones a galerías de arte de la Comunitat Valenciana para la dinamización, promoción y difusión de la creación artística.",
@@ -493,5 +511,14 @@
 		"cierre": "2026-11-13",
 		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/939992",
 		"retirada": "2026-11-14"
+	},
+	"942010": {
+		"codigo": "942010",
+		"titulo": "Convocatoria campaña de rascas: \"BLACK NOVEMBER-PARA EL BLACK, CONSUME LOCAL\"",
+		"resumen": "Campaña promocional con tarjetas rasca para el comercio local",
+		"organo": "AYUNTAMIENTO DE FUENTE ÁLAMO DE MURCIA — FUENTE ÁLAMO DE MURCIA",
+		"cierre": "2026-11-19",
+		"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942010",
+		"retirada": "2026-11-20"
 	}
 }
