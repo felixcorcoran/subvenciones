@@ -1,0 +1,2 @@
+org.springframework.boot.EnvironmentPostProcessor=\
+es.felixcorcoran.subvenciones.observabilidad.AjustesDeObservabilidad

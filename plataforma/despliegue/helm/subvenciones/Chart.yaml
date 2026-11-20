@@ -1,0 +1,6 @@
+apiVersion: v2
+name: subvenciones
+description: La plataforma del Radar de subvenciones (cinco servicios y la pasarela) y, para local, su infraestructura
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

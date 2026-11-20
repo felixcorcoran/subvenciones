@@ -1,0 +1,11 @@
+# Grafana carga al arrancar los paneles de esta carpeta (montada en /otel-lgtm/subvenciones)
+apiVersion: 1
+
+providers:
+  - name: subvenciones
+    folder: Subvenciones
+    type: file
+    disableDeletion: true
+    options:
+      path: /otel-lgtm/subvenciones
+      foldersFromFilesStructure: false
