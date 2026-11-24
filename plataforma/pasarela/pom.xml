@@ -30,6 +30,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>es.felixcorcoran.subvenciones</groupId>
+			<artifactId>observabilidad</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway-server-webmvc</artifactId>
 		</dependency>

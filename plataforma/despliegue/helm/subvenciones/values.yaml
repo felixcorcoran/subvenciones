@@ -1,0 +1,89 @@
+# Valores por defecto: pensados para un clúster local (kind), con la infraestructura dentro.
+# En un clúster de verdad: infra.activada=false y las direcciones de los servicios gestionados.
+
+imagen:
+  # Las imágenes se llaman <registro>/<servicio>:<etiqueta>
+  registro: subvenciones
+  etiqueta: local
+  # En kind las imágenes se cargan a mano (kind load docker-image): no hay de dónde bajarlas
+  politica: IfNotPresent
+
+recursos:
+  requests: { cpu: 100m, memory: 256Mi }
+  limits: { memory: 512Mi }
+
+# Lo que comparten todos los servicios
+comun:
+  kafka: kafka:29092
+  otlp: http://lgtm:4318
+  keycloak:
+    # El emisor que llevan los tokens (fijo) y de dónde se leen las claves dentro del clúster
+    emisor: http://localhost:8180/realms/subvenciones
+    claves: http://keycloak:8080/realms/subvenciones/protocol/openid-connect/certs
+  baseDeDatos:
+    servidor: postgres:5432
+    usuario: subvenciones
+
+# Contenedor previo que espera a PostgreSQL y crea la base del servicio si falta (pg_isready y
+# psql). Es la misma imagen que la base de datos local, así que en kind ya está descargada
+esperaBaseDeDatos:
+  imagen: pgvector/pgvector:pg17
+
+# Secretos. Los de aquí son solo para local; en un clúster de verdad se dan al instalar
+# (--set secretos.baseDeDatos=…) o se usa un Secret ya existente
+secretos:
+  baseDeDatos: subvenciones
+  # Clave de Google AI Studio (proyecto sin facturación). Vacía: no se leen bases ni se responde
+  gemini: ""
+
+servicios:
+  servicio-encaje:
+    puerto: 8080
+    baseDeDatos: subvenciones
+    kafka: true
+  servicio-recogida:
+    puerto: 8081
+    baseDeDatos: recogida
+    kafka: true
+    env:
+      # Nada programado en local: las pasadas se lanzan a mano
+      RECOGIDA_CRON: "-"
+  servicio-lectura:
+    puerto: 8082
+    baseDeDatos: lectura
+    kafka: true
+    gemini: true
+    env:
+      LECTURA_CRON: "-"
+      MAX_ANALIZAR: "3"
+  servicio-avisos:
+    puerto: 8083
+    baseDeDatos: avisos
+    kafka: true
+    env:
+      AVISOS_CRON: "-"
+      ENCAJE_URL: http://servicio-encaje:8080
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+  servicio-preguntas:
+    puerto: 8084
+    baseDeDatos: preguntas
+    kafka: true
+    gemini: true
+    env:
+      INDEXADO_CRON: "-"
+  pasarela:
+    puerto: 8000
+    seguridad: false
+    env:
+      ENCAJE_URL: http://servicio-encaje:8080
+      RECOGIDA_URL: http://servicio-recogida:8081
+      LECTURA_URL: http://servicio-lectura:8082
+      AVISOS_URL: http://servicio-avisos:8083
+      PREGUNTAS_URL: http://servicio-preguntas:8084
+
+# PostgreSQL (con pgvector), Kafka, Keycloak, Grafana y Mailpit dentro del clúster: solo para local
+infra:
+  activada: true
+  # PostgreSQL dentro del clúster. En AWS es false: la base de datos es RDS (ver despliegue/terraform)
+  postgres: true
