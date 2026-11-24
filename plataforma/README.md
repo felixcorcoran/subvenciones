@@ -40,7 +40,7 @@ Cada servicio tiene su base de datos PostgreSQL y se habla con los demás solo p
 avisos, por REST con el encaje: [decisión 0005](docs/decisiones/0005-avisos-preguntan-al-encaje.md)).
 Quien publica lo hace con outbox; quien consume, con idempotencia y cola de errores.
 
-Lo siguiente: el vídeo de la demo.
+**Vídeo de la demo en AWS** (45 s): [`docs/demo-aws.mp4`](docs/demo-aws.mp4). Montado con las capturas de la demo (`herramientas/video/montar.sh`): el clúster se apagó tras grabarlas, porque mantenerlo encendido cuesta dinero cada hora.
 
 ## Seguridad y pasarela
 
