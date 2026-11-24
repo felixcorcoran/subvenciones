@@ -22,6 +22,7 @@ import org.apache.kafka.clients.admin.NewTopic;
 import es.felixcorcoran.subvenciones.recogida.adaptadores.salida.bdns.BdnsHttp;
 import es.felixcorcoran.subvenciones.recogida.adaptadores.salida.outbox.OutboxPostgres;
 import es.felixcorcoran.subvenciones.recogida.adaptadores.salida.outbox.RelevoOutbox;
+import es.felixcorcoran.subvenciones.recogida.adaptadores.salida.outbox.Traza;
 import es.felixcorcoran.subvenciones.recogida.adaptadores.salida.persistencia.AlmacenPostgres;
 import es.felixcorcoran.subvenciones.recogida.adaptadores.salida.persistencia.TransaccionesSpring;
 import es.felixcorcoran.subvenciones.recogida.aplicacion.Almacen;
@@ -71,13 +72,26 @@ public class ServicioRecogidaApplication {
 	}
 
 	@Bean
-	Eventos eventos(JdbcClient jdbc, JsonMapper json, Clock reloj) {
-		return new OutboxPostgres(jdbc, json, reloj);
+	Eventos eventos(JdbcClient jdbc, JsonMapper json, Clock reloj, Traza traza) {
+		return new OutboxPostgres(jdbc, json, reloj, traza);
 	}
 
 	@Bean
-	RelevoOutbox relevoOutbox(JdbcClient jdbc, KafkaTemplate<String, String> kafka, TransactionTemplate transaccion) {
-		return new RelevoOutbox(jdbc, kafka, transaccion);
+	RelevoOutbox relevoOutbox(JdbcClient jdbc, KafkaTemplate<String, String> kafka, TransactionTemplate transaccion, Traza traza) {
+		return new RelevoOutbox(jdbc, kafka, transaccion, traza);
+	}
+
+	/** Eventos pendientes de la outbox y antigüedad del más viejo, para el panel y las alertas */
+	@Bean
+	es.felixcorcoran.subvenciones.observabilidad.MetricasDeOutbox metricasDeOutbox(JdbcClient jdbc, Clock reloj) {
+		return new es.felixcorcoran.subvenciones.observabilidad.MetricasDeOutbox(jdbc, reloj);
+	}
+
+	/** La traza a través de la outbox; sin trazas configuradas, no hace nada */
+	@Bean
+	Traza traza(org.springframework.beans.factory.ObjectProvider<io.micrometer.tracing.Tracer> tracer,
+			org.springframework.beans.factory.ObjectProvider<io.micrometer.tracing.propagation.Propagator> propagador) {
+		return new Traza(tracer.getIfAvailable(), propagador.getIfAvailable());
 	}
 
 	@Bean

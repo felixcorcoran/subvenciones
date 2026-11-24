@@ -17,6 +17,7 @@
 
 	<modules>
 		<module>seguridad</module>
+		<module>observabilidad</module>
 		<module>servicio-encaje</module>
 		<module>servicio-recogida</module>
 		<module>servicio-lectura</module>
@@ -35,6 +36,11 @@
 			<dependency>
 				<groupId>es.felixcorcoran.subvenciones</groupId>
 				<artifactId>seguridad</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>es.felixcorcoran.subvenciones</groupId>
+				<artifactId>observabilidad</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

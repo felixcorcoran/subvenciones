@@ -1,0 +1,147 @@
+# Alertas de la plataforma. Grafana las evalúa cada minuto y avisa por correo (en local, a Mailpit:
+# http://localhost:8025). Sin datos no avisa: un servicio que aún no ha mandado métricas no es un fallo.
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: correo-operaciones
+    receivers:
+      - uid: correo-operaciones
+        type: email
+        settings:
+          addresses: operaciones@subvenciones.local
+          singleEmail: true
+
+policies:
+  - orgId: 1
+    receiver: correo-operaciones
+    group_by: ["alertname", "job"]
+    group_wait: 30s
+    group_interval: 5m
+    repeat_interval: 4h
+
+groups:
+  - orgId: 1
+    name: plataforma
+    folder: Subvenciones
+    interval: 1m
+    rules:
+      # Un contador que aparece por primera vez no tiene valor anterior, así que increase() no lo ve:
+      # se compara con hace 15 minutos y, si entonces no existía, cuenta entero
+      - uid: cola-de-errores
+        title: Mensajes en una cola de errores
+        condition: C
+        data:
+          - refId: A
+            relativeTimeRange: { from: 900, to: 0 }
+            datasourceUid: prometheus
+            model:
+              refId: A
+              instant: true
+              expr: >-
+                (sum by (job, topico) (subvenciones_kafka_cola_errores_total)
+                  - sum by (job, topico) (subvenciones_kafka_cola_errores_total offset 15m)) > 0
+                or (sum by (job, topico) (subvenciones_kafka_cola_errores_total)
+                  unless sum by (job, topico) (subvenciones_kafka_cola_errores_total offset 15m))
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator: { type: gt, params: [0] }
+        for: 0s
+        noDataState: OK
+        execErrState: Error
+        labels: { gravedad: aviso }
+        annotations:
+          summary: "{{ $labels.job }} ha apartado mensajes de {{ $labels.topico }} a su cola de errores"
+          description: >-
+            Mensajes de Kafka que no se pueden aplicar (JSON roto, evento desconocido…). No bloquean
+            lo demás, pero hay que mirarlos a mano en la DLT.
+
+      - uid: outbox-atascada
+        title: La outbox no publica
+        condition: C
+        data:
+          - refId: A
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              refId: A
+              instant: true
+              expr: max by (job) (subvenciones_outbox_antiguedad_seconds)
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator: { type: gt, params: [300] }
+        for: 0s
+        noDataState: OK
+        execErrState: Error
+        labels: { gravedad: grave }
+        annotations:
+          summary: "{{ $labels.job }} lleva más de 5 minutos sin publicar eventos en Kafka"
+          description: >-
+            Los eventos siguen guardados en la outbox y saldrán cuando Kafka responda, pero mientras
+            tanto los demás servicios no se enteran de los cambios.
+
+      - uid: errores-5xx
+        title: Errores 5xx
+        condition: C
+        data:
+          - refId: A
+            relativeTimeRange: { from: 600, to: 0 }
+            datasourceUid: prometheus
+            model:
+              refId: A
+              instant: true
+              expr: sum by (job) (increase(http_server_requests_milliseconds_count{status=~"5..", uri!~"/actuator.*"}[10m]))
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator: { type: gt, params: [5] }
+        for: 0s
+        noDataState: OK
+        execErrState: Error
+        labels: { gravedad: grave }
+        annotations:
+          summary: "{{ $labels.job }}: más de 5 errores 5xx en 10 minutos"
+
+      # Un servicio que mandaba métricas en la última hora y ha dejado de hacerlo hace 3 minutos
+      - uid: servicio-callado
+        title: Un servicio ha dejado de mandar métricas
+        condition: C
+        data:
+          - refId: A
+            relativeTimeRange: { from: 3600, to: 0 }
+            datasourceUid: prometheus
+            model:
+              refId: A
+              instant: true
+              expr: >-
+                group by (job) (last_over_time(target_info[1h]))
+                unless group by (job) (last_over_time(target_info[3m]))
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator: { type: gt, params: [0] }
+        for: 0s
+        noDataState: OK
+        execErrState: Error
+        labels: { gravedad: grave }
+        annotations:
+          summary: "{{ $labels.job }} no manda métricas desde hace más de 3 minutos"
+          description: Puede estar caído o sin conexión con el colector de OpenTelemetry.

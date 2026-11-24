@@ -5,6 +5,7 @@ COPY .mvn .mvn
 COPY mvnw pom.xml ./
 # Todos los pom (Maven tiene que ver todos los módulos del proyecto padre); el código, solo el que hace falta
 COPY seguridad/pom.xml seguridad/
+COPY observabilidad/pom.xml observabilidad/
 COPY servicio-encaje/pom.xml servicio-encaje/
 COPY servicio-recogida/pom.xml servicio-recogida/
 COPY servicio-lectura/pom.xml servicio-lectura/
@@ -13,6 +14,7 @@ COPY servicio-preguntas/pom.xml servicio-preguntas/
 COPY pasarela/pom.xml pasarela/
 RUN sh mvnw -B -q -pl servicio-avisos -am dependency:go-offline
 COPY seguridad/src seguridad/src
+COPY observabilidad/src observabilidad/src
 COPY servicio-avisos/src servicio-avisos/src
 RUN sh mvnw -B -q -pl servicio-avisos -am package -DskipTests \
  && java -Djarmode=tools -jar servicio-avisos/target/servicio-avisos-*.jar extract --layers --launcher --destination /extraido

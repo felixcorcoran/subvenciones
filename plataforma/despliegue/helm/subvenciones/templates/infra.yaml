@@ -1,0 +1,222 @@
+{{- if .Values.infra.activada }}
+{{- /*
+  La infraestructura para un clúster local: una réplica de cada cosa y sin volúmenes (los datos
+  se pierden al borrar el pod). En un clúster de verdad esto serían servicios gestionados.
+*/ -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: infra
+data:
+  crear-bases.sql: |
+{{ .Files.Get "ficheros/crear-bases.sql" | indent 4 }}
+  realm-subvenciones.json: |
+{{ .Files.Get "ficheros/realm-subvenciones.json" | indent 4 }}
+---
+# El panel y las alertas de Grafana (copias de infra/grafana)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana
+data:
+  paneles.yaml: |
+{{ .Files.Get "ficheros/grafana/paneles.yaml" | indent 4 }}
+  alertas.yaml: |
+{{ .Files.Get "ficheros/grafana/alertas.yaml" | indent 4 }}
+  panel-plataforma.json: |
+{{ .Files.Get "ficheros/grafana/panel-plataforma.json" | indent 4 }}
+{{- if .Values.infra.postgres }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1
+  strategy: { type: Recreate }
+  selector:
+    matchLabels: { app.kubernetes.io/name: postgres }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: postgres }
+    spec:
+      containers:
+        - name: postgres
+          image: pgvector/pgvector:pg17
+          ports: [{ containerPort: 5432 }]
+          env:
+            - { name: POSTGRES_DB, value: subvenciones }
+            - { name: POSTGRES_USER, value: {{ .Values.comun.baseDeDatos.usuario | quote }} }
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef: { name: subvenciones, key: base-de-datos }
+          volumeMounts:
+            - { name: infra, mountPath: /docker-entrypoint-initdb.d/crear-bases.sql, subPath: crear-bases.sql }
+          # Por TCP y contra la última base que se crea: no está listo hasta acabar su reinicio inicial
+          readinessProbe:
+            exec:
+              command: ["sh", "-c", "PGPASSWORD=$POSTGRES_PASSWORD psql -h 127.0.0.1 -U $POSTGRES_USER -d preguntas -c 'select 1'"]
+            periodSeconds: 5
+      volumes:
+        - name: infra
+          configMap: { name: infra }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+spec:
+  selector: { app.kubernetes.io/name: postgres }
+  ports: [{ port: 5432 }]
+{{- end }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka
+spec:
+  replicas: 1
+  strategy: { type: Recreate }
+  selector:
+    matchLabels: { app.kubernetes.io/name: kafka }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: kafka }
+    spec:
+      # Kubernetes inyecta KAFKA_PORT=tcp://… por el Service «kafka», y la imagen lo toma por configuración
+      enableServiceLinks: false
+      containers:
+        - name: kafka
+          image: apache/kafka:4.1.0
+          ports: [{ containerPort: 29092 }]
+          env:
+            - { name: KAFKA_NODE_ID, value: "1" }
+            - { name: KAFKA_PROCESS_ROLES, value: "broker,controller" }
+            - { name: KAFKA_LISTENERS, value: "INTERNO://:29092,CONTROLADOR://:9093" }
+            - { name: KAFKA_ADVERTISED_LISTENERS, value: "INTERNO://kafka:29092" }
+            - { name: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP, value: "INTERNO:PLAINTEXT,CONTROLADOR:PLAINTEXT" }
+            - { name: KAFKA_INTER_BROKER_LISTENER_NAME, value: INTERNO }
+            - { name: KAFKA_CONTROLLER_LISTENER_NAMES, value: CONTROLADOR }
+            - { name: KAFKA_CONTROLLER_QUORUM_VOTERS, value: "1@localhost:9093" }
+            - { name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR, value: "1" }
+            - { name: KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR, value: "1" }
+            - { name: KAFKA_TRANSACTION_STATE_LOG_MIN_ISR, value: "1" }
+          readinessProbe:
+            tcpSocket: { port: 29092 }
+            periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka
+spec:
+  selector: { app.kubernetes.io/name: kafka }
+  ports: [{ port: 29092 }]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app.kubernetes.io/name: keycloak }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: keycloak }
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: keycloak
+          image: quay.io/keycloak/keycloak:26.8.2
+          args: ["start-dev", "--import-realm"]
+          ports: [{ containerPort: 8080 }]
+          env:
+            - { name: KC_HOSTNAME, value: "http://localhost:8180" }
+            - { name: KC_HOSTNAME_BACKCHANNEL_DYNAMIC, value: "true" }
+          volumeMounts:
+            - { name: infra, mountPath: /opt/keycloak/data/import/realm-subvenciones.json, subPath: realm-subvenciones.json }
+          readinessProbe:
+            httpGet: { path: /realms/subvenciones, port: 8080 }
+            periodSeconds: 5
+            failureThreshold: 60
+      volumes:
+        - name: infra
+          configMap: { name: infra }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keycloak
+spec:
+  selector: { app.kubernetes.io/name: keycloak }
+  ports: [{ port: 8080 }]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lgtm
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app.kubernetes.io/name: lgtm }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: lgtm }
+    spec:
+      containers:
+        - name: lgtm
+          image: grafana/otel-lgtm:0.11.10
+          ports: [{ containerPort: 3000 }, { containerPort: 4318 }]
+          # Las alertas llegan por correo a Mailpit
+          env:
+            - { name: GF_SMTP_ENABLED, value: "true" }
+            - { name: GF_SMTP_HOST, value: "mailpit:1025" }
+            - { name: GF_SMTP_FROM_ADDRESS, value: "grafana@subvenciones.local" }
+            - { name: GF_SMTP_STARTTLS_POLICY, value: "NoStartTLS" }
+          volumeMounts:
+            - { name: grafana, mountPath: /otel-lgtm/grafana/conf/provisioning/dashboards/subvenciones.yaml, subPath: paneles.yaml }
+            - { name: grafana, mountPath: /otel-lgtm/grafana/conf/provisioning/alerting/subvenciones.yaml, subPath: alertas.yaml }
+            - { name: grafana, mountPath: /otel-lgtm/subvenciones/panel-plataforma.json, subPath: panel-plataforma.json }
+      volumes:
+        - name: grafana
+          configMap: { name: grafana }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lgtm
+spec:
+  selector: { app.kubernetes.io/name: lgtm }
+  ports:
+    - { name: grafana, port: 3000 }
+    - { name: otlp, port: 4318 }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mailpit
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app.kubernetes.io/name: mailpit }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: mailpit }
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: mailpit
+          image: axllent/mailpit:v1.27
+          ports: [{ containerPort: 8025 }, { containerPort: 1025 }]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mailpit
+spec:
+  selector: { app.kubernetes.io/name: mailpit }
+  ports:
+    - { name: web, port: 8025 }
+    - { name: smtp, port: 1025 }
+{{- end }}
