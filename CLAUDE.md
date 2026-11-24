@@ -54,6 +54,7 @@ Node 24. Más detalle en `README.md`.
 
 ## Reglas
 
+- Commits: autor Félix Corcoran (el email de su cuenta de GitHub, `git config user.name/user.email` en el repo); Claude solo como `Co-Authored-By`.
 - **Nada inventado:** lo que no dice la convocatoria queda como «no consta».
 - Si un dato no se puede saber, la ayuda va a «Revisa», nunca a «Puedes pedirla».
 - **`encaje.ts` tiene un contrato con el repo `../alertas`**: su `EncajeService` (Java) lo traduce
