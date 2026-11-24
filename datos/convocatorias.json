@@ -1,5 +1,5 @@
 {
-	"actualizado": "2026-11-24T16:14:21.903Z",
+	"actualizado": "2026-11-24T23:35:15.623Z",
 	"convocatorias": [
 		{
 			"codigo": "944519",
@@ -972,9 +972,48 @@
 				1561998
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/944288",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Convocatoria de los Premios al Trabajo Autónomo en Andalucía para el año 2026, con el fin de reconocer públicamente el trabajo y dedicación de las personas autónomas. Cada modalidad galardonada recibe una cuantía económica, un galardón y un diploma acreditativo.",
+				"titular": "Premios al Trabajo Autónomo en Andalucía 2026",
+				"paraQuien": "Personas trabajadoras autónomas y entidades participantes que cumplan los requisitos de las bases reguladoras en Andalucía.",
+				"importe": "4.800 € en metálico por modalidad premiada, además de galardón y diploma acreditativo.",
+				"importeMaximo": 4800,
+				"plazo": "Desde el día siguiente a la publicación del extracto en el BOJA hasta el 29 de enero de 2027.",
+				"plazoFin": "2027-01-29",
+				"requisitos": [
+					"Cumplir los requisitos generales exigidos en el artículo 5 de la Orden de 29 de octubre de 2025.",
+					"Presentar candidatura a una única modalidad de premio."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "no_consta",
+					"emprendedores": "no_consta",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Acceder electrónicamente a la oficina virtual de la Consejería de Empleo, Empresa y Trabajo Autónomo.",
+					"Presentar la solicitud normalizada (Anexo I) y la documentación anexa requerida.",
+					"Utilizar un sistema de firma electrónica cualificada o avanzada basado en certificado electrónico."
+				],
+				"documentacion": [
+					"Formulario del Anexo I de Solicitud-Candidatura.",
+					"Memoria documental descriptiva adaptada a la modalidad de premio a la que se opta.",
+					"Documento o certificado expedido por la entidad proponente sobre reconocimientos o distinciones previas, si corresponde.",
+					"Anexo V de certificado de apoderamiento en caso de presentar la candidatura mediante representante."
+				],
+				"dondeSolicitar": "En la sede electrónica y oficina virtual de la Consejería de Empleo, Empresa y Trabajo Autónomo de la Junta de Andalucía.",
+				"enlaceSolicitud": "https://juntadeandalucia.es/servicios/sede/tramites/procedimientos/detalle/25922.html"
+			},
 			"comprobada": "2026-11-24",
-			"alta": "2026-11-24"
+			"alta": "2026-11-24",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "944280",
@@ -1319,9 +1358,68 @@
 				1561555
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/944133",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "La Diputación Provincial de Jaén concede subvenciones a pequeñas y medianas empresas agroalimentarias para actuaciones de comercialización, marketing, diseño de envasado, presencia en ferias e inversiones en maquinaria nueva, software y venta por internet.",
+				"titular": "Ayudas a empresas agroalimentarias de la provincia de Jaén",
+				"paraQuien": "Autónomos y PYMEs agroalimentarias o comercios minoristas de alimentación con domicilio fiscal y actividad en la provincia de Jaén.",
+				"importe": "Hasta 4.000 € en la Línea 1 (comercialización) y hasta 15.000 € en la Línea 2 (inversiones en transformación).",
+				"importeMaximo": 15000,
+				"plazo": "20 días hábiles a contar desde el día siguiente a la publicación del extracto de la convocatoria en el Boletín Oficial de la Provincia de Jaén.",
+				"plazoFin": null,
+				"requisitos": [
+					"Tener domicilio fiscal y desarrollar la actividad en la provincia de Jaén.",
+					"Tener la consideración de PYME a la fecha de fin del plazo de solicitud.",
+					"Estar de alta en el IAE de producción, elaboración o comercio minorista alimentario.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
+					"No estar incurso en las prohibiciones del artículo 13.2 de la Ley General de Subvenciones.",
+					"No pertenecer a sectores excluidos como restauración, comercio al por mayor o alimentación animal."
+				],
+				"gastos": [
+					"Estudios de mercado, logística, marketing y publicidad.",
+					"Diseño de envases y packaging que incluyan la marca Degusta Jaén.",
+					"Asistencia a ferias, eventos gastronómicos y formación comercial.",
+					"Compra de maquinaria nueva y equipos de transformación.",
+					"Programas informáticos, patentes, marcas y desarrollo de venta en línea."
+				],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": 249,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [
+					"digitalizar",
+					"invertir",
+					"exportar",
+					"formacion"
+				],
+				"comoPedir": [
+					"Acceder a la sede electrónica de la Diputación de Jaén.",
+					"Rellenar el modelo de solicitud (Anexo I).",
+					"Adjuntar la memoria del proyecto, el plan financiero y la documentación exigida.",
+					"Presentar la solicitud de forma telemática."
+				],
+				"documentacion": [
+					"Solicitud oficial del Anexo I.",
+					"Memoria explicativa valorada con calendario y presupuesto.",
+					"Plan financiero detallado (Anexo II).",
+					"Acreditación de cumplimiento de requisitos (Anexo III).",
+					"Certificados de estar al corriente con Hacienda y Seguridad Social.",
+					"Declaración responsable de otras subvenciones obtenidas o pedidas.",
+					"Certificado de situación censal actualizado.",
+					"Tarjeta de NIF o CIF y escrituras con nombramiento de representante si es sociedad."
+				],
+				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de Jaén.",
+				"enlaceSolicitud": "https://sede.dipujaen.es/AyudaSubvenciones"
+			},
 			"comprobada": "2026-11-24",
-			"alta": "2026-11-23"
+			"alta": "2026-11-23",
+			"iaModelo": "gemini-3.6-flash"
 		},
 		{
 			"codigo": "944127",
@@ -3011,9 +3109,51 @@
 				1560936
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/943900",
-			"ia": null,
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Ayuda económica de 50 euros para comercios y empresas de servicios que participen en la campaña de Navidad 2026 en Loeches.",
+				"titular": "Ayudas para comercios participantes en la Campaña de Navidad de Loeches",
+				"paraQuien": "Personas físicas o jurídicas titulares de establecimientos comerciales, empresas de servicios o negocios en Loeches.",
+				"importe": "50,00 euros por cada establecimiento participante, con un presupuesto total máximo de 1.500,00 euros.",
+				"importeMaximo": 50,
+				"plazo": "7 días naturales desde el día siguiente a la publicación de la convocatoria en el Boletín Oficial de la Comunidad de Madrid.",
+				"plazoFin": null,
+				"requisitos": [
+					"Comprometerse a aportar un regalo, producto o servicio propio de la actividad comercial.",
+					"Tener el establecimiento comercial o negocio ubicado físicamente en el municipio de Loeches.",
+					"Estar dado de alta en la actividad económica y disponer de las licencias y autorizaciones exigibles.",
+					"Estar abierto al público y desarrollar la actividad durante el periodo de campaña.",
+					"Inscribirse formalmente a través de la sede electrónica en el plazo establecido.",
+					"Colaborar en la difusión y promoción colocando el material identificativo del Ayuntamiento.",
+					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Loeches"
+				},
+				"dudas": "No se indica la fecha exacta de publicación en el Boletín Oficial de la Comunidad de Madrid para calcular el cierre del plazo.",
+				"finalidades": [],
+				"comoPedir": [
+					"Rellenar el modelo normalizado disponible en la sede electrónica del Ayuntamiento.",
+					"Presentar la solicitud y la documentación obligatoria a través de la Sede Electrónica."
+				],
+				"documentacion": [
+					"Modelo normalizado de solicitud con los datos identificativos, nombre comercial, dirección, teléfono, correo y cuenta bancaria.",
+					"Fotocopia del DNI del titular.",
+					"Certificado de titularidad de la cuenta bancaria."
+				],
+				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Loeches.",
+				"enlaceSolicitud": null
+			},
 			"comprobada": "2026-11-24",
-			"alta": "2026-11-23"
+			"alta": "2026-11-23",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "943856",
@@ -3064,9 +3204,48 @@
 				1560844
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/943856",
-			"ia": null,
+			"ia": {
+				"categoria": "premio",
+				"resumen": "Concurso de decoración de escaparates y establecimientos para la campaña de Navidad en Massanassa, con premios de hasta 700 euros.",
+				"titular": "Premios de decoración de escaparates en Massanassa",
+				"paraQuien": "Empresas comerciales o de servicios con establecimiento en Massanassa.",
+				"importe": "Primer premio de 700 €, segundo de 500 €, tercero de 350 € y premio al escaparate más innovador de 350 €.",
+				"importeMaximo": 700,
+				"plazo": "Desde el día siguiente de la publicación en el Boletín Oficial de la Provincia de Valencia hasta el 6 de diciembre de 2026.",
+				"plazoFin": "2026-12-06",
+				"requisitos": [
+					"Tener el establecimiento en el término urbano de Massanassa.",
+					"Ser una empresa comercial o de servicios.",
+					"Decorar el establecimiento con temática navideña.",
+					"Mantener la decoración expuesta desde el 5 de diciembre de 2026 al 6 de enero de 2027."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": "Massanassa"
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"Rellenar el modelo normalizado aprobado por el Ayuntamiento de Massanassa.",
+					"Presentarlo en el Registro General del Ayuntamiento pidiendo cita previa o de forma telemática."
+				],
+				"documentacion": [
+					"Modelo normalizado de solicitud.",
+					"Documento de Comunicación de Mantenimiento de Terceros (si resulta ganador).",
+					"Declaración jurada de no estar incurso en prohibiciones de la Ley General de Subvenciones (si resulta ganador)."
+				],
+				"dondeSolicitar": "En el Registro General del Ayuntamiento de Massanassa o en su sede electrónica.",
+				"enlaceSolicitud": "https://www.massanassa.es/"
+			},
 			"comprobada": "2026-11-24",
-			"alta": "2026-11-23"
+			"alta": "2026-11-23",
+			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
 			"codigo": "943839",
@@ -7518,20 +7697,20 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942880",
 			"ia": {
 				"categoria": "ayuda",
-				"resumen": "Ayudas dirigidas a subvencionar los costes generados por las actividades del control de rendimiento lechero en explotaciones de ganado vacuno, ovino y caprino en Cataluña durante el año 2027.",
+				"resumen": "Ayudas para subvencionar los costes de las actividades de control de rendimiento lechero en explotaciones ganaderas de Cataluña.",
 				"titular": "Ayudas al control de rendimiento lechero en Cataluña",
-				"paraQuien": "Titulares de explotaciones ganaderas de ganado bovino, ovino y caprino situadas en Cataluña.",
-				"importe": "Máximo de 10 € por lactación en vacuno y 5 € en ovino y caprino, con un límite general del 70 % de los costes subvencionables.",
+				"paraQuien": "Explotaciones ganaderas en Cataluña.",
+				"importe": "Hasta 10 euros por vacuno y 5 euros por ovino y caprino, limitado al 70 por ciento de los gastos.",
 				"importeMaximo": null,
-				"plazo": "15 días hábiles desde el día siguiente a la publicación de la resolución en el Diari Oficial de la Generalitat de Catalunya (DOGC).",
+				"plazo": "15 días hábiles a partir del día siguiente al de la publicación en el Diari Oficial de la Generalitat de Catalunya.",
 				"plazoFin": null,
 				"requisitos": [
-					"Tener la explotación en el ámbito territorial de Cataluña.",
-					"Realizar actividades de control del rendimiento lechero.",
-					"Cumplir con los requisitos de la persona beneficiaria fijados en las bases reguladoras."
+					"Tener la explotación en Cataluña.",
+					"Cumplir los requisitos de las bases reguladoras.",
+					"Realizar la actividad subvencionable dentro de los plazos establecidos."
 				],
 				"gastos": [
-					"Costes derivados de las actividades del control de rendimiento lechero."
+					"Costes que generen las actividades del control de rendimiento lechero."
 				],
 				"condiciones": {
 					"autonomos": "no_consta",
@@ -7542,23 +7721,23 @@
 					"antiguedadMaxMeses": null,
 					"municipio": null
 				},
-				"dudas": "La convocatoria remite la lista detallada de requisitos, gastos y documentación a lo establecido en las bases reguladoras.",
-				"finalidades": [],
+				"dudas": "No se detallan los requisitos específicos de los beneficiarios ya que remite a las bases reguladoras.",
+				"finalidades": [
+					"invertir"
+				],
 				"comoPedir": [
-					"Acceder a la Sede electrónica correspondiente.",
-					"Completar la solicitud según los modelos oficiales disponibles.",
-					"Presentar la solicitud de forma telemática."
+					"Presentar la solicitud de manera telemática.",
+					"Formalizarla según los modelos de la Sede electrónica."
 				],
 				"documentacion": [
-					"Documentación establecida en el apartado 7 de las bases reguladoras."
+					"La establecida en el apartado 7 de las bases reguladoras."
 				],
-				"dondeSolicitar": "En la Sede electrónica de la Generalitat de Catalunya.",
+				"dondeSolicitar": "En la Sede electrónica de la Generalitat de Catalunya",
 				"enlaceSolicitud": null
 			},
 			"comprobada": "2026-11-24",
 			"alta": "2026-11-18",
-			"iaModelo": "gemini-3.6-flash",
-			"iaRevisar": "documento nuevo",
+			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
 				{
 					"fecha": "2026-11-23",
@@ -88781,15 +88960,15 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-24T16:14:21.903Z",
+			"fecha": "2026-11-24T23:35:15.623Z",
 			"nuevasSinFicha": 0,
-			"fichasComprobadas": 388,
+			"fichasComprobadas": 0,
 			"fichasFallidas": 2
 		},
 		"lectura": {
-			"fecha": "2026-11-24T16:29:09.968Z",
-			"pendientes": 272,
-			"leidas": 20,
+			"fecha": "2026-11-24T23:44:54.982Z",
+			"pendientes": 267,
+			"leidas": 5,
 			"fallidas": 0,
 			"ultimaLectura": "2026-11-24",
 			"conError": 17,
