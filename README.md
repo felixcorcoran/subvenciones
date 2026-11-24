@@ -41,6 +41,10 @@ Una GitHub Action ([`recoger.yml`](.github/workflows/recoger.yml)) lo ejecuta ca
 - Gemini en su nivel gratuito, con una cadena de modelos: si uno agota su cupo diario se pasa al siguiente, y lo pendiente sigue al día siguiente.
 - GitHub Actions y Vercel, en sus planes gratuitos. Las cabeceras de seguridad y caché están en `vercel.json`.
 
+## Cómo trabajo
+
+El producto, la arquitectura y las decisiones son míos: qué se construye, cómo se reparte entre piezas, qué reglas no se pueden romper (nada inventado, coste cero, privacidad) y cuándo algo está listo. Para implementar uso Claude Code como asistente, y por eso hay commits en los que figura como coautor o como autor. Cada cambio pasa por un pull request que reviso y fusiono yo, y lo validan las pruebas y la CI de cada repositorio antes de llegar a producción.
+
 ## En local
 
 ```sh
