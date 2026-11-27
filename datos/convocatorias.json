@@ -1,6 +1,85 @@
 {
-	"actualizado": "2026-11-26T23:12:54.484Z",
+	"actualizado": "2026-11-27T15:31:23.621Z",
 	"convocatorias": [
+		{
+			"codigo": "945147",
+			"titulo": "Ayudas Complementarias Estado POSEI 2025",
+			"organo": {
+				"nivel1": "AUTONOMICA",
+				"nivel2": "CANARIAS",
+				"nivel3": "CONSEJERÍA DE AGRICULTURA, GANADERÍA, PESCA Y SOBERANÍA ALIMENTARIA"
+			},
+			"sede": null,
+			"publicada": "2026-11-26",
+			"tipo": "Concurrencia competitiva - canónica",
+			"presupuesto": 7366618.63,
+			"beneficiarios": [
+				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+			],
+			"sectores": [
+				{
+					"codigo": "01",
+					"nombre": "Agricultura, ganadería, caza y servicios relacionados con las mismas"
+				}
+			],
+			"regiones": [
+				{
+					"codigo": "ES7",
+					"nombre": "CANARIAS"
+				}
+			],
+			"finalidad": "Agricultura, Pesca y Alimentación",
+			"inicio": null,
+			"fin": null,
+			"textoInicio": "No hay plazo de presentación de solicitudes",
+			"textoFin": "No hay plazo de presentación de solicitudes",
+			"bases": "https://www.gobiernodecanarias.org/boc/2019/109/001.html",
+			"documento": {
+				"id": 1564085,
+				"nombre": "Documento convocatoria castellano.PDF"
+			},
+			"docs": [
+				1564085
+			],
+			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/945147",
+			"ia": {
+				"categoria": "ayuda",
+				"resumen": "Se convocan fondos complementarios a las ayudas de Estado del programa POSEI (campaña 2025) para apoyar a los sectores agrícola y ganadero en Canarias. Las concesiones se realizan de forma directa a quienes ya solicitaron las ayudas equivalentes de la campaña 2025.",
+				"titular": "Ayudas complementarias POSEI 2025 para el sector primario de Canarias",
+				"paraQuien": "Agricultores, ganaderos y empresas del sector primario en Canarias que hayan sido solicitantes y perceptores de las ayudas POSEI (campaña 2025) con cargo al FEAGA.",
+				"importe": "Presupuesto total de 7.366.618,63 € distribuido entre las distintas líneas de producción vegetal y ganadera.",
+				"importeMaximo": null,
+				"plazo": "No se abre nuevo plazo de solicitud; se asigna automáticamente a las solicitudes presentadas en la campaña 2025 del POSEI.",
+				"plazoFin": null,
+				"requisitos": [
+					"Haber presentado solicitud para las mismas medidas en la convocatoria de la campaña 2025 del POSEI.",
+					"Ser perceptor de la ayuda con cargo al Fondo Europeo Agrícola de Garantía Agraria (FEAGA) para la campaña 2025.",
+					"Realizar la actividad agrícola o ganadera subvencionable en la Comunidad Autónoma de Canarias."
+				],
+				"gastos": [],
+				"condiciones": {
+					"autonomos": "si",
+					"sociedades": "si",
+					"emprendedores": "no",
+					"maxEmpleados": null,
+					"antiguedadMinMeses": null,
+					"antiguedadMaxMeses": null,
+					"municipio": null
+				},
+				"dudas": null,
+				"finalidades": [],
+				"comoPedir": [
+					"No es necesario presentar una nueva solicitud.",
+					"Las solicitudes presentadas para la campaña 2025 del POSEI-FEAGA se corresponden automáticamente con esta convocatoria."
+				],
+				"documentacion": [],
+				"dondeSolicitar": null,
+				"enlaceSolicitud": "https://sede.gobiernodecanarias.org"
+			},
+			"comprobada": "2026-11-27",
+			"alta": "2026-11-27",
+			"iaModelo": "gemini-3.6-flash"
+		},
 		{
 			"codigo": "945135",
 			"titulo": "XX CONCURSO DE DECORACIÓN DE NADAL 2026",
@@ -81,7 +160,7 @@
 				"dondeSolicitar": "En la sede de la Asociación de Empresarios o en el Registro General del Ayuntamiento de Santa Comba",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -181,7 +260,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -281,7 +360,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -376,7 +455,7 @@
 				"dondeSolicitar": "En el Registro Electrónico del Ayuntamiento de Los Alcázares o en los registros de la Ley 39/2015.",
 				"enlaceSolicitud": "https://sede.losalcazares.regiondemurcia.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -480,7 +559,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de Gran Canaria.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -581,7 +660,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Generalitat.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -674,7 +753,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Alginet o en su registro general",
 				"enlaceSolicitud": "https://alginet.sedipualba.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.7-flash"
 		},
@@ -768,7 +847,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Generalitat de Catalunya",
 				"enlaceSolicitud": "https://web.gencat.cat/ca/tramits/tramits-temes/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
@@ -866,7 +945,7 @@
 				"dondeSolicitar": "En la Sede electrónica de la Generalitat de Catalunya",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -960,7 +1039,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Orduña o en el Registro de Entrada Municipal.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -1057,7 +1136,7 @@
 				"dondeSolicitar": "En el registro electrónico de la UPV o en el Registro Electrónico Común de la Administración del Estado.",
 				"enlaceSolicitud": "https://sede.upv.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -1144,7 +1223,7 @@
 				"dondeSolicitar": "En el registro del Ayuntamiento de Malpica de Bergantiños de forma presencial o telemática.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -1308,7 +1387,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ministerio de Vivienda y Agenda Urbana",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"cambios": [
 				{
@@ -1408,7 +1487,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Junta de Comunidades de Castilla-La Mancha",
 				"enlaceSolicitud": "https://www.jccm.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -1522,7 +1601,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ministerio de Cultura.",
 				"enlaceSolicitud": "https://sede.mcu.gob.es/SedeApp/SecuredArea/MiSitio/inicio"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -1615,7 +1694,7 @@
 				"dondeSolicitar": "En el Servicio de Dinamización Comercial del Ayuntamiento de Villanueva de la Serena (presencial, correo electrónico o teléfono)",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -1721,7 +1800,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Xunta de Galicia",
 				"enlaceSolicitud": "https://sede.xunta.gal/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -1806,7 +1885,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -1838,8 +1917,8 @@
 				}
 			],
 			"finalidad": "Cultura",
-			"inicio": null,
-			"fin": null,
+			"inicio": "2026-11-30",
+			"fin": "2026-12-22",
 			"textoInicio": "A partir del día siguiente a la publicación en BOE",
 			"textoFin": "Quince días hábiles a partir de la publicación en BOE",
 			"bases": "https://www.boe.es/eli/es/o/2010/11/10/cul2912",
@@ -1854,30 +1933,28 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/944743",
 			"ia": {
 				"categoria": "ayuda",
-				"resumen": "El Ministerio de Cultura convoca ayudas para promocionar el arte contemporáneo español a través de galerías de arte. Financian la participación en ferias internacionales de arte contemporáneo (en España o en el extranjero) y la realización de proyectos expositivos dentro de su programación anual entre el 1 de enero de 2026 y el 31 de diciembre de 2027.",
-				"titular": "Ayudas del Ministerio de Cultura al arte contemporáneo",
-				"paraQuien": "Galerías de arte con residencia fiscal en España, ya sean autónomos en RETA o sociedades con personalidad jurídica.",
-				"importe": "Hasta 15.000 € para ferias internacionales en España, hasta 10.000 € para programación anual y hasta 30.000 € para ferias internacionales fuera de España.",
+				"resumen": "Ayudas del Ministerio de Cultura para apoyar a las galerías de arte contemporáneo a través de la financiación de su programación anual y su asistencia a ferias internacionales de arte contemporáneo tanto en España como en el extranjero.",
+				"titular": "Ayudas a galerías para promocionar el arte contemporáneo español",
+				"paraQuien": "Galerías de arte administradas por autónomos (dados de alta en el RETA) o personas jurídicas con residencia fiscal en España.",
+				"importe": "Hasta 15.000 € para ferias en España, hasta 10.000 € para programación en la galería y hasta 30.000 € para ferias en el extranjero",
 				"importeMaximo": 30000,
-				"plazo": "15 días hábiles contados a partir del día siguiente a la publicación del extracto en el Boletín Oficial del Estado.",
-				"plazoFin": null,
+				"plazo": "15 días hábiles a contar desde el día siguiente a la publicación del extracto en el BOE (hasta el 22 de diciembre de 2026 según la BDNS).",
+				"plazoFin": "2026-12-22",
 				"requisitos": [
-					"Estar dado de alta como autónomo en el RETA o ser persona jurídica.",
-					"Tener la residencia fiscal en España.",
-					"Desarrollar actividades de galería de arte contemporáneo.",
-					"No pertenecer al sector público ni ser entidad sin ánimo de lucro.",
-					"No ser comunidad de bienes, sociedad civil ni agrupación sin personalidad jurídica.",
-					"Estar al corriente de las obligaciones tributarias y con la Seguridad Social.",
-					"Cumplir con la normativa sobre propiedad intelectual e inteligencia artificial si se aplican estas tecnologías."
+					"Estar dado de alta como autónomo (RETA) o ser persona jurídica con residencia fiscal en España.",
+					"Desarrollar actividades de promoción de arte contemporáneo (asistencia a ferias o programación en galerías).",
+					"No formar parte del sector público ni ser entidad sin ánimo de lucro, sociedad civil o comunidad de bienes.",
+					"Estar al corriente en el cumplimiento de las obligaciones tributarias y con la Seguridad Social.",
+					"No estar incurso en las prohibiciones para obtener la condición de beneficiario según la Ley General de Subvenciones.",
+					"Presentar una única solicitud por titular eligiendo una sola línea de ayuda."
 				],
 				"gastos": [
-					"Alquiler, montaje y acreditación del stand en ferias.",
+					"Acreditación, alquiler y montaje del stand en ferias de arte.",
 					"Transporte, seguro y embalaje de las obras de arte.",
-					"Gastos de viaje, alojamiento y manutención de personas ligadas a la organización o artistas.",
-					"Proyectos de comisariado y diseño expositivo.",
-					"Gastos de montaje e instalación de exposiciones.",
-					"Publicaciones gratuitas, acciones de comunicación y proyectos educativos.",
-					"Traducción y edición de textos a otros idiomas."
+					"Gastos de viaje, alojamiento y manutención del personal directamente relacionado con la actividad.",
+					"Proyectos de comisariado, diseño expositivo, montaje e instalación de exposiciones.",
+					"Publicaciones de carácter gratuito, comunicación y proyectos educativos vinculados.",
+					"Traducción y edición de textos a otros idiomas para ferias internacionales."
 				],
 				"condiciones": {
 					"autonomos": "si",
@@ -1890,29 +1967,39 @@
 				},
 				"dudas": null,
 				"finalidades": [
-					"exportar"
+					"exportar",
+					"invertir"
 				],
 				"comoPedir": [
-					"Descargar el modelo oficial de solicitud en la Sede Electrónica del Ministerio de Cultura.",
-					"Elegir una única línea de proyecto entre las tres disponibles.",
 					"Las personas jurídicas deben presentar la solicitud obligatoriamente en la Sede Electrónica del Ministerio de Cultura.",
-					"Las personas físicas pueden presentarla en la Sede Electrónica o de forma presencial en los registros oficiales y Correos."
+					"Las personas físicas pueden presentarla por la Sede Electrónica o de forma presencial en papel en los registros oficiales autorizados.",
+					"Descargar y rellenar los modelos oficiales normalizados disponibles en la sede electrónica.",
+					"Elegir únicamente una de las tres líneas de ayuda al presentar el proyecto."
 				],
 				"documentacion": [
-					"Memoria justificativa del proyecto (Anexo I).",
-					"Memoria de actividades realizadas en años anteriores (Anexo I).",
-					"Memoria económica con el presupuesto desglosado de ingresos y gastos (Anexo II).",
-					"Declaración responsable de otras ayudas solicitadas o concedidas.",
-					"Declaración responsable de ayudas sujetas al régimen de minimis.",
-					"Declaración responsable del cumplimiento de obligaciones de reintegro.",
-					"Declaración responsable de no estar incurso en prohibiciones para obtener subvenciones."
+					"Modelo oficial de solicitud cumplimentado.",
+					"Memoria justificativa de la actividad y su finalidad (Anexo I).",
+					"Memoria de las actividades y proyectos realizados en los años anteriores según la línea elegida (Anexo I).",
+					"Memoria económica con el presupuesto detallado de ingresos y gastos (Anexo II).",
+					"Declaración responsable de otras subvenciones o ayudas solicitadas o recibidas.",
+					"Declaración responsable sobre ayudas sujetas al régimen de minimis.",
+					"Declaraciones responsables relativas a no estar incurso en prohibiciones y al cumplimiento de obligaciones de reintegro."
 				],
-				"dondeSolicitar": "En la Sede Electrónica del Ministerio de Cultura.",
+				"dondeSolicitar": "En la Sede Electrónica del Ministerio de Cultura (o en registros oficiales presenciales para personas físicas).",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
-			"iaModelo": "gemini-3.6-flash"
+			"iaModelo": "gemini-3.6-flash",
+			"cambios": [
+				{
+					"fecha": "2026-11-27",
+					"campos": [
+						"inicio",
+						"fin"
+					]
+				}
+			]
 		},
 		{
 			"codigo": "944674",
@@ -1998,7 +2085,7 @@
 				"dondeSolicitar": "En el registro del Ayuntamiento de Vila de Cruces o a través de su sede electrónica.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2099,7 +2186,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ministerio de Cultura.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2241,7 +2328,7 @@
 				"dondeSolicitar": "En la sede electrónica del Instituto de Fomento de la Región de Murcia",
 				"enlaceSolicitud": "https://sede.institutofomentomurcia.es/infodirecto"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2330,7 +2417,7 @@
 				"dondeSolicitar": "En el Registro de Entrada del Ayuntamiento de Jaca o a través de su Sede Electrónica.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2420,7 +2507,7 @@
 				"dondeSolicitar": "En el Registro del Ayuntamiento de Olvera.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2518,7 +2605,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración de la Junta de Comunidades de Castilla-La Mancha",
 				"enlaceSolicitud": "https://www.jccm.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2610,7 +2697,7 @@
 				"dondeSolicitar": "En la aplicación Innovación Docente/Mis solicitudes PICO de la Universidad de Castilla-La Mancha.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2700,7 +2787,7 @@
 				"dondeSolicitar": "En la sede electrónica del Patronato Provincial Escuela de Tauromaquia de Badajoz.",
 				"enlaceSolicitud": "https://sede.dip-badajoz.es/portal/entidades.do?ent_id=18&idioma=1"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-25",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2813,7 +2900,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de Jaén",
 				"enlaceSolicitud": "https://sede.dipujaen.es/AyudaSubvenciones"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -2909,7 +2996,7 @@
 				"dondeSolicitar": "Por vía telemática a través de la Sede electrónica de la Generalitat de Catalunya.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3012,7 +3099,7 @@
 				"dondeSolicitar": "En el Registro Electrónico de la sede electrónica del Ayuntamiento de Sevilla.",
 				"enlaceSolicitud": "https://www.sevilla.org/sede-electronica"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3122,7 +3209,7 @@
 				"dondeSolicitar": "En la sede electrónica del Gobierno Vasco o presencialmente en dependencias del Departamento de Alimentación, Desarrollo Rural, Agricultura y Pesca",
 				"enlaceSolicitud": "https://www.euskadi.eus/servicios/1017307"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3218,7 +3305,7 @@
 				"dondeSolicitar": "En el Registro General del Ayuntamiento de El Viso o por correo postal/mensajería.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3321,7 +3408,7 @@
 				"dondeSolicitar": "En el Gestor de Ayudas de SODERCAN o presencialmente en su sede de Santander para personas físicas.",
 				"enlaceSolicitud": "https://ayudas.sodercan.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3421,7 +3508,7 @@
 				"dondeSolicitar": "En la sede electrónica o en la Oficina de Servicio al Ciudadano (OAC) del Ayuntamiento de Tordera.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3523,7 +3610,7 @@
 				"dondeSolicitar": "En la plataforma electrónica Gestor de Ayudas de SODERCAN o presencialmente en su sede para personas físicas.",
 				"enlaceSolicitud": "https://ayudas.sodercan.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3630,7 +3717,7 @@
 				"dondeSolicitar": "A través del Gestor de Ayudas de SODERCAN o presencialmente en su sede para personas físicas.",
 				"enlaceSolicitud": "https://ayudas.sodercan.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3714,7 +3801,7 @@
 				"dondeSolicitar": "En la sede electrónica y oficina virtual de la Consejería de Empleo, Empresa y Trabajo Autónomo de la Junta de Andalucía.",
 				"enlaceSolicitud": "https://juntadeandalucia.es/servicios/sede/tramites/procedimientos/detalle/25922.html"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3809,7 +3896,7 @@
 				"dondeSolicitar": "En las oficinas del Ayuntamiento de Castroverde.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -3913,7 +4000,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Junta de Comunidades de Castilla-La Mancha.",
 				"enlaceSolicitud": "https://www.jccm.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -4096,7 +4183,7 @@
 				"dondeSolicitar": "En la Sede electrónica de la Cámara de Comercio de Madrid.",
 				"enlaceSolicitud": "https://sede.camara.es/sede/madrid"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -4199,7 +4286,7 @@
 				"dondeSolicitar": "En la ficha telemática de la ayuda en el portal del Gobierno de Navarra.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-24",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -4303,7 +4390,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de Jaén.",
 				"enlaceSolicitud": "https://sede.dipujaen.es/AyudaSubvenciones"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -4401,7 +4488,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Generalitat de Catalunya",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -4509,7 +4596,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración Pública de la Comunidad Autónoma de Euskadi.",
 				"enlaceSolicitud": "https://www.euskadi.eus/servicios/1232704"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -4615,7 +4702,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración Pública de la Comunidad Autónoma de Euskadi",
 				"enlaceSolicitud": "https://www.euskadi.eus/servicios/1232704"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -4719,7 +4806,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración Pública de la Comunidad Autónoma de Euskadi.",
 				"enlaceSolicitud": "https://www.euskadi.eus/servicios/1232704"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -4828,7 +4915,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Generalitat Valenciana o a través de la web del IVACE",
 				"enlaceSolicitud": "https://sede.gva.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -4919,7 +5006,7 @@
 				"dondeSolicitar": "En el Registro General Electrónico de la Administración de la Comunidad Foral de Navarra.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5017,7 +5104,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Andratx",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5112,7 +5199,7 @@
 				"dondeSolicitar": "En la Concejalía de Agricultura y Ganadería del Ayuntamiento de Xove",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5194,7 +5281,7 @@
 				"dondeSolicitar": "En el Registro de Entrada del Ayuntamiento de Archidona de forma presencial o a través de su Sede Electrónica.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5291,7 +5378,7 @@
 				"dondeSolicitar": "En la oficina de asistencia en materia de registro del Ayuntamiento de Xove o a través de su sede electrónica.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5379,7 +5466,7 @@
 				"dondeSolicitar": "En el Ayuntamiento de Soto del Barco (vía correo electrónico, sede electrónica o registro presencial)",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -5475,7 +5562,7 @@
 				"dondeSolicitar": "En la plataforma telemática SUBTEL a través de la sede electrónica de la Diputación Provincial de A Coruña",
 				"enlaceSolicitud": "https://emprego.dacoruna.gal/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5572,7 +5659,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de A Coruña a través de la plataforma SUBTeL",
 				"enlaceSolicitud": "https://emprego.dacoruna.gal/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5677,7 +5764,7 @@
 				"dondeSolicitar": "En la plataforma telemática SUBTEL, a través de la sede electrónica de la Diputación Provincial de A Coruña.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -5768,7 +5855,7 @@
 				"dondeSolicitar": "En el Registro General del Ayuntamiento de Es Mercadal o por su sede electrónica.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -5855,7 +5942,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Loeches.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -5949,7 +6036,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Diputación de València",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -6037,7 +6124,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Loeches.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -6129,7 +6216,7 @@
 				"dondeSolicitar": "En el Registro General del Ayuntamiento de Massanassa o en su sede electrónica.",
 				"enlaceSolicitud": "https://www.massanassa.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -6236,7 +6323,7 @@
 				"dondeSolicitar": "En la sede del Instituto Vasco Etxepare, oficinas Zuzenean del Gobierno Vasco o por los canales del procedimiento administrativo común.",
 				"enlaceSolicitud": "https://www.etxepare.eus"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-21",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -6336,7 +6423,7 @@
 				"dondeSolicitar": "En el Registro General Electrónico del Ayuntamiento de Zaragoza.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -6434,7 +6521,7 @@
 				"dondeSolicitar": "En el Registro General Electrónico del Ayuntamiento de Zaragoza.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -6606,7 +6693,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Mataró.",
 				"enlaceSolicitud": "https://www.mataro.cat"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -6717,7 +6804,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Generalitat Valenciana o presencialmente en sus direcciones territoriales.",
 				"enlaceSolicitud": "https://sede.gva.es/es/proc113637"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -6813,7 +6900,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -6907,7 +6994,7 @@
 				"dondeSolicitar": "En la Sede Electrónica y en la página web de la AGAUR.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -7010,7 +7097,7 @@
 				"dondeSolicitar": "En la sede electrónica de PROCESA",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -7086,7 +7173,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -7171,7 +7258,7 @@
 				"dondeSolicitar": "En el Registro del Ayuntamiento de Arteixo o en su sede electrónica",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -7279,7 +7366,7 @@
 				"dondeSolicitar": "En el Registro Electrónico del Gobierno de Aragón a través de su tramitador online.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"cambios": [
 				{
@@ -7385,7 +7472,7 @@
 				"dondeSolicitar": "En las urnas de los establecimientos adheridos de Sant Andreu de la Barca y en el Teatro Núria Espert el día del sorteo",
 				"enlaceSolicitud": "https://sabarca.cat/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -7486,7 +7573,7 @@
 				"dondeSolicitar": "En la Sede Electrónica del Ayuntamiento de Alcañiz",
 				"enlaceSolicitud": "https://sede.alcaniz.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -7579,7 +7666,7 @@
 				"dondeSolicitar": "A través del Ayuntamiento de Sant Andreu de la Barca mediante el formulario de adhesión a la Campaña de Navidad 2026.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -7668,7 +7755,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Sant Quirze del Vallès.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -7769,7 +7856,7 @@
 				"dondeSolicitar": "En la sede electrónica del Instituto Menorquín de Estudios (IME).",
 				"enlaceSolicitud": "https://ime.cime.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -7880,7 +7967,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Fregenal de la Sierra",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -7971,7 +8058,7 @@
 				"dondeSolicitar": "En el Registro del Ayuntamiento de Ponferrada, dirigido al Área de Fiestas",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -8051,7 +8138,7 @@
 				"dondeSolicitar": "En el registro general de entrada del Ayuntamiento de Albal.",
 				"enlaceSolicitud": "https://albal.es/content-albal/uploads/2026/11/CONVOCATORIA-CONCURSO-ESCAPARATES-NAVIDENOS-2026.-SEFYCU-8853787.pdf"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8130,7 +8217,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Vegadeo",
 				"enlaceSolicitud": "https://vegadeo.sedelectronica.e-ayuntamiento.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8228,7 +8315,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de El Hierro",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8305,7 +8392,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-26",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8405,7 +8492,7 @@
 				"dondeSolicitar": "En el registro de entrada del Ayuntamiento de Níjar o a través de su sede electrónica",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -8510,7 +8597,7 @@
 				"dondeSolicitar": "En el Registro de entrada del Ayuntamiento de Castelló d'Empúries o por los medios señalados en el artículo 16.4 de la Ley 39/2015.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8600,7 +8687,7 @@
 				"dondeSolicitar": "En el Registro de entrada del Ayuntamiento de Castelló d'Empúries o mediante los medios señalados en el artículo 16.4 de la Ley 39/2015.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8642,11 +8729,11 @@
 				}
 			],
 			"finalidad": "Agricultura, Pesca y Alimentación",
-			"inicio": null,
-			"fin": null,
+			"inicio": "2026-11-27",
+			"fin": "2026-12-11",
 			"textoInicio": "A partir del día siguiente de haberse publicado la convocatoria en el BOIB",
 			"textoFin": "10 días hábiles a partir del día siguiente de haberse publicado la convocatoria en el BOIB.",
-			"bases": "https://www.caib.es/eboibfront/es/2026/12222/711017/acuerdo-del-consejo-ejecutivo-en-sesion-de-caracte",
+			"bases": "https://www.caib.es/eboibfront/es/2026/12366/722507/acuerdo-del-consejo-ejecutivo-en-sesion-de-caracte",
 			"documento": {
 				"id": 1558627,
 				"nombre": "ACUERDO AYUDAS  FORMACIÓN.pdf"
@@ -8658,27 +8745,31 @@
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/943133",
 			"ia": {
 				"categoria": "ayuda",
-				"resumen": "Ayudas del Consejo Insular de Menorca para acciones formativas, estudios técnicos o científicos y edición de materiales divulgativos destinados a los sectores agrario, ganadero, pesquero, acuícola y cinegético.",
-				"titular": "Ayudas de formación y estudios para sectores agrarios de Menorca",
-				"paraQuien": "Asociaciones, cooperativas, cofradías, profesionales, investigadores u otras personas físicas o jurídicas relacionadas con los sectores agrario, ganadero, pesquero, acuícola o cinegético de Menorca.",
-				"importe": "Hasta 6.000 € por curso (máximo 8.000 € por solicitante), hasta 8.000 € por estudio (máximo un estudio por solicitante) y hasta 5.000 € para la edición de materiales. El importe total concedido no podrá superar los 12.000 € por solicitante.",
+				"resumen": "El Consell Insular de Menorca concede ayudas para financiar cursos de formación, estudios técnicos o científicos y la edición de materiales divulgativos destinados a los sectores agrario, ganadero, pesquero, acuícola y cinegético de la isla.",
+				"titular": "Ayudas para formación y estudios agrarios en Menorca",
+				"paraQuien": "Asociaciones, cooperativas, cofradías, entidades y profesionales o investigadores de los sectores agrario, ganadero, pesquero, acuícola y cinegético de Menorca.",
+				"importe": "Hasta 12.000 € por solicitante en total (hasta 8.000 € en formación o estudios, y hasta 5.000 € en materiales divulgativos)",
 				"importeMaximo": 12000,
-				"plazo": "10 días hábiles contados a partir del día siguiente a la fecha de publicación en el BOIB.",
-				"plazoFin": null,
+				"plazo": "10 días hábiles a contar desde el día siguiente a la publicación en el BOIB (hasta el 11 de diciembre de 2026).",
+				"plazoFin": "2026-12-11",
 				"requisitos": [
-					"Desarrollar actividades relacionadas con los sectores agrario, ganadero, pesquero, acuícola o cinegético de Menorca.",
-					"Estar al corriente en el cumplimiento de las obligaciones tributarias y con la Seguridad Social y con el Consejo Insular de Menorca.",
-					"No estar incurso en las prohibiciones para obtener la condición de beneficiario según la normativa de subvenciones.",
-					"No haber sido sancionado o condenado por resolución administrativa o sentencia judicial firmes por prácticas laborales discriminatorias por razón de sexo o género."
+					"Desarrollar la actividad o proyectos dentro de los sectores agrario, ganadero, pesquero, acuícola o cinegético de Menorca.",
+					"Ser asociación, cooperativa, cofradía u otra entidad legalmente constituida (para cualquier línea).",
+					"Ser persona física o jurídica profesional o investigadora (para líneas de estudios o divulgación).",
+					"Estar al corriente de pagos con la Treasury State, la Seguridad Social y el Consell Insular de Menorca.",
+					"No estar incurso en prohibiciones legales para recibir subvenciones públicas.",
+					"Acreditar solvencia técnica y experiencia suficiente en la materia del proyecto o formación."
 				],
 				"gastos": [
-					"Retribuciones de formadores, nóminas y cotizaciones a la seguridad social del personal propio directamente vinculado.",
-					"Gastos de viajes y alojamiento para formadores, ponentes o profesionales implicados.",
-					"Gastos generales como alquileres de instalaciones y equipos, luz, agua y teléfono (máximo un 20% del coste total del curso).",
-					"Gastos de coordinación de la acción formativa (máximo un 25% del coste total del curso).",
-					"Medios didácticos, adquisición de materiales de entrega a alumnos, publicidad y difusión.",
-					"Facturas de profesionales independientes, material fungible y pagos de estudios técnicos o científicos.",
-					"Facturas de diseño, maquetación, impresión, producción digital, redacción, traducción o corrección lingüística para materiales divulgativos."
+					"Retribuciones y nóminas del personal formador, ponentes o investigadores.",
+					"Desplazamiento de formadores o ponentes (avión, barco, autobús o tren).",
+					"Alojamiento de formadores (hasta un máximo de 100 € por persona y noche).",
+					"Alquiler de instalaciones o equipos y suministros (luz, agua, teléfono) imputables al curso.",
+					"Gastos de coordinación de la formación (hasta un máximo del 25 % del coste del curso).",
+					"Materiales didácticos y de entrega al alumnado.",
+					"Gastos de publicidad y difusión del curso.",
+					"Material fungible de campo o laboratorio para la elaboración de estudios.",
+					"Facturas de servicios de diseño, maquetación, impresión, traducción o edición de publicaciones."
 				],
 				"condiciones": {
 					"autonomos": "si",
@@ -8687,37 +8778,48 @@
 					"maxEmpleados": null,
 					"antiguedadMinMeses": null,
 					"antiguedadMaxMeses": null,
-					"municipio": "Menorca"
+					"municipio": null
 				},
-				"dudas": "No se especifica la fecha exacta de publicación en el BOIB, por lo que la fecha concreta de finalización del plazo no se puede determinar.",
+				"dudas": null,
 				"finalidades": [
 					"formacion",
-					"invertir"
+					"innovar"
 				],
 				"comoPedir": [
-					"Rellenar el modelo normalizado de solicitud disponible en la sede electrónica.",
-					"Presentar la solicitud y la documentación por vía electrónica en el registro electrónico del Consejo Insular de Menorca."
+					"Acceder a la sede electrónica del Consell Insular de Menorca.",
+					"Cumplimentar la solicitud oficial según el modelo del Anexo I.",
+					"Adjuntar la documentación administrativa requerida y las memorias del proyecto según la línea.",
+					"Firmar y enviar telemáticamente con certificado digital."
 				],
 				"documentacion": [
-					"Copia de la escritura de constitución o modificación y estatutos o reglamento.",
-					"Copia del certificado del acuerdo adoptado por el órgano de gobierno para solicitar la ayuda.",
-					"Documento de designación de representante y acreditación de su cargo.",
-					"Copia del acta con los resultados del último proceso electoral de los órganos de dirección.",
-					"NIF del solicitante y del representante.",
-					"Declaración responsable de no estar incurso en prohibiciones para ser beneficiario.",
-					"Certificado de estar al corriente de obligaciones tributarias y con la Seguridad Social o autorización para su consulta.",
-					"Declaración responsable de otras subvenciones obtenidas o solicitadas.",
+					"Solicitud de ayuda en modelo normalizado (Anexo I).",
+					"Escritura de constitución, estatutos o reglamento de funcionamiento de la entidad.",
+					"Certificado del acuerdo del órgano de gobierno para solicitar la ayuda.",
+					"Documento de identidad fiscal (NIF) del solicitante y del representante.",
+					"Documento de designación y representación legal del firmante.",
+					"Declaración responsable de no incurrir en prohibiciones para contratar o recibir ayudas (Anexo II).",
+					"Declaración responsable sobre otras subvenciones obtenidas o solicitadas (Anexo III).",
 					"Declaración responsable de datos bancarios y certificado de titularidad de la cuenta.",
-					"Memoria breve de la actividad formativa y currículum del docente (para línea 1).",
-					"Estudio técnico o científico elaborado o memoria de objetivos y currículums (para línea 2).",
-					"Memoria explicativa o ejemplar del material divulgativo (para línea 3)."
+					"Memoria explicativa de la acción formativa y currículum vitae del docente (Línea 1).",
+					"Estudio o memoria justificativa con objetivos, programa y currículums técnicos (Línea 2).",
+					"Ejemplar, enlace o memoria explicativa del material divulgativo (Línea 3)."
 				],
-				"dondeSolicitar": "En la sede electrónica del Consejo Insular de Menorca",
+				"dondeSolicitar": "En la sede electrónica del Consell Insular de Menorca (www.cime.es)",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
-			"iaModelo": "gemini-3.5-flash-lite"
+			"iaModelo": "gemini-3.6-flash",
+			"cambios": [
+				{
+					"fecha": "2026-11-27",
+					"campos": [
+						"inicio",
+						"fin",
+						"bases"
+					]
+				}
+			]
 		},
 		{
 			"codigo": "943130",
@@ -8804,7 +8906,7 @@
 				"dondeSolicitar": "En el Registro Electrónico General de la Sede Electrónica de la Junta de Extremadura.",
 				"enlaceSolicitud": "https://sede.gobex.es/SEDE/registroGeneral/registroGeneral.jsf"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-19",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -8906,7 +9008,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de El Hierro o en el Registro General del Cabildo",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"cambios": [
 				{
@@ -9008,7 +9110,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de El Hierro",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -9104,7 +9206,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de El Hierro.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -9206,7 +9308,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de El Hierro.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -9300,7 +9402,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Fraga.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -9386,7 +9488,7 @@
 				"dondeSolicitar": "En la extranet de las administraciones catalanas EACAT (entes públicos) o en Tràmits gencat / Canal Empresa (resto de solicitantes).",
 				"enlaceSolicitud": "https://canalempresa.gencat.cat/tramits"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -9480,7 +9582,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Trujillo o presencialmente en la Secretaría del Ayuntamiento.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -9584,7 +9686,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo Insular de El Hierro",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -9676,7 +9778,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Junta de Comunidades de Castilla-La Mancha.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -9767,7 +9869,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Alicante.",
 				"enlaceSolicitud": "https://sedeelectronica.alicante.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -9871,7 +9973,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Sestao o por los medios que fije la convocatoria.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -9946,7 +10048,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -9993,7 +10095,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942947",
 			"ia": null,
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaIntentos": 1,
 			"iaIntentadoEl": "2026-11-22",
@@ -10083,7 +10185,7 @@
 				"dondeSolicitar": "En el Área de Urbanismo del Ayuntamiento de Toledo (Plaza del Consistorio, nº 1).",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -10199,7 +10301,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración Pública de la Región de Murcia a través del procedimiento 4867.",
 				"enlaceSolicitud": "https://sede.carm.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
@@ -10321,7 +10423,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Administración Pública de la Región de Murcia (sede.carm.es) a través del procedimiento 4866",
 				"enlaceSolicitud": "https://sede.carm.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
@@ -10442,7 +10544,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Universidad de La Rioja",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -10535,7 +10637,7 @@
 				"dondeSolicitar": "En el Registro General del Ayuntamiento de Humanes de Madrid o por correo electrónico a comercio@ayto-humanesdemadrid.es",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -10636,7 +10738,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo de Gran Canaria.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -10722,7 +10824,7 @@
 				"dondeSolicitar": "En la Sede electrónica de la Generalitat de Catalunya",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cambios": [
@@ -10834,7 +10936,7 @@
 				"dondeSolicitar": "En la Sede Electrónica o presencialmente en el Registro General del Ayuntamiento de Santa Margarida de Montbui",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -10933,7 +11035,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears",
 				"enlaceSolicitud": "https://seuelectronica.caib.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"cambios": [
 				{
@@ -11148,7 +11250,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Guardamar del Segura",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"cambios": [
 				{
@@ -11267,7 +11369,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de Burgos.",
 				"enlaceSolicitud": "https://sede.diputaciondeburgos.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -11353,7 +11455,7 @@
 				"dondeSolicitar": "En la plataforma de subvenciones de la Diputació de Girona",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
@@ -11446,7 +11548,7 @@
 				"dondeSolicitar": "En la plataforma de subvenciones de la Diputación de Girona",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -11534,7 +11636,7 @@
 				"dondeSolicitar": "En la plataforma de subvenciones de la Diputació de Girona en la Sede electrónica.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
@@ -11620,7 +11722,7 @@
 				"dondeSolicitar": "En el Registro del Ayuntamiento, en la Sede Electrónica o por correo electrónico.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -11713,7 +11815,7 @@
 				"dondeSolicitar": "En el Registro electrónico del Ayuntamiento de Burriana",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -11805,7 +11907,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de Huelva",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -11903,7 +12005,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Junta de Comunidades de Castilla-La Mancha",
 				"enlaceSolicitud": "https://www.jccm.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -12033,7 +12135,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Pego",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -12127,7 +12229,7 @@
 				"dondeSolicitar": "En el Registro del Consorci de la Vall del Ges, Orís i Bisaura o en los registros habilitados por la Ley 39/2015",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -12173,7 +12275,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942560",
 			"ia": null,
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaIntentos": 1,
 			"iaIntentadoEl": "2026-11-22",
@@ -12259,7 +12361,7 @@
 				"dondeSolicitar": "En la Sede electrónica",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"cambios": [
 				{
@@ -12381,7 +12483,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Comunidad Autónoma de la Región de Murcia",
 				"enlaceSolicitud": "https://sede.carm.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -12476,7 +12578,7 @@
 				"dondeSolicitar": "En la plataforma de subvenciones de la sede electrónica de la Diputació de Girona",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -12567,7 +12669,7 @@
 				"dondeSolicitar": "A través de la aplicación PDR LEADER en la web del Gobierno de La Rioja",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -12667,7 +12769,7 @@
 				"dondeSolicitar": "A través de la aplicación PDR LEADER en la página web del Gobierno de La Rioja",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -12774,7 +12876,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo Insular de El Hierro",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -12875,7 +12977,7 @@
 				"dondeSolicitar": "En la sede electrónica del Cabildo Insular de El Hierro",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -12968,7 +13070,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Fuenlabrada.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -13063,7 +13165,7 @@
 				"dondeSolicitar": "En el Registro General del Ayuntamiento de Santomera.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -13172,7 +13274,7 @@
 				"dondeSolicitar": "En la sede electrónica del Consell Insular de Formentera (OVAC) o en la Oficina de Atención al Ciudadano",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -13266,7 +13368,7 @@
 				"dondeSolicitar": "En la Oficina Joven del Pallars Jussà de forma presencial o en la sede electrónica del Consejo Comarcal del Pallars Jussà",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -13362,7 +13464,7 @@
 				"dondeSolicitar": "En la sede electrónica o en el Registro presencial del Ayuntamiento de Sopela",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -13473,7 +13575,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación Provincial de Málaga",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
@@ -13575,7 +13677,7 @@
 				"dondeSolicitar": "Exclusivamente por vía electrónica a través de la aplicación PDR LEADER del Gobierno de La Rioja",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"cambios": [
 				{
@@ -13671,7 +13773,7 @@
 				"dondeSolicitar": "En la sede electrónica o en el Registro del Ayuntamiento de Valdepeñas.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -13870,7 +13972,7 @@
 				"dondeSolicitar": "En la sede electrónica del Instituto de Fomento de la Región de Murcia",
 				"enlaceSolicitud": "https://sede.institutofomentomurcia.es/infodirecto"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -13952,7 +14054,7 @@
 				"dondeSolicitar": "En la sede electrónica, en el registro general del Ayuntamiento de San Lorenzo de El Escorial o por correo electrónico en comercio@aytosanlorenzo.es",
 				"enlaceSolicitud": "https://www.aytosanlorenzo.es"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -14040,7 +14142,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Nava o en su Registro General.",
 				"enlaceSolicitud": "https://aytonava.sedelectronica.e-ayuntamiento.es/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.5-flash"
 		},
@@ -14137,7 +14239,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de El Viso del Alcor o en su registro municipal.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-23",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -14228,7 +14330,7 @@
 				"dondeSolicitar": "En la sede electrónica o en el Registro de Entrada del Ayuntamiento de Carlet.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-14",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -14316,89 +14418,8 @@
 				"titular": "Ayudas para proyectos asistenciales y de salud pública en Lleida",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
-		},
-		{
-			"codigo": "942108",
-			"titulo": "BASES PARTICIPACIÓN COMERCIOS \"IV NOCHE COMERCIO LOCAL\"",
-			"organo": {
-				"nivel1": "LOCAL",
-				"nivel2": "PUERTOLLANO",
-				"nivel3": "AYUNTAMIENTO DE PUERTOLLANO"
-			},
-			"sede": null,
-			"publicada": "2026-11-13",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 3000,
-			"beneficiarios": [
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "47",
-					"nombre": "Comercio al por menor"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES422",
-					"nombre": "Ciudad Real"
-				}
-			],
-			"finalidad": "Comercio, Turismo y Pymes",
-			"inicio": "2026-11-17",
-			"fin": "2026-11-26",
-			"textoInicio": "AL DÍA SIGUIENTE DE SU PUBLICACIÓN EN EL BOP DE CIUDAD REAL",
-			"textoFin": "23 DE NOVIEMBRE DE 2026",
-			"bases": ": https://www.puertollano.es/wp-content/uploads/2026/11/bases-iv-noche-de-comercio-local.pdf",
-			"documento": {
-				"id": 1555809,
-				"nombre": "DECRETO 2026-6464 [APROB. BASES].pdf"
-			},
-			"docs": [
-				1555809
-			],
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/942108",
-			"ia": {
-				"categoria": "ayuda",
-				"resumen": "Campaña de dinamización comercial en Puertollano. Los comercios participantes aceptan vales de descuento de 30 € presentados por clientes ganadores del sorteo y el Ayuntamiento les reembolsa posteriormente el dinero de los vales canjeados.",
-				"paraQuien": "Comercios pertenecientes al Centro Comercial Abierto de Puertollano.",
-				"importe": "Reembolso de vales de 30 € canjeados en el establecimiento (presupuesto total de la campaña: 3.000 €).",
-				"importeMaximo": null,
-				"plazo": "Hasta el 23 de noviembre de 2026.",
-				"plazoFin": null,
-				"requisitos": [
-					"Pertenecer al Centro Comercial Abierto de Puertollano.",
-					"Inscribirse en el formulario web antes del 23 de noviembre de 2026.",
-					"Enviar el NIF o CIF por correo electrónico a centrocomercialabierto@puertollano.es.",
-					"Firmar el convenio de aceptación de las bases con el Ayuntamiento.",
-					"Exhibir en un lugar visible el material identificativo de la campaña.",
-					"Aceptar los vales promocionales de los clientes entre el 9 y el 12 de diciembre de 2026.",
-					"Presentar la justificación y los vales canjeados del 14 al 18 de diciembre de 2026 para recibir el cobro."
-				],
-				"gastos": [
-					"Descuento de 30 € aplicado a las compras de los clientes mediante los vales promocionales canjeados"
-				],
-				"condiciones": {
-					"autonomos": "si",
-					"sociedades": "si",
-					"emprendedores": "no",
-					"maxEmpleados": null,
-					"antiguedadMinMeses": null,
-					"antiguedadMaxMeses": null,
-					"municipio": "Puertollano"
-				},
-				"dudas": "No consta un límite máximo de vales que puede reembolsar o cobrar un solo comercio.",
-				"titular": "Campaña de dinamización comercial con vales de descuento en Puertollano",
-				"finalidades": []
-			},
-			"comprobada": "2026-11-26",
-			"iaModelo": "gemini-3.5-flash",
-			"cierreDescartado": {
-				"fecha": "2026-11-23",
-				"motivo": "no coincide con la de la BDNS (2026-11-26)"
-			}
 		},
 		{
 			"codigo": "942095",
@@ -14505,7 +14526,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Xunta de Galicia",
 				"enlaceSolicitud": "https://sede.xunta.gal"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -14604,7 +14625,7 @@
 				"titular": "Campaña navideña para fomentar las compras en tiendas de Segorbe",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.8-flash",
 			"cierreDescartado": {
 				"fecha": "2026-11-27",
@@ -14693,7 +14714,7 @@
 				"dondeSolicitar": "En la web de Trámites de la Generalitat de Catalunya, Canal Empresa o la extranet EACAT",
 				"enlaceSolicitud": "https://web.gencat.cat/ca/tramits/"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -14785,7 +14806,7 @@
 				"dondeSolicitar": "En el portal Canal Empresa o Tràmites gencat (y en la extranet EACAT para entes públicos).",
 				"enlaceSolicitud": "https://canalempresa.gencat.cat/tramits"
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -14869,7 +14890,7 @@
 				"titular": "Ayudas para organizar programas intensivos combinados Erasmus+",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -14960,7 +14981,7 @@
 				"dondeSolicitar": "En el Registro General de Entrada del Ayuntamiento de Pollença o en la oficina municipal del Port de Pollença.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -15034,7 +15055,7 @@
 				"titular": "Ayudas públicas para la producción de cortometrajes ya realizados",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15129,7 +15150,7 @@
 					"liquidez"
 				]
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.5-flash"
 		},
 		{
@@ -15215,7 +15236,7 @@
 				"titular": "Ayudas para apoyar proyectos culturales en las Illes Balears",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
 				"fecha": "2026-11-17",
@@ -15292,7 +15313,7 @@
 					"contratar"
 				]
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
 		{
@@ -15437,7 +15458,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -15530,7 +15551,7 @@
 				"dondeSolicitar": "En la Sede electrónica de la Generalitat de Catalunya.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash",
 			"cambios": [
 				{
@@ -15621,7 +15642,7 @@
 					"invertir"
 				]
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -15708,7 +15729,7 @@
 					"invertir"
 				]
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -15795,7 +15816,7 @@
 				"titular": "Ayudas para financiar proyectos y actividades culturales en Boltaña",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -15873,7 +15894,7 @@
 				"titular": "Concurso que premia la creación de nacimientos y belenes",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -15950,7 +15971,7 @@
 				"titular": "Ayudas para financiar proyectos y funcionamiento de asociaciones",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -16028,7 +16049,7 @@
 				"titular": "Programa de bonos de comercio para impulsar la economía local",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -16102,7 +16123,7 @@
 				"titular": "Concurso de decoración de Navidad para comercios y hostelería",
 				"finalidades": []
 			},
-			"comprobada": "2026-11-26",
+			"comprobada": "2026-11-27",
 			"iaModelo": "gemini-3.6-flash"
 		},
 		{
@@ -18110,86 +18131,6 @@
 				},
 				"dudas": "No se especifica el importe exacto de los premios individuales que se repartirán.",
 				"titular": "Concurso municipal para premiar escaparates navideños",
-				"finalidades": []
-			},
-			"comprobada": "2026-11-26",
-			"iaModelo": "gemini-3.5-flash"
-		},
-		{
-			"codigo": "941487",
-			"titulo": "Segunda convocatoria para la concesión de subvenciones municipales de la campaña de promoción comercial Bonos comercio 2026",
-			"organo": {
-				"nivel1": "LOCAL",
-				"nivel2": "XIRIVELLA",
-				"nivel3": "AYUNTAMIENTO DE XIRIVELLA"
-			},
-			"sede": "https//sede.xirivella.es",
-			"publicada": "2026-11-11",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 25000,
-			"beneficiarios": [
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "G",
-					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
-				},
-				{
-					"codigo": "T",
-					"nombre": "OTROS SERVICIOS"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES523",
-					"nombre": "Valencia / València"
-				}
-			],
-			"finalidad": "Comercio, Turismo y Pymes",
-			"inicio": null,
-			"fin": "2026-11-26",
-			"textoInicio": "A partir del día siguiente a la publicación de la convocatoria en el BOP",
-			"textoFin": null,
-			"bases": "www.xirivella.es",
-			"documento": {
-				"id": 1553924,
-				"nombre": "Resolución Nº 3646 de 10_11_2026 _Decreto aprobación Segunda convocatoria Campaña Bonos Comercio 2026_ - SEGRA 1261137.pdf"
-			},
-			"docs": [
-				1553924,
-				1553925
-			],
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/941487",
-			"ia": {
-				"categoria": "ayuda",
-				"resumen": "Programa de bonos descuento para impulsar las compras en comercios y servicios locales de Xirivella. El Ayuntamiento reparte el presupuesto de la campaña en lotes de bonos entre los negocios participantes para que los apliquen en las compras de sus clientes.",
-				"paraQuien": "Comercios, artesanos y negocios de servicios personales situados en Xirivella que pertenezcan a los epígrafes del IAE autorizados en la convocatoria.",
-				"importe": "El presupuesto global de 25.000 € se repartirá a partes iguales en lotes de bonos de 10 € entre todos los negocios admitidos.",
-				"importeMaximo": null,
-				"plazo": "Hasta el 26 de noviembre de 2026.",
-				"plazoFin": "2026-11-26",
-				"requisitos": [
-					"Tener el negocio o establecimiento abierto con carácter permanente en Xirivella.",
-					"Pertenecer a alguno de los epígrafes del IAE permitidos en las bases antes de la publicación en el BOP.",
-					"Estar dado de alta en el censo tributario.",
-					"Tener la licencia de apertura o haber presentado la comunicación previa / declaración responsable correspondiente.",
-					"Estar al corriente en el pago de cotizaciones a la Seguridad Social.",
-					"Estar al corriente de las obligaciones tributarias con el Ayuntamiento de Xirivella y sin deudas pendientes.",
-					"No tener prohibiciones legales para recibir subvenciones públicas."
-				],
-				"gastos": [],
-				"condiciones": {
-					"autonomos": "si",
-					"sociedades": "si",
-					"emprendedores": "no",
-					"maxEmpleados": null,
-					"antiguedadMinMeses": null,
-					"antiguedadMaxMeses": null,
-					"municipio": "Xirivella"
-				},
-				"dudas": null,
-				"titular": "Programa de bonos descuento para comercios en Xirivella",
 				"finalidades": []
 			},
 			"comprobada": "2026-11-26",
@@ -22208,84 +22149,6 @@
 			},
 			"comprobada": "2026-11-26",
 			"iaModelo": "gemini-3.6-flash"
-		},
-		{
-			"codigo": "940135",
-			"titulo": "CONCESION AYUDA DESTINADA A MADRES I PADRES O TUTORES LEGALES DE ALUMNOS PARA EL SERVICIO DE GUARDERIA , CURSO 2025-2026",
-			"organo": {
-				"nivel1": "LOCAL",
-				"nivel2": "VALLFOGONA DE RIPOLLÈS",
-				"nivel3": "AYUNTAMIENTO DE VALLFOGONA DE RIPOLLÈS"
-			},
-			"sede": "https://vallfogona.cat/",
-			"publicada": "2026-11-05",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 1800,
-			"beneficiarios": [
-				"PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "Q",
-					"nombre": "EDUCACIÓN"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES512",
-					"nombre": "Girona"
-				}
-			],
-			"finalidad": "Educación",
-			"inicio": null,
-			"fin": "2026-11-26",
-			"textoInicio": "05/11/2026",
-			"textoFin": null,
-			"bases": "https://tauler.seu-e.cat/detall?idEns=1717070005&idEdicte=1717070005_718568",
-			"documento": {
-				"id": 1550504,
-				"nombre": "CONVOCATORIA AYUDA SERVICIO GUARDERIA 2025-2026.pdf"
-			},
-			"docs": [
-				1550504,
-				1550505
-			],
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/940135",
-			"ia": {
-				"categoria": "otro",
-				"resumen": "Ayudas para cubrir los gastos de guardería del curso escolar 2025-2026 destinados a familias de Vallfogona de Ripollès.",
-				"paraQuien": "Madres, padres o tutores legales de alumnos matriculados en una guardería autorizada.",
-				"importe": "Hasta 600,00 € por alumno",
-				"importeMaximo": 600,
-				"plazo": "15 días contados a partir del día siguiente a la publicación de la convocatoria, con fecha límite el 26 de noviembre de 2026.",
-				"plazoFin": "2026-11-26",
-				"requisitos": [
-					"Padres o tutores y el alumno deben estar empadronados en Vallfogona de Ripollès durante todo el curso.",
-					"El alumno debe estar matriculado en una guardería autorizada por el Departamento de Educación.",
-					"Ambos padres o tutores deben estar trabajando al inscribir al niño y durante los meses de la ayuda.",
-					"Comprometerse a matricular al alumno en la escuela pública del municipio a partir de un año de edad."
-				],
-				"gastos": [
-					"Cuotas mensuales de la guardería de septiembre a julio",
-					"Matrícula del curso escolar",
-					"Cuotas del servicio de acogida matinal"
-				],
-				"condiciones": {
-					"autonomos": "no_consta",
-					"sociedades": "no",
-					"emprendedores": "no_consta",
-					"maxEmpleados": null,
-					"antiguedadMinMeses": null,
-					"antiguedadMaxMeses": null,
-					"municipio": "Vallfogona de Ripollès"
-				},
-				"dudas": null,
-				"titular": "Ayudas municipales para cubrir los gastos de guardería infantil",
-				"finalidades": []
-			},
-			"comprobada": "2026-11-26",
-			"iaModelo": "gemini-3.5-flash"
 		},
 		{
 			"codigo": "940086",
@@ -54647,7 +54510,7 @@
 				"dondeSolicitar": null,
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.7-flash"
 		},
@@ -54701,7 +54564,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927879",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -54746,7 +54609,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927850",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -54797,7 +54660,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927849",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -54843,7 +54706,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927826",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -54889,7 +54752,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927817",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -54935,7 +54798,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927746",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55063,7 +54926,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927721",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55136,7 +54999,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927719",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55182,7 +55045,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927678",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55281,7 +55144,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Granada mediante el trámite de Instancia o Solicitud general.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.5-flash-lite",
 			"cierreDescartado": {
@@ -55331,7 +55194,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927622",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55376,7 +55239,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927621",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55489,7 +55352,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927620",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55534,7 +55397,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927612",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55579,7 +55442,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927611",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55671,58 +55534,9 @@
 				"dondeSolicitar": "En la Sede Electrónica de la CARM o presencialmente en los registros oficiales para personas físicas",
 				"enlaceSolicitud": "https://sede.carm.es"
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15",
 			"iaModelo": "gemini-3.6-flash"
-		},
-		{
-			"codigo": "927545",
-			"titulo": "Orden IND/43/2026, de 31 de agosto, por la que se aprueba la convocatoria de las subvenciones para impulsar el comercio electrónico en el sector de la distribución comercial minorista de Cantabria para 2026.",
-			"organo": {
-				"nivel1": "AUTONOMICA",
-				"nivel2": "CANTABRIA",
-				"nivel3": "CONSEJERÍA DE INDUSTRIA, EMPLEO, INNOVACIÓN Y COMERCIO"
-			},
-			"sede": null,
-			"publicada": "2026-09-02",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 0,
-			"beneficiarios": [
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "G",
-					"nombre": "COMERCIO AL POR MAYOR Y AL POR MENOR"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES13",
-					"nombre": "CANTABRIA"
-				}
-			],
-			"finalidad": "Comercio, Turismo y Pymes",
-			"inicio": null,
-			"fin": null,
-			"textoInicio": "Al día siguiente al de publicación del extracto",
-			"textoFin": "A los 15  días naturales a partir del día siguiente a la publicación del extracto de la convocatoria",
-			"bases": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=439420",
-			"documento": {
-				"id": 1516737,
-				"nombre": "43 Convocatoria_Minoristas_comercio_electronico_2026.report.pdf"
-			},
-			"docs": [
-				1516737,
-				1516754,
-				1516755,
-				1516756,
-				1516761
-			],
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927545",
-			"ia": null,
-			"comprobada": "2026-11-25",
-			"alta": "2026-11-15"
 		},
 		{
 			"codigo": "927404",
@@ -55767,7 +55581,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927404",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-15"
 		},
 		{
@@ -55814,7 +55628,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927204",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -55860,7 +55674,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927195",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -55905,7 +55719,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927192",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -55950,7 +55764,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927186",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56045,7 +55859,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Murcia, en el Área de empresa",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.8-flash"
 		},
@@ -56091,7 +55905,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927174",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56140,7 +55954,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927166",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56190,7 +56004,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927161",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56236,7 +56050,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927085",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56301,7 +56115,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/927010",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56351,7 +56165,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926984",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56400,7 +56214,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926906",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56462,7 +56276,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926874",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56520,7 +56334,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926866",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56608,7 +56422,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Reus o presencialmente en la Oficina de Atención al Ciudadano (OAC)",
 				"enlaceSolicitud": "https://www.reus.cat/ajuts"
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -56665,7 +56479,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926835",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56713,7 +56527,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926798",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56801,7 +56615,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Diputación de Palencia.",
 				"enlaceSolicitud": "https://sede.diputaciondepalencia.es"
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -56847,7 +56661,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926661",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -56893,7 +56707,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926643",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"cambios": [
 				{
@@ -56957,7 +56771,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926602",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57004,7 +56818,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926572",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57049,7 +56863,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926550",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57096,7 +56910,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926499",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57144,7 +56958,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926425",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57190,7 +57004,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926322",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57248,7 +57062,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926318",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57306,7 +57120,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926310",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57364,7 +57178,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926306",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57473,7 +57287,7 @@
 				"dondeSolicitar": "En la sede electrónica de la Xunta de Galicia.",
 				"enlaceSolicitud": "https://sede.xunta.gal"
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -57527,7 +57341,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926246",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57573,7 +57387,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926215",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57618,7 +57432,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926180",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57692,7 +57506,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926127",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57741,7 +57555,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926114",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57786,7 +57600,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926100",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57895,7 +57709,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926060",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57940,7 +57754,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926043",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -57987,7 +57801,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/926023",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58033,7 +57847,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925992",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58093,7 +57907,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925889",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58140,7 +57954,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925841",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58185,7 +57999,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925816",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58233,7 +58047,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925802",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58279,7 +58093,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925800",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58409,7 +58223,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925798",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58475,7 +58289,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925740",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58541,7 +58355,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925738",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58607,7 +58421,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925734",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58654,7 +58468,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925589",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58699,7 +58513,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925461",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58746,7 +58560,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925319",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"cambios": [
 				{
@@ -58837,7 +58651,7 @@
 				"dondeSolicitar": "En el Ayuntamiento de Vinaròs",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -58890,7 +58704,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925231",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58936,7 +58750,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925228",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -58984,7 +58798,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925214",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59030,7 +58844,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925199",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59075,7 +58889,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925172",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59120,7 +58934,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925167",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59166,7 +58980,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925135",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59211,7 +59025,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925089",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59256,7 +59070,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925059",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59302,7 +59116,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925057",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59351,7 +59165,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925055",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59401,7 +59215,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/925048",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59446,7 +59260,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924933",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59493,7 +59307,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924905",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-16"
 		},
 		{
@@ -59539,7 +59353,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924680",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -59585,7 +59399,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924645",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -59630,7 +59444,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924618",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -59739,7 +59553,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924384",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -59788,7 +59602,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924379",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -59888,7 +59702,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924324",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60008,7 +59822,7 @@
 				"dondeSolicitar": "En el Ayuntamiento de Vitoria-Gasteiz.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.6-flash"
 		},
@@ -60075,7 +59889,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924198",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60123,7 +59937,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924191",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60170,7 +59984,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924132",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60217,7 +60031,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924084",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60281,7 +60095,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924071",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60329,7 +60143,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924035",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60376,7 +60190,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924029",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaIntentos": 1,
 			"iaIntentadoEl": "2026-11-17",
@@ -60427,7 +60241,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/924006",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60474,7 +60288,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923970",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60535,7 +60349,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923958",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60604,7 +60418,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923957",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60665,7 +60479,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923956",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60711,7 +60525,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923886",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60756,7 +60570,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923853",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60801,7 +60615,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923827",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60853,7 +60667,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923812",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -60936,7 +60750,7 @@
 				"dondeSolicitar": "En la sede electrónica del Ayuntamiento de Algemesí",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -60987,7 +60801,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923784",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -61033,7 +60847,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923755",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -61079,7 +60893,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923754",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -61125,7 +60939,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923747",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -61173,7 +60987,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923724",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -61219,7 +61033,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923663",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -61609,7 +61423,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923651",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -62000,7 +61814,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923650",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -62045,7 +61859,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923601",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -62125,7 +61939,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923538",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -62175,7 +61989,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923536",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"cambios": [
 				{
@@ -62272,7 +62086,7 @@
 				"dondeSolicitar": "En la Sede Electrónica de la Comunidad Autónoma de las Illes Balears o en los registros de entrada del FOGAIBA y de la Consejería de Agricultura, Pesca y Medio Natural.",
 				"enlaceSolicitud": null
 			},
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17",
 			"iaModelo": "gemini-3.5-flash-lite"
 		},
@@ -62319,7 +62133,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923485",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -62367,7 +62181,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923289",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -62440,7 +62254,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/923229",
 			"ia": null,
-			"comprobada": "2026-11-25",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-17"
 		},
 		{
@@ -65569,7 +65383,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/921292",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18"
 		},
 		{
@@ -65614,7 +65428,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/921253",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18"
 		},
 		{
@@ -65764,7 +65578,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/921042",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-18"
 		},
 		{
@@ -80688,7 +80502,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912822",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -80739,7 +80553,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912801",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -80790,7 +80604,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912793",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -80938,7 +80752,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912753",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -80984,7 +80798,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912508",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81229,7 +81043,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912381",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81277,7 +81091,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912336",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81323,7 +81137,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912310",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81368,7 +81182,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912264",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81417,7 +81231,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912235",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81462,7 +81276,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912217",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81814,7 +81628,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912165",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81868,7 +81682,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912061",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81914,7 +81728,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912043",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -81966,7 +81780,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/912021",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82013,7 +81827,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911985",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82061,7 +81875,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911917",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82108,7 +81922,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911902",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82155,7 +81969,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911894",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82280,7 +82094,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911892",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82326,7 +82140,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911887",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82372,7 +82186,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911775",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82420,7 +82234,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911750",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82468,7 +82282,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911717",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82513,7 +82327,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911690",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82587,7 +82401,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911596",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82728,7 +82542,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911570",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82789,7 +82603,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911541",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82835,7 +82649,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911526",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82933,7 +82747,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911463",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -82981,7 +82795,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911456",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83032,7 +82846,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911385",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83077,7 +82891,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911312",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83122,7 +82936,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911279",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83168,7 +82982,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911089",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83299,7 +83113,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911085",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83349,7 +83163,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911076",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83480,7 +83294,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911074",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83610,7 +83424,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911071",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83740,7 +83554,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911063",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83870,7 +83684,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911057",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83927,7 +83741,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911012",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -83972,7 +83786,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/911007",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84018,7 +83832,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910968",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84069,7 +83883,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910958",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84119,7 +83933,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910855",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84166,7 +83980,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910730",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84238,7 +84052,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910545",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84303,7 +84117,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910459",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84351,7 +84165,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910442",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84594,7 +84408,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910359",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84639,7 +84453,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910353",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84687,7 +84501,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910337",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84732,7 +84546,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910328",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84778,7 +84592,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910300",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84823,7 +84637,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910269",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84869,7 +84683,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910252",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84918,7 +84732,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910238",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -84965,7 +84779,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910223",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85010,7 +84824,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910084",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85057,7 +84871,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910081",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85102,7 +84916,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/910069",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85254,7 +85068,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909960",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85299,7 +85113,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909913",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85347,7 +85161,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909904",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85393,7 +85207,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909775",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85443,7 +85257,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909748",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85493,7 +85307,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909747",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85547,7 +85361,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909735",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85600,7 +85414,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909726",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85651,7 +85465,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909709",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85718,54 +85532,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909607",
 			"ia": null,
-			"comprobada": "2026-11-20",
-			"alta": "2026-11-20"
-		},
-		{
-			"codigo": "909577",
-			"titulo": "ACCIONES FORMATIVAS SECTOR CONSTRUCCIÓN 2026 (MODALIDAD 2)",
-			"organo": {
-				"nivel1": "AUTONOMICA",
-				"nivel2": "REGIÓN DE MURCIA",
-				"nivel3": "SERVICIO REGIONAL DE EMPLEO Y FORMACIÓN (SEF)"
-			},
-			"sede": "https://sede.carm.es/web/pagina?IDCONTENIDO=2242&IDTIPO=240&RASTRO=c$m40288",
-			"publicada": "2026-06-01",
-			"tipo": "Concurrencia competitiva - canónica",
-			"presupuesto": 1200000,
-			"beneficiarios": [
-				"GRAN EMPRESA",
-				"PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
-				"PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
-			],
-			"sectores": [
-				{
-					"codigo": "85.5",
-					"nombre": "Otra educación"
-				}
-			],
-			"regiones": [
-				{
-					"codigo": "ES62",
-					"nombre": "REGION DE MURCIA"
-				}
-			],
-			"finalidad": "Desempleo",
-			"inicio": null,
-			"fin": null,
-			"textoInicio": "Desde el día siguiente a la publicación del extracto",
-			"textoFin": "15 Días hábiles después del día siguiente de la publicación en BORM",
-			"bases": "https://www.boe.es/eli/es/o/2019/03/28/tms368",
-			"documento": {
-				"id": 1465776,
-				"nombre": "Resolución de 22 de mayo de 2026 de convocatoria constru (COPIA).pdf"
-			},
-			"docs": [
-				1465776
-			],
-			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909577",
-			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85811,7 +85578,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909551",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85858,7 +85625,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909546",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85906,7 +85673,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909369",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -85955,7 +85722,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909323",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86002,7 +85769,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909315",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86047,7 +85814,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909227",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86095,7 +85862,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909041",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86140,7 +85907,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/909018",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86185,7 +85952,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908965",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86234,7 +86001,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908915",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86477,7 +86244,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908793",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86526,7 +86293,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908752",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86733,12 +86500,21 @@
 				"nombre": "BASES_SUBVENCION_SERVICIOS_MEJORAN_CALIDAD_DE_VIDA_2026.pdf"
 			},
 			"docs": [
-				1463362
+				1463362,
+				1563716
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908675",
 			"ia": null,
-			"comprobada": "2026-11-20",
-			"alta": "2026-11-20"
+			"comprobada": "2026-11-27",
+			"alta": "2026-11-20",
+			"cambios": [
+				{
+					"fecha": "2026-11-27",
+					"campos": [
+						"documentos"
+					]
+				}
+			]
 		},
 		{
 			"codigo": "908570",
@@ -86783,7 +86559,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908570",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86828,7 +86604,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908563",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86873,7 +86649,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908549",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -86919,7 +86695,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908536",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87049,7 +86825,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908398",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87170,7 +86946,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908377",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87390,7 +87166,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908365",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87435,7 +87211,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908299",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87484,7 +87260,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908265",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87529,7 +87305,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908216",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87578,7 +87354,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908213",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87816,7 +87592,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908193",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87946,7 +87722,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908091",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -87995,7 +87771,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908080",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88044,7 +87820,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908073",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88089,7 +87865,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/908040",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88136,7 +87912,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/907961",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88181,7 +87957,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/907935",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88227,7 +88003,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/907915",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88272,7 +88048,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/907860",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -88422,7 +88198,7 @@
 			],
 			"enlace": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias/907783",
 			"ia": null,
-			"comprobada": "2026-11-20",
+			"comprobada": "2026-11-27",
 			"alta": "2026-11-20"
 		},
 		{
@@ -91795,17 +91571,17 @@
 	],
 	"salud": {
 		"recogida": {
-			"fecha": "2026-11-26T23:12:54.484Z",
+			"fecha": "2026-11-27T15:31:23.621Z",
 			"nuevasSinFicha": 0,
 			"fichasComprobadas": 398,
 			"fichasFallidas": 2
 		},
 		"lectura": {
-			"fecha": "2026-11-26T23:19:23.293Z",
-			"pendientes": 254,
-			"leidas": 7,
+			"fecha": "2026-11-27T15:35:57.809Z",
+			"pendientes": 247,
+			"leidas": 3,
 			"fallidas": 0,
-			"ultimaLectura": "2026-11-26",
+			"ultimaLectura": "2026-11-27",
 			"conError": 19,
 			"completarIntentadas": 0,
 			"completarFallidas": 0,
